@@ -1,0 +1,42 @@
+thema1:
+  title: "Hallo, Forschung"
+  subtitle: "Einführung in das (und Ihr) Thema Forschung"
+  literatur: ""
+  plenum:
+    - "[The Altmetric Top 100 Papers](https://www.altmetric.com/top100/2020/)"
+    - "[Brain Drain: The Mere Presence of One’s Own Smartphone Reduces Available Cognitive Capacity](https://repositories.lib.utexas.edu/bitstream/handle/2152/64130/braindrain.pdf;sequence=2)"
+  vertiefung:
+  - "[Most influential papers on Google Scholar in 2020](https://www.natureindex.com/news-blog/google-scholar-reveals-most-influential-papers-research-citations-twenty-twenty)"
+  - "[Liste interessanter, replizierwürdiger Studien (oft) mit Bezug zur Psychologie](https://www.zotero.org/groups/2522726/to-be-replicated)"
+  - "[Frontiers in Psychology (Journal)](https://www.frontiersin.org/journals/psychology#research-topics)"
+  - "[Interessante psychologische Studien - eine subjektive Auswahl](https://sebastiansauer.github.io/psy-paper-suggestions/)"
+  - "[Ausgewiesene wirtschaftspsychologische Studien aus studentischer Feder](https://www.fom.de/forschung/institute/iwp/publikationen.html#!acc=iwp-schriftenreihe/accid=18799)"
+thema2:
+  title: "Hypothesen und Gedöns"
+thema3:
+  title: "Nicht-interventionelle Versuchspläne"
+thema4:
+  title: "Interventionelle Versuchspläne"
+thema5:
+  title: "Versuchsplanung - Vertiefung"
+thema6:
+  title: "Online-Studien"
+thema7:
+  title: "Kausalanalyse"
+thema8:
+  title: "Fallzahlplanung"
+thema9:
+  title: "Messinstrumente"
+thema10:
+  title: "Versuchsdurchführung"
+thema11:
+  title: "Datenaufbereitung"
+thema12:
+  title: "Datenmodellierung"
+thema13:
+  title: "Open Science"
+  vertiefung:
+  - "[Einführung in R Markdown, Folien](https://docs.google.com/presentation/d/e/2PACX-1vRZ72QdK_nq-s4hwjLYCgUmDVWMxdAx_WwD6Equ9SgCmjvhmuiw6M4XbqzCqmqKVRIeaUrO1BGGU-q6/pub?start=false&loop=false&delayms=3000&slide=id.p)"
+
+thema14:
+  title: "Joker-Stunde"

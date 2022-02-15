@@ -1,0 +1,314 @@
+---
+title: "Forschungspraktikum in Psychologie"
+subtitle: "Einstieg in die empirisch-quantitative Forschung"
+author: "Sebastian Sauer"
+date: "Letzte Aktualisierung: `r Sys.time()`"
+output:
+   
+  rmdformats::downcute:
+    self_contained: true
+    thumbnails: true
+    lightbox: true
+    gallery: false
+    highlight: tango
+    number_sections: TRUE
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r global-knitr-options, include=FALSE}
+  knitr::opts_chunk$set(
+  fig.pos = 'H',
+  fig.asp = 0.618,
+  fig.align='center',
+  fig.width = 5,
+  out.width = "100%",
+  fig.cap = "", 
+  fig.path = "chunk-img/",
+  dpi = 300,
+  # tidy = TRUE,
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE,
+  cache = FALSE,
+  fig.show = "hold")
+```
+
+
+
+```{r}
+library(yaml)
+library(tidyverse)
+```
+
+
+
+
+
+```{r bib, cache=FALSE}
+library(RefManageR)
+BibOptions(check.entries = FALSE, 
+           bib.style = "authoryear", 
+           style = "markdown",
+           max.names = 5,
+           dashed = TRUE,
+           no.print.fields = 
+             c("url", "page","isbn", "location", "urldate", "note", "urldate", "issn")
+           )
+bib_file <- "Interna/bib.bib"
+bib <- ReadBib(bib_file)
+```
+
+---
+
+**WORK IN PROGRESS**
+
+---
+
+
+```{r eval = FALSE}
+knitr::include_graphics("https://raw.github.com/allisonhorst/stats-illustrations/master/rstats-artwork/data_cowboy.png")
+```
+
+
+
+
+
+# tl;dr
+
+
+tbd
+
+
+
+
+
+
+# Hinweise
+
+Lesen Sie sich die folgenden Informationen bitte gut durch.
+
+[Hinweise]()
+
+
+# Modulliteratur
+
+Ein Teil der Literatur ist über viele Hochschulbibliotheken als PDF herunterladen;
+andere Titel sind offen im Internet verfügbar.
+Oft müssen Sie per VPN angemeldet sein für Volltextzugriff, wenn Sie nicht auf dem Campus sind.
+
+
+- Zentrale Begleitlektüre ist `r RefManageR::Citet(bib, "sauer_moderne_2019")`. 
+- Weiterführende Literatur (nicht zwingend nötig, aber ggf. nützlich): `r RefManageR::Citet(bib, "wickham_r_2018")` und `r RefManageR::Citet(bib, "cetinkaya-rundel_introduction_2021")`.
+- Um grundlegende Mathekenntnisse aufzufrischen ist `r RefManageR::Citet(bib, "knorrenschild_vorkurs_2021", after = ", Kap. 1-3 und 4.1-4.2")` empfehlenswert.
+- Ein Überblick über weitere, empfehlenswerte Literatur zum Einstieg in Statistik findet sich [hier](https://www.zotero.org/groups/4583286/einstieg-statistik).
+
+
+
+
+# Vorbereitung vor dem Kurs
+
+## Installation von R und seiner Freunde
+
+- Installieren Sie [R und seine Freunde](https://data-se.netlify.app/2021/11/30/installation-von-r-und-seiner-freunde/).
+- Installieren Sie die folgende R-Pakete:
+    - tidyverse
+    - weitere Pakete werden im Unterricht bekannt gegeben (es schadet aber nichts, jetzt schon Pakete nach eigenem Ermessen zu installieren)
+
+
+## Lernhilfen
+
+-[R Syntax aus dem Unterricht](https://github.com/sebastiansauer/Lehre) findet sich im Github-Repo bzw. Ordner zum jeweiligen Semester.
+- [Frag-Jetzt-Raum zum anonymen Fragen stellen während des Unterrichts](https://frag.jetzt/home). Der Keycode wird Ihnen vom Dozenten bereitgestellt.
+- [Padlet](https://de.padlet.com/) zum einfachen (und anonymen) Hochladen von Arbeitsergebnissen der Studentis im Unterricht. Wir nutzen es als eine Art Pinwand zum Sammeln von Arbeitsbeiträgen. Die Zugangsdaten stellt Ihnen der Dozent bereit.
+
+
+
+## Daten
+
+- Saratoga Houses
+    - [Saratoga Houses CSV](https://vincentarelbundock.github.io/Rdatasets/csv/mosaicData/SaratogaHouses.csv)
+    - [Saratoga Houses Code Book/Documentation](https://vincentarelbundock.github.io/Rdatasets/doc/mosaicData/SaratogaHouses.html)
+
+
+# Themen
+
+
+
+
+
+
+```{r}
+modul_zsfg <- yaml::read_yaml("Interna/modul-zsfg.yaml")
+```
+
+
+
+
+
+```{r build-themen, results='asis'}
+
+titel <- modul_zsfg %>% names()
+
+for (i in seq_along(titel)){
+  
+  this_title <- modul_zsfg[[i]][["title"]]
+  cat("##", this_title, "\n")
+  cat("\n")
+
+
+  lernziele <- modul_zsfg[[i]][["lernziele"]]
+  
+  if (!is.null(lernziele)){
+    cat("### Lernziele \n")
+    cat("\n")
+    for (j in lernziele) {
+      cat(paste0("- ", j))
+      cat("\n")
+    }
+    
+    cat("\n")
+    cat("\n")
+  }
+  
+  
+  literatur <- modul_zsfg[[i]][["literatur"]]
+  names_literatur <- names(literatur)
+  
+  if (!is.null(literatur)){
+    cat("### Literatur \n\n")
+    for (k in seq_along(literatur)) {
+      chap <- literatur[[k]]
+      #if (names_literatur[k] == "MODAR") chap <- str_c(" Kap. ", chap, collapse = " ")
+      cat(paste0("- ", names_literatur[k], " ",chap, "\n"))
+      cat("\n")
+    }
+    
+    cat("\n")
+    cat("\n")
+  }
+  
+      folien <-
+      modul_zsfg[[i]][["folien"]]
+  
+  if (!is.null(folien)){
+    cat("### Folien \n\n")
+    cat(paste0("- ", folien, "\n"))
+    
+    cat("\n")
+    cat("\n")
+  }
+      
+      plenum <-
+      modul_zsfg[[i]][["folien"]]
+      
+      if (!is.null(plenum)){
+        cat("### Plenum \n\n")
+        cat(paste0("-", plenum, "\n"))
+        
+        cat("\n\n")
+      }
+  
+  videos <- 
+    modul_zsfg[[i]][["videos"]]
+  
+  
+  if (!is.null(videos)){
+    cat("### Videos \n\n")
+    for (l in videos) {
+      cat(paste0("- ", l, "\n"))
+    }
+    
+    cat("\n")
+    cat("\n")
+  }
+  
+  
+  syntax <-
+    modul_zsfg[[i]][["syntax"]]
+  
+  if (!is.null(syntax)){
+    cat("### Syntax \n\n")
+    for (o in syntax){
+      cat(paste0("- ", o, "\n"))
+    }
+    
+    cat("\n")
+    cat("\n")
+  }
+  
+  fallstudien <-
+    modul_zsfg[[i]][["fallstudien"]]
+  
+  if (!is.null(fallstudien)){
+    cat("### Fallstudien \n\n")
+    for (p in fallstudien) {
+      cat(paste0("- ", p, "\n"))
+    }
+    cat("\n\n")
+  }
+  
+  vertiefung <-
+    modul_zsfg[[i]][["vertiefung"]]
+  
+  if (!is.null(vertiefung)) {
+    cat("### Vertiefung \n\n")
+    for (m in vertiefung) {
+      cat(paste0("- ", m, "\n"))
+    }
+  }
+  
+  # Leerzeilen, bevor neues Thema anfängt
+  cat("\n")
+  cat("\n")
+  
+}
+```
+
+
+
+
+
+
+
+
+# Prüfung
+
+## Was ist das für eine Prüfung?
+
+Bei der Prüfung handelt es sich um einen *Prognosewettbewerb.*
+
+Vorhersagen sind eine praktische Sache, zumindest wenn Sie stimmen. Wenn Sie den DAX-Stand von morgen genau vorhersagen können, rufen Sie mich bitte sofort an. Genau das ist Ihre Aufgabe in dieser Prüfungsleistung: Sie sollen Werte vorhersagen. 
+
+Etwas konkreter: Stellen Sie sich ein paar Studentis vor; von allen wissen Sie, wie lange die Person für die Statistikklausur gelernt hat. Außerdem wissen Sie die Motivation jeder Person und vielleicht noch ein paar noten-relevante Infos. Und Sie wissen die Note jeder Person in der Statistikklausur. Auf dieser Basis fragt sie ein Student (Alois), der im kommenden Semester die Prüfung in Statistik schreiben ~~muss~~ will: "Sag mal, wenn ich 100 Stunden lerne und so mittel motiviert bin, welche Note kann ich dann erwarten?". Mit Hilfe Ihrer Analyse können Sie diese Frage beantworten. Natürlich könnten Sie es sich leicht machen und antworten: "Mei, der Notendurchschnitt war beim letzten Mal 2.7. Also ist das kein ganz doofer Tipp für deine Note." Ja, das keine doofe Antwort, aber man kann es besser machen. Da hilft Ihnen die Statistik (doch, wirklich). 
+
+Kurz gesagt gehen Sie so vor: Importieren Sie die Daten in R, starten Sie die nötigen R-Pakete und schauen Sie sich die Daten unter verschiedenen Blickwinkeln an. Dann nehmen Sie die vielversprechendsten Prädiktoren in ein Regressionsmodell und schauen sich an, wie gut die Vorhersage ist. Wiederholen Sie das ein paar Mal, bis Sie ein Modell haben, das Sie brauchbar finden. Mit diesem Modell sagen Sie dann die Noten der neuen Studis (Alois und Co.) vorher. Je genauer Ihre Vorhersage, desto besser ist Ihr Prüfungsergebnis.
+
+
+
+## Hinweise zur Prüfung
+
+- [Hinweise zur Prüfung](https://sebastiansauer.github.io/vorhersagemodellierung/Pruefung/Hinweise-Prognosewettbewerb.html)
+- [Einfache, beispielhafte Vorhersagemodellierung (Video)](https://www.youtube.com/watch?v=5pBTHrnRIZY) 
+- Der gesamte Stoff, der im Unterricht behandelt bzw. für den Kurs bereitgestellt ist, ist prüfungsrelvant. Eine Ausnahme ist, wenn bestimmte Inhalte explizit als "nicht prüfungsrelevant" gekennzeichnet sind.
+- Denken Sie daran, sich rechtzeitig zu den Prüfungsleistungen anzumelden. Beachten Sie, dass die Fristen für Anmeldung und Abgabe (Hochladen der Prüfungsleistung) unterschiedlich sein können.
+
+# Literaturverzeichnis
+
+```{r Hinweise-1, results='asis', echo=FALSE, cache=FALSE}
+RefManageR::PrintBibliography(bib)
+```
+
+
+
+
+# Kudos
+
+Beim Schreiben dieses Kurses habe ich auf der Vorarbeit vieler Menschen aufgebaut.
+Viele Menschen haben mich unterstützt, großzügig und auf verschiedene Weise.
+
+Einige möchte ich herausgreifen, um Danke zu sagen:
+
+- Kollegis wie Karsten Lübke, von denen ich viel gelernt habe.
+- Alle Open-Source-Entwickler, die Projekte wie dieses überhaupt erst möglichen machen. 💌
+
