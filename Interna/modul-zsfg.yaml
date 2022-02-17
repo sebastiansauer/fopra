@@ -4,7 +4,8 @@ thema1:
   literatur: ""
   plenum:
     - "[The Altmetric Top 100 Papers](https://www.altmetric.com/top100/2020/)"
-    - "[Brain Drain: The Mere Presence of One’s Own Smartphone Reduces Available Cognitive Capacity](https://repositories.lib.utexas.edu/bitstream/handle/2152/64130/braindrain.pdf;sequence=2)"
+    - "[Alltagsforschung.de: Echte, Studien, sofatauglich aufbereitet](https://www.alltagsforschung.de/)"
+    - "[Psychologie-Magazin 'The Inquisitive Mind'](https://de.in-mind.org/)"
   vertiefung:
   - "[Most influential papers on Google Scholar in 2020](https://www.natureindex.com/news-blog/google-scholar-reveals-most-influential-papers-research-citations-twenty-twenty)"
   - "[Liste interessanter, replizierwürdiger Studien (oft) mit Bezug zur Psychologie](https://www.zotero.org/groups/2522726/to-be-replicated)"
@@ -13,6 +14,8 @@ thema1:
   - "[Ausgewiesene wirtschaftspsychologische Studien aus studentischer Feder](https://www.fom.de/forschung/institute/iwp/publikationen.html#!acc=iwp-schriftenreihe/accid=18799)"
 thema2:
   title: "Hypothesen und Gedöns"
+  literatur:
+    - "[Brain Drain: The Mere Presence of One’s Own Smartphone Reduces Available Cognitive Capacity](https://repositories.lib.utexas.edu/bitstream/handle/2152/64130/braindrain.pdf;sequence=2)"
 thema3:
   title: "Nicht-interventionelle Versuchspläne"
 thema4:
