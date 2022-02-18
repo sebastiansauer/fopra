@@ -1,0 +1,145 @@
+
+# build document structure from yaml file
+
+
+titel <- modul_zsfg %>% names()
+
+for (i in seq_along(titel)){
+
+  this_title <- modul_zsfg[[i]][["title"]]
+  cat("##", this_title, "\n")
+  cat("\n")
+
+
+  lernziele <- modul_zsfg[[i]][["lernziele"]]
+
+  if (!is.null(lernziele)){
+    cat("### Lernziele \n")
+    cat("\n")
+    for (j in lernziele) {
+      cat(paste0("- ", j))
+      cat("\n")
+    }
+
+    cat("\n")
+    cat("\n")
+  }
+
+
+  literatur <- modul_zsfg[[i]][["literatur"]]
+  names_literatur <- names(literatur)
+
+  if (!is.null(literatur)){
+    cat("### Literatur \n\n")
+    for (k in seq_along(literatur)) {
+      chap <- literatur[[k]]
+      #if (names_literatur[k] == "MODAR") chap <- str_c(" Kap. ", chap, collapse = " ")
+      cat(paste0("- ", names_literatur[k], " ",chap, "\n"))
+      cat("\n")
+    }
+
+    cat("\n")
+    cat("\n")
+  }
+
+  folien <-
+    modul_zsfg[[i]][["folien"]]
+
+  if (!is.null(folien)){
+    cat("### Folien \n\n")
+    cat(paste0("- ", folien, "\n"))
+
+    cat("\n")
+    cat("\n")
+  }
+
+  plenum <-
+    modul_zsfg[[i]][["folien"]]
+
+  if (!is.null(plenum)){
+    cat("### Plenum \n\n")
+    cat(paste0("-", plenum, "\n"))
+
+    cat("\n\n")
+  }
+
+  videos <-
+    modul_zsfg[[i]][["videos"]]
+
+
+  if (!is.null(videos)){
+    cat("### Videos \n\n")
+    for (l in videos) {
+      cat(paste0("- ", l, "\n"))
+    }
+
+    cat("\n")
+    cat("\n")
+  }
+
+
+  syntax <-
+    modul_zsfg[[i]][["syntax"]]
+
+  if (!is.null(syntax)){
+    cat("### Syntax \n\n")
+    for (o in syntax){
+      cat(paste0("- ", o, "\n"))
+    }
+
+    cat("\n")
+    cat("\n")
+  }
+
+  fallstudien <-
+    modul_zsfg[[i]][["fallstudien"]]
+
+  if (!is.null(fallstudien)){
+    cat("### Fallstudien \n\n")
+    for (p in fallstudien) {
+      cat(paste0("- ", p, "\n"))
+    }
+    cat("\n\n")
+  }
+
+
+  skript <-
+    modul_zsfg[[i]][["skript"]]
+
+  if (!is.null(skript)) {
+    cat("### Skript \n\n")
+    for (q in skript) {
+      cat(paste0("- ", q, "\n"))
+    }
+    cat("\n\n")
+  }
+
+
+  aufgaben <-
+    modul_zsfg[[i]][["aufgaben"]]
+
+  if (!is.null(aufgaben)) {
+    cat("### Aufgaben \n\n")
+    for (r in aufgaben) {
+      cat(paste0("- ", r, "\n"))
+    }
+    cat("\n\n")
+  }
+
+
+  vertiefung <-
+    modul_zsfg[[i]][["vertiefung"]]
+
+  if (!is.null(vertiefung)) {
+    cat("### Vertiefung \n\n")
+    for (m in vertiefung) {
+      cat(paste0("- ", m, "\n"))
+    }
+    cat("\n\n")
+  }
+
+  # Leerzeilen, bevor neues Thema anfängt
+  cat("\n")
+  cat("\n")
+
+}

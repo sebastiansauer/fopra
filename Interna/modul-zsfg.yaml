@@ -5,10 +5,10 @@ thema1:
     - Lesen Sie die Hinweise zum Modul.
     - Installieren (oder Updaten) Sie die für dieses Modul angegeben Software.
   literatur:
-    - "Lesen Sie in 'Research Methods in Psychology Kap. 1-4, 7"
+    - "Lesen Sie in 'Research Methods in Psychology', Kap. 1-4 und 7."
   skript:
-    - "[Skript Thema 01 pdf](https://github.com/sebastiansauer/fopra/blob/main/Skript-Folien/FoPra-Thema01.pdf)"
-    - "[Skript Thema 01 pptx](https://github.com/sebastiansauer/fopra/blob/main/Skript-Folien/FoPra-Thema01.pptx)"
+    - "[Skript Thema 01, pdf](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema01.pdf)"
+    - "[Skript Thema 01, pptx]https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema01.pptx)"
   plenum:
     - "[The Altmetric Top 100 Papers](https://www.altmetric.com/top100/2020/)"
     - "[Alltagsforschung.de: Echte, Studien, sofatauglich aufbereitet](https://www.alltagsforschung.de/)"
@@ -25,10 +25,13 @@ thema1:
 
 thema2:
   title: "Hypothesen und Gedöns"
+  vorbereitung:
+    - "Lesen Sie den 'Brain-Drain-Artikel'."
   skript:
-    - "[Skript Thema 02 pdf](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema02.pdf)"
-    - "[Skript Thema 02 pptx](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema02.pptx)"
+    - "[Skript Thema 02, pdf](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema02.pdf)"
+    - "[Skript Thema 02, pptx](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema02.pptx)"
   literatur:
+    - " 'Research Methods in Psychology' Kap. 10"
     - "[Brain Drain: The Mere Presence of One’s Own Smartphone Reduces Available Cognitive Capacity](https://repositories.lib.utexas.edu/bitstream/handle/2152/64130/braindrain.pdf;sequence=2)"
     - "[Appendix zur Brain-Drain-Studie](https://www.dropbox.com/s/8o8jf602rgz9hgw/Ward%2C%20Duke%2C%20Gneezy%20and%20Bos%20-%20Brain%20Drain%20Web%20Appendix.pdf?dl=1)"
   Vertiefung:

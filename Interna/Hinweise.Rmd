@@ -86,11 +86,14 @@ editor_options:
 - Bitte beachten Sie die Installationshinweise für Software und installieren Sie die Software vor Beginn des ersten Termins.
 - Sorgen Sie dafür, dass Sie in jeder Stunde über eine gute Internetverbindung verfügen.
 - Bitte stellen Sie sicher, dass Sie Zugriff auf Moodle, Zoom und weitere Dienste haben, die wir im Unterricht nutzen (Passwörter dabei haben etc.).
- Kontaktieren Sie die IT-Abteilung bei technischen Probleme.
+- Kontaktieren Sie die IT-Abteilung bei technischen Probleme.
 - Für Präsenztermine: Bitte bringen Sie folgende IT-Geräte in jede Stunde mit: Laptop mit Stromkabel, Smartphone oder Tablett, Kopfhörer inkl. Mikrofon.
 - Für Präsenztermine: Ein langer Uni-Tag zehrt an der Batterie; nicht nur an Ihrer, sondern auch in Ihrem Laptop und Smartphone. Ggf. kann eine Zusatzbatterie (Akku-Pack) hilfreich sein.
  Bei schlechter WLAN-Verbindung kann ein Hotspot über das Handy eine Lösung sein.
 - Bitte lesen Sie auch die Hinweise zur Software, die wir in diesem Modul benötigen.
+- Stellen Sie sicher, dass Sie die jeweils aktuelle Version für die in diesem Kurs verwendete Software verwenden (z.B. bei Zoom gibt es viele Aktualisierungen).
+- Updaten Sie ggf. R, RStudio und Ihre R-Pakete.
+
 
 
 # Ich brauche Hilfe. Was soll ich tun?
