@@ -6,6 +6,8 @@ thema1:
     - Installieren (oder Updaten) Sie die für dieses Modul angegeben Software.
   literatur:
     - "Lesen Sie in 'Research Methods in Psychology Kap. 1-4, 7"
+  skript:
+    - "[Skript Thema 01](https://docs.google.com/presentation/d/1zor3wpmPr19M7eThHT_ww5YlJ_MM54SgSO8f7ogTjS8/edit?usp=sharing)"
   plenum:
     - "[The Altmetric Top 100 Papers](https://www.altmetric.com/top100/2020/)"
     - "[Alltagsforschung.de: Echte, Studien, sofatauglich aufbereitet](https://www.alltagsforschung.de/)"
@@ -25,6 +27,7 @@ thema2:
     - "[Appendix zur Brain-Drain-Studie](https://www.dropbox.com/s/8o8jf602rgz9hgw/Ward%2C%20Duke%2C%20Gneezy%20and%20Bos%20-%20Brain%20Drain%20Web%20Appendix.pdf?dl=1)"
   Vertiefung:
     - "[Skorbut-Datensatz](https://rdrr.io/cran/medicaldata/man/scurvy.html)"
+    - "[Datensatz wo_men](https://raw.github.com/sebastiansauer/modar/master/datasets/wo_men.csv)"  
 thema3:
   title: "Nicht-interventionelle Versuchspläne"
 thema4:
