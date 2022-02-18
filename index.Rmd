@@ -118,9 +118,8 @@ Ein Teil der Literatur ist über viele Hochschulbibliotheken als PDF herunterlad
 andere Titel sind offen im Internet verfügbar.
 Oft müssen Sie per VPN angemeldet (in der Bib.) sein für Volltextzugriff, wenn Sie nicht auf dem Campus sind.
 
-- Zentrale Literatur ist Jhangiani, R., Jhangiani, Rajiv S., Chiang, I.-C. A., & Cuttler, C., Leighton, Dana C. (2019). *Research Methods in Psychology.* https://kpu.pressbooks.pub/psychmethods4e/. 
+- Zentrale Literatur ist `r RefManageR::Citep(bib, "jhangiani_research_2019")`.
     - [Download PDF](https://kpu.pressbooks.pub/psychmethods4e/open/download?type=pdf)
-
 - [Liste empfohlener Literatur](https://www.zotero.org/groups/4582997/intro-research-methods)
 
 
@@ -177,6 +176,6 @@ Viele Menschen haben mich unterstützt, großzügig und auf verschiedene Weise.
 
 Einige möchte ich herausgreifen, um Danke zu sagen:
 
-- Kollegis wie Karsten Lübke, von denen ich viel gelernt habe.
+- Kollegis wie Sandra Sülzenbrück und Karsten Lübke, von denen ich viel gelernt habe.
 - Alle Open-Source-Entwickler, die Projekte wie dieses überhaupt erst möglichen machen. 💌
 
