@@ -60,13 +60,23 @@ bib <- ReadBib(bib_file)
 ```
 
 
+</br>
 
 
-```{r eval = TRUE}
+
+```{r eval = FALSE}
 knitr::include_graphics("https://raw.githubusercontent.com/sebastiansauer/fopra/main/chunk-img/Open_Science_Logo_v3.svg")
 ```
 
-[Bildquelle: G. Schindler, E, Emmerich, Lizenz: CC-SA](https://commons.wikimedia.org/wiki/File:Open_Science_Logo_v3.svg)
+</br>
+
+```{r}
+knitr::include_graphics("https://i.imgflip.com/65r1fd.jpg")
+```
+
+[Bildquelle: https://imgflip.com/i/65r1fd](https://i.imgflip.com/65r1fd.jpg)
+
+<!-- [Bildquelle: G. Schindler, E, Emmerich, Lizenz: CC-SA](https://commons.wikimedia.org/wiki/File:Open_Science_Logo_v3.svg) -->
 
 ---
 
@@ -82,6 +92,9 @@ Das Modul "Research Project" ist das vielleicht schönste Modul in Ihrem Studien
 
 Kurz gesagt lernen Sie also, wie man eine wissenschaftliche Studie durchzieht. Das können Sie als Generalprobe für die Abschlussarbeit nutzen. Für Ihre berufliche Laufbahn ist Forschungskompetenz vielleicht die zentrale Kompetenz, wenn Sie nicht nur Bekanntes abarbeiten möchten, sondern Abläufe verbessern, Produkte erneuern, Chancen entdecken wollen – wenn Sie Neuland betreten und Dinge weiterentwickeln wollen.
 
+# Modulverlauf
+
+[Modulüberblick](https://sebastiansauer.github.io/fopra/Interna/Modulueberblick.html)
 
 
 # Lernziele des Moduls
