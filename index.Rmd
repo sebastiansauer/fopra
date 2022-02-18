@@ -267,6 +267,31 @@ for (i in seq_along(titel)){
     cat("\n\n")
   }
   
+  
+  skript <-
+    modul_zsfg[[i]][["skript"]]
+  
+  if (!is.null(skript)) {
+    cat("### Skript \n\n")
+    for (q in skript) {
+      cat(paste0("- ", q, "\n"))
+    }
+     cat("\n\n")
+  }
+  
+  
+  aufgaben <-
+    modul_zsfg[[i]][["aufgaben"]]
+  
+  if (!is.null(aufgaben)) {
+    cat("### Aufgaben \n\n")
+    for (r in aufgaben) {
+      cat(paste0("- ", r, "\n"))
+    }
+     cat("\n\n")
+  }
+  
+  
   vertiefung <-
     modul_zsfg[[i]][["vertiefung"]]
   
@@ -275,6 +300,7 @@ for (i in seq_along(titel)){
     for (m in vertiefung) {
       cat(paste0("- ", m, "\n"))
     }
+     cat("\n\n")
   }
   
   # Leerzeilen, bevor neues Thema anfängt
