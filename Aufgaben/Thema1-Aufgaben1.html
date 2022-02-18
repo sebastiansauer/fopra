@@ -23,10 +23,108 @@ body{font-family: Arial, Helvetica, Sans;}
 <pre class="text"><code>wo_men_path &lt;- &quot;https://raw.github.com/sebastiansauer/modar/master/datasets/wo_men.csv&quot;
 d &lt;- read_csv(wo_men_path)</code></pre>
 <p>Testen Sie anhand dieses Datensatzes folgende Hypothese:</p>
-<p>“Männer haben im Schnitt ein höheres Gewicht als Frauen!”.</p>
+<p>“Männer sind im Schnitt größer als Frauen!”</p>
 <p>Präziser formuliert:</p>
 <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>μ</mi><mi>M</mi></msub><mo>&gt;</mo><msub><mi>μ</mi><mi>F</mi></msub></mrow><annotation encoding="application/x-tex">\mu_M &gt; \mu_F</annotation></semantics></math>, wobei <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math> den Mittelwert angibt (in der Population, auch Erwartungswert genannt).</p>
 <p>Geben Sie als Lösung an, welcher Anteil der Postverteilung einen höheren Mittelwert zugunsten der Männer aufweist!</p>
+<br/>
+</li>
+<li>
+<h4>Aufgabe</h4>
+<p>Der Datensatz <code>wo_men</code> Untersucht Geschlechtsunterschiede u.a. in Körpergröße.</p>
+<p>Sie können ihn hier herunterladen:</p>
+<pre class="text"><code>wo_men_path &lt;- &quot;https://raw.github.com/sebastiansauer/modar/master/datasets/wo_men.csv&quot;
+d &lt;- read_csv(wo_men_path)</code></pre>
+<p>Testen Sie anhand dieses Datensatzes folgende Hypothese <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math>:</p>
+<p>“Männer sind im Schnitt größer als Frauen!”</p>
+<p>Präziser formuliert:</p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>μ</mi><mi>M</mi></msub><mo>&gt;</mo><msub><mi>μ</mi><mi>F</mi></msub></mrow><annotation encoding="application/x-tex">\mu_M &gt; \mu_F</annotation></semantics></math>, wobei <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math> den Mittelwert angibt (in der Population, auch Erwartungswert genannt).</p>
+<p>Über die Hypothese soll anhand folgender Entscheidungsregel <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math> entschieden werden:</p>
+<ul>
+<li>$Pr(H|D) &gt; .95 H $ annehmen</li>
+<li>$Pr(H|D) &lt; .05 H $ verwerfen</li>
+<li>ansonsten: <em>keine Entscheidung</em> bzgl. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math> aufgrund uneindeutiger Evidenz</li>
+</ul>
+<p>Zur Erinnerung: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>r</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>H</mi><mo stretchy="false" form="prefix">|</mo><mi>D</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">Pr(H|D)</annotation></semantics></math> benennt die Posterior-Verteilung.</p>
+<br/>
+</li>
+<li>
+<h4>Aufgabe</h4>
+<p>Der Datensatz <code>wo_men</code> Untersucht Geschlechtsunterschiede u.a. in Körpergröße.</p>
+<p>Sie können ihn hier herunterladen:</p>
+<pre class="text"><code>wo_men_path &lt;- &quot;https://raw.github.com/sebastiansauer/modar/master/datasets/wo_men.csv&quot;
+d &lt;- read_csv(wo_men_path)</code></pre>
+<p>Testen Sie anhand dieses Datensatzes folgende Hypothese <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math>:</p>
+<p>“Männer sind im Schnitt größer als Frauen!”</p>
+<p>Präziser formuliert:</p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>X</mi><mi>M</mi></msub><mo>&gt;</mo><msub><mi>X</mi><mi>F</mi></msub></mrow><annotation encoding="application/x-tex">X_M &gt; X_F</annotation></semantics></math>, wobei <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math> die Größe <em>einer zufällige gezogenen Person</em> angibt (in der Population, auch Erwartungswert genannt). <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math> steht für Männer, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>F</mi><annotation encoding="application/x-tex">F</annotation></semantics></math> für Frauen.</p>
+<p>Über die Hypothese soll anhand folgender Entscheidungsregel <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math> entschieden werden:</p>
+<ul>
+<li>$Pr(p|D,H) &gt; .95 H $ annehmen</li>
+<li>$Pr(p|D,H) &lt; .05 H $ verwerfen</li>
+<li>ansonsten: <em>keine Entscheidung</em> bzgl. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math> aufgrund uneindeutiger Evidenz</li>
+</ul>
+<p>Dabei benennt <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>r</mi><mrow><mo stretchy="true" form="prefix">(</mo><mi>p</mi><mo stretchy="false" form="prefix">|</mo><mi>D</mi><mo>,</mo><mi>H</mi><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">Pr(p|D,H)</annotation></semantics></math> die Wahrscheinlichkeit auf Basis der PPV, dass ein beliebiger Mann ein höheres Gewicht hat als eine beliebige Frau (d.h. zufällig gezogen).</p>
+<p>Geben Sie die gesuchte Wahrscheinlichkeit als Lösung an!</p>
+<br/>
+</li>
+<li>
+<h4>Aufgabe</h4>
+<p>Der Datensatz <code>wo_men</code> Untersucht Geschlechtsunterschiede u.a. in Körpergröße.</p>
+<p>Sie können ihn hier herunterladen:</p>
+<pre class="text"><code>wo_men_path &lt;- &quot;https://raw.github.com/sebastiansauer/modar/master/datasets/wo_men.csv&quot;
+d &lt;- read_csv(wo_men_path)</code></pre>
+<p>Testen Sie anhand dieses Datensatzes folgende Hypothese <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math>:</p>
+<p>“Männer sind im Schnitt größer als Frauen!”</p>
+<p>Präziser formuliert:</p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><msub><mi>μ</mi><mi>M</mi></msub><mo>&gt;</mo><msub><mi>μ</mi><mi>F</mi></msub><mo>+</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">d = \mu_M &gt; \mu_F + c</annotation></semantics></math>, wobei <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math> den Mittelwert angibt (in der Population, auch Erwartungswert genannt) und <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math> einen <em>minimalen Unterschied praktischer Relevanz</em> benennt.</p>
+<p>Nehmen Sie an: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>=</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">c=5</annotation></semantics></math>. Das heißt: Wir gehen davon aus, dass Männer mehr als 5cm größer sind als Frauen im Durchschnitt.</p>
+<p>Über die Hypothese soll anhand folgender Entscheidungsregel <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math> entschieden werden:</p>
+<ul>
+<li>Liegt die Verteilung von <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math> mit mind. 95% im ROPE, verwerfen wir <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math>.</li>
+<li>Liegt die Verteilung von <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math> mit mind. 95% außerhalb des ROPE, verwerfen wir <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math>.</li>
+<li>Andernfalls behalten wir uns eine Entscheidung vor, aufgrund uneindeutiger Evidenz.</li>
+</ul>
+<p>In Worten sagt <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math> etwa: “Wenn von der Post-Verteilung der Großteil (sagen wir 95%) außerhalb des ROPE liegt, dann ist der Unterschied bedeutsam. Wenn der größte Teil der Post-Verteilung innerhalb des ROPE liegt, ist der Unterschied vernachlässigbar. Ansonsten ist die Datenlage unklar”.</p>
+<p>Geben Sie den Anteil der Post-Verteilung an, der außerhalb des Rope liegt!</p>
+<br/>
+</li>
+<li>
+<h4>Aufgabe</h4>
+<p>Der Datensatz <code>wo_men</code> Untersucht Geschlechtsunterschiede u.a. in Körpergröße.</p>
+<p>Sie können ihn hier herunterladen:</p>
+<pre class="text"><code>wo_men_path &lt;- &quot;https://raw.github.com/sebastiansauer/modar/master/datasets/wo_men.csv&quot;
+d &lt;- read_csv(wo_men_path)</code></pre>
+<p>Testen Sie anhand dieses Datensatzes folgende Hypothese <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math>:</p>
+<p>“Männer sind im Schnitt größer als Frauen!”</p>
+<p>Diese Aussage soll wie folgt verstanden werden:</p>
+<p>Der Anteil erklärter Varianz <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>R</mi><mn>2</mn></msup><annotation encoding="application/x-tex">R^2</annotation></semantics></math> in einem entsprechenden Modell soll größer als ein kritischer Wert <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>, der die Grenze zu einem vernachlässigbar kleinen Effekt kennzeichnet.</p>
+<p>Nehmen Sie an: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>=</mo><mn>.10</mn></mrow><annotation encoding="application/x-tex">c = .10</annotation></semantics></math>.</p>
+<p>Das Geschlecht soll also mindestens 10% der Gesamtvarianz erklären.</p>
+<p>Geben Sie an, ob der Median des (Bayes-)<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>R</mi><mn>2</mn></msup><annotation encoding="application/x-tex">R^2</annotation></semantics></math>-Koeffizienten den Wert <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math> erreicht, ob also gilt <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>R</mi><mn>2</mn></msup><mo>≥</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">R^2 \ge c</annotation></semantics></math>.</p>
+<br/>
+</li>
+<li>
+<h4>Aufgabe</h4>
+<p>Der Datensatz <code>wo_men</code> Untersucht Geschlechtsunterschiede u.a. in Körpergröße.</p>
+<p>Sie können ihn hier herunterladen:</p>
+<pre class="text"><code>wo_men_path &lt;- &quot;https://raw.github.com/sebastiansauer/modar/master/datasets/wo_men.csv&quot;
+d &lt;- read_csv(wo_men_path)</code></pre>
+<p>Testen Sie anhand dieses Datensatzes folgende Hypothese <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math>:</p>
+<p>“Männer sind im Schnitt größer als Frauen!”</p>
+<p>Formaler:</p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">d &gt; 0</annotation></semantics></math> mit <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><msub><mi>μ</mi><mi>M</mi></msub><mo>−</mo><msub><mi>μ</mi><mi>F</mi></msub></mrow><annotation encoding="application/x-tex">d = \mu_M - \mu_F</annotation></semantics></math>.</p>
+<p>Wenn man zwei Gruppen (zwei Populationen) vergleicht, kann man einfach den Unterschied in den Mittelwerten, <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>, berechnen. Das macht meist Sinn, gerade wenn die Einheiten gut verständlich sind, wie es bei der Körpergröße der Fall ist. Bei einem psychometrischen Merkmal, sagen wir “Smartphone-Abhängigkeit”, das vielleicht auf einer Skale von 4 bis 44 gemessen wird, sind die Einheiten nicht wirklich gut interpretierbar. In diesem Fall macht man gerne Folgendes: Man berechnet den Mittelwertsunterschied und schaut dann, wie groß dieser Wert im Verhältnis zur Streuung (SD) der Variable ist.</p>
+<p>Ein Beispiel zur Verdeutlichung: Der Unterschied <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math> betrage 10cm. Die Streuung (sd) betrage 5cm. Dann ist der Unterschied genau zwei Streuungseinheiten.</p>
+<p>Diesen Koeffizienten nennt man <em>Cohens d</em>.</p>
+<p>Er ist so definiert:</p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mi>d</mi></msub><mo>=</mo><mfrac><mi>d</mi><mrow><mi>s</mi><mi>d</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">C_d = \frac{d}{sd}</annotation></semantics></math></p>
+<p>Anmerkung: Um die Streuung zu berechnen, gibt es ein paar Varianten. Meist nimmt man den Mittelwert der Streuungen (SDs) der beiden Grupppen, ungewichtet von der Gruppengröße. Das nennt man auch die “gepoolte SD” (pooled sd).</p>
+<p>Nehmen Sie an: <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mi>d</mi></msub><mo>=</mo><mn>.5</mn></mrow><annotation encoding="application/x-tex">C_d = .5</annotation></semantics></math>.</p>
+<p>Damit formulieren wir unsere Hypothese <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math> neu:</p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo>:</mo><msub><mi>C</mi><mi>d</mi></msub><mo>&gt;</mo><mn>.5</mn></mrow><annotation encoding="application/x-tex">H: C_d &gt; .5</annotation></semantics></math>.</p>
+<p>Das Unterschied in der mittleren Körpergröße soll also, laut <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math>, mindestens eine halbe SD-Einheit ausmachen.</p>
+<p>Geben Sie an einen Schätzwert für <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mi>d</mi></msub><annotation encoding="application/x-tex">C_d</annotation></semantics></math> für obige Hypothese an! Nutzen Sie den Median der entsprechenden Post-Verteilung!</p>
 <br/>
 </li>
 </ol>
