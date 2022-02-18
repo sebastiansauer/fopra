@@ -86,6 +86,8 @@ Kurz gesagt lernen Sie also, wie man eine wissenschaftliche Studie durchzieht. D
 
 # Lernziele des Moduls
 
+[Lernziele des Moduls](https://sebastiansauer.github.io/fopra/Interna/Lernziele-Modul.html)
+
 
 
 

@@ -35,6 +35,11 @@ editor_options:
 ```
 
 
+</br>
+</br>
+</br>
+
+
 
 - Die Studentis können eigenständig einige Arten von quantitativen psychologischen Studien in allen wesentlichen Schritten planen, erheben, auswerten, interpretieren und zusammenschreiben.
     - Im Hinblick auf *Versuchsplanung* können die Studentis Versuchspläne passend zu ihrer Forschungsfrage auswählen und kritisch bewerten; darüber hinaus können Sie Fallzahlen vorab planen.
