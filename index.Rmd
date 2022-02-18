@@ -60,17 +60,15 @@ bib <- ReadBib(bib_file)
 ```
 
 
-</br>
 
 
-
-```{r eval = FALSE}
+```{r eval = FALSE, out.width="50%"}
 knitr::include_graphics("https://raw.githubusercontent.com/sebastiansauer/fopra/main/chunk-img/Open_Science_Logo_v3.svg")
 ```
 
 </br>
 
-```{r}
+```{r fig.width=5}
 knitr::include_graphics("https://i.imgflip.com/65r1fd.jpg")
 ```
 
