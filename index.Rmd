@@ -154,7 +154,7 @@ modul_zsfg <- yaml::read_yaml(paste0(here::here(), "/Interna/modul-zsfg.yaml"))
 
 
 
-```{r build-themen, child="Interna/build-themen.R", results='asis'}
+```{r build-themen, child="Interna/build-themen.Rmd", results='asis', echo=FALSE}
 ```
 
 
