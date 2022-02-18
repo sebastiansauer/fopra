@@ -42,6 +42,25 @@ editor_options:
 
 
 
+# Sicherheitsunterweisung
+
+
+- Der Dozent weist auf Fluchtwege und auf die Sammelstelle hin (abhängig vom Seminarraum).
+- Flucht- und Rettungspläne hängen im Gebäude aus; bitte betrachten Sie sie sorgfältig. Prägen Sie sich die Rettungswege, den Ort der Sammelstelle sowie von Feuerlöschern und Brandmeldeeinrichtungen gut ein.
+- Bei Alarm: Ruhe bewahren. Der Dozent weist an, den Raum sofort zu verlassen und geordnet über den kürzesten Weg zur Sammelstelle zu gehen. Tun Sie das.
+- Prüfen Sie, ob niemand zurückgelassen ist (z. B. auf der Toilette).
+- Fluchtwege (z. B. Fluren und Treppen) dürfen nicht versperrt sein.
+- Notausgänge müssen ausgeschildert und frei zugänglich sein.
+- Aufzüge dürfen im Brandfall nicht verwendet werden. Lebensgefahr!
+- Im Brandfall sind Fenster und Türen zu schließen (aber nicht zu verriegeln!).
+- Hilflose Personen sind mitzunehmen.
+- Brände sind zu bekämpfen, aber die sichere Evakuierung hat Vorrang.
+- Bei Bränden ist sofort die Feuerwehr zu alarmieren.
+- Bei einem Hupton ist das Gebäude sofort zu verlassen und die Sammelstelle aufzusuchen. Brandschutztüren sind stets geschlossen zu halten.
+- Prägen Sie sich die Position von Feuerlöschern und Erste-Hilfe-Material gut ein.
+
+
+
 # Organisatorisches
 
 - Bitte laden Sie sich rechtzeitig die Materialien herunter.
@@ -162,4 +181,10 @@ editor_options:
 - Um eine Wortmeldung in einer Videokonferenz anzuzeigen, bietet sich die Funktion des Handhebens an.
 - In Breakout-Sessions (in Zoom) sollte aktiv mitgearbeitet werden, wer das nicht möchte, betritt den Breakout-Room nicht.
 - Spricht man eine Person in einer Videokonferenz an, sollte die Kamera angeschaltet sein.
+
+
+
+# Salvatorische Klausel
+
+- Diese Hinweise hier gelten nur insofern Ihre Dozentis Ihnen nicht andere Hinweise geben :-)
 

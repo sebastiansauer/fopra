@@ -166,14 +166,7 @@ modul_zsfg <- yaml::read_yaml(paste0(here::here(), "/Interna/modul-zsfg.yaml"))
 
 # Prüfung
 
-## Was ist das für eine Prüfung?
-
-Bei der Prüfung handelt es sich um eine *Seminararbeit*
-
-
-
-## Hinweise zur Prüfung
-
+[Hinweise zur Prüfung](https://sebastiansauer.github.io/fopra/Interna/Pruefung.html)
 
 
 # Literaturverzeichnis

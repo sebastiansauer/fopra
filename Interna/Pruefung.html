@@ -1824,7 +1824,20 @@ Prism.languages.r={comment:/#.*/,string:{pattern:/(['"])(?:\\.|(?!\1)[^\\\r\n])*
       <div class="Wrap">
         <div class="Sidebar">
           <div class="SidebarItems" id="toc">
-            
+            <ul>
+            <li><a href="#prüfungsgegenstand"><span class="toc-section-number">1</span> Prüfungsgegenstand</a></li>
+            <li><a href="#benotung"><span class="toc-section-number">2</span> Benotung</a>
+            <ul>
+            <li><a href="#aspekte-der-benotung"><span class="toc-section-number">2.1</span> Aspekte der Benotung</a></li>
+            <li><a href="#anspruch"><span class="toc-section-number">2.2</span> Anspruch</a></li>
+            <li><a href="#beispiele-für-fehler"><span class="toc-section-number">2.3</span> Beispiele für Fehler</a></li>
+            <li><a href="#merkmale-einer-sehr-guten-seminararbeit"><span class="toc-section-number">2.4</span> Merkmale einer sehr guten Seminararbeit</a></li>
+            <li><a href="#aus-der-checkliste-der-prüfis"><span class="toc-section-number">2.5</span> Aus der Checkliste der Prüfis</a></li>
+            <li><a href="#typische-fehler"><span class="toc-section-number">2.6</span> Typische Fehler</a></li>
+            <li><a href="#tipps-für-eine-erfolgreiche-seminararbeit"><span class="toc-section-number">2.7</span> Tipps für eine erfolgreiche Seminararbeit</a></li>
+            </ul></li>
+            <li><a href="#hinweise"><span class="toc-section-number">3</span> Hinweise</a></li>
+            </ul>
           </div>
           <div data-position="sidebar:post-end" class="InjectedComponents"><div class="dark-theme-toggler"><div class="toggle "><div class="toggle-track"><div class="toggle-track-check"><img src="data:image/png;base64,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" role="presentation" style="pointer-events: none;" width="16" height="16"></div> <div class="toggle-track-x"><img src="data:image/png;base64,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" role="presentation" style="pointer-events: none;" width="16" height="16"></div></div> <div class="toggle-thumb"></div></div> <input type="checkbox" aria-label="Switch between Dark and Default theme" class="toggler-screen-reader-only"></div></div>
         </div>
@@ -1838,7 +1851,7 @@ Prism.languages.r={comment:/#.*/,string:{pattern:/(['"])(?:\\.|(?!\1)[^\\\r\n])*
       <p class="authors">
            <span class="glyphicon glyphicon-user"></span> Sebastian Sauer
       </p>
-         <p class="date"><span class="glyphicon glyphicon-calendar"></span> Letzte Aktualisierung: 2022-02-18 19:47:57</p>
+         <p class="date"><span class="glyphicon glyphicon-calendar"></span> Letzte Aktualisierung: 2022-02-18 21:19:59</p>
            
 
    
@@ -1847,36 +1860,262 @@ Prism.languages.r={comment:/#.*/,string:{pattern:/(['"])(?:\\.|(?!\1)[^\\\r\n])*
 <!-- Don't indent these lines or it will mess pre blocks indentation --> 
 <div class="page-content has-page-title">
 <p></br> </br></p>
+<div id="prüfungsgegenstand" class="section level1" number="1">
+<h1><span class="header-section-number">1</span> Prüfungsgegenstand</h1>
 <ol style="list-style-type: decimal">
 <li><p>Die Prüfung besteht aus folgende/n Leistung/en:</p>
 <ul>
 <li>Seminararbeit</li>
 </ul></li>
-<li><p>Gegenstand der Seminararbeit ist die Dokumentation der Studie des jeweiligen Forschungsteams. Es handelt sich also um eine Gruppenarbeit.</p></li>
-<li><p>Abschnittsverantwortliche: In der Seminararbeit ist anzugeben, welche Person (des Forschungsteams) welchen Abschnitt maßgeblich geschrieben hat.</p></li>
-<li><p>Formale Anforderungen an die Seminararbeit:</p></li>
-</ol>
+<li><p>Es wird erwartet, dass Sie als Versuchsperson an den Studien der Kommilitonis teilnehmen, falls nötig.</p></li>
+<li><p>Sie führen eine eigene empirische Studie durch und verfassen dazu einen Bericht; dabei stützen Sie sich i. d. R. auf selber erhobene Daten.</p></li>
+<li><p>Gegenstand der Seminararbeit ist die Dokumentation der Studie des jeweiligen Forschungsteams. Es handelt sich also um eine Gruppenarbeit. Einzelarbeiten sind grundsätzlich nicht zulässig.</p></li>
+<li><p>Abschnittsverantwortliche: Jedes Kapitel/Teilkapitel muss mit genau einem Namen ausgewiesen sein. Der Namen der/des Autor*in soll als Fußnote an die jeweilige Überschrift angefügt sein.</p></li>
+<li><p>Formale Anforderungen an die Seminararbeit:</p>
 <ul>
 <li>6000 Wörter (im Hauptteil)</li>
 <li>Anwendung der Methoden des wissenschaftlichen Arbeiten in Recherche, Zitat und Darstellung Anwendung der Methoden quantitativer Datenanalyse</li>
-</ul>
-<ol start="5" style="list-style-type: decimal">
-<li>Anspruch an eine gute Seminararbeit</li>
+</ul></li>
+<li><p>Aus formalen Gründen muss jedes Mitglied der Gruppe die gemeinsame Arbeit selber (auf eigenen Namen) einreichen (hochladen). Die eingereichten Exemplare aller Mitglieder müssen identisch sein.</p></li>
+<li><p>Die Anzahl der Wörter des Hauptteils ist auf dem Deckblatt anzugeben.</p></li>
+<li><p>Wenn die Prüfung aus einer Seminarbeit besteht oder eine Seminarleistung beinhaltet, ist diese nur online, nicht ausgedruckt einzureichen.</p></li>
+<li><p>Bei der Benotung wird die Kenntnis der Inhalte der Veranstaltung (inkl. dieses Skripts) vorausgesetzt.</p></li>
+<li><p>Bei der Anmeldung ist der Titel anzugeben; der gleiche Titel muss sich auch auf der eingereichten Arbeit finden.</p></li>
+<li><p>Eine eingereichte Arbeit kann nicht wieder zurückgezogen werden.</p></li>
+<li><p>Alle teilnehmenden Personen sollen in ähnlichem Umfang beitragen.</p></li>
+<li><p>Alle teilnehmenden Personen einer Gruppenarbeit melden das (exakt) gleiche Thema an.</p></li>
+<li><p>Es ist erlaubt, eine Gruppe zu verlassen. Wer eine Gruppe verlässt, schließt sich einer anderen Gruppe an.</p></li>
+<li><p>Reichen Sie die Rohdaten und ggf. Syntax (elektronisch) ein. Verweisen Sie im Anhang auf eine Datei, die Sie hochladen, in der die entsprechenden Informationen zu finden sind.</p></li>
+<li><p>Das Thema muss einen direkten empirisch-psychologischen Bezug haben; die Forschungsfrage muss psychologisch relevante Aspekte adressieren.</p></li>
 </ol>
+</div>
+<div id="benotung" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Benotung</h1>
+<div id="aspekte-der-benotung" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Aspekte der Benotung</h2>
+<ol style="list-style-type: decimal">
+<li><p>Es wird eine Gesamtnote und drei Teilnoten vergeben.</p></li>
+<li><p>Die Gesamtnote muss sich nicht als arithmetisches Mittel der Teilnoten ergeben.</p></li>
+<li><p>Die Teilnoten sind</p>
+<ul>
+<li><em>Formalia</em> (u.a. Aufbau, Gestaltung, Rechtschreibung, Zitierweise, Literaturverzeichnis, Umfang)</li>
+<li><em>Methodik</em> (u.a. Methodenauswahl, Methodenanwendung, Interpetation)</li>
+<li><em>Inhalt</em> (u.a. Gliederung, Argumentation, Literaturnutzung, sprachlicher Ausdruck, Problemlösung, Reflexion)</li>
+</ul></li>
+</ol>
+</div>
+<div id="anspruch" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Anspruch</h2>
+<ol start="5" style="list-style-type: decimal">
+<li>Anspruch an eine gute Seminararbeit
 <ul>
 <li>Überwiegende Verwendung von Literatur hoher Qualität (Fachartikel, peer-reviewed)</li>
 <li>Ca. 30 Quellen oder mehr im Literaturverzeichnis</li>
 <li>Stichprobengröße (ca.)
 <ul>
 <li>Experimentell: Between-Design 50 Fälle, Within-Design: 20 Fälle</li>
-<li>Beobachtend: 100 Fälle</li>
 </ul></li>
+<li>Beobachtend: 100 Fälle</li>
 <li>Designumfang (ca.)
 <ul>
 <li>Experimentell: 2-3 Variablen</li>
 <li>Beobachtend: 3-4 Variablen</li>
 </ul></li>
+</ul></li>
+<li>Nichteinhaltung der Regeln bzw. der Hinweise kann zum Durchfallen oder schlechterer Note führen.</li>
+</ol>
+</div>
+<div id="beispiele-für-fehler" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Beispiele für Fehler</h2>
+<p>Substanzielle Fehler können zum Durchfallen oder zum deutlichem Abwerten der Note führen. Beispiele für solche Fehler sind:</p>
+<ol style="list-style-type: decimal">
+<li>Formalia Die Textlänge (Hauptteil) ist zu kurz – ca. 20 % unter der formal angegeben Soll-Länge.</li>
+</ol>
+<ul>
+<li>Es liegen viele Zitierfehler im Text vor (z. B. 30 % oder mehr bzw. 10 oder mehr Fehler).</li>
+<li>Es liegen viele Fehler im Literaturverzeichnis vor (z. B. 30 % oder mehr bzw. 10 oder mehr Fehler).</li>
+<li>Es wurde die geforderte empirische Methode nicht verwendet.</li>
+<li>Es findet sich ein oder mehrere Plagiate (weitere Konsequenzen sind möglich).</li>
+<li>Die Versionen der Gruppenmitglieder (bei Gruppenarbeiten) unterscheiden sich.</li>
+<li>Es finden sich nicht zitierte Quellen im Literaturverzeichnis.</li>
 </ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Inhaltliche Mängel</li>
+</ol>
+<ul>
+<li>Das Literaturverzeichnis ist sehr kurz (weniger als 10 Quellen).</li>
+<li>Die Qualität des Literaturverzeichnisses ist gering (über 50 % Quellen von zweifelhafter Qualität, z. B. aus Ratgeber-Büchern).</li>
+<li>Die Lesbarkeit ist aufgrund der optischen Gestaltung oder gravierender Sprachmängel stark eingeschränkt (z. B. viele Rechtschreibfehler).</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>Methodische Mängel</li>
+</ol>
+<ul>
+<li>Es wird keine Inferenzstatistik verwendet.</li>
+<li>Zentrale Koeffizienten werden falsch interpretiert.</li>
+<li>Es wird keine/kaum Deskriptiv-Statistik berichtet.</li>
+<li>Hypothesen und Datenanalyse passen nicht zusammen.</li>
+</ul>
+</div>
+<div id="merkmale-einer-sehr-guten-seminararbeit" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> Merkmale einer sehr guten Seminararbeit</h2>
+<ol style="list-style-type: decimal">
+<li>Formales</li>
+</ol>
+<ul>
+<li>Die Richtlinien zur Gestaltung von wissenschaftlichen Texten wurden (fast) vollumfänglich umgesetzt. Insbesondere finden finden sich (fast) keine Zitierfehler im Text und im Literaturverzeichnis.</li>
+<li>Rechtschreibung, Zeichensetzung und Grammatik sind (fast) fehlerfrei.</li>
+<li>Gestaltung und Aufbau der Arbeit ist dem flüssigen Lesen zuträglich (z. B. optisch übersichtlich gestaltet und nicht weitschweifig sondern prägnant formuliert).</li>
+</ul>
+<ol start="2" style="list-style-type: decimal">
+<li>Methoden</li>
+</ol>
+<ul>
+<li>Es wurden angemessene Methoden ausgewählt und diese richtig angewendet und die Ergebnisse korrekt interpretiert.</li>
+<li>Die eingesetzte Methodik zeichnet sich durch hohe Breite und Tiefe aus.</li>
+<li>Es wurde sehr viel empirisches Material (z. B. befragte Personen) ausgewertet.</li>
+</ul>
+<ol start="3" style="list-style-type: decimal">
+<li>Inhalt</li>
+</ol>
+<ul>
+<li>Es wurde viel Literatur von hoher Qualität rezipiert.</li>
+<li>Ein roter Faden ist klar ersichtlich.</li>
+<li>Die Arbeit zeichnet sich nicht nur durch hohes Fachwissen, sondern auch durch wohl überlegte Argumentation aus.</li>
+</ul>
+</div>
+<div id="aus-der-checkliste-der-prüfis" class="section level2" number="2.5">
+<h2><span class="header-section-number">2.5</span> Aus der Checkliste der Prüfis</h2>
+<ul>
+<li>Wissen
+<ul>
+<li>Wurden die wesentlichen Inhalte des Themas berücksichtigt?</li>
+<li>Sind hochwertige (und genügende) Quellen zu Rate gezogen worden?</li>
+</ul></li>
+<li>Denken
+<ul>
+<li>Reihen sich nur Zusammenfassungen aneinander oder ist Denkarbeit erkennbar?</li>
+<li>Wurde das eigene Vorgehen angemessen kritisiert?</li>
+<li>Wurde diskutiert, verglichen, bewertet, weitergeführt, erörtert, analysiert … ?</li>
+<li>Zeugt die Arbeit von eigenen Ideen und eigenem Denken?</li>
+<li>Wurde selbständig gearbeitet?</li>
+</ul></li>
+<li>Schreiben
+<ul>
+<li>Ist Rechtschreibung, Zeichensetzung und Grammatik korrekt?</li>
+<li>Ist der Text „im Fluss“ – gut lesbar, stringent und folgerichtig?</li>
+</ul></li>
+<li>Methodik
+<ul>
+<li>Wurden die richtigen wissenschaftliche Methoden korrekt eingesetzt?</li>
+<li>Zeugt das methodische Vorgehen von Können und Kreativität?</li>
+<li>Ist die Studie nachprüfbar anhand des Berichts?</li>
+</ul></li>
+<li>Polieren
+<ul>
+<li>Sind die Formalia erfüllt (z. B. korrektes Zitieren inkl. Literaturverzeichnis)?</li>
+<li>Sind Text, Abbildungen, Tabellen etc. ansprechend formatiert?</li>
+</ul></li>
+</ul>
+</div>
+<div id="typische-fehler" class="section level2" number="2.6">
+<h2><span class="header-section-number">2.6</span> Typische Fehler</h2>
+<ol style="list-style-type: decimal">
+<li><p>Fachlich dünn: Die Anzahl von guten Quellen (z. B. Fachartikel) ist gering; der Autor kennt sein Thema zu wenig. Es findet kaum Rückbezug der eigenen Studie/Daten auf die Literatur statt.</p></li>
+<li><p>Stoff nicht ausreichend reflektiert: Es werden Fakten aneinander gereiht, ohne dass ist, ob sich mit dem Stoff auseinander gesetzt wurde (z. B. werden Stärken/Schwächen einzelner Texte nicht diskutiert).</p></li>
+<li><p>Formalia fehlerhaft: Durch „Äußerlichkeiten“ werden Punkte verschenkt (z. B. pixelige Grafiken, optisch schlecht aufgelockerte Texte, „Löcher“ im Textfluss; Fehler im Literaturverzeichnis).</p></li>
+<li><p>Zahlen irreführend präsentiert: Statistiken wie werden unvollständig präsentiert oder die Anzahl der Nachkommastellen ist zu hoch oder inkonsistent.</p></li>
+<li><p>Selbstkritik fehlt: Stärken und Schwächen der eigenen Art werden nicht diskutiert.</p></li>
+</ol>
+</div>
+<div id="tipps-für-eine-erfolgreiche-seminararbeit" class="section level2" number="2.7">
+<h2><span class="header-section-number">2.7</span> Tipps für eine erfolgreiche Seminararbeit</h2>
+<div id="reflexion-bereichen-sie-die-welt-mit-ihren-gedanken" class="section level3" number="2.7.1">
+<h3><span class="header-section-number">2.7.1</span> Reflexion: Bereichen Sie die Welt mit Ihren Gedanken</h3>
+<ul>
+<li><p>Ein Hauptfehler vieler Hausarbeiten liegt darin, dass sie nur andere Texte nacherzählen. Wo liegt da der Mehrwert?</p></li>
+<li><p>Der Mehrwert eines wissenschaftlichen Textes liegt in der Neuartigkeit der Gedanken: Kritisieren Sie bestehende Theorien, vergleichen Sie sie, arbeiten Sie das Wesentliche heraus. Übrigens: Auch eine Wiederholungsstudie lohnt sich.</p></li>
+<li><p>Legen Sie Ihre Forschungsfrage offen, beantworten Sie sie explizit.</p></li>
+<li><p>Explizieren Sie Ihre Hypothesen (konkret und operationalisiert)</p></li>
+<li><p>Sparen Sie auch eine kritische Aufarbeitung Ihrer eigenen Arbeit nicht aus. „Kritisch“ heißt positiv und konstruktiv negativ Rückmeldungen geben.</p></li>
+<li><p>Das „Fazit“ Ihrer Arbeit ist nicht eine Zusammenfassung Ihres Textes sondern die Überlegung, wohin Sie Ihre Gedanken geführt haben.</p></li>
+<li><p>Zur Reflexion gehört auch, dass Sie an den Nutzen des Lesers denken – was bringt ihm die Lektüre Ihres Texts? Sagen Sie z. B. anfangs, warum sich Ihr Thema „lohnt“!</p></li>
+<li><p>Unterscheiden Sie zwischen Beschreibung von Ideen (oder [Ihren] empirischen Ergebnissen) und deren Beurteilung.</p></li>
+<li><p>Beziehen Sie Ihre Ergebnisse/Daten auf die Literatur.</p></li>
+</ul>
+</div>
+<div id="fachwissen-zeigen-sie-dass-sie-sich-auskennen" class="section level3" number="2.7.2">
+<h3><span class="header-section-number">2.7.2</span> Fachwissen: Zeigen Sie, dass Sie sich auskennen</h3>
+<ul>
+<li><p>Nachdem Sie darüber nachgedacht haben, was ein lohnendes Thema ist, recherchieren Sie nach Literatur.</p></li>
+<li><p>Ohne einen kundigen (und aktuellen) Überblick über den Stand der Forschung können Sie keine verlässlichen Aussagen treffen – und keine gute Arbeit schreiben.</p></li>
+<li><p>Scheuen Sie sich nicht Fachartikeln; machen Sie sich die Qualität Ihrer Literaturstellen bewusst.</p></li>
+<li><p>Destillieren Sie aus der Vielfalt der Texte die Essenz der Ideen heraus – die Details sind nicht so wichtig.</p></li>
+<li><p>Zeigen Sie keine Bäume, sondern den Wald. Zeigen Sie keine unumstößliche Wahrheit, sondern mehrere Blickwinkel (z. B. unterschiedliche Definitionen). Verknüpfen Sie den Gegenstand mit anderen Theorien.</p></li>
+<li><p>Ihr Fachwissen zeigen Sie auch dadurch, dass Sie kritisch zu den Texten oder dem Forschungsstand Stellung nehmen.</p></li>
+<li><p>Erläutern Sie nicht die Hintergründe Ihrer Methoden im Detail. Das steht schon in den Lehrbüchern bzw. ist nicht üblich.</p></li>
+<li><p>Gehen Sie auf wesentliche Befunde oder Theorien des Fachgebiets ein, soweit relevant bzw. zweckdienlich.</p></li>
+</ul>
+</div>
+<div id="fluss-der-text-soll-elegant-fließen" class="section level3" number="2.7.3">
+<h3><span class="header-section-number">2.7.3</span> Fluss: Der Text soll elegant fließen</h3>
+<ul>
+<li><p>Begründen Sie Ihr Vorgehen.</p></li>
+<li><p>Man soll Dinge so einfach wie möglich ausdrücken, aber nicht einfacher (Einstein). Verwechseln Sie nicht komplizierte Wörter mit gehaltvollem Inhalt.</p></li>
+<li><p>Jedes Kapitel und jeder Absatz sollte genau eine Frage beantworten.</p></li>
+<li><p>Achten Sie auf ein gefälliges Äußeres Ihres Texts: Layout, Abbildungen, Schriftbild, leere Stellen im Blocksatz etc. machen einen Eindruck auf den Leser. Schaubilder helfen oft. Spiralbindung bietet sich an. Absätze sollten nicht zu lang sein (Textwüsten schläfern ein).</p></li>
+<li><p>Die Gliederung soll den Fluss Ihrer Argumentation wiedergeben.</p></li>
+<li><p>Schreiben Sie elegant: Z. B. meiden Sie Passivsätze; schreiben Sie aktiv. Wechseln Sie kurze mit langen Sätzen ab. Meiden Sie Amtsdeutsch wie der Teufel das Weihwasser. Ein guter Titel hat selten geschadet. Verwenden Sie die „Ich-Form“ sparsam; genauso das „man“.</p></li>
+<li><p>Nutzen Sie Schaubilder, Diagramme etc. soweit sinnvoll.</p></li>
+<li><p>Machen Sie keine Screenshots von R-Syntax, die Sie im Bericht wiedergeben. Stellen Sie die Syntax stattdessen in eine Datei, die Sie mit einreichen.</p></li>
+</ul>
+</div>
+<div id="redlichkeit-machen-sie-ihre-ergebnisse-nachvollziehbar" class="section level3" number="2.7.4">
+<h3><span class="header-section-number">2.7.4</span> Redlichkeit: Machen Sie Ihre Ergebnisse nachvollziehbar</h3>
+<ul>
+<li><p>Was sind Ihre eigenen Gedanken und welche Gedanken haben Sie übernommen – machen Sie dies kenntlich, indem Sie übernommen Gedanken als Zitate kennzeichnen.</p></li>
+<li><p>Es ist nicht schändlich, Gedanken anderer zu übernehmen. Im Gegenteil: „Auf den Schultern von Giganten“ ist eine Credo der Wissenschaft. Sie können also auch replizieren.</p></li>
+<li><p>Andere Wissenschaftlis sollte die Möglichkeit haben, Ihre Ergebnisse rekonstruieren zu können. Dazu zählt, dass Sie Ihre Recherchestrategie offen legen (welche Datenbanken etc.). Ebenso, dass Sie Ihr methodisches Vorgehen nachvollziehbar machen.</p></li>
+<li><p>Weisen Sie auf Schwächen (und Stärken) und sich nach Ihrer Arbeit anschließende Forschungsfragen hin, so dass andere auf Ihren Schultern weitersehen können.</p></li>
+<li><p>Explizieren Sie Ihre Suchstrategie für Literatur (welche Datenbanken? Welche Suchbegriffe? Wie viele Treffer? Welche ausgewählt? Nach welchen Kriterien?) Ausführliche Details in den Anhang packen.</p></li>
+<li><p>Reichen Sie Syntax, Daten und ggf. Stimulus-Materialien (elektronisch) ein.</p></li>
+<li><p>Versuchen Sie, den Nutzen Ihrer Arbeit für Dritte aufzuzeigen.</p></li>
+</ul>
+</div>
+<div id="leserseite-schreiben-sie-für-den-leser" class="section level3" number="2.7.5">
+<h3><span class="header-section-number">2.7.5</span> Leserseite: Schreiben Sie für den Leser</h3>
+<p>Hier sind einige typische Fragen, die sich Lesis - implizit oder explizit - stellen:</p>
+<ul>
+<li>Worum geht’s?
+<ul>
+<li>Aussagekräftige Titel, Zusammenfassungen, Kernaussagen, Schaubilder, Fazit …</li>
+</ul></li>
+<li>Was nützt es mir?
+<ul>
+<li>Sinn, Zweck, Ziel und Bedeutung in der Einleitung aufzeigen, Praxisnutzen herausstellen, ggf. Checklisten, Leitfäden etc. erstellen</li>
+</ul></li>
+<li>Was soll ich jetzt tun?
+<ul>
+<li>Geben Sie Handlungsempfehlungen, ggf. „Kochrezepte“, wie in einer bestimmten Situation vorzugehen ist, z. B. Typologien beschreiben</li>
+</ul></li>
+<li>So what?
+<ul>
+<li>Tja, und nun :-)</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="hinweise" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Hinweise</h1>
+<ul>
+<li>Vermeiden Sie den Upload von Prüfungsleistungen kurz vor der Frist – falls technische Probleme auftreten, können diese u. U. nicht mehr gelöst werden.</li>
+<li>Die Dozentis führen keine Vorab-Korrektur von laufenden Prüfungsleistungen durch. Fragen, die einer VorabKorrektur Ihrer Arbeit nahe kommen (und daher nicht beantwortet werden), sind z. B.: „Ist mein Fragebogen so o.k.?“, „Passt das so?“, „Können Sie mal drüber schauen, ob ich so anfangen kann?“, „Passen meine Hypothesen zur Theorie?“, „Hab ich was vergessen?“, „Ist die Gliederung so richtig/vollständig?“ …</li>
+<li>Fachliche Fragen werden jederzeit beantwortet.</li>
+<li>Fragen zum Stoff werden im Unterricht jederzeit beantwortet. Sprechen Sie die Dozentis auch gerne vor oder nach dem Unterricht persönlich an.</li>
+<li>Aus Gründen der Fairness werden inhaltliche Fragen von Studierenden nur öffentlich, z. B. im Unterricht oder im Online-Forum, beantwortet (nicht per Mail).</li>
+</ul>
+</div>
 </div>
 
    
