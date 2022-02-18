@@ -63,7 +63,7 @@ bib <- ReadBib(bib_file)
 
 
 ```{r eval = TRUE}
-knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/b/b6/Open_Science_Logo_v3.svg")
+knitr::include_graphics("https://raw.githubusercontent.com/sebastiansauer/fopra/main/chunk-img/Open_Science_Logo_v3.svg")
 ```
 
 [Bildquelle: G. Schindler, E, Emmerich, Lizenz: CC-SA](https://commons.wikimedia.org/wiki/File:Open_Science_Logo_v3.svg)
