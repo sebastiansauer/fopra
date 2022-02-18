@@ -1,5 +1,7 @@
 thema1:
   title: "Hallo, Forschung"
+  kw: 11
+  datum: 14.-18.3.22
   subtitle: "Einführung in das (und Ihr) Thema Forschung"
   vorbereitung:
     - Lesen Sie die Hinweise zum Modul.
@@ -25,6 +27,8 @@ thema1:
 
 thema2:
   title: "Hypothesen und Gedöns"
+  kw: 12
+  datum: 21.3.-25.3.
   vorbereitung:
     - "Lesen Sie den 'Brain-Drain-Artikel'."
   plenum:
@@ -49,28 +53,71 @@ thema2:
 
 thema3:
   title: "Beobachtungsstudien"
+  kw: 13
+  datum: 28.3.-1.4.
+
 thema4:
   title: "Experimente"
+  kw: 14
+  datum: 4.4.-8.4.
+
 thema5:
   title: "Vertiefung - Versuchspläne"
+  kw: 15
+  datum: 11.4.-15.4.
+
+
+thema6x:
+  title: "Wiederholung"
+  kw: 16
+  datum: 18.4.-22.4
+ 
+
+
 thema6:
   title: "Online-Studien"
+  kw: 17
+  datum: 25.4.-29.4.
+
 thema7:
   title: "Kausalanalyse"
+  kw: 18
+  datum: 2.4.-6.5.
+
 thema8:
   title: "Fallzahlplanung"
+  kw: 19
+  datum: 9.5.-13.5.
+
 thema9:
   title: "Messinstrumente"
+  kw: 20
+  datum: 16.5.-20.5.
+
 thema10:
   title: "Versuchsdurchführung"
+  kw: 21
+  datum: 23.5.-27.5.
+
 thema11:
   title: "Datenaufbereitung"
+  kw: 23
+  datum: 6.6.-10.6.
+
 thema12:
   title: "Datenmodellierung"
+  kw: 24
+  datum: 13.6.-17.6.
+
 thema13:
   title: "Open Science"
   vertiefung:
   - "[Einführung in R Markdown, Folien](https://docs.google.com/presentation/d/e/2PACX-1vRZ72QdK_nq-s4hwjLYCgUmDVWMxdAx_WwD6Equ9SgCmjvhmuiw6M4XbqzCqmqKVRIeaUrO1BGGU-q6/pub?start=false&loop=false&delayms=3000&slide=id.p)"
+  kw: 25
+  datum: 20.6.-24.6.
 
 thema14:
   title: "Joker-Stunde"
+  kw: 26
+  datum: 27.6.-1.7.
+

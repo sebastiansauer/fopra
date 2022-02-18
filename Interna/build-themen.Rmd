@@ -11,6 +11,21 @@ for (i in seq_along(titel)){
   cat("##", this_title, "\n")
   cat("\n")
 
+  
+  datum <- modul_zsfg[[i]][["datum"]]
+  if (!is.null(datum)){
+    cat("### Datum \n")
+    cat("\n")
+    for (t in datum) {
+      cat(paste0("- ", t))
+      cat("\n")
+    }
+
+    cat("\n")
+    cat("\n")
+  }
+  
+  
 
   lernziele <- modul_zsfg[[i]][["lernziele"]]
 
