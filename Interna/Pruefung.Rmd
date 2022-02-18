@@ -1,0 +1,65 @@
+---
+title: "Prüfung"
+subtitle: ""
+author: "Sebastian Sauer"
+date: "Letzte Aktualisierung: `r Sys.time()`"
+output:
+   
+  rmdformats::downcute:
+    self_contained: true
+    thumbnails: true
+    lightbox: true
+    gallery: false
+    highlight: tango
+    number_sections: TRUE
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r global-knitr-options, include=FALSE}
+  knitr::opts_chunk$set(
+  fig.pos = 'H',
+  fig.asp = 0.618,
+  fig.align='center',
+  fig.width = 5,
+  out.width = "100%",
+  fig.cap = "", 
+  fig.path = "chunk-img/",
+  dpi = 300,
+  # tidy = TRUE,
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE,
+  cache = FALSE,
+  fig.show = "hold")
+```
+
+
+
+</br>
+</br>
+
+
+
+
+1. Die Prüfung besteht aus folgende/n Leistung/en:
+    - Seminararbeit
+
+2. Gegenstand der Seminararbeit ist die Dokumentation der Studie des jeweiligen Forschungsteams. Es handelt sich also um eine Gruppenarbeit. Einzelarbeiten sind grundsätzlich nicht zulässig.
+
+3. Abschnittsverantwortliche: In der Seminararbeit ist anzugeben, welche Person (des Forschungsteams) welchen Abschnitt maßgeblich geschrieben hat.
+
+4. Formale Anforderungen an die Seminararbeit:
+  - 6000 Wörter (im Hauptteil)
+  - Anwendung der Methoden des wissenschaftlichen Arbeiten in Recherche, Zitat und Darstellung
+Anwendung der Methoden quantitativer Datenanalyse
+
+5. Anspruch an eine gute Seminararbeit
+  - Überwiegende Verwendung von Literatur hoher Qualität (Fachartikel, peer-reviewed)
+  - Ca. 30 Quellen oder mehr im Literaturverzeichnis
+  - Stichprobengröße (ca.)
+    - Experimentell: Between-Design 50 Fälle, Within-Design: 20 Fälle
+    - Beobachtend: 100 Fälle
+  - Designumfang (ca.)
+    - Experimentell: 2-3 Variablen
+    - Beobachtend: 3-4 Variablen
