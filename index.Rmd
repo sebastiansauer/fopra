@@ -84,17 +84,7 @@ Kurz gesagt lernen Sie also, wie man eine wissenschaftliche Studie durchzieht. D
 
 
 
-# Übergreifende Lernziele
-
-- Die Studentis können eigenständig einige Arten von quantitativen psychologischen Studien in allen wesentlichen Schritten planen, erheben, auswerten, interpretieren und zusammenschreiben.
-    - Im Hinblick auf *Versuchsplanung* können die Studentis Versuchspläne passend zu ihrer Forschungsfrage auswählen und kritisch bewerten; darüber hinaus können Sie Fallzahlen vorab planen.
-    - Im Hinblick auf *Datenerhebung* können die Studentis für ihre Forschungsfrage passende Messinstrumente auswählen. Zentrale rechtliche und ethische Aspekte sind ihnen bekannt. Softwarelösungen zur Datenerhebung können sie auswählen und einsetzen. Probleme und Lösungen im Hinblick auf Störvariablen können sie diskutieren.
-    - Im Hinblick auf *Datenauswertung* können die Studentis die Verfahren aus den Modulen QM1 und QM2 praktisch auf ihre eigenen Daten anwenden.
-    - Im Hinblick auf *Interpretation* von Versuchsergebnissen wissen die Studentis um die Grenzen der internen und externen Validität bestimmter Versuchspläne, von Störfaktoren und “Researchers’ Degrees of Freedom”.
-    - Im Hinblick auf die *Berichtlegung* von Studienergebnissen sind die Studentis in der Lage, die Methoden aus dem Modul Wissenschaftliches Arbeiten auf ihre eigene Studie hin anzuwenden.
-- Die Studentis können quantitative psychologische Studien auf ihre Güte hin kritisch untersuchen.
-
-
+# Lernziele des Moduls
 
 
 
