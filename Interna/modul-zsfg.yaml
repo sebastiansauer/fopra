@@ -1,21 +1,30 @@
 thema1:
   title: "Hallo, Forschung"
   subtitle: "Einführung in das (und Ihr) Thema Forschung"
-  literatur: ""
+  vorbereitung:
+    - Lesen Sie die Hinweise zum Modul.
+    - Installieren (oder Updaten) Sie die für dieses Modul angegeben Software.
+  literatur:
+    - "Lesen Sie in 'Research Methods in Psychology Kap. 1-4, 7"
   plenum:
     - "[The Altmetric Top 100 Papers](https://www.altmetric.com/top100/2020/)"
     - "[Alltagsforschung.de: Echte, Studien, sofatauglich aufbereitet](https://www.alltagsforschung.de/)"
     - "[Psychologie-Magazin 'The Inquisitive Mind'](https://de.in-mind.org/)"
+  aufgaben:
+    - "[aufRRRischungskurs mit Pinguinen]https://allisonhorst.shinyapps.io/dplyr-learnr/#section-welcome)"
   vertiefung:
-  - "[Most influential papers on Google Scholar in 2020](https://www.natureindex.com/news-blog/google-scholar-reveals-most-influential-papers-research-citations-twenty-twenty)"
-  - "[Liste interessanter, replizierwürdiger Studien (oft) mit Bezug zur Psychologie](https://www.zotero.org/groups/2522726/to-be-replicated)"
-  - "[Frontiers in Psychology (Journal)](https://www.frontiersin.org/journals/psychology#research-topics)"
-  - "[Interessante psychologische Studien - eine subjektive Auswahl](https://sebastiansauer.github.io/psy-paper-suggestions/)"
-  - "[Ausgewiesene wirtschaftspsychologische Studien aus studentischer Feder](https://www.fom.de/forschung/institute/iwp/publikationen.html#!acc=iwp-schriftenreihe/accid=18799)"
+    - "[Most influential papers on Google Scholar in 2020](https://www.natureindex.com/news-blog/google-scholar-reveals-most-influential-papers-research-citations-twenty-twenty)"
+    - "[Liste interessanter, replizierwürdiger Studien (oft) mit Bezug zur Psychologie](https://www.zotero.org/groups/2522726/to-be-replicated)"
+    - "[Frontiers in Psychology (Journal)](https://www.frontiersin.org/journals/psychology#research-topics)"
+    - "[Interessante psychologische Studien - eine subjektive Auswahl](https://sebastiansauer.github.io/psy-paper-suggestions/)"
+    - "[Ausgewiesene wirtschaftspsychologische Studien aus studentischer Feder](https://www.fom.de/forschung/institute/iwp/publikationen.html#!acc=iwp-schriftenreihe/accid=18799)"
 thema2:
   title: "Hypothesen und Gedöns"
   literatur:
     - "[Brain Drain: The Mere Presence of One’s Own Smartphone Reduces Available Cognitive Capacity](https://repositories.lib.utexas.edu/bitstream/handle/2152/64130/braindrain.pdf;sequence=2)"
+    - "[Appendix zur Brain-Drain-Studie](https://www.dropbox.com/s/8o8jf602rgz9hgw/Ward%2C%20Duke%2C%20Gneezy%20and%20Bos%20-%20Brain%20Drain%20Web%20Appendix.pdf?dl=1)"
+  Vertiefung:
+    - "[Skorbut-Datensatz](https://rdrr.io/cran/medicaldata/man/scurvy.html)"
 thema3:
   title: "Nicht-interventionelle Versuchspläne"
 thema4:

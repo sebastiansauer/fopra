@@ -1826,17 +1826,18 @@ Prism.languages.r={comment:/#.*/,string:{pattern:/(['"])(?:\\.|(?!\1)[^\\\r\n])*
           <div class="SidebarItems" id="toc">
             <ul>
             <li><a href="#organisatorisches"><span class="toc-section-number">1</span> Organisatorisches</a></li>
-            <li><a href="#rechtliche-hinweise"><span class="toc-section-number">2</span> Rechtliche Hinweise</a></li>
-            <li><a href="#aufnahme-des-unterrichts"><span class="toc-section-number">3</span> Aufnahme des Unterrichts</a></li>
-            <li><a href="#it"><span class="toc-section-number">4</span> IT</a></li>
-            <li><a href="#ich-brauche-hilfe.-was-soll-ich-tun"><span class="toc-section-number">5</span> Ich brauche Hilfe. Was soll ich tun?</a></li>
-            <li><a href="#videokonferenzen"><span class="toc-section-number">6</span> Videokonferenzen</a></li>
-            <li><a href="#didaktik"><span class="toc-section-number">7</span> Didaktik</a>
+            <li><a href="#präsenzunterricht"><span class="toc-section-number">2</span> Präsenzunterricht</a></li>
+            <li><a href="#rechtliche-hinweise"><span class="toc-section-number">3</span> Rechtliche Hinweise</a></li>
+            <li><a href="#aufnahme-des-unterrichts"><span class="toc-section-number">4</span> Aufnahme des Unterrichts</a></li>
+            <li><a href="#it"><span class="toc-section-number">5</span> IT</a></li>
+            <li><a href="#ich-brauche-hilfe.-was-soll-ich-tun"><span class="toc-section-number">6</span> Ich brauche Hilfe. Was soll ich tun?</a></li>
+            <li><a href="#videokonferenzen"><span class="toc-section-number">7</span> Videokonferenzen</a></li>
+            <li><a href="#didaktik"><span class="toc-section-number">8</span> Didaktik</a>
             <ul>
-            <li><a href="#lehrkonzept"><span class="toc-section-number">7.1</span> Lehrkonzept</a></li>
-            <li><a href="#lerntipps"><span class="toc-section-number">7.2</span> Lerntipps</a></li>
+            <li><a href="#lehrkonzept"><span class="toc-section-number">8.1</span> Lehrkonzept</a></li>
+            <li><a href="#lerntipps"><span class="toc-section-number">8.2</span> Lerntipps</a></li>
             </ul></li>
-            <li><a href="#umgangsformen"><span class="toc-section-number">8</span> Umgangsformen</a></li>
+            <li><a href="#umgangsformen"><span class="toc-section-number">9</span> Umgangsformen</a></li>
             </ul>
           </div>
           <div data-position="sidebar:post-end" class="InjectedComponents"><div class="dark-theme-toggler"><div class="toggle "><div class="toggle-track"><div class="toggle-track-check"><img src="data:image/png;base64,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" role="presentation" style="pointer-events: none;" width="16" height="16"></div> <div class="toggle-track-x"><img src="data:image/png;base64,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" role="presentation" style="pointer-events: none;" width="16" height="16"></div></div> <div class="toggle-thumb"></div></div> <input type="checkbox" aria-label="Switch between Dark and Default theme" class="toggler-screen-reader-only"></div></div>
@@ -1851,7 +1852,7 @@ Prism.languages.r={comment:/#.*/,string:{pattern:/(['"])(?:\\.|(?!\1)[^\\\r\n])*
       <p class="authors">
            <span class="glyphicon glyphicon-user"></span> Sebastian Sauer
       </p>
-         <p class="date"><span class="glyphicon glyphicon-calendar"></span> Letzte Aktualisierung: 2022-02-17 10:36:19</p>
+         <p class="date"><span class="glyphicon glyphicon-calendar"></span> Letzte Aktualisierung: 2022-02-17 10:42:05</p>
            
 
    
@@ -1864,16 +1865,22 @@ Prism.languages.r={comment:/#.*/,string:{pattern:/(['"])(?:\\.|(?!\1)[^\\\r\n])*
 <ul>
 <li>Bitte laden Sie sich rechtzeitig die Materialien herunter.</li>
 <li>Beachten Sie die Vorbereitungshinweise zur ersten Unterrichtsstunde und für die einzelnen Termine.</li>
-<li>Beachten Sie aktuell geltenden Hygienevorschriften.</li>
-<li>Bitte meiden Sie datenhungrige Applikationen wie das Streamen von Filmen – Sie behindern den Unterricht und verärgern damit andere Studierende (in diesem oder anderen Kursen).</li>
 <li>Ein Foliensatz kann kein Lehrbuch ersetzen; falls Sie bei einem Termin gefehlt haben oder Ihre Aufzeichnung lückenhaft ist, lesen Sie bitte in der Literatur nach oder bitten Sie eine/n Kommiliton/in um Hilfe.</li>
 <li>Beachten Sie die Hinweise der Hochschule (s. Moodle) wie die Orientierungshilfe, die Klausur- und Studiengangsordnungen. Dort finden Sie verbindliche Hinweise zu vielen organisatorischen Fragen.</li>
 <li>Bitte prüfen Sie jetzt schon und in regelmäßigen Abständen die Modulseite auf neue Materialien.</li>
 <li>Nachdem eine Unterrichtseinheit abgeschlossen ist, ändert der Dozent grundsätzlich nichts mehr an den Materialien (in Ausnahmefällen wie etwa der Korrektur eines Fehler informiert der Dozent schriftlich).</li>
 </ul>
 </div>
-<div id="rechtliche-hinweise" class="section level1" number="2">
-<h1><span class="header-section-number">2</span> Rechtliche Hinweise</h1>
+<div id="präsenzunterricht" class="section level1" number="2">
+<h1><span class="header-section-number">2</span> Präsenzunterricht</h1>
+<ul>
+<li>Beachten Sie aktuell geltenden Hygienevorschriften.</li>
+<li>Bitte meiden Sie datenhungrige Applikationen wie das Streamen von Filmen – Sie behindern den Unterricht und verärgern damit andere Studierende (in diesem oder anderen Kursen).</li>
+<li>Bitte bringen Sie einen Computer (mit Internetanschluss) in alle Präsenztermine mit. Bringen Sie ggf. Ersatzbatterien und/oder Verlängerungskabel mit - leider sind nicht überall ausreichend Steckdosen vorhanden.</li>
+</ul>
+</div>
+<div id="rechtliche-hinweise" class="section level1" number="3">
+<h1><span class="header-section-number">3</span> Rechtliche Hinweise</h1>
 <ul>
 <li>Dieser Kurs ist lizensiert unter der <a href="https://github.com/sebastiansauer/bayes-start/blob/main/LICENSE">MIT Lizenz</a>. Das ist eine permissive Lizenz, die erlaubt, dass Sie diesen Kurs frei verwenden können. Sie haben (nur) die Verpflichtung, zu zitieren und auf die Lizenzart hinzuweisen.</li>
 <li>Mitarbeit oder Verbesserungsvorschläge: am besten als <a href="https://github.com/sebastiansauer/bayes-start/issues">Github Issue</a> einstellen.</li>
@@ -1881,8 +1888,8 @@ Prism.languages.r={comment:/#.*/,string:{pattern:/(['"])(?:\\.|(?!\1)[^\\\r\n])*
 <li>Aus Datenschutzgründen dürfen Studentis den Unterricht (Video, Ton, sonstige) nicht aufnehmen.</li>
 </ul>
 </div>
-<div id="aufnahme-des-unterrichts" class="section level1" number="3">
-<h1><span class="header-section-number">3</span> Aufnahme des Unterrichts</h1>
+<div id="aufnahme-des-unterrichts" class="section level1" number="4">
+<h1><span class="header-section-number">4</span> Aufnahme des Unterrichts</h1>
 <ul>
 <li>Einige Teile des Unterrichts werden u.U. aufgenommen.</li>
 <li>Die Aufnahme erfolgt nur nach vorheriger Information durch den Dozenten.</li>
@@ -1896,8 +1903,8 @@ Prism.languages.r={comment:/#.*/,string:{pattern:/(['"])(?:\\.|(?!\1)[^\\\r\n])*
 <li>Aufnahmen des Unterrichts durch die Studentis sind nicht erlaubt.</li>
 </ul>
 </div>
-<div id="it" class="section level1" number="4">
-<h1><span class="header-section-number">4</span> IT</h1>
+<div id="it" class="section level1" number="5">
+<h1><span class="header-section-number">5</span> IT</h1>
 <ul>
 <li><a href="https://data-se.netlify.app/2021/11/30/installation-von-r-und-seiner-freunde/">Installieren Sie bitte R und seine Freunden</a> vor der ersten Unterrichtsstunde.</li>
 <li>Bitte beachten Sie die Installationshinweise für Software und installieren Sie die Software vor Beginn des ersten Termins.</li>
@@ -1908,8 +1915,8 @@ Prism.languages.r={comment:/#.*/,string:{pattern:/(['"])(?:\\.|(?!\1)[^\\\r\n])*
 <li>Bitte lesen Sie auch die Hinweise zur Software, die wir in diesem Modul benötigen.</li>
 </ul>
 </div>
-<div id="ich-brauche-hilfe.-was-soll-ich-tun" class="section level1" number="5">
-<h1><span class="header-section-number">5</span> Ich brauche Hilfe. Was soll ich tun?</h1>
+<div id="ich-brauche-hilfe.-was-soll-ich-tun" class="section level1" number="6">
+<h1><span class="header-section-number">6</span> Ich brauche Hilfe. Was soll ich tun?</h1>
 <ul>
 <li>Versuchen Sie erst selber, das Problem zu lösen. Manchmal hilft etwas Abstand (Pause, drüber schlafen), um ein Problem klarer zu sehen (oder es als nicht mehr so wichtig zu sehen).</li>
 <li>Fragen Sie Kommilitonis.</li>
@@ -1919,8 +1926,8 @@ Prism.languages.r={comment:/#.*/,string:{pattern:/(['"])(?:\\.|(?!\1)[^\\\r\n])*
 <li>Schreiben Sie möglichst keine Email, da die meisten Fragen für Ihre Kommilitonis auch nützlich sein können (eine Ausnahme sind natürlich individuelle Angelegenheiten, die nicht den Stoff betreffen).</li>
 </ul>
 </div>
-<div id="videokonferenzen" class="section level1" number="6">
-<h1><span class="header-section-number">6</span> Videokonferenzen</h1>
+<div id="videokonferenzen" class="section level1" number="7">
+<h1><span class="header-section-number">7</span> Videokonferenzen</h1>
 <ul>
 <li>-Für Videokonferenzen/Webinare in diesem Modul wird die Software Zoom verwendet. Zur Einwahl benötigen Sie eine Zoom-Meeting-ID bzw. die dazu gehörige URL (Link); außerdem benötigen Sie ggf. ein zugehöriges Passwort. Diese Informationen werden Ihnen vom Dozenten zugestellt-.</li>
 <li>Für die Teilnahme an der Videokonferenz können Sie einen internetfähigen Rechner oder Tablet/Smartphone verwenden. Alternativ können Sie den Zoom-Client auf Ihrem Computer installieren (die Installation auf dem Rechner ist zu empfehlen).</li>
@@ -1937,10 +1944,10 @@ Prism.languages.r={comment:/#.*/,string:{pattern:/(['"])(?:\\.|(?!\1)[^\\\r\n])*
 <li>Der Chat sollte nur für Themen des Unterrichts verwendet werden (nicht für private Themen).</li>
 </ul>
 </div>
-<div id="didaktik" class="section level1" number="7">
-<h1><span class="header-section-number">7</span> Didaktik</h1>
-<div id="lehrkonzept" class="section level2" number="7.1">
-<h2><span class="header-section-number">7.1</span> Lehrkonzept</h2>
+<div id="didaktik" class="section level1" number="8">
+<h1><span class="header-section-number">8</span> Didaktik</h1>
+<div id="lehrkonzept" class="section level2" number="8.1">
+<h2><span class="header-section-number">8.1</span> Lehrkonzept</h2>
 <ul>
 <li>In der “Vorlesung” wird im Schwerpunkt <em>nicht</em> das Folienskript “vorgelesen”. Dieser Vortrag steht vorab als Video zur Verfügung (s. Links im Themenüberblick).</li>
 <li>Stattdessen steht in der “Vorlesung” die Durcharbeiten und Vertiefen des Stoffes im Vordergrund, nicht aber das Vortragen des Stoffes.</li>
@@ -1950,8 +1957,8 @@ Prism.languages.r={comment:/#.*/,string:{pattern:/(['"])(?:\\.|(?!\1)[^\\\r\n])*
 <li>In der Übung liegt der Schwerpunkt zumeist auf dem Bearbeiten von Aufgaben.</li>
 </ul>
 </div>
-<div id="lerntipps" class="section level2" number="7.2">
-<h2><span class="header-section-number">7.2</span> Lerntipps</h2>
+<div id="lerntipps" class="section level2" number="8.2">
+<h2><span class="header-section-number">8.2</span> Lerntipps</h2>
 <ul>
 <li>Damit Sie vom Unterricht maximal profitieren, ist es essenziell, dass Sie aktiv mitarbeiten. Ein “Nur-Zuhören” nimmt Ihnen einen Gutteil des Nutzens des Unterrichts. Sie lernen nur zum kleinen Teil vom Zuhören; der größte Teil des Lernerfolgs kommt vom Selber-Erarbeiten!</li>
 <li>Bitte stellen Sie Ihre Kamera (Webcam) an, wenn Sie Kommilitonis oder den Dozenten ansprechen. Das ist der Güte der Kommunikation zuträglich.</li>
@@ -1964,8 +1971,8 @@ Prism.languages.r={comment:/#.*/,string:{pattern:/(['"])(?:\\.|(?!\1)[^\\\r\n])*
 </ul>
 </div>
 </div>
-<div id="umgangsformen" class="section level1" number="8">
-<h1><span class="header-section-number">8</span> Umgangsformen</h1>
+<div id="umgangsformen" class="section level1" number="9">
+<h1><span class="header-section-number">9</span> Umgangsformen</h1>
 <ul>
 <li>Freundlicher Umgang miteinander ist selbstverständlich.</li>
 <li>Selbstverständlich sind auch die grundlegenden Formen der höflichen Miteinanders (Begrüßung, Ansprache mit Namen, bitte/danke sagen, Pünktlichkeit, Verbindlichkeit, …).</li>

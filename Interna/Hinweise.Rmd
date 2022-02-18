@@ -45,13 +45,18 @@ editor_options:
 
 - Bitte laden Sie sich rechtzeitig die Materialien herunter.
 - Beachten Sie die Vorbereitungshinweise zur ersten Unterrichtsstunde und für die einzelnen Termine.
-- Beachten Sie aktuell geltenden Hygienevorschriften.
-- Bitte meiden Sie datenhungrige Applikationen wie das Streamen von Filmen – Sie behindern den Unterricht und verärgern damit andere Studierende (in diesem oder anderen Kursen).
 - Ein Foliensatz kann kein Lehrbuch ersetzen; falls Sie bei einem Termin gefehlt haben oder Ihre Aufzeichnung lückenhaft ist, lesen Sie bitte in der Literatur nach oder bitten Sie eine/n Kommiliton/in um Hilfe. 
 - Beachten Sie die Hinweise der Hochschule (s. Moodle) wie die Orientierungshilfe, die Klausur- und Studiengangsordnungen. Dort finden Sie verbindliche Hinweise zu vielen organisatorischen Fragen.
 - Bitte prüfen Sie jetzt schon und in regelmäßigen Abständen die Modulseite auf neue Materialien. 
 - Nachdem eine Unterrichtseinheit abgeschlossen ist, ändert der Dozent grundsätzlich nichts mehr an den Materialien (in Ausnahmefällen wie etwa der Korrektur eines Fehler informiert der Dozent schriftlich).
 
+
+
+# Präsenzunterricht
+
+- Beachten Sie aktuell geltenden Hygienevorschriften.
+- Bitte meiden Sie datenhungrige Applikationen wie das Streamen von Filmen – Sie behindern den Unterricht und verärgern damit andere Studierende (in diesem oder anderen Kursen).
+- Bitte bringen Sie einen Computer (mit Internetanschluss) in alle Präsenztermine mit. Bringen Sie ggf. Ersatzbatterien und/oder Verlängerungskabel mit - leider sind nicht überall ausreichend Steckdosen vorhanden.
 
 
 # Rechtliche Hinweise
