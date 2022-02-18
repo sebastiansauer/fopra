@@ -135,10 +135,6 @@ Oft müssen Sie per VPN angemeldet (in der Bib.) sein für Volltextzugriff, wenn
 
 
 
-```{r}
-modul_zsfg <- yaml::read_yaml(paste0(here::here(), "/Interna/modul-zsfg.yaml"))
-```
-
 
 
 
