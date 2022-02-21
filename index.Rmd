@@ -88,9 +88,11 @@ WORK IN PROGRESS
 
 ## Was Sie hier lernen und wozu das gut ist
 
-Das Modul "Research Project" ist das vielleicht schönste Modul in Ihrem Studiengang: Es vereint echtes Problemlösen mit Kreativität und wohl fundierter Analyse. Sie haben viele Freiheitsgrade: Führen Sie eine echte Studie durch, unterstützt von den Dozentis und nach Ihren Vorstellungen. Jedes Mal erlebt man als Dozenti aufs Neue studentische Studien, die begeistern. Um nur ein Beispiel zu nennen: Vor einiger Zeit zeigt eine Gruppe, dass es sich lohnt, Follower bei Instagram zu kaufen -- die Anzahl der Likes steigt überproportional an. Ach ja, falls Sie es sich schon mal gefragt haben: Wer als Mann mit einem Sportwagen auf dem Profilfoto der Single-Börse posiert, erntet ebenfalls mehr Likes als ohne Karre, zumindest laut einem studentischen Experiment ... Vielleicht sollten Sie diese Studie auch dringend replizieren, vielleicht wurde ja ein entscheidendes Detail übersehen? Sie Forschung wartet auf Sie! 
 
-Kurz gesagt lernen Sie also, wie man eine wissenschaftliche Studie durchzieht. Das können Sie als Generalprobe für die Abschlussarbeit nutzen. Für Ihre berufliche Laufbahn ist Forschungskompetenz vielleicht die zentrale Kompetenz, wenn Sie nicht nur Bekanntes abarbeiten möchten, sondern Abläufe verbessern, Produkte erneuern, Chancen entdecken wollen – wenn Sie Neuland betreten und Dinge weiterentwickeln wollen.
+
+
+```{r build-themen, child="Interna/tldr.Rmd", results='asis', echo=FALSE}
+```
 
 
 
@@ -121,6 +123,15 @@ Lesen Sie sich die folgenden Informationen bitte gut durch.
 
 [Hinweise](https://sebastiansauer.github.io/fopra/Interna/Hinweise.html)
 
+Den Quellcode finden Sie [hier](https://github.com/sebastiansauer/fopra).
+
+Sie haben Feedback, Fehlerhinweise oder Wünsche zur Weiterentwicklung? Am besten stellen Sie  [hier](https://github.com/sebastiansauer/fopra/issues) einen *Issue*  ein.
+
+Dieses Projekt steht unter der [MIT-Lizenz](https://github.com/sebastiansauer/fopra/blob/main/LICENSE). Folien-Skripte stehen unter einer CC-BY-Lizenz.
+
+
+
+
 
 # Modulliteratur
 
@@ -141,13 +152,6 @@ Oft müssen Sie per VPN angemeldet (in der Bib.) sein für Volltextzugriff, wenn
 
 
 # Themen
-
-
-
-
-
-
-
 
 
 
