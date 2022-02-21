@@ -101,7 +101,7 @@ WORK IN PROGRESS
 
 ## Modulverlauf
 
-- [Modulverlauf](https://sebastiansauer.github.io/fopra/Interna/Modulueberblick.html)
+[Modulverlauf](https://sebastiansauer.github.io/fopra/Interna/Modulueberblick.html)
 
 
 ## Themen im Überblick
@@ -119,15 +119,13 @@ WORK IN PROGRESS
 
 # Hinweise
 
-Lesen Sie sich die folgenden Informationen bitte gut durch.
+- Lesen Sie sich die folgenden Informationen bitte gut durch: [Hinweise](https://sebastiansauer.github.io/fopra/Interna/Hinweise.html)
 
-[Hinweise](https://sebastiansauer.github.io/fopra/Interna/Hinweise.html)
+- Den Quellcode finden Sie [in diesem Github-Repo](https://github.com/sebastiansauer/fopra).
 
-Den Quellcode finden Sie [hier](https://github.com/sebastiansauer/fopra).
+- Sie haben Feedback, Fehlerhinweise oder Wünsche zur Weiterentwicklung? Am besten stellen Sie  [hier](https://github.com/sebastiansauer/fopra/issues) einen *Issue*  ein.
 
-Sie haben Feedback, Fehlerhinweise oder Wünsche zur Weiterentwicklung? Am besten stellen Sie  [hier](https://github.com/sebastiansauer/fopra/issues) einen *Issue*  ein.
-
-Dieses Projekt steht unter der [MIT-Lizenz](https://github.com/sebastiansauer/fopra/blob/main/LICENSE). Folien-Skripte stehen unter einer CC-BY-Lizenz.
+- Dieses Projekt steht unter der [MIT-Lizenz](https://github.com/sebastiansauer/fopra/blob/main/LICENSE). Folien-Skripte stehen unter einer CC-BY-Lizenz.
 
 
 
