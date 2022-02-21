@@ -53,7 +53,7 @@ Auf der Homepage der Hochschule finden Sie eine Liste dazu.
 </br>
 
 
-
+# Modulverlauf
 
 ```{r build-table, results='asis', echo=FALSE}
 modul_zsfg <- yaml::read_yaml(paste0(here::here(), "/Interna/modul-zsfg.yaml"))
@@ -88,7 +88,9 @@ for (j in titel_nr){
 
 
 
-</br>
+# Themen en detail
+
+
 [HIER Details zu den Themen](https://sebastiansauer.github.io/fopra/#themen)
 
 
