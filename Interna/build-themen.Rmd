@@ -190,6 +190,21 @@ for (i in seq_along(titel)){
     }
     cat("\n\n")
   }
+  
+  
+  hinweise <-
+    modul_zsfg[[i]][["hinweise"]]
+  
+  
+    if (!is.null(hinweise)) {
+    cat("### Hinweise \n\n")
+    for (v in hinweise) {
+      cat(paste0("- ", v, "\n"))
+    }
+    cat("\n\n")
+  }
+  
+  
 
   # Leerzeilen, bevor neues Thema anfängt
   cat("\n")

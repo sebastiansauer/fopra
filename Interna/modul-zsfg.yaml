@@ -84,6 +84,8 @@ thema6x:
   title: "Wiederholung"
   kw: 16
   datum: 18.4.-22.4
+  hinweise: 
+    - In dieser Woche fällt die Vorlesung aus.
  
 
 
@@ -111,11 +113,15 @@ thema10:
   title: "Versuchsdurchführung"
   kw: 21
   datum: 23.5.-27.5.
+  hinweise:
+    - Nächste Woche ist Blockwoche; es findet kein regulärer Unterricht statt.
 
 thema11:
   title: "Datenaufbereitung"
   kw: 23
   datum: 6.6.-10.6.
+  hinweise:
+    - In dieser Woche fällt die Vorlesung aus.
 
 thema12:
   title: "Datenmodellierung"
@@ -133,4 +139,6 @@ thema14:
   title: "Joker-Stunde"
   kw: 26
   datum: 27.6.-1.7.
+  hinweise:
+    - Nach dieser Woche endet der Unterricht.inwei
 
