@@ -6,11 +6,19 @@ thema1:
   vorbereitung:
     - Lesen Sie die Hinweise zum Modul.
     - Installieren (oder Updaten) Sie die für dieses Modul angegeben Software.
+    - Lesen Sie die Literatur.
+  lernziele:
+    - Sie können eine Definition von Wissenschaft geben.
+    - Sie können die drei Schlussarten erklären.
+    - Sie können zur Debatte von qualitativ vs. quantitativ Stellung beziehen.
+    - Sie können mehrere Beispiele relevanter Studien Ihres Fachgebiets angeben und kurz beschreiben.
+    - Sie können die zentralen Inhalte eines Fachartikels schnell erschließen.
   literatur:
     - "Research Methods in Psychology, Kap. 1-4 und 7."
   skript:
     - "[Skript Thema 01, pdf](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema01.pdf)"
     - "[Skript Thema 01, pptx](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema01.pptx)"
+    - "[Skript Thema 01, key](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema01.key)"      
   plenum:
     - "[The Altmetric Top 100 Papers](https://www.altmetric.com/top100/2020/)"
     - "[Alltagsforschung.de: Echte, Studien, sofatauglich aufbereitet](https://www.alltagsforschung.de/)"
@@ -31,11 +39,16 @@ thema2:
   datum: 21.3.-25.3.
   vorbereitung:
     - "Lesen Sie den 'Brain-Drain-Artikel'."
+  lernziele:
+    - Sie können verschiedene Arten der Ziele wissenschaftlicher Studien voneinander abgrenzen.
+    - Sie können wissenschaftliche Hypothesen auf präzise Art formulieren.
+    - "Sie haben die wesentlichen Inhalte des 'Brain-Drain-Artikels' aufgenommen."
   plenum:
     - "[Anmerkungen zum Brain-Drain-Artikel](https://github.com/sebastiansauer/fopra/raw/main/Material/Ward%2C%20Duke%2C%20Gneezy%20and%20Bos%20-%20Brain%20Drain-mit-Anmerkungen.pdf)"
   skript:
     - "[Skript Thema 02, pdf](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema02.pdf)"
     - "[Skript Thema 02, pptx](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema02.pptx)"
+    - "[Skript Thema 02, key](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema02.key)"
   literatur:
     - " 'Research Methods in Psychology' Kap. 10"
     - "[Brain Drain: The Mere Presence of One’s Own Smartphone Reduces Available Cognitive Capacity](https://repositories.lib.utexas.edu/bitstream/handle/2152/64130/braindrain.pdf;sequence=2)"
