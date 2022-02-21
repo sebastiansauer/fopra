@@ -5,10 +5,3 @@ Kurz gesagt lernen Sie also, wie man eine wissenschaftliche Studie durchzieht. D
 
 
 
-
-# Startseite
-
-
-[Startseite](https://sebastiansauer.github.io/fopra/)
-
-
