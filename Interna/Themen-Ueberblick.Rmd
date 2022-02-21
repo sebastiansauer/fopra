@@ -67,16 +67,18 @@ modul_zsfg <- yaml::read_yaml(paste0(here::here(), "/Interna/modul-zsfg.yaml"))
 
 
 ```{r build-table, results='asis', echo=FALSE}
-modul_zsfg <- yaml::read_yaml(paste0(here::here(), "/Interna/modul-zsfg.yaml"))
-
-
 titel_nr <- modul_zsfg %>% names() %>% seq_along()
 
 
+
+# Alle Vektoren müssen initialisiert sein:
 datum <- vector()
 thema <- vector()
 kw <- vector()
+hinweise <- vector()
 
+
+# schleife mit Inhalten der Tabelle (pro Zeile):
 for (i in titel_nr){
   datum[i] <- modul_zsfg[[i]][["datum"]]
   kw[i] <- modul_zsfg[[i]][["kw"]]
@@ -84,17 +86,28 @@ for (i in titel_nr){
 }
 
 
-cat("Nr. | Kalenderwoche | Datum | Thema")
+cat("Nr. | Kalenderwoche | Datum | Thema ")
 cat("\n")
 cat("---|---|---|--")
 cat("\n")
 
 for (j in titel_nr){
-  cat(glue("{titel_nr[j]} | {kw[j]} | {datum[j]} | {thema[j]}"))
+  cat(glue("{titel_nr[j]} | {kw[j]} | {datum[j]} | {thema[j]} "))
   cat("\n")
   #cat("---|---|---|--")
   #cat("\n")
 }
 ```
+
+
+
+
+
+
+
+# Startseite
+
+
+[Startseite](https://sebastiansauer.github.io/fopra/)
 
 
