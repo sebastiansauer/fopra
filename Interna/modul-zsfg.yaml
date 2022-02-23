@@ -100,8 +100,7 @@ thema6x:
   hinweise: 
     - In dieser Woche fällt die Vorlesung aus (Ostern).
   uebung:
-    - Zwischen-Präsi
- 
+    - Coaching 
 
 
 thema6:
@@ -109,7 +108,7 @@ thema6:
   kw: 17
   datum: 25.4.-29.4.
   uebung:
-    - Zwischen-Präsi
+    - Coaching
 
 
 thema7:
@@ -117,7 +116,7 @@ thema7:
   kw: 18
   datum: 2.4.-6.5.
   uebung:
-    - Zwischen-Präsi
+    - Coaching
 
 
 thema8:
@@ -125,7 +124,7 @@ thema8:
   kw: 19
   datum: 9.5.-13.5.
   uebung:
-    - Zwischen-Präsi
+    - Coaching
 
 
 thema9:
@@ -156,12 +155,14 @@ thema11:
     - Coaching
 
 
+
 thema12:
   title: "Datenmodellierung"
   kw: 24
   datum: 13.6.-17.6.
   uebung:
     - Coaching
+
 
 
 thema13:
@@ -174,6 +175,7 @@ thema13:
     - Coaching
 
 
+
 thema14:
   title: "Joker-Stunde"
   kw: 26
@@ -182,5 +184,6 @@ thema14:
     - Nach dieser Woche endet der Unterricht.
   uebung:
     - Coaching
+
 
 

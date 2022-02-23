@@ -1,6 +1,6 @@
 ---
 subtitle: "Forschungspraktikum in Psychologie"
-title: "Rahmenthema Achtsamkeit"
+title: "Coachinggruppe Achtsamkeit"
 author: "Sebastian Sauer"
 date: "Letzte Aktualisierung: `r Sys.time()`"
 output:
@@ -45,7 +45,10 @@ library(glue)
 
 
 
-# Das Rahmenthema in dieser Gruppe ist 'Achtsamkeit'
+# Rahmenthema: Achtsamkeit
+
+Das Rahmenthema dieser Coachinggruppe ist 'Achtsamkeit'.
+
 
 
 ## Achtsamkeit als (eine) UV Ihrer Studie
@@ -127,6 +130,27 @@ von denen *Sie* glauben, dass die UV einen starken Effekt ausüben.
 
 
 [Hier](https://www.zotero.org/groups/4606972/effects-of-mindfulness) finden Sie eine Liste entsprechender Studien.
+
+
+
+## Angebot für Zwischen-Präsi
+
+Sie haben die Möglichkeit, freiwillig den Zwischenstand 
+Ihrer Studie im Rahmen einer Präsentation vorzustellen.
+Sprechen Sie mich bei Interesse im Unterricht dazu an.
+
+Eckdaten Ihrer Zwischenstandspräsentation:
+
+- Die Vortragszeit beträgt 3 bis max. 5. Minuten  pro Person.
+- Das Wesentlich Ihrer Studie ist (prägnant) vorzustellen, auf Schnörkel jeder Art ist zu verzichten
+- Sie können Ihren Vortrag mit Folien, Handouts oder anderem Material visualieren.
+- Sie können den Beamer im Hörsaal nutzen, bringen Sie aber einen eigenen Computer o.Ä. mit, zur Verbindung mit dem Beamer (via HDMI- oder VGA-Kabel).
+- Auf alle schon gelernten Inhalte des Unterrichts sollte, wo nötig und sinnvoll, zurückgegriffen werden. 
+
+Sie bekommen dann vom Dozenten Feedback zu Ihrem Zwischenstand,
+so dass Sie genauer wissen, ob Sie auf dem richtigen Weg sind und 
+wo Sie ggf. noch nachsteuern sollten.
+
 
 
 
