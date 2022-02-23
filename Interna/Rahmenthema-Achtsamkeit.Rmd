@@ -45,6 +45,8 @@ library(glue)
 
 
 
+
+
 # Rahmenthema: Achtsamkeit
 
 Das Rahmenthema dieser Coachinggruppe ist 'Achtsamkeit'.
@@ -133,7 +135,25 @@ von denen *Sie* glauben, dass die UV einen starken Effekt ausüben.
 
 
 
-## Angebot für Zwischen-Präsi
+## Ich will aber...
+
+Vielleicht fragen Sie sich, warum Ihnen ein Thema vorgegeben wird?
+Vielleicht sagen Sie sich, "Ich will aber lieber ... das Flugverhalten der
+südsibirischen Kreuzschwanzschwalbe untersuchen!". 
+
+Ein Grund, warum Ihnen - zumindest für die UV - ein Thema vorgegeben wird,
+ist, dass ohne Vorgabe die wissenschaftliche Anschlussfähigkeit einiger Arbeiten
+nicht gewährleistet ist, nach der Erfahrung aus dem Unterricht.
+Durch die Vorgabe eines wissenschaftlich geeigneten Themas sind Sie in dieser Hinsicht
+auf der sicheren Seite.
+
+Darüber hinaus sollten Professis Ihre Expertise aus der Forschung in die Lehre 
+einbringen, um beide Pfeiler der Wissenschaft wechselseitig zu stärken.
+Studentis profitieren, dass Sie in aktuelle Erkenntnisse der Forschung eingeführt werden.
+
+
+
+# Angebot für Zwischen-Präsi
 
 Sie haben die Möglichkeit, freiwillig den Zwischenstand 
 Ihrer Studie im Rahmen einer Präsentation vorzustellen.
