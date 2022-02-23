@@ -152,7 +152,7 @@ Oft müssen Sie per VPN angemeldet (in der Bib.) sein für Volltextzugriff, wenn
 # Modulinhalte
 
 
-## Themen
+
 
 
 ```{r build-themen, child="Interna/build-themen.Rmd", results='asis', echo=FALSE}
@@ -160,7 +160,7 @@ Oft müssen Sie per VPN angemeldet (in der Bib.) sein für Volltextzugriff, wenn
 
 
 
-## Rahmenthemen
+# Rahmenthemen
 
 Ihr/e Dozent/in stellt Ihnen ein Rahmenthema zur Verfügung.
 
