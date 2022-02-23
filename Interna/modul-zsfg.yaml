@@ -34,10 +34,8 @@ thema1:
   hinweise:
     - "Bitte beachten Sie die Einteilung in die Coaching- und Forschungsgruppen."
   uebung:
-    - "Das Rahmenthema für Ihre Seminararbeit lautet *Achtsamkeit*."
-    - Verwenden Sie eine Achtsamkeitsintervention als UV in Ihrer Studie.
-    - In der Wahl von weiteren UV oder Moderatoren sowie der AV sind Sie frei.
-    - Es soll sich um eine experimentelle Studie handeln, zumindest was die Achtsamkeitsintervention betrifft.
+    - Einführung in das Rahmenthema Ihrer Studie
+    - Wahl der Forschungsgruppen
 
 
 thema2:
@@ -67,6 +65,8 @@ thema2:
     - "[Aufgaben html](https://sebastiansauer.github.io/fopra/Aufgaben/Thema2-Aufgaben1.html)"
     - "[Lösungen pdf](https://sebastiansauer.github.io/fopra/Aufgaben/Thema2-Aufgaben1.pdf)"
     - "[Lösungen html](https://sebastiansauer.github.io/fopra/Aufgaben/Thema2-Loesungen1.html)"
+  uebung:
+    - Ableitung möglicher Hypothesen aus dem Rahmenthema für Ihre Studie
 
 
 
@@ -75,16 +75,22 @@ thema3:
   title: "Beobachtungsstudien"
   kw: 13
   datum: 28.3.-1.4.
+  uebung:
+    - Coaching
 
 thema4:
   title: "Experimente"
   kw: 14
   datum: 4.4.-8.4.
+  uebung:
+    - Coaching
 
 thema5:
   title: "Vertiefung - Versuchspläne"
   kw: 15
   datum: 11.4.-15.4.
+  uebung:
+    - Coaching
 
 
 thema6x:
@@ -93,6 +99,8 @@ thema6x:
   datum: 18.4.-22.4
   hinweise: 
     - In dieser Woche fällt die Vorlesung aus (Ostern).
+  uebung:
+    - Zwischen-Präsi
  
 
 
@@ -100,21 +108,33 @@ thema6:
   title: "Online-Studien"
   kw: 17
   datum: 25.4.-29.4.
+  uebung:
+    - Zwischen-Präsi
+
 
 thema7:
   title: "Kausalanalyse"
   kw: 18
   datum: 2.4.-6.5.
+  uebung:
+    - Zwischen-Präsi
+
 
 thema8:
   title: "Fallzahlplanung"
   kw: 19
   datum: 9.5.-13.5.
+  uebung:
+    - Zwischen-Präsi
+
 
 thema9:
   title: "Messinstrumente"
   kw: 20
   datum: 16.5.-20.5.
+  uebung:
+    - Coaching
+
 
 thema10:
   title: "Versuchsdurchführung"
@@ -122,6 +142,9 @@ thema10:
   datum: 23.5.-27.5.
   hinweise:
     - Nächste Woche ist Blockwoche; es findet kein regulärer Unterricht statt.
+  uebung:
+    - Coaching
+
 
 thema11:
   title: "Datenaufbereitung"
@@ -129,11 +152,17 @@ thema11:
   datum: 6.6.-10.6.
   hinweise:
     - In dieser Woche fällt die Vorlesung aus (Pfingsten).
+  uebung:
+    - Coaching
+
 
 thema12:
   title: "Datenmodellierung"
   kw: 24
   datum: 13.6.-17.6.
+  uebung:
+    - Coaching
+
 
 thema13:
   title: "Open Science"
@@ -141,6 +170,9 @@ thema13:
   - "[Einführung in R Markdown, Folien](https://docs.google.com/presentation/d/e/2PACX-1vRZ72QdK_nq-s4hwjLYCgUmDVWMxdAx_WwD6Equ9SgCmjvhmuiw6M4XbqzCqmqKVRIeaUrO1BGGU-q6/pub?start=false&loop=false&delayms=3000&slide=id.p)"
   kw: 25
   datum: 20.6.-24.6.
+  uebung:
+    - Coaching
+
 
 thema14:
   title: "Joker-Stunde"
@@ -148,4 +180,7 @@ thema14:
   datum: 27.6.-1.7.
   hinweise:
     - Nach dieser Woche endet der Unterricht.
+  uebung:
+    - Coaching
+
 

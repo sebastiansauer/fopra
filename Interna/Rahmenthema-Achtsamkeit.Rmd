@@ -48,7 +48,7 @@ library(glue)
 # Das Rahmenthema in dieser Gruppe ist 'Achtsamkeit'
 
 
-## Achstamkeit als (eine) UV
+## Achtsamkeit als (eine) UV Ihrer Studie
 
 Das Rahmenthema in dieser Gruppe ist 'Achtsamkeit'.
 Das bedeutet, dass Sie als Prüfungsaufgabe eine Studie durchführen zu diesem Thema.
@@ -59,9 +59,14 @@ Sie sind auch frei in der Wahl der AV.
 Die Vorgabe umfasst also: Achtsamkeit als eine experimentell-randomisierte Intervention. 
 
 
-## Beispiel einer möglichen Studie
+## Beispiel
 
-Ein Beispiel, um die Aufgabe konkret zu machen:
+
+
+*Ein Beispiel, um die Aufgabe konkret zu machen*
+
+So könnte eine mögliche Studie aussehen:
+
 Sie führen ein Experiment mit zwei Gruppen (G1 und G2) durch, randomisiert zugewiesen.
 Personen in G1 führen eine Achtsamkeitsübung durch;
 Personen in G2 spielen für die gleiche Zeitdauer ein Computerspiel.
@@ -116,7 +121,7 @@ von denen *Sie* glauben, dass die UV einen starken Effekt ausüben.
 
 
 
-## Ich brauche konkrete Beispiele!
+## Ich brauch's konkret!
 
 
 
@@ -125,7 +130,68 @@ von denen *Sie* glauben, dass die UV einen starken Effekt ausüben.
 
 
 
+# Überblick pro Woche
 
+Hier finden Sie einen Überblick der Themen der Übung (Coaching-Gruppen) nach Wochen.
+
+
+```{r build-table, results='asis', echo=FALSE}
+modul_zsfg <- yaml::read_yaml(paste0(here::here(), "/Interna/modul-zsfg.yaml"))
+
+
+titel_nr <- modul_zsfg %>% names() %>% seq_along()
+
+
+datum <- vector()
+thema <- vector()
+kw <- vector()
+uebung <- vector()
+
+
+
+for (i in titel_nr){
+  datum[i] <- modul_zsfg[[i]][["datum"]]
+  kw[i] <- modul_zsfg[[i]][["kw"]]
+  thema[i] <- modul_zsfg[[i]][["title"]]
+  uebung[i] <- modul_zsfg[[i]][["uebung"]]
+}
+
+lengths_cols <- c(length(datum), length(kw), length(thema), length(uebung))
+
+# all_same_length <- 
+#  all.equal(lengths_cols)
+
+
+
+cat("Nr. | Kalenderwoche | Datum | Thema | Übung")
+cat("\n")
+cat("---|---|---|--|--")
+cat("\n")
+
+for (j in titel_nr){
+  cat(glue("{titel_nr[j]} | {kw[j]} | {datum[j]} | {thema[j]} | {uebung[j]}"))
+  cat("\n")
+  #cat("---|---|---|--")
+  #cat("\n")
+}
+```
+
+
+
+# Themen en detail
+
+
+[HIER Details zu den Themen](https://sebastiansauer.github.io/fopra/#themen)
+
+
+
+
+
+
+# Startseite
+
+
+[Startseite](https://sebastiansauer.github.io/fopra/)
 
 
 
