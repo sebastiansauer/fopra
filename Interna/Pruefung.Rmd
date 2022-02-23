@@ -40,47 +40,53 @@ editor_options:
 </br>
 
 
+*Die folgenden Prüfungshinweise gelten nur insoweit, dass Ihnen Ihr/e Dozent/in nicht anderweitige Hinweise gegeben hat.*
+
+
 # Prüfungsgegenstand
 
 
 1. Die Prüfung besteht aus folgende/n Leistung/en:
-    - Seminararbeit
+    - *Seminararbeit*
     
-2. Es wird erwartet, dass Sie als Versuchsperson an den Studien der Kommilitonis teilnehmen, falls nötig.
+2. Es wird erwartet, dass Sie als Versuchsperson an den *Studien der Kommilitonis teilnehmen*, falls nötig.
     
-2. Sie führen eine eigene empirische Studie durch und verfassen dazu einen Bericht; dabei stützen Sie sich i. d. R. auf selber erhobene Daten.
+2. Sie führen eine *eigene empirische Studie* durch und verfassen dazu einen Bericht; dabei stützen Sie sich i. d. R. auf selber erhobene Daten.
 
-2. Gegenstand der Seminararbeit ist die Dokumentation der Studie des jeweiligen Forschungsteams. Es handelt sich also um eine Gruppenarbeit. Einzelarbeiten sind grundsätzlich nicht zulässig.
+2. Gegenstand der Seminararbeit ist die *Dokumentation aller Phasen der Studie* des jeweiligen Forschungsteams. Es handelt sich also um eine Gruppenarbeit. Einzelarbeiten sind grundsätzlich nicht zulässig.
 
-3. Abschnittsverantwortliche: Jedes Kapitel/Teilkapitel muss mit genau einem Namen ausgewiesen sein. Der Namen der/des Autor*in soll als Fußnote an die jeweilige Überschrift angefügt sein.
+3. *Abschnittsverantwortliche*: Jedes Kapitel/Teilkapitel muss mit genau einem Namen ausgewiesen sein. Der Namen der/des Autor*in soll als Fußnote an die jeweilige Überschrift angefügt sein.
 
-4. Formale Anforderungen an die Seminararbeit:
-    - 6000 Wörter (im Hauptteil)
-    - Anwendung der Methoden des wissenschaftlichen Arbeiten in Recherche, Zitat und Darstellung
+4. *Formale Anforderungen* an die Seminararbeit:
+    - Der Umfang der Arbeit umfasst 6000 Wörter (im Hauptteil).
+    - Die Methoden des wissenschaftlichen Arbeiten in Recherche, Zitat und Darstellung werden angewandt.
 Anwendung der Methoden quantitativer Datenanalyse
+    - Textsatz und Gestaltung der Seminararbeit orientieren sich an dem bereitgestellten Leitfaden.
+    - Gestaltungsaspekte, die nicht im bereitgestellten Leitfaden aufgeführt sind, sind nach den Vorgaben der APA (neueste Version) anzulegen.
+    - Die Arbeit kann in deutscher oder englischer Sprache eingereicht werden.
 
-5. Aus formalen Gründen muss jedes Mitglied der Gruppe die gemeinsame Arbeit selber (auf eigenen Namen) einreichen (hochladen). Die eingereichten Exemplare aller Mitglieder müssen identisch sein.
+5. Aus formalen Gründen muss *jedes Mitglied* der Gruppe die gemeinsame Arbeit selber (auf eigenen Namen) *einreichen* (hochladen). Die eingereichten Exemplare aller Mitglieder müssen identisch sein.
 
 
-6. Die Anzahl der Wörter des Hauptteils ist auf dem Deckblatt anzugeben.
+6. Die *Anzahl der Wörte*r des Hauptteils ist auf dem Deckblatt anzugeben.
 
-7. Wenn die Prüfung aus einer Seminarbeit besteht oder eine Seminarleistung beinhaltet, ist diese nur online, nicht ausgedruckt einzureichen.
+7. Wenn die Prüfung aus einer Seminarbeit besteht oder eine Seminarleistung beinhaltet, ist diese *nur online*, nicht ausgedruckt einzureichen.
 
-8. Bei der Benotung wird die Kenntnis der Inhalte der Veranstaltung (inkl. dieses Skripts) vorausgesetzt.
+8. Bei der Benotung wird die *Kenntnis der Inhalte der Veranstaltung* (inkl. dieses Skripts) vorausgesetzt.
 
-9. Bei der Anmeldung ist der Titel anzugeben; der gleiche Titel muss sich auch auf der eingereichten Arbeit finden.
+9. Bei der *Anmeldung* ist der Titel anzugeben; der *gleiche Titel* muss sich auch auf der eingereichten Arbeit finden.
 
-10. Eine eingereichte Arbeit kann nicht wieder zurückgezogen werden.
+10. Eine eingereichte Arbeit *kann nicht wieder zurückgezogen* werden.
 
-11. Alle teilnehmenden Personen sollen in ähnlichem Umfang beitragen.
+11. *Gleichwertige Beiträge*: Alle teilnehmenden Personen einer Forschungsgruppe (einer Gruppenarbeit) sollen in ähnlichem Umfang beitragen.
 
-12. Alle teilnehmenden Personen einer Gruppenarbeit melden das (exakt) gleiche Thema an.
+12. Alle teilnehmenden Personen einer Gruppenarbeit melden das (exakt) *gleiche Thema* an.
 
-13. Es ist erlaubt, eine Gruppe zu verlassen. Wer eine Gruppe verlässt, schließt sich einer anderen Gruppe an.
+13. Es ist erlaubt, eine *Gruppe zu verlassen*. Wer eine Gruppe verlässt, schließt sich einer anderen Gruppe an.
 
-14. Reichen Sie die Rohdaten und ggf. Syntax (elektronisch) ein. Verweisen Sie im Anhang auf eine Datei, die Sie hochladen, in der die entsprechenden Informationen zu finden sind.
+14. *Open Science*: Reichen Sie die Rohdaten und ggf. Syntax (elektronisch) ein. Verweisen Sie im Anhang auf eine Datei, die Sie hochladen, in der die entsprechenden Informationen zu finden sind.
 
-15. Das Thema muss einen direkten empirisch-psychologischen Bezug haben; die Forschungsfrage muss psychologisch relevante Aspekte adressieren.
+15. Das Thema muss einen d*irekten empirisch-psychologischen Bezug* haben; die Forschungsfrage muss psychologisch relevante Aspekte adressieren.
 
 
 
@@ -102,7 +108,7 @@ Anwendung der Methoden quantitativer Datenanalyse
     
 ## Anspruch
 
-5. Anspruch an eine gute Seminararbeit
+1. Anspruch an eine gute Seminararbeit
     - Überwiegende Verwendung von Literatur hoher Qualität (Fachartikel, peer-reviewed)
     - Ca. 30 Quellen oder mehr im Literaturverzeichnis
     - Stichprobengröße (ca.)
@@ -112,13 +118,17 @@ Anwendung der Methoden quantitativer Datenanalyse
       - Experimentell: 2-3 Variablen
       - Beobachtend: 3-4 Variablen
 
-4. Nichteinhaltung der Regeln bzw. der Hinweise kann zum Durchfallen oder schlechterer Note führen.
+2. Nichteinhaltung der Regeln bzw. der Hinweise kann zum Durchfallen oder schlechterer Note führen.
+
+
+
 
 ## Beispiele für Fehler
 
 Substanzielle Fehler können zum Durchfallen oder zum deutlichem Abwerten der Note führen. Beispiele für solche Fehler sind:
 
 1. Formalia
+
    Die Textlänge (Hauptteil) ist zu kurz – ca. 20 % unter der formal angegeben Soll-Länge.
   - Es liegen viele Zitierfehler im Text vor (z. B. 30 % oder mehr bzw. 10 oder mehr Fehler).
   - Es liegen viele Fehler im Literaturverzeichnis vor (z. B. 30 % oder mehr bzw. 10 oder mehr Fehler).
@@ -128,11 +138,13 @@ Substanzielle Fehler können zum Durchfallen oder zum deutlichem Abwerten der No
   - Es finden sich nicht zitierte Quellen im Literaturverzeichnis. 
     
 2. Inhaltliche Mängel
+
   - Das Literaturverzeichnis ist sehr kurz (weniger als 10 Quellen).
   - Die Qualität des Literaturverzeichnisses ist gering (über 50 % Quellen von zweifelhafter Qualität, z. B. aus Ratgeber-Büchern).
   - Die Lesbarkeit ist aufgrund der optischen Gestaltung oder gravierender Sprachmängel stark eingeschränkt (z. B. viele Rechtschreibfehler).
     
 3. Methodische Mängel
+
   - Es wird keine Inferenzstatistik verwendet.
   - Zentrale Koeffizienten werden falsch interpretiert.
   - Es wird keine/kaum Deskriptiv-Statistik berichtet.
@@ -143,16 +155,19 @@ Substanzielle Fehler können zum Durchfallen oder zum deutlichem Abwerten der No
 ## Merkmale einer sehr guten Seminararbeit
 
 1. Formales
+
   - Die Richtlinien zur Gestaltung von wissenschaftlichen Texten wurden (fast) vollumfänglich umgesetzt. Insbesondere finden finden sich (fast) keine Zitierfehler im Text und im Literaturverzeichnis.
   - Rechtschreibung, Zeichensetzung und Grammatik sind (fast) fehlerfrei.
   - Gestaltung und Aufbau der Arbeit ist dem flüssigen Lesen zuträglich (z. B. optisch übersichtlich gestaltet und nicht weitschweifig sondern prägnant formuliert).
 
 2. Methoden
+
   - Es wurden angemessene Methoden ausgewählt und diese richtig angewendet und die Ergebnisse korrekt interpretiert.
   - Die eingesetzte Methodik zeichnet sich durch hohe Breite und Tiefe aus.
   - Es wurde sehr viel empirisches Material (z. B. befragte Personen) ausgewertet.
 
 3. Inhalt
+
   - Es wurde viel Literatur von hoher Qualität rezipiert.
   - Ein roter Faden ist klar ersichtlich.
   - Die Arbeit zeichnet sich nicht nur durch hohes Fachwissen, sondern auch durch wohl überlegte Argumentation aus.
@@ -162,22 +177,31 @@ Substanzielle Fehler können zum Durchfallen oder zum deutlichem Abwerten der No
 ## Aus der Checkliste der Prüfis
 
 - Wissen
+
   - Wurden die wesentlichen Inhalte des Themas berücksichtigt?
   - Sind hochwertige (und genügende) Quellen zu Rate gezogen worden?
+  
 - Denken
+
   - Reihen sich nur Zusammenfassungen aneinander oder ist Denkarbeit erkennbar?
   - Wurde das eigene Vorgehen angemessen kritisiert?
   - Wurde diskutiert, verglichen, bewertet, weitergeführt, erörtert, analysiert ... ?
   - Zeugt die Arbeit von eigenen Ideen und eigenem Denken?
    - Wurde selbständig gearbeitet?
+   
 - Schreiben
+
   - Ist Rechtschreibung, Zeichensetzung und Grammatik korrekt?
   - Ist der Text „im Fluss“ – gut lesbar, stringent und folgerichtig?
+  
 - Methodik
+
   - Wurden die richtigen wissenschaftliche Methoden korrekt eingesetzt?
   - Zeugt das methodische Vorgehen von Können und Kreativität?
   - Ist die Studie nachprüfbar anhand des Berichts?
+  
 - Polieren
+
   - Sind die Formalia erfüllt (z. B. korrektes Zitieren inkl. Literaturverzeichnis)?
   - Sind Text, Abbildungen, Tabellen etc. ansprechend formatiert?  
   
@@ -283,14 +307,10 @@ Substanzielle Fehler können zum Durchfallen oder zum deutlichem Abwerten der No
 
 Hier sind einige typische Fragen, die sich Lesis - implizit oder explizit - stellen:
 
-- Worum geht's? 
-    - Aussagekräftige Titel, Zusammenfassungen, Kernaussagen, Schaubilder, Fazit ...
-- Was nützt es mir?
-     - Sinn, Zweck, Ziel und Bedeutung in der Einleitung aufzeigen, Praxisnutzen herausstellen, ggf. Checklisten, Leitfäden etc. erstellen
-- Was soll ich jetzt tun?
-     - Geben Sie Handlungsempfehlungen, ggf. „Kochrezepte“, wie in einer bestimmten Situation vorzugehen ist, z. B. Typologien beschreiben
-- So what?
-    - Tja, und nun :-)
+- *Worum geht's?* --> Aussagekräftige Titel, Zusammenfassungen, Kernaussagen, Schaubilder, Fazit ...
+- *Was nützt es mir?* --> Sinn, Zweck, Ziel und Bedeutung in der Einleitung aufzeigen, Praxisnutzen herausstellen, ggf. Checklisten, Leitfäden etc. erstellen
+- *Was soll ich jetzt tun?* --> Geben Sie Handlungsempfehlungen, ggf. „Kochrezepte“, wie in einer bestimmten Situation vorzugehen ist, z. B. Typologien beschreiben
+- *So what?*  -->  Tja, und nun :-)
 
 # Hinweise
 

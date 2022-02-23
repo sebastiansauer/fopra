@@ -149,8 +149,10 @@ Oft müssen Sie per VPN angemeldet (in der Bib.) sein für Volltextzugriff, wenn
 
 
 
-# Themen
+# Modulinhalte
 
+
+## Themen
 
 
 ```{r build-themen, child="Interna/build-themen.Rmd", results='asis', echo=FALSE}
@@ -158,12 +160,18 @@ Oft müssen Sie per VPN angemeldet (in der Bib.) sein für Volltextzugriff, wenn
 
 
 
+## Rahmenthemen
 
+Ihr/e Dozent/in stellt Ihnen ein Rahmenthema zur Verfügung.
+
+[Rahmenthema Achtsamkeit](https://sebastiansauer.github.io/fopra/Interna/Rahmenthema-Achtsamkeit.html)
 
 
 
 
 # Prüfung
+
+
 
 [Hinweise zur Prüfung](https://sebastiansauer.github.io/fopra/Interna/Pruefung.html)
 

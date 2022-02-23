@@ -48,12 +48,18 @@ library(glue)
 # Das Rahmenthema in dieser Gruppe ist 'Achtsamkeit'
 
 
+## Achstamkeit als (eine) UV
+
 Das Rahmenthema in dieser Gruppe ist 'Achtsamkeit'.
 Das bedeutet, dass Sie als Prüfungsaufgabe eine Studie durchführen zu diesem Thema.
 Genauer gesagt sollen Sie Achtsamkeit als UV nutzen und zwar in experimenteller Form.
 In der Wahl weiterer UV sowie von Moderatoren und Mediatoren sind Sie frei.
 Sie sind auch frei in der Wahl der AV.
 
+Die Vorgabe umfasst also: Achtsamkeit als eine experimentell-randomisierte Intervention. 
+
+
+## Beispiel einer möglichen Studie
 
 Ein Beispiel, um die Aufgabe konkret zu machen:
 Sie führen ein Experiment mit zwei Gruppen (G1 und G2) durch, randomisiert zugewiesen.
@@ -61,6 +67,62 @@ Personen in G1 führen eine Achtsamkeitsübung durch;
 Personen in G2 spielen für die gleiche Zeitdauer ein Computerspiel.
 Danach führen Sie in beiden Gruppen jeweils einen Konzentrationstest durch.
 Die Hypothese könnte sein, dass der Mittelwert in G1 größer ist als in G2 (für den Konzentrationswert).
+
+
+## Aber was nehme ich als AV?
+
+Hier ist eine Auswahl an *möglichen* AV, die Sie verwenden können, aber nicht müssen.
+Es macht Sinn, selber nach AVs zu suchen, die *Sie* interessieren,
+von denen *Sie* glauben, dass die UV einen starken Effekt ausüben.
+
+- Stress
+  - Biologische Parameter wie Hautleitwiderstand oder Hormonspiegel (Speichel)
+  - Psychologische Parameter zu Stress erhoben anhand Selbsteinschätzung (psychometrisch fundierter Fragebögen)
+- Emotionslage
+  - Wohlbefinden (Fragebogen)
+  - PANAS
+- Vorurteile
+  - Zustimmung (Likert-Skala) zu Vorurteilen/Stereotypen
+  - IAT oder ähnliche Maße
+- Arbeitsgedächtnis - Zeiterstreckung
+  - Anzahl der Wahrnehmungswechsel beim Necker-Würfel
+  - Tonlängen-Diskrimination
+- Irrationalität
+  - Glaube an Verschwörungstheorien
+  - Einstein-Effekt (Quatsch wird eher geglaubt, wenn von einem Wissenschaftler verkündet)
+  - Bullshit Sensitivity
+- Entspannung
+  - Herzrate 
+  - Herzratenvariabilität
+  - Schlafqualität (subjektiv und mit Gadget wie Apple Watch)
+- Partnerwahl
+  - Tinder Swipes
+  - Physiologische Erregung bei Darbietung von Bildern attraktiver Personen
+- Konzentration
+  - Klassische Testmaße wie *d2*
+  - Attention Network Test
+  - Stroop-Test
+- Intelligenzleistung
+  - Erinnerungsgüte
+  - Intelligenztestwerte
+- Reaktivität
+  - Emotional Stroop Test
+  - Go/No-Go-Test
+  - Startle Reflex
+  - Cognitive Reflection Test (CRT)
+- Beeinflussbarkeit
+  - Ankereffekt
+  - Erreichbarkeit durch Priminig
+
+
+
+## Ich brauche konkrete Beispiele!
+
+
+
+
+[Hier](https://www.zotero.org/groups/4606972/effects-of-mindfulness) finden Sie eine Liste entsprechender Studien.
+
 
 
 
