@@ -33,6 +33,11 @@ thema1:
     - "[Ausgewiesene wirtschaftspsychologische Studien aus studentischer Feder](https://www.fom.de/forschung/institute/iwp/publikationen.html#!acc=iwp-schriftenreihe/accid=18799)"
   hinweise:
     - "Bitte beachten Sie die Einteilung in die Coaching- und Forschungsgruppen."
+  uebung:
+    - "Das Rahmenthema für Ihre Seminararbeit lautet *Achtsamkeit*."
+    - Verwenden Sie eine Achtsamkeitsintervention als UV in Ihrer Studie.
+    - In der Wahl von weiteren UV oder Moderatoren sowie der AV sind Sie frei.
+    - Es soll sich um eine experimentelle Studie handeln, zumindest was die Achtsamkeitsintervention betrifft.
 
 
 thema2:
@@ -87,7 +92,7 @@ thema6x:
   kw: 16
   datum: 18.4.-22.4
   hinweise: 
-    - In dieser Woche fällt die Vorlesung aus.
+    - In dieser Woche fällt die Vorlesung aus (Ostern).
  
 
 
@@ -123,7 +128,7 @@ thema11:
   kw: 23
   datum: 6.6.-10.6.
   hinweise:
-    - In dieser Woche fällt die Vorlesung aus.
+    - In dieser Woche fällt die Vorlesung aus (Pfingsten).
 
 thema12:
   title: "Datenmodellierung"

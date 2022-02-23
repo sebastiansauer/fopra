@@ -1,0 +1,70 @@
+---
+subtitle: "Forschungspraktikum in Psychologie"
+title: "Rahmenthema Achtsamkeit"
+author: "Sebastian Sauer"
+date: "Letzte Aktualisierung: `r Sys.time()`"
+output:
+   
+  rmdformats::downcute:
+    self_contained: true
+    thumbnails: true
+    lightbox: true
+    gallery: false
+    highlight: tango
+    number_sections: TRUE
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r global-knitr-options, include=FALSE}
+  knitr::opts_chunk$set(
+  fig.pos = 'H',
+  fig.asp = 0.618,
+  fig.align='center',
+  fig.width = 5,
+  out.width = "100%",
+  fig.cap = "", 
+  fig.path = "chunk-img/",
+  dpi = 300,
+  # tidy = TRUE,
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE,
+  cache = FALSE,
+  fig.show = "hold")
+```
+
+
+
+```{r}
+library(yaml)
+library(tidyverse)
+library(glue)
+```
+
+
+
+
+# Das Rahmenthema in dieser Gruppe ist 'Achtsamkeit'
+
+
+Das Rahmenthema in dieser Gruppe ist 'Achtsamkeit'.
+Das bedeutet, dass Sie als Prüfungsaufgabe eine Studie durchführen zu diesem Thema.
+Genauer gesagt sollen Sie Achtsamkeit als UV nutzen und zwar in experimenteller Form.
+In der Wahl weiterer UV sowie von Moderatoren und Mediatoren sind Sie frei.
+Sie sind auch frei in der Wahl der AV.
+
+
+Ein Beispiel, um die Aufgabe konkret zu machen:
+Sie führen ein Experiment mit zwei Gruppen (G1 und G2) durch, randomisiert zugewiesen.
+Personen in G1 führen eine Achtsamkeitsübung durch;
+Personen in G2 spielen für die gleiche Zeitdauer ein Computerspiel.
+Danach führen Sie in beiden Gruppen jeweils einen Konzentrationstest durch.
+Die Hypothese könnte sein, dass der Mittelwert in G1 größer ist als in G2 (für den Konzentrationswert).
+
+
+
+
+
+
+

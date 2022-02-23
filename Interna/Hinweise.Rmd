@@ -69,7 +69,7 @@ editor_options:
 - Beachten Sie die Hinweise der Hochschule (s. Moodle) wie die Orientierungshilfe, die Klausur- und Studiengangsordnungen. Dort finden Sie verbindliche Hinweise zu vielen organisatorischen Fragen.
 - Bitte prüfen Sie jetzt schon und in regelmäßigen Abständen die Modulseite auf neue Materialien. 
 - Nachdem eine Unterrichtseinheit abgeschlossen ist, ändert der Dozent grundsätzlich nichts mehr an den Materialien (in Ausnahmefällen wie etwa der Korrektur eines Fehler informiert der Dozent schriftlich).
-
+- Es können sich Aktualisierungen des Unterrichtsmaterials ergeben. Bitte prüfen Sie regelmäßig, ob neues Material eingestellt ist. Nachdem der Unterricht stattgefunden hat, wird das Material aber nicht mehr geändert, so dass Sie Sicherheit für das Lernen haben.
 
 
 # Präsenzunterricht
