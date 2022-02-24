@@ -64,7 +64,7 @@ Sie sind auch frei in der Wahl der AV.
 Die Vorgabe umfasst also: Achtsamkeit als eine experimentell-randomisierte Intervention. 
 
 
-## Beispiel
+## Beispielstudie
 
 
 
@@ -77,6 +77,32 @@ Personen in G1 führen eine Achtsamkeitsübung durch;
 Personen in G2 spielen für die gleiche Zeitdauer ein Computerspiel.
 Danach führen Sie in beiden Gruppen jeweils einen Konzentrationstest durch.
 Die Hypothese könnte sein, dass der Mittelwert in G1 größer ist als in G2 (für den Konzentrationswert).
+
+
+## Achtsamkeitsintervention
+
+
+Hier ist ein Beispiel für eine Achtsamkeitsintervention, die Sie nutzen können bzw. oder ander Sie sich orientieren können.
+
+Sie sind aber frei, andere Arten der Induktion von (State-)Achtsamkeit zu wählen, solange es ein experimenteller Faktor ist (also randomisiert, kontrolliert und interventionell).
+
+
+*G1: Achtsamkeitsinduktion* (Experimentalgruppe)
+
+- Teilnehmis in dieser Gruppe machen eine ca. fünfminütige Achtsamkeitsübung.
+- Die Übung wird per Audio-Datei (mp3 o.Ä.) eingespielt.
+- Teilnehmis hören die Instruktionen und führen die Übung aus.
+- Die Intervention ist online möglich (aber in kontrollierter Umgebung ist die Qualität vermutlich deutlich besser).
+- [Hier](https://osf.io/e5daq/) finden Sie eine Audio-Datei mit einer Achtsamkeitsübung.
+
+
+*G2: Kontrollgruppe*
+
+- Teilnehmis dieser Gruppe führen eine "vergleichbare" Übung durch, die aber keine Achtsamkeit induziert.
+- Die Durchführung ist identisch zur Experimentalgruppe (Darbietung einer aufgesprochenen Übung).
+- [Hier](https://osf.io/v6yfd/) finden Sie eine Audio-Datei mit einer Erklärung zu Achstamkeit (aber keine Übung). Damit wäre der semantische Gehalt (das Thema) identisch oder ähnlich zur Experimentalgruppe, es erfolgt aber keine Induktion, zumindest nicht explizit (und hoffentlich auch nicht implizit).
+- Alternativ finden Sie [hier](https://osf.io/guf5p/) einen aufgesprochenen Text, der nichts mit Achtsamkeit zu tun hat (es geht um einen Blauwal). Evtl. sollten die Teilnehmis instruiert sein, genau zuzuhören.
+
 
 
 ## Aber was nehme ich als AV?
