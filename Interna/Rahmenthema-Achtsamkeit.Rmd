@@ -46,6 +46,26 @@ library(glue)
 
 
 
+```{r bib, cache=FALSE}
+library(RefManageR)
+BibOptions(check.entries = FALSE, 
+           bib.style = "authoryear", 
+           style = "markdown",
+           max.names = 5,
+           dashed = TRUE,
+           no.print.fields = 
+             c("url", "page","isbn", "location", "urldate", "note", "urldate", "issn")
+           )
+bib_file <- "Interna/bib.bib"
+bib <- ReadBib(bib_file)
+```
+
+
+
+
+
+
+
 
 # Rahmenthema: Achtsamkeit
 
@@ -122,7 +142,7 @@ von denen *Sie* glauben, dass die UV einen starken Effekt ausüben.
   - IAT oder ähnliche Maße
 - Arbeitsgedächtnis - Zeiterstreckung
   - Anzahl der Wahrnehmungswechsel beim Necker-Würfel
-  - Tonlängen-Diskrimination
+  - Tonlängen-Diskrimination (Sinustöne können z.B. [hier](https://www.audiocheck.net/audiofrequencysignalgenerator_sinetone.php) heruntergeladen werden)
 - Irrationalität
   - Glaube an Verschwörungstheorien
   - Einstein-Effekt (Quatsch wird eher geglaubt, wenn von einem Wissenschaftler verkündet)
@@ -149,6 +169,15 @@ von denen *Sie* glauben, dass die UV einen starken Effekt ausüben.
 - Beeinflussbarkeit
   - Ankereffekt
   - Erreichbarkeit durch Priminig
+
+
+## Beispiel für eine AV: Zeitdiskrimination
+
+Die Studie von `r RefManageR::Citet(bib, "kaltwasser2014mindfulness")` verwendete u.a. eine Aufgabe zum Zeitdiskriminatsvermögen, um die Effekte von Achtsamkeitstraining zu messen:
+
+>    For the duration discrimination test, students were presented a standard experimental paradigm consisting of a pair of auditory stimuli and asked to assess which acoustic cue was presented for a longer period of time, the ﬁrst or the second. One stimulus was always a standardized auditory sound signal at 440 Hz (standard stimulus). The target stimulus was an auditory stimulus of either positive (“someone laughing”), neutral (“a cow mooing”) or negative emotional (“someone weeping”) association. The standard stimulus was always presented either for 2 (“short sound”) or 4 s (“long sound”), while the temporal length of the target stimulus was varied from +40 % to −40 % in steps of 6 differences. In total, 36 trials consisting of 12 positive, 12 neutral and 12 negative stimulus were conducted. 18 trials had the shorter and 18 other trials the longer stimulus
+    
+(S. 398).
 
 
 
