@@ -18,7 +18,7 @@ thema1:
   skript:
     - "[Skript Thema 01, pdf](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema01.pdf)"
     - "[Skript Thema 01, pptx](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema01.pptx)"
-    - "[Skript Thema 01, key](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema01.key)"      
+    - "[Skript Thema 01, key](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema01.key)"
   plenum:
     - "[The Altmetric Top 100 Papers](https://www.altmetric.com/top100/2020/)"
     - "[Alltagsforschung.de: Echte, Studien, sofatauglich aufbereitet](https://www.alltagsforschung.de/)"
@@ -60,7 +60,7 @@ thema2:
     - "[Appendix zur Brain-Drain-Studie](https://www.dropbox.com/s/8o8jf602rgz9hgw/Ward%2C%20Duke%2C%20Gneezy%20and%20Bos%20-%20Brain%20Drain%20Web%20Appendix.pdf?dl=1)"
   Vertiefung:
     - "[Skorbut-Datensatz](https://rdrr.io/cran/medicaldata/man/scurvy.html)"
-    - "[Datensatz wo_men](https://raw.github.com/sebastiansauer/modar/master/datasets/wo_men.csv)" 
+    - "[Datensatz wo_men](https://raw.github.com/sebastiansauer/modar/master/datasets/wo_men.csv)"
   aufgaben:
     - "[Aufgaben html](https://sebastiansauer.github.io/fopra/Aufgaben/Thema2-Aufgaben1.html)"
     - "[Lösungen pdf](https://sebastiansauer.github.io/fopra/Aufgaben/Thema2-Aufgaben1.pdf)"
@@ -97,10 +97,10 @@ thema6x:
   title: "Wiederholung"
   kw: 16
   datum: 18.4.-22.4
-  hinweise: 
+  hinweise:
     - In dieser Woche fällt die Vorlesung aus (Ostern).
   uebung:
-    - Coaching 
+    - Coaching
 
 
 thema6:
@@ -132,7 +132,7 @@ thema9:
   kw: 20
   datum: 16.5.-20.5.
   uebung:
-    - Coaching
+    - Fachgespräch
 
 
 thema10:
@@ -142,7 +142,7 @@ thema10:
   hinweise:
     - Nächste Woche ist Blockwoche; es findet kein regulärer Unterricht statt.
   uebung:
-    - Coaching
+    - Fachgespräch
 
 
 thema11:
@@ -152,7 +152,7 @@ thema11:
   hinweise:
     - In dieser Woche fällt die Vorlesung aus (Pfingsten).
   uebung:
-    - Coaching
+    - Fachgespräch
 
 
 
@@ -161,7 +161,7 @@ thema12:
   kw: 24
   datum: 13.6.-17.6.
   uebung:
-    - Coaching
+    - Fachgespräch
 
 
 
@@ -172,7 +172,7 @@ thema13:
   kw: 25
   datum: 20.6.-24.6.
   uebung:
-    - Coaching
+    - Fachgespräch
 
 
 
@@ -183,7 +183,7 @@ thema14:
   hinweise:
     - Nach dieser Woche endet der Unterricht.
   uebung:
-    - Coaching
+    - Abschließende Diskussion
 
 
 
