@@ -58,7 +58,9 @@ cat(childtext, sep="\n")
 
 
 
+# Videos
 
+- [Playlist 'Forschungspraxis'](https://youtube.com/playlist?list=PLRR4REmBgpIEh_YSXawzTs6jybXFcXJxM)
 
 
 
