@@ -56,7 +56,7 @@ Die Prüfungsleistung besteht aus:
 
 
 ```{r hinweise, results='asis'}
-url <- "https://raw.githubusercontent.com/sebastiansauer/Lehre/main/Hinweise/Hinweise-Pruefung.Rmd"
+url <- "https://raw.githubusercontent.com/sebastiansauer/Lehre/main/Hinweise/Hinweise-Pruefung-Seminararbeit.Rmd"
 childtext <- readLines(url)
 cat(childtext, sep="\n")
 ```
