@@ -155,7 +155,7 @@ Oft müssen Sie per VPN angemeldet (in der Bib.) sein für Volltextzugriff, wenn
 
 
 
-```{r build-themen, child="Interna/build-themen.Rmd", results='asis', echo=FALSE}
+```{r build-themen, child="Interna/build-themen.Rmd", cache=FALSE, results='asis', echo=FALSE}
 ```
 
 

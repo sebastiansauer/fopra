@@ -4,7 +4,7 @@ library(tidyverse)
 
 
 
-```{r}
+```{r cache = FALSE}
 modul_zsfg <- yaml::read_yaml(paste0(here::here(), "/Interna/modul-zsfg.yaml"))
 ```
 
@@ -107,11 +107,11 @@ for (i in seq_along(titel)){
   
   
   plenum <-
-    modul_zsfg[[i]][["folien"]]
+    modul_zsfg[[i]][["plenum"]]
 
   if (!is.null(plenum)){
     cat("### Plenum \n\n")
-    cat(paste0("-", plenum, "\n"))
+    cat(paste0("- ", plenum, "\n"))
 
     cat("\n\n")
   }
@@ -204,6 +204,16 @@ for (i in seq_along(titel)){
     cat("\n\n")
   }
   
+  
+  uebung <-
+    modul_zsfg[[i]][["uebung"]]
+
+  if (!is.null(uebung)){
+    cat("### Übung \n\n")
+    cat(paste0("- ", uebung, "\n"))
+
+    cat("\n\n")
+  }
   
 
   # Leerzeilen, bevor neues Thema anfängt

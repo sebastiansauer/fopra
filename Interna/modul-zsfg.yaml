@@ -59,7 +59,7 @@ thema2:
     - " 'Research Methods in Psychology' Kap. 10"
     - "[Brain Drain: The Mere Presence of One’s Own Smartphone Reduces Available Cognitive Capacity](https://repositories.lib.utexas.edu/bitstream/handle/2152/64130/braindrain.pdf;sequence=2)"
     - "[Appendix zur Brain-Drain-Studie](https://www.dropbox.com/s/8o8jf602rgz9hgw/Ward%2C%20Duke%2C%20Gneezy%20and%20Bos%20-%20Brain%20Drain%20Web%20Appendix.pdf?dl=1)"
-  Vertiefung:
+  vertiefung:
     - "[Skorbut-Datensatz](https://rdrr.io/cran/medicaldata/man/scurvy.html)"
     - "[Datensatz wo_men](https://raw.github.com/sebastiansauer/modar/master/datasets/wo_men.csv)"
   aufgaben:
@@ -77,6 +77,13 @@ thema3:
   title: "Beobachtungsstudien"
   kw: 13
   datum: 28.3.-1.4.
+  lernziele:
+    - Sie können die epistemologischen Ziele und Grenzen von Beobachtungsstudien nennen.
+    - Sie können eine einfache Beobachtungstudie selber gestalten.
+
+  vorbereitung:
+  aufgaben:
+  literatur:
   uebung:
     - Coaching
 
