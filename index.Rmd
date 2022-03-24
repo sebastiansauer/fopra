@@ -152,10 +152,18 @@ Oft müssen Sie per VPN angemeldet (in der Bib.) sein für Volltextzugriff, wenn
 # Modulinhalte
 
 
+```{r render-course-outline, results = "asis", echo = FALSE, cache = FALSE}
+modul_zsfg_file <- paste0(here::here(),"/Interna/modul-zsfg.yaml")
+
+source("funs/render_course_outline.R")
+render_course_outline(modul_zsfg_file)
+
+```
 
 
 
-```{r build-themen, child="Interna/build-themen.Rmd", cache=FALSE, results='asis', echo=FALSE}
+
+```{r build-themen, child="Interna/build-themen.Rmd", cache=FALSE, results='asis', echo=FALSE, eval = FALSE}
 ```
 
 

@@ -1,72 +1,72 @@
 thema1:
-  title: "Hallo, Forschung"
-  kw: 11
-  datum: 14.-18.3.22
-  subtitle: "Einführung in das (und Ihr) Thema Forschung"
-  vorbereitung:
+  Titel: "Hallo, Forschung"
+  KW: 11
+  Datum: 14.-18.3.22
+  Untertitel: "Einführung in das (und Ihr) Thema Forschung"
+  Vorbereitung:
     - Lesen Sie die Hinweise zum Modul.
     - Installieren (oder Updaten) Sie die für dieses Modul angegeben Software.
     - Lesen Sie die Literatur.
-  lernziele:
+  Lernziele:
     - Sie können eine Definition von Wissenschaft geben.
     - Sie können die drei Schlussarten erklären.
     - Sie können zur Debatte von qualitativ vs. quantitativ Stellung beziehen.
     - Sie können mehrere Beispiele relevanter Studien Ihres Fachgebiets angeben und kurz beschreiben.
     - Sie können die zentralen Inhalte eines Fachartikels schnell erschließen.
-  literatur:
+  Literatur:
     - "Research Methods in Psychology, Kap. 1-4 und 7."
-  skript:
+  Skript:
     - "[Skript Thema 01, pdf](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema01.pdf)"
     - "[Skript Thema 01, pptx](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema01.pptx)"
     - "[Skript Thema 01, key](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema01.key)"
-  plenum:
+  Plenum:
     - "[The Altmetric Top 100 Papers](https://www.altmetric.com/top100/2020/)"
     - "[Alltagsforschung.de: Echte, Studien, sofatauglich aufbereitet](https://www.alltagsforschung.de/)"
     - "[Psychologie-Magazin 'The Inquisitive Mind'](https://de.in-mind.org/)"
-  aufgaben:
+  Aufgaben:
     - "[aufRRRischungskurs mit Pinguinen](https://allisonhorst.shinyapps.io/dplyr-learnr/#section-welcome)"
-  vertiefung:
+  Vertiefung:
     - "[Most influential papers on Google Scholar in 2020](https://www.natureindex.com/news-blog/google-scholar-reveals-most-influential-papers-research-citations-twenty-twenty)"
     - "[Liste interessanter, replizierwürdiger Studien (oft) mit Bezug zur Psychologie](https://www.zotero.org/groups/2522726/to-be-replicated)"
     - "[Frontiers in Psychology (Journal)](https://www.frontiersin.org/journals/psychology#research-topics)"
     - "[Interessante psychologische Studien - eine subjektive Auswahl](https://sebastiansauer.github.io/psy-paper-suggestions/)"
     - "[Ausgewiesene wirtschaftspsychologische Studien aus studentischer Feder](https://www.fom.de/forschung/institute/iwp/publikationen.html#!acc=iwp-schriftenreihe/accid=18799)"
-  hinweise:
+  Hinweise:
     - "Bitte beachten Sie die Einteilung in die Coaching- und Forschungsgruppen."
-  uebung:
+  Uebung:
     - Einführung in das Rahmenthema Ihrer Studie
     - Wahl der Forschungsgruppen
     - Organisatorische Hinweise (Was muss ich tun, damit ich hier wieder raus komme?)
 
 
 thema2:
-  title: "Hypothesen und Gedöns"
-  kw: 12
-  datum: 21.3.-25.3.
-  vorbereitung:
+  Titel: "Hypothesen und Gedöns"
+  KW: 12
+  Datum: 21.3.-25.3.
+  Vorbereitung:
     - "Lesen Sie den 'Brain-Drain-Artikel'."
-  lernziele:
+  Lernziele:
     - Sie können verschiedene Arten der Ziele wissenschaftlicher Studien voneinander abgrenzen.
     - Sie können wissenschaftliche Hypothesen auf präzise Art formulieren.
     - "Sie haben die wesentlichen Inhalte des 'Brain-Drain-Artikels' aufgenommen."
-  plenum:
+  Plenum:
     - "[Anmerkungen zum Brain-Drain-Artikel](https://github.com/sebastiansauer/fopra/raw/main/Material/Ward%2C%20Duke%2C%20Gneezy%20and%20Bos%20-%20Brain%20Drain-mit-Anmerkungen.pdf)"
-  skript:
+  Skript:
     - "[Skript Thema 02, pdf](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema02.pdf)"
     - "[Skript Thema 02, pptx](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema02.pptx)"
     - "[Skript Thema 02, key](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema02.key)"
-  literatur:
+  Literatur:
     - " 'Research Methods in Psychology' Kap. 10"
     - "[Brain Drain: The Mere Presence of One’s Own Smartphone Reduces Available Cognitive Capacity](https://repositories.lib.utexas.edu/bitstream/handle/2152/64130/braindrain.pdf;sequence=2)"
     - "[Appendix zur Brain-Drain-Studie](https://www.dropbox.com/s/8o8jf602rgz9hgw/Ward%2C%20Duke%2C%20Gneezy%20and%20Bos%20-%20Brain%20Drain%20Web%20Appendix.pdf?dl=1)"
-  vertiefung:
+  Vertiefung:
     - "[Skorbut-Datensatz](https://rdrr.io/cran/medicaldata/man/scurvy.html)"
     - "[Datensatz wo_men](https://raw.github.com/sebastiansauer/modar/master/datasets/wo_men.csv)"
-  aufgaben:
+  Aufgaben:
     - "[Aufgaben html](https://sebastiansauer.github.io/fopra/Aufgaben/Thema2-Aufgaben1.html)"
     - "[Lösungen pdf](https://sebastiansauer.github.io/fopra/Aufgaben/Thema2-Aufgaben1.pdf)"
     - "[Lösungen html](https://sebastiansauer.github.io/fopra/Aufgaben/Thema2-Loesungen1.html)"
-  uebung:
+  Uebung:
     - Lesen von Fachartikeln passend zum Rahmenthema
     - Ableitung möglicher Hypothesen aus dem Rahmenthema für Ihre Studie
 
@@ -74,124 +74,131 @@ thema2:
 
 
 thema3:
-  title: "Beobachtungsstudien"
-  kw: 13
-  datum: 28.3.-1.4.
-  lernziele:
+  Titel: "Beobachtungsstudien"
+  KW: 13
+  Datum: 28.3.-1.4.
+  Lernziele:
     - Sie können die epistemologischen Ziele und Grenzen von Beobachtungsstudien nennen.
     - Sie können eine einfache Beobachtungstudie selber gestalten.
 
-  vorbereitung:
-  aufgaben:
-  literatur:
-  uebung:
-    - Coaching
+  Vorbereitung:
+    - "Installieren Sie eine App, z.B. [diese](https://play.google.com/store/apps/details?id=com.zerodesktop.appdetox.qualitytime), um Ihre Bildschirmzeit am Handy zu protokollieren. NUR NÖTIG bei einigen Android-Handies. Unter iOS kann man die Funktion 'Bildschirmzeit' nutzen." 
+  Aufgaben:
+    - "[Aufgaben html](https://sebastiansauer.github.io/fopra/Aufgaben/Thema2-Aufgaben1.html)"
+    - "[Lösungen pdf](https://sebastiansauer.github.io/fopra/Aufgaben/Thema2-Aufgaben1.pdf)"
+    - "[Lösungen html](https://sebastiansauer.github.io/fopra/Aufgaben/Thema2-Loesungen1.html)"
+
+  Literatur:
+    - " 'Research Methods in Psychology' Kap. 28-29"
+    
+  Uebung:
+    - "Live-Experiment für eine Beobachtungsstudie: Der Zusammenhang von Bildschirmzeit und Konzentration (Stroop-Test)"
 
 thema4:
-  title: "Experimente"
-  kw: 14
-  datum: 4.4.-8.4.
-  uebung:
+  Titel: "Experimente"
+  KW: 14
+  Datum: 4.4.-8.4.
+  Uebung:
     - Coaching
 
 thema5:
-  title: "Vertiefung - Versuchspläne"
-  kw: 15
-  datum: 11.4.-15.4.
-  uebung:
+  Titel: "Vertiefung - Versuchspläne"
+  KW: 15
+  Datum: 11.4.-15.4.
+  Uebung:
     - Coaching
 
 
 thema6x:
-  title: "Wiederholung"
-  kw: 16
-  datum: 18.4.-22.4
-  hinweise:
+  Titel: "Wiederholung"
+  KW: 16
+  Datum: 18.4.-22.4
+  Hinweise:
     - In dieser Woche fällt die Vorlesung aus (Ostern).
-  uebung:
+  Uebung:
     - Coaching
 
 
 thema6:
-  title: "Online-Studien"
-  kw: 17
-  datum: 25.4.-29.4.
-  uebung:
+  Titel: "Online-Studien"
+  KW: 17
+  Datum: 25.4.-29.4.
+  Uebung:
     - Coaching
 
 
 thema7:
-  title: "Kausalanalyse"
-  kw: 18
-  datum: 2.4.-6.5.
-  uebung:
+  Titel: "Kausalanalyse"
+  KW: 18
+  Datum: 2.4.-6.5.
+  Uebung:
     - Coaching
 
 
 thema8:
-  title: "Fallzahlplanung"
-  kw: 19
-  datum: 9.5.-13.5.
-  uebung:
+  Titel: "Fallzahlplanung"
+  KW: 19
+  Datum: 9.5.-13.5.
+  Uebung:
     - Coaching
 
 
 thema9:
-  title: "Messinstrumente"
-  kw: 20
-  datum: 16.5.-20.5.
-  uebung:
+  Titel: "Messinstrumente"
+  KW: 20
+  Datum: 16.5.-20.5.
+  Uebung:
     - Fachgespräch
 
 
 thema10:
-  title: "Versuchsdurchführung"
-  kw: 21
-  datum: 23.5.-27.5.
-  hinweise:
-    - Nächste Woche ist Blockwoche; es findet kein regulärer Unterricht statt.
-  uebung:
+  Titel: "Versuchsdurchführung"
+  KW: 21
+  Datum: 23.5.-27.5.
+  Hinweise:
+    - Nächste Woche ist BlocKWoche; es findet kein regulärer Unterricht statt.
+  Uebung:
     - Fachgespräch
 
 
 thema11:
-  title: "Datenaufbereitung"
-  kw: 23
-  datum: 6.6.-10.6.
-  hinweise:
+  Titel: "Datenaufbereitung"
+  KW: 23
+  Datum: 6.6.-10.6.
+  Hinweise:
     - In dieser Woche fällt die Vorlesung aus (Pfingsten).
-  uebung:
+  Uebung:
     - Fachgespräch
 
 
 
 thema12:
-  title: "Datenmodellierung"
-  kw: 24
-  datum: 13.6.-17.6.
-  uebung:
+  Titel: "Datenmodellierung"
+  KW: 24
+  Datum: 13.6.-17.6.
+  Uebung:
     - Fachgespräch
 
 
 
 thema13:
-  title: "Open Science"
-  vertiefung:
+  Titel: "Open Science"
+  Vertiefung:
   - "[Einführung in R Markdown, Folien](https://docs.google.com/presentation/d/e/2PACX-1vRZ72QdK_nq-s4hwjLYCgUmDVWMxdAx_WwD6Equ9SgCmjvhmuiw6M4XbqzCqmqKVRIeaUrO1BGGU-q6/pub?start=false&loop=false&delayms=3000&slide=id.p)"
-  kw: 25
-  datum: 20.6.-24.6.
-  uebung:
+  KW: 25
+  Datum: 20.6.-24.6.
+  Uebung:
     - Fachgespräch
 
 
 
 thema14:
-  title: "Joker-Stunde"
-  kw: 26
-  datum: 27.6.-1.7.
-  hinweise:
+  Titel: "Joker-Stunde"
+  KW: 26
+  Datum: 27.6.-1.7.
+  Hinweise:
     - Nach dieser Woche endet der Unterricht.
-  uebung:
+  Uebung:
     - Abschließende Diskussion
 
 
