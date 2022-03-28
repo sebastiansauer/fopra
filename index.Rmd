@@ -141,7 +141,7 @@ Oft müssen Sie per VPN angemeldet (in der Bib.) sein für Volltextzugriff, wenn
     - [Download PDF](https://kpu.pressbooks.pub/psychmethods4e/open/download?type=pdf)
 - [Liste empfohlener Literatur](https://www.zotero.org/groups/4582997/intro-research-methods)
 
-
+Zur empfohlenen Literatur gehört auch `r RefManageR::Citep(bib, "bd")`.
 
 # Lernhilfen
 

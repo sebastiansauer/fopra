@@ -74,12 +74,13 @@ thema2:
 
 
 thema3:
-  Titel: "Beobachtungsstudien"
+  Titel: "Populationsbeschreibende Studien"
   KW: 13
   Datum: 28.3.-1.4.
+
   Lernziele:
-    - Sie können die epistemologischen Ziele und Grenzen von Beobachtungsstudien nennen.
-    - Sie können eine einfache Beobachtungstudie selber gestalten.
+    - Sie können die epistemologischen Ziele und Grenzen von populationsbechreibenden Studien nennen.
+    - Sie können eine einfache Beobachtungstudie zum Zweck der Populationsbeschreibung selber gestalten.
 
   Vorbereitung:
     - "Installieren Sie eine App, z.B. [diese](https://play.google.com/store/apps/details?id=com.zerodesktop.appdetox.qualitytime), um Ihre Bildschirmzeit am Handy zu protokollieren. NUR NÖTIG bei einigen Android-Handies. Unter iOS kann man die Funktion 'Bildschirmzeit' nutzen."
@@ -90,10 +91,17 @@ thema3:
 
   Literatur:
     - " 'Research Methods in Psychology' Kap. 28-29"
+    - "Bortz & Döring, 2006, Kap. 4"
+
+  Skript:
+    - "[Skript Thema 3, PDF](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema03.pdf)"
+    - "[Skript Thema 3, PPTX](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema03.pptx)"
+    - "[Skript Thema 3, Key](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema03.key)"
 
   Uebung:
     - "Live-Experiment für eine Beobachtungsstudie: Der Zusammenhang von Bildschirmzeit und Konzentration (Stroop-Test)"
-
+    - "[Berechnung von Populatonsschätzern](https://github.com/sebastiansauer/fopra/blob/main/Skript-Syntax/Thema3.R)"
+    - "[Funktioniert Stichprobenziehen wirklich?](https://data-se.netlify.app/2022/03/28/simulation-des-wiederholten-stichprobenziehens/)"
 thema4:
   Titel: "Experimente"
   KW: 14
