@@ -3,9 +3,42 @@
 
 
 
+
+# Setup -------------------------------------------------------------------
+
+
+
+
 library(rstanarm)
 library(tidyverse)
 data(mtcars)
+
+
+
+
+
+
+
+# Metrische AV,  keine UV -------------------------------------------------
+
+
+
+# Was ist die mittlere PS-Zahl?
+
+
+m2 <- stan_glm(hp ~ 1, data = mtcars,
+               refresh = 0)
+
+coef(m2)
+posterior_interval(m2, pars = "(Intercept)")
+
+
+
+
+
+# Binäre AV, keine UV -----------------------------------------------------
+
+
 
 # Wie groß ist der Anteil der Autos mit 8 Zylindern?
 
@@ -24,13 +57,3 @@ posterior_interval(m1, pars = "(Intercept)") %>% invlogit()
 
 plot(m1)
 
-
-
-# Was ist die mittlere PS-Zahl?
-
-
-m2 <- stan_glm(hp ~ 1, data = mtcars,
-               refresh = 0)
-
-coef(m2)
-posterior_interval(m2, pars = "(Intercept)")
