@@ -26,11 +26,14 @@ data(mtcars)
 # Was ist die mittlere PS-Zahl?
 
 
-m2 <- stan_glm(hp ~ 1, data = mtcars,
+m2 <- stan_glm(hp ~ 1,
+               data = mtcars,
                refresh = 0)
-
-coef(m2)
 posterior_interval(m2, pars = "(Intercept)")
+
+m2
+coef(m2)
+
 
 
 
