@@ -153,17 +153,47 @@ Zur empfohlenen Literatur gehört auch `r RefManageR::Citet(bib, "bd")`.
 
 
 ```{r render-course-outline, results = "asis", echo = FALSE, cache = FALSE}
-modul_zsfg_file <- paste0(here::here(),"/Interna/modul-zsfg.yaml")
 
-source("funs/render_course_outline.R")
-render_course_outline(modul_zsfg_file)
+source("https://raw.githubusercontent.com/sebastiansauer/Lehre/main/R-Code/render-course-sections.R")
+
+
+course_dates_file <- here::here("Interna/course-dates.yaml")
+content_file <- here::here("Interna/modul-zsfg.yaml")
+
+stopifnot(file.exists(course_dates_file))
+stopifnot(file.exists(content_file))
+
+#debug(render_course_outline)
+render_course_outline(course_dates_file, content_file, small_table = TRUE, header_level = 3)
 
 ```
 
 
 
 
-```{r build-themen, child="Interna/build-themen.Rmd", cache=FALSE, results='asis', echo=FALSE, eval = FALSE}
+```{r build-themen, cache=FALSE, results='asis', echo=FALSE, eval = FALSE}
+
+
+descriptors_to_be_rendered <-
+  c(
+    "Titel",
+    "Lernziele",
+    "Literatur",
+    "Vorbereitung",
+    "Skript",
+#    "Plenum",
+    "Aufgaben",
+    "Vertiefung",
+    "Uebung",
+    "Hinweise"
+    )
+
+render_course_outline(course_dates_file,
+                      content_file, 
+                      small_table = FALSE,
+                      descriptors = descriptors_to_be_rendered,
+                      header_level = 3)
+
 ```
 
 

@@ -1,7 +1,5 @@
 thema1:
   Titel: "Hallo, Forschung"
-  KW: 11
-  Datum: 14.-18.3.22
   Untertitel: "Einführung in das (und Ihr) Thema Forschung"
   Vorbereitung:
     - Lesen Sie die Hinweise zum Modul.
@@ -34,15 +32,18 @@ thema1:
   Hinweise:
     - "Bitte beachten Sie die Einteilung in die Coaching- und Forschungsgruppen."
   Uebung:
-    - Einführung in das Rahmenthema Ihrer Studie
-    - Wahl der Forschungsgruppen
-    - Organisatorische Hinweise (Was muss ich tun, damit ich hier wieder raus komme?)
+    - "Einführung in das Rahmenthema Ihrer Studie"
+    - "Wahl der Forschungsgruppen"
+    - "Organisatorische Hinweise (Was muss ich tun, damit ich hier wieder raus komme?)"
+  Coaching:
+    - "Einführung in das Thema Achtsamkeit"
+
+
+
 
 
 thema2:
   Titel: "Hypothesen und Gedöns"
-  KW: 12
-  Datum: 21.3.-25.3.
   Vorbereitung:
     - "Lesen Sie den 'Brain-Drain-Artikel'."
   Lernziele:
@@ -69,14 +70,14 @@ thema2:
   Uebung:
     - Lesen von Fachartikeln passend zum Rahmenthema
     - Ableitung möglicher Hypothesen aus dem Rahmenthema für Ihre Studie
-
+  Coaching:
+    - Lesen von Fachartikeln zum Thema Achtsamkeit
 
 
 
 thema3:
   Titel: "Populationsbeschreibende Studien"
-  KW: 13
-  Datum: 28.3.-1.4.
+
 
   Lernziele:
     - Sie können die epistemologischen Ziele und Grenzen von populationsbechreibenden Studien nennen.
@@ -93,7 +94,7 @@ thema3:
     - "[Lösungen Thema 3 html](https://sebastiansauer.github.io/fopra/Aufgaben/Thema3-Loesungen1.html)"
 
   Literatur:
-    - " 'Research Methods in Psychology' Kap. 28-29"
+    - "'Research Methods in Psychology' Kap. 28-29"
     - "Bortz & Döring, 2006, Kap. 4"
 
   Skript:
@@ -108,10 +109,11 @@ thema3:
     - "[Berechnung von Populatonsschätzern](https://github.com/sebastiansauer/fopra/blob/main/Skript-Syntax/Thema3.R)"
     - "[Funktioniert Stichprobenziehen wirklich?](https://data-se.netlify.app/2022/03/28/simulation-des-wiederholten-stichprobenziehens/)"
     - "[Stroop-Test, online](https://www.bernhard-gaul.de/spiele/stroop-test/stroop.php)"
-    - "[Freiburger Fragebogen zur Achtsamkeit](https://chs-institute.org/news/16-freiburger-fragebogen-zur-achtsamkeit-ffa.html)"
   Vertiefung:
     - "[Text zum Konzept der Repräsentativität von Stichproben](http://www.von-der-lippe.org/dokumente/Repraesentativitaet.pdf)"
-
+  Coaching:
+    - "Erstellen einer (Beobachtungsstudie) zum Zusammenhang von Achtsamkeit und Konzentration"
+    - "[Achtsamkeit messen mit dem Freiburger Fragebogen zur Achtsamkeit](https://chs-institute.org/news/16-freiburger-fragebogen-zur-achtsamkeit-ffa.html)"
 
 
 
@@ -120,109 +122,102 @@ thema3:
 
 thema4:
   Titel: "Experimente"
-  KW: 14
-  Datum: 4.4.-8.4.
-  Uebung:
-    - Coaching
+
+  Coaching:
+    - Forschungsgruppencoaching
 
 thema5:
   Titel: "Vertiefung - Versuchspläne"
-  KW: 15
-  Datum: 11.4.-15.4.
-  Uebung:
-    - Coaching
+
+  Coaching:
+    - Forschungsgruppencoaching
 
 
 thema6x:
   Titel: "Wiederholung"
-  KW: 16
-  Datum: 18.4.-22.4
+
   Hinweise:
     - In dieser Woche fällt die Vorlesung aus (Ostern).
-  Uebung:
-    - Coaching
+  Coaching:
+    - Forschungsgruppencoaching
 
 
 thema6:
   Titel: "Online-Studien"
-  KW: 17
-  Datum: 25.4.-29.4.
-  Uebung:
-    - Coaching
+
+  Coaching:
+    - Forschungsgruppencoaching
 
 
 thema7:
   Titel: "Kausalanalyse"
-  KW: 18
-  Datum: 2.4.-6.5.
-  Uebung:
-    - Coaching
+
+  Coaching:
+    - Forschungsgruppencoaching
 
 
 thema8:
   Titel: "Fallzahlplanung"
-  KW: 19
-  Datum: 9.5.-13.5.
-  Uebung:
-    - Coaching
+
+  Coaching:
+    - Forschungsgruppencoaching
 
 
 thema9:
   Titel: "Messinstrumente"
-  KW: 20
-  Datum: 16.5.-20.5.
-  Uebung:
+
+  Coaching:
     - Fachgespräch
 
 
 thema10:
   Titel: "Versuchsdurchführung"
-  KW: 21
-  Datum: 23.5.-27.5.
+
   Hinweise:
     - Nächste Woche ist BlocKWoche; es findet kein regulärer Unterricht statt.
-  Uebung:
+  Coaching:
     - Fachgespräch
 
 
 thema11:
   Titel: "Datenaufbereitung"
-  KW: 23
-  Datum: 6.6.-10.6.
+
   Hinweise:
     - In dieser Woche fällt die Vorlesung aus (Pfingsten).
-  Uebung:
+  Coaching:
     - Fachgespräch
 
 
 
 thema12:
   Titel: "Datenmodellierung"
-  KW: 24
-  Datum: 13.6.-17.6.
-  Uebung:
+
+  Coaching:
     - Fachgespräch
 
 
+thema12a:
+  Titel: "Wissenschaftliches Schreiben"
+
+  Coaching:
+    - Fachgespräch
 
 thema13:
   Titel: "Open Science"
   Vertiefung:
   - "[Einführung in R Markdown, Folien](https://docs.google.com/presentation/d/e/2PACX-1vRZ72QdK_nq-s4hwjLYCgUmDVWMxdAx_WwD6Equ9SgCmjvhmuiw6M4XbqzCqmqKVRIeaUrO1BGGU-q6/pub?start=false&loop=false&delayms=3000&slide=id.p)"
-  KW: 25
-  Datum: 20.6.-24.6.
-  Uebung:
+
+  Coaching:
     - Fachgespräch
 
 
 
 thema14:
   Titel: "Joker-Stunde"
-  KW: 26
-  Datum: 27.6.-1.7.
+
   Hinweise:
     - Nach dieser Woche endet der Unterricht.
-  Uebung:
+  Coaching:
     - Abschließende Diskussion
 
 
