@@ -91,7 +91,7 @@ WORK IN PROGRESS
 
 
 
-```{r build-themen, child="Interna/tldr.Rmd", results='asis', echo=FALSE}
+```{r tldr, child="Interna/tldr.Rmd", results='asis', echo=FALSE}
 ```
 
 
@@ -137,11 +137,20 @@ Ein Teil der Literatur ist über viele Hochschulbibliotheken als PDF herunterlad
 andere Titel sind offen im Internet verfügbar.
 Oft müssen Sie per VPN angemeldet (in der Bib.) sein für Volltextzugriff, wenn Sie nicht auf dem Campus sind.
 
-- Zentrale Literatur ist `r RefManageR::Citep(bib, "jhangiani_research_2019")`.
+- Einen guten Überblick gibt `r RefManageR::Citep(bib, "jhangiani_research_2019")`.
     - [Download PDF](https://kpu.pressbooks.pub/psychmethods4e/open/download?type=pdf)
-- [Liste empfohlener Literatur](https://www.zotero.org/groups/4582997/intro-research-methods)
+- Zum Nachlesen experimenteller Designs eignet    `r RefManageR::Citep(bib, "reiss")`.
+- Ein Standardwerk der psychologischen Versuchsplanung ist `r RefManageR::Citep(bib, "bd")`.
+- Einen tieferen Einblick in quasi-experimentelle Forschung bietet `r RefManageR::Citep(bib, "reichardt")`.
+
+
+    
+    
+Hier finden Sie eine  [Liste empfohlener Literatur](https://www.zotero.org/groups/4582997/intro-research-methods).
 
 Zur empfohlenen Literatur gehört auch `r RefManageR::Citet(bib, "bd")`.
+
+
 
 # Lernhilfen
 
@@ -149,7 +158,8 @@ Zur empfohlenen Literatur gehört auch `r RefManageR::Citet(bib, "bd")`.
 
 
 
-# Modulinhalte
+# Modultabelle
+
 
 
 ```{r render-course-outline, results = "asis", echo = FALSE, cache = FALSE}
@@ -169,9 +179,9 @@ render_course_outline(course_dates_file, content_file, small_table = TRUE, heade
 ```
 
 
+# Modulüberblick
 
-
-```{r build-themen, cache=FALSE, results='asis', echo=FALSE, eval = FALSE}
+```{r build-themen, cache=FALSE, results='asis', echo=FALSE, eval = TRUE}
 
 
 descriptors_to_be_rendered <-
@@ -192,7 +202,7 @@ render_course_outline(course_dates_file,
                       content_file, 
                       small_table = FALSE,
                       descriptors = descriptors_to_be_rendered,
-                      header_level = 3)
+                      header_level = 2)
 
 ```
 

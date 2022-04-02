@@ -121,16 +121,24 @@ thema3:
 
 
 thema4:
-  Titel: "Experimente"
+  Titel: "Interventionelle Studien"
+  Uebung:
+    - "[GoogleSheets in R importieren](https://data-se.netlify.app/2022/04/02/how-to-import-googlesheets-into-r/)"
+  Literatur:
+    - "Reichardt, Kap. 2-3"
+    - "Reiss & Sarris, Kap. 2-3"
+  Vertiefung:
+    - "Reichardt, Kap. 4-6"
 
-  Coaching:
-    - Forschungsgruppencoaching
+
+
 
 thema5:
   Titel: "Vertiefung - Versuchspläne"
 
   Coaching:
     - Forschungsgruppencoaching
+
 
 
 thema6x:
