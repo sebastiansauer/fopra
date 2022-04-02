@@ -1,0 +1,58 @@
+---
+title: "Untitled"
+author: "Me"
+date: "August 1, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+## R Markdown
+This is an R Markdown document. 
+
+```{r echo=FALSE, warning=FALSE, message=FALSE}
+library(DiagrammeR) 
+   graph <- mermaid("
+   gantt
+   dateFormat  HH:mm:ss.SSS
+   title Sample Test Gantt
+
+   section A
+   thing1          :   15:58:51.556,   16:05:23.494
+
+   section B
+   thing2          :   16:02:00.391,   16:20:46.533
+
+   section C
+   thing3          :   16:18:57.352,   16:23:10.700
+   thing4          :   16:24:11.705,   16:30:30.432
+   ", height = '100%', width = '100%')
+graph
+
+```
+
+
+jkljlö 
+
+
+
+```{r echo = FALSE}
+p4 <-
+  'digraph p1{
+    rankdir=LR;
+    node [shape = box]
+    
+    t1 [ label = "Treatment" ];
+    t2 [ label  = "Alternatives Treatment"];
+    E [ label = "Ergebnis"];
+    E2 [ label = "Alternatives Ergebnis"];
+    
+    t1 -> E
+    t2 -> E2
+  }'
+
+grViz(p4,height = '100%', width = '100%')
+```
+
+kjä
