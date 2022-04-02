@@ -63,6 +63,10 @@ cat(childtext, sep="\n")
 - [Playlist 'Forschungspraxis'](https://youtube.com/playlist?list=PLRR4REmBgpIEh_YSXawzTs6jybXFcXJxM)
 
 
+# Syntax aus dem Unterricht
+
+Die Syntax aus dem Unterricht findet sich in [diesem Ordner](https://github.com/sebastiansauer/fopra/tree/main/Skript-Syntax).
+
 
 
 
