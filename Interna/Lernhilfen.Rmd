@@ -75,6 +75,11 @@ Die Syntax aus dem Skript findet sich in [diesem Ordner](https://github.com/seba
 Die Syntax aus dem Skript findet sich in [diesem Ordner](https://github.com/sebastiansauer/Lehre/tree/main/22-SoSe/ResearchProject).
 
 
+# Live-Streaming
+
+Die Vorlesung, Übung und ggf. das Coaching wird hybrid, also im Format Präsenzunterricht plus Live-Stream, angeboten. 
+
+
 
 # Startseite
 
