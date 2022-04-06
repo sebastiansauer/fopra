@@ -137,13 +137,15 @@ Ein Teil der Literatur ist über viele Hochschulbibliotheken als PDF herunterlad
 andere Titel sind offen im Internet verfügbar.
 Oft müssen Sie per VPN angemeldet (in der Bib.) sein für Volltextzugriff, wenn Sie nicht auf dem Campus sind.
 
-- Einen guten Überblick gibt `r RefManageR::Citep(bib, "jhangiani_research_2019")`.
+- Einen guten Überblick gibt `r RefManageR::Citet(bib, "jhangiani_research_2019")`.
     - [Download PDF](https://kpu.pressbooks.pub/psychmethods4e/open/download?type=pdf)
-- Zum Nachlesen experimenteller Designs eignet    `r RefManageR::Citep(bib, "reiss")`.
-- Ein Standardwerk der psychologischen Versuchsplanung ist `r RefManageR::Citep(bib, "bd")`.
-- Einen tieferen Einblick in quasi-experimentelle Forschung bietet `r RefManageR::Citep(bib, "reichardt")`.
+- Zum Nachlesen experimenteller Designs eignet    `r RefManageR::Citet(bib, "reiss")`.
+- Ein Standardwerk der psychologischen Versuchsplanung ist `r RefManageR::Citet(bib, "bd")`.
+- Einen tieferen Einblick in quasi-experimentelle Forschung bietet `r RefManageR::Citet(bib, "reichardt")`.
+- Zum Wiederholen oder Erlernen des wissenschaftlichen Schreiben eignet sich `r RefManageR::Citet(bib, "peters_schreiben_2019")`.
+- Das Planen und Gestalten von wissenschaftlichen Arbeiten ist in `r RefManageR::Citet(bib, "peters_planen_2019")`gut dargestellt.
 
-
+peters_planen_2019
     
     
 Hier finden Sie eine  [Liste empfohlener Literatur](https://www.zotero.org/groups/4582997/intro-research-methods).
