@@ -155,8 +155,13 @@ thema5:
 
   Coaching:
     - Forschungsgruppencoaching
-
-
+  Uebung:
+    - "[Fachartikel zu Vignettenstudiem zum Thema Einstellungsänderung im Change-Prozess - Volltextzugriff nur mit VPN](https://katalog.ub.tu-braunschweig.de/vufind/Record/WTI056721137)"
+    - "[Formular und Online-Reaktionszeitmessung: Live-Experiment zum Simon-Effekt](https://docs.google.com/forms/d/e/1FAIpQLSfyCOr6VwIZ0c6MYkOJqoJLF5ZYyEIpuuWYQ7l1SIZMSY5E8g/viewform)"
+    - "[Fachartikel zur Induktion von Selbstsicherheit](https://dornsife.usc.edu/assets/sites/780/docs/91_jpsp_schwarz_et_al_ease.pdf)"
+  Vertiefung:
+    - "[Fachartikel zu Vignettenstudien: Experimental Vignette Studies in Survey Research](https://www.researchgate.net/publication/240483121_Experimental_Vignette_Studies_in_Survey_Research)"
+    - "[Fachartikel zum Thema Priming 'Automaticity of social behavior: direct effects of trait construct and stereotype-activation on action.' - Eine hitzig diskutierter Effekt in der Psychologie](https://www.semanticscholar.org/paper/Automaticity-of-social-behavior%3A-direct-effects-of-Bargh-Chen/7244328deba0cd3a4e0096d8fa2dcb5a9285594b)"
 
 thema6x:
   Titel: "Wiederholung"
@@ -165,7 +170,10 @@ thema6x:
     - In dieser Woche fällt die Vorlesung aus (Ostern).
   Coaching:
     - Forschungsgruppencoaching
-
+  Uebung:
+    - "Das Pringles-Experiment: Erkennen Sie Pringles-Chips blind am Geschmack? Probieren wir es aus."
+    - "Bitte bringen Sie *pro Kleingruppe* jeweils eine Packung Original-Pringles und eine Packung Noname-Pringles (günstige Discounter-Kopie) mit."
+    - "Wenn Sie dem Unterricht online folgen, können Sie trotzdem dem Experiment folgen, wenn auch mit weniger Spaß als live. Bitte besorgen Sie sich auch die beiden Varianten an Pringles-Chips."
 
 thema6:
   Titel: "Online-Studien"
@@ -207,8 +215,8 @@ thema10:
     - "[Vorlage für eine Einverständniserklärung, Uni Landau](https://www.uni-koblenz-landau.de/de/landau/fb8/fb-leitung/ethik-kommission/ethik-mat/einwilligung.pdf)"
     - "[Erstellung von Pseudonymen](https://www.gesis.org/fileadmin/upload/forschung/publikationen/zeitschriften/mda/Vol.2_Heft_1/2008_MDA1_Poege.pdf)"
     - "[Wiki-Auszug zum Thema Ethik, Uni Dresden](https://methpsy.elearning.psych.tu-dresden.de/mediawiki/index.php/Ethik)"
-    - "Hinweise zur Erstellung eines [anonymen Codes](https://sebastiansauer.github.io/fopra/Material/Anonymer-Code.html)"
-
+    - "[Hinweise zur Erstellung eines anonymen Codes](https://sebastiansauer.github.io/fopra/Material/Anonymer-Code.html)"
+    - "[Handreichung DAtenschutz RatSWD](https://www.konsortswd.de/aktuelles/publikation/handreichung-datenschutz-2/)"
 thema11:
   Titel: "Datenaufbereitung"
 
