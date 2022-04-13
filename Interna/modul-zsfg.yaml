@@ -183,11 +183,22 @@ thema6x:
     - "Bitte bringen Sie *pro Kleingruppe* jeweils eine Packung Original-Pringles und eine Packung Noname-Pringles (günstige Discounter-Kopie) mit."
     - "Wenn Sie dem Unterricht online folgen, können Sie trotzdem dem Experiment folgen, wenn auch mit weniger Spaß als live. Bitte besorgen Sie sich auch die beiden Varianten an Pringles-Chips."
 
+
+
+
+
 thema6:
   Titel: "Online-Studien"
 
   Coaching:
     - Forschungsgruppencoaching
+  Vertiefung:
+    - "[Software für Online-Reaktionszeitmessung: Dr. Satows Konzentrationstest](https://www.psychomeda.de/online-tests/konzentrationstest.html)"
+    - "[Software für Online-Reaktionszeitmessung: https://www.psytoolkit.org/](https://www.psytoolkit.org/)"
+    - "[Software für Online-Reaktionszeitmessung: PsychoPy](https://www.psychopy.org/)"
+    - "[Software für Online-Reaktionszeitmessung: https://pavlovia.org/](https://pavlovia.org/)"
+    - "[Software für Online-Reaktionszeitmessung: E-Prime](https://pstnet.com/products/e-prime/)"
+    - "[Software für Online-Reaktionszeitmessung: Inquitist](https://www.millisecond.com/)"
 
 
 thema7:
