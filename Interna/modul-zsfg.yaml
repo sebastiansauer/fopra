@@ -180,15 +180,30 @@ thema6x:
     - Forschungsgruppencoaching
 
 
+
+
+
+
 thema6:
   Titel: "Online-Studien"
 
   Coaching:
     - Forschungsgruppencoaching
+
   Aufgaben:
     - "[Aufgaben Thema html](https://sebastiansauer.github.io/fopra/Aufgaben/Thema6-Aufgaben1.html)"
     - "[Lösungen Thema pdf](https://sebastiansauer.github.io/fopra/Aufgaben/Thema6-Loesungen11.pdf)"
     - "[Lösungen Thema html](https://sebastiansauer.github.io/fopra/Aufgaben/Thema6-Loesungen1.html)"
+
+  Vertiefung:
+    - "[Software für Online-Reaktionszeitmessung: Dr. Satows Konzentrationstest](https://www.psychomeda.de/online-tests/konzentrationstest.html)"
+    - "[Software für Online-Reaktionszeitmessung: https://www.psytoolkit.org/](https://www.psytoolkit.org/)"
+    - "[Software für Online-Reaktionszeitmessung: PsychoPy](https://www.psychopy.org/)"
+    - "[Software für Online-Reaktionszeitmessung: https://pavlovia.org/](https://pavlovia.org/)"
+    - "[Software für Online-Reaktionszeitmessung: E-Prime](https://pstnet.com/products/e-prime/)"
+    - "[Software für Online-Reaktionszeitmessung: Inquitist](https://www.millisecond.com/)"
+
+
 
 thema7:
   Titel: "Kausalanalyse"
