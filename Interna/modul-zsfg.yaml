@@ -175,23 +175,27 @@ thema6x:
   Titel: "Wiederholung"
 
   Hinweise:
-    - In dieser Woche fällt die Vorlesung aus (Ostern).
+    - In dieser Woche fällt die Vorlesung und die Übung aus (Ostern).
   Coaching:
     - Forschungsgruppencoaching
-  Uebung:
-    - "Das Pringles-Experiment: Erkennen Sie Pringles-Chips blind am Geschmack? Probieren wir es aus."
-    - "Bitte bringen Sie *pro Kleingruppe* jeweils eine Packung Original-Pringles und eine Packung Noname-Pringles (günstige Discounter-Kopie) mit."
-    - "Wenn Sie dem Unterricht online folgen, können Sie trotzdem dem Experiment folgen, wenn auch mit weniger Spaß als live. Bitte besorgen Sie sich auch die beiden Varianten an Pringles-Chips."
+
 
 thema6:
   Titel: "Online-Studien"
 
   Coaching:
     - Forschungsgruppencoaching
-
+  Aufgaben:
+    - "[Aufgaben Thema html](https://sebastiansauer.github.io/fopra/Aufgaben/Thema6-Aufgaben1.html)"
+    - "[Lösungen Thema pdf](https://sebastiansauer.github.io/fopra/Aufgaben/Thema6-Loesungen11.pdf)"
+    - "[Lösungen Thema html](https://sebastiansauer.github.io/fopra/Aufgaben/Thema6-Loesungen1.html)"
 
 thema7:
   Titel: "Kausalanalyse"
+  Uebung:
+    - "Das Pringles-Experiment: Erkennen Sie Pringles-Chips blind am Geschmack? Probieren wir es aus."
+    - "Bitte bringen Sie *pro Kleingruppe* jeweils eine Packung Original-Pringles und eine Packung Noname-Pringles (günstige Discounter-Kopie) mit."
+    - "Wenn Sie dem Unterricht online folgen, können Sie trotzdem dem Experiment folgen, wenn auch mit weniger Spaß als live. Bitte besorgen Sie sich auch die beiden Varianten an Pringles-Chips."
 
   Coaching:
     - Forschungsgruppencoaching
