@@ -185,8 +185,12 @@ thema6x:
 
 
 thema6:
-  Titel: "Online-Studien"
-
+  Titel: "Psychopy"
+  Skript:
+    - "[PsychoPy Einführung](https://docs.google.com/presentation/d/e/2PACX-1vT76DDSE_Kf0ZsGj98rsIk5AKRg12NICDHtW46bAH_-BJ_ZFzdnJ_81nqZ-AH2a2UH1JXplQfkPXFSk/pub?start=false&loop=false&delayms=10000&slide=id.p)"
+  Vorbereitung:
+    - "[Installieren Sie Pschychopy](https://www.psychopy.org/download.html)"
+    - "[Erstellen Sie sich einen Account bei Pavlovia.org](https://pavlovia.org/)"
   Coaching:
     - Forschungsgruppencoaching
 
@@ -198,7 +202,6 @@ thema6:
   Vertiefung:
     - "[Software für Online-Reaktionszeitmessung: Dr. Satows Konzentrationstest](https://www.psychomeda.de/online-tests/konzentrationstest.html)"
     - "[Software für Online-Reaktionszeitmessung: https://www.psytoolkit.org/](https://www.psytoolkit.org/)"
-    - "[Software für Online-Reaktionszeitmessung: PsychoPy](https://www.psychopy.org/)"
     - "[Software für Online-Reaktionszeitmessung: https://pavlovia.org/](https://pavlovia.org/)"
     - "[Software für Online-Reaktionszeitmessung: E-Prime](https://pstnet.com/products/e-prime/)"
     - "[Software für Online-Reaktionszeitmessung: Inquitist](https://www.millisecond.com/)"
