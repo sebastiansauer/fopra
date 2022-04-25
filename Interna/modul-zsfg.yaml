@@ -217,7 +217,7 @@ thema8:
   Titel: "Fallzahlplanung"
 
   Uebung: Übung zur Fallzahlplanung
-  Coaching: PsychoPy
+  Coaching: Fallzahlplanung
 
 
 thema9:
@@ -230,7 +230,7 @@ thema10:
   Titel: "Versuchsdurchführung"
 
   Hinweise:
-    - "Nächste Woche ist Blockwoche; es findet kein regulärer Unterricht statt."
+    - "Nächste Woche ist Blockwoche; zu dieser Zeit findet kein regulärer Unterricht statt."
 
   Coaching: "Fachgespräch (Zwischenpräsi), Forschungsteams (Gruppen) C-D"
 
@@ -256,6 +256,7 @@ thema11:
 
   Hinweise:
     - In dieser Woche fällt die Vorlesung aus.
+
   Coaching: "fällt aus wg. Blockwoche"
 
 
