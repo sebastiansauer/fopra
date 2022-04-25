@@ -234,6 +234,11 @@ Ihr/e Dozent/in stellt Ihnen ein Rahmenthema zur Verfügung.
 [Hinweise zur Prüfung](https://sebastiansauer.github.io/fopra/Interna/Pruefung.html)
 
 
+
+# Laufende Studien
+
+[Liste laufender Studien](https://sebastiansauer.github.io/fopra/Interna/Laufende-Studien.html)
+
 # Literaturverzeichnis
 
 ```{r Hinweise-1, results='asis', echo=FALSE, cache=FALSE}
