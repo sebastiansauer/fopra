@@ -230,8 +230,15 @@ thema10:
   Titel: "Versuchsdurchführung"
 
   Hinweise:
-    - Nächste Woche ist Blockwoche; es findet kein regulärer Unterricht statt.
-  Coaching: "fällt aus wg. Blockwoche"
+    - "Nächste Woche ist Blockwoche; es findet kein regulärer Unterricht statt."
+
+  Coaching: "Fachgespräch (Zwischenpräsi), Forschungsteams (Gruppen) C-D"
+
+  Skript:
+    - "[Skript, PDF](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema11.pdf)"
+    - "[Skript, PPTX](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema11.pptx)"
+    - "[Skript, Key](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema11.key)"
+
   Vertiefung:
     - "[Vorlage für eine Einverständniserklärung, Uni München](https://osf.io/wr2p7/)"
     - "[Vorlage für eine Einverständniserklärung, Uni Landau](https://www.uni-koblenz-landau.de/de/landau/fb8/fb-leitung/ethik-kommission/ethik-mat/einwilligung.pdf)"
@@ -245,11 +252,11 @@ thema10:
 
 thema11:
   Titel: "Datenaufbereitung"
-  Uebung: Datenaufbereitung
+  Uebung: "Datenaufbereitung"
 
   Hinweise:
-    - In dieser Woche fällt die Vorlesung aus (Pfingsten).
-  Coaching: "Fachgespräch (Zwischenpräsi), Forschungsteams (Gruppen) C-D"
+    - In dieser Woche fällt die Vorlesung aus.
+  Coaching: "fällt aus wg. Blockwoche"
 
 
 
