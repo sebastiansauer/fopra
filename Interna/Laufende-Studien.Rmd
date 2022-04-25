@@ -1,0 +1,60 @@
+
+---
+subtitle: "Forschungspraktikum in Psychologie"
+title: "Laufende Studien"
+author: "Sebastian Sauer"
+date: "Letzte Aktualisierung: `r Sys.time()`"
+output:
+   
+  rmdformats::downcute:
+    self_contained: true
+    thumbnails: true
+    lightbox: true
+    gallery: false
+    highlight: tango
+    number_sections: TRUE
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r global-knitr-options, include=FALSE}
+  knitr::opts_chunk$set(
+  fig.pos = 'H',
+  fig.asp = 0.618,
+  fig.align='center',
+  fig.width = 5,
+  out.width = "100%",
+  fig.cap = "", 
+  fig.path = "chunk-img/",
+  dpi = 300,
+  # tidy = TRUE,
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE,
+  cache = FALSE,
+  fig.show = "hold")
+```
+
+
+
+
+# Hos & Vursavas
+
+
+Liebe Studierende,
+
+wir sind AWM- Studierende aus dem 4. Semester und beschäftigen uns im Rahmen unseres Forschungsprojektes mit dem Thema psychisches Wohlbefinden und Achtsamkeit bei jungen Erwachsenen.
+
+Wie zu entnehmen ist, sind junge Erwachsene unsere Zielgruppe. Hier kommen Sie ins Spiel: Sie sind gefragt!! :-)
+
+Das Experiment wird in den Räumlichkeiten der Hochschule Ansbach oder über Zoom stattfinden. Da wir wissen, dass ein Experiment mit Aufwand verbunden ist, verlosen wir unter allen Teilnehmern an insgesamt drei Personen jeweils einen 15€ Amazon Gutschein, 5€ Spotify Gutschein sowie eine Tafel Schokolade.
+Falls Interesse an der Studie besteht, würden wir Sie bitten sich in der Google Umfrage einzutragen.
+https://forms.gle/dPMos8SscBrBgHbx7
+
+Bei weiteren Fragen zur Studie schreiben Sie uns gerne eine E-Mail.
+
+Buket Hos: b.hos16255@hs-ansbach.de
+
+Sarah Vursavas: s.vursavas17161@hs-ansbach.de
+
+
