@@ -35,8 +35,7 @@ thema1:
     - "Einführung in das Rahmenthema Ihrer Studie"
     - "Wahl der Forschungsgruppen"
     - "Organisatorische Hinweise (Was muss ich tun, damit ich hier wieder raus komme?)"
-  Coaching:
-    - "Einführung in das Thema Achtsamkeit"
+  Coaching: "Einführung in das Thema Achtsamkeit"
 
 
 
@@ -70,8 +69,7 @@ thema2:
   Uebung:
     - Lesen von Fachartikeln passend zum Rahmenthema
     - Ableitung möglicher Hypothesen aus dem Rahmenthema für Ihre Studie
-  Coaching:
-    - Lesen von Fachartikeln zum Thema Achtsamkeit
+  Coaching: Lesen von Fachartikeln zum Thema Achtsamkeit
   Hinweise:
     - Achten Sie darauf, frühzeitig eine Forschungsgruppe zu gründen, falls noch nicht geschehen.
 
@@ -113,10 +111,10 @@ thema3:
     - "[Stroop-Test, online](https://www.bernhard-gaul.de/spiele/stroop-test/stroop.php)"
   Vertiefung:
     - "[Text zum Konzept der Repräsentativität von Stichproben](http://www.von-der-lippe.org/dokumente/Repraesentativitaet.pdf)"
-
-  Coaching:
-    - "Erstellen einer (Beobachtungsstudie) zum Zusammenhang von Achtsamkeit und Konzentration"
     - "[Achtsamkeit messen mit dem Freiburger Fragebogen zur Achtsamkeit](https://chs-institute.org/news/16-freiburger-fragebogen-zur-achtsamkeit-ffa.html)"
+  Coaching: "Erstellen einer (Beobachtungsstudie) zum Zusammenhang von Achtsamkeit und Konzentration"
+
+
   Hinweise:
     - "Beachten Sie die Fristen zur Anmeldung in Ihren Forschungsgruppen."
 
@@ -141,20 +139,19 @@ thema4:
     - "[Lösungen Thema 4 pdf](https://sebastiansauer.github.io/fopra/Aufgaben/Thema4-Loesungen11.pdf)"
     - "[Lösungen Thema 4 html](https://sebastiansauer.github.io/fopra/Aufgaben/Thema4-Loesungen1.html)"
     - "[Analysieren Sie die Daten der Handystudie aus dem Unterricht](https://raw.githubusercontent.com/sebastiansauer/fopra/main/data/Handystudie-2022-04-05.csv)"
+    - "[Stellen Sie eine Studie aus der Dissertation von Sebastian Sauer vor.](https://kola.opus.hbz-nrw.de/files/326/Dissertation_Sebastian_Sauer_v22_final.pdf)"
+
   Skript:
     - "[Skript Thema 4, PDF](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema04.pdf)"
     - "[Skript Thema 4, PPTX](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema04.pptx)"
     - "[Skript Thema 4, Key](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema04.key)"
-  Coaching:
-    - "[Stellen Sie eine Studie aus der Dissertation von Sebastian Sauer vor.](https://kola.opus.hbz-nrw.de/files/326/Dissertation_Sebastian_Sauer_v22_final.pdf)"
-
+  Coaching: "Lesen der Dissertation von Sebastian Sauer"
 
 
 thema5:
   Titel: "Vertiefung - Versuchspläne"
 
-  Coaching:
-    - Forschungsgruppencoaching
+  Coaching: "Online-Studien"
   Uebung:
     - "[Fachartikel zu Vignettenstudiem zum Thema Einstellungsänderung im Change-Prozess - Volltextzugriff nur mit VPN](https://katalog.ub.tu-braunschweig.de/vufind/Record/WTI056721137)"
     - "[Formular und Online-Reaktionszeitmessung: Live-Experiment zum Simon-Effekt](https://docs.google.com/forms/d/e/1FAIpQLSfyCOr6VwIZ0c6MYkOJqoJLF5ZYyEIpuuWYQ7l1SIZMSY5E8g/viewform)"
@@ -173,11 +170,10 @@ thema5:
 
 thema6x:
   Titel: "Wiederholung"
-
+  Coaching: "Fäll aus (Ostern)"
   Hinweise:
     - In dieser Woche fällt die Vorlesung und die Übung aus (Ostern).
-  Coaching:
-    - Forschungsgruppencoaching
+
 
 
 
@@ -185,14 +181,13 @@ thema6x:
 
 
 thema6:
-  Titel: "Psychopy"
+  Titel: "PsychoPy"
   Skript:
     - "[PsychoPy Einführung](https://docs.google.com/presentation/d/e/2PACX-1vT76DDSE_Kf0ZsGj98rsIk5AKRg12NICDHtW46bAH_-BJ_ZFzdnJ_81nqZ-AH2a2UH1JXplQfkPXFSk/pub?start=false&loop=false&delayms=10000&slide=id.p)"
   Vorbereitung:
     - "[Installieren Sie Pschychopy](https://www.psychopy.org/download.html)"
     - "[Erstellen Sie sich einen Account bei Pavlovia.org](https://pavlovia.org/)"
-  Coaching:
-    - Forschungsgruppencoaching
+  Coaching: Präsentationsübung
 
   Aufgaben:
     - "[Aufgaben Thema html](https://sebastiansauer.github.io/fopra/Aufgaben/Thema6-Aufgaben1.html)"
@@ -215,22 +210,20 @@ thema7:
     - "Bitte bringen Sie *pro Kleingruppe* jeweils eine Packung Original-Pringles und eine Packung Noname-Pringles (günstige Discounter-Kopie) mit."
     - "Wenn Sie dem Unterricht online folgen, können Sie trotzdem dem Experiment folgen, wenn auch mit weniger Spaß als live. Bitte besorgen Sie sich auch die beiden Varianten an Pringles-Chips."
 
-  Coaching:
-    - Forschungsgruppencoaching
+  Coaching: PsychoPy
 
 
 thema8:
   Titel: "Fallzahlplanung"
 
-  Coaching:
-    - Forschungsgruppencoaching
+  Uebung: Übung zur Fallzahlplanung
+  Coaching: PsychoPy
 
 
 thema9:
   Titel: "Messinstrumente"
-
-  Coaching:
-    - Fachgespräch
+  Uebung: "Überblick zur Datenauswertung"
+  Coaching: "Messung von Achtsamkeit"
 
 
 thema10:
@@ -238,8 +231,7 @@ thema10:
 
   Hinweise:
     - Nächste Woche ist Blockwoche; es findet kein regulärer Unterricht statt.
-  Coaching:
-    - Fachgespräch
+  Coaching: "fällt aus wg. Blockwoche"
   Vertiefung:
     - "[Vorlage für eine Einverständniserklärung, Uni München](https://osf.io/wr2p7/)"
     - "[Vorlage für eine Einverständniserklärung, Uni Landau](https://www.uni-koblenz-landau.de/de/landau/fb8/fb-leitung/ethik-kommission/ethik-mat/einwilligung.pdf)"
@@ -247,37 +239,37 @@ thema10:
     - "[Wiki-Auszug zum Thema Ethik, Uni Dresden](https://methpsy.elearning.psych.tu-dresden.de/mediawiki/index.php/Ethik)"
     - "[Hinweise zur Erstellung eines anonymen Codes](https://sebastiansauer.github.io/fopra/Material/Anonymer-Code.html)"
     - "[Handreichung DAtenschutz RatSWD](https://www.konsortswd.de/aktuelles/publikation/handreichung-datenschutz-2/)"
+
+
+
+
 thema11:
   Titel: "Datenaufbereitung"
+  Uebung: Datenaufbereitung
 
   Hinweise:
     - In dieser Woche fällt die Vorlesung aus (Pfingsten).
-  Coaching:
-    - Fachgespräch
+  Coaching: "Fachgespräch (Zwischenpräsi), Forschungsteams (Gruppen) C-D"
 
 
 
 thema12:
   Titel: "Datenmodellierung"
 
-  Coaching:
-    - Fachgespräch
-
+  Coaching: "Fachgespräch (Zwischenpräsi), Forschungsteams (Gruppen) E-F"
+  Uebung: Datenuaswertung
 
 thema12a:
   Titel: "Wissenschaftliches Schreiben"
 
-  Coaching:
-    - Fachgespräch
+  Coaching: "Fachgespräch (Zwischenpräsi), Forschungsteams (Gruppen) G-H"
 
 thema13:
   Titel: "Open Science"
   Vertiefung:
   - "[Einführung in R Markdown, Folien](https://docs.google.com/presentation/d/e/2PACX-1vRZ72QdK_nq-s4hwjLYCgUmDVWMxdAx_WwD6Equ9SgCmjvhmuiw6M4XbqzCqmqKVRIeaUrO1BGGU-q6/pub?start=false&loop=false&delayms=3000&slide=id.p)"
 
-  Coaching:
-    - Fachgespräch
-
+  Coaching: "Fachgespräch (Zwischenpräsi), Forschungsteams (Gruppen) I-J"
 
 
 thema14:
