@@ -182,12 +182,17 @@ thema6x:
 
 thema6:
   Titel: "PsychoPy"
+  Lernziele:
+    - "Sie können selbständig eine Studie mit PsychoPy erstellen."
   Uebung: PsychoPy
   Skript:
     - "[PsychoPy Einführung](https://docs.google.com/presentation/d/e/2PACX-1vT76DDSE_Kf0ZsGj98rsIk5AKRg12NICDHtW46bAH_-BJ_ZFzdnJ_81nqZ-AH2a2UH1JXplQfkPXFSk/pub?start=false&loop=false&delayms=10000&slide=id.p)"
   Vorbereitung:
     - "[Installieren Sie Pschychopy](https://www.psychopy.org/download.html)"
     - "[Erstellen Sie sich einen Account bei Pavlovia.org](https://pavlovia.org/)"
+    - "[Arbeiten Sie die Videoes dieser Playlist durch: Playlist PsychoPy mit Pavlovia](https://youtube.com/playlist?list=PLRR4REmBgpIFQD-mjOEwcVCmfvnO0W43B)"
+    - "[Machen Sie sich mit PsychoPy vertraut - eine Software zur Erstllung psychologischer Studien mit Reaktionszeitmessung](https://www.psychopy.org/)"
+
   Coaching: Präsentationsübung
 
   Videos:
@@ -197,8 +202,13 @@ thema6:
     - "[Aufgaben Thema html](https://sebastiansauer.github.io/fopra/Aufgaben/Thema6-Aufgaben1.html)"
     - "[Lösungen Thema pdf](https://sebastiansauer.github.io/fopra/Aufgaben/Thema6-Loesungen11.pdf)"
     - "[Lösungen Thema html](https://sebastiansauer.github.io/fopra/Aufgaben/Thema6-Loesungen1.html)"
+    - "[Erstellen Sie eine Stroop-Studie mit Psychopy, z.B. mit Hilfe dieser Unterstützung](https://tu-coding-outreach-group.github.io/cog_summer_workshops_2021/psychopy/index.html)"
 
   Vertiefung:
+    - "[Playlist PsychoPy mit Pavlovia](https://youtube.com/playlist?list=PLRR4REmBgpIFQD-mjOEwcVCmfvnO0W43B)"
+    - "[Lernmaterialien zu PsychoPy](https://workshops.psychopy.org/teaching/index.html)"
+
+    - "[Peirce, J., MacAskill, M., & Hirst, B. (2022). Building experiments in psychopy (2. Aufl.). SAGE Publishing.](https://uk.sagepub.com/en-gb/eur/building-experiments-in-psychopy/book253480)"
     - "[Software für Online-Reaktionszeitmessung: Dr. Satows Konzentrationstest](https://www.psychomeda.de/online-tests/konzentrationstest.html)"
     - "[Software für Online-Reaktionszeitmessung: https://www.psytoolkit.org/](https://www.psytoolkit.org/)"
     - "[Software für Online-Reaktionszeitmessung: https://pavlovia.org/](https://pavlovia.org/)"
