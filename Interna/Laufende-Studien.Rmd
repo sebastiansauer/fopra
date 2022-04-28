@@ -1,7 +1,7 @@
 
 ---
 subtitle: "Forschungspraktikum in Psychologie"
-title: "Laufende Studien"
+title: "Laufende Studien, SoSe 22"
 author: "Sebastian Sauer"
 date: "Letzte Aktualisierung: `r Sys.time()`"
 output:
@@ -58,3 +58,32 @@ Buket Hos: b.hos16255@hs-ansbach.de
 Sarah Vursavas: s.vursavas17161@hs-ansbach.de
 
 
+
+
+
+
+# Eva, Christiné, Sabrina, Fabian, Klara | AWM 
+
+Studie Feedbackakzeptanz - Arbeitnehmer aufgepasst! 
+
+
+Wir beforschen Feedback-Akzeptanz in der Personalführung und
+
+unsere Zielgruppe sind hierfür Arbeitnehmende bzw. Leute die schon berufstätig sind.
+Wir würden uns sehr freuen, wenn Sie / Ihr euch Zeit nehmen würdet, um unseren Fragebogen auszufüllen, die Dauer dafür beträgt ca. 7 Minuten.
+
+
+
+
+Alle weiteren Infos finden Sie/ Ihr auf der Landingpage.
+
+
+
+
+Link zum Fragebogen:
+https://www.soscisurvey.de/HSstudy/
+
+
+Besten Dank für die Teilnahme
+
+Eva, Christiné, Sabrina, Fabian, Klara | AWM 
