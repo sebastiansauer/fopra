@@ -218,12 +218,17 @@ thema6:
     - "SoSci-Survey bietet eine Auswahl (Stroop, IAT) and (grundlegenden) Funktionen zur Online-Reaktionszeitmessung. Der Vorteil ist, dass es sehr einfach ist."
 
 
+
+
+
+
+
 thema7:
   Titel: "Kausalanalyse"
-  Uebung:
-    - "Das Pringles-Experiment: Erkennen Sie Pringles-Chips blind am Geschmack? Probieren wir es aus."
-    - "Bitte bringen Sie *pro Kleingruppe* jeweils eine Packung Original-Pringles und eine Packung Noname-Pringles (günstige Discounter-Kopie) mit."
-    - "Wenn Sie dem Unterricht online folgen, können Sie trotzdem dem Experiment folgen, wenn auch mit weniger Spaß als live. Bitte besorgen Sie sich auch die beiden Varianten an Pringles-Chips."
+  Lernziele:
+    - "Sie wissen, wann eine Kausalaussage gerechtfertigt ist und wann nicht für wissenschaftliche Studien"
+    - "Sie können verschiedene Arten von Scheinzusammenhängen unterscheiden und wissen, wie man sie kontrolliert"
+    - "Sie wissen, wann man Drittvariablen kontrollieren sollte (und wan nicht), wenn man Kausalaussagen ableiten möchte"
 
   Coaching: Kausalanalyse
 
@@ -231,13 +236,21 @@ thema7:
     - "[Skript Thema 8, PDF](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema08.pdf)"
     - "[Skript Thema 8, PPTX](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema08.pptx)"
     - "[Skript Thema 8, Key](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema08.key)"
+  Literatur:
+    - "[Elwert, F. (2013). Graphical causal models. In S. Morgan (Ed.), Handbook of causal analysis for social research (pp. 245–273). Springer.](https:// www.researchgate.net/publication/ 278717528_Graphical_Causal_Models)"
+    - "Rohrer, J. M. (2018). Thinking Clearly About Correlations and Causation: Graphical Causal Models for Observational Data. Advances in Methods and Practices in Psychological Science, 1(1), 27–42.](https:// doi.org/10.1177/2515245917745629)"
 
-
+  Vertiefung:
+    - "Lübke, K., Gehrke, M., Horst, J., & Szepannek, G. (2020). Why We Should Teach Causal Inference: Examples in Linear Regression with Simulated Data. Journal of Statistics Education, 1–17.](https://doi.org/ 10.1080/10691898.2020.1752859)"
 
 thema8:
   Titel: "Fallzahlplanung"
 
-  Uebung: Übung zur Fallzahlplanung
+  Uebung:
+    - "Das Pringles-Experiment: Erkennen Sie Pringles-Chips blind am Geschmack? Probieren wir es aus."
+    - "Bitte bringen Sie *pro Kleingruppe* jeweils eine Packung Original-Pringles und eine Packung Noname-Pringles (günstige Discounter-Kopie) mit."
+    - "Wenn Sie dem Unterricht online folgen, können Sie trotzdem dem Experiment folgen, wenn auch mit weniger Spaß als live. Bitte besorgen Sie sich auch die beiden Varianten an Pringles-Chips."
+
   Coaching: Fallzahlplanung
 
 
