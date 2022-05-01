@@ -199,9 +199,9 @@ thema6:
     - "[Playlist PsychoPy mit Pavlovia](https://youtube.com/playlist?list=PLRR4REmBgpIFQD-mjOEwcVCmfvnO0W43B)"
 
   Aufgaben:
-    - "[Aufgaben Thema html](https://sebastiansauer.github.io/fopra/Aufgaben/Thema6-Aufgaben1.html)"
-    - "[Lösungen Thema pdf](https://sebastiansauer.github.io/fopra/Aufgaben/Thema6-Loesungen11.pdf)"
-    - "[Lösungen Thema html](https://sebastiansauer.github.io/fopra/Aufgaben/Thema6-Loesungen1.html)"
+    - "[Aufgaben Thema 6 html](https://sebastiansauer.github.io/fopra/Aufgaben/Thema6-Aufgaben1.html)"
+    - "[Lösungen Thema 6 pdf](https://sebastiansauer.github.io/fopra/Aufgaben/Thema6-Loesungen11.pdf)"
+    - "[Lösungen Thema 6 html](https://sebastiansauer.github.io/fopra/Aufgaben/Thema6-Loesungen1.html)"
     - "[Erstellen Sie eine Stroop-Studie mit Psychopy, z.B. mit Hilfe dieser Unterstützung](https://tu-coding-outreach-group.github.io/cog_summer_workshops_2021/psychopy/index.html)"
 
   Vertiefung:
@@ -243,8 +243,24 @@ thema7:
   Vertiefung:
     - "Lübke, K., Gehrke, M., Horst, J., & Szepannek, G. (2020). Why We Should Teach Causal Inference: Examples in Linear Regression with Simulated Data. Journal of Statistics Education, 1–17.](https://doi.org/ 10.1080/10691898.2020.1752859)"
 
+
+
+
+
+
 thema8:
   Titel: "Fallzahlplanung"
+  Lernziele:
+    - "Sie wissen, warum eine Fallzahlplanung sinnvoll ist"
+    - "Sie wissen, dass und inwiefern größere Stichprobenzahlen sinnvoll sind"
+    - "Sie können Meehls Paradoxon erklären"
+    - "Sie kennen Verfahren, um sinnvolle Stichprobengrößen vorab zu schätzen"
+
+  Aufgaben:
+    - "[Aufgaben Thema 9 html](https://sebastiansauer.github.io/fopra/Aufgaben/Thema9-Aufgaben1.html)"
+    - "[Lösungen Thema 9 pdf](https://sebastiansauer.github.io/fopra/Aufgaben/Thema9-Loesungen11.pdf)"
+    - "[Lösungen Thema 9 html](https://sebastiansauer.github.io/fopra/Aufgaben/Thema9-Loesungen1.html)"
+
 
   Uebung:
     - "Das Pringles-Experiment: Erkennen Sie Pringles-Chips blind am Geschmack? Probieren wir es aus."
@@ -252,6 +268,15 @@ thema8:
     - "Wenn Sie dem Unterricht online folgen, können Sie trotzdem dem Experiment folgen, wenn auch mit weniger Spaß als live. Bitte besorgen Sie sich auch die beiden Varianten an Pringles-Chips."
 
   Coaching: Fallzahlplanung
+
+  Skript:
+    - "[Skript Thema 9, PDF](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema09.pdf)"
+    - "[Skript Thema 9, PPTX](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema09.pptx)"
+    - "[Skript Thema 9, Key](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema09.key)"
+
+
+
+
 
 
 thema9:
@@ -288,19 +313,58 @@ thema10:
 thema11:
   Titel: "Datenaufbereitung"
   Uebung: "Datenaufbereitung"
+  Lernziele:
+    - "Sie sind mit Standardmethoden der explorativen Datenanalyse vertraut."
+    - "Sie können Methoden der explorativen Datenanalyse mit R umsetzen."
 
   Hinweise:
     - In dieser Woche fällt die Vorlesung aus.
+    - Erarbeiten Sie sich den angegebenen Stoff im Selbstudium.
 
   Coaching: "fällt aus wg. Blockwoche"
+  Videos:
+    - "[Playlist zur deskriptiven Statistik](https://www.youtube.com/playlist?list=PLRR4REmBgpIFLDj6SFpwOKnfGVbkoI9JI)"
+    - "[Playlist Explorative Datenenanalyse (EDA)](https://youtube.com/playlist?list=PLRR4REmBgpIFFmLRZvyPcI07CPn7OnmqH)"
+    - "[Playlist Praxisprobleme der Datenanalyse](https://youtube.com/playlist?list=PLRR4REmBgpIEEt2fWPz_UovZsXFfr5HJT)"
+    - "[Playlist YACSDAs](https://youtube.com/playlist?list=PLRR4REmBgpIGet_lcNf2wOd0W8j4c9hYN)"
+
+  Aufgaben:
+    - "[Lösungen univariate deskriptive Statistik HTML](https://sebastiansauer.github.io/vorhersagemodellierung/Aufgaben/Thema4-Loesungen1.html)"
+    - "[Lösungen bivariate deskriptive Statistik HTML](https://sebastiansauer.github.io/vorhersagemodellierung/Aufgaben/Thema5-Loesungen1.html)"
+    - "[Lösungen zu Praxisproblemen der Datenanalyse HTML](https://sebastiansauer.github.io/vorhersagemodellierung/Aufgaben/Thema7-Loesungen1.html)"
+    - "[Fallstudie TopGear](https://data-se.netlify.app/2021/02/11/yacda-topgear/)"
+    - "[Fallstudie OECD Wellbeing](https://data-se.netlify.app/2021/02/11/explorative-datenanalyse-zum-datensatz-oecd-wellbeing/)"
+    - "[Fallstudie IMDB Filmbewertungen](https://minimaxir.com/2018/07/imdb-data-analysis/)"
+    - "[Fallstudie Women in Parliament](https://github.com/saghirb/WiP-tidyverse/blob/master/doc/WiP-tidyverse.pdf)"
+    - "[EDA-Fallstudie zu Flugverspätungen](https://data-se.netlify.app/2021/03/08/eda-zu-flugversp%C3%A4tungen/)"
+
+  Vertiefung:
+    - "[Visualisieurng zur Korrelation](https://rpsychologist.com/correlation/)"
+
+
 
 
 
 thema12:
   Titel: "Datenmodellierung"
+  Lernziele:
+    - "Sie wissen, wie man die Regressionsanalyse einsetzt, um gängige Forschungsfragen zu analysieren"
+    - "Sie können typische Forschungsfragen mit Methoden der Bayes-Statistik analysieren"
+  Videos:
+    - "[Playlist zum statistischen Modellieren](https://www.youtube.com/playlist?list=PLRR4REmBgpIGWcSjrtt0m36aXHLaiTgdF)"
+    - "[Playlist Vorhersage-Modellierung](https://youtube.com/playlist?list=PLRR4REmBgpIH6uG8LZWPTSMReX1OFxfUx)"
+  Skript:
+    - "[Skript-Überblick QM2, v.a. Kapitel 6](https://sebastiansauer.github.io/bayes-start/#skript-schnell)"
+  Vertiefung:
+    - "[QM2-Fallstudien](https://sebastiansauer.github.io/bayes-start/#kapitel-7-fallstudien)"
 
   Coaching: "Fachgespräch (Zwischenpräsi), Forschungsteams (Gruppen) E-F"
-  Uebung: Datenuaswertung
+  Uebung: Datenauswertung
+
+
+
+
+
 
 thema12a:
   Titel: "Wissenschaftliches Schreiben"
