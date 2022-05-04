@@ -35,8 +35,7 @@ thema1:
     - "Einführung in das Rahmenthema Ihrer Studie"
     - "Wahl der Forschungsgruppen"
     - "Organisatorische Hinweise (Was muss ich tun, damit ich hier wieder raus komme?)"
-  Coaching:
-    - "Einführung in das Thema Achtsamkeit"
+  Coaching: "Einführung in das Thema Achtsamkeit"
 
 
 
@@ -70,8 +69,7 @@ thema2:
   Uebung:
     - Lesen von Fachartikeln passend zum Rahmenthema
     - Ableitung möglicher Hypothesen aus dem Rahmenthema für Ihre Studie
-  Coaching:
-    - Lesen von Fachartikeln zum Thema Achtsamkeit
+  Coaching: Lesen von Fachartikeln zum Thema Achtsamkeit
   Hinweise:
     - Achten Sie darauf, frühzeitig eine Forschungsgruppe zu gründen, falls noch nicht geschehen.
 
@@ -113,10 +111,10 @@ thema3:
     - "[Stroop-Test, online](https://www.bernhard-gaul.de/spiele/stroop-test/stroop.php)"
   Vertiefung:
     - "[Text zum Konzept der Repräsentativität von Stichproben](http://www.von-der-lippe.org/dokumente/Repraesentativitaet.pdf)"
-
-  Coaching:
-    - "Erstellen einer (Beobachtungsstudie) zum Zusammenhang von Achtsamkeit und Konzentration"
     - "[Achtsamkeit messen mit dem Freiburger Fragebogen zur Achtsamkeit](https://chs-institute.org/news/16-freiburger-fragebogen-zur-achtsamkeit-ffa.html)"
+  Coaching: "Erstellen einer (Beobachtungsstudie) zum Zusammenhang von Achtsamkeit und Konzentration"
+
+
   Hinweise:
     - "Beachten Sie die Fristen zur Anmeldung in Ihren Forschungsgruppen."
 
@@ -141,20 +139,19 @@ thema4:
     - "[Lösungen Thema 4 pdf](https://sebastiansauer.github.io/fopra/Aufgaben/Thema4-Loesungen11.pdf)"
     - "[Lösungen Thema 4 html](https://sebastiansauer.github.io/fopra/Aufgaben/Thema4-Loesungen1.html)"
     - "[Analysieren Sie die Daten der Handystudie aus dem Unterricht](https://raw.githubusercontent.com/sebastiansauer/fopra/main/data/Handystudie-2022-04-05.csv)"
+    - "[Stellen Sie eine Studie aus der Dissertation von Sebastian Sauer vor.](https://kola.opus.hbz-nrw.de/files/326/Dissertation_Sebastian_Sauer_v22_final.pdf)"
+
   Skript:
     - "[Skript Thema 4, PDF](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema04.pdf)"
     - "[Skript Thema 4, PPTX](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema04.pptx)"
     - "[Skript Thema 4, Key](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema04.key)"
-  Coaching:
-    - "[Stellen Sie eine Studie aus der Dissertation von Sebastian Sauer vor.](https://kola.opus.hbz-nrw.de/files/326/Dissertation_Sebastian_Sauer_v22_final.pdf)"
-
+  Coaching: "Lesen der Dissertation von Sebastian Sauer"
 
 
 thema5:
   Titel: "Vertiefung - Versuchspläne"
 
-  Coaching:
-    - Forschungsgruppencoaching
+  Coaching: "Online-Studien"
   Uebung:
     - "[Fachartikel zu Vignettenstudiem zum Thema Einstellungsänderung im Change-Prozess - Volltextzugriff nur mit VPN](https://katalog.ub.tu-braunschweig.de/vufind/Record/WTI056721137)"
     - "[Formular und Online-Reaktionszeitmessung: Live-Experiment zum Simon-Effekt](https://docs.google.com/forms/d/e/1FAIpQLSfyCOr6VwIZ0c6MYkOJqoJLF5ZYyEIpuuWYQ7l1SIZMSY5E8g/viewform)"
@@ -173,98 +170,243 @@ thema5:
 
 thema6x:
   Titel: "Wiederholung"
-
+  Coaching: "Fäll aus (Ostern)"
   Hinweise:
-    - In dieser Woche fällt die Vorlesung aus (Ostern).
-  Coaching:
-    - Forschungsgruppencoaching
-  Uebung:
-    - "Das Pringles-Experiment: Erkennen Sie Pringles-Chips blind am Geschmack? Probieren wir es aus."
-    - "Bitte bringen Sie *pro Kleingruppe* jeweils eine Packung Original-Pringles und eine Packung Noname-Pringles (günstige Discounter-Kopie) mit."
-    - "Wenn Sie dem Unterricht online folgen, können Sie trotzdem dem Experiment folgen, wenn auch mit weniger Spaß als live. Bitte besorgen Sie sich auch die beiden Varianten an Pringles-Chips."
+    - In dieser Woche fällt die Vorlesung und die Übung aus (Ostern).
+
+
 
 
 
 
 
 thema6:
-  Titel: "Online-Studien"
+  Titel: "PsychoPy"
+  Lernziele:
+    - "Sie können selbständig eine Studie mit PsychoPy erstellen."
+  Uebung: PsychoPy
+  Skript:
+    - "[PsychoPy Einführung](https://docs.google.com/presentation/d/e/2PACX-1vT76DDSE_Kf0ZsGj98rsIk5AKRg12NICDHtW46bAH_-BJ_ZFzdnJ_81nqZ-AH2a2UH1JXplQfkPXFSk/pub?start=false&loop=false&delayms=10000&slide=id.p)"
+  Vorbereitung:
+    - "[Installieren Sie Pschychopy](https://www.psychopy.org/download.html)"
+    - "[Erstellen Sie sich einen Account bei Pavlovia.org](https://pavlovia.org/)"
+    - "[Arbeiten Sie die Videoes dieser Playlist durch: Playlist PsychoPy mit Pavlovia](https://youtube.com/playlist?list=PLRR4REmBgpIFQD-mjOEwcVCmfvnO0W43B)"
+    - "[Machen Sie sich mit PsychoPy vertraut - eine Software zur Erstllung psychologischer Studien mit Reaktionszeitmessung](https://www.psychopy.org/)"
 
-  Coaching:
-    - Forschungsgruppencoaching
+  Coaching: Präsentationsübung
+
+  Videos:
+    - "[Playlist PsychoPy mit Pavlovia](https://youtube.com/playlist?list=PLRR4REmBgpIFQD-mjOEwcVCmfvnO0W43B)"
+
+  Aufgaben:
+    - "[Aufgaben Thema 6 html](https://sebastiansauer.github.io/fopra/Aufgaben/Thema6-Aufgaben1.html)"
+    - "[Lösungen Thema 6 pdf](https://sebastiansauer.github.io/fopra/Aufgaben/Thema6-Loesungen11.pdf)"
+    - "[Lösungen Thema 6 html](https://sebastiansauer.github.io/fopra/Aufgaben/Thema6-Loesungen1.html)"
+    - "[Erstellen Sie eine Stroop-Studie mit Psychopy, z.B. mit Hilfe dieser Unterstützung](https://tu-coding-outreach-group.github.io/cog_summer_workshops_2021/psychopy/index.html)"
+
   Vertiefung:
+    - "[Playlist PsychoPy mit Pavlovia](https://youtube.com/playlist?list=PLRR4REmBgpIFQD-mjOEwcVCmfvnO0W43B)"
+    - "[Lernmaterialien zu PsychoPy](https://workshops.psychopy.org/teaching/index.html)"
+
+    - "[Peirce, J., MacAskill, M., & Hirst, B. (2022). Building experiments in psychopy (2. Aufl.). SAGE Publishing.](https://uk.sagepub.com/en-gb/eur/building-experiments-in-psychopy/book253480)"
     - "[Software für Online-Reaktionszeitmessung: Dr. Satows Konzentrationstest](https://www.psychomeda.de/online-tests/konzentrationstest.html)"
     - "[Software für Online-Reaktionszeitmessung: https://www.psytoolkit.org/](https://www.psytoolkit.org/)"
-    - "[Software für Online-Reaktionszeitmessung: PsychoPy](https://www.psychopy.org/)"
     - "[Software für Online-Reaktionszeitmessung: https://pavlovia.org/](https://pavlovia.org/)"
     - "[Software für Online-Reaktionszeitmessung: E-Prime](https://pstnet.com/products/e-prime/)"
     - "[Software für Online-Reaktionszeitmessung: Inquitist](https://www.millisecond.com/)"
+  Hinweise:
+    - "SoSci-Survey bietet eine Auswahl (Stroop, IAT) and (grundlegenden) Funktionen zur Online-Reaktionszeitmessung. Der Vorteil ist, dass es sehr einfach ist."
+
+
+
+
+
+
 
 
 thema8:
   Titel: "Fallzahlplanung"
+  Lernziele:
+    - "Sie wissen, warum eine Fallzahlplanung sinnvoll ist"
+    - "Sie wissen, dass und inwiefern größere Stichprobenzahlen sinnvoll sind"
+    - "Sie können Meehls Paradoxon erklären"
+    - "Sie kennen Verfahren, um sinnvolle Stichprobengrößen vorab zu schätzen"
 
-  Coaching:
-    - Forschungsgruppencoaching
+  Aufgaben:
+    - "[Aufgaben Thema 9 html](https://sebastiansauer.github.io/fopra/Aufgaben/Thema9-Aufgaben1.html)"
+    - "[Lösungen Thema 9 pdf](https://sebastiansauer.github.io/fopra/Aufgaben/Thema9-Loesungen11.pdf)"
+    - "[Lösungen Thema 9 html](https://sebastiansauer.github.io/fopra/Aufgaben/Thema9-Loesungen1.html)"
+
+
+  Uebung:
+    - "Das Pringles-Experiment: Erkennen Sie Pringles-Chips blind am Geschmack? Probieren wir es aus."
+    - "Bitte bringen Sie *pro Kleingruppe* jeweils eine Packung Original-Pringles und eine Packung Noname-Pringles (günstige Discounter-Kopie) mit."
+    - "Wenn Sie dem Unterricht online folgen, können Sie trotzdem dem Experiment folgen, wenn auch mit weniger Spaß als live. Bitte besorgen Sie sich auch die beiden Varianten an Pringles-Chips."
+
+  Coaching: Fallzahlplanung
+
+  Skript:
+    - "[Skript Thema 9, PDF](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema09.pdf)"
+    - "[Skript Thema 9, PPTX](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema09.pptx)"
+    - "[Skript Thema 9, Key](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema09.key)"
+
+
+
+
 
 
 thema9:
   Titel: "Messinstrumente"
+  Lernziele:
+    - "Sie wissen, was man unter eine Operationalisierung versteht"
+    - "Sie wissen, was man in der Psychologie unter einem Test versteht"
+    - "Sie kennen grundlegende Gütemerkmale eines Tests"
+    - "Sie wissen, wo Sie Tests (und zu welchen Bedingungen) beziehen könnne"
+    - "Sie kennen Beispiele für implizite Testverfahren"
 
-  Coaching:
-    - Fachgespräch
+  Uebung: "Überblick zur Datenauswertung"
+  Coaching: "Messung von Achtsamkeit"
+
   Skript:
-    - "[Skript Thema Messinstrumente, PDF](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema05.pdf)"
-    - "[Skript Thema Messinstrumente, PPTX](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema05.pptx)"
-    - "[Skript Thema Messinstrumente, Key](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema05.key)"
+    - "[Skript Thema Messinstrumente, PDF](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema10.pdf)"
+    - "[Skript Thema Messinstrumente, PPTX](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema10.pptx)"
+    - "[Skript Thema Messinstrumente, Key](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema10.key)"
+
+
 
 
 
 
 thema10:
   Titel: "Versuchsdurchführung"
+  Uebung:
+    - "Offene Versuchsdurchführung: Sie können wechselseitig Ihre Studien durchführen und an denen anderer Studentis teilnehmen"
 
   Hinweise:
-    - Nächste Woche ist Blockwoche; es findet kein regulärer Unterricht statt.
-  Coaching:
-    - Fachgespräch
+    - "Nächste Woche ist Blockwoche; zu dieser Zeit findet kein regulärer Unterricht statt."
+    - "[SoSci Survey ist ein hervorragendes, für Forschis kostsenfreies Tool für Online-Fragebogenforschung](https://www.soscisurvey.de/en/index)"
+
+  Coaching: "Fachgespräch (Zwischenpräsi), Forschungsteams (Gruppen) C-D"
+
+  Skript:
+    - "[Skript, PDF](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema11.pdf)"
+    - "[Skript, PPTX](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema11.pptx)"
+    - "[Skript, Key](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema11.key)"
+
   Vertiefung:
     - "[Vorlage für eine Einverständniserklärung, Uni München](https://osf.io/wr2p7/)"
     - "[Vorlage für eine Einverständniserklärung, Uni Landau](https://www.uni-koblenz-landau.de/de/landau/fb8/fb-leitung/ethik-kommission/ethik-mat/einwilligung.pdf)"
     - "[Erstellung von Pseudonymen](https://www.gesis.org/fileadmin/upload/forschung/publikationen/zeitschriften/mda/Vol.2_Heft_1/2008_MDA1_Poege.pdf)"
     - "[Wiki-Auszug zum Thema Ethik, Uni Dresden](https://methpsy.elearning.psych.tu-dresden.de/mediawiki/index.php/Ethik)"
     - "[Hinweise zur Erstellung eines anonymen Codes](https://sebastiansauer.github.io/fopra/Material/Anonymer-Code.html)"
-    - "[Handreichung DAtenschutz RatSWD](https://www.konsortswd.de/aktuelles/publikation/handreichung-datenschutz-2/)"
+    - "[Handreichung Datenschutz RatSWD](https://www.konsortswd.de/aktuelles/publikation/handreichung-datenschutz-2/)"
+
+
+
+
 thema11:
   Titel: "Datenaufbereitung"
+  Uebung: "Datenaufbereitung"
+  Lernziele:
+    - "Sie sind mit Standardmethoden der explorativen Datenanalyse vertraut."
+    - "Sie können Methoden der explorativen Datenanalyse mit R umsetzen."
 
   Hinweise:
-    - In dieser Woche fällt die Vorlesung aus (Pfingsten).
-  Coaching:
-    - Fachgespräch
+    - In dieser Woche fällt die Vorlesung aus.
+    - Erarbeiten Sie sich den angegebenen Stoff im Selbstudium.
+
+  Skript:
+    - "[Umfragen auswerten](https://sebastiansauer.github.io/umfragen-auswerten)"
+
+  Coaching: "fällt aus wg. Blockwoche"
+  Videos:
+    - "[Playlist zur deskriptiven Statistik](https://www.youtube.com/playlist?list=PLRR4REmBgpIFLDj6SFpwOKnfGVbkoI9JI)"
+    - "[Playlist Explorative Datenenanalyse (EDA)](https://youtube.com/playlist?list=PLRR4REmBgpIFFmLRZvyPcI07CPn7OnmqH)"
+    - "[Playlist Praxisprobleme der Datenanalyse](https://youtube.com/playlist?list=PLRR4REmBgpIEEt2fWPz_UovZsXFfr5HJT)"
+    - "[Playlist YACSDAs](https://youtube.com/playlist?list=PLRR4REmBgpIGet_lcNf2wOd0W8j4c9hYN)"
+
+  Aufgaben:
+    - "[Lösungen univariate deskriptive Statistik HTML](https://sebastiansauer.github.io/vorhersagemodellierung/Aufgaben/Thema4-Loesungen1.html)"
+    - "[Lösungen bivariate deskriptive Statistik HTML](https://sebastiansauer.github.io/vorhersagemodellierung/Aufgaben/Thema5-Loesungen1.html)"
+    - "[Lösungen zu Praxisproblemen der Datenanalyse HTML](https://sebastiansauer.github.io/vorhersagemodellierung/Aufgaben/Thema7-Loesungen1.html)"
+    - "[Fallstudie TopGear](https://data-se.netlify.app/2021/02/11/yacda-topgear/)"
+    - "[Fallstudie OECD Wellbeing](https://data-se.netlify.app/2021/02/11/explorative-datenanalyse-zum-datensatz-oecd-wellbeing/)"
+    - "[Fallstudie IMDB Filmbewertungen](https://minimaxir.com/2018/07/imdb-data-analysis/)"
+    - "[Fallstudie Women in Parliament](https://github.com/saghirb/WiP-tidyverse/blob/master/doc/WiP-tidyverse.pdf)"
+    - "[EDA-Fallstudie zu Flugverspätungen](https://data-se.netlify.app/2021/03/08/eda-zu-flugversp%C3%A4tungen/)"
+
+  Vertiefung:
+    - "[Visualisieurng zur Korrelation](https://rpsychologist.com/correlation/)"
+
+
 
 
 
 thema12:
   Titel: "Datenmodellierung"
+  Lernziele:
+    - "Sie wissen, wie man die Regressionsanalyse einsetzt, um gängige Forschungsfragen zu analysieren"
+    - "Sie können typische Forschungsfragen mit Methoden der Bayes-Statistik analysieren"
+  Videos:
+    - "[Playlist zum statistischen Modellieren](https://www.youtube.com/playlist?list=PLRR4REmBgpIGWcSjrtt0m36aXHLaiTgdF)"
+    - "[Playlist Vorhersage-Modellierung](https://youtube.com/playlist?list=PLRR4REmBgpIH6uG8LZWPTSMReX1OFxfUx)"
+  Skript:
+    - "[Skript-Überblick QM2, v.a. Kapitel 6](https://sebastiansauer.github.io/bayes-start/#skript-schnell)"
+  Vertiefung:
+    - "[QM2-Fallstudien](https://sebastiansauer.github.io/bayes-start/#kapitel-7-fallstudien)"
+  Aufgaben:
+    - "[Aufgaben Thema Datenmodellierung html](https://sebastiansauer.github.io/fopra/Aufgaben/Thema13-Aufgaben1.html)"
+    - "[Lösungen Thema Datenmodellierung pdf](https://sebastiansauer.github.io/fopra/Aufgaben/Thema13-Loesungen11.pdf)"
+    - "[Lösungen Thema Datenmodellierung html](https://sebastiansauer.github.io/fopra/Aufgaben/Thema13-Loesungen1.html)"
 
-  Coaching:
-    - Fachgespräch
+  Coaching: "Fachgespräch (Zwischenpräsi), Forschungsteams (Gruppen) E-F"
+  Uebung: Datenauswertung
+
+
+
+
 
 
 thema12a:
   Titel: "Wissenschaftliches Schreiben"
 
-  Coaching:
-    - Fachgespräch
+  Coaching: "Fachgespräch (Zwischenpräsi), Forschungsteams (Gruppen) G-H"
+
+
+
+
+
+
+
+
 
 
 
 thema7:
   Titel: "Kausalanalyse"
+  Lernziele:
+    - "Sie wissen, wann eine Kausalaussage gerechtfertigt ist und wann nicht für wissenschaftliche Studien"
+    - "Sie können verschiedene Arten von Scheinzusammenhängen unterscheiden und wissen, wie man sie kontrolliert"
+    - "Sie wissen, wann man Drittvariablen kontrollieren sollte (und wan nicht), wenn man Kausalaussagen ableiten möchte"
 
-  Coaching:
-    - Forschungsgruppencoaching
+  Coaching: Kausalanalyse
+
+  Uebung:
+    - "[Praktische Datenanalyse Einkaufserleben: Daten, XLSX](https://github.com/sebastiansauer/fopra/raw/main/Material/einkaufserlebnis/data_wenige_zeilen.xlsx)"
+    - "[Praktische Datenanalyse Einkaufserleben: Variablenerklärung](https://raw.githubusercontent.com/sebastiansauer/fopra/main/Material/einkaufserlebnis/values_ResearchProjectHSAnsbach_2022-04-21_08-06.xls)"
+    - "[Praktische Datenanalyse Einkaufserleben: Erklärung der Werte der Variablen](https://raw.githubusercontent.com/sebastiansauer/fopra/main/Material/einkaufserlebnis/variables_ResearchProjectHSAnsbach_2022-04-21_08-06.xls)"
+
+
+  Skript:
+    - "[Skript Thema 8, PDF](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema08.pdf)"
+    - "[Skript Thema 8, PPTX](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema08.pptx)"
+    - "[Skript Thema 8, Key](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema08.key)"
+  Literatur:
+    - "[Elwert, F. (2013). Graphical causal models. In S. Morgan (Ed.), Handbook of causal analysis for social research (pp. 245–273). Springer.](https:// www.researchgate.net/publication/ 278717528_Graphical_Causal_Models)"
+    - "Rohrer, J. M. (2018). Thinking Clearly About Correlations and Causation: Graphical Causal Models for Observational Data. Advances in Methods and Practices in Psychological Science, 1(1), 27–42.](https:// doi.org/10.1177/2515245917745629)"
+
+  Vertiefung:
+    - "Lübke, K., Gehrke, M., Horst, J., & Szepannek, G. (2020). Why We Should Teach Causal Inference: Examples in Linear Regression with Simulated Data. Journal of Statistics Education, 1–17.](https://doi.org/ 10.1080/10691898.2020.1752859)"
 
 
 
@@ -273,9 +415,7 @@ thema13:
   Vertiefung:
   - "[Einführung in R Markdown, Folien](https://docs.google.com/presentation/d/e/2PACX-1vRZ72QdK_nq-s4hwjLYCgUmDVWMxdAx_WwD6Equ9SgCmjvhmuiw6M4XbqzCqmqKVRIeaUrO1BGGU-q6/pub?start=false&loop=false&delayms=3000&slide=id.p)"
 
-  Coaching:
-    - Fachgespräch
-
+  Coaching: "Fachgespräch (Zwischenpräsi), Forschungsteams (Gruppen) I-J"
 
 
 thema14:

@@ -239,6 +239,34 @@ so dass Sie genauer wissen, ob Sie auf dem richtigen Weg sind und
 wo Sie ggf. noch nachsteuern sollten.
 
 
+# Modultabelle für das Rahmenthema Achtsamkeit
+
+
+
+```{r render-course-outline-achtsamkeit, results = "asis", echo = FALSE, cache = FALSE}
+
+source("https://raw.githubusercontent.com/sebastiansauer/Lehre/main/R-Code/render-course-sections.R")
+
+link_stump <- "https://sebastiansauer.github.io/fopra/#"
+
+course_dates_file <- here::here("Interna/course-dates.yaml")
+content_file <- here::here("Interna/modul-zsfg.yaml")
+
+stopifnot(file.exists(course_dates_file))
+stopifnot(file.exists(content_file))
+
+#debug(render_course_outline)
+master_table <- build_master_course_table(course_dates_file, 
+                                          content_file,
+                                          link_stump = link_stump)
+master_table_short <- 
+  master_table %>% 
+  select(ID, KW, Datum_Beginn, Titel_Link, Coaching) 
+
+knitr::kable(master_table_short)
+
+```
+
 
 
 
