@@ -201,13 +201,6 @@ thema6:
     - "[Software für Online-Reaktionszeitmessung: Inquitist](https://www.millisecond.com/)"
 
 
-thema7:
-  Titel: "Kausalanalyse"
-
-  Coaching:
-    - Forschungsgruppencoaching
-
-
 thema8:
   Titel: "Fallzahlplanung"
 
@@ -220,6 +213,12 @@ thema9:
 
   Coaching:
     - Fachgespräch
+  Skript:
+    - "[Skript Thema Messinstrumente, PDF](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema05.pdf)"
+    - "[Skript Thema Messinstrumente, PPTX](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema05.pptx)"
+    - "[Skript Thema Messinstrumente, Key](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema05.key)"
+
+
 
 
 thema10:
@@ -258,6 +257,16 @@ thema12a:
 
   Coaching:
     - Fachgespräch
+
+
+
+thema7:
+  Titel: "Kausalanalyse"
+
+  Coaching:
+    - Forschungsgruppencoaching
+
+
 
 thema13:
   Titel: "Open Science"
