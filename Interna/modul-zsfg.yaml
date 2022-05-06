@@ -243,7 +243,7 @@ thema8:
     - "Bitte bringen Sie *pro Kleingruppe* jeweils eine Packung Original-Pringles und eine Packung Noname-Pringles (günstige Discounter-Kopie) mit."
     - "Wenn Sie dem Unterricht online folgen, können Sie trotzdem dem Experiment folgen, wenn auch mit weniger Spaß als live. Bitte besorgen Sie sich auch die beiden Varianten an Pringles-Chips."
 
-  Coaching: Fallzahlplanung
+  Coaching: Bayes-Inferenz mit R
 
   Skript:
     - "[Skript Thema 9, PDF](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema09.pdf)"
@@ -264,7 +264,9 @@ thema9:
     - "Sie wissen, wo Sie Tests (und zu welchen Bedingungen) beziehen könnne"
     - "Sie kennen Beispiele für implizite Testverfahren"
 
-  Uebung: "Überblick zur Datenauswertung"
+  Uebung:
+    - "Offene Versuchsdurchführung: Sie können wechselseitig Ihre Studien durchführen und an denen anderer Studentis teilnehmen"
+
   Coaching: "Messung von Achtsamkeit"
 
   Skript:
