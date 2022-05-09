@@ -97,6 +97,8 @@ bekannten, vielleicht sogar verbreiteten Nomenklatur bzw. Vorgehensweise zu rich
 Für Bayes-Analysen gibt es dazu Richtlinien und Checklisten; 
 die folgenden Hinweise orientieren sich an @kruschke_bayesian_2021, genannt *BARG* (Bayesian Analysis Reporting Guidelines);
 der Volltext ist [hier](https://www.nature.com/articles/s41562-021-01177-7) zugänglich.
+Auch die APA (American Psychological Assocation) hat eine [Checkliste herausgegeben](https://data-se.netlify.app/2022/01/27/warum-bayes/),
+wie Bayes-Statistik berichtet werden sollte.
 
 
 Die wichtigsten Ergebnisse der BARG sind [in dieser Tabelle ausgelegt](https://www.nature.com/articles/s41562-021-01177-7/tables/1).
@@ -109,6 +111,20 @@ zu berichten.
 Die folgende Ausführung orientiert sich nach der Standardgliederung wissenschaftlicher Berichte.
 
 
+# Allgemeine Richtlinien zum Berichten von Statistik
+
+
+Die APA hat eine [Checkliste bzw. Richtlinie herausgegeben zum Berichten von Statistik](https://www.apa.org/pubs/authors/jars.pdf) [vgl. @cooper_reporting_2020].
+Die lesenswerten Schwesterbüch von @peters_planen_2019 bzw. @peters_abschlussarbeiten_2015 geben nicht nur Formulierungshilfen,
+sondern erläutern, wie man eine sinnvolle Gliederung erstellt und welche Inhalte in welchem Abschnitt gehören.
+
+Grundlegende Prinzipien des Berichtens von Statistiken sind:
+
+1. Begründet: Eine Erläuterung, warum ein Vorgehen gewählt wurde, wird gegeben.
+2. Nachvollziehbar: Lesis können anhand des Berichts (potenziell) nachvollziehen, wie die Autoren zu einem Ergebnis gelangt sind.
+3. Von einfach zu komplex: Es ist verbreitet, zunächst grundlegende Ergebnisse, dann komplexere Modellanalysen zu präsentieren.
+4. Deskriptiv: Ergebnisse werden berichtet, aber nicht bewertet (das kommt erst im Diskussionsteil).
+5. Lauter: Alle relevanten Ergebnisse werden offengelegt.
 
 
 # Theorieteil
@@ -187,6 +203,27 @@ Tipp: Geben Sie an, dass Sie die Standardwerte (Voreinstellung) der von Ihnen ve
 Zitieren Sie möglichst die Software (in der verwendeten Version) und reichen Sie die Syntax ein.
 
 Mehr zu Prioris bei `rstanarm` findet sich [hier](https://mc-stan.org/rstanarm/articles/priors.html).
+
+Mit `prior_summary(mein_model)` bekommt man einen Überblick über die Prioriwerte,
+die im Modell `mein_modell` verwendet wurden.
+
+
+Es macht Sinn, zu begründen, warum sie das Modell so gewählt haben,
+wie sie es gewählt haben.
+Wenn Sie eine Normalverteilung für die Priori-Verteilungen wählen,
+haben Sie Argumentationslinien: epistemologisch und ontologisch.
+Epistemologisch können Sie argumentieren, dass die Normalverteilung die Entropie maximiert,
+also die Verteilung mit den wenigsten Vorannahmen ist, wenn man davon ausgeht,
+dass die gesuchte Verteilung über eine endliche Varianz und einen endlichen Mittelwert verfügt.
+Ontologisch können Sie argumentieren, dass z.B. Körpergröße (innerhalb eines Geschlechts zumindest)
+hinreichend normalverteilt ist.
+
+Die Begründung für das lineare Modelle erschließt sich aus der Theorie,
+nämlich dass z.B. die gewählten UV den gesuchten Effekt gut beschreiben.
+
+
+
+### Kausal- vs. Korrelationsmodell
 
 
 Sie wollten weiterhin angeben,

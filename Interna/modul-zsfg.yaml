@@ -353,10 +353,14 @@ thema12:
     - "[Playlist zum statistischen Modellieren](https://www.youtube.com/playlist?list=PLRR4REmBgpIGWcSjrtt0m36aXHLaiTgdF)"
     - "[Playlist Vorhersage-Modellierung](https://youtube.com/playlist?list=PLRR4REmBgpIH6uG8LZWPTSMReX1OFxfUx)"
   Skript:
+    - "[Bayes in fünf Minuten](https://data-se.netlify.app/2022/01/27/bayes-in-f%C3%BCnf-minuten/)"
+    - "[Bayes in fünf Minuten, für Fortgeschrittene](https://data-se.netlify.app/2022/01/28/bayes-in-f%C3%BCnf-minuten-f%C3%BCr-fortgeschrittene/)"
+    - "[Warum Bayes und nicht Frequentismus](https://data-se.netlify.app/2022/01/27/warum-bayes/)"
     - "[Skript-Überblick QM2, v.a. Kapitel 6](https://sebastiansauer.github.io/bayes-start/#skript-schnell)"
-    - "[Wie man Bayes-Analysen berichtet](https://sebastiansauer.github.io/fopra/Interna/Bayes-berichten.html)"
+    - "[Wie man Bayes-Analysen berichtet: die BARG-Checkliste](https://sebastiansauer.github.io/fopra/Interna/Bayes-berichten.html)"
   Vertiefung:
     - "[QM2-Fallstudien](https://sebastiansauer.github.io/bayes-start/#kapitel-7-fallstudien)"
+    - "[Beispielanalyse zur BARG-Checkliste](file:///Users/sebastiansaueruser/Downloads/BARG-Supplement.html)"
   Aufgaben:
     - "[Aufgaben Thema Datenmodellierung html](https://sebastiansauer.github.io/fopra/Aufgaben/Thema13-Aufgaben1.html)"
     - "[Lösungen Thema Datenmodellierung pdf](https://sebastiansauer.github.io/fopra/Aufgaben/Thema13-Loesungen11.pdf)"
