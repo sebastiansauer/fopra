@@ -215,12 +215,15 @@ Studentis profitieren, dass Sie in aktuelle Erkenntnisse der Forschung eingefüh
 Alle Gruppen sind angehalten,
 im Rahmen eines Fachgesprächs mit dem Dozenten den Stand Ihres Projekts vorzustellen.
 
-Es handelt sich nicht um eine formale Prüfungsleistung.
-Die Zwischenpräsentation wird nicht benotet.
+Es handelt sich *nicht* um eine formale Prüfungsleistung;
+die Zwischenpräsentation wird nicht benotet.
+Allerdings ist die Teilnahme sehr empfehlenswert.
 Ziel ist es, sicherzustellen, 
 dass alle Mitglieder der Gruppe aktiv mitarbeiten und über alle Teile des Projekts gut informiert sind.
 Der Dozent gibt Feedback.
-Das Fachgespräch ist hochschulöffentlich.
+Die anderen Forschungsgruppen sind eingeladen, dabei zu sein und die vorstellende Gruppe mit Feedback und Klärungsfragen zu unterstützen - und außerdem vom Feedback des Dozenten an die Vortragenden für die eigene Studie zu lernen.
+
+*Wenn Sie nicht am Fachgespräch teilnehmen, geben Sie mir bitte eine Woche vorab Bescheid.*
 
 ## Eckdaten
 
@@ -237,6 +240,10 @@ Die Eckdaten Ihrer Zwischenstandspräsentation sind wie folgt:
 Sie bekommen dann vom Dozenten Feedback zu Ihrem Zwischenstand,
 so dass Sie genauer wissen, ob Sie auf dem richtigen Weg sind und 
 wo Sie ggf. noch nachsteuern sollten.
+
+Der Fokus liegt auf einem Gespräch, nicht auf einem (Folien-)Vortrag, 
+da die Erfahrung zeigt, dass in einem Gespräch ein höheres Niveau erreicht werden kann,
+als in einem Vortrag.
 
 
 # Modultabelle für das Rahmenthema Achtsamkeit
