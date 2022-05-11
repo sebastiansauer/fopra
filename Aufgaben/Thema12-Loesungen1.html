@@ -62,8 +62,8 @@ durch <code>NA</code>, also durch einen fehlenden Wert. Tipp:
 von -3 bis +3! Tipp: Nutzen Sie <code>recode()</code> aus
 <code>{{dplyr}}</code>.</li>
 <li>Berechnen Sie Spalten-Mittelwerte für alle Konstrukte, die die
-Ratingskala verwenden. Tipp: Nutzen Sie <code>rowwise()</code> und
-<code>c_across()</code>.</li>
+Ratingskala verwenden. Tipp: Tipp: Nutzen Sie das R-Paket
+<code>{{sjmisc}}</code>.</li>
 <li>Exportieren Sie die Daten als CSV- und als XLSX-Datei. Tipp: Nutzen
 Sie das R-Paket <code>{{rio}}</code>.</li>
 <li>Berechnen Sie Cronbachs Alpha! Tipp: Nutzen Sie das R-Paket
@@ -82,11 +82,11 @@ R-Paket <code>{{flextable}}</code>.</li>
 
 d1a &lt;- read_csv(d_url)</code></pre>
 <pre><code>## Rows: 90 Columns: 196
-## ── Column specification ──────────────────────────
+## ── Column specification ──────
 ## Delimiter: &quot;,&quot;
-## chr   (76): v004, v008, v009, v010, v011, v012...
-## dbl    (5): v001, v003, v005, v023, v109
-## lgl  (112): v024, v025, v026, v027, v028, v029...
+## chr   (76): v004, v008, v0...
+## dbl    (5): v001, v003, v0...
+## lgl  (112): v024, v025, v0...
 ## dttm   (3): v002, v006, v007
 ## 
 ## ℹ Use `spec()` to retrieve the full column specification for this data.
@@ -110,13 +110,13 @@ d3 &lt;-
 <pre><code>## No variable names specified - using all columns.</code></pre>
 <pre><code>## No duplicate combinations found of: v001, v002, v003, v005, v006, v007, v008, v009, v010, ... and 74 other variables</code></pre>
 <pre><code>## # A tibble: 0 × 84
-## # … with 84 variables: v001 &lt;dbl&gt;, v002 &lt;dttm&gt;,
-## #   v003 &lt;dbl&gt;, v005 &lt;dbl&gt;, v006 &lt;dttm&gt;,
-## #   v007 &lt;dttm&gt;, v008 &lt;chr&gt;, v009 &lt;chr&gt;,
-## #   v010 &lt;chr&gt;, v011 &lt;chr&gt;, v012 &lt;chr&gt;,
-## #   v013 &lt;chr&gt;, v014 &lt;chr&gt;, v015 &lt;chr&gt;,
-## #   v016 &lt;chr&gt;, v017 &lt;chr&gt;, v018 &lt;chr&gt;,
-## #   v019 &lt;chr&gt;, v020 &lt;chr&gt;, v021 &lt;chr&gt;, …</code></pre>
+## # … with 84 variables:
+## #   v001 &lt;dbl&gt;, v002 &lt;dttm&gt;,
+## #   v003 &lt;dbl&gt;, v005 &lt;dbl&gt;,
+## #   v006 &lt;dttm&gt;, v007 &lt;dttm&gt;,
+## #   v008 &lt;chr&gt;, v009 &lt;chr&gt;,
+## #   v010 &lt;chr&gt;, v011 &lt;chr&gt;,
+## #   v012 &lt;chr&gt;, v013 &lt;chr&gt;, …</code></pre>
 <p>Keine Duplikate zu finden.</p>
 <p>Ad 4.</p>
 <pre class="text"><code>d4 &lt;-
@@ -127,25 +127,25 @@ d3 &lt;-
   mutate(v001 = na_if(v001, &quot;&quot;),
          v001 = na_if(v001, &quot;N/A&quot;))</code></pre>
 <pre><code>## # A tibble: 90 × 80
-##     v001  v003       v005 v008   v009  v010  v011 
-##    &lt;dbl&gt; &lt;dbl&gt;      &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt; &lt;chr&gt; &lt;chr&gt;
-##  1   794    25 1031050258 2a02:… &lt;NA&gt;  Ja    Ja   
-##  2   146    25 1376736840 2a02:… &lt;NA&gt;  Ja    Ja   
-##  3   459     4  355469450 2003:… http… Nein  Ja   
-##  4   324    25  995386148 134.2… http… Ja    Ja   
-##  5   257    25  689485052 2003:… http… Nein  Nein 
-##  6   182    25 1702405999 2003:… http… Nein  Nein 
-##  7    95    25 1699812941 93.13… http… Ja    Nein 
-##  8   355    25 1599676009 2a02:… http… Ja    Nein 
-##  9   570    25  809829273 2003:… http… Nein  Nein 
-## 10   173    25   76734057 134.2… http… Ja    Nein 
-## # … with 80 more rows, and 73 more variables:
-## #   v012 &lt;chr&gt;, v013 &lt;chr&gt;, v014 &lt;chr&gt;,
-## #   v015 &lt;chr&gt;, v016 &lt;chr&gt;, v017 &lt;chr&gt;,
-## #   v018 &lt;chr&gt;, v019 &lt;chr&gt;, v020 &lt;chr&gt;,
-## #   v021 &lt;chr&gt;, v022 &lt;chr&gt;, v023 &lt;dbl&gt;,
-## #   v033 &lt;chr&gt;, v034 &lt;chr&gt;, v035 &lt;chr&gt;,
-## #   v036 &lt;chr&gt;, v037 &lt;chr&gt;, v038 &lt;chr&gt;, …</code></pre>
+##     v001  v003      v005 v008 
+##    &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;
+##  1   794    25    1.03e9 2a02…
+##  2   146    25    1.38e9 2a02…
+##  3   459     4    3.55e8 2003…
+##  4   324    25    9.95e8 134.…
+##  5   257    25    6.89e8 2003…
+##  6   182    25    1.70e9 2003…
+##  7    95    25    1.70e9 93.1…
+##  8   355    25    1.60e9 2a02…
+##  9   570    25    8.10e8 2003…
+## 10   173    25    7.67e7 134.…
+## # … with 80 more rows, and 76
+## #   more variables:
+## #   v009 &lt;chr&gt;, v010 &lt;chr&gt;,
+## #   v011 &lt;chr&gt;, v012 &lt;chr&gt;,
+## #   v013 &lt;chr&gt;, v014 &lt;chr&gt;,
+## #   v015 &lt;chr&gt;, v016 &lt;chr&gt;,
+## #   v017 &lt;chr&gt;, v018 &lt;chr&gt;, …</code></pre>
 <p>Und so weiter für alle Spalten …</p>
 <p>Puh, geht das nicht schlauer?</p>
 <p>Ja, geht. Hier ein kleiner Trick:</p>
@@ -186,18 +186,18 @@ ersichtlich.</p>
   select(v001, v033, v033_r) %&gt;% 
   head(10)</code></pre>
 <pre><code>## # A tibble: 10 × 3
-##     v001 v033                    v033_r
-##    &lt;dbl&gt; &lt;chr&gt;                    &lt;dbl&gt;
-##  1   794 stimme voll und ganz zu      3
-##  2   146 stimme eher zu               1
-##  3   459 &lt;NA&gt;                        NA
-##  4   324 stimme eher zu               1
-##  5   257 lehne eher ab               -1
-##  6   182 stimme zu                    2
-##  7    95 stimme eher zu               1
-##  8   355 stimme zu                    2
-##  9   570 stimme eher zu               1
-## 10   173 lehne eher ab               -1</code></pre>
+##     v001 v033           v033_r
+##    &lt;dbl&gt; &lt;chr&gt;           &lt;dbl&gt;
+##  1   794 stimme voll u…      3
+##  2   146 stimme eher zu      1
+##  3   459 &lt;NA&gt;               NA
+##  4   324 stimme eher zu      1
+##  5   257 lehne eher ab      -1
+##  6   182 stimme zu           2
+##  7    95 stimme eher zu      1
+##  8   355 stimme zu           2
+##  9   570 stimme eher zu      1
+## 10   173 lehne eher ab      -1</code></pre>
 <p>Das hat also funktioniert. Aber das jetzt für alle Spalte zu
 übernehmen, puh, viel zu langweilig. Gibt’s da vielleicht einen
 Trick?</p>
@@ -222,7 +222,17 @@ Trick?</p>
 hier wenden wir <code>recode()</code> auf alle Spalten der Ratingskala
 an.</p>
 <p>Ad 7.</p>
+<pre class="text"><code>library(sjmisc)</code></pre>
 <pre class="text"><code>d7 &lt;-
+  d6 %&gt;% 
+  row_means(v033:v039, var = &quot;exp_avg&quot;, n = .9) %&gt;% 
+  row_means(v040:v042, var = &quot;neu_avg&quot;, n = .9)</code></pre>
+<p>Und so weiter, für alle Konstrukte, für die man einen Mittelwert
+berechnen möchte.</p>
+<p><em>Alternativ</em> kann man auch zeilenweise arbeiten
+(<code>rowwise</code>) und zeilenweise mit <code>{{dplyr}}</code>
+Zeilenmittelwerte berechnen:</p>
+<pre class="text"><code>d7a &lt;-
   d6 %&gt;%
   rowwise() %&gt;%  # Zeilenweise arbeiten im Folgenden
   mutate(
@@ -255,22 +265,31 @@ d7 %&gt;%
 ## Reliability analysis  Skala Innovationsorientierung  
 ## Call: alpha(x = ., title = &quot;Skala Innovationsorientierung&quot;)
 ## 
-##   raw_alpha std.alpha G6(smc) average_r S/N  ase
-##       0.87      0.88    0.88      0.54   7 0.02
-##   mean  sd median_r
-##  -0.25 1.3     0.52
+##   raw_alpha std.alpha G6(smc)
+##       0.87      0.88    0.88
+##  average_r S/N  ase  mean  sd
+##       0.54   7 0.02 -0.25 1.3
+##  median_r
+##      0.52
 ## 
 ##  lower alpha upper     95% confidence boundaries
 ## 0.83 0.87 0.91 
 ## 
 ##  Reliability if an item is dropped:
-##      raw_alpha std.alpha G6(smc) average_r S/N
-## v087      0.84      0.84    0.83      0.52 5.4
-## v088      0.83      0.83    0.83      0.50 5.0
-## v089      0.87      0.87    0.87      0.57 6.5
-## v090      0.84      0.84    0.84      0.51 5.1
-## v091      0.87      0.87    0.87      0.57 6.5
-## v092      0.87      0.87    0.87      0.58 6.9
+##      raw_alpha std.alpha
+## v087      0.84      0.84
+## v088      0.83      0.83
+## v089      0.87      0.87
+## v090      0.84      0.84
+## v091      0.87      0.87
+## v092      0.87      0.87
+##      G6(smc) average_r S/N
+## v087    0.83      0.52 5.4
+## v088    0.83      0.50 5.0
+## v089    0.87      0.57 6.5
+## v090    0.84      0.51 5.1
+## v091    0.87      0.57 6.5
+## v092    0.87      0.58 6.9
 ##      alpha se var.r med.r
 ## v087    0.026 0.013  0.51
 ## v088    0.028 0.015  0.51
@@ -280,39 +299,46 @@ d7 %&gt;%
 ## v092    0.022 0.018  0.55
 ## 
 ##  Item statistics 
-##       n raw.r std.r r.cor r.drop  mean  sd
-## v087 61  0.83  0.83  0.82   0.73  0.16 1.8
-## v088 61  0.87  0.87  0.87   0.80  0.49 1.5
-## v089 61  0.74  0.73  0.65   0.60 -0.75 1.8
-## v090 61  0.86  0.86  0.83   0.78 -0.80 1.7
-## v091 61  0.71  0.73  0.65   0.60  0.00 1.4
-## v092 61  0.70  0.70  0.62   0.57 -0.59 1.6
+##       n raw.r std.r r.cor
+## v087 61  0.83  0.83  0.82
+## v088 61  0.87  0.87  0.87
+## v089 61  0.74  0.73  0.65
+## v090 61  0.86  0.86  0.83
+## v091 61  0.71  0.73  0.65
+## v092 61  0.70  0.70  0.62
+##      r.drop  mean  sd
+## v087   0.73  0.16 1.8
+## v088   0.80  0.49 1.5
+## v089   0.60 -0.75 1.8
+## v090   0.78 -0.80 1.7
+## v091   0.60  0.00 1.4
+## v092   0.57 -0.59 1.6
 ## 
 ## Non missing response frequency for each item
-##        -3   -2   -1    0    1    2    3 miss
-## v087 0.07 0.15 0.20 0.08 0.26 0.15 0.10 0.32
-## v088 0.02 0.11 0.13 0.18 0.31 0.15 0.10 0.32
-## v089 0.13 0.30 0.21 0.15 0.05 0.10 0.07 0.32
-## v090 0.21 0.18 0.18 0.20 0.11 0.08 0.03 0.32
-## v091 0.07 0.10 0.16 0.25 0.30 0.13 0.00 0.32
-## v092 0.15 0.16 0.18 0.25 0.16 0.10 0.00 0.32</code></pre>
+##        -3   -2   -1    0    1
+## v087 0.07 0.15 0.20 0.08 0.26
+## v088 0.02 0.11 0.13 0.18 0.31
+## v089 0.13 0.30 0.21 0.15 0.05
+## v090 0.21 0.18 0.18 0.20 0.11
+## v091 0.07 0.10 0.16 0.25 0.30
+## v092 0.15 0.16 0.18 0.25 0.16
+##         2    3 miss
+## v087 0.15 0.10 0.32
+## v088 0.15 0.10 0.32
+## v089 0.10 0.07 0.32
+## v090 0.08 0.03 0.32
+## v091 0.13 0.00 0.32
+## v092 0.10 0.00 0.32</code></pre>
 <p>Ad 10.</p>
 <pre class="text"><code>library(easystats)
 
 d7 %&gt;% 
   select(ends_with(&quot;_avg&quot;)) %&gt;% 
   describe_distribution()</code></pre>
-<pre><code>## Variable |  Mean |   SD |  IQR |         Range | Skewness |  Kurtosis |  n | n_Missing
-## --------------------------------------------------------------------------------------
-## exp_avg  |  0.90 | 1.12 | 1.57 | [-1.86, 3.00] |    -0.45 |     -0.16 | 76 |        14
-## neu_avg  |  1.22 | 1.25 | 1.33 | [-2.67, 3.00] |    -0.96 |      0.79 | 70 |        20
-## att_avg  |  1.04 | 1.13 | 1.20 | [-2.60, 3.00] |    -1.16 |      1.93 | 68 |        22
-## ka_avg   |  0.91 | 1.20 | 1.21 | [-2.17, 3.00] |    -1.07 |      0.54 | 66 |        24
-## wom_avg  |  0.31 | 1.16 | 1.25 | [-2.33, 3.00] |     0.35 |      0.23 | 64 |        26
-## innp_avg | -0.25 | 1.28 | 1.50 | [-2.83, 2.67] |     0.07 |     -0.28 | 61 |        29
-## imp_avg  | -0.28 | 1.18 | 1.50 | [-3.00, 2.50] |    -0.32 | -7.40e-03 | 61 |        29
-## hedo_avg |  0.34 | 1.40 | 1.50 | [-3.00, 3.00] |    -0.69 |      0.40 | 60 |        30
-## sho1_avg | -0.80 | 1.51 | 2.75 | [-3.00, 2.25] |     0.28 |     -0.85 | 60 |        30</code></pre>
+<pre><code>## Variable | Mean |   SD |  IQR |         Range | Skewness | Kurtosis |  n | n_Missing
+## ------------------------------------------------------------------------------------
+## exp_avg  | 0.90 | 1.12 | 1.57 | [-1.86, 3.00] |    -0.45 |    -0.16 | 76 |        14
+## neu_avg  | 1.22 | 1.25 | 1.33 | [-2.67, 3.00] |    -0.96 |     0.79 | 70 |        20</code></pre>
 <p>Ad 11.</p>
 <p>Es gibt mehrere Wege, das Ziel zu erreichen. Einer sieht so aus.</p>
 <pre class="text"><code>library(flextable)
@@ -324,8 +350,8 @@ flex1 &lt;-
   flextable()
 
 flex1</code></pre>
-<div class="tabwid"><style>.cl-ef50bb4e{}.cl-ef4a2428{font-family:'Helvetica';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-ef4a2fae{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-ef4a2faf{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-ef4a6988{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-ef4a6989{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-ef4a6992{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-ef4a6993{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-ef4a699c{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-ef4a699d{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class='cl-ef50bb4e'>
-<thead><tr style="overflow-wrap:break-word;"><td class="cl-ef4a699d"><p class="cl-ef4a2fae"><span class="cl-ef4a2428">Variable</span></p></td><td class="cl-ef4a699c"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">Mean</span></p></td><td class="cl-ef4a699c"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">SD</span></p></td><td class="cl-ef4a699c"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">IQR</span></p></td><td class="cl-ef4a699c"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">Min</span></p></td><td class="cl-ef4a699c"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">Max</span></p></td><td class="cl-ef4a699c"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">Skewness</span></p></td><td class="cl-ef4a699c"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">Kurtosis</span></p></td><td class="cl-ef4a699c"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">n</span></p></td><td class="cl-ef4a699c"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">n_Missing</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-ef4a6989"><p class="cl-ef4a2fae"><span class="cl-ef4a2428">exp_avg</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">0.8966165</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">1.116262</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">1.571429</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">-1.857143</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">3.000000</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">-0.44852912</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">-0.155202928</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">76</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">14</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-ef4a6989"><p class="cl-ef4a2fae"><span class="cl-ef4a2428">neu_avg</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">1.2238095</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">1.248150</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">1.333333</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">-2.666667</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">3.000000</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">-0.95903822</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">0.790211603</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">70</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">20</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-ef4a6989"><p class="cl-ef4a2fae"><span class="cl-ef4a2428">att_avg</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">1.0441176</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">1.133925</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">1.200000</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">-2.600000</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">3.000000</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">-1.16348010</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">1.927188688</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">68</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">22</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-ef4a6989"><p class="cl-ef4a2fae"><span class="cl-ef4a2428">ka_avg</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">0.9090909</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">1.202981</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">1.208333</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">-2.166667</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">3.000000</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">-1.06540680</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">0.539760618</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">66</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">24</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-ef4a6989"><p class="cl-ef4a2fae"><span class="cl-ef4a2428">wom_avg</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">0.3072917</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">1.161257</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">1.250000</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">-2.333333</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">3.000000</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">0.35118856</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">0.232676307</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">64</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">26</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-ef4a6989"><p class="cl-ef4a2fae"><span class="cl-ef4a2428">innp_avg</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">-0.2486339</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">1.276795</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">1.500000</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">-2.833333</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">2.666667</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">0.06946976</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">-0.280800172</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">61</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">29</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-ef4a6989"><p class="cl-ef4a2fae"><span class="cl-ef4a2428">imp_avg</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">-0.2827869</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">1.177458</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">1.500000</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">-3.000000</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">2.500000</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">-0.32165605</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">-0.007398344</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">61</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">29</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-ef4a6989"><p class="cl-ef4a2fae"><span class="cl-ef4a2428">hedo_avg</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">0.3375000</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">1.401290</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">1.500000</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">-3.000000</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">3.000000</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">-0.68659230</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">0.397527258</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">60</span></p></td><td class="cl-ef4a6988"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">30</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-ef4a6993"><p class="cl-ef4a2fae"><span class="cl-ef4a2428">sho1_avg</span></p></td><td class="cl-ef4a6992"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">-0.8041667</span></p></td><td class="cl-ef4a6992"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">1.506407</span></p></td><td class="cl-ef4a6992"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">2.750000</span></p></td><td class="cl-ef4a6992"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">-3.000000</span></p></td><td class="cl-ef4a6992"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">2.250000</span></p></td><td class="cl-ef4a6992"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">0.27889917</span></p></td><td class="cl-ef4a6992"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">-0.847516886</span></p></td><td class="cl-ef4a6992"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">60</span></p></td><td class="cl-ef4a6992"><p class="cl-ef4a2faf"><span class="cl-ef4a2428">30</span></p></td></tr></tbody></table></div>
+<div class="tabwid"><style>.cl-b2aa027c{}.cl-b2a4b6dc{font-family:'Helvetica';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-b2a4c686{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-b2a4c69a{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-b2a4f20a{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b2a4f214{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b2a4f21e{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b2a4f21f{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b2a4f228{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b2a4f229{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class='cl-b2aa027c'>
+<thead><tr style="overflow-wrap:break-word;"><td class="cl-b2a4f229"><p class="cl-b2a4c686"><span class="cl-b2a4b6dc">Variable</span></p></td><td class="cl-b2a4f228"><p class="cl-b2a4c69a"><span class="cl-b2a4b6dc">Mean</span></p></td><td class="cl-b2a4f228"><p class="cl-b2a4c69a"><span class="cl-b2a4b6dc">SD</span></p></td><td class="cl-b2a4f228"><p class="cl-b2a4c69a"><span class="cl-b2a4b6dc">IQR</span></p></td><td class="cl-b2a4f228"><p class="cl-b2a4c69a"><span class="cl-b2a4b6dc">Min</span></p></td><td class="cl-b2a4f228"><p class="cl-b2a4c69a"><span class="cl-b2a4b6dc">Max</span></p></td><td class="cl-b2a4f228"><p class="cl-b2a4c69a"><span class="cl-b2a4b6dc">Skewness</span></p></td><td class="cl-b2a4f228"><p class="cl-b2a4c69a"><span class="cl-b2a4b6dc">Kurtosis</span></p></td><td class="cl-b2a4f228"><p class="cl-b2a4c69a"><span class="cl-b2a4b6dc">n</span></p></td><td class="cl-b2a4f228"><p class="cl-b2a4c69a"><span class="cl-b2a4b6dc">n_Missing</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-b2a4f214"><p class="cl-b2a4c686"><span class="cl-b2a4b6dc">exp_avg</span></p></td><td class="cl-b2a4f20a"><p class="cl-b2a4c69a"><span class="cl-b2a4b6dc">0.8966165</span></p></td><td class="cl-b2a4f20a"><p class="cl-b2a4c69a"><span class="cl-b2a4b6dc">1.116262</span></p></td><td class="cl-b2a4f20a"><p class="cl-b2a4c69a"><span class="cl-b2a4b6dc">1.571429</span></p></td><td class="cl-b2a4f20a"><p class="cl-b2a4c69a"><span class="cl-b2a4b6dc">-1.857143</span></p></td><td class="cl-b2a4f20a"><p class="cl-b2a4c69a"><span class="cl-b2a4b6dc">3</span></p></td><td class="cl-b2a4f20a"><p class="cl-b2a4c69a"><span class="cl-b2a4b6dc">-0.4485291</span></p></td><td class="cl-b2a4f20a"><p class="cl-b2a4c69a"><span class="cl-b2a4b6dc">-0.1552029</span></p></td><td class="cl-b2a4f20a"><p class="cl-b2a4c69a"><span class="cl-b2a4b6dc">76</span></p></td><td class="cl-b2a4f20a"><p class="cl-b2a4c69a"><span class="cl-b2a4b6dc">14</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b2a4f21f"><p class="cl-b2a4c686"><span class="cl-b2a4b6dc">neu_avg</span></p></td><td class="cl-b2a4f21e"><p class="cl-b2a4c69a"><span class="cl-b2a4b6dc">1.2238095</span></p></td><td class="cl-b2a4f21e"><p class="cl-b2a4c69a"><span class="cl-b2a4b6dc">1.248150</span></p></td><td class="cl-b2a4f21e"><p class="cl-b2a4c69a"><span class="cl-b2a4b6dc">1.333333</span></p></td><td class="cl-b2a4f21e"><p class="cl-b2a4c69a"><span class="cl-b2a4b6dc">-2.666667</span></p></td><td class="cl-b2a4f21e"><p class="cl-b2a4c69a"><span class="cl-b2a4b6dc">3</span></p></td><td class="cl-b2a4f21e"><p class="cl-b2a4c69a"><span class="cl-b2a4b6dc">-0.9590382</span></p></td><td class="cl-b2a4f21e"><p class="cl-b2a4c69a"><span class="cl-b2a4b6dc">0.7902116</span></p></td><td class="cl-b2a4f21e"><p class="cl-b2a4c69a"><span class="cl-b2a4b6dc">70</span></p></td><td class="cl-b2a4f21e"><p class="cl-b2a4c69a"><span class="cl-b2a4b6dc">20</span></p></td></tr></tbody></table></div>
 <p>Vielleicht noch die Anzahl der Dezimalstellen beschneiden:</p>
 <pre class="text"><code>flex1 &lt;- 
   d7 %&gt;% 
@@ -335,8 +361,8 @@ flex1</code></pre>
   flextable()
 
 flex1</code></pre>
-<div class="tabwid"><style>.cl-ef6a0d74{}.cl-ef638c42{font-family:'Helvetica';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-ef6399b2{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-ef6399bc{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-ef63d6d4{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-ef63d6de{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-ef63d6e8{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-ef63d710{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-ef63d724{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-ef63d725{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class='cl-ef6a0d74'>
-<thead><tr style="overflow-wrap:break-word;"><td class="cl-ef63d725"><p class="cl-ef6399b2"><span class="cl-ef638c42">Variable</span></p></td><td class="cl-ef63d724"><p class="cl-ef6399bc"><span class="cl-ef638c42">Mean</span></p></td><td class="cl-ef63d724"><p class="cl-ef6399bc"><span class="cl-ef638c42">SD</span></p></td><td class="cl-ef63d724"><p class="cl-ef6399bc"><span class="cl-ef638c42">IQR</span></p></td><td class="cl-ef63d724"><p class="cl-ef6399bc"><span class="cl-ef638c42">Min</span></p></td><td class="cl-ef63d724"><p class="cl-ef6399bc"><span class="cl-ef638c42">Max</span></p></td><td class="cl-ef63d724"><p class="cl-ef6399bc"><span class="cl-ef638c42">Skewness</span></p></td><td class="cl-ef63d724"><p class="cl-ef6399bc"><span class="cl-ef638c42">Kurtosis</span></p></td><td class="cl-ef63d724"><p class="cl-ef6399bc"><span class="cl-ef638c42">n</span></p></td><td class="cl-ef63d724"><p class="cl-ef6399bc"><span class="cl-ef638c42">n_Missing</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-ef63d6de"><p class="cl-ef6399b2"><span class="cl-ef638c42">exp_avg</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">0.90</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">1.12</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">1.57</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">-1.86</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">3.00</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">-0.45</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">-0.16</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">76</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">14</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-ef63d6de"><p class="cl-ef6399b2"><span class="cl-ef638c42">neu_avg</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">1.22</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">1.25</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">1.33</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">-2.67</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">3.00</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">-0.96</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">0.79</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">70</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">20</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-ef63d6de"><p class="cl-ef6399b2"><span class="cl-ef638c42">att_avg</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">1.04</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">1.13</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">1.20</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">-2.60</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">3.00</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">-1.16</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">1.93</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">68</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">22</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-ef63d6de"><p class="cl-ef6399b2"><span class="cl-ef638c42">ka_avg</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">0.91</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">1.20</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">1.21</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">-2.17</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">3.00</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">-1.07</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">0.54</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">66</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">24</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-ef63d6de"><p class="cl-ef6399b2"><span class="cl-ef638c42">wom_avg</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">0.31</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">1.16</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">1.25</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">-2.33</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">3.00</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">0.35</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">0.23</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">64</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">26</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-ef63d6de"><p class="cl-ef6399b2"><span class="cl-ef638c42">innp_avg</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">-0.25</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">1.28</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">1.50</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">-2.83</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">2.67</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">0.07</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">-0.28</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">61</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">29</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-ef63d6de"><p class="cl-ef6399b2"><span class="cl-ef638c42">imp_avg</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">-0.28</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">1.18</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">1.50</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">-3.00</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">2.50</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">-0.32</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">-0.01</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">61</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">29</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-ef63d6de"><p class="cl-ef6399b2"><span class="cl-ef638c42">hedo_avg</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">0.34</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">1.40</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">1.50</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">-3.00</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">3.00</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">-0.69</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">0.40</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">60</span></p></td><td class="cl-ef63d6d4"><p class="cl-ef6399bc"><span class="cl-ef638c42">30</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-ef63d710"><p class="cl-ef6399b2"><span class="cl-ef638c42">sho1_avg</span></p></td><td class="cl-ef63d6e8"><p class="cl-ef6399bc"><span class="cl-ef638c42">-0.80</span></p></td><td class="cl-ef63d6e8"><p class="cl-ef6399bc"><span class="cl-ef638c42">1.51</span></p></td><td class="cl-ef63d6e8"><p class="cl-ef6399bc"><span class="cl-ef638c42">2.75</span></p></td><td class="cl-ef63d6e8"><p class="cl-ef6399bc"><span class="cl-ef638c42">-3.00</span></p></td><td class="cl-ef63d6e8"><p class="cl-ef6399bc"><span class="cl-ef638c42">2.25</span></p></td><td class="cl-ef63d6e8"><p class="cl-ef6399bc"><span class="cl-ef638c42">0.28</span></p></td><td class="cl-ef63d6e8"><p class="cl-ef6399bc"><span class="cl-ef638c42">-0.85</span></p></td><td class="cl-ef63d6e8"><p class="cl-ef6399bc"><span class="cl-ef638c42">60</span></p></td><td class="cl-ef63d6e8"><p class="cl-ef6399bc"><span class="cl-ef638c42">30</span></p></td></tr></tbody></table></div>
+<div class="tabwid"><style>.cl-b2c4b5ea{}.cl-b2bf88b8{font-family:'Helvetica';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-b2bf94d4{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-b2bf94de{margin:0;text-align:right;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-b2bfbe32{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b2bfbe3c{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b2bfbe3d{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b2bfbe46{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b2bfbe47{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-b2bfbe50{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style><table class='cl-b2c4b5ea'>
+<thead><tr style="overflow-wrap:break-word;"><td class="cl-b2bfbe50"><p class="cl-b2bf94d4"><span class="cl-b2bf88b8">Variable</span></p></td><td class="cl-b2bfbe47"><p class="cl-b2bf94de"><span class="cl-b2bf88b8">Mean</span></p></td><td class="cl-b2bfbe47"><p class="cl-b2bf94de"><span class="cl-b2bf88b8">SD</span></p></td><td class="cl-b2bfbe47"><p class="cl-b2bf94de"><span class="cl-b2bf88b8">IQR</span></p></td><td class="cl-b2bfbe47"><p class="cl-b2bf94de"><span class="cl-b2bf88b8">Min</span></p></td><td class="cl-b2bfbe47"><p class="cl-b2bf94de"><span class="cl-b2bf88b8">Max</span></p></td><td class="cl-b2bfbe47"><p class="cl-b2bf94de"><span class="cl-b2bf88b8">Skewness</span></p></td><td class="cl-b2bfbe47"><p class="cl-b2bf94de"><span class="cl-b2bf88b8">Kurtosis</span></p></td><td class="cl-b2bfbe47"><p class="cl-b2bf94de"><span class="cl-b2bf88b8">n</span></p></td><td class="cl-b2bfbe47"><p class="cl-b2bf94de"><span class="cl-b2bf88b8">n_Missing</span></p></td></tr></thead><tbody><tr style="overflow-wrap:break-word;"><td class="cl-b2bfbe3c"><p class="cl-b2bf94d4"><span class="cl-b2bf88b8">exp_avg</span></p></td><td class="cl-b2bfbe32"><p class="cl-b2bf94de"><span class="cl-b2bf88b8">0.90</span></p></td><td class="cl-b2bfbe32"><p class="cl-b2bf94de"><span class="cl-b2bf88b8">1.12</span></p></td><td class="cl-b2bfbe32"><p class="cl-b2bf94de"><span class="cl-b2bf88b8">1.57</span></p></td><td class="cl-b2bfbe32"><p class="cl-b2bf94de"><span class="cl-b2bf88b8">-1.86</span></p></td><td class="cl-b2bfbe32"><p class="cl-b2bf94de"><span class="cl-b2bf88b8">3</span></p></td><td class="cl-b2bfbe32"><p class="cl-b2bf94de"><span class="cl-b2bf88b8">-0.45</span></p></td><td class="cl-b2bfbe32"><p class="cl-b2bf94de"><span class="cl-b2bf88b8">-0.16</span></p></td><td class="cl-b2bfbe32"><p class="cl-b2bf94de"><span class="cl-b2bf88b8">76</span></p></td><td class="cl-b2bfbe32"><p class="cl-b2bf94de"><span class="cl-b2bf88b8">14</span></p></td></tr><tr style="overflow-wrap:break-word;"><td class="cl-b2bfbe46"><p class="cl-b2bf94d4"><span class="cl-b2bf88b8">neu_avg</span></p></td><td class="cl-b2bfbe3d"><p class="cl-b2bf94de"><span class="cl-b2bf88b8">1.22</span></p></td><td class="cl-b2bfbe3d"><p class="cl-b2bf94de"><span class="cl-b2bf88b8">1.25</span></p></td><td class="cl-b2bfbe3d"><p class="cl-b2bf94de"><span class="cl-b2bf88b8">1.33</span></p></td><td class="cl-b2bfbe3d"><p class="cl-b2bf94de"><span class="cl-b2bf88b8">-2.67</span></p></td><td class="cl-b2bfbe3d"><p class="cl-b2bf94de"><span class="cl-b2bf88b8">3</span></p></td><td class="cl-b2bfbe3d"><p class="cl-b2bf94de"><span class="cl-b2bf88b8">-0.96</span></p></td><td class="cl-b2bfbe3d"><p class="cl-b2bf94de"><span class="cl-b2bf88b8">0.79</span></p></td><td class="cl-b2bfbe3d"><p class="cl-b2bf94de"><span class="cl-b2bf88b8">70</span></p></td><td class="cl-b2bfbe3d"><p class="cl-b2bf94de"><span class="cl-b2bf88b8">20</span></p></td></tr></tbody></table></div>
 <p>Und so speichert man als Word-Datei:</p>
 <pre class="text"><code>save_as_docx(flex1, path = &quot;flex1.docx&quot;)</code></pre>
 <br/>
