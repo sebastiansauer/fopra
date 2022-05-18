@@ -76,11 +76,7 @@ knitr::include_graphics("https://i.imgflip.com/65r1fd.jpg")
 
 <!-- [Bildquelle: G. Schindler, E, Emmerich, Lizenz: CC-SA](https://commons.wikimedia.org/wiki/File:Open_Science_Logo_v3.svg) -->
 
----
 
-WORK IN PROGRESS
-
----
 
 
 # tl;dr
@@ -118,6 +114,9 @@ WORK IN PROGRESS
 
 
 # Hinweise
+
+
+
 
 - Lesen Sie sich die folgenden Informationen bitte gut durch: [Hinweise](https://sebastiansauer.github.io/fopra/Interna/Hinweise.html)
 
@@ -182,7 +181,7 @@ master_table <- build_master_course_table(course_dates_file,
                                           link_stump = link_stump)
 master_table_short <- 
   master_table %>% 
-  select(1,2,6, Titel_Link) 
+  select(ID, KW, Terminhinweise, Wochenbeginn = Datum_Beginn, Titel_Link) 
 
 knitr::kable(master_table_short)
 

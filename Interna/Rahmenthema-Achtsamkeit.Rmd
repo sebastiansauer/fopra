@@ -268,7 +268,7 @@ master_table <- build_master_course_table(course_dates_file,
                                           link_stump = link_stump)
 master_table_short <- 
   master_table %>% 
-  select(ID, KW, Datum_Beginn, Titel_Link, Coaching) 
+  select(ID, KW, Terminhinweise, Wochenbeginn = Datum_Beginn, Datum_Beginn, Titel_Link, Coaching) 
 
 knitr::kable(master_table_short)
 

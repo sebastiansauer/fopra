@@ -170,7 +170,7 @@ thema5:
 
 thema6x:
   Titel: "Wiederholung"
-  Coaching: "Fäll aus (Ostern)"
+  Coaching: "Fällt aus (Ostern)"
   Hinweise:
     - In dieser Woche fällt die Vorlesung und die Übung aus (Ostern).
 
@@ -295,10 +295,9 @@ thema10:
     - "Offene Versuchsdurchführung: Sie können wechselseitig Ihre Studien durchführen und an denen anderer Studentis teilnehmen"
 
   Hinweise:
-    - "Nächste Woche ist Blockwoche; zu dieser Zeit findet kein regulärer Unterricht statt."
     - "[SoSci Survey ist ein hervorragendes, für Forschis kostsenfreies Tool für Online-Fragebogenforschung](https://www.soscisurvey.de/en/index)"
 
-  Coaching: "Fachgespräch (Zwischenpräsi), Forschungsteams (Gruppen) C-D"
+  Coaching: Kausalanalyse
 
   Skript:
     - "[Skript, PDF](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema11.pdf)"
@@ -323,14 +322,11 @@ thema11:
     - "Sie sind mit Standardmethoden der explorativen Datenanalyse vertraut."
     - "Sie können Methoden der explorativen Datenanalyse mit R umsetzen."
 
-  Hinweise:
-    - In dieser Woche fällt die Vorlesung aus.
-    - Erarbeiten Sie sich den angegebenen Stoff im Selbstudium.
 
   Skript:
     - "[Umfragen auswerten](https://sebastiansauer.github.io/umfragen-auswerten)"
 
-  Coaching: "fällt aus wg. Blockwoche"
+  Coaching: "Fachgespräch (Zwischenpräsi), Forschungsteams (Gruppen) C-D"
   Videos:
     - "[Playlist zur deskriptiven Statistik](https://www.youtube.com/playlist?list=PLRR4REmBgpIFLDj6SFpwOKnfGVbkoI9JI)"
     - "[Playlist Explorative Datenenanalyse (EDA)](https://youtube.com/playlist?list=PLRR4REmBgpIFFmLRZvyPcI07CPn7OnmqH)"
@@ -356,10 +352,17 @@ thema11:
 
 
 
+thema11a:
+  Titel: Projektwoche
+  Hinweise: "In dieser Woche findet kein regulärer Unterricht statt."
+
+
+
+
 
 
 thema12:
-  Titel: "Datenmodellierung"
+  Titel: "Datenmodellierung 1"
   Lernziele:
     - "Sie wissen, wie man die Regressionsanalyse einsetzt, um gängige Forschungsfragen zu analysieren"
     - "Sie können typische Forschungsfragen mit Methoden der Bayes-Statistik analysieren"
@@ -385,16 +388,17 @@ thema12:
 
 
 
-
-
-
 thema12a:
-  Titel: "Wissenschaftliches Schreiben"
+  Titel: "Datenmodellierung 2"
 
   Coaching: "Fachgespräch (Zwischenpräsi), Forschungsteams (Gruppen) G-H"
 
 
 
+
+thema12b:
+  Titel: "Wissenschaftliches Schreiben"
+  Coaching: "Fachgespräch (Zwischenpräsi), Forschungsteams (Gruppen) I-J"
 
 
 
@@ -410,7 +414,8 @@ thema7:
     - "Sie können verschiedene Arten von Scheinzusammenhängen unterscheiden und wissen, wie man sie kontrolliert"
     - "Sie wissen, wann man Drittvariablen kontrollieren sollte (und wan nicht), wenn man Kausalaussagen ableiten möchte"
 
-  Coaching: Kausalanalyse
+  Coaching:
+    - "Fragestunde, ggf. Nachholen offener Zwischenpräsentationen"
 
   Uebung:
     - "[Praktische Datenanalyse Einkaufserleben: Daten, XLSX](https://github.com/sebastiansauer/fopra/raw/main/Material/einkaufserlebnis/data_wenige_zeilen.xlsx)"
@@ -431,21 +436,16 @@ thema7:
 
 
 
-thema13:
-  Titel: "Open Science"
-  Vertiefung:
-  - "[Einführung in R Markdown, Folien](https://docs.google.com/presentation/d/e/2PACX-1vRZ72QdK_nq-s4hwjLYCgUmDVWMxdAx_WwD6Equ9SgCmjvhmuiw6M4XbqzCqmqKVRIeaUrO1BGGU-q6/pub?start=false&loop=false&delayms=3000&slide=id.p)"
+# thema13:
+#   Titel: "Open Science"
+#   Vertiefung:
+#   - "[Einführung in R Markdown, Folien](https://docs.google.com/presentation/d/e/2PACX-1vRZ72QdK_nq-s4hwjLYCgUmDVWMxdAx_WwD6Equ9SgCmjvhmuiw6M4XbqzCqmqKVRIeaUrO1BGGU-q6/pub?start=false&loop=false&delayms=3000&slide=id.p)"
+#
+#   Coaching: "Fragestunde, ggf. Nachholen offener Zwischenpräsentationen"
 
-  Coaching: "Fachgespräch (Zwischenpräsi), Forschungsteams (Gruppen) I-J"
 
 
-thema14:
-  Titel: "Joker-Stunde"
 
-  Hinweise:
-    - Nach dieser Woche endet der Unterricht.
-  Coaching:
-    - Abschließende Diskussion
 
 
 
