@@ -366,17 +366,13 @@ thema12:
   Lernziele:
     - "Sie wissen, wie man die Regressionsanalyse einsetzt, um gängige Forschungsfragen zu analysieren"
     - "Sie können typische Forschungsfragen mit Methoden der Bayes-Statistik analysieren"
+    - "Sie kennen grundlegende Formulierungen, um Ergebnisse einer statistischen Analyse zu berichten"
   Videos:
     - "[Playlist zum statistischen Modellieren](https://www.youtube.com/playlist?list=PLRR4REmBgpIGWcSjrtt0m36aXHLaiTgdF)"
     - "[Playlist Vorhersage-Modellierung](https://youtube.com/playlist?list=PLRR4REmBgpIH6uG8LZWPTSMReX1OFxfUx)"
   Skript:
-    - "[Bayes in fünf Minuten](https://data-se.netlify.app/2022/01/27/bayes-in-f%C3%BCnf-minuten/)"
-    - "[Bayes in fünf Minuten, für Fortgeschrittene](https://data-se.netlify.app/2022/01/28/bayes-in-f%C3%BCnf-minuten-f%C3%BCr-fortgeschrittene/)"
-    - "[Warum Bayes und nicht Frequentismus](https://data-se.netlify.app/2022/01/27/warum-bayes/)"
-    - "[Skript-Überblick QM2, v.a. Kapitel 6](https://sebastiansauer.github.io/bayes-start/#skript-schnell)"
-    - "[Wie man Bayes-Analysen berichtet: die BARG-Checkliste](https://sebastiansauer.github.io/fopra/Interna/Bayes-berichten.html)"
+     - "[Wie man Bayes-Analysen berichtet](https://sebastiansauer.github.io/fopra/Interna/Bayes-berichten.html)"
   Vertiefung:
-    - "[QM2-Fallstudien](https://sebastiansauer.github.io/bayes-start/#kapitel-7-fallstudien)"
     - "[Beispielanalyse zur BARG-Checkliste](file:///Users/sebastiansaueruser/Downloads/BARG-Supplement.html)"
   Aufgaben:
     - "[Aufgaben Thema Datenmodellierung html](https://sebastiansauer.github.io/fopra/Aufgaben/Thema13-Aufgaben1.html)"
@@ -390,20 +386,36 @@ thema12:
 
 thema12a:
   Titel: "Datenmodellierung 2"
+  Lernziele:
+    - "Sie wissen, wie man die Regressionsanalyse einsetzt, um gängige Forschungsfragen zu analysieren"
+    - "Sie können typische Forschungsfragen mit Methoden der Bayes-Statistik analysieren"
 
   Coaching: "Fachgespräch (Zwischenpräsi), Forschungsteams (Gruppen) G, H, J"
-
+  Aufgaben:
+    - "[QM2-Fallstudien](https://sebastiansauer.github.io/bayes-start/#kapitel-7-fallstudien)"
+  Vertiefung:
+    - "[Bayes in fünf Minuten](https://data-se.netlify.app/2022/01/27/bayes-in-f%C3%BCnf-minuten/)"
+    - "[Bayes in fünf Minuten, für Fortgeschrittene](https://data-se.netlify.app/2022/01/28/bayes-in-f%C3%BCnf-minuten-f%C3%BCr-fortgeschrittene/)"
+    - "[Warum Bayes und nicht Frequentismus](https://data-se.netlify.app/2022/01/27/warum-bayes/)"
+    - "[Skript-Überblick QM2, v.a. Kapitel 6](https://sebastiansauer.github.io/bayes-start/#skript-schnell)"
 
 
 
 thema12b:
   Titel: "Wissenschaftliches Schreiben"
   Coaching: "Fachgespräch (Zwischenpräsi), Forschungsteams (Gruppen) I"
+  Lernziele:
+    - "Sie wissen, wie ein Bericht als eine wissenschaftliche Qualifizierungsarbeit aufgebaut ist und welche Teile enthalten ist."
+    - "Der wissenschaftliche Schreibstil ist Ihnen geläufig"
 
   Skript:
     - "[Skript, PDF](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema15.pdf)"
     - "[Skript, PPTX](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema15.pptx)"
     - "[Skript, Key](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema15.key)"
+  Aufgaben:
+    - "[Aufgaben Thema Wiss. Schreiben html](https://sebastiansauer.github.io/fopra/Aufgaben/Thema15-Aufgaben1.html)"
+    - "[Lösungen Thema Wiss. Schreiben pdf](https://sebastiansauer.github.io/fopra/Aufgaben/Thema15-Loesungen11.pdf)"
+    - "[Lösungen Thema Wiss. Schreiben html](https://sebastiansauer.github.io/fopra/Aufgaben/Thema15-Loesungen1.html)"
 
 
 
@@ -413,6 +425,8 @@ thema12b:
 
 thema7:
   Titel: "Kausalanalyse"
+  Hinweise:
+    - "Bei Bedarf kann diese Stunde als Wiederholungsstunde genutzt werden: Anstelle neuen Stoffes werden dann nach Wunsch der Studierenden bisherige Themen wiederholt bzw. Fragen zur Prüfung diskutiert."
   Lernziele:
     - "Sie wissen, wann eine Kausalaussage gerechtfertigt ist und wann nicht für wissenschaftliche Studien"
     - "Sie können verschiedene Arten von Scheinzusammenhängen unterscheiden und wissen, wie man sie kontrolliert"
