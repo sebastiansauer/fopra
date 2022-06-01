@@ -126,6 +126,8 @@ knitr::include_graphics("https://i.imgflip.com/65r1fd.jpg")
 
 - Dieses Projekt steht unter der [MIT-Lizenz](https://github.com/sebastiansauer/fopra/blob/main/LICENSE). Folien-Skripte stehen unter einer CC-BY-Lizenz.
 
+- Nutzen Sie zum Zitieren diese DOI: [![DOI](https://zenodo.org/badge/454843520.svg)](https://zenodo.org/badge/latestdoi/454843520)
+
 
 
 
