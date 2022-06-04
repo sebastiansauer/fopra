@@ -379,7 +379,7 @@ thema12:
     - "[Lösungen Thema Datenmodellierung pdf](https://sebastiansauer.github.io/fopra/Aufgaben/Thema13-Loesungen11.pdf)"
     - "[Lösungen Thema Datenmodellierung html](https://sebastiansauer.github.io/fopra/Aufgaben/Thema13-Loesungen1.html)"
 
-  Coaching: "Diese Woche NUR ONLINE! Fachgespräch (Zwischenpräsi), Forschungsteams (Gruppen) E-F"
+  Coaching: "Diese Woche NUR ONLINE! Fachgespräch (Zwischenpräsi): Forschungsteams (Gruppen) E-F"
   Uebung: Datenauswertung
 
 
@@ -389,6 +389,9 @@ thema12a:
   Lernziele:
     - "Sie wissen, wie man die Regressionsanalyse einsetzt, um gängige Forschungsfragen zu analysieren"
     - "Sie können typische Forschungsfragen mit Methoden der Bayes-Statistik analysieren"
+
+  Skript:
+    - "[Wie man Veränderungen (vor vs. nach der Intervention) zwischen Gruppen (Experimental- vs. Kontrollgruppe) vergleicht](https://data-se.netlify.app/2022/06/04/vorher-nachher-messung-und-vergleich-zwischen-gruppen/)"
 
   Coaching: "Fachgespräch (Zwischenpräsi), Forschungsteams (Gruppen) G, H, J"
   Aufgaben:
