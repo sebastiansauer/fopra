@@ -1,0 +1,245 @@
+---
+date: '`r format(Sys.Date(), "%d\\. %m\\. %Y")`'  # today
+#logo: /Users/sebastiansaueruser/Pictures/Logos/logo.jpg
+
+
+bibliography: 
+  - bib.bib
+
+
+
+lang: de-De
+
+
+
+title: "Forschungsberichte mit RMarkdown schreiben"
+subtitle: "und als HTML ausgeben"
+author: 
+  - Sebastian Sauer
+  - "Seminararbeit im Modul *Research Project*"
+  - "Gutachter:  Prof. Dr. I. Weiss-Ois"
+  - "My Immatriculation ID: 12345679"
+
+
+abstract: |
+  We provide an RMarkdown template for rendering HTML files. It may provide a format suitable for academic settings. The typical RMarkdown variables may be used. Note that HTML does not know any boundaries of paper sheets.  Note that citations, figure/ table referencing is possible due to the underlying pandoc magic. This template is not much more than setting some of the variables provided by rmarkdown (pandoc, knitr, and more), credit is due to the original authors. Please read the rmarkdown documentation for detailled information on how to use rmarkdown and how to change settings.
+
+
+toc-title: "Inhaltsverzeichnis"
+
+output: 
+  bookdown::html_document2:
+    citation_package: biblatex
+    css: my-css.css
+    toc: yes 
+    #theme: united
+    number_sections: true
+---
+
+
+```{r global-knitr-options, include=FALSE}
+  knitr::opts_chunk$set(
+  fig.pos = 'H',
+  fig.asp = 0.618,
+  fig.align='center',
+  fig.width = 5,
+  out.width = "75%",
+  dpi = 300,
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE,
+  cache = TRUE,
+  fig.show = "hold")
+```
+
+```{r libs, include=FALSE}
+library(tidyverse)
+library(here)
+```
+
+
+# My Section Header 1
+
+
+Please see the documentation of [RMarkdown](http://rmarkdown.rstudio.com/) for more details on how to write RMarkdown documents.
+
+Also check out [Bookdown's manual](https://bookdown.org/yihui/rmarkdown/html-document.html).
+
+
+
+
+
+## My Section Header 2
+
+
+"Lorem ipsum" dolor sit amet, consectetur adipiscing elit. Proin mollis
+dolor vitae tristique eleifend. Quisque non ipsum sit amet velit
+malesuada consectetur. Praesent vel facilisis leo. Sed facilisis
+varius orci, ut aliquam lorem malesuada in. Morbi nec purus at nisi
+fringilla varius non ut dui. Pellentesque bibendum sapien velit. Nulla
+purus justo, congue eget enim a, elementum sollicitudin eros. Cras
+porta augue ligula, vel adipiscing odio ullamcorper eu. In tincidunt
+nisi sit amet tincidunt tincidunt. Maecenas elementum neque eget dolor
+[egestas fringilla](http://example.com):
+
+
+> Nullam eget dapibus quam, sit amet sagittis magna. Nam tincidunt,
+> orci ac imperdiet ultricies, neque metus ultrices quam, id gravida
+> augue lacus ac leo.
+
+Vestibulum id sodales lectus, sed scelerisque quam. Nullam auctor mi
+et feugiat commodo. Duis interdum imperdiet nulla, vitae bibendum eros
+placerat non. Cras ornare, risus in faucibus malesuada, libero sem
+fringilla quam, ut luctus enim sapien eget dolor.
+
+
+- Aufzählungen (nummeriert oder nicht) sind möglich.
+
+- Sonderzeichen werden unterstützt: äüß.
+
+- Und damit auch "schöne" Formeln: $e^{ln(e)}=e$ (stimmt das?).
+
+- Ein Überblick zur *Markdown-Syntax* findet sich [hier](http://pandoc.org/README.html#pandocs-markdown).
+
+
+
+- Ein paar Gimmicks: H~2~O, This ~~is deleted text.~~, feas*ible*, not feas*able*, lang---ganz lang.
+
+
+
+- Footnotes are supported[^1].
+
+- Zitationen sind möglich, im beliebigen Format, z.B. APA7. 
+
+- Besonders schön ist es, dass man [R](https://cran.r-project.org) direkt einbinden kann über [knitr](http://yihui.name/knitr/). [Hier](http://galahad.well.ox.ac.uk/repro/) findet sich eine gute Anleitung.
+
+- Ein Zeilenumbruch im Rmd-Quellcode macht noch keinen Umbruch im HTML-Dokument. Dazu braucht es *zwei* Zeilenumbrüche.
+
+[^1]: Fußnoten sind bei Pandoc eine Art von Links. 
+
+
+- Es gibt eine Reihe von Formatvorlagen, z.B. [hier](https://www.datadreaming.org/post/r-markdown-theme-gallery/) oder [hier](https://www.rdocumentation.org/packages/rmdformats/versions/1.0.4). Diese Themen können alle noch mit eigenem CSS aufgehübscht werden. Mit `rmarkdown:::themes()` bekommt man einen Überblick.
+
+We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. <!-- 21-word solution (Simmons, Nelson & Simonsohn, 2012; retrieved from http://ssrn.com/abstract=2160588) -->
+
+
+
+
+# R-Code
+
+So bindet man R-Code ein:
+
+```{r}
+x <- c(1,2,3)
+mean(x)
+```
+
+
+# Citation
+
+Put the file with the references in the same folder as the rmd-file. Uncomment/insert a line in the yaml header such as `bibliography: bib.bib`, where `bib.bib` is the name of your bib-file. Similarly, if you want to format the citation in a certain style, put the respective csl-file in the same folder as this document and uncomment/insert this line in the yaml header: `csl: apa6.csl`, where `apa6.csl` is the style file.
+
+Use this format for citation: `[\@bibtexkey]`. Put all the bibliography data in one bibliography file.
+
+Laut @Roberts2007 gilt, bla bla bla. Außerdem ist bla bla bla [@Roberts2007]. 
+
+
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin mollis
+dolor vitae tristique eleifend. Quisque non ipsum sit amet velit
+malesuada consectetur.
+
+
+
+
+# Tabellen
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. 
+
+
+So erstellt man "von Hand" eine Tabelle in Markdown:
+
+---
+
+```
+ Right    Left     Center     Default
+-------    ------ ----------   -------
+     12     12        12            12
+    123     123       123          123
+      1     1          1             1
+      
+Table: Table caption
+
+```
+
+---
+
+
+Das ist das Ergebnis:
+
+
+  Right    Left     Center     Default
+-------    ------ ----------   -------
+     12     12        12            12
+    123     123       123          123
+      1     1          1             1
+      
+Table: Table caption
+
+
+
+There are comfortable and powerful R packages available for rendering markdown tables such as Huxtable, or xtable, and other.
+
+
+Table with R package `knitr`; note that this package needs to be installed to run this example.
+
+As can be seen in Table \@ref(tab:tab1), ...
+
+```{r tab1, eval = TRUE}
+library(gt)
+data(gtcars)
+
+gtcars %>% 
+  slice(1:3) %>% 
+  select(1:3) %>% 
+  knitr::kable(caption = "Ein Auszug aus gtcars")
+```
+
+
+
+
+# Figures
+
+Use `knitr::include_graphics()` to insert figures. 
+Figures can be referenced, too: "As can be seen in Figure \@ref(fig:fig1) ...".
+
+
+```{r fig1, echo = TRUE, eval = TRUE, fig.cap = "Example of a figure", out.width = "50%"}
+knitr::include_graphics(here::here("Material/rmd-bericht/images/picture2.png"),
+                        error = FALSE)
+```
+
+
+Natürlich sollte man den R-Quellcode hier *nicht* zeigen.
+
+# References
+
+*If some literature is cited, it appears here*
+
+See [here](https://bookdown.org/yihui/rmarkdown-cookbook/bibliography.html) for more details.
+
+
+
+<div id="refs"></div>
+
+
+
+# (APPENDIX) Anhang {-}
+
+# More information
+
+This will be Appendix A.
+
+# One more thing
+
+This will be Appendix B.
+ 

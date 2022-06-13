@@ -1,0 +1,46 @@
+/* Whole document: */
+body{
+  font-family: Helvetica;
+  font-size: 12pt;
+}
+
+
+
+td {  /* Table  */
+  font-size: 8px;
+}
+h1.title {
+  font-size: 38px;
+  color: DarkRed;
+  text-align: center;
+}
+author {
+  font-size: 38px;
+  color: DarkRed;
+  text-align: center;
+}
+
+h1 { /* Header 1 */
+  font-size: 28px;
+  color: DarkBlue;
+}
+h2 { /* Header 2 */
+    font-size: 22px;
+  color: DarkBlue;
+}
+h3 { /* Header 3 - used for subtitle*/
+  font-size: 18px;
+  font-family: "Times New Roman", Times, serif;
+  color: DarkBlue;
+  text-align: center;
+}
+h4 { /* Header 4 - used for author*/
+  font-size: 14px;
+  font-family: "Times New Roman", Times, serif;
+  color: Blue;
+  text-align: center;
+}
+
+code.r{ /* Code block */
+    font-size: 12px;
+}
