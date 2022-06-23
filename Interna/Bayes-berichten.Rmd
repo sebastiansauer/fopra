@@ -633,8 +633,28 @@ plot(hdi(m1)) +
 
 ## ROPE
 
-Testen Sie eine Hypothese, die einen "praktischen Nullwert" ausschließen möchte, so bietet sich das ROPE-Verfahren an:
+Testen Sie eine Hypothese, die einen "praktischen Nullwert" ausschließen möchte, so bietet sich das ROPE-Verfahren an.
 
+Mit ROPE testet man demnach keine "Exaktnullhypothese", sondern eine "Praktischnullhypothese",
+nämlich dass ein Effekt so klein ist, dass er praktisch keine Bedeutung hat.
+
+Diesem Konzept liegt die Überlegung zugrunde,
+dass es in der freien Wildbahn kaum oder keine Effekte gibt,
+die *exakt* Null sind, also "0,0000000000000000000000000 ..." und so weiter bis alle Unendlichkeit.
+
+Sinnvoller ist es daher zu prüfen, ob ein Effekt *vernachlässigbar klein* ist für
+praktische Belange.
+
+Wie klein ein Effekt sein muss, um "klein genug" für "vernachlässigbar klein" zu sein,
+ist erstmal keine statistische Frage.
+
+Schauen Sie: Wie groß muss der Nutzen des Besuchens einer Vorlesung sein,
+damit Sie sie besuchen? Die Antwort der Frage hängt von mehreren Faktoren ab,
+und sie ist subjektiv in dem Sinne, dass die Antwort von persönlichen Präferenzen abhängt,
+die letztlich nicht objektiv zu begründen sind.
+
+
+So kann man in R ein ROPE berechnen (lassen):‚
 
 ```{r out.width = "70%", fig.asp = .5}
 library(easystats)
@@ -684,6 +704,16 @@ Und `rope_range()` sagt uns in der Hilfeseite:
 
 
 Wobei man schon im Methodenteil ROPE definieren sollte, dann müsste man das hier nicht mehr tun.
+
+
+Merkhilfe zur Entscheidung mit ROPE:
+
+
+>   Schneidet ROPE mit dem Berg, dem roten, dann Verwerfen ist verboten!
+
+
+Mit "Verwerfen" ist das Verwerfen der "Praktischnullhypothese" gemeint.
+
 
 
 ### Standardisierte Effektstärke
