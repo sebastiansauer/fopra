@@ -1,6 +1,18 @@
 # Hinweise {.unnumbered}
 
 
+
+
+
+![Wissenschaft, das ist Analyse und Kreativität. Und cooles Hairstyling.](img/Albert_Einstein_Head.jpg){width=50%}
+
+[Photograph by Orren Jack Turner, Princeton, N.J., Public Domain](https://en.wikipedia.org/wiki/Albert_Einstein#/media/File:Albert_Einstein_Head.jpg)
+
+
+
+## Was rät Meister Yoda?
+
+
 Meister Yoda rät: Lesen Sie die Hinweise (@fig-yoda).
 
 ![Lesen Sie die folgenden Hinweise im eigenen Interesse](img/yoda.jpg){#fig-yoda width="50%"}
@@ -8,8 +20,6 @@ Meister Yoda rät: Lesen Sie die Hinweise (@fig-yoda).
 :::{.xsmall}
 [Quelle: made at imageflip]("https://imgflip.com/memegenerator")
 :::
-
-
 
 
 ## Lernziele
@@ -30,11 +40,6 @@ Kurz gesagt: Sie lernen, eine echte, eigene Studie zu erstellen.
 - Die Studentis können quantitative psychologische Studien auf ihre Güte hin kritisch untersuchen.
 
 
-
-
-![Wissenschaft, das ist Analyse und Kreativität. Und cooles Hairstyling.](img/Albert_Einstein_Head.jpg){width=50%}
-
-[Photograph by Orren Jack Turner, Princeton, N.J., Public Domain](https://en.wikipedia.org/wiki/Albert_Einstein#/media/File:Albert_Einstein_Head.jpg)
 
 ## Was lerne ich hier und wozu ist das gut?
 
