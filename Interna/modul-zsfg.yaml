@@ -42,7 +42,7 @@ thema1:
 
 
 thema2:
-  Titel: "Hypothesen und Gedöns"
+  Titel: "Hypothesen"
   Vorbereitung:
     - "Lesen Sie den 'Brain-Drain-Artikel'."
   Lernziele:
@@ -72,6 +72,31 @@ thema2:
   Coaching: Lesen von Fachartikeln zum Thema Achtsamkeit
   Hinweise:
     - Achten Sie darauf, frühzeitig eine Forschungsgruppe zu gründen, falls noch nicht geschehen.
+
+
+
+
+
+
+thema2:
+  Titel: "ChatGPT"
+  Vorbereitung:
+    - "Legen Sie sich einen Account bei OpenAI für ChatGPT an."
+    - "Fragen Sie den Bot, was Sie schon immer wissen wollten. Spielen Sie herum und testen Sie die Grenzen des Bots aus."
+
+  Lernziele:
+    - "Sie können Möglichkeiten und Grenzen von ChatGPT in der Wissenschaft erläutern."
+    - "Sie können ethische und gesellschaftliche Implikationen dieser Technik erläutern."
+    - "Sie können anhand spezifischer Prompts möglichst brauchbare Antworten von ChatGPT bekommen".
+  Plenum:
+    - https://chat.openai.com/
+  Skript:
+    - "[Skript Thema 02, pdf](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema02.pdf)"
+    - "[Skript Thema 02, pptx](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema02.pptx)"
+    - "[Skript Thema 02, key](https://github.com/sebastiansauer/fopra/raw/main/Skript-Folien/FoPra-Thema02.key)"
+  Literatur:
+    - https://de.wikipedia.org/wiki/ChatGPT
+
 
 
 

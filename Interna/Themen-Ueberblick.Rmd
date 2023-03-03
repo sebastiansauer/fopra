@@ -37,9 +37,9 @@ editor_options:
 
 
 ```{r}
-library(yaml)
+#library(yaml)
 library(tidyverse)
-library(glue)
+#library(glue)
 ```
 
 
@@ -48,10 +48,6 @@ library(glue)
 </br>
 
 
-
-```{r}
-modul_zsfg <- yaml::read_yaml(paste0(here::here(), "/Interna/modul-zsfg.yaml"))
-```
 
 
 # Themen
@@ -66,41 +62,20 @@ modul_zsfg <- yaml::read_yaml(paste0(here::here(), "/Interna/modul-zsfg.yaml"))
 
 
 
-```{r build-table, results='asis', echo=FALSE}
-titel_nr <- modul_zsfg %>% names() %>% seq_along()
 
+```{r source-timetable, echo = FALSE, cache=FALSE}
+timetable_file <- "Interna/Modulverlauf.xlsx"
+stopifnot(file.exists(timetable_file))
+timetable <- readxl::read_xlsx(timetable_file)
 
-
-# Alle Vektoren müssen initialisiert sein:
-datum <- vector()
-thema <- vector()
-kw <- vector()
-hinweise <- vector()
-
-
-# schleife mit Inhalten der Tabelle (pro Zeile):
-for (i in titel_nr){
-  datum[i] <- modul_zsfg[[i]][["datum"]]
-  kw[i] <- modul_zsfg[[i]][["kw"]]
-  thema[i] <- modul_zsfg[[i]][["title"]]
-}
-
-
-cat("Nr. | Kalenderwoche | Datum | Thema ")
-cat("\n")
-cat("---|---|---|--")
-cat("\n")
-
-for (j in titel_nr){
-  cat(glue("{titel_nr[j]} | {kw[j]} | {datum[j]} | {thema[j]} "))
-  cat("\n")
-  #cat("---|---|---|--")
-  #cat("\n")
-}
+gt::gt(timetable) |> 
+  gt::cols_width(
+    1 ~ gt::pct(5),
+    2 ~ gt::pct(20),
+    3 ~ gt::pct(20),
+    4 ~ gt::pct(45)
+  )
 ```
-
-
-
 
 
 
