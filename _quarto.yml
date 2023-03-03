@@ -1,0 +1,65 @@
+project:
+  type: book
+
+
+lang: de
+
+
+book:
+  title: "Forschungsprojekt"
+  author: "Sebastian Sauer"
+  date: now
+  chapters:
+    - index.qmd
+    - rahmen.qmd
+    - themawahl.qmd
+
+
+    - pruefung.qmd
+    - references.qmd
+    # - test.qmd
+
+
+bibliography: references.bib
+
+
+editor: source
+keep-md: false
+prefer-html: true
+
+execute:
+  freeze: auto
+  warning: false
+  cache: true
+
+knitr:
+  opts_knit:
+    verbose: true
+    fig-align: center
+  opts_chunk:
+    collapse: true
+    # comment: "#>"
+    R.options:
+      knitr.graphics.auto_pdf: false
+
+format:
+  html:
+    toc: true
+    theme: lumen
+    css: styles.css
+    number-sections: true
+    df-print: paged
+    code-fold: false
+    fig-align: center
+    code-link: true
+  # pdf:
+  #   toc: true
+  #   number-sections: true
+  #   colorlinks: true
+  #   keep-tex: true
+  #   papersize: a4
+  #   df-print: kable
+  #   fig-align: center
+
+
+

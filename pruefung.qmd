@@ -1,0 +1,27 @@
+# Prüfung
+
+
+
+Die Prüfungsleistung besteht aus:
+
+  - Projektarbeit
+  - Bonusleistung
+
+</br>
+</br>
+
+
+## Hinweise
+
+
+```{r hinweise, results='asis'}
+url <- "https://raw.githubusercontent.com/sebastiansauer/Lehre/main/Hinweise/Hinweise-Pruefung-Seminararbeit.Rmd"
+childtext <- readLines(url)
+cat(childtext, sep="\n")
+```
+
+
+</br>
+</br>
+
+

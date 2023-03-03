@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.280">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Forschungsprojekt - 3&nbsp; Prüfung</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./references.html" rel="next">
+<link href="./themawahl.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Keine Treffer",
+    "search-matching-documents-text": "Treffer",
+    "search-copy-link-title": "Link in die Suche kopieren",
+    "search-hide-matches-text": "Zusätzliche Treffer verbergen",
+    "search-more-match-text": "weitere Treffer in diesem Dokument",
+    "search-more-matches-text": "weitere Treffer in diesem Dokument",
+    "search-clear-button-title": "Zurücksetzen",
+    "search-detached-cancel-button-title": "Abbrechen",
+    "search-submit-button-title": "Abschicken"
+  }
+}</script><link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><link rel="stylesheet" href="styles.css">
+</head>
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }"><div class="container-fluid d-flex justify-content-between">
+      <h1 class="quarto-secondary-nav-title">Prüfungshinweise</h1>
+      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
+        <i class="bi bi-chevron-right"></i>
+      </button>
+    </div>
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Forschungsprojekt</a> 
+    </div>
+      </div>
+      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+      </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">Hinweise</a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./rahmen.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Rahmen: Hallo Forschung!</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./themawahl.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Wahl des Themas</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./pruefung.html" class="sidebar-item-text sidebar-link active"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Prüfung</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  </div>
+</li>
+    </ul>
+</div>
+</nav><!-- margin-sidebar --><div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Inhaltsverzeichnis</h2>
+   
+  <ul>
+<li><a href="#hinweise" id="toc-hinweise" class="nav-link active" data-scroll-target="#hinweise"><span class="toc-section-number">3.1</span>  Hinweise</a></li>
+  </ul></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title d-none d-lg-block">Prüfungshinweise</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header><p>Die Prüfungsleistung besteht aus:</p>
+<ul>
+<li>Projektarbeit</li>
+<li>Bonusleistung</li>
+</ul>
+<p> </p>
+<section id="hinweise" class="level2" data-number="3.1"><h2 data-number="3.1" class="anchored" data-anchor-id="hinweise">
+<span class="header-section-number">3.1</span> Hinweise</h2>
+<div class="cell" data-hash="pruefung_cache/html/hinweise_73bed66aa507da96ef410e104f106f64">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">url</span> <span class="op">&lt;-</span> <span class="st">"https://raw.githubusercontent.com/sebastiansauer/Lehre/main/Hinweise/Hinweise-Pruefung-Seminararbeit.Rmd"</span></span>
+<span><span class="va">childtext</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/readLines.html">readLines</a></span><span class="op">(</span><span class="va">url</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/cat.html">cat</a></span><span class="op">(</span><span class="va">childtext</span>, sep<span class="op">=</span><span class="st">"\n"</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p><em>Die folgenden Prüfungshinweise gelten nur insoweit, dass Ihnen Ihr/e Dozent/in nicht anderweitige Hinweise gegeben hat.</em></p>
+<section id="prüfungsgegenstand" class="level2" data-number="3.2"><h2 data-number="3.2" class="anchored" data-anchor-id="prüfungsgegenstand">
+<span class="header-section-number">3.2</span> Prüfungsgegenstand</h2>
+<ol type="1">
+<li><p>Die Prüfungsleistung wird rechtzeitig vom Prüfi definiert und an geeignetem Ort bekannt gegeben.</p></li>
+<li><p>Es wird erwartet, dass Sie als Versuchsperson an den <em>Studien der Kommilitonis teilnehmen</em>, falls nötig.</p></li>
+<li><p>Sie führen eine <em>eigene empirische Studie</em> durch und verfassen dazu einen Bericht; dabei stützen Sie sich i. d.&nbsp;R. auf selber erhobene Daten.</p></li>
+<li><p>Gegenstand der Seminararbeit ist die <em>Dokumentation aller Phasen der Studie</em> des jeweiligen Forschungsteams. Es handelt sich also um eine Gruppenarbeit. Einzelarbeiten sind grundsätzlich nicht zulässig.</p></li>
+<li><p><em>Abschnittsverantwortliche</em>: Jedes Kapitel/Teilkapitel muss mit genau einem Namen ausgewiesen sein. Der Namen der/des Autor*in soll als Fußnote an die jeweilige Überschrift angefügt sein.</p></li>
+</ol></section><section id="formale-anfordungen" class="level2" data-number="3.3"><h2 data-number="3.3" class="anchored" data-anchor-id="formale-anfordungen">
+<span class="header-section-number">3.3</span> Formale Anfordungen</h2>
+<ol type="1">
+<li><p>Der Umfang der Arbeit umfasst 6000 Wörter (im Hauptteil), plus/minus 10%.</p></li>
+<li><p>Die Methoden des <em>wissenschaftlichen Arbeiten</em> in Recherche, Zitat und Darstellung werden angewandt.</p></li>
+<li><p>Wenden Sie die Methoden <em>quantitativer</em> Datenanalyse an.</p></li>
+<li><p>Textsatz und (gestalterische) <em>Formatierung</em> der Seminararbeit orientieren sich an dem bereitgestellten <em>Leitfaden</em> bzw. den Hinweisen.</p></li>
+<li><p>Gestaltungsaspekte, die nicht im bereitgestellten Leitfaden aufgeführt sind, sind nach den Vorgaben der APA (neueste Version) anzulegen.</p></li>
+</ol>
+<p>6.- Die Arbeit kann in <em>deutscher</em> oder englischer Sprache eingereicht werden.</p>
+<ol start="5" type="1">
+<li><p>Aus formalen Gründen darf die Seminararbeit <em>pro Arbeitsgruppe</em> nur <em>einmalig</em> eingereicht werden. Im Falle mehrerer Einreichungen zählt die erste.</p></li>
+<li>
+<p>Auf dem Titelblatt ist u.a. anzugeben</p>
+<ul>
+<li>Matrikelnummer/n sowie Nach- und Vorname/n aller Autoris (wichtig!)</li>
+<li>Titel der Arbeit</li>
+<li>Modulname</li>
+</ul>
+</li>
+<li><p>Wenn die Prüfung aus einer Seminarbeit besteht oder eine Seminarleistung beinhaltet, ist diese <em>nur online</em>, nicht ausgedruckt einzureichen.</p></li>
+<li><p>Bei der Benotung wird die <em>Kenntnis der Inhalte der Veranstaltung</em> (inkl. dieses Skripts) vorausgesetzt.</p></li>
+<li><p>Bei der <em>Anmeldung</em> ist der Titel anzugeben; der <em>gleiche Titel</em> muss sich auch auf der eingereichten Arbeit finden.</p></li>
+<li><p>Eine eingereichte Arbeit <em>kann nicht wieder zurückgezogen</em> werden.</p></li>
+<li><p><em>Gleichwertige Beiträge</em>: Alle teilnehmenden Personen einer Forschungsgruppe (einer Gruppenarbeit) sollen in ähnlichem Umfang beitragen.</p></li>
+<li><p>Es ist erlaubt, eine <em>Gruppe zu verlassen</em>. Wer eine Gruppe verlässt, schließt sich einer anderen Gruppe an.</p></li>
+<li><p><em>Open Science</em>: Reichen Sie die Rohdaten und ggf. Syntax (elektronisch) ein. Verweisen Sie ggf. im Anhang auf eine Datei, die Sie hochladen, in der die entsprechenden Informationen zu finden sind.</p></li>
+<li><p>Reichen Sie folgende <em>zwei Dateien</em> als Prüfungsleistung ein: a) Die Seminararbeit als PDF-Datei sowie b) den Anhang bzw. ergänzende Materialien als eine ZIP-Datei.</p></li>
+<li><p>Das Thema muss einen <em>direkten empirisch-psychologischen Bezug</em> haben; die Forschungsfrage muss psychologisch relevante Aspekte adressieren.</p></li>
+<li><p>Bitte sprechen Sie Ihr:e Dozenten/in für Fragen des Nachteilsausgleichs.</p></li>
+<li><p>Nichteinhaltung der Regeln bzw. der Hinweise kann zu Nichtbestehen oder einer schlechterer Note führen.</p></li>
+</ol></section><section id="benotung" class="level2" data-number="3.4"><h2 data-number="3.4" class="anchored" data-anchor-id="benotung">
+<span class="header-section-number">3.4</span> Benotung</h2>
+<section id="aspekte-der-benotung" class="level3" data-number="3.4.1"><h3 data-number="3.4.1" class="anchored" data-anchor-id="aspekte-der-benotung">
+<span class="header-section-number">3.4.1</span> Aspekte der Benotung</h3>
+<ol type="1">
+<li><p>Es wird eine Gesamtnote vergeben und ggf. drei Teilnoten.</p></li>
+<li><p>Die Gesamtnote setzt sich aus drei Teilaspekten zusammen.</p></li>
+<li>
+<p>Die drei Teilaspekte sind</p>
+<ul>
+<li>
+<em>Formalia</em> (u.a. Aufbau, Gestaltung, Rechtschreibung, Zitierweise, Literaturverzeichnis, Umfang)</li>
+<li>
+<em>Methodik</em> (u.a. Methodenauswahl, Methodenanwendung, Interpetation)</li>
+<li>
+<em>Inhalt</em> (u.a. Gliederung, Argumentation, Literaturnutzung, sprachlicher Ausdruck, Problemlösung, Reflexion)</li>
+</ul>
+</li>
+<li><p>Falls Teilnoten vergeben werden, muss sich die Gesamtnote <em>nicht</em> als arithmetisches Mittel der Teilnoten ergeben.</p></li>
+</ol></section><section id="anspruch" class="level3" data-number="3.4.2"><h3 data-number="3.4.2" class="anchored" data-anchor-id="anspruch">
+<span class="header-section-number">3.4.2</span> Anspruch</h3>
+<ol type="1">
+<li>Anspruch an eine gute Seminararbeit
+<ul>
+<li>Überwiegende Verwendung von Literatur hoher Qualität (Fachartikel, peer-reviewed)</li>
+<li>Ca. 30 Quellen oder mehr im Literaturverzeichnis bei Einzelarbeiten; Faktor 2 bei Gruppenarbeiten</li>
+<li>Stichprobengröße (ca.)
+<ul>
+<li>Experimentell: Between-Design 50 Fälle, Within-Design: 20 Fälle bei Einzelarbeiten; Faktor 2 bei Gruppenarbeiten</li>
+</ul>
+</li>
+<li>Beobachtend: 100 Fällebei Einzelarbeiten; Faktor 2 bei Gruppenarbeiten</li>
+<li>Designumfang (ca.)
+<ul>
+<li>Experimentell: 2-3 Variablen</li>
+<li>Beobachtend: 3-4 Variablen bei Einzelarbeiten; Faktor 2 bei Gruppenarbeiten</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol></section><section id="beispiele-für-fehler" class="level3" data-number="3.4.3"><h3 data-number="3.4.3" class="anchored" data-anchor-id="beispiele-für-fehler">
+<span class="header-section-number">3.4.3</span> Beispiele für Fehler</h3>
+<p>Substanzielle Fehler können zum Durchfallen oder zum deutlichem Abwerten der Note führen. Beispiele für solche Fehler sind:</p>
+<ol type="1">
+<li>
+<p>Formalia</p>
+<p>Die Textlänge (Hauptteil) ist zu kurz – ca. 20 % unter der formal angegeben Soll-Länge.</p>
+</li>
+</ol>
+<ul>
+<li>Es liegen viele Zitierfehler im Text vor (z. B. 30 % oder mehr bzw. 10 oder mehr Fehler).</li>
+<li>Es liegen viele Fehler im Literaturverzeichnis vor (z. B. 30 % oder mehr bzw. 10 oder mehr Fehler).</li>
+<li>Es wurde die geforderte empirische Methode nicht verwendet.</li>
+<li>Es findet sich ein oder mehrere Plagiate (weitere Konsequenzen sind möglich).</li>
+<li>Die Versionen der Gruppenmitglieder (bei Gruppenarbeiten) unterscheiden sich.</li>
+<li>Es finden sich nicht zitierte Quellen im Literaturverzeichnis.</li>
+</ul>
+<ol start="2" type="1">
+<li>Inhaltliche Mängel</li>
+</ol>
+<ul>
+<li>Das Literaturverzeichnis ist sehr kurz (weniger als 50% der empfohlenen Zahl von Quellen).</li>
+<li>Die Qualität des Literaturverzeichnisses ist gering (über 50 % Quellen von zweifelhafter Qualität, z. B. aus Ratgeber-Büchern).</li>
+<li>Die Lesbarkeit ist aufgrund der optischen Gestaltung oder gravierender Sprachmängel stark eingeschränkt (z. B. viele Rechtschreibfehler).</li>
+</ul>
+<ol start="3" type="1">
+<li>Methodische Mängel</li>
+</ol>
+<ul>
+<li>Es wird keine Inferenzstatistik verwendet.</li>
+<li>Zentrale Koeffizienten werden falsch interpretiert.</li>
+<li>Es wird keine/kaum Deskriptiv-Statistik berichtet.</li>
+<li>Forschungsfragen bzw. Hypothese und Datenanalyse passen nicht zusammen.</li>
+</ul></section><section id="merkmale-einer-sehr-guten-seminararbeit" class="level3" data-number="3.4.4"><h3 data-number="3.4.4" class="anchored" data-anchor-id="merkmale-einer-sehr-guten-seminararbeit">
+<span class="header-section-number">3.4.4</span> Merkmale einer sehr guten Seminararbeit</h3>
+<ol type="1">
+<li>Formales</li>
+</ol>
+<ul>
+<li>Die Richtlinien zur Gestaltung von wissenschaftlichen Texten wurden (fast) vollumfänglich umgesetzt. Insbesondere finden finden sich (fast) keine Zitierfehler im Text und im Literaturverzeichnis.</li>
+<li>Rechtschreibung, Zeichensetzung und Grammatik sind (fast) fehlerfrei.</li>
+<li>Gestaltung und Aufbau der Arbeit ist dem flüssigen Lesen zuträglich (z. B. optisch übersichtlich gestaltet und nicht weitschweifig sondern prägnant formuliert).</li>
+</ul>
+<ol start="2" type="1">
+<li>Methoden</li>
+</ol>
+<ul>
+<li>Es wurden angemessene Methoden ausgewählt und diese richtig angewendet und die Ergebnisse korrekt interpretiert.</li>
+<li>Die eingesetzte Methodik zeichnet sich durch hohe Breite und Tiefe aus.</li>
+<li>Es wurde sehr viel empirisches Material (z. B. befragte Personen) ausgewertet.</li>
+</ul>
+<ol start="3" type="1">
+<li>Inhalt</li>
+</ol>
+<ul>
+<li>Es wurde viel Literatur von hoher Qualität rezipiert.</li>
+<li>Ein roter Faden ist klar ersichtlich.</li>
+<li>Die Arbeit zeichnet sich nicht nur durch hohes Fachwissen, sondern auch durch wohl überlegte Argumentation aus.</li>
+</ul></section><section id="aus-der-checkliste-der-prüfis" class="level3" data-number="3.4.5"><h3 data-number="3.4.5" class="anchored" data-anchor-id="aus-der-checkliste-der-prüfis">
+<span class="header-section-number">3.4.5</span> Aus der Checkliste der Prüfis</h3>
+<ul>
+<li>
+<p>Wissen</p>
+<ul>
+<li>Wurden die wesentlichen Inhalte des Themas berücksichtigt?</li>
+<li>Sind hochwertige (und genügende) Quellen zu Rate gezogen worden?</li>
+</ul>
+</li>
+<li>
+<p>Denken</p>
+<ul>
+<li>Reihen sich nur Zusammenfassungen aneinander oder ist Denkarbeit erkennbar?</li>
+<li>Wurde das eigene Vorgehen angemessen kritisiert?</li>
+<li>Wurde diskutiert, verglichen, bewertet, weitergeführt, erörtert, analysiert … ?</li>
+<li>Zeugt die Arbeit von eigenen Ideen und eigenem Denken?</li>
+<li>Wurde selbständig gearbeitet?</li>
+</ul>
+</li>
+<li>
+<p>Schreiben</p>
+<ul>
+<li>Ist Rechtschreibung, Zeichensetzung und Grammatik korrekt?</li>
+<li>Ist der Text „im Fluss“ – gut lesbar, stringent und folgerichtig?</li>
+</ul>
+</li>
+<li>
+<p>Methodik</p>
+<ul>
+<li>Wurden die richtigen wissenschaftliche Methoden korrekt eingesetzt?</li>
+<li>Zeugt das methodische Vorgehen von Können und Kreativität?</li>
+<li>Ist die Studie nachprüfbar anhand des Berichts?</li>
+</ul>
+</li>
+<li>
+<p>Polieren</p>
+<ul>
+<li>Sind die Formalia erfüllt (z. B. korrektes Zitieren inkl. Literaturverzeichnis)?</li>
+<li>Sind Text, Abbildungen, Tabellen etc. ansprechend formatiert?</li>
+</ul>
+</li>
+</ul></section><section id="typische-fehler" class="level3" data-number="3.4.6"><h3 data-number="3.4.6" class="anchored" data-anchor-id="typische-fehler">
+<span class="header-section-number">3.4.6</span> Typische Fehler</h3>
+<ol type="1">
+<li><p>Fachlich dünn: Die Anzahl von guten Quellen (z. B. Fachartikel) ist gering; der Autor kennt sein Thema zu wenig. Es findet kaum Rückbezug der eigenen Studie/Daten auf die Literatur statt.</p></li>
+<li><p>Stoff nicht ausreichend reflektiert: Es werden Fakten aneinander gereiht, ohne dass ist, ob sich mit dem Stoff auseinander gesetzt wurde (z. B. werden Stärken/Schwächen einzelner Texte nicht diskutiert).</p></li>
+<li><p>Formalia fehlerhaft: Durch „Äußerlichkeiten“ werden Punkte verschenkt (z. B. pixelige Grafiken, optisch schlecht aufgelockerte Texte, „Löcher“ im Textfluss; Fehler im Literaturverzeichnis).</p></li>
+<li><p>Zahlen irreführend präsentiert: Statistiken wie werden unvollständig präsentiert oder die Anzahl der Nachkommastellen ist zu hoch oder inkonsistent.</p></li>
+<li><p>Selbstkritik fehlt: Stärken und Schwächen der eigenen Art werden nicht diskutiert.</p></li>
+</ol></section><section id="tipps-für-eine-erfolgreiche-seminararbeit" class="level3" data-number="3.4.7"><h3 data-number="3.4.7" class="anchored" data-anchor-id="tipps-für-eine-erfolgreiche-seminararbeit">
+<span class="header-section-number">3.4.7</span> Tipps für eine erfolgreiche Seminararbeit</h3>
+<section id="reflexion-bereichen-sie-die-welt-mit-ihren-gedanken" class="level4" data-number="3.4.7.1"><h4 data-number="3.4.7.1" class="anchored" data-anchor-id="reflexion-bereichen-sie-die-welt-mit-ihren-gedanken">
+<span class="header-section-number">3.4.7.1</span> Reflexion: Bereichen Sie die Welt mit Ihren Gedanken</h4>
+<ul>
+<li><p>Ein Hauptfehler vieler Hausarbeiten liegt darin, dass sie nur andere Texte nacherzählen. Wo liegt da der Mehrwert?</p></li>
+<li><p>Der Mehrwert eines wissenschaftlichen Textes liegt in der Neuartigkeit der Gedanken: Kritisieren Sie bestehende Theorien, vergleichen Sie sie, arbeiten Sie das Wesentliche heraus. Übrigens: Auch eine Wiederholungsstudie lohnt sich.</p></li>
+<li><p>Legen Sie Ihre Forschungsfrage offen, beantworten Sie sie explizit.</p></li>
+<li><p>Explizieren Sie Ihre Hypothesen (konkret und operationalisiert)</p></li>
+<li><p>Sparen Sie auch eine kritische Aufarbeitung Ihrer eigenen Arbeit nicht aus. „Kritisch“ heißt positiv und konstruktiv negativ Rückmeldungen geben.</p></li>
+<li><p>Das „Fazit“ Ihrer Arbeit ist nicht eine Zusammenfassung Ihres Textes sondern die Überlegung, wohin Sie Ihre Gedanken geführt haben.</p></li>
+<li><p>Zur Reflexion gehört auch, dass Sie an den Nutzen des Lesers denken – was bringt ihm die Lektüre Ihres Texts? Sagen Sie z. B. anfangs, warum sich Ihr Thema „lohnt“!</p></li>
+<li><p>Unterscheiden Sie zwischen Beschreibung von Ideen (oder [Ihren] empirischen Ergebnissen) und deren Beurteilung.</p></li>
+<li><p>Beziehen Sie Ihre Ergebnisse/Daten auf die Literatur.</p></li>
+</ul></section><section id="fachwissen-zeigen-sie-dass-sie-sich-auskennen" class="level4" data-number="3.4.7.2"><h4 data-number="3.4.7.2" class="anchored" data-anchor-id="fachwissen-zeigen-sie-dass-sie-sich-auskennen">
+<span class="header-section-number">3.4.7.2</span> Fachwissen: Zeigen Sie, dass Sie sich auskennen</h4>
+<ul>
+<li><p>Nachdem Sie darüber nachgedacht haben, was ein lohnendes Thema ist, recherchieren Sie nach Literatur.</p></li>
+<li><p>Ohne einen kundigen (und aktuellen) Überblick über den Stand der Forschung können Sie keine verlässlichen Aussagen treffen – und keine gute Arbeit schreiben.</p></li>
+<li><p>Scheuen Sie sich nicht Fachartikeln; machen Sie sich die Qualität Ihrer Literaturstellen bewusst.</p></li>
+<li><p>Destillieren Sie aus der Vielfalt der Texte die Essenz der Ideen heraus – die Details sind nicht so wichtig.</p></li>
+<li><p>Zeigen Sie keine Bäume, sondern den Wald. Zeigen Sie keine unumstößliche Wahrheit, sondern mehrere Blickwinkel (z. B. unterschiedliche Definitionen). Verknüpfen Sie den Gegenstand mit anderen Theorien.</p></li>
+<li><p>Ihr Fachwissen zeigen Sie auch dadurch, dass Sie kritisch zu den Texten oder dem Forschungsstand Stellung nehmen.</p></li>
+<li><p>Erläutern Sie nicht die Hintergründe Ihrer Methoden im Detail. Das steht schon in den Lehrbüchern bzw. ist nicht üblich.</p></li>
+<li><p>Gehen Sie auf wesentliche Befunde oder Theorien des Fachgebiets ein, soweit relevant bzw. zweckdienlich.</p></li>
+</ul></section><section id="fluss-der-text-soll-elegant-fließen" class="level4" data-number="3.4.7.3"><h4 data-number="3.4.7.3" class="anchored" data-anchor-id="fluss-der-text-soll-elegant-fließen">
+<span class="header-section-number">3.4.7.3</span> Fluss: Der Text soll elegant fließen</h4>
+<ul>
+<li><p>Begründen Sie Ihr Vorgehen.</p></li>
+<li><p>Man soll Dinge so einfach wie möglich ausdrücken, aber nicht einfacher (Einstein). Verwechseln Sie nicht komplizierte Wörter mit gehaltvollem Inhalt.</p></li>
+<li><p>Jedes Kapitel und jeder Absatz sollte genau eine Frage beantworten.</p></li>
+<li><p>Achten Sie auf ein gefälliges Äußeres Ihres Texts: Layout, Abbildungen, Schriftbild, leere Stellen im Blocksatz etc. machen einen Eindruck auf den Leser. Schaubilder helfen oft. Spiralbindung bietet sich an. Absätze sollten nicht zu lang sein (Textwüsten schläfern ein).</p></li>
+<li><p>Die Gliederung soll den Fluss Ihrer Argumentation wiedergeben.</p></li>
+<li><p>Schreiben Sie elegant: Z. B. meiden Sie Passivsätze; schreiben Sie aktiv. Wechseln Sie kurze mit langen Sätzen ab. Meiden Sie Amtsdeutsch wie der Teufel das Weihwasser. Ein guter Titel hat selten geschadet. Verwenden Sie die „Ich-Form“ sparsam; genauso das „man“.</p></li>
+<li><p>Nutzen Sie Schaubilder, Diagramme etc. soweit sinnvoll.</p></li>
+<li><p>Machen Sie keine Screenshots von R-Syntax, die Sie im Bericht wiedergeben. Stellen Sie die Syntax stattdessen in eine Datei, die Sie mit einreichen.</p></li>
+</ul></section><section id="redlichkeit-machen-sie-ihre-ergebnisse-nachvollziehbar" class="level4" data-number="3.4.7.4"><h4 data-number="3.4.7.4" class="anchored" data-anchor-id="redlichkeit-machen-sie-ihre-ergebnisse-nachvollziehbar">
+<span class="header-section-number">3.4.7.4</span> Redlichkeit: Machen Sie Ihre Ergebnisse nachvollziehbar</h4>
+<ul>
+<li><p>Was sind Ihre eigenen Gedanken und welche Gedanken haben Sie übernommen – machen Sie dies kenntlich, indem Sie übernommen Gedanken als Zitate kennzeichnen.</p></li>
+<li><p>Es ist nicht schändlich, Gedanken anderer zu übernehmen. Im Gegenteil: „Auf den Schultern von Giganten“ ist eine Credo der Wissenschaft. Sie können also auch replizieren.</p></li>
+<li><p>Andere Wissenschaftlis sollte die Möglichkeit haben, Ihre Ergebnisse rekonstruieren zu können. Dazu zählt, dass Sie Ihre Recherchestrategie offen legen (welche Datenbanken etc.). Ebenso, dass Sie Ihr methodisches Vorgehen nachvollziehbar machen.</p></li>
+<li><p>Weisen Sie auf Schwächen (und Stärken) und sich nach Ihrer Arbeit anschließende Forschungsfragen hin, so dass andere auf Ihren Schultern weitersehen können.</p></li>
+<li><p>Explizieren Sie Ihre Suchstrategie für Literatur (welche Datenbanken? Welche Suchbegriffe? Wie viele Treffer? Welche ausgewählt? Nach welchen Kriterien?) Ausführliche Details in den Anhang packen.</p></li>
+<li><p>Reichen Sie Syntax, Daten und ggf. Stimulus-Materialien (elektronisch) ein.</p></li>
+<li><p>Versuchen Sie, den Nutzen Ihrer Arbeit für Dritte aufzuzeigen.</p></li>
+</ul></section><section id="leserseite-schreiben-sie-für-den-leser" class="level4" data-number="3.4.7.5"><h4 data-number="3.4.7.5" class="anchored" data-anchor-id="leserseite-schreiben-sie-für-den-leser">
+<span class="header-section-number">3.4.7.5</span> Leserseite: Schreiben Sie für den Leser</h4>
+<p>Hier sind einige typische Fragen, die sich Lesis - implizit oder explizit - stellen:</p>
+<ul>
+<li>
+<em>Worum geht’s?</em> –&gt; Aussagekräftige Titel, Zusammenfassungen, Kernaussagen, Schaubilder, Fazit …</li>
+<li>
+<em>Was nützt es mir?</em> –&gt; Sinn, Zweck, Ziel und Bedeutung in der Einleitung aufzeigen, Praxisnutzen herausstellen, ggf. Checklisten, Leitfäden etc. erstellen</li>
+<li>
+<em>Was soll ich jetzt tun?</em> –&gt; Geben Sie Handlungsempfehlungen, ggf. „Kochrezepte“, wie in einer bestimmten Situation vorzugehen ist, z. B. Typologien beschreiben</li>
+<li>
+<em>So what?</em> –&gt; Tja, und nun :-)</li>
+</ul></section></section></section><section id="gutachtenerstellung" class="level2" data-number="3.5"><h2 data-number="3.5" class="anchored" data-anchor-id="gutachtenerstellung">
+<span class="header-section-number">3.5</span> Gutachtenerstellung</h2>
+<ul>
+<li>Ein Teil des Gesamteindrucks der Arbeit spiegelt sich in den Kommentaren des Gutachters wider. Jedoch spiegelt die Summe der Kommentare nicht (zwangsläufig) die Gesamtnote wider, sondern nur denjenigen Teil, für den der Gutachter es für sinnvoll befunden hat, explizite Kommentare anzugeben.</li>
+<li>Es ist insbesondere nicht möglich, von der Anzahl der positiven oder negativen Kommentare auf eine bestimmte Note zurückzuschließen.</li>
+<li>Auch Vergleiche zwischen Gutachten verschiedener Student/innen ist nicht rein auf Basis der Kommentare möglich, da die Kommentare nur einen Ausschnitt des Meinungsbilds des Gutachters widerspiegeln.</li>
+<li>Die Kommentare des Gutachters verfolgen erstens den Zweck einer Rückmeldung zum Leistungsstand und zweitens Hilfestellung zur Verbesserung, damit der/die entsprechend Student/in den eigenen Leistungsstand verbessern kann.</li>
+<li>Weitere Hinweise zur Notengebung und Beurteilung sind auf der Modulseite bzw. den offiziellen Regularien und Hinweisen zu finden.</li>
+<li>Sollten Sie Fragen an den Gutachter stellen wollen zu Ihrem Gutachten, so melden Sie sich zur Sprechstunde an.</li>
+</ul></section><section id="anmeldung" class="level2" data-number="3.6"><h2 data-number="3.6" class="anchored" data-anchor-id="anmeldung">
+<span class="header-section-number">3.6</span> Anmeldung</h2>
+<ul>
+<li>Bitte beachten Sie etwaige <em>Anmeldefristen</em> für die Aemeldung zur Prüfung als auch ggf. zur Anmeldung in einzelne Arbeitsgruppen.</li>
+<li>Soweit nicht anders vom Dozenten gesagt, gelten die <em>offiziellen</em> Anmeldefristen der Hochschule.</li>
+</ul></section><section id="sonstiges" class="level2" data-number="3.7"><h2 data-number="3.7" class="anchored" data-anchor-id="sonstiges">
+<span class="header-section-number">3.7</span> Sonstiges</h2>
+<ul>
+<li>Vermeiden Sie <em>kurzfristigen</em> Upload von Prüfungsleistungen kurz vor dem Verstreichen der Einreichefrist – falls technische Probleme auftreten, können diese u. U. nicht mehr gelöst werden.</li>
+<li>Die Dozentis führen <em>keine Vorab-Korrektur</em> von laufenden Prüfungsleistungen durch. Fragen, die einer VorabKorrektur Ihrer Arbeit nahe kommen (und daher nicht beantwortet werden), sind z. B.: „Ist mein Fragebogen so o.k.?“, „Passt das so?“, „Können Sie mal drüber schauen, ob ich so anfangen kann?“, „Passen meine Hypothesen zur Theorie?“, „Hab ich was vergessen?“, „Ist die Gliederung so richtig/vollständig?“ …</li>
+<li>Fragen zum Stoff werden im Unterricht jederzeit beantwortet. Sprechen Sie die Dozentis auch gerne vor oder nach dem Unterricht persönlich an.</li>
+<li>Aus Gründen der Fairness werden inhaltliche Fragen von Studierenden nur öffentlich, z. B. im Unterricht oder im Online-Forum, beantwortet (nicht per Mail).</li>
+</ul></section>
+</div>
+<p> </p>
+
+
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Kopiert");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Kopiert");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="./themawahl.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Wahl des Themas</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./references.html" class="pagination-link">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

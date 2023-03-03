@@ -1,0 +1,355 @@
+# Rahmen: Hallo Forschung!
+
+
+
+## Was ist Wissenschaft?
+
+
+![Was ist Wissenschaft?](img/spiro1.png){width="25%"}
+
+
+:::{.xsmall}
+This image and their code are taken from the [phantastic Spiro R package](https://wjschne.github.io/spiro/articles/Gallery/Gallery.html) bei [W. J. Schneider](https://github.com/wjschne). Eine schöne Fraktalsammlung findet sich bei [Flickr](https://www.flickr.com/search/?text=fractal).
+:::
+
+
+### Definitionsversuche
+
+
+:::{#def-science}
+### Wissenschaft
+
+Wissenschaft ist ein systematisches Unterfangen, das Wissen erzeugt und organisiert, primär in Form von testbaren Erklärungen von Vorhersagen über das Universum.$\square$
+:::
+
+
+Disziplinen, die wissenschaftliche Erkenntnisse zur Lösung praktischer Probleme nutzen (wie Medizin oder Wirtschaftspsychologie), nennt man auch angewandte Wissenschaft; Wissenschaftszweige mit weniger Anwendungsbezug nennt man Grundlagenwissenschaft.
+
+Aspekte der Wissenschaft, die die Erzeugung von Wissen in den Vordergrund stellen, nennt man Forschung.
+
+Die Art und Weise der Wissenschaft nennt man die wissenschaftliche Methode. Die wissenschaftliche Methode ist geprägt von dem Versuch, das Universum objektiv und reproduzierbar zu erklären. Damit ist gemeint, dass rationale und fachlich informierte Menschen zu der gleichen Einschätzung eines wissenschaftlichen Arguments kommen sollten. Die Falsifizierung einer Hypothese stellt für viele das Kennzeichen wissenschaftlichen Fortschritts dar. Verifizieren wird hingegen von vielen als kein starkes Mittel wissenschaftlichen Fortschritts gesehen. Daraus kann die Relevanz des Zweifelns (Skeptizismus) für die Wissenschaft abgeleitet werden.
+
+Die Mathematik hat sich in der Rückschau als das (vielleicht) nützlichste Werkzeug der (empirischen) Wissenschaft herausgestellt.
+
+
+:::{#exm-science}
+### Beispiele für Theorien
+Zu den bekanntesten und einflussreichsten Theorien gehören die Evolutionstheorie oder die Relativitätstheorie.$\square$
+:::
+
+
+### Eigenschaften von Wissenschaft
+
+Zu den (gewünschten^["Desiderata"]) Eigenschaften von Wissenschaft gehören:
+
+- *Objektivität*: Ein Befund hängt nicht davon ab, wer Messungen oder einen Versuch durchführt
+- *Offenheit*: Nicht glauben müssen, sondern selber nachprüfen können
+- *Abstraktion*: Eine wissenschaftliche Aussage soll möglichst weite Gültigkeit besitzen, Spezifika von Einzelfällen werden auf zugrundeliegende Konstanzen verallgemeinert
+- *Analyse*: Komplexe Probleme werden soweit als möglich in Einzelaspekte aufgebrochen^[https://www.savagechickens.com/2021/07/big-question.html]
+
+
+
+
+Zitate zu den Eigenschaften von Wissenschaft
+
+
+>   Non-reproducible single occurrences are of no significance to science. – Karl Popper
+
+
+>   Der Fortgang der wissenschaftlichen Entwicklung ist im Endeffekt eine ständige Flucht vor dem Staunen.^[Vgl. https://www.savagechickens.com/2022/04/so-many-questions.html] – Albert Einstein
+
+>    Auf die Frage, was der Nutzen von Grundlagenforschung sei (im Gegensatz zur praktischen Relevanz angewandter Forschung), soll Michael Faraday gesagt haben: „Sir, what is the use of a new-born child“?
+
+
+>   Ohne Spekulation gibt es keine neue Beobachtung. – Charles Darwin
+
+
+>   In Wissenschaft geht es nicht um Wahrheit, sondern darum, auf bessere Art falsch zu sein. – Thomas Schofield
+
+>    Wenn alle Experten sich einig sind, ist Vorsicht geboten. – Bertrand Russel
+
+
+
+
+
+
+
+### Was ist ein Modell?
+
+
+:::{#def-modell}
+Ein wissenschaftliches Modell ist eine vereinfachte (aber kohärente) Auffassung eines Forschungsgegenstands (d.h. ein Auszug der Realität). Häuﬁg spielen Metaphern oder Analogien dabei eine Rolle (z. B. lehnt sich das Atommodell nach Bohr an das Sonnensystem an).$\square$
+:::
+
+
+Modelle können z. B. grafisch, mathematisch oder statistisch ausgebildet sein.
+
+Modelle erläutern das Zusammenspiel mehrerer Merkmale innerhalb des Modells.
+
+Der Nutzen von Modellen besteht darin, komplexe Sachverhalte verständlich und „greifbar“ oder „anschaulich“ zu machen. Häuﬁg versucht man, wesentliche Größen (wie Einflussfaktoren) in das Modell aufzunehmen und unwesentliche außen vor zu lassen. Die Güte eines Modell kann man an diesem Spagat bemessen.
+
+
+:::{#exm-modell}
+Beispiele für Modelle: Globus, Klimamodelle, Doppelhelix der DNA. $\square$
+:::
+
+Es hat sich herausgestellt, dass viele Phänomene des Universums kompliziert (oder besser: komplex) sind, so dass („richtiges“) Vereinfachen in Form von Modellbildung nützlich ist – tatsächlich der zentrale Weg des wissenschaftlichen Denkens darstellt.
+
+Modelle ermöglichen damit die Beschreibung, Erklärung und Vorhersage von Phänomen (und damit auch die Einflussnahme).
+
+Modelle sind ähnlich zu Theorien, aber meist kleiner gefasst und die Analogie oder Metapher steht im Vordergrund.
+
+
+### Beispiele für Wissenschaften und ihre Einordnung
+
+
+```{r}
+#| echo: false
+d <- read.csv("Interna/sciences-tab.csv")
+kable(d)
+```
+
+
+
+### Taxonomie der Ziele einer empirischen Wissenschaft
+
+- Beschreiben
+- Vorhersagen
+- Erklären
+- Verändern
+
+
+### Taxonomie der psychologischen Modalitäten
+
+- Denken
+- Fühlen
+- Handeln
+
+
+
+
+
+
+
+
+
+
+
+
+
+## Wozu Wissenschaft?
+
+
+### Ich will kein Wissenschaftler werden!
+
+
+:::{exm-job}
+### Unternehmensberatung und Wissenschaft
+Toni arbeitet bei einer Unternehmensberatung. Um als Unternehmensberater zu arbeiten, braucht es wissenschaftliches Denken, sagt Toni. Sie arbeitete erst als Wissenschaftlerin, jetzt in der Unternehmensberatung.
+
+
+Arbeitweisen in beiden Feldern:
+
+- Evidenzbasiertes Vorgehen: Zahlen, Daten, Fakten
+- Systematisches Vorgehen: Hohe Qualitätsstandards bei den Kernprozessen
+- Annahmen und Ideen testen: Nicht glauben, überprüfen
+- Gute Schätzungen erstellen: "Tacheles reden"$\square$
+:::
+
+### Wissenschaft im Alltag
+
+
+:::{#fig-science-everyday layout-ncol=2}
+
+![Smartphone. Image Credit: Kārlis Dambrāns on Flickr, CC-BY](img/smartphone.jpg){#fig-phone}
+
+![Impfung. Image Credit: NIAID on Flickr, CC-BY](img/vaccine.jpg){#fig-vaccine}
+
+Wissenschaftliche Errungenschaften, die aus dem Alltag nicht wegzudenken sind.
+:::
+
+
+### Wissenschaft und Lernen
+
+:::{#exm-science2}
+
+### Aus der Forschung
+
+Handschriftliche Notizen merkt man sich besser als mit der Tastatur getippte [@mueller_pen_2014].$\square$
+:::
+
+
+
+### Wissenschaft als Wert an sich
+
+Wir verdanken den technischen Fortschritt und damit Wohlstand, Gesundheit, Langlebigkeit und Komfort der Wissenschaft.
+
+Der Geist der Wissenschaft ist: Selber denken. Damit ist Wissenschaftlichkeit die Grundlage der freien Gesellschaft.
+
+
+:::{.callout-important}
+Habe den Mut, dich deines eigenen Verstandes zu bedienen! Das Motto Kants fasst die Idee der Wissenschaft zusammen. Damit kann Wissenschaft verstanden werden als die Grundlage einer aufgeklärten Gesellschaft.
+:::
+
+
+### Reproduzierbarkeit
+
+
+:::{#def-repro}
+### Reproduzierbarkeit
+
+Reproduzierbarkeit ("Wiederholbarkeit") ist das Vermögen, eine Analyse durch Dritte zu wiederholen und zu einem ähnlichen (gleichen) Ergebnis wie in der ursprünglichen Analyse zu bekommen.$\square$
+:::
+
+
+Wenn ein Befund nicht reproduzierbar ist, ist es dann echtes Wissen?
+
+
+
+### Forschung früher und heute
+
+![Forschung früher und heute](img/Forschung_frueher_heute-crop.png)
+
+
+
+### Ein Prozess der Wissenschaft
+
+
+
+![Ein Prozess von Wissenschaft](img/science-process.jpg)
+
+
+
+### Ursachensuche
+
+
+Die Suche nach den Ursache ist vielleicht die wichtigste Aufgabe der Forschung.
+
+
+![Hey, solange wir das „Warum“ einer Sache, also die Ursache, nicht verstanden haben, wissen wir nichts über ein Ding (Aristotle, Physics 194 b17–20)!](img/Aristotle_Altemps_Inv8575.jpg){width="33%"}
+
+[Bildquelle: Jastrow, Wikipedia, Gemeinfrei](https://de.wikipedia.org/wiki/Aristoteles#/media/Datei:Aristotle_Altemps_Inv8575.jpg)
+
+
+
+
+```{mermaid}
+flowchart LR
+  Ursache --> Wirkung
+```
+
+
+- Die Ursache U eines Ereignisses E (Wirkung) ist eine notwendige und/oder hinreichende Bedingung, damit E eintritt.
+
+- Ein Ereignis kann mehrere Ursachen haben.
+
+- Zu jedem Ereignis E gibt es mindestens eine Ursache U.
+
+- Zufall ist keine Ursache, sondern eine Umschreibung für die Tatsache, dass die Ursache unbekannt ist.
+
+- Kennt man eine Ursache eines Ereignisses, so schließt das nicht aus, dass es andere Ursachen gibt.
+
+- Kenntnis der Ursache(n) von E ist i. A. nötig, um den Verlauf bzw. das Eintreten einer Wirkung zu beeinflussen.
+
+- Kenntnis der Ursache(n) von E ist i. A. hilfreich, aber nicht nötig, um den Verlauf bzw. das Eintreten einer Wirkung vorherzusagen.
+
+
+
+
+## Wissenschaftliches Schließen
+
+### Arten des Schließens
+
+Es gibt drei Arten, wie man zu Wissen (über nicht beobachtbare Dinge) kommen kann [@walach_psychologie_2013].
+
+Bohnen! Die Grundfesten der Wissenschaft!
+
+
+![Wissenschaftliches Schließen erklärt anhand von Bohnen...](img/pinto-bean-3728767_640.jpg){width="50%"}
+
+[Quelle: James_Maynard Pixabay Licence](https://pixabay.com/de/photos/pinto-bean-pintobohnen-bohne-bohnen-3728767/)
+
+#### Induktion
+
+>   Hm ich habe schon 30 Bohnen aus dem Sack gezogen … . Alle weiß. Noch 30 Bohnen … schon wieder alle weiß. Ich hab’s: Die Bohnen müssen alle weiß sein!
+
+- Beschreibung: Sammlung vieler Einzelbeobachtungen; atheoretisch bzw. „theorielos“
+- Stärke: Nahe an der „Wirklichkeit“
+- Schwäche: Einzelaussagen können nie sicheres Wissen erzeugen; Die Auswahl von Beobachtungen benötigt eine Theorie
+
+
+#### Abduktion
+
+
+>    Vor mir steht ein Sack; ich sehe, dass Bohnen darin sind. Ich finde eine weiße Bohne irgendwo im Raum auf den Boden. Daraus schließe ich: „Die Bohne muss aus dem Sack sein!
+
+- Beschreibung: Lose verknüpfte Einzel-beobachtungen werden zu einer Theorie verknüpft.
+- Stärke: Kreativ, schafft neues Wissen im Sinne einer „kühnen Vermutung“
+- Schwäche: Fehleranfällig
+
+
+#### Deduktion
+
+
+>    Ich habe die Bohnen in den Sack gefüllt. Sie waren alle weiß. Jetzt nehme ich eine Bohne aus dem Sack: sie ist weiß!
+
+
+- Beschreibung: Aus einer Allgemeinaussage (Theorie) werden Hypothesen logisch abgeleitet.
+- Stärke: Sicheres Wissen bei korrekter Ausführung; „logisch zwingend“
+- Schwäche: Keine wirklich neuen Erkenntnisse möglich
+
+
+
+:::{#exm-schlussarten}
+#### Beispiele zu den Schlussarten
+
+*Induktion* „In meiner Studie-Stichprobe war die IQ im Mittel 120. Daraus schließe ich, dass in der Grundgesamtheit aller Studies der IQ im Mittel 120 beträgt“ (Verallgemeinerung).
+
+*Abduktion* "Joachim, Du hast 10 Mal am Stück Kopf geworfen; das passiert selten bei fairen Münzen. Daher schließe ich, dass Deine Münze nicht fair ist“ (Spekulation! Joachim könnte Glück gehabt haben).
+
+*Deduktion* „In einer Normalverteilung liegen 2/3 aller Werte höchstens eine SD-Einheit vom Mittelwert entfernt. Mir liegt ein Messwert aus einer Normalverteilung vor, der nur als eine halbe SD-Einheit vom Mittelwert ist. Daher schließe ich, dass er zu den inneren 2/3 aller Werte gehört“ (wenn die Regel der Normalverteilung wahr ist, dann muss der Schluss richtig sein, mit Sicherheit).$\square$
+:::
+
+
+:::{.callout-caution}
+Gerade die Deduktion kann man falsch anwenden.
+*Beispiel für korrekte Anwendung*
+
+Annahmen:
+
+1. (Alle) Nobelpreisträger sind schlau.
+2. Albert Einstein ist Nobelpreisträger.
+
+Folgerung:
+
+Albert Einstein ist schlau (richtig!).
+
+*Beispiel für falsche Anwendung*
+
+Annahmen:
+
+1. (Alle) Nobelpreisträger sind schlau.
+2. Alber Einstein ist schlau.
+
+Folgerung:
+
+Albert Einstein ist Nobelpreisträger (falsch!).$\square$
+:::
+
+
+
+
+### Alle zwei Minuten ein Einbruch?
+
+
+Auf der Webseite eines Anbieters für Sicherheitstechnik war zu lesen:
+
+
+>   Alle zwei Minuten findet in Deutschland ein Einbruchversuch statt.
+
+
+
+![Wie oft schlägt er zu?. Bildquelle: Tim Reckmann on flickr, CC-By](img/einbruch.jpg){width="33%"}
+
+
+Wie fundiert ist diese Aussage wohl?
