@@ -1,3 +1,222 @@
 # Wahl des Themas
 
 
+```{r}
+#| include: false
+library(tidyverse)
+```
+
+
+```{r}
+#| include: false
+theme_set(theme_minimal())
+```
+
+## Lernsteuerung
+
+
+### Lernziele
+
+
+## Wo fange ich an?
+
+
+
+Am Anfang hat man (manchmal/oft/immer) keinen Plan. 
+Hey, das ist ganz normal.
+Oft hilft es, den ersten Schritt zu tun: Hauptsache man fängt an.
+Das kennt man vielleicht vom Sport: Hauptsache man fängt an, dann geht es fast wie von alleine.
+Deswegen ist es wichtig, dass Sie einen ersten Schritt tun: 
+Fangen Sie, ein "Thema" zu suchen, s. @fig-themawahl.
+
+
+```{mermaid}
+%%| echo: false
+%%| fig-cap: "Von *Keine Ahnung* bis zu *Ich hab meine Forschungsfrage*"
+%%| label: fig-themawahl
+flowchart LR
+  subgraph D[Literaturarbeit]
+    B[Studie lesen] --> C[etwas mehr Plan]
+    C --> B
+  end
+  A[Kein Plan] --> F[Idee für ein Thema]
+  F --> D
+  D --> E[genaue<br>Forschungsfrage]
+```
+
+
+Beachten Sie, dass ein "Thema" keinesfalls ausreichend ist, um eine wissenschaftliche Studie durchzuführen und zu dokumentieren.
+Ein Thema ist viel zu unpräzise.
+Was Sie brauchen ist eine präzise Forschungsfrage.
+
+
+
+:::{#def-forschungsfrage}
+### Forschungsfrage
+Eine Forschungsfrage definiert die Frage (das Problem), die Sie in Ihrer Arbeit versuchen zu beantworten.$\square$
+:::
+
+
+
+Die Forschungsfrage ist der Leitstern Ihrer Arbeit: (Fast) alles in der Studie sollte darauf ausgerichtet sein, s. @fig-leitstern. Eine Forschungsfrage ist insofern eine Präzisierung des Themas.
+Die Forschungsfrage ist noch nicht so konkret (operationalisiert) wie eine Hypothese, aber dafür verständlich und drückt das Wesentliche aus.
+Aus der Forschungsfrage leiten sich alle Teile der Arbeit ab.
+Eine Arbeit sollte nur eine Forschungsfrage haben.
+
+
+![Forschungsfrage: 💫 Leitstern Ihrer Arbeit](img/leitstern.jpg){#fig-leitstern width="50%"}
+
+:::{#exm-fofrage}
+### Beispiele für Forschungsfragen
+1. „Eiswasser-Challenge“: Reduziert die Zeit, die jemand seine Hand in Eiswasser taucht, seine Durchhaltekraft bei schwierigen Mathe-Aufgaben?
+
+2. Cognitive Reflection Test: Wie ist der Einfluss einer Ablenkung/Zeitdruck/Induktion negativer Gefühle auf die Leistung? 
+
+3. 12 vs. 6 Bespiele für Durchsetzungsfähigkeit: Schätzen sich Probanden, die nur 6 Beispiele nennen mussten, wirklich als durchsetzungsfähiger ein?$\square$
+:::
+
+
+
+### Projektplanung
+
+Wie lange dauert es von "Start" bis "Ziel"? 
+@tbl-zeitplan überschlägt den Zeitbedarf grob und bricht in die wesentliche Arbeitsschritte herunter.
+
+
+```{r}
+#| echo: false
+#| tbl-cap: "Grober Zeitplan für Ihre empirische Seminararbeit"
+#| label: tbl-zeitplan
+
+d <- tribble(
+  ~Nr, ~Arbeitsschritt, ~Zeitbedarf, ~Kommentar,
+  "1", "Themenfindung und Literaturarbeit", "4 Wochen", "Integratives Sichten und Einarbeiten in Ihr Thema",
+  "2", "Versuchsplanung", "3 Wochen", "Planen des Forschungsdesigns inkl. der Messinstrumente",
+  "3", "Versuchsdurchführung", "2 Wochen", "Erheben der Daten",
+  "4", "Datenauswertung", "2 Wochen", "Statistik",
+  "5", "Berichtlegung", "3", "Zusammenschreiben und Finalisieren des Berichts"
+)
+knitr::kable(d)
+```
+
+
+Beachten Sie, dass die einzelnen Arbeitsschritte sich teilweise überlappen.
+
+Es können nur grobe Richtwerte angegeben werden, da die Zeiten je nach Thema, Person und Rahmenbedingungen variieren. Es bietet sich an, die Ergebnisse jedes Arbeitsschrittes in Rohform zu strukturieren und zu dokumentieren, so dass während der Berichtlegung nur noch ein Zusammenschreiben stattfindet.
+
+
+
+
+
+
+## Die drei Blicke beim Lesen eines Fachartikels
+
+
+### So liest man technische Literatur
+
+Lesen Sie "technische" Literatur nicht von vorne nach hinten, wie Sie einen Roman lesen würde.
+Lesen Sie stattdessen vom Wichtigsten zum Zweitwichtigsten zum Drittwichtigsten. 
+Häufig reicht es, danach mit dem Lesen dieses Dokuments aufzuhören.
+
+
+Die Abschnitte eines Fachartikels mit der höchsten Inhaltsdichte sind zumeist: 
+
+1. Titel
+2. Abstract
+3. Diagramme
+4. Erster Teil der Diskussion
+
+
+### Die Methode der drei Blicke
+
+Die Methode der "drei Blicke" erlaubt Ihnen, das Wesentliche (oder einen Teil davon) eines Fachartikels in kurzer Zeit zu erfassen.
+
+
+#### 👁️ Blick 1: Die Essenz
+
+1. Was ist *die* Forschungsfrage des Artikels?
+2. Wie lautet *die* Antwort darauf?
+3. Wie ist der Ablauf der Studie (aus Sicht der Versuchsperson)?
+
+
+
+#### 👁 Blick 2: Die Qualität
+
+1. Sind Kausalaussgen möglich?
+2. Ist die theoretische Basis solide?
+3. Gibt es Ungereimtheiten ([Intransparenz](http://www.sciencecartoonsplus.com/pages/gallery.php), Interessenskonflikte,...)?
+
+
+
+#### 👁 Blick 3: Die Details
+
+1. Auf welche Theorien und Befunde wurde zurückgegriffen?
+2. Welche empirischen Methoden wurden verwendet?
+3. Wie lauten die Ergebnisse im Detail?
+
+
+
+
+## Fachartikel verstehen
+
+
+### Die Schmink-Studie
+
+:::{#exr-schminken}
+### Schmink-Studie
+Erarbeiten Sie sich die ["Schmink-Studie"](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0025656)  mit Hilfe der "drei Blicke"! 👁👁👁 ([PDF-Version hier](https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0025656&type=printable))$\square$
+:::
+
+
+
+#### Blick 1: Die Essenz
+
+Lesen wir uns den Titel durch, in der Hoffnung, die Forschungsfrage zu verstehen:
+
+
+>   Cosmetics as a feature of the extended human phenotype: Modulation of the perception of biologically important facial signals
+
+
+Puh! Das ist schwer zu verstehen. Klingt fast schon "dick aufgetragen"^[Wer könnte das einer Studie zum Thema Schminken übel nehmen?].
+Verdacht: Der Titel ist eine Nebelkerze.🕯️
+
+Okay, gehen wir weiter zum Abstract, vielleicht ist der verständlicher. Greifen wir uns ein paar zentrale Brocken heraus.
+
+
+>   perception of faces
+
+>    ignored the effects of adornment
+
+>    Here, we investigate one tool, the use of color cosmetics. 
+
+>    we asked viewers to rate the same female faces with or without color cosmetics, and we varied the style of makeup from minimal (natural), to   moderate (professional), to dramatic (glamorous). 
+
+>   subjects rated them for attractiveness, competence, likeability and trustworthiness. 
+
+>   cosmetics had significant positive effects on all outcomes.
+
+Ah! Das ist doch schon viel verständlicher.
+
+Die Forschungsfrage ist wohl ungefähr:
+
+
+>   Wie ist der Effekt von Schminke auf Attraktivität und andere persönlichen Eigenschaften?
+
+
+:::{.callout-important}
+Nach dem Lesen des Abstracts hat man oft schon ein gutes Verständnis, worum es in der Studie geht: Was die Forschungsfrage ist, was das zentrale Ergebnis ist, und wie die Studie grob ablief.
+:::
+
+Werfen wir noch einen Blick in die Abbildungen; die erste Abbildung der Studie ist @fig-schmink1. 
+Man sieht klar^[sozusagen ungeschminkt], dass das Ausmaß des Schminkens variiert wurde.
+
+![Figure 1. Models without makeup and with natural, professional and glamorous makeup.](img/schmink1.png){#fig-schmink1 width="50%"}
+
+
+Durch nur einen kursorischen Blick auf Titel, Abstract und Abbildungen haben wir den "1. Blick" erfolgreich abgeschlossen und ein gutes Verständnis, worum es in der Studie geht.
+
+
+
+## Literatur
+
+

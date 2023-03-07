@@ -1,16 +1,126 @@
 # Rahmen: Hallo Forschung!
 
 
+```{r}
+#| include: false
+library(dplyr)
+```
+
+
+![Hallo Forschung! Wer bist und wer bin ich?](img/spiro1.png){width="25%"}
+
+
+:::{.xsmall}
+This image and their code are taken from the [phantastic Spiro R package](https://wjschne.github.io/spiro/articles/Gallery/Gallery.html) bei [W. J. Schneider](https://github.com/wjschne). Eine schöne Fraktalsammlung findet sich bei [Flickr](https://www.flickr.com/search/?text=fractal). Eine interessante, aber recht eigenwillige Antwort auf die Frage " Wer bist und wer bin ich?" liefert @hofstadter_ich_2008.
+:::
+
+
+## Lernsteuerung
+
+
+### Lernziele
+
+
+### Blick zum Fahrplan
+
+Sie stehen am Anfang Ihrer Reise 😄.
+Wenn Sie es mir nicht glauben, werfen Sie einen Blick auf @fig-ueberblick.
+
+
+## Wissenschaft zum Anschauen
+
+
+Wissenschaftsmagazine wie [In-Mind](https://de.in-mind.org/), [Alltagsforschung.de](https://www.alltagsforschung.de/) oder [Psychologie Heute](https://www.psychologie-heute.de/) arbeiten psychologische Forschungsarbeiten auf und präsentieren sie "sofagerecht", also einfach zu rezipieren.
+
+::: {.content-visible unless-format="pdf"}
+
+![Eine sofa-taugliche Annäherung an Forschung](img/inmind.jpg){width="50%"}
+:::
+
+
+Der Nachteil solcher Magazine ist die Oberflächlichkeit der Darstellung: Viele Fragen zu der vorgestellten Forschung wird ein Bericht aus einem solchen Magazin unbeantwortet lassen.
+Der Nutzen solcher Magazine ist in ihrem Inspirationscharakter zu sehen:
+Man liest von faszinierender Forschung, fängt an, Fragen zu stellen und entwickelt Ideen (und Freude auf) eigene Forschung.
+Grund genug, dass wir uns einmal mit solchen Magazinen beschäftigen.
+
+:::{#exr-inmind}
+#### Erarbeiten Sie eine Studie aus einem Wissenschaftsmagazin!
+Suchen Sie sich eine Studie aus einem Wissenchaftsmagazin und arbeiten Sie die Kernaspekte heraus. Erarbeiten Sie ein Profil der Studie. Orientieren Sie sich an dem Leitfaden aus @tbl-studienprofil.
+:::
+
+
+
+```{r}
+#| echo: false
+#| label: tbl-studienprofil
+#| tbl-cap: "Vorlage zur Erstellung eines Studienprofils"
+d <- tribble(
+  ~Kriterium,
+  "Forschungsfrage",
+  "Ursache",
+  "Wirkung",
+  "Hauptergebnis",
+  "Stichprobengröße",
+  "Studienablauf",
+  "Interessant ist ...",
+  "Ansatzpunkt für weitere Studien..."
+) %>% 
+  mutate(id = 1:n(),
+         Text = "...") %>% 
+  relocate(id, .before = 1)
+kable(d)
+```
+
+Ein Studienprofil wie in @tbl-studienprofil passt nicht auf jede Studie, aber auf viele. 
+Modifizieren Sie ggf. das Studienprofil, so dass es zu Ihrer Studie passt.
+
+
+
+### Popscience-Bücher
+
+Fachartikel zu Fachbuch verhält sich wie Wissenschaftsmagazin zu Popscience-Buch.
+
+Hier sind einige Beispiele für solche Bücher.
+
+:::{#exm-popscience}
+### Auswahl an lesenswerten Popscience-Büchern
+@kahneman2012schnelles, @Ariely2012, @cialdini_psychologie_2017, @ariely_denken_2015
+:::
+
+:::{#exr-yourpop}
+### Welche Popscience-Bücher kennen Sie?
+Stellen Sie ein Popscience-Buch kurz vor! Orientieren Sie sich an folgender Gliederung:
+
+1. Kernaussage des Buches
+2. Gut fand ich an dem Buch, ...
+3. Weniger gut fand ich an dem Buch, ...
+4. Interessant fand ich ...
+
+Tipp: Lassen Sie sich ähnliche Bücher wie in @exm-popscience vorschlagen, wenn Sie keinen Zugang finden.
+:::
+
+
+### Echte Forschung aus studentischer Feder
+
+
+Auf der Seite [des Instituts für Wirtschaftspsychologie (iwp) der FOM Hochschule](https://www.fom.de/forschung/institute/iwp-institut-fuer-wirtschaftspsychologie/publikationen/iwp-schriftenreihe.html) finden Sie eine Auswahl an insgesamt gut aufbereiteten psychologischen Studien aus studentischer Feder.
+
+
+:::{#exr-iwp}
+### Einblick in studentische Forschung
+Lesen Sie eine studentische Forschungsarbeit quer und präsentieren Sie die wesentlichen Ergebnisse! Nutzen Sie @tbl-studienprofil zur Gliederung Ihrer Analyse.
+:::
+
+
+
+
 
 ## Was ist Wissenschaft?
 
 
-![Was ist Wissenschaft?](img/spiro1.png){width="25%"}
 
 
-:::{.xsmall}
-This image and their code are taken from the [phantastic Spiro R package](https://wjschne.github.io/spiro/articles/Gallery/Gallery.html) bei [W. J. Schneider](https://github.com/wjschne). Eine schöne Fraktalsammlung findet sich bei [Flickr](https://www.flickr.com/search/?text=fractal).
-:::
+
 
 
 ### Definitionsversuche
@@ -23,13 +133,25 @@ Wissenschaft ist ein systematisches Unterfangen, das Wissen erzeugt und organisi
 :::
 
 
-Disziplinen, die wissenschaftliche Erkenntnisse zur Lösung praktischer Probleme nutzen (wie Medizin oder Wirtschaftspsychologie), nennt man auch angewandte Wissenschaft; Wissenschaftszweige mit weniger Anwendungsbezug nennt man Grundlagenwissenschaft.
+Disziplinen, die wissenschaftliche Erkenntnisse zur Lösung praktischer Probleme nutzen (wie Medizin oder Wirtschaftspsychologie), nennt man auch angewandte Wissenschaft; Wissenschaftszweige mit weniger (direktem) Anwendungsbezug nennt man Grundlagenwissenschaft.
 
 Aspekte der Wissenschaft, die die Erzeugung von Wissen in den Vordergrund stellen, nennt man Forschung.
 
 Die Art und Weise der Wissenschaft nennt man die wissenschaftliche Methode. Die wissenschaftliche Methode ist geprägt von dem Versuch, das Universum objektiv und reproduzierbar zu erklären. Damit ist gemeint, dass rationale und fachlich informierte Menschen zu der gleichen Einschätzung eines wissenschaftlichen Arguments kommen sollten. Die Falsifizierung einer Hypothese stellt für viele das Kennzeichen wissenschaftlichen Fortschritts dar. Verifizieren wird hingegen von vielen als kein starkes Mittel wissenschaftlichen Fortschritts gesehen. Daraus kann die Relevanz des Zweifelns (Skeptizismus) für die Wissenschaft abgeleitet werden.
 
-Die Mathematik hat sich in der Rückschau als das (vielleicht) nützlichste Werkzeug der (empirischen) Wissenschaft herausgestellt.
+
+
+Da die Phänomene der Welt (Evolution, Gravitation, Liebe, Inflation, Agression, ...) komplex sind, neigen auch die Erklärungsansätze der Wissenschaft dazu, kompliziert zu sein.
+
+
+:::{#exm-theorie}
+Die Wissenschaft organisiert ihr Wissen (auch) in Theorien. Theorien sind ein Bündel von Aussagen. Diese Aussagen sind 
+
+- aufeinander bezogen
+- widerspruchsfrei
+- prüfbar$\square$
+:::
+
 
 
 :::{#exm-science}
@@ -42,10 +164,12 @@ Zu den bekanntesten und einflussreichsten Theorien gehören die Evolutionstheori
 
 Zu den (gewünschten^["Desiderata"]) Eigenschaften von Wissenschaft gehören:
 
-- *Objektivität*: Ein Befund hängt nicht davon ab, wer Messungen oder einen Versuch durchführt
-- *Offenheit*: Nicht glauben müssen, sondern selber nachprüfen können
+- *Objektivität*: Ein Befund hängt nicht davon ab, wer Messungen oder einen Versuch durchführt. Die Sprache ist nüchtern und unvoreingenommen.
+- *Offenheit*: Der Leser muss nicht glauben, sondern kann selber nachprüfen.
 - *Abstraktion*: Eine wissenschaftliche Aussage soll möglichst weite Gültigkeit besitzen, Spezifika von Einzelfällen werden auf zugrundeliegende Konstanzen verallgemeinert
 - *Analyse*: Komplexe Probleme werden soweit als möglich in Einzelaspekte aufgebrochen^[https://www.savagechickens.com/2021/07/big-question.html]
+- *Evidenzgründung*: Schlüsse werden auf Basis von Daten (Fakten, Messungen, etc.) gezogen.
+- *Quellen*: Aussagen werden mit Quellenangaben untermauert.
 
 
 
@@ -68,6 +192,23 @@ Zitate zu den Eigenschaften von Wissenschaft
 
 >    Wenn alle Experten sich einig sind, ist Vorsicht geboten. – Bertrand Russel
 
+
+
+### Mathematik als Grundlage der Wissenschaft?
+
+
+::: {.content-visible unless-format="pdf"}
+
+![Mathematik als ultimative Form der Wissenschaft?](img/purity.png)
+:::
+
+
+Im XKCD-Cartoon [435](https://www.explainxkcd.com/wiki/index.php/435:_Purity) wird Mathematik als Grundlage der Wissenschaften dargestellt.
+
+:::{#exr-xkcd} 
+### Ist die Mathematik die Grundlage der Wissenschaften?
+Beziehen Sie Stellung zu dem Cartoon und den damit verbundenen Aussagen!
+:::
 
 
 
@@ -352,4 +493,35 @@ Auf der Webseite eines Anbieters für Sicherheitstechnik war zu lesen:
 ![Wie oft schlägt er zu?. Bildquelle: Tim Reckmann on flickr, CC-By](img/einbruch.jpg){width="33%"}
 
 
-Wie fundiert ist diese Aussage wohl?
+:::{#exr-einbruch}
+### Wie viele Einbrüche passieren in Deutschland? 
+Wie fundiert ist obige Aussage zu "alle zwei Minuten" wohl? 
+:::
+
+
+
+## Fazit
+
+Vorsicht: Forschung kann süchtig machen, s. [XKCD 1564](https://www.explainxkcd.com/wiki/index.php/1564:_Every_Seven_Seconds).
+
+
+::: {.content-visible unless-format="pdf"}
+
+![Das sind Sie nach der Lektüre dieses Buchs](img/every_seven_seconds.png){width="50%"}
+:::
+
+
+
+## Vertiefung
+
+Was ist Wissenschaft? -- Antworten auf diese Frage versucht u.a. @chalmers_wege_2007 zu geben. Einen breiteren Fokus auf die methodologischen Grundlagen der Psychologie liefert @walach_psychologie_2013. 
+Wer sich mit den Grundlagen der Logik befassen möchte - als Fundament vernünftiger Aussagen -, der findet etwa bei @suppes_introduction_1999 eine nützliche Einführung.
+Sie zweifeln, ob die Psychologie überhaupt eine Wissenschaft ist? Das ist keine Blasphemie, wie man @galliker_ist_2016 nachlesen kann.
+Dass Psychologie eine Wissenschaft ist, ist für @dienes_understanding_2008 klar. Übrigens ist dieses Buch weit rezipiert worden, mit positivem Echo.
+Wer Lust hat auf einen Klassiker der Wissenschaftstheorie, der kommt an @popper_logik_2013 nicht vorbei.
+
+
+
+
+
+## Literatur

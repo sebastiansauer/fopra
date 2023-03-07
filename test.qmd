@@ -1,0 +1,7 @@
+
+
+
+::: {.content-visible unless-format="pdf"}
+
+![Das sind Sie nach der Lektüre dieses Buchs](img/science.gif){width="50%"}
+:::

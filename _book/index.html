@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.2.280">
+<meta name="generator" content="quarto-1.3.247">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="author" content="Sebastian Sauer">
 <title>Forschungsprojekt</title>
@@ -15,7 +15,7 @@ div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
   width: 0.8em;
-  margin: 0 0.8em 0.2em -1.6em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
 </style>
@@ -60,54 +60,66 @@ ul.task-list li input[type="checkbox"] {
 <body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }"><div class="container-fluid d-flex justify-content-between">
-      <h1 class="quarto-secondary-nav-title">Forschungsprojekt</h1>
-      <button type="button" class="quarto-btn-toggle btn" aria-label="Show secondary navigation">
-        <i class="bi bi-chevron-right"></i>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Hinweise</a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
       </button>
     </div>
   </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Forschungsprojekt</a> 
     </div>
       </div>
-      <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="mt-2 flex-shrink-0 align-items-center">
         <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
+        <div id="quarto-search" class="" title="Suchen"></div>
         </div>
-      </div>
+        </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">Hinweise</a>
+  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Hinweise</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./rahmen.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Rahmen: Hallo Forschung!</span></a>
+  <a href="./rahmen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Rahmen: Hallo Forschung!</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./themawahl.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Wahl des Themas</span></a>
+  <a href="./themawahl.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Wahl des Themas</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./pruefung.html" class="sidebar-item-text sidebar-link"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Prüfung</span></a>
+  <a href="./pruefung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Prüfung</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link">References</a>
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
   </div>
 </li>
     </ul>
 </div>
-</nav><!-- margin-sidebar --><div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+</nav><div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
@@ -115,36 +127,23 @@ ul.task-list li input[type="checkbox"] {
 <a href="#hinweise" id="toc-hinweise" class="nav-link active" data-scroll-target="#hinweise">Hinweise</a>
   <ul class="collapse">
 <li><a href="#was-r%C3%A4t-meister-yoda" id="toc-was-rät-meister-yoda" class="nav-link" data-scroll-target="#was-r%C3%A4t-meister-yoda">Was rät Meister Yoda?</a></li>
-  <li><a href="#lernziele" id="toc-lernziele" class="nav-link" data-scroll-target="#lernziele">Lernziele</a></li>
+  <li>
+<a href="#ihr-lernerfolg" id="toc-ihr-lernerfolg" class="nav-link" data-scroll-target="#ihr-lernerfolg">Ihr Lernerfolg</a>
+  <ul class="collapse">
+<li><a href="#lernziele" id="toc-lernziele" class="nav-link" data-scroll-target="#lernziele">Lernziele</a></li>
   <li><a href="#was-lerne-ich-hier-und-wozu-ist-das-gut" id="toc-was-lerne-ich-hier-und-wozu-ist-das-gut" class="nav-link" data-scroll-target="#was-lerne-ich-hier-und-wozu-ist-das-gut">Was lerne ich hier und wozu ist das gut?</a></li>
   <li><a href="#voraussetzungen" id="toc-voraussetzungen" class="nav-link" data-scroll-target="#voraussetzungen">Voraussetzungen</a></li>
   <li><a href="#%C3%BCberblick" id="toc-überblick" class="nav-link" data-scroll-target="#%C3%BCberblick">Überblick</a></li>
-  <li><a href="#software" id="toc-software" class="nav-link" data-scroll-target="#software">Software</a></li>
-  <li><a href="#pdf-version" id="toc-pdf-version" class="nav-link" data-scroll-target="#pdf-version">PDF-Version</a></li>
+  <li><a href="#modulzeitplan" id="toc-modulzeitplan" class="nav-link" data-scroll-target="#modulzeitplan">Modulzeitplan</a></li>
+  </ul>
+</li>
   <li>
 <a href="#lernhilfen" id="toc-lernhilfen" class="nav-link" data-scroll-target="#lernhilfen">Lernhilfen</a>
   <ul class="collapse">
-<li><a href="#videos" id="toc-videos" class="nav-link" data-scroll-target="#videos">Videos</a></li>
-  <li><a href="#online-unterst%C3%BCtzung" id="toc-online-unterstützung" class="nav-link" data-scroll-target="#online-unterst%C3%BCtzung">Online-Unterstützung</a></li>
-  <li><a href="#selbstlernkontrolle" id="toc-selbstlernkontrolle" class="nav-link" data-scroll-target="#selbstlernkontrolle">Selbstlernkontrolle</a></li>
-  <li><a href="#forum" id="toc-forum" class="nav-link" data-scroll-target="#forum">Forum</a></li>
-  <li><a href="#lerntipps" id="toc-lerntipps" class="nav-link" data-scroll-target="#lerntipps">Lerntipps</a></li>
+<li><a href="#pdf-version" id="toc-pdf-version" class="nav-link" data-scroll-target="#pdf-version">PDF-Version</a></li>
   </ul>
 </li>
-  <li><a href="#modulzeitplan" id="toc-modulzeitplan" class="nav-link" data-scroll-target="#modulzeitplan">Modulzeitplan</a></li>
-  <li>
-<a href="#didaktik" id="toc-didaktik" class="nav-link" data-scroll-target="#didaktik">Didaktik</a>
-  <ul class="collapse">
-<li><a href="#einstreuer" id="toc-einstreuer" class="nav-link" data-scroll-target="#einstreuer">“Einstreuer”</a></li>
-  <li><a href="#buch-2.0" id="toc-buch-2.0" class="nav-link" data-scroll-target="#buch-2.0">“Buch 2.0”</a></li>
-  <li><a href="#barrierefrei" id="toc-barrierefrei" class="nav-link" data-scroll-target="#barrierefrei">Barrierefrei</a></li>
-  <li><a href="#kompetenzorientiert" id="toc-kompetenzorientiert" class="nav-link" data-scroll-target="#kompetenzorientiert">Kompetenzorientiert</a></li>
-  <li><a href="#praxisbezug" id="toc-praxisbezug" class="nav-link" data-scroll-target="#praxisbezug">Praxisbezug</a></li>
-  <li><a href="#anschaulichkeit" id="toc-anschaulichkeit" class="nav-link" data-scroll-target="#anschaulichkeit">Anschaulichkeit</a></li>
-  <li><a href="#bildreichtum" id="toc-bildreichtum" class="nav-link" data-scroll-target="#bildreichtum">Bildreichtum</a></li>
-  </ul>
-</li>
-  <li><a href="#literatur" id="toc-literatur" class="nav-link" data-scroll-target="#literatur">Literatur</a></li>
+  <li><a href="#didaktik" id="toc-didaktik" class="nav-link" data-scroll-target="#didaktik">Didaktik</a></li>
   <li><a href="#organisatorische-hinweise" id="toc-organisatorische-hinweise" class="nav-link" data-scroll-target="#organisatorische-hinweise">Organisatorische Hinweise</a></li>
   <li><a href="#technische-details" id="toc-technische-details" class="nav-link" data-scroll-target="#technische-details">Technische Details</a></li>
   <li><a href="#literatur-1" id="toc-literatur-1" class="nav-link" data-scroll-target="#literatur-1">Literatur</a></li>
@@ -154,7 +153,7 @@ ul.task-list li input[type="checkbox"] {
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title d-none d-lg-block">Forschungsprojekt</h1>
+<h1 class="title">Lernhilfen</h1>
 </div>
 
 
@@ -171,7 +170,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Veröffentlichungsdatum</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">3. März 2023</p>
+      <p class="date">7. März 2023</p>
     </div>
   </div>
   
@@ -181,7 +180,7 @@ ul.task-list li input[type="checkbox"] {
 
 </header><section id="hinweise" class="level1 unnumbered"><h1 class="unnumbered">Hinweise</h1>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="img/Albert_Einstein_Head.jpg" class="img-fluid figure-img" style="width:50.0%"></p>
+<figure class="figure"><p><img src="img/Albert_Einstein_Head.jpg" class="img-fluid figure-img" style="width:25.0%"></p>
 <p></p><figcaption class="figure-caption">Wissenschaft, das ist Analyse und Kreativität. Und cooles Hairstyling.</figcaption><p></p>
 </figure>
 </div>
@@ -189,20 +188,21 @@ ul.task-list li input[type="checkbox"] {
 <section id="was-rät-meister-yoda" class="level2"><h2 class="anchored" data-anchor-id="was-rät-meister-yoda">Was rät Meister Yoda?</h2>
 <p>Meister Yoda rät: Lesen Sie die Hinweise (<a href="#fig-yoda">Abbildung&nbsp;<span>1</span></a>).</p>
 <div id="fig-yoda" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="img/yoda.jpg" class="img-fluid figure-img" style="width:50.0%"></p>
+<figure class="figure"><p><img src="img/yoda.jpg" class="img-fluid figure-img" style="width:33.0%"></p>
 <p></p><figcaption class="figure-caption">Abbildung&nbsp;1: Lesen Sie die folgenden Hinweise im eigenen Interesse</figcaption><p></p>
 </figure>
 </div>
 <div class="xsmall">
 <p><a href="&quot;https://imgflip.com/memegenerator&quot;">Quelle: made at imageflip</a></p>
 </div>
-</section><section id="lernziele" class="level2"><h2 class="anchored" data-anchor-id="lernziele">Lernziele</h2>
-<div class="callout-important callout callout-style-default callout-captioned">
+</section><section id="ihr-lernerfolg" class="level2"><h2 class="anchored" data-anchor-id="ihr-lernerfolg">Ihr Lernerfolg</h2>
+<section id="lernziele" class="level3"><h3 class="anchored" data-anchor-id="lernziele">Lernziele</h3>
+<div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<div class="callout-caption-container flex-fill">
+<div class="callout-title-container flex-fill">
 Wichtig
 </div>
 </div>
@@ -221,16 +221,16 @@ Wichtig
 </ul>
 </li>
 <li>Die Studentis können quantitative psychologische Studien auf ihre Güte hin kritisch untersuchen.</li>
-</ul></section><section id="was-lerne-ich-hier-und-wozu-ist-das-gut" class="level2"><h2 class="anchored" data-anchor-id="was-lerne-ich-hier-und-wozu-ist-das-gut">Was lerne ich hier und wozu ist das gut?</h2>
+</ul></section><section id="was-lerne-ich-hier-und-wozu-ist-das-gut" class="level3"><h3 class="anchored" data-anchor-id="was-lerne-ich-hier-und-wozu-ist-das-gut">Was lerne ich hier und wozu ist das gut?</h3>
 <p>Das Modul “Research Project” ist das vielleicht schönste Modul in Ihrem Studiengang: Es vereint echtes Problemlösen mit Kreativität und wohl fundierter Analyse. Sie haben viele Freiheitsgrade: Führen Sie eine echte Studie durch, unterstützt von den Dozentis und nach Ihren Vorstellungen. Jedes Mal erlebt man als Dozenti aufs Neue studentische Studien, die begeistern. Um nur ein Beispiel zu nennen: Vor einiger Zeit zeigt eine Gruppe, dass es sich lohnt, Follower bei Instagram zu kaufen – die Anzahl der Likes steigt überproportional an. Ach ja, falls Sie es sich schon mal gefragt haben: Wer als Mann mit einem Sportwagen auf dem Profilfoto der Single-Börse posiert, erntet ebenfalls mehr Likes als ohne Karre, zumindest laut einem studentischen Experiment … Vielleicht sollten Sie diese Studie auch dringend replizieren, vielleicht wurde ja ein entscheidendes Detail übersehen? Sie Forschung wartet auf Sie!</p>
 <p>Kurz gesagt lernen Sie also, wie man eine wissenschaftliche Studie durchzieht. Das können Sie als Generalprobe für die Abschlussarbeit nutzen. Für Ihre berufliche Laufbahn ist Forschungskompetenz vielleicht die zentrale Kompetenz, wenn Sie nicht nur Bekanntes abarbeiten möchten, sondern Abläufe verbessern, Produkte erneuern, Chancen entdecken wollen – wenn Sie Neuland betreten und Dinge weiterentwickeln wollen.</p>
-</section><section id="voraussetzungen" class="level2"><h2 class="anchored" data-anchor-id="voraussetzungen">Voraussetzungen</h2>
+</section><section id="voraussetzungen" class="level3"><h3 class="anchored" data-anchor-id="voraussetzungen">Voraussetzungen</h3>
 <p>Um von diesem Kurs am besten zu profitieren, sollten Sie Folgendes mitbringen:</p>
 <ul>
 <li>Bereitschaft, Neues zu lernen</li>
 <li>Kenntnis grundlegender Methoden wissenschaftlichen Arbeitens</li>
 <li>Kenntnis in grundlgenden statstischen Verfahren (EDA, Regression, Inferenz)</li>
-</ul></section><section id="überblick" class="level2"><h2 class="anchored" data-anchor-id="überblick">Überblick</h2>
+</ul></section><section id="überblick" class="level3"><h3 class="anchored" data-anchor-id="überblick">Überblick</h3>
 <p>Abb. <a href="#fig-ueberblick">Abbildung&nbsp;<span>2</span></a> gibt einen Überblick über den Verlauf und die Inhalte des Buches. Das Diagramm hilft Ihnen zu verorten, wo welches Thema im Gesamtzusammenhang steht.</p>
 <div id="fig-ueberblick" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><p><img src="img/fahrplan.png" class="img-fluid figure-img" style="width:75.0%"></p>
@@ -238,79 +238,16 @@ Wichtig
 </figure>
 </div>
 <p>Das Diagramm zeigt den Ablauf einer typischen Datenanalyse. Natürlich kann man sich auch andere sinnvolle Darstellungen dieses Ablaufs vorstellen.</p>
-</section><section id="software" class="level2"><h2 class="anchored" data-anchor-id="software">Software</h2>
-<p>Installieren Sie <a href="https://data-se.netlify.app/2021/11/30/installation-von-r-und-seiner-freunde/">R und seine Freunde</a>. Für die Bayes-Inferenz brauchen Sie<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> zusätzliche Software, was leider etwas Zusatzaufwand erfordert. Lesen Sie <a href="https://data-se.netlify.app/2022/01/28/bayes-software-installieren-f%C3%BCr-r/">hier</a> die Hinweise dazu. Installieren Sie die folgende R-Pakete<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>:</p>
-<ul>
-<li>tidyverse</li>
-<li>easystats</li>
-<li>weitere Pakete werden im Unterricht bekannt gegeben (es schadet aber nichts, jetzt schon Pakete nach eigenem Ermessen zu installieren)</li>
-</ul>
-<p><a href="https://github.com/sebastiansauer/Lehre">R Syntax aus dem Unterricht</a> findet sich im Github-Repo bzw. Ordner zum jeweiligen Semester.</p>
-</section><section id="pdf-version" class="level2"><h2 class="anchored" data-anchor-id="pdf-version">PDF-Version</h2>
-<p>– EXPERIMENTAL 🔬🧪 – EXPERIMENTAL</p>
-<p>Von diesem “Webbuch” (HTML-Format) gibt es <a href="_book/statistik1.pdf">hier eine PDF-Version</a>. Die PDF-Version eignet sich zum Ausdrucken und zur Offline-Nutzung.</p>
-<p>Allerdings wurden die Inhalte <em>in erster Linie für ein Webbuch-Format</em> formatiert, die PDF-Ausgabe ist daher nicht ideal. Es ist empfehlenswert, mit der Webbuch-Version zu arbeiten. Außerdem wird die PDF-Version nicht ganz aktuell gehalten - die aktuelle Version ist immer die Webbuch-Variante. Prüfen Sie im Zweifel das Datum der Erstellung des Dokuments.</p>
-</section><section id="lernhilfen" class="level2"><h2 class="anchored" data-anchor-id="lernhilfen">Lernhilfen</h2>
-<section id="videos" class="level3"><h3 class="anchored" data-anchor-id="videos">Videos</h3>
-<p>Auf dem <a href="https://www.youtube.com/channel/UCkvdtj8maE7g-SOCh4aDB9g">YouTube-Kanal des Autors</a> finden sich eine Reihe von Videos mit Bezug zum Inhalt dieses Buchs. Besonders <a href="https://youtube.com/playlist?list=PLRR4REmBgpIEzVFLvzCn76TB2VS4jXcfg">diese Playlist</a> passt zu den Inhalten dieses Buchs.</p>
-</section><section id="online-unterstützung" class="level3"><h3 class="anchored" data-anchor-id="online-unterstützung">Online-Unterstützung</h3>
-<p>Dieser Kurs kann in Präsenz und Online angeboten werden. Wenn Sie die Wahl haben, empfehle ich die Teilnahme in Präsenz, da der Lernerfolg höher ist. Online ist es meist schwieriger, sich zu konzentrieren. Aber auch online ist es möglich, den Stoff gut zu lernen.</p>
-<p>Hier finden Sie einige Werkzeuge, die das Online-Zusammenarbeiten vereinfachen:</p>
-<ul>
-<li>
-<a href="https://frag.jetzt/home">Frag-Jetzt-Raum zum anonymen Fragen stellen während des Unterrichts</a>. Der Keycode wird Ihnen bei Bedarf vom Dozenten bereitgestellt.</li>
-<li>
-<a href="https://de.padlet.com/">Padlet</a> zum einfachen (und anonymen) Hochladen von Arbeitsergebnissen der Studentis im Unterricht. Wir nutzen es als eine Art Pinwand zum Sammeln von Arbeitsbeiträgen. Die Zugangsdaten stellt Ihnen der Dozent bereit.</li>
-</ul></section><section id="selbstlernkontrolle" class="level3"><h3 class="anchored" data-anchor-id="selbstlernkontrolle">Selbstlernkontrolle</h3>
-<p>Für jedes Kapitel sind (am Kapitelende) Aufgaben eingestellt, jeweils mit Lösung. Ein Teil dieser Aufgaben hat eine kurze, eindeutige Lösung (z.B. “42” oder “Antwort C”); ein (kleiner) Teil der Aufgaben verlangen komplexere Antworten (z.B. “Welche Arten von Prioris gibt es bei <code>stan_glm()</code>?). Nutzen Sie die Fragen mit eindeutiger, kurzer Lösung um sich selber zu prüfen. Nutzen Sie die Fragen mit komplexerer, längerer Lösung, um ein Themengebiet tiefer zu erarbeiten.</p>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Hinweis
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Fortwährendes Feedback zu Ihrem Lernfortschritt ist wichtig, damit Sie Ihre Lernbemühungen steuern können. Bearbeiten Sie daher die bereitgestellten Arbeiten ernsthaft.</p>
-</div>
-</div>
-</section><section id="forum" class="level3"><h3 class="anchored" data-anchor-id="forum">Forum</h3>
-<p>Nutzen Sie das vom Dozenten bereitgestelle Forum, um Fragen zu stellen und Fragen zu beantworten.</p>
-</section><section id="lerntipps" class="level3"><h3 class="anchored" data-anchor-id="lerntipps">Lerntipps</h3>
-<div class="callout-note callout callout-style-default callout-captioned">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-caption-container flex-fill">
-Hinweis
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Stetige Mitarbeit - auch und gerade außerhalb des Unterrichts - ist der Schlüssel zum Prüfungserfolg.</p>
-</div>
-</div>
-<ul>
-<li>Lerngruppe: Treten Sie einer Lerngruppe bei.</li>
-<li>Tutorium: Besuchen Sie ein Tutorium, falls eines angeboten wird.</li>
-<li>Vor- und Nachbereitung: Bereiten Sie den Unterricht vor und nach.</li>
-<li>Selbsttest: Testen Sie sich mit Flashscards (Karteikarten mit Vor- und Rückseite). Wenn Sie alle Aufgaben dieses Kurses aus dem FF beherrschen, sollte die Prüfung kein Problem sein.</li>
-<li>Übungen: Bearbeiten Sie alle Übungsaufgaben gewissenhaft.</li>
-<li>Portal Datenwerk: Gehen Sie die Aufgaben auf dem Portal <a href="https://datenwerk.netlify.app/">Datenwerk</a> durch (soweit relevant).</li>
-<li>Fallstudien: Schauen Sie sich meine Fallstudiensammlungen an: https://sebastiansauer-academic.netlify.app/courseware/casestudies/</li>
-<li>Lehrkraft ansprechen: Sprechen Sie die Lehrkraft an, wenn Sie Fragen haben. Haben Sie keine Scheu! Bitte lesen Sie aber vorab die Hinweise, um Redundanz zu vermeiden (s. <a href="#fig-yoda">Abbildung&nbsp;<span>1</span></a>).</li>
-</ul></section></section><section id="modulzeitplan" class="level2"><h2 class="anchored" data-anchor-id="modulzeitplan">Modulzeitplan</h2>
+</section><section id="modulzeitplan" class="level3"><h3 class="anchored" data-anchor-id="modulzeitplan">Modulzeitplan</h3>
 <div class="cell">
 <div class="cell-output-display">
 
-<div id="bwvvhsxcys" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="kqvnmhcqnx" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#bwvvhsxcys .gt_table {
+#kqvnmhcqnx .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -335,7 +272,7 @@ Hinweis
   border-left-color: #D3D3D3;
 }
 
-#bwvvhsxcys .gt_heading {
+#kqvnmhcqnx .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -347,12 +284,12 @@ Hinweis
   border-right-color: #D3D3D3;
 }
 
-#bwvvhsxcys .gt_caption {
+#kqvnmhcqnx .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#bwvvhsxcys .gt_title {
+#kqvnmhcqnx .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -364,7 +301,7 @@ Hinweis
   border-bottom-width: 0;
 }
 
-#bwvvhsxcys .gt_subtitle {
+#kqvnmhcqnx .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -376,13 +313,13 @@ Hinweis
   border-top-width: 0;
 }
 
-#bwvvhsxcys .gt_bottom_border {
+#kqvnmhcqnx .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#bwvvhsxcys .gt_col_headings {
+#kqvnmhcqnx .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -397,7 +334,7 @@ Hinweis
   border-right-color: #D3D3D3;
 }
 
-#bwvvhsxcys .gt_col_heading {
+#kqvnmhcqnx .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -417,7 +354,7 @@ Hinweis
   overflow-x: hidden;
 }
 
-#bwvvhsxcys .gt_column_spanner_outer {
+#kqvnmhcqnx .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -429,15 +366,15 @@ Hinweis
   padding-right: 4px;
 }
 
-#bwvvhsxcys .gt_column_spanner_outer:first-child {
+#kqvnmhcqnx .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#bwvvhsxcys .gt_column_spanner_outer:last-child {
+#kqvnmhcqnx .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#bwvvhsxcys .gt_column_spanner {
+#kqvnmhcqnx .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -449,7 +386,7 @@ Hinweis
   width: 100%;
 }
 
-#bwvvhsxcys .gt_group_heading {
+#kqvnmhcqnx .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -475,7 +412,7 @@ Hinweis
   text-align: left;
 }
 
-#bwvvhsxcys .gt_empty_group_heading {
+#kqvnmhcqnx .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -490,15 +427,15 @@ Hinweis
   vertical-align: middle;
 }
 
-#bwvvhsxcys .gt_from_md > :first-child {
+#kqvnmhcqnx .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#bwvvhsxcys .gt_from_md > :last-child {
+#kqvnmhcqnx .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#bwvvhsxcys .gt_row {
+#kqvnmhcqnx .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -517,7 +454,7 @@ Hinweis
   overflow-x: hidden;
 }
 
-#bwvvhsxcys .gt_stub {
+#kqvnmhcqnx .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -530,7 +467,7 @@ Hinweis
   padding-right: 5px;
 }
 
-#bwvvhsxcys .gt_stub_row_group {
+#kqvnmhcqnx .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -544,11 +481,11 @@ Hinweis
   vertical-align: top;
 }
 
-#bwvvhsxcys .gt_row_group_first td {
+#kqvnmhcqnx .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#bwvvhsxcys .gt_summary_row {
+#kqvnmhcqnx .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -558,16 +495,16 @@ Hinweis
   padding-right: 5px;
 }
 
-#bwvvhsxcys .gt_first_summary_row {
+#kqvnmhcqnx .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#bwvvhsxcys .gt_first_summary_row.thick {
+#kqvnmhcqnx .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#bwvvhsxcys .gt_last_summary_row {
+#kqvnmhcqnx .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -577,7 +514,7 @@ Hinweis
   border-bottom-color: #D3D3D3;
 }
 
-#bwvvhsxcys .gt_grand_summary_row {
+#kqvnmhcqnx .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -587,7 +524,7 @@ Hinweis
   padding-right: 5px;
 }
 
-#bwvvhsxcys .gt_first_grand_summary_row {
+#kqvnmhcqnx .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -597,11 +534,11 @@ Hinweis
   border-top-color: #D3D3D3;
 }
 
-#bwvvhsxcys .gt_striped {
+#kqvnmhcqnx .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#bwvvhsxcys .gt_table_body {
+#kqvnmhcqnx .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -610,7 +547,7 @@ Hinweis
   border-bottom-color: #D3D3D3;
 }
 
-#bwvvhsxcys .gt_footnotes {
+#kqvnmhcqnx .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -624,7 +561,7 @@ Hinweis
   border-right-color: #D3D3D3;
 }
 
-#bwvvhsxcys .gt_footnote {
+#kqvnmhcqnx .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -633,7 +570,7 @@ Hinweis
   padding-right: 5px;
 }
 
-#bwvvhsxcys .gt_sourcenotes {
+#kqvnmhcqnx .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -647,7 +584,7 @@ Hinweis
   border-right-color: #D3D3D3;
 }
 
-#bwvvhsxcys .gt_sourcenote {
+#kqvnmhcqnx .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -655,186 +592,293 @@ Hinweis
   padding-right: 5px;
 }
 
-#bwvvhsxcys .gt_left {
+#kqvnmhcqnx .gt_left {
   text-align: left;
 }
 
-#bwvvhsxcys .gt_center {
+#kqvnmhcqnx .gt_center {
   text-align: center;
 }
 
-#bwvvhsxcys .gt_right {
+#kqvnmhcqnx .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#bwvvhsxcys .gt_font_normal {
+#kqvnmhcqnx .gt_font_normal {
   font-weight: normal;
 }
 
-#bwvvhsxcys .gt_font_bold {
+#kqvnmhcqnx .gt_font_bold {
   font-weight: bold;
 }
 
-#bwvvhsxcys .gt_font_italic {
+#kqvnmhcqnx .gt_font_italic {
   font-style: italic;
 }
 
-#bwvvhsxcys .gt_super {
+#kqvnmhcqnx .gt_super {
   font-size: 65%;
 }
 
-#bwvvhsxcys .gt_footnote_marks {
+#kqvnmhcqnx .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#bwvvhsxcys .gt_asterisk {
+#kqvnmhcqnx .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#bwvvhsxcys .gt_indent_1 {
+#kqvnmhcqnx .gt_indent_1 {
   text-indent: 5px;
 }
 
-#bwvvhsxcys .gt_indent_2 {
+#kqvnmhcqnx .gt_indent_2 {
   text-indent: 10px;
 }
 
-#bwvvhsxcys .gt_indent_3 {
+#kqvnmhcqnx .gt_indent_3 {
   text-indent: 15px;
 }
 
-#bwvvhsxcys .gt_indent_4 {
+#kqvnmhcqnx .gt_indent_4 {
   text-indent: 20px;
 }
 
-#bwvvhsxcys .gt_indent_5 {
+#kqvnmhcqnx .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
-<table class="gt_table" style="table-layout: fixed;; width: 100%">
+<table class="gt_table table table-sm table-striped" data-quarto-postprocess="true">
 <colgroup>
-<col style="width:5%;">
-<col style="width:20%;">
-<col style="width:20%;">
-<col style="width:45%;">
+<col style="width: 5%">
+<col style="width: 20%">
+<col style="width: 20%">
+<col style="width: 45%">
 </colgroup>
-<thead class="gt_col_headings"><tr>
-<th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Nr">Nr</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="Thema">Thema</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_right" rowspan="1" colspan="1" scope="col" id="Datum">Datum</th>
-      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id="Kommentar">Kommentar</th>
-    </tr></thead>
+<thead class="gt_col_headings"><tr class="header">
+<th id="Nr" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Nr</th>
+<th id="Thema" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Thema</th>
+<th id="Datum" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Datum</th>
+<th id="Kommentar" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Kommentar</th>
+</tr></thead>
 <tbody class="gt_table_body">
-<tr>
-<td headers="Nr" class="gt_row gt_right">1</td>
-<td headers="Thema" class="gt_row gt_left">Hallo Forschung</td>
-<td headers="Datum" class="gt_row gt_right">13.3. - 19.3.</td>
-<td headers="Kommentar" class="gt_row gt_left">Lehrbeginn ist am Mi., 15.3.23</td>
+<tr class="odd">
+<td class="gt_row gt_right" headers="Nr">1</td>
+<td class="gt_row gt_left" headers="Thema">Hallo Forschung</td>
+<td class="gt_row gt_right" headers="Datum">13.3. - 19.3.</td>
+<td class="gt_row gt_left" headers="Kommentar">Lehrbeginn ist am Mi., 15.3.23</td>
 </tr>
-<tr>
-<td headers="Nr" class="gt_row gt_right">2</td>
-<td headers="Thema" class="gt_row gt_left">Themawahl</td>
-<td headers="Datum" class="gt_row gt_right">20.3. - 26.3.</td>
-<td headers="Kommentar" class="gt_row gt_left">NA</td>
+<tr class="even">
+<td class="gt_row gt_right" headers="Nr">2</td>
+<td class="gt_row gt_left" headers="Thema">Themawahl</td>
+<td class="gt_row gt_right" headers="Datum">20.3. - 26.3.</td>
+<td class="gt_row gt_left" headers="Kommentar">NA</td>
 </tr>
-<tr>
-<td headers="Nr" class="gt_row gt_right">3</td>
-<td headers="Thema" class="gt_row gt_left">Hypothesen</td>
-<td headers="Datum" class="gt_row gt_right">27.3. - 2.4.</td>
-<td headers="Kommentar" class="gt_row gt_left">NA</td>
+<tr class="odd">
+<td class="gt_row gt_right" headers="Nr">3</td>
+<td class="gt_row gt_left" headers="Thema">Hypothesen</td>
+<td class="gt_row gt_right" headers="Datum">27.3. - 2.4.</td>
+<td class="gt_row gt_left" headers="Kommentar">NA</td>
 </tr>
-<tr>
-<td headers="Nr" class="gt_row gt_right">4</td>
-<td headers="Thema" class="gt_row gt_left">Beobachtungsstudien</td>
-<td headers="Datum" class="gt_row gt_right">3.4. - 9.4</td>
-<td headers="Kommentar" class="gt_row gt_left">Karwoche (kein Unterricht am Do. und Fr.)</td>
+<tr class="even">
+<td class="gt_row gt_right" headers="Nr">4</td>
+<td class="gt_row gt_left" headers="Thema">Beobachtungsstudien</td>
+<td class="gt_row gt_right" headers="Datum">3.4. - 9.4</td>
+<td class="gt_row gt_left" headers="Kommentar">Karwoche (kein Unterricht am Do. und Fr.)</td>
 </tr>
-<tr>
-<td headers="Nr" class="gt_row gt_right">5</td>
-<td headers="Thema" class="gt_row gt_left">Experimente</td>
-<td headers="Datum" class="gt_row gt_right">10.4. - 16.4.</td>
-<td headers="Kommentar" class="gt_row gt_left">Osterwoche (kein Unterricht am Mo. und Di.)</td>
+<tr class="odd">
+<td class="gt_row gt_right" headers="Nr">5</td>
+<td class="gt_row gt_left" headers="Thema">Experimente</td>
+<td class="gt_row gt_right" headers="Datum">10.4. - 16.4.</td>
+<td class="gt_row gt_left" headers="Kommentar">Osterwoche (kein Unterricht am Mo. und Di.)</td>
 </tr>
-<tr>
-<td headers="Nr" class="gt_row gt_right">6</td>
-<td headers="Thema" class="gt_row gt_left">Experimente</td>
-<td headers="Datum" class="gt_row gt_right">17.4. - 23.4.</td>
-<td headers="Kommentar" class="gt_row gt_left">NA</td>
+<tr class="even">
+<td class="gt_row gt_right" headers="Nr">6</td>
+<td class="gt_row gt_left" headers="Thema">Experimente</td>
+<td class="gt_row gt_right" headers="Datum">17.4. - 23.4.</td>
+<td class="gt_row gt_left" headers="Kommentar">NA</td>
 </tr>
-<tr>
-<td headers="Nr" class="gt_row gt_right">7</td>
-<td headers="Thema" class="gt_row gt_left">Vertiefung - Versuchspläne</td>
-<td headers="Datum" class="gt_row gt_right">24.4. - 30.4.</td>
-<td headers="Kommentar" class="gt_row gt_left">NA</td>
+<tr class="odd">
+<td class="gt_row gt_right" headers="Nr">7</td>
+<td class="gt_row gt_left" headers="Thema">Vertiefung - Versuchspläne</td>
+<td class="gt_row gt_right" headers="Datum">24.4. - 30.4.</td>
+<td class="gt_row gt_left" headers="Kommentar">NA</td>
 </tr>
-<tr>
-<td headers="Nr" class="gt_row gt_right">8</td>
-<td headers="Thema" class="gt_row gt_left">Online-Studien</td>
-<td headers="Datum" class="gt_row gt_right">1.5. - 7.5.</td>
-<td headers="Kommentar" class="gt_row gt_left">Maifeiertag (kein Unterricht am Mo.)</td>
+<tr class="even">
+<td class="gt_row gt_right" headers="Nr">8</td>
+<td class="gt_row gt_left" headers="Thema">Online-Studien</td>
+<td class="gt_row gt_right" headers="Datum">1.5. - 7.5.</td>
+<td class="gt_row gt_left" headers="Kommentar">Maifeiertag (kein Unterricht am Mo.)</td>
 </tr>
-<tr>
-<td headers="Nr" class="gt_row gt_right">9</td>
-<td headers="Thema" class="gt_row gt_left">Kausalanalyse</td>
-<td headers="Datum" class="gt_row gt_right">8.5. - 14.5.</td>
-<td headers="Kommentar" class="gt_row gt_left">NA</td>
+<tr class="odd">
+<td class="gt_row gt_right" headers="Nr">9</td>
+<td class="gt_row gt_left" headers="Thema">Kausalanalyse</td>
+<td class="gt_row gt_right" headers="Datum">8.5. - 14.5.</td>
+<td class="gt_row gt_left" headers="Kommentar">NA</td>
 </tr>
-<tr>
-<td headers="Nr" class="gt_row gt_right">10</td>
-<td headers="Thema" class="gt_row gt_left">Fallzahlplanung</td>
-<td headers="Datum" class="gt_row gt_right">15.5. - 21.5.</td>
-<td headers="Kommentar" class="gt_row gt_left">NA</td>
+<tr class="even">
+<td class="gt_row gt_right" headers="Nr">10</td>
+<td class="gt_row gt_left" headers="Thema">Fallzahlplanung</td>
+<td class="gt_row gt_right" headers="Datum">15.5. - 21.5.</td>
+<td class="gt_row gt_left" headers="Kommentar">NA</td>
 </tr>
-<tr>
-<td headers="Nr" class="gt_row gt_right">11</td>
-<td headers="Thema" class="gt_row gt_left">-</td>
-<td headers="Datum" class="gt_row gt_right">22.5. - 28.5.</td>
-<td headers="Kommentar" class="gt_row gt_left">Blockwocke - kein regulärer Unterricht</td>
+<tr class="odd">
+<td class="gt_row gt_right" headers="Nr">11</td>
+<td class="gt_row gt_left" headers="Thema">-</td>
+<td class="gt_row gt_right" headers="Datum">22.5. - 28.5.</td>
+<td class="gt_row gt_left" headers="Kommentar">Blockwocke - kein regulärer Unterricht</td>
 </tr>
-<tr>
-<td headers="Nr" class="gt_row gt_right">12</td>
-<td headers="Thema" class="gt_row gt_left">Versuchsdurchführung</td>
-<td headers="Datum" class="gt_row gt_right">29.6. - 4.6.</td>
-<td headers="Kommentar" class="gt_row gt_left">Pfingstwoche (kein Unterricht am Mo. und Di.)</td>
+<tr class="even">
+<td class="gt_row gt_right" headers="Nr">12</td>
+<td class="gt_row gt_left" headers="Thema">Versuchsdurchführung</td>
+<td class="gt_row gt_right" headers="Datum">29.6. - 4.6.</td>
+<td class="gt_row gt_left" headers="Kommentar">Pfingstwoche (kein Unterricht am Mo. und Di.)</td>
 </tr>
-<tr>
-<td headers="Nr" class="gt_row gt_right">13</td>
-<td headers="Thema" class="gt_row gt_left">Datenaufbereitung</td>
-<td headers="Datum" class="gt_row gt_right">5.6. - 11.6.</td>
-<td headers="Kommentar" class="gt_row gt_left">Fronleichnam (kein Unterricht am Do. und Fr.)</td>
+<tr class="odd">
+<td class="gt_row gt_right" headers="Nr">13</td>
+<td class="gt_row gt_left" headers="Thema">Datenaufbereitung</td>
+<td class="gt_row gt_right" headers="Datum">5.6. - 11.6.</td>
+<td class="gt_row gt_left" headers="Kommentar">Fronleichnam (kein Unterricht am Do. und Fr.)</td>
 </tr>
-<tr>
-<td headers="Nr" class="gt_row gt_right">14</td>
-<td headers="Thema" class="gt_row gt_left">Datenaufbereitung</td>
-<td headers="Datum" class="gt_row gt_right">12.6. - 18.6.</td>
-<td headers="Kommentar" class="gt_row gt_left">NA</td>
+<tr class="even">
+<td class="gt_row gt_right" headers="Nr">14</td>
+<td class="gt_row gt_left" headers="Thema">Datenaufbereitung</td>
+<td class="gt_row gt_right" headers="Datum">12.6. - 18.6.</td>
+<td class="gt_row gt_left" headers="Kommentar">NA</td>
 </tr>
-<tr>
-<td headers="Nr" class="gt_row gt_right">15</td>
-<td headers="Thema" class="gt_row gt_left">Datenmodellierung</td>
-<td headers="Datum" class="gt_row gt_right">19.6. - 25.6.</td>
-<td headers="Kommentar" class="gt_row gt_left">NA</td>
+<tr class="odd">
+<td class="gt_row gt_right" headers="Nr">15</td>
+<td class="gt_row gt_left" headers="Thema">Datenmodellierung</td>
+<td class="gt_row gt_right" headers="Datum">19.6. - 25.6.</td>
+<td class="gt_row gt_left" headers="Kommentar">NA</td>
 </tr>
-<tr>
-<td headers="Nr" class="gt_row gt_right">16</td>
-<td headers="Thema" class="gt_row gt_left">Abschluss</td>
-<td headers="Datum" class="gt_row gt_right">26.6. - 2.7.</td>
-<td headers="Kommentar" class="gt_row gt_left">Letzter Lehrtag ist Fr., 30.6.</td>
+<tr class="even">
+<td class="gt_row gt_right" headers="Nr">16</td>
+<td class="gt_row gt_left" headers="Thema">Abschluss</td>
+<td class="gt_row gt_right" headers="Datum">26.6. - 2.7.</td>
+<td class="gt_row gt_left" headers="Kommentar">Letzter Lehrtag ist Fr., 30.6.</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 </div>
+</section></section><section id="lernhilfen" class="level2"><h2 class="anchored" data-anchor-id="lernhilfen">Lernhilfen</h2>
+<section id="pdf-version" class="level3"><h3 class="anchored" data-anchor-id="pdf-version">PDF-Version</h3>
+<p>– EXPERIMENTAL 🔬🧪 – EXPERIMENTAL</p>
+<p>Von diesem “Webbuch” (HTML-Format) gibt es <a href="_book/statistik1.pdf">hier eine PDF-Version</a>. Die PDF-Version eignet sich zum Ausdrucken und zur Offline-Nutzung.</p>
+<p>Allerdings wurden die Inhalte <em>in erster Linie für ein Webbuch-Format</em> formatiert, die PDF-Ausgabe ist daher nicht ideal. Es ist empfehlenswert, mit der Webbuch-Version zu arbeiten. Außerdem wird die PDF-Version nicht ganz aktuell gehalten - die aktuelle Version ist immer die Webbuch-Variante. Prüfen Sie im Zweifel das Datum der Erstellung des Dokuments.</p>
+</section><div class="cell" data-hash="index_cache/html/hinweise-lernhilfen_e11274377a3ea9188edc3dd409718c17">
+<section id="videos" class="level3"><h3 class="anchored" data-anchor-id="videos">Videos</h3>
+<p>Auf dem <a href="https://www.youtube.com/channel/UCkvdtj8maE7g-SOCh4aDB9g">YouTube-Kanal des Autors</a> finden sich eine Reihe von Videos mit Bezug zum Inhalt dieses Buchs. Besonders <a href="https://youtube.com/playlist?list=PLRR4REmBgpIEzVFLvzCn76TB2VS4jXcfg">diese Playlist</a> passt zu den Inhalten dieses Buchs.</p>
+</section><section id="software" class="level3"><h3 class="anchored" data-anchor-id="software">Software</h3>
+<p>Installieren Sie <a href="https://data-se.netlify.app/2021/11/30/installation-von-r-und-seiner-freunde/">R und seine Freunde</a>. Für die Bayes-Inferenz brauchen Sie<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> zusätzliche Software, was leider etwas Zusatzaufwand erfordert. Lesen Sie <a href="https://data-se.netlify.app/2022/01/28/bayes-software-installieren-f%C3%BCr-r/">hier</a> die Hinweise dazu. Installieren Sie die folgende R-Pakete<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>:</p>
+<ul>
+<li>tidyverse</li>
+<li>easystats</li>
+<li>weitere Pakete werden im Unterricht bekannt gegeben (es schadet aber nichts, jetzt schon Pakete nach eigenem Ermessen zu installieren)</li>
+</ul>
+<p><a href="https://github.com/sebastiansauer/Lehre">R Syntax aus dem Unterricht</a> findet sich im Github-Repo bzw. Ordner zum jeweiligen Semester.</p>
+<!-- - Installieren Sie bitte ein *Literaturverwaltungsprogramm* wie [Zotero](https://www.zotero.org/). -->
+<!--     - Denken Sie auch ggf. daran, das Plug-in für Word o.Ä. zu installieren. -->
+</section><section id="online-unterstützung" class="level3"><h3 class="anchored" data-anchor-id="online-unterstützung">Online-Unterstützung</h3>
+<p>Dieser Kurs kann in Präsenz und Online angeboten werden. Wenn Sie die Wahl haben, empfehle ich die Teilnahme in Präsenz, da der Lernerfolg höher ist. Online ist es meist schwieriger, sich zu konzentrieren. Aber auch online ist es möglich, den Stoff gut zu lernen, s. <a href="#fig-believe-in-you">Abbildung&nbsp;<span>3</span></a>.</p>
+<div id="fig-believe-in-you" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="img/monster_support.jpg" class="img-fluid figure-img" style="width:50.0%"></p>
+<p></p><figcaption class="figure-caption">Abbildung&nbsp;3: We believe in you! Image Credit: Allison Horst</figcaption><p></p>
+</figure>
+</div>
+<p>Bitte beachten Sie, dass bei einer Teilnahme in Präsenz eine aktive Mitarbeit erwartet wird. Hingegen ist bei einer Online-Teilnahme keine/kaum aktive Mitarbeit möglich.</p>
+<p>Hier finden Sie einige Werkzeuge, die das Online-Zusammenarbeiten vereinfachen:</p>
+<ul>
+<li>
+<a href="https://frag.jetzt/home">Frag-Jetzt-Raum zum anonymen Fragen stellen während des Unterrichts</a>. Der Keycode wird Ihnen bei Bedarf vom Dozenten bereitgestellt.</li>
+<li>
+<a href="https://de.padlet.com/">Padlet</a> zum einfachen (und anonymen) Hochladen von Arbeitsergebnissen der Studentis im Unterricht. Wir nutzen es als eine Art Pinwand zum Sammeln von Arbeitsbeiträgen. Die Zugangsdaten stellt Ihnen der Dozent bereit.</li>
+<li>Nutzen Sie das vom Dozenten bereitgestelle Forum, um Fragen zu stellen und Fragen zu beantworten.</li>
+</ul></section><section id="lerntipps" class="level3"><h3 class="anchored" data-anchor-id="lerntipps">Lerntipps</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hinweis
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Stetige Mitarbeit - auch und gerade außerhalb des Unterrichts - ist der Schlüssel zum Prüfungserfolg.</p>
+</div>
+</div>
+<ul>
+<li>
+<em>Lerngruppe</em>: Treten Sie einer Lerngruppe bei.</li>
+<li>
+<em>Tutorium</em>: Besuchen Sie ein Tutorium, falls eines angeboten wird.</li>
+<li>
+<em>Vor- und Nachbereitung</em>: Bereiten Sie den Unterricht vor und nach.</li>
+<li>
+<em>Selbsttest</em>: Testen Sie sich mit Flashcards (Karteikarten mit Vor- und Rückseite). Wenn Sie alle Aufgaben dieses Kurses aus dem FF beherrschen, sollte die Prüfung kein Problem sein.</li>
+<li>
+<em>Übungen</em>: Bearbeiten Sie alle Übungsaufgaben gewissenhaft.</li>
+<li>Portal <em>Datenwerk</em>: Gehen Sie die Aufgaben auf dem Portal <a href="https://datenwerk.netlify.app/">Datenwerk</a> durch (soweit relevant).</li>
+<li>
+<em>Fallstudien</em>: Schauen Sie sich meine Fallstudiensammlungen an: https://sebastiansauer-academic.netlify.app/courseware/casestudies/</li>
+<li>
+<em>Lehrkraft</em> ansprechen: Sprechen Sie die Lehrkraft an, wenn Sie Fragen haben. Haben Sie keine Scheu! Bitte lesen Sie aber vorab die Hinweise, um Redundanz zu vermeiden.</li>
+</ul></section><section id="selbstlernkontrolle" class="level3"><h3 class="anchored" data-anchor-id="selbstlernkontrolle">Selbstlernkontrolle</h3>
+<p>Für jedes Kapitel sind (am Kapitelende) Aufgaben eingestellt, jeweils mit Lösung. Ein Teil dieser Aufgaben hat eine kurze, eindeutige Lösung (z.B. “42” oder “Antwort C”); ein (kleiner) Teil der Aufgaben verlangen komplexere Antworten (z.B. “Welche Arten von Prioris gibt es bei <code>stan_glm()</code>?). Nutzen Sie die Fragen mit eindeutiger, kurzer Lösung um sich selber zu prüfen. Nutzen Sie die Fragen mit komplexerer, längerer Lösung, um ein Themengebiet tiefer zu erarbeiten.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hinweis
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Fortwährendes Feedback zu Ihrem Lernfortschritt ist wichtig, damit Sie Ihre Lernbemühungen steuern können. Bearbeiten Sie daher die bereitgestellten Arbeiten ernsthaft.</p>
+</div>
+</div>
+</section><section id="lernen-lernen" class="level3"><h3 class="anchored" data-anchor-id="lernen-lernen">Lernen lernen</h3>
+<p>Hier sind einige Quellen (Literatur), die Ihnen helfen sollen, das Lernen (noch besser) zu lernen:</p>
+<ul>
+<li><a href="https://link.springer.com/book/9783642348648">Essentielle Tipps für Bachelor-Studierende der Psychologie</a></li>
+<li><a href="https://www.goodreads.com/book/show/34757555-konzentriert-arbeiten">Konzentriert arbeiten: Regeln für eine Welt voller Ablenkungen</a></li>
+<li><a href="https://www.goodreads.com/book/show/1674441.Wie_man_ein_Buch_liest?from_search=true&amp;from_srp=true&amp;qid=SBlve98pOT&amp;rank=1">Wie man ein Buch liest</a></li>
+<li><a href="https://www.amazon.de/gp/product/3946943179/ref=as_li_qf_sp_asin_il_tl?ie=UTF8&amp;tag=studienscheis-21&amp;camp=1638&amp;creative=6742&amp;linkCode=as2&amp;creativeASIN=3946943179&amp;linkId=c3cadef0bea902414965e5cf6e2a64df">Ersti-Hilfe: 112 Tipps für Studienanfänger - erfolgreich studieren ab der ersten Vorlesung</a></li>
+<li><a href="https://ia903405.us.archive.org/17/items/von-der-kuerze-des-lebens-seneca/Von_der_Kuerze_des_Lebens_Seneca.pdf">Von der Kürze des Lebens</a></li>
+<li><a href="https://www.studienscheiss.de/blog/">Blog “Studienscheiss”</a></li>
+</ul></section>
+</div>
 </section><section id="didaktik" class="level2"><h2 class="anchored" data-anchor-id="didaktik">Didaktik</h2>
-<p>Hier ist ein Überblick in Form einer groben Skizze, über die didaktischen Ideen, die in dieses Buch eingegangen sind.</p>
-<section id="einstreuer" class="level3"><h3 class="anchored" data-anchor-id="einstreuer">“Einstreuer”</h3>
-<p>In jedem Kapitel, gibt es eine Reihe von Lehrmateralien, sozusagen orthogonal zum Inhalt, die das Verstehen und die Umsetzung anreichernd unterstützen, das sind:</p>
+<div class="cell" data-hash="index_cache/html/hinweise-didaktik_54bb8ac1cda69c518e74b43e7db07a23">
+<section id="grundlagen" class="level3"><h3 class="anchored" data-anchor-id="grundlagen">Grundlagen</h3>
+<ol type="1">
+<li>Alle <em>Lehrmaterialien</em> stelle ich vor dem Unterricht <em>online</em> bereit.</li>
+<li>Alles prüfungsrelevante Material ist <em>verschriftlicht</em> und die <em>Prüfungsmodalitäten</em> sind <em>frühzeitig</em> (schriftlich) bekannt gemacht.</li>
+<li>
+<em>Eigenstudierbarkeit</em>: Das Modul ist auch ohne Besuchen des Unterrichts studierbar.</li>
+<li>Wenn möglich, wird der Präsenzunterricht durch <em>Live-Streaming</em> ergänzt.</li>
+<li>Für den Stoff existiert eine <em>Gliederung</em> und <em>Lernziele</em>, so dass ein roter Faden ersichtlich ist.</li>
+<li>Für jede Unterrichtseinheit ist ein <em>Stundenthema</em> vorgegeben.</li>
+<li>Es werden für (möglichst) alle Unterrichtseinheiten <em>Aufgaben</em> bereitgestellt, so dass Lernende üben können und über den eigenen Fortschritt im Bilde sind.</li>
+<li>Praxisbezug wird sichergestellt, z.B. durch <em>Fallstudien.</em>
+</li>
+<li>Infos an die Studierenden eines Moduls werden durch ein <em>Nachrichtensystem</em> zugestellt.</li>
+<li>Der Unterricht ist von einer <em>dialogischen Haltung</em> geprägt, nicht von Frontaltunerricht.</li>
+</ol></section><section id="lehrkonzept" class="level3"><h3 class="anchored" data-anchor-id="lehrkonzept">Lehrkonzept</h3>
+<p>In der “Vorlesung” wird im Schwerpunkt <em>nicht</em> ein Folienskript “vorgelesen”. Solcher Inhalt steht oft vorab als Video zur Verfügung (s. Links im Themenüberblick). Stattdessen steht in der “Vorlesung” die Durcharbeiten und Vertiefen des Stoffes im Vordergrund, nicht aber das Vortragen des Stoffes. Warum wird die Literatur oder das Folienskript nicht im Unterricht vorgetragen? Zum einen können Sie das alleine besser (in eigener Geschwindigkeit, mit Pausen nach Gusto, zu beliebiger Zeit und beliebigem Ort, so oft wiederholt wie Sie mögen). Zum anderen ist der Lerngewinn beim passiven Zuhören gering. Das Durchdenken, Durcharbeiten, “Durchfragen” des Stoffes ist es, was Ihnen den meisten Gewinn beschwert. Entsprechend liegt auf dem aktiven, gemeinsamen Arbeiten der Schwerpunkt. Das heißt nicht, dass es nie Vorträge vom Dozenten im Unterricht gäbe; manchmal schon. Aber aus genannten Gründen liegt der Fokus des Unterrichts im aktivierenden Arbeiten. Natürlich können im Unterricht jederzeit die Fragen der Studentis zum Stoff besprochen werden. Seien Sie ausdrücklich ermuntert, Ihre Fragen im Unterricht zu formulieren, vorzugsweise im direkten Gespräch, aber alternativ anonym (wie Frag-Jetzt). In der Übung liegt der Schwerpunkt zumeist auf dem Bearbeiten von Aufgaben.</p>
+</section><section id="lerntipps-1" class="level3"><h3 class="anchored" data-anchor-id="lerntipps-1">Lerntipps</h3>
+<p>Damit Sie vom Unterricht maximal profitieren, ist es essenziell, dass Sie aktiv mitarbeiten. Ein “Nur-Zuhören” nimmt Ihnen einen Gutteil des Nutzens des Unterrichts. Sie lernen nur zum kleinen Teil vom Zuhören; der größte Teil des Lernerfolgs kommt vom Selber-Erarbeiten! Bitte stellen Sie Ihre Kamera (Webcam) an, wenn Sie Kommilitonis oder den Dozenten ansprechen. Das ist der Güte der Kommunikation zuträglich. Bereiten Sie den Stoff vor und arbeiten Sie ihn gewissenhaft nach. Das gemeinsame Arbeiten in einer (virtuellen) Lerngruppe ist sehr nützlich. Tauschen Sie sich im Diskussionsforum auf unserer Modulseite aus; gehen Sie in den Diskurs mit den Kommiliton/innen. Falls Sie (im Internet) nützliches Material gefunden haben, können Sie es auch in das Forum einstellen. Nutzen Sie das Diskussionsforum auch, um den Dozenten Fragen zu stellen. Meine Erfahrung zeigt mir, dass der Lernerfolg zwar auch von der Lehrperson abhängt, aber entscheidend ist der Wille eines/r Studierenden/r, selbst aktiv zu lernen. Ich glaube, dass Sie gut mit Material ausgestattet sind, um selbständig und mit Erfolg zu lernen. Anbieter wie Google stellen (teilweise) kostenfreie Angebote zum kollaborativen Arbeiten zur Verfügung (Google Docs). Behalten Sie hier den Datenschutz im Blick.</p>
+</section><section id="einstreuer" class="level3"><h3 class="anchored" data-anchor-id="einstreuer">“Einstreuer”</h3>
+<p>In jedem Kapitel, gibt es eine Reihe von Lehrmaterialien, sozusagen orthogonal zum Inhalt, die das Verstehen und die Umsetzung anreichernd unterstützen, das sind:</p>
 <ul>
 <li>Praxisbezüge</li>
 <li>Beispiele</li>
@@ -845,7 +889,7 @@ Hinweis
 <li>Literatur</li>
 <li>Aufgaben</li>
 <li>Lernziele</li>
-<li>Benötigte Software</li>
+<li>Softwarehinweise</li>
 <li>Überblick im Lernpfad</li>
 <li>Exkurse</li>
 <li>Blick in die Forschung</li>
@@ -860,16 +904,24 @@ Hinweis
 <li>Copy-Paste-Funktion (für R-Syntax)</li>
 <li>Code-Fold, so dass die R-Syntax und Exkurse nur nach Aufklappen sichtbar sind (und ansonsten nicht stören)</li>
 </ul></section><section id="barrierefrei" class="level3"><h3 class="anchored" data-anchor-id="barrierefrei">Barrierefrei</h3>
-<p>Auf Lehrinhalte wird oft zugegriffen, zumindest hofft das der Autor. Gehen wir davon aus, dass ein Kurs 15 Wochen dauert, und pro Unterrichtsstunde UE Material “im Wert von 50 Folien” angesehen werden, so kommt man auf 50 Klicks oder Kontakte, mal 4 UE pro Woche ergibt 3000 Kontakte mit Material pro Studi. Bei so vielen Kontakten bekommt das Wort <em>barrierefrei</em> eine hohe Bedeutung.</p>
+<p>Auf Lehrinhalte wird oft zugegriffen, zumindest hofft das der Autor. Gehen wir davon aus, dass ein Kurs 15 Wochen dauert, und pro Unterrichtsstunde UE Material “im Wert von 50 Folien” angesehen werden, so kommt man auf 50 Klicks oder Kontakte, mal 4 UE pro Woche ergibt <code>r 50*4*15</code> Kontakte mit Material pro Studi. Bei so vielen Kontakten bekommt das Wort <em>barrierefrei</em> eine hohe Bedeutung.</p>
 <p>Aus diesem Grund steht das Buch steht frei im Netz, genauso die Aufgaben und die Lösungen. Damit ist ein einfacher Zugriff möglich. Außerdem gibt es eine hohe Anzahl an URLs: Nicht nur pro Seite, sondern auch pro Abschnitt und für alle besonderen Objekte wie Tabellen und Diagramme.</p>
 </section><section id="kompetenzorientiert" class="level3"><h3 class="anchored" data-anchor-id="kompetenzorientiert">Kompetenzorientiert</h3>
 <p>Es gibt viele Übungsaufgaben, anhand derer die Studentis ihren Lernfortschritt überprüfen können. Diese Aufgaben haben zumeist eine klare, kurze richtige Antwort (oft im MC-Format), so dass einfach eine Punktzahl ausgegeben kann für ein maximal klares Feedback an die Studentis. Außerdem gibt es aber auch Fallstudien, für komplexere und reichhaltigeres Einüben der Kompetenzen. Schließlich ist die Prüfungsform komplett kompetenzorientiert gehalten und gleichzeitig maximal objektiv durch Berechnen der Vorhersagegüte.</p>
+</section><section id="fokus-auf-modellierung" class="level3"><h3 class="anchored" data-anchor-id="fokus-auf-modellierung">Fokus auf Modellierung</h3>
+<p>Modelle stehen, auch in modernen und fortgeschrittenen Anwendungen, im Mittelpunkt der Statistik als (angewandte) Wissenschaft. Gleichzeitig sind Sie einsteigerfreundlich, denn jeder Mensch kennt Modelle aus dem alltäglichen Leben. Darüber hinaus lassen sich Modelle perfekt verbinden mit zentraler statistischer Methodik, namentlich dem Allgemeinen (Generalisierten) Linearen Modell (ALM bzw GLM). Aus diesem Grund wird das ALM als zentrale methodische Blaupause verwendet. Anstelle von einer Vielzahl statistischer Testverfahren, die letztlich aber fast immer Spezialfälle des ALM darstellen, wird hier zu zugunsten der Einfachheit, konzeptioneller Klarheit (und wissenschaftlicher Ästhetik) alles Modellieren auf dem ALM aufgebaut.</p>
 </section><section id="praxisbezug" class="level3"><h3 class="anchored" data-anchor-id="praxisbezug">Praxisbezug</h3>
 <p>In allen Kapiteln werden Themen aus der (künftigen) Berufswelt der Teilnehmis herangezogen. Ganz zu Beginn eines neuen Themas wird davon abweichend immer wieder von extrem einfachen (aber auch lebensweltlich relevanten) Beispielen Gebraucht gemacht, zu Gunsten eines einfachen Einstiegs in neue Materie. Auf mathematische Herleitung wurde aus dem gleichen Grund weitgehend verzichtet.</p>
 </section><section id="anschaulichkeit" class="level3"><h3 class="anchored" data-anchor-id="anschaulichkeit">Anschaulichkeit</h3>
-<p>Es wurde versucht, möglichst viele Sachverhalte schematisch in Diagrammen zu illustrieren. Damit ist bei weitem nicht nur gemeint, statische Diagramme aufzuzeichnen. Vielmehr ist versucht worden, zentrale theoretische Konzepte in einfachen Diagrammen widerzuspiegeln. Dieser eher informelle Wege nimmt zwar Einbußen an Präzision und inhaltlicher Tiefe in Kauf, öffnet aber gerade für in symbolischer Verarbeitung schwächeren Studentis einen Zugang. Darüber hinaus haben Diagramme bzw. Schemata den didaktischen Vorteil, dass sie sich hervorragend eignen für Unterricht im Hörsaal oder Seminarraum: Man betrachtet zusammen ein Bild und diskutiert darüber, das Konzept ständig vor Augen.</p>
+<p>Es wurde versucht, möglichst viele Sachverhalte schematisch in Diagrammen zu illustieren. Damit ist bei weitem nicht nur gemeint, statische Diagramme aufzuzeichnen. Vielmehr ist versucht worden, zentrale theoretische Konzepte in einfachen Diagrammen widerzuspiegeln. Dieser eher informelle Wege nimmt zwar Einbußen an Präzision und inhaltlicher Tiefe in Kauf, öffnet aber gerade für in symbolischer Verarbeitung schwächeren Studentis einen Zugang. Darüber hinaus haben Diagramme bzw. Schemata den didaktischen Vorteil, dass sie sich hervorragend eignen für Unterricht im Hörsaal oder Seminarraum: Man betrachtet zusammen ein Bild und diskutiert darüber, das Konzept ständig vor Augen.</p>
 </section><section id="bildreichtum" class="level3"><h3 class="anchored" data-anchor-id="bildreichtum">Bildreichtum</h3>
 <p>Dieses Buch verwendet viele Bilder. Das hat vor allem den Grund, das Lehren zu erleichtern. Es ist dröge - beim Zuhören und beim Lehren - sich durch Textwüsten und Stichpunkt-Wälder zu kämpfen. Viel angenehmer ist es (nach meiner Erfahrung), wenn die Lehrperson anhand eines guten Diagramms den wesentlichen Punkt erläutert.</p>
+</section><section id="literatur" class="level3"><h3 class="anchored" data-anchor-id="literatur">Literatur</h3>
+<p>Pro Thema wird Literatur ausgewiesen, die den Stoff ausführlicher erläutert oder auf vertiefende Aspekte eingeht (Aspekte, die über den Stoff und die Lernziele hinausgehen). Quellen der Inhalte sind pro Kapitel im Literaturverzeichnis aufgeführt.</p>
+</section><section id="für-autodidakten-geeignet" class="level3"><h3 class="anchored" data-anchor-id="für-autodidakten-geeignet">Für Autodidakten geeignet</h3>
+<p>Folien sind zu knapp, um sie ohne Erläuterung zu verstehen. Wären Sie ausführlich, würde man sie “Buch” nennen. Dieses Buch versteht sich als eine Art “Prosa-Skript”, also ausformuliertes Skript zur Begleitung des Unterrichts. Nicht zur zur Begleitung: Dieses Skript ist zwar “dünner” als ein Buch, aber versucht, die wesentlichen Inhalte abzudecken. Außerdem sollen nicht nur Inhalte abdeckt sein, sondern auch die Kompetenz entwickelt werden, etwa durch Aufgaben.</p>
+</section>
+</div>
 <p>::: {.content-visible unless-format=“pdf”}</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="img/science.gif" class="img-fluid figure-img" style="width:50.0%"></p>
@@ -879,8 +931,6 @@ Hinweis
 <div class="xsmall">
 <p><a href="https://giphy.com/gifs/qrlOmXoTgHAd2">Quelle: Giphy</a></p>
 </div>
-</section></section><section id="literatur" class="level2"><h2 class="anchored" data-anchor-id="literatur">Literatur</h2>
-<p>Pro Thema wird Literatur ausgewiesen.</p>
 </section><section id="organisatorische-hinweise" class="level2"><h2 class="anchored" data-anchor-id="organisatorische-hinweise">Organisatorische Hinweise</h2>
 <div class="cell" data-hash="index_cache/html/hinweise-orga_3cef733c94772d65946592fb10485545">
 <!-- Hinweise zum Unterricht -->
@@ -1000,7 +1050,7 @@ Hinweis
 </ul></section>
 </div>
 </section><section id="technische-details" class="level2"><h2 class="anchored" data-anchor-id="technische-details">Technische Details</h2>
-<p>Dieses Dokument wurde erzeugt am/um 2023-03-03 17:43:34.</p>
+<p>Dieses Dokument wurde erzeugt am/um 2023-03-07 17:28:51.</p>
 <div class="cell" data-hash="index_cache/html/unnamed-chunk-1_7c7c7374a952de41b601022b438e533e">
 <pre><code>## ─ Session info ───────────────────────────────────────────────────────────────
 ##  setting  value
@@ -1096,9 +1146,23 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     icon: icon
   };
   anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
   const clipboard = new window.ClipboardJS('.code-copy-button', {
-    target: function(trigger) {
-      return trigger.previousElementSibling;
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
     }
   });
   clipboard.on('success', function(e) {
@@ -1163,6 +1227,92 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return note.innerHTML;
     });
   }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
   const findCites = (el) => {
     const parentEl = el.parentElement;
     if (parentEl) {
