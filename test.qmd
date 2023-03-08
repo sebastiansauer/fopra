@@ -1,7 +1,14 @@
+---
+title: test
+format: pdf
+---
 
 
 
-::: {.content-visible unless-format="pdf"}
+```{mermaid}
+flowchart LR
+  a --> B
+```
 
-![Das sind Sie nach der Lektüre dieses Buchs](img/science.gif){width="50%"}
-:::
+
+

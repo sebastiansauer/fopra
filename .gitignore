@@ -39,3 +39,14 @@ vignettes/*.pdf
 .Renviron
 
 /.quarto/
+
+
+# trials
+test*.*
+test*
+test*/
+
+
+
+# logs
+*.log
