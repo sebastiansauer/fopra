@@ -52,6 +52,8 @@ format:
     code-fold: false
     fig-align: center
     code-link: true
+    mermaid:
+      theme: neutral
   # pdf:
   #   toc: true
   #   number-sections: true
