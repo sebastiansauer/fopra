@@ -4,7 +4,7 @@
 
 Die Prüfungsleistung besteht aus:
 
-  - Projektarbeit
+  - Projektarbeit im Form einer Seminararbeit
   - Bonusleistung
 
 </br>
@@ -14,14 +14,21 @@ Die Prüfungsleistung besteht aus:
 ## Hinweise
 
 
-```{r hinweise, results='asis'}
-url <- "https://raw.githubusercontent.com/sebastiansauer/Lehre/main/Hinweise/Hinweise-Pruefung-Seminararbeit.Rmd"
-childtext <- readLines(url)
-cat(childtext, sep="\n")
-```
+{{< include Interna/Hinweise-Pruefung-Seminararbeit.qmd >}}
+
+## Besonderheiten von Gruppenarbeiten
 
 
-</br>
-</br>
+{{< include Interna/Hinweise-Pruefung-Gruppenarbeit.qmd >}}
+
+
+
+
+
+
+## Fazit
+
+
+🍀🍀🍀 Viel Erfolg! 🍀🍀🍀
 
 

@@ -34,7 +34,7 @@ Kurz gesagt: Sie lernen, eine echte, eigene Studie zu erstellen.
 
 
 
-- Die Studentis können eigenständig einige Arten von quantitativen psychologischen Studien in allen wesentlichen Schritten planen, erheben, auswerten, interpretieren und zusammenschreiben.
+- Die Studentis können eigenständig einige Arten von quantitativen psychologischen *Studien* in allen wesentlichen Schritten *durchführen*, d.h. planen, erheben, auswerten, interpretieren und zusammenschreiben.
     - Im Hinblick auf *Versuchsplanung* können die Studentis Versuchspläne passend zu ihrer Forschungsfrage auswählen und kritisch bewerten; darüber hinaus können Sie Fallzahlen vorab planen.
     - Im Hinblick auf *Datenerhebung* können die Studentis für ihre Forschungsfrage passende Messinstrumente auswählen. Zentrale rechtliche und ethische Aspekte sind ihnen bekannt. Softwarelösungen zur Datenerhebung können sie auswählen und einsetzen. Probleme und Lösungen im Hinblick auf Störvariablen können sie diskutieren.
     - Im Hinblick auf *Datenauswertung* können die Studentis die Verfahren aus den Modulen QM1 und QM2 praktisch auf ihre eigenen Daten anwenden.
@@ -132,12 +132,8 @@ Prüfen Sie im Zweifel das Datum der Erstellung des Dokuments.
 
 
 
-```{r hinweise-lernhilfen, results='asis', echo = FALSE}
-url <- "https://raw.githubusercontent.com/sebastiansauer/Lehre/main/Hinweise/Hinweise-Lernhilfen.Rmd"
+{{< include Interna/Hinweise-Lernhilfen.qmd >}}
 
-childtext <- readLines(url)
-cat(childtext, sep = "\n")
-```
 
 
 
@@ -149,13 +145,12 @@ cat(childtext, sep = "\n")
 ## Didaktik
 
 
-```{r hinweise-didaktik, results='asis', echo = FALSE}
-url <- "https://raw.githubusercontent.com/sebastiansauer/Lehre/main/Hinweise/Hinweise-Didaktik.Rmd"
 
-childtext <- readLines(url)
-cat(childtext, sep = "\n")
 
-```
+
+{{< include Interna/Hinweise-Didaktik.qmd >}}
+
+
 
 
 
@@ -169,7 +164,7 @@ cat(childtext, sep = "\n")
 [Quelle: Giphy](https://giphy.com/gifs/qrlOmXoTgHAd2)
 
 :::
-
+:::
 
 
 
@@ -179,12 +174,12 @@ cat(childtext, sep = "\n")
 ## Organisatorische Hinweise
 
 
-```{r hinweise-orga, results='asis', echo = FALSE}
-url <- "https://raw.githubusercontent.com/sebastiansauer/Lehre/main/Hinweise/Hinweise-Unterricht.Rmd"
 
-childtext <- readLines(url)
-cat(childtext, sep = "\n")
-```
+{{< include Interna/Hinweise-Unterricht.qmd >}}
+
+
+
+
 
 
 
