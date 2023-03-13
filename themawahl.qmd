@@ -11,7 +11,6 @@ library(tidyverse)
 #| echo: false
 library(ggplot2)
 theme_set(theme_minimal())
-
 ```
 
 ## Lernsteuerung
@@ -23,6 +22,7 @@ theme_set(theme_minimal())
 - Sie können Strategien anwenden, um sich eine Forschungsfrage zu erarbeiten.
 - Sie können eine Zeitplanung erstellen für Ihre Projektarbeit.
 - Sie können einen Fachartikel effizient lesen.
+- Sie können eine Sach-, eine operationlisierten Hypothese und statistische Hypothese unterscheiden und jeweils formulieren.
 
 
 
@@ -326,6 +326,17 @@ d %>%
 
 
 
+:::{#exr-prq4}
+
+### PQ4R-Methode
+
+Die PQ4R-Methode ist eine Methode, um ein größeres Verständnis von Texten zu gewinnen als mit dem herkömmlichen Von-vorne-nach-hinten-Lesen.
+Recherchieren Sie, wie diese Methode funktioniert und erklären Sie es einem vertrauenswürdigen Menschen!$\square$
+:::
+
+
+
+
 ### So liest man technische Literatur
 
 
@@ -538,8 +549,9 @@ Hier ist eine Auswahl interessanter Fachartikel (alle Open Access) mit Bezug zur
 
 ### Erarbeiten Sie de Kernaussagen eines Fachartikels
 
-Wählen Sie einen der oben vorgestellten Fachartikel und erarbeiten Sie die Kernaussagen. Sie können die Methode des "ersten Blicks" nutzen.$\square$
-
+Wählen Sie einen der oben vorgestellten Fachartikel und erarbeiten Sie die Kernaussagen! 
+Sie können die Methode des "ersten Blicks" nutzen.$\square$
+:::
 
 
 

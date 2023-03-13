@@ -18,6 +18,10 @@ Die Prüfungsleistung besteht aus:
 
 ## Besonderheiten von Gruppenarbeiten
 
+Die Gruppengröße (min., max.) beträgt *zwei (2) Personen*.
+
+
+
 
 {{< include Interna/Hinweise-Pruefung-Gruppenarbeit.qmd >}}
 

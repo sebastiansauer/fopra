@@ -62,7 +62,7 @@ sollten Sie Folgendes mitbringen:
     
 - Bereitschaft, Neues zu lernen
 - Kenntnis grundlegender Methoden wissenschaftlichen Arbeitens
-- Kenntnis in grundlgenden statstischen Verfahren (EDA, Regression, Inferenz)
+- Kenntnis in grundlegenden statistischen Verfahren (EDA, Regression, Inferenz)
 
 
 
@@ -74,10 +74,34 @@ Abb. @fig-ueberblick gibt einen Überblick über den Verlauf und die Inhalte des
 Das Diagramm hilft Ihnen zu verorten, wo welches Thema im Gesamtzusammenhang steht.
 
 
+```{mermaid}
+%%| label: fig-ueberblick
+%%| fig-cap: "Ein 'Fahrplan' als 'Big Picture' dieses Buches"
+flowchart LR
+  subgraph R[Rahmen]
+    direction LR
+    subgraph V[Theorie]
+      direction TB
+      E[Themawahl] --> Um[Schreiben]
+    end
+    subgraph M[Empirie]
+      direction TB
+      M1[Studiendesign] --> Vis[Messinstrumente]
+      Vis --> U[Stichprobe]
+      U --> G[Auswertung]
+    end
+    subgraph N[Fertigstellen]
+      direction TB
+      D[Diskutieren]
+    end
+  V --> M
+  M --> N
+  end
+```
 
 
 
-!["Fahrplan" als "Big Picture" des Buches](img/fahrplan.png){#fig-ueberblick width="75%"}
+
 
 
 Das Diagramm zeigt den Ablauf einer typischen Datenanalyse.
@@ -92,6 +116,7 @@ Natürlich kann man sich auch andere sinnvolle Darstellungen dieses Ablaufs vors
 
 
 ```{r source-timetable, echo = FALSE, cache=FALSE}
+# zeitplan
 timetable_file <- "Interna/Modulverlauf.xlsx"
 stopifnot(file.exists(timetable_file))
 timetable <- readxl::read_xlsx(timetable_file)
@@ -109,6 +134,15 @@ gt::gt(timetable) |>
 
 
 ## Lernhilfen
+
+
+
+### PDF-Version
+
+Um eine PDF-Version eines Kapitels zu erhalten,
+können Sie im Browser die Druckfunktion nutzen (Strg-P).
+Wählen Sie dort "PDF" als Ziel.
+
 
 
 

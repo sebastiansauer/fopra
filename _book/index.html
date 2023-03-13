@@ -54,7 +54,9 @@ ul.task-list li input[type="checkbox"] {
     "search-detached-cancel-button-title": "Abbrechen",
     "search-submit-button-title": "Abschicken"
   }
-}</script><link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+}</script><meta name="mermaid-theme" content="neutral">
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script><script src="site_libs/quarto-diagram/mermaid-init.js"></script><link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+<link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
 <script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><link rel="stylesheet" href="styles.css">
 </head>
 <body class="nav-sidebar floating">
@@ -105,8 +107,14 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./Schreiben.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Schreiben</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./pruefung.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Prüfung</span></span></a>
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Prüfung</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -140,7 +148,8 @@ ul.task-list li input[type="checkbox"] {
   <li>
 <a href="#lernhilfen" id="toc-lernhilfen" class="nav-link" data-scroll-target="#lernhilfen">Lernhilfen</a>
   <ul class="collapse">
-<li><a href="#videos" id="toc-videos" class="nav-link" data-scroll-target="#videos">Videos</a></li>
+<li><a href="#pdf-version" id="toc-pdf-version" class="nav-link" data-scroll-target="#pdf-version">PDF-Version</a></li>
+  <li><a href="#videos" id="toc-videos" class="nav-link" data-scroll-target="#videos">Videos</a></li>
   <li><a href="#software" id="toc-software" class="nav-link" data-scroll-target="#software">Software</a></li>
   <li><a href="#online-unterst%C3%BCtzung" id="toc-online-unterstützung" class="nav-link" data-scroll-target="#online-unterst%C3%BCtzung">Online-Unterstützung</a></li>
   <li><a href="#lerntipps" id="toc-lerntipps" class="nav-link" data-scroll-target="#lerntipps">Lerntipps</a></li>
@@ -204,7 +213,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Veröffentlichungsdatum</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">10. März 2023</p>
+      <p class="date">13. März 2023</p>
     </div>
   </div>
   
@@ -263,25 +272,51 @@ Wichtig
 <ul>
 <li>Bereitschaft, Neues zu lernen</li>
 <li>Kenntnis grundlegender Methoden wissenschaftlichen Arbeitens</li>
-<li>Kenntnis in grundlgenden statstischen Verfahren (EDA, Regression, Inferenz)</li>
+<li>Kenntnis in grundlegenden statistischen Verfahren (EDA, Regression, Inferenz)</li>
 </ul></section><section id="überblick" class="level3"><h3 class="anchored" data-anchor-id="überblick">Überblick</h3>
 <p>Abb. <a href="#fig-ueberblick">Abbildung&nbsp;<span>2</span></a> gibt einen Überblick über den Verlauf und die Inhalte des Buches. Das Diagramm hilft Ihnen zu verorten, wo welches Thema im Gesamtzusammenhang steht.</p>
+<div class="cell">
+<div class="cell-output-display">
 <div id="fig-ueberblick" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="img/fahrplan.png" class="img-fluid figure-img" style="width:75.0%"></p>
-<p></p><figcaption class="figure-caption">Abbildung&nbsp;2: “Fahrplan” als “Big Picture” des Buches</figcaption><p></p>
+<figure class="figure"><div>
+<pre class="mermaid mermaid-js" data-label="fig-ueberblick">flowchart LR
+  subgraph R[Rahmen]
+    direction LR
+    subgraph V[Theorie]
+      direction TB
+      E[Themawahl] --&gt; Um[Schreiben]
+    end
+    subgraph M[Empirie]
+      direction TB
+      M1[Studiendesign] --&gt; Vis[Messinstrumente]
+      Vis --&gt; U[Stichprobe]
+      U --&gt; G[Auswertung]
+    end
+    subgraph N[Fertigstellen]
+      direction TB
+      D[Diskutieren]
+    end
+  V --&gt; M
+  M --&gt; N
+  end
+</pre>
+</div>
+<p></p><figcaption class="figure-caption">Abbildung&nbsp;2: Ein ‘Fahrplan’ als ‘Big Picture’ dieses Buches</figcaption><p></p>
 </figure>
+</div>
+</div>
 </div>
 <p>Das Diagramm zeigt den Ablauf einer typischen Datenanalyse. Natürlich kann man sich auch andere sinnvolle Darstellungen dieses Ablaufs vorstellen.</p>
 </section><section id="modulzeitplan" class="level3"><h3 class="anchored" data-anchor-id="modulzeitplan">Modulzeitplan</h3>
 <div class="cell">
 <div class="cell-output-display">
 
-<div id="luqrgfkoso" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<div id="kkpqnlhxty" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>html {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Helvetica Neue', 'Fira Sans', 'Droid Sans', Arial, sans-serif;
 }
 
-#luqrgfkoso .gt_table {
+#kkpqnlhxty .gt_table {
   display: table;
   border-collapse: collapse;
   margin-left: auto;
@@ -306,7 +341,7 @@ Wichtig
   border-left-color: #D3D3D3;
 }
 
-#luqrgfkoso .gt_heading {
+#kkpqnlhxty .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -318,12 +353,12 @@ Wichtig
   border-right-color: #D3D3D3;
 }
 
-#luqrgfkoso .gt_caption {
+#kkpqnlhxty .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#luqrgfkoso .gt_title {
+#kkpqnlhxty .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -335,7 +370,7 @@ Wichtig
   border-bottom-width: 0;
 }
 
-#luqrgfkoso .gt_subtitle {
+#kkpqnlhxty .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -347,13 +382,13 @@ Wichtig
   border-top-width: 0;
 }
 
-#luqrgfkoso .gt_bottom_border {
+#kkpqnlhxty .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#luqrgfkoso .gt_col_headings {
+#kkpqnlhxty .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -368,7 +403,7 @@ Wichtig
   border-right-color: #D3D3D3;
 }
 
-#luqrgfkoso .gt_col_heading {
+#kkpqnlhxty .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -388,7 +423,7 @@ Wichtig
   overflow-x: hidden;
 }
 
-#luqrgfkoso .gt_column_spanner_outer {
+#kkpqnlhxty .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -400,15 +435,15 @@ Wichtig
   padding-right: 4px;
 }
 
-#luqrgfkoso .gt_column_spanner_outer:first-child {
+#kkpqnlhxty .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#luqrgfkoso .gt_column_spanner_outer:last-child {
+#kkpqnlhxty .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#luqrgfkoso .gt_column_spanner {
+#kkpqnlhxty .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -420,7 +455,7 @@ Wichtig
   width: 100%;
 }
 
-#luqrgfkoso .gt_group_heading {
+#kkpqnlhxty .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -446,7 +481,7 @@ Wichtig
   text-align: left;
 }
 
-#luqrgfkoso .gt_empty_group_heading {
+#kkpqnlhxty .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -461,15 +496,15 @@ Wichtig
   vertical-align: middle;
 }
 
-#luqrgfkoso .gt_from_md > :first-child {
+#kkpqnlhxty .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#luqrgfkoso .gt_from_md > :last-child {
+#kkpqnlhxty .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#luqrgfkoso .gt_row {
+#kkpqnlhxty .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -488,7 +523,7 @@ Wichtig
   overflow-x: hidden;
 }
 
-#luqrgfkoso .gt_stub {
+#kkpqnlhxty .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -501,7 +536,7 @@ Wichtig
   padding-right: 5px;
 }
 
-#luqrgfkoso .gt_stub_row_group {
+#kkpqnlhxty .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -515,11 +550,11 @@ Wichtig
   vertical-align: top;
 }
 
-#luqrgfkoso .gt_row_group_first td {
+#kkpqnlhxty .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#luqrgfkoso .gt_summary_row {
+#kkpqnlhxty .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -529,16 +564,16 @@ Wichtig
   padding-right: 5px;
 }
 
-#luqrgfkoso .gt_first_summary_row {
+#kkpqnlhxty .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#luqrgfkoso .gt_first_summary_row.thick {
+#kkpqnlhxty .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#luqrgfkoso .gt_last_summary_row {
+#kkpqnlhxty .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -548,7 +583,7 @@ Wichtig
   border-bottom-color: #D3D3D3;
 }
 
-#luqrgfkoso .gt_grand_summary_row {
+#kkpqnlhxty .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -558,7 +593,7 @@ Wichtig
   padding-right: 5px;
 }
 
-#luqrgfkoso .gt_first_grand_summary_row {
+#kkpqnlhxty .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -568,11 +603,11 @@ Wichtig
   border-top-color: #D3D3D3;
 }
 
-#luqrgfkoso .gt_striped {
+#kkpqnlhxty .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#luqrgfkoso .gt_table_body {
+#kkpqnlhxty .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -581,7 +616,7 @@ Wichtig
   border-bottom-color: #D3D3D3;
 }
 
-#luqrgfkoso .gt_footnotes {
+#kkpqnlhxty .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -595,7 +630,7 @@ Wichtig
   border-right-color: #D3D3D3;
 }
 
-#luqrgfkoso .gt_footnote {
+#kkpqnlhxty .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-left: 4px;
@@ -604,7 +639,7 @@ Wichtig
   padding-right: 5px;
 }
 
-#luqrgfkoso .gt_sourcenotes {
+#kkpqnlhxty .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -618,7 +653,7 @@ Wichtig
   border-right-color: #D3D3D3;
 }
 
-#luqrgfkoso .gt_sourcenote {
+#kkpqnlhxty .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -626,64 +661,64 @@ Wichtig
   padding-right: 5px;
 }
 
-#luqrgfkoso .gt_left {
+#kkpqnlhxty .gt_left {
   text-align: left;
 }
 
-#luqrgfkoso .gt_center {
+#kkpqnlhxty .gt_center {
   text-align: center;
 }
 
-#luqrgfkoso .gt_right {
+#kkpqnlhxty .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#luqrgfkoso .gt_font_normal {
+#kkpqnlhxty .gt_font_normal {
   font-weight: normal;
 }
 
-#luqrgfkoso .gt_font_bold {
+#kkpqnlhxty .gt_font_bold {
   font-weight: bold;
 }
 
-#luqrgfkoso .gt_font_italic {
+#kkpqnlhxty .gt_font_italic {
   font-style: italic;
 }
 
-#luqrgfkoso .gt_super {
+#kkpqnlhxty .gt_super {
   font-size: 65%;
 }
 
-#luqrgfkoso .gt_footnote_marks {
+#kkpqnlhxty .gt_footnote_marks {
   font-style: italic;
   font-weight: normal;
   font-size: 75%;
   vertical-align: 0.4em;
 }
 
-#luqrgfkoso .gt_asterisk {
+#kkpqnlhxty .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#luqrgfkoso .gt_indent_1 {
+#kkpqnlhxty .gt_indent_1 {
   text-indent: 5px;
 }
 
-#luqrgfkoso .gt_indent_2 {
+#kkpqnlhxty .gt_indent_2 {
   text-indent: 10px;
 }
 
-#luqrgfkoso .gt_indent_3 {
+#kkpqnlhxty .gt_indent_3 {
   text-indent: 15px;
 }
 
-#luqrgfkoso .gt_indent_4 {
+#kkpqnlhxty .gt_indent_4 {
   text-indent: 20px;
 }
 
-#luqrgfkoso .gt_indent_5 {
+#kkpqnlhxty .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -715,7 +750,7 @@ Wichtig
 </tr>
 <tr class="odd">
 <td class="gt_row gt_right" headers="Nr">3</td>
-<td class="gt_row gt_left" headers="Thema">Hypothesen</td>
+<td class="gt_row gt_left" headers="Thema">Schreiben</td>
 <td class="gt_row gt_right" headers="Datum">27.3. - 2.4.</td>
 <td class="gt_row gt_left" headers="Kommentar">NA</td>
 </tr>
@@ -803,6 +838,8 @@ Wichtig
 </div>
 </div>
 </section></section><section id="lernhilfen" class="level2"><h2 class="anchored" data-anchor-id="lernhilfen">Lernhilfen</h2>
+<section id="pdf-version" class="level3"><h3 class="anchored" data-anchor-id="pdf-version">PDF-Version</h3>
+<p>Um eine PDF-Version eines Kapitels zu erhalten, können Sie im Browser die Druckfunktion nutzen (Strg-P). Wählen Sie dort “PDF” als Ziel.</p>
 <!-- ### PDF-Version -->
 <!-- -- EXPERIMENTAL 🔬🧪 -- EXPERIMENTAL -->
 <!-- Von diesem "Webbuch" (HTML-Format) gibt es [hier eine PDF-Version](_book/statistik1.pdf). -->
@@ -813,7 +850,7 @@ Wichtig
 <!-- Außerdem wird die PDF-Version nicht ganz aktuell gehalten - -->
 <!-- die aktuelle Version ist immer die Webbuch-Variante. -->
 <!-- Prüfen Sie im Zweifel das Datum der Erstellung des Dokuments. -->
-<section id="videos" class="level3"><h3 class="anchored" data-anchor-id="videos">Videos</h3>
+</section><section id="videos" class="level3"><h3 class="anchored" data-anchor-id="videos">Videos</h3>
 <p>Auf dem <a href="https://www.youtube.com/channel/UCkvdtj8maE7g-SOCh4aDB9g">YouTube-Kanal des Autors</a> finden sich eine Reihe von Videos mit Bezug zum Inhalt dieses Buchs. Besonders <a href="https://youtube.com/playlist?list=PLRR4REmBgpIEzVFLvzCn76TB2VS4jXcfg">diese Playlist</a> passt zu den Inhalten dieses Buchs.</p>
 </section><section id="software" class="level3"><h3 class="anchored" data-anchor-id="software">Software</h3>
 <p>Installieren Sie <a href="https://data-se.netlify.app/2021/11/30/installation-von-r-und-seiner-freunde/">R und seine Freunde</a>. Für die Bayes-Inferenz brauchen Sie<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> zusätzliche Software, was leider etwas Zusatzaufwand erfordert. Lesen Sie <a href="https://data-se.netlify.app/2022/01/28/bayes-software-installieren-f%C3%BCr-r/">hier</a> die Hinweise dazu. Installieren Sie die folgende R-Pakete<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>:</p>
@@ -1075,8 +1112,8 @@ Hinweis
 <ul>
 <li>Diese Hinweise hier gelten nur insofern Ihre Dozentis Ihnen nicht andere Hinweise geben :-)</li>
 </ul></section><section id="technische-details" class="level2"><h2 class="anchored" data-anchor-id="technische-details">Technische Details</h2>
-<p>Dieses Dokument wurde erzeugt am/um 2023-03-10 11:00:54.</p>
-<div class="cell" data-hash="index_cache/html/unnamed-chunk-1_7c7c7374a952de41b601022b438e533e">
+<p>Dieses Dokument wurde erzeugt am/um 2023-03-13 09:51:25.</p>
+<div class="cell" data-hash="index_cache/html/unnamed-chunk-2_59c011453432c137da800ec2896b7908">
 <pre><code>## ─ Session info ───────────────────────────────────────────────────────────────
 ##  setting  value
 ##  version  R version 4.2.1 (2022-06-23)
@@ -1087,15 +1124,13 @@ Hinweis
 ##  collate  en_US.UTF-8
 ##  ctype    en_US.UTF-8
 ##  tz       Europe/Berlin
-##  date     2023-03-03
+##  date     2023-03-13
 ##  pandoc   2.19.2 @ /Applications/RStudio.app/Contents/Resources/app/quarto/bin/tools/ (via rmarkdown)
 ## 
 ## ─ Packages ───────────────────────────────────────────────────────────────────
 ##  package     * version date (UTC) lib source
 ##  cellranger    1.1.0   2016-07-27 [1] CRAN (R 4.2.0)
 ##  cli           3.6.0   2023-01-09 [1] CRAN (R 4.2.0)
-##  codetools     0.2-18  2020-11-04 [2] CRAN (R 4.2.1)
-##  colorout    * 1.2-2   2022-06-13 [1] local
 ##  colorspace    2.1-0   2023-01-23 [1] CRAN (R 4.2.0)
 ##  digest        0.6.31  2022-12-11 [1] CRAN (R 4.2.0)
 ##  dplyr         1.1.0   2023-01-29 [1] CRAN (R 4.2.0)
@@ -1110,7 +1145,7 @@ Hinweis
 ##  htmltools     0.5.4   2022-12-07 [1] CRAN (R 4.2.0)
 ##  htmlwidgets   1.6.1   2023-01-07 [1] CRAN (R 4.2.0)
 ##  jsonlite      1.8.4   2022-12-06 [1] CRAN (R 4.2.0)
-##  knitr         1.42    2023-01-25 [1] CRAN (R 4.2.0)
+##  knitr       * 1.42    2023-01-25 [1] CRAN (R 4.2.0)
 ##  lifecycle     1.0.3   2022-10-07 [1] CRAN (R 4.2.0)
 ##  magrittr      2.0.3   2022-03-30 [1] CRAN (R 4.2.0)
 ##  munsell       0.5.0   2018-06-12 [1] CRAN (R 4.2.0)
