@@ -335,6 +335,15 @@ Recherchieren Sie, wie diese Methode funktioniert und erklären Sie es einem ver
 :::
 
 
+:::{.callout-caution}
+### Brain-Drain
+
+Laut @ward_brain_2017 verringert die *bloße Anwesenheit* eines Handies o.Ä. auf Ihrem Schreibtisch oder in Ihrer Ihren IQ.
+Wenn Sie arbeiten, sollten Sie sich daher vornehmen: "Ich werde jetzt konzentriert arbeiten und mich nicht ablenken lassen".
+Schalten Sie Ihr Handy aus und stellen Sie sicher, dass Sie nicht gestört werden.
+:::
+
+
 
 
 ### So liest man technische Literatur
