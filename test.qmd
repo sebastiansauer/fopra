@@ -1,14 +1,17 @@
 ---
 title: test
-format: pdf
+
 ---
 
 
-
 ```{mermaid}
+%%| label: ablauf-interv
+%%| fig-cap: Einfaches Schema des Ablaufs einer Interventionsstudie
 flowchart LR
-  a --> B
+A[Begrüßung der Versuchsteilneher:innen] --> B1[Bedingung A: Ibuprofen]
+A --> B2[Bedingung 2: Placebo]
+B1 --> C[Messung des Kopfschmerzes]
+B2 --> C
 ```
-
 
 

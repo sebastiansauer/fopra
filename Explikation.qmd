@@ -1,0 +1,274 @@
+# Explikation
+
+
+
+## Lernsteuerung
+
+### Standort im Lernpfad
+
+@fig-ueberblick zeigt den Standort dieses Kapitels im Lernpfad und gibt damit einen Überblick über das Thema dieses Kapitels im Kontext aller Kapitel.
+
+
+
+
+```{r}
+#| echo: false
+library(tidyverse)
+ggplot2::theme_set(theme_minimal())
+```
+
+
+### Lernziele
+
+
+- Sie können erklären, warum interventionelle Studien und speziell Experimente zur Explikation als epistemologisches Ziel von Studien eingesetzt werden können.
+- Sie können Qualitätsmerkmale einer interventionellen Studie nennen und erläutern.
+
+
+
+## Interventionelle Studien
+
+
+Interventionelle Studien werden in der Regel mit dem Ziel der *Explikation*, zumeist im kausalen Sinne, eingesetzt.
+
+
+
+
+:::{#def-treatment}
+### Treatment
+Ein Treatment nennt man die Behandlung, die eine Gruppe von Versuchteilnehmis im Rahmen einer Studie erfährt.$\square$
+:::
+
+:::{#exm-ibu}
+### Ibuprofen und Kopfschmerz
+Eine Interventionsstudie wird verwendet, um den Effekt von Ibuprofen auf (die Reduktion von) akutem Kopfschmerz zu untersuchen. Dafür werden zwei Gruppen von Versuchspersonen unterschieden: Solche, die Ibuprofen als Treatment verabreicht bekommen, und solche, die nur ein "Scheinmedikament" (Placebo) in Form einer "Zuckerpille" verabreicht bekommen, vgl. @fig-interv.$\square$
+:::
+
+
+
+```{mermaid}
+%%| label: ablauf-interv
+%%| fig-cap: Einfaches Schema des Ablaufs einer Interventionsstudie
+flowchart LR
+A[Begrüßung der Versuchsteilneher:innen] --> B1[Bedingung A: Ibuprofen]
+A --> B2[Bedingung 2: Placebo]
+B1 --> C[Messung des Kopfschmerzes]
+B2 --> C
+```
+
+
+:::{#def-exp-kontrollgruppe}
+### Experimental- vs. Kontrollgruppe
+Die Bedingung (Gruppe), in der das eigentliche Treatment verabreicht wird, nennt man auch Experimentalbedingung (Experimentalgruppe).
+Eine Bedingung (Gruppe), in der nur ein Treatment als Referenzwert verarbreicht wird, nennt man auch Kontrollbegingung (Kontrollgruppe). Häufig ist der Referenzwert "kein Treatment" oder ein Placebo.$\square$
+:::
+
+## Effekt
+
+
+### Definition
+
+:::{#def-effekt}
+Ein Effekt (eines Treatments $T$) ist hier definiert als der Unterschied im beobachteten (gemessenen) Ergebnis zwischen was passiert ist, nachdem das Treatment verabreicht wurde und was passiert wäre, wenn stattdessen eine andere Intervention verabreicht worden wäre, unter der Annahme, dass sonst alles andere gleich gewesen wäre^[ceteris paribus].$\square$
+:::
+
+:::{#exm-kopfweh}
+Den Effekt des Ibuprofens (Treatment) auf den Kopfschmerz bezeichnen wir als $Y(1)$.
+Den Effekt der Gruppe ohne Treatment auf den Kopfschmerz bezeichnen wir als $Y(0)$.$\square$
+:::
+
+:::{.callout-note}
+Leider ist es unmöglich, einen Effekt direkt zu bestimmen.$\square$
+:::
+
+
+Leider ist es per definitionem unmöglich, zu messen, was der Fall wäre, wenn die Welt anders wäre bzw. wir eine andere Intervention angewendet hätten.
+Man spricht daher von einer kontrafaktischen Definition.
+Auf dieser Basis definiert man den mittleren Treatmenteffekt (average treatment effect, AVE) wie folgt (bei einer
+Stichprobe oder Population der Größe N und für die AV Y).
+
+$$AVE = \sum_i^N[Y_i(1) - Y_i(0)]$$
+
+
+
+Man kann bei einer bestimmten Person nur entweder $Y_i(1)$ oder $Y_i(0)$ beobachten, aber nicht beides gleichzeitig.
+
+
+### Die Stärke eines Effekts als Funktion von fünf Determinanten
+
+Die Stärke eines Effekts (eines Treatments) kann als Funktion von fünf Größen verstanden werden, s. @fig-effekt.
+
+
+
+```{mermaid}
+%%| label: fig-effekt
+%%| fig-cap: Die fünf Determinanten eines Effekts
+flowchart LR
+T[Treatment T] --> E[Effekt E]
+VP[Versuchsperson P] --> E
+Z[Zeit Z] --> E
+R[Rahmen R] --> E
+M[Messinstrument M] --> E
+
+```
+
+
+
+1. *Treatment* T (*Ursache* U) - *wie?*
+- ︎ Art und Menge des Treatment spielt natürlich eine Rolle (50 mg Ibuprofen wirken anders als 500 mg).
+
+2. *Versuchsperson* (bzw. *Versuchsobjekt*) P - *wer?*
+- Auf den Versuchsobjekten wird das Treatment angewendet und die Effekte gemessen.
+- Die Effekte können also zwischen den Versuchsobjekten variieren.
+
+3. *Zeit* Z - *wann?*
+- Der Effekt hängt vom Zeit des Treatments ab und von der Periode zwischen Applikation und Messung des Effekts.
+
+4. *Rahmen* R - *wo?*
+- Eine Kopfschmerztablette wirkt vielleicht besser, wenn sie während eines entspannenden Bades an einem ruhigen Abend zuhause eingenommen wird (als während eines stressigen Projektmeetings).
+
+5. *Messinstrument* M - *was?*
+- Je nach verwendeten Messinstrument oder Zielvariablen können die Effekte des Treatments deutlicher oder weniger deutlich zum Tragen kommen.
+
+
+$$ES = f(ZURMO)$$
+
+
+
+## Validität
+
+
+:::{#def-validitaet}
+### Validität
+Unter der Validität einer Studie versteht man die *Gültigkeit* in dem Sinne, ob die fünf Determinanten korrekt erkannt/beurteilt sind. In dem Maße wie sie falsch beurteilt sind, ist die Validität einbeschränkt.$\sqaure$
+:::
+
+
+:::{#callout-note}
+Fehlzuordnungen in den fünf Determinanten begrenzen die Gültigkeit (Validität) eines Effekts.$\square$
+:::
+
+
+
+1. *Treatment* T (*Ursache* U) - *wie?*
+- Eine neue Coachingmethode (T) hat keinen Effekt, aber die Freundlichkeit des Coaches wurde fälschlich als Effekt des Treatments T interpretiert.
+- Der Effekt ist also nur ein "Scheineffekt", kein echter Effekt,
+da er nicht auf die in der Studie angenommene Ursache, das Treatment, zurückzuführen ist (sondern auf die Freundlichkeit des Coaches).
+
+2. *Versuchsperson* (bzw. *Versuchsobjekt*) P - *wer?*
+- Die Autoris der Studie gaben an, die Teilnehmer:innen waren „Health care professionals“, dabei handelte es sich um ungelernte Hilfskräfte.
+- Der Effekt ist also nicht in der angegebenen Population, sondern einer anderen (bei ungelernten Hilfskräften), beobachtet worden.
+- Die Gültigkeit ist insofern eingeschränkt: Die  Population ist falsch benannt.
+
+- Die Teilnehmis waren nicht kooperativ und haben sich nicht an die Instruktionen gehalten.
+- Das Treatment hätte einen Effekt, aber er konnte sich nicht zeigen, da die Teilnehmis sich nicht an die Instruktionen gehalten haben.
+3. *Zeit* Z - *wann?*
+- Die Forscherin nahm an, das Treatment habe keinen Effekt, aber sie hat nur zu früh gemessen.
+
+4. *Rahmen* R - *wo?*
+- Die Kopfschmerztablette wurde während eines stressigen Projektmeetings eingenommen. Wäre sie in einem entspannten Umfeld eingenommen worden, so hätte sie einen Effekt gehabt.
+
+5. *Messinstrument* M - *was?*
+- Der Statistiktest des Professors hat nicht das Statistikwissen gemessen, sondern die Spick-Kompetenz (aber die dafür sehr genau). Leider fiel das dem Prof nicht auf (leider für den Prof, die Studis fanden es super).
+
+
+
+### Interne Validität
+
+
+Die interne Validität kann als Spezialfall der Konstruktvalidität gesehen werden.
+Die interne Validität fragt, inwieweit der Determinant der *Ursache* korrekt bekannt ist: Ist die angenommene Ursache tatsächlich auch die Ursache der beobachten Effekte?
+
+:::{#def-int-val}
+### Interne Validität
+Die interne Validität betrifft die korrekte Spezifikation des Determinanten *Ursache*.$\square$
+:::
+
+
+Bedrohungen bzw. Einschränkungen der internen Validität beziehen sich nur bestimmte Fehlbeschreibungen beim Determinanten der Ursache (U): Störvariablen, die auch *ohne das Treatment zu einen Effekt* führen würden.
+
+
+
+2. *Versuchsperson* (bzw. *Versuchsobjekt*) P - *wer?*
+- In einer medizinischen Studie werden die gesünderen Patienten in die Gruppe mit dem neuen Medikament gebracht, aber die kränkeren in die Gruppe mit dem bisherigen Standard-Medikament.
+- Allein schon durch diese Zuordnung zeigte sich ein Effekt; das Treatment war unwirksam.
+
+3. *Zeit* Z - *wann?*
+- Zur Messung von Stress wird Speichel-Kortisol entnommen. Die Proben der Experimentalgruppe bleiben aber zulange der Raumtemperatur und Sauerstoff ausgesetzt (im Gegensatz zu den Proben der Kontrollgruppe).
+- Das Treatment hatte keinen Effekt, aber allein durch die unterschiedliche Exposition mit Sauerstoff fand sich ein Effekt.
+
+4. *Rahmen* R - *wo?*
+- Die Verabreichung des neuen Medikaments fand in einer Wellness-Klinik statt. Das alte Medikament im Keller des alten Krankenhauses.
+- Das Treatment (neues Medikament) hatte keinen Effekt, aber allein der Rahmenbedingung fand sich ein Effekt zugunsten des neuen Medikaments.
+
+5. *Messinstrument* M - *was?*
+- In der Kontrollgruppe wurde ein erfahrener Beobachter zur Analyse des Assessment-Centers eingesetzt, in der Treatmentgruppe aber der Praktikant, der von Tuten und Blasen keine Ahnung hatte.
+- Das Treatment hatte einen Effekt, konnte sich aber nicht zeigen, da der Beobachter des Messens nicht mächtig war.
+
+
+### Externe Validität
+
+
+:::{#def-ext-val}
+### Externe Validität
+Externe Validität fragt, wie gut ein Effekt verallgemeinert werden kann, z.B. auf andere Personen, Situationen, Populationen.$\square$
+:::
+
+
+
+
+
+1. *Treatment* T (*Ursache* U) - *wie?*
+- Eine Forscherin hat nur einen Teil eines neuen Coachingskonzepts in einem Treatment umgesetzt. Sind die Ergebnisse jetzt auf das ganze Coachingkonzept verallgemeinerter?
+
+
+2. *Versuchsperson* (bzw. *Versuchsobjekt*) P - *wer?*
+- Ein Krebsmedikament wurde nur an älteren Frauen evaluiert (und dies hat das Forscherteam korrekt angegeben). Ob der Effekt wohl auch für andere Altersgruppen und Geschlechter gilt?
+
+3. *Zeit* Z - *wann?*
+- Ein Allergiemittel reduziert kurzfristig die relevanten Symptome. Aber ob es wohl auch langfristig Effekte hat?
+
+4. *Rahmen* R - *wo?*
+- Die Wirksamkeit einer Kopfschmerztablette wurde nur in für die Versuchsteilnehmis entspannten Settings erfasst. Ob sie wohl auch wirkt, wenn sich die Personen in stressigen Projektmeetings befinden?
+
+5. *Messinstrument* M - *was?*
+- Finden sich die Effekte des Vorschultrainings wohl nicht nur in einem bestimmten Intelligenztest, sondern auch in anderen? Haben sie vielleicht auch Effekte auf die emotionale (nicht nur kognitive) Entwicklung des Kindes?
+
+
+### UV und AV
+
+Die Unabhängige Variable (UV) entspricht dem Treatment und damit der angenommenen Ursache des Effekts. 
+Die UV hängt von keiner anderen Variablen ab, in dem Sinne, dass dis Forschi selber bestimmt, welche Versuchspersonen welche Ausprägung in der UV zugewiesen bekommen (oder selber entscheidet, den Zufall entscheiden zu lassen).
+
+Häufig hat die UV zwei Stufen:
+
+- Treatment
+- Kein Treatment
+
+Die Abhängige Variable (AV) bezeichnet die Variable, die den Effekt misst, die Wirkung des Treatments.
+Die Forschungsfrage formuliert, dass die AV von der UV kausal und statsistisch abhängig ist.
+
+```{mermaid}
+UV --> AV
+```
+
+Die Begriffe UV und AV machen nur Sinn, wenn es eine Intervention in der Studie gibt.
+
+
+
+
+### Wann ist eine Ursache wirklich eine Ursache
+
+Nach John Stuart Mill müssen drei Bedingungen erfüllt sein, damit eine vermeintliche Ursache wirklich die Ursache eines Effekts ist:
+
+1. *Zusammenhang*. Es muss einen statistischen Zusammenhang (Kovariation) zwischen der UV und der AV geben (z.B. in Form einer Korrelation).
+
+2. *UV zeitlich vor AV*. Veränderungen in der UV müssen zeitlich vor den Änderungen der AV auftreten.
+
+
+3. *Ausschluss anderer Ursachen*. Alternativerklärungen für den Zusammenhang von UV und AV müssen ausgeschlossen sein, entweder auf theoretischer oder empirischer Basis.
+
+
+
+
+

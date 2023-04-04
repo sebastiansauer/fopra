@@ -191,6 +191,15 @@ Genauer gesagt müssen Sie drei Dinge tun: Lesen. Lesen. Lesen.$\square$
 
 
 
+:::{#exr-laie}
+### Übersetzen Sie von der Laiensprache zur wissenschaftlichen Forschungsfrage
+In der Laienformulierung lautet die Forschungsfrage: 
+
+>    Wer viel am Handy rumdaddelt, der ist halt nicht so auf Zack, im Hirn, und so, vor allem bei Jungs, übrigens, liegt an den Genen. Ach ja, wer sich halt nicht im Griff hat, der daddelt halt mehr.$\square$
+
+:::
+
+
 
 ### Die Verständnisspirale
 
