@@ -1,0 +1,18 @@
+{
+  "hash": "ffa935e1c5925c87bf0bf79f258fd0d8",
+  "result": {
+    "markdown": "# Experiment\n\n\n\n\n## Lernsteuerung\n\n### Standort im Lernpfad\n\n@fig-ueberblick zeigt den Standort dieses Kapitels im Lernpfad und gibt damit einen Überblick über das Thema dieses Kapitels im Kontext aller Kapitel.\n\n\n\n\n\n::: {.cell hash='Experimentieren_cache/html/unnamed-chunk-1_0d29db4dce168929824dd70efadf5834'}\n\n:::\n\n\n\n### Lernziele\n\n\n- Sie können Qualitätsmerkmale einer interventionellen Studie nennen und erläutern.\n\n\n## Die Kunst des Experiments\n\n\n### MAX-MIN-Prinzip\n\n\n### Randomisieren\n\n\n\n\n\n\n\n\n\n## Störvariablen\n\n\nMeist gibt es viele kausale Variablen, die eine AV beeinflussen (können).\nIn einer Studie oder einem Experiment interessiert häufig nur der Einfluss einer bestimmten Variablen, um eine spezifische Hypothese zu prüfen (die UV).\nAlle in dieser Untersuchung nicht interessierenden Variablen, die die AV beeinflussen, heißen *Störvariablen.*\nStörvariablen mögen selbst theoretisch interessant sein, in einem Experiment versucht man jedoch, sie unter Kontrolle zu bringen, um den Einfluss der interessierenden UV untersuchen zu können\nKontrolliert man Störvariablen nicht, kann eine Veränderung in AV nicht eindeutig auf UV zurückgeführt werden, ein Kausalschluss ist dann *nicht* möglich.\nBeobachtungsstudien haben meist weniger Kontrolle über Störvariablen als Studien mit Intervention.\nStudien in kontrolliertem Umfeld sind meist in geringerem Maße Störvariablen ausgesetzt als Studien in „freier Wildbahn“.\nStudien mit Randomisierung umgehen das Problem der personengebundenen Störvariablen (wenn die Fallzahl groß genug ist).\n\n\n\n### Beispiele für Störvariablen\n\n\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-in-header": [
+        "<link href=\"site_libs/pagedtable-1.1/css/pagedtable.css\" rel=\"stylesheet\" />\n<script src=\"site_libs/pagedtable-1.1/js/pagedtable.js\"></script>\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

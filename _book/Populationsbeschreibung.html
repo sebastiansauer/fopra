@@ -79,7 +79,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./pruefung.html" rel="next">
+<link href="./Explikation.html" rel="next">
 <link href="./Schreiben.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -170,8 +170,20 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./Explikation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Explikation</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./Experimentieren.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Experiment</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./pruefung.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Prüfung</span></span></a>
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Prüfung</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -214,15 +226,16 @@ div.csl-indent {
   </ul>
 </li>
   <li><a href="#forschungsdesign" id="toc-forschungsdesign" class="nav-link" data-scroll-target="#forschungsdesign"><span class="header-section-number">5.4</span> Forschungsdesign</a></li>
+  <li><a href="#fallbeispiel-world-happieness-report" id="toc-fallbeispiel-world-happieness-report" class="nav-link" data-scroll-target="#fallbeispiel-world-happieness-report"><span class="header-section-number">5.5</span> Fallbeispiel: World Happieness Report</a></li>
   <li>
-<a href="#planung-der-stichprobengr%C3%B6%C3%9Fe" id="toc-planung-der-stichprobengröße" class="nav-link" data-scroll-target="#planung-der-stichprobengr%C3%B6%C3%9Fe"><span class="header-section-number">5.5</span> Planung der Stichprobengröße</a>
+<a href="#planung-der-stichprobengr%C3%B6%C3%9Fe" id="toc-planung-der-stichprobengröße" class="nav-link" data-scroll-target="#planung-der-stichprobengr%C3%B6%C3%9Fe"><span class="header-section-number">5.6</span> Planung der Stichprobengröße</a>
   <ul class="collapse">
-<li><a href="#sch%C3%A4tzung-eines-normalverteilten-parameters" id="toc-schätzung-eines-normalverteilten-parameters" class="nav-link" data-scroll-target="#sch%C3%A4tzung-eines-normalverteilten-parameters"><span class="header-section-number">5.5.1</span> Schätzung eines normalverteilten Parameters</a></li>
-  <li><a href="#sch%C3%A4tzung-f%C3%BCr-korrelationen" id="toc-schätzung-für-korrelationen" class="nav-link" data-scroll-target="#sch%C3%A4tzung-f%C3%BCr-korrelationen"><span class="header-section-number">5.5.2</span> Schätzung für Korrelationen</a></li>
-  <li><a href="#sch%C3%A4tzung-f%C3%BCr-typische-statistische-tests" id="toc-schätzung-für-typische-statistische-tests" class="nav-link" data-scroll-target="#sch%C3%A4tzung-f%C3%BCr-typische-statistische-tests"><span class="header-section-number">5.5.3</span> Schätzung für typische statistische Tests</a></li>
+<li><a href="#sch%C3%A4tzung-eines-normalverteilten-parameters" id="toc-schätzung-eines-normalverteilten-parameters" class="nav-link" data-scroll-target="#sch%C3%A4tzung-eines-normalverteilten-parameters"><span class="header-section-number">5.6.1</span> Schätzung eines normalverteilten Parameters</a></li>
+  <li><a href="#sch%C3%A4tzung-f%C3%BCr-korrelationen" id="toc-schätzung-für-korrelationen" class="nav-link" data-scroll-target="#sch%C3%A4tzung-f%C3%BCr-korrelationen"><span class="header-section-number">5.6.2</span> Schätzung für Korrelationen</a></li>
+  <li><a href="#sch%C3%A4tzung-f%C3%BCr-typische-statistische-tests" id="toc-schätzung-für-typische-statistische-tests" class="nav-link" data-scroll-target="#sch%C3%A4tzung-f%C3%BCr-typische-statistische-tests"><span class="header-section-number">5.6.3</span> Schätzung für typische statistische Tests</a></li>
   </ul>
 </li>
-  <li><a href="#literatur" id="toc-literatur" class="nav-link" data-scroll-target="#literatur"><span class="header-section-number">5.6</span> Literatur</a></li>
+  <li><a href="#literatur" id="toc-literatur" class="nav-link" data-scroll-target="#literatur"><span class="header-section-number">5.7</span> Literatur</a></li>
   </ul></nav>
     </div>
 <!-- main -->
@@ -549,10 +562,19 @@ Hinweis
 <div id="exm-design1" class="theorem example">
 <p><span class="theorem-title"><strong>Beispiel 5.10 (Einkommen von Studentis) </strong></span>Sie interessiert die Forschungsfrage, wie viel Geld Studentis im Monat als Einkommen zur Verfügung haben. Dazu befragen Sie <span class="math inline">\(n=300\)</span> Studentis. Um eine möglichst zufällige oder zumindest repräsentative Studie zu gewinnen, haben Sie eine Nachricht im Forum des Studiengangs gepostet: Wer bei Ihrer Befragung mitmacht, den laden Sie zur nächtsen Party ein. Außerdem verlosen Sie ein Abendessen mit Ihnen. Sicherlich wird der Andrang groß sein.<span class="math inline">\(\square\)</span></p>
 </div>
-</section><section id="planung-der-stichprobengröße" class="level2" data-number="5.5"><h2 data-number="5.5" class="anchored" data-anchor-id="planung-der-stichprobengröße">
-<span class="header-section-number">5.5</span> Planung der Stichprobengröße</h2>
-<section id="schätzung-eines-normalverteilten-parameters" class="level3" data-number="5.5.1"><h3 data-number="5.5.1" class="anchored" data-anchor-id="schätzung-eines-normalverteilten-parameters">
-<span class="header-section-number">5.5.1</span> Schätzung eines normalverteilten Parameters</h3>
+</section><section id="fallbeispiel-world-happieness-report" class="level2" data-number="5.5"><h2 data-number="5.5" class="anchored" data-anchor-id="fallbeispiel-world-happieness-report">
+<span class="header-section-number">5.5</span> Fallbeispiel: World Happieness Report</h2>
+<p>Der <em>World Happiness Report</em> berichtet und diskutiert die Lebenszufriedenheit der Menschen in vielen Ländern. Es handelt sich um eine Studie mit dem Anspruch der Populationsbeschreibung.</p>
+<p><a href="#fig-whr-fig21">Abbildung&nbsp;<span>5.6</span></a> zeigt die mittlere Lebenszufriedenheit in den 24 zufriedensten Ländern. Neben dem Mittelwert, der als Balken dargestellt ist<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>, ist das Konfidenzintervall (95%) dargestellt. Man erkennt es an dem kleinen grauen Kästchen am rechten Ende des jeweiligen Balkens. Diese Konfidenzintervalle sind Angaben zur Schätzgenauigkeit des Modells, d.h. des jeweiligen Mittelwerts. Man kann das Konfidenzintervall so interpretieren, dass es einen Bereich plausibler Werte für den Modellparameter (hier: mittlere Zufriedenheit) angibt. Da die Genauigkeit einer Schätzung abhängig ist von der Stichprobengröße und die Stichprobengröße (aufgrund des Zusammenwerfens der Daten mehrerer Jahre) relativ groß ist, sind die Konfidenzintervalle relativ klein, die Schätzung also recht präzise. Zumindest mutet das Diagramm so an. Allerdings ist auch angegeben, dass die Schätzinteralle überlappen. So sieht man, dass sich die Bereiche plausibler Werte für die Plätze 2-4 (Dänemark, Island, Israel) überlappen. Man kann also argumentieren, dass die Rangfolge z.B. dieser drei Länder nicht sicher ist.</p>
+<div id="fig-whr-fig21" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="img/whr-fig21.png" class="img-fluid figure-img" style="width:75.0%"></p>
+<p></p><figcaption class="figure-caption">Abbildung&nbsp;5.6: Zufriedenheitsranking, Plätze 1-25, World Happiness Report, Daten der Jahre 2020-2022</figcaption><p></p>
+</figure>
+</div>
+</section><section id="planung-der-stichprobengröße" class="level2" data-number="5.6"><h2 data-number="5.6" class="anchored" data-anchor-id="planung-der-stichprobengröße">
+<span class="header-section-number">5.6</span> Planung der Stichprobengröße</h2>
+<section id="schätzung-eines-normalverteilten-parameters" class="level3" data-number="5.6.1"><h3 data-number="5.6.1" class="anchored" data-anchor-id="schätzung-eines-normalverteilten-parameters">
+<span class="header-section-number">5.6.1</span> Schätzung eines normalverteilten Parameters</h3>
 <p>Sagen wir, wir möchten einen normalverteilten Parameter mit “hinreichender Genauigkeit”, <span class="math inline">\(e\)</span> schätzen.</p>
 <div id="exm-schaetz1" class="theorem example">
 <p><span class="theorem-title"><strong>Beispiel 5.11 (Mittelre Daddelzeit) </strong></span>Sagen wir, um es konkret zu machen, uns interessiert die Zeit, die mittelfränkisch junge Erwachsene pro Tag am Handy verbringen (“mittlere Daddelzeit”). Um uns Tipperei zu sparen, geben wir dieser Variablen den Namen <span class="math inline">\(X\)</span>.</p>
@@ -577,36 +599,36 @@ Hinweis
 <span><span class="co">## [1] 96.04</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Unsere Stichprobe sollte also (mindestens) 97 Beobachtungseinheiten umfassen, um den Parameter mit der angegebenen Genauigkeit zu messen. Voraussetzung ist natürlich eine Zufallsstichprobe.</p>
-</section><section id="schätzung-für-korrelationen" class="level3" data-number="5.5.2"><h3 data-number="5.5.2" class="anchored" data-anchor-id="schätzung-für-korrelationen">
-<span class="header-section-number">5.5.2</span> Schätzung für Korrelationen</h3>
-<p><span class="citation" data-cites="Schonbrodt2013a">Schönbrodt und Perugini (<a href="references.html#ref-Schonbrodt2013a" role="doc-biblioref">2013</a>)</span> untersuchten mittels einer Simulationsstudie, ab welcher Stichprobengröße Korrelationswerte <span class="math inline">\(\rho_0\)</span> stabil werden. “Stabil” soll heißen, dass wiederholte Ziehungen einer Stichprobe aus einer Population mit Korrelation <span class="math inline">\(\rho_0\)</span> die Stichprobenwerte der Korrelation “nicht mehr so viel variieren”, z.B. weniger als 0.1 Korrelationseinheiten. Ihre allgemeine Schlussfolgerung war, dass <span class="math inline">\(n=250\)</span> einen guter Grenzwert darstellt, s. <a href="#fig-corr-stab">Abbildung&nbsp;<span>5.6</span></a>.</p>
+</section><section id="schätzung-für-korrelationen" class="level3" data-number="5.6.2"><h3 data-number="5.6.2" class="anchored" data-anchor-id="schätzung-für-korrelationen">
+<span class="header-section-number">5.6.2</span> Schätzung für Korrelationen</h3>
+<p><span class="citation" data-cites="Schonbrodt2013a">Schönbrodt und Perugini (<a href="references.html#ref-Schonbrodt2013a" role="doc-biblioref">2013</a>)</span> untersuchten mittels einer Simulationsstudie, ab welcher Stichprobengröße Korrelationswerte <span class="math inline">\(\rho_0\)</span> stabil werden. “Stabil” soll heißen, dass wiederholte Ziehungen einer Stichprobe aus einer Population mit Korrelation <span class="math inline">\(\rho_0\)</span> die Stichprobenwerte der Korrelation “nicht mehr so viel variieren”, z.B. weniger als 0.1 Korrelationseinheiten. Ihre allgemeine Schlussfolgerung war, dass <span class="math inline">\(n=250\)</span> einen guter Grenzwert darstellt, s. <a href="#fig-corr-stab">Abbildung&nbsp;<span>5.7</span></a>.</p>
 <div id="fig-corr-stab" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><p><img src="img/corr-stab.jpg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Abbildung&nbsp;5.6: Ab welcher Stichprobengröße werden Korrelationswerte stabil?</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Abbildung&nbsp;5.7: Ab welcher Stichprobengröße werden Korrelationswerte stabil?</figcaption><p></p>
 </figure>
 </div>
-<p>Ausführlichere Empfehlungen sind <a href="#fig-schoenbrodt2">Abbildung&nbsp;<span>5.7</span></a> zu entnehmen <span class="citation" data-cites="Schonbrodt2013a">(<a href="references.html#ref-Schonbrodt2013a" role="doc-biblioref">Schönbrodt und Perugini 2013</a>)</span>. Dort sind die Mindest-Fallzahlen <span class="math inline">\((\text{COS}_{\text{crit}})\)</span> in Abhängigkeit des Konfidenz-Niveaus (80%, 90%, 95%) und der wahren Korrelation <span class="math inline">\(\rho\)</span> in der Population zu entnehmen.</p>
+<p>Ausführlichere Empfehlungen sind <a href="#fig-schoenbrodt2">Abbildung&nbsp;<span>5.8</span></a> zu entnehmen <span class="citation" data-cites="Schonbrodt2013a">(<a href="references.html#ref-Schonbrodt2013a" role="doc-biblioref">Schönbrodt und Perugini 2013</a>)</span>. Dort sind die Mindest-Fallzahlen <span class="math inline">\((\text{COS}_{\text{crit}})\)</span> in Abhängigkeit des Konfidenz-Niveaus (80%, 90%, 95%) und der wahren Korrelation <span class="math inline">\(\rho\)</span> in der Population zu entnehmen.</p>
 <div id="fig-schoenbrodt2" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><p><img src="img/fig-schoenbrodt2.jpg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Abbildung&nbsp;5.7: Mindest-Fallzahlen für stabile Korrelationskoeffizienten</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Abbildung&nbsp;5.8: Mindest-Fallzahlen für stabile Korrelationskoeffizienten</figcaption><p></p>
 </figure>
 </div>
-</section><section id="schätzung-für-typische-statistische-tests" class="level3" data-number="5.5.3"><h3 data-number="5.5.3" class="anchored" data-anchor-id="schätzung-für-typische-statistische-tests">
-<span class="header-section-number">5.5.3</span> Schätzung für typische statistische Tests</h3>
-<p>Der Einfachheit halber begnügen wir uns mit der Analyse von <span class="citation" data-cites="cohen_power_1992">Cohen (<a href="references.html#ref-cohen_power_1992" role="doc-biblioref">1992</a>)</span>. Der Autor errechnet (die Untergrenze von) Stichprobenumfänge, um mit einer Wahrscheinlichkeit von 80% einen Effekt zu finden. Dabei hängt diese Wahrscheinlichkeit von der Größe des Effekts ab, s. <a href="#fig-cohen1">Abbildung&nbsp;<span>5.8</span></a>.</p>
+</section><section id="schätzung-für-typische-statistische-tests" class="level3" data-number="5.6.3"><h3 data-number="5.6.3" class="anchored" data-anchor-id="schätzung-für-typische-statistische-tests">
+<span class="header-section-number">5.6.3</span> Schätzung für typische statistische Tests</h3>
+<p>Der Einfachheit halber begnügen wir uns mit der Analyse von <span class="citation" data-cites="cohen_power_1992">Cohen (<a href="references.html#ref-cohen_power_1992" role="doc-biblioref">1992</a>)</span>. Der Autor errechnet (die Untergrenze von) Stichprobenumfänge, um mit einer Wahrscheinlichkeit von 80% einen Effekt zu finden. Dabei hängt diese Wahrscheinlichkeit von der Größe des Effekts ab, s. <a href="#fig-cohen1">Abbildung&nbsp;<span>5.9</span></a>.</p>
 <div id="fig-cohen1" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><p><img src="img/cohen1.jpg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Abbildung&nbsp;5.8: Werte der Effektstärke (ES) für kleine (small), mittlere (medium) und große (large) Effekte</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Abbildung&nbsp;5.9: Werte der Effektstärke (ES) für kleine (small), mittlere (medium) und große (large) Effekte</figcaption><p></p>
 </figure>
 </div>
-<p>Auf dieser Basis leiten der Autor folgende (Mindest-)Stichprobenanforderungen ab, s. <a href="#fig-cohen2">Abbildung&nbsp;<span>5.9</span></a>.</p>
+<p>Auf dieser Basis leiten der Autor folgende (Mindest-)Stichprobenanforderungen ab, s. <a href="#fig-cohen2">Abbildung&nbsp;<span>5.10</span></a>.</p>
 <div id="fig-cohen2" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><p><img src="img/cohen2.jpg" class="img-fluid figure-img"></p>
-<p></p><figcaption class="figure-caption">Abbildung&nbsp;5.9: Mindest-Stichprobengrößen in Abhängigkeit der Effektstärke</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Abbildung&nbsp;5.10: Mindest-Stichprobengrößen in Abhängigkeit der Effektstärke</figcaption><p></p>
 </figure>
 </div>
-</section></section><section id="literatur" class="level2" data-number="5.6"><h2 data-number="5.6" class="anchored" data-anchor-id="literatur">
-<span class="header-section-number">5.6</span> Literatur</h2>
+</section></section><section id="literatur" class="level2" data-number="5.7"><h2 data-number="5.7" class="anchored" data-anchor-id="literatur">
+<span class="header-section-number">5.7</span> Literatur</h2>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
@@ -628,6 +650,7 @@ Schönbrodt, Felix D., und Marco Perugini. 2013. <span>„At What Sample Size Do
 <li id="fn4"><p>Highest Density Inteval, HDI<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn5"><p>Wie man der Hilfeseite des Befehls entnehmen kann, wird im Standard per Voreinstellung ein PI bzw. ETI ausgegeben.<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn6"><p>Nein.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>eine Praxis, von der man nur abraten kann, s. <a href="https://github.com/cxli233/FriendsDontLetFriends#1-friends-dont-let-friends-make-bar-plots-for-means-separation">Friends Don’t Let Friends Make Bar Plots for Means Separation</a><a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -866,8 +889,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./pruefung.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Prüfung</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./Explikation.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Explikation</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

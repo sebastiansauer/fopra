@@ -3,15 +3,13 @@ title: test
 
 ---
 
-
 ```{mermaid}
-%%| label: ablauf-interv
-%%| fig-cap: Einfaches Schema des Ablaufs einer Interventionsstudie
+%%| label: fig-between
+%%| fig-cap: Beispiel für ein Between-Subject-Design
 flowchart LR
-A[Begrüßung der Versuchsteilneher:innen] --> B1[Bedingung A: Ibuprofen]
-A --> B2[Bedingung 2: Placebo]
-B1 --> C[Messung des Kopfschmerzes]
-B2 --> C
+  M1[1. Messung der Konzentration] --> R[Gruppenzuweisung]
+  R --> G1[Experimentalgruppe]
+  R --> G2[Kontrollgruppe]
+  G1 --> M2[2. Messung der Konzentration]
+  G2 --> M2[2. Messung der Konzentration]  
 ```
-
-

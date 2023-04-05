@@ -22,32 +22,37 @@ ggplot2::theme_set(theme_minimal())
 
 
 - Sie können erklären, warum interventionelle Studien und speziell Experimente zur Explikation als epistemologisches Ziel von Studien eingesetzt werden können.
-- Sie können Qualitätsmerkmale einer interventionellen Studie nennen und erläutern.
+- Sie können Validität definieren und in ihren Bestandteilen erläutern.
+- Sie können verschiedene Varianten von Versuchsdesigns aufführen.
 
 
 
 ## Interventionelle Studien
 
 
-Interventionelle Studien werden in der Regel mit dem Ziel der *Explikation*, zumeist im kausalen Sinne, eingesetzt.
+Interventionelle Studien werden in der Regel mit dem Ziel der *Explikation*,^[auch als *Explanation* bezeichnet] zumeist im kausalen Sinne, eingesetzt.
+
+:::{#def-beob}
+Nicht-Interventionelle bezeichnet man auch als *Beobachtungsstudien*, da man "nichts macht", im Sinne von keine Ausprägungen von Variablen aktiv ändert, sondern nur beobachtet bzw. den Wert der (interessierenden) Variablen misst.$\square$
+:::
 
 
 
 
 :::{#def-treatment}
 ### Treatment
-Ein Treatment nennt man die Behandlung, die eine Gruppe von Versuchteilnehmis im Rahmen einer Studie erfährt.$\square$
+Ein Treatment (synonym: Intervention) nennt man die Behandlung, die eine Gruppe von Versuchsteilnehmis im Rahmen einer Studie erfährt [@reichardt_quasi-experimentation_2019].$\square$
 :::
 
 :::{#exm-ibu}
 ### Ibuprofen und Kopfschmerz
-Eine Interventionsstudie wird verwendet, um den Effekt von Ibuprofen auf (die Reduktion von) akutem Kopfschmerz zu untersuchen. Dafür werden zwei Gruppen von Versuchspersonen unterschieden: Solche, die Ibuprofen als Treatment verabreicht bekommen, und solche, die nur ein "Scheinmedikament" (Placebo) in Form einer "Zuckerpille" verabreicht bekommen, vgl. @fig-interv.$\square$
+Eine Interventionsstudie wird verwendet, um den Effekt von Ibuprofen auf (die Reduktion von) akutem Kopfschmerz zu untersuchen. Dafür werden zwei Gruppen von Versuchspersonen unterschieden: Solche, die Ibuprofen als Treatment verabreicht bekommen, und solche, die nur ein "Scheinmedikament" (Placebo) in Form einer "Zuckerpille" verabreicht bekommen, vgl. @fig-ablauf-interv.$\square$
 :::
 
 
 
 ```{mermaid}
-%%| label: ablauf-interv
+%%| label: fig-ablauf-interv
 %%| fig-cap: Einfaches Schema des Ablaufs einer Interventionsstudie
 flowchart LR
 A[Begrüßung der Versuchsteilneher:innen] --> B1[Bedingung A: Ibuprofen]
@@ -69,7 +74,7 @@ Eine Bedingung (Gruppe), in der nur ein Treatment als Referenzwert verarbreicht 
 ### Definition
 
 :::{#def-effekt}
-Ein Effekt (eines Treatments $T$) ist hier definiert als der Unterschied im beobachteten (gemessenen) Ergebnis zwischen was passiert ist, nachdem das Treatment verabreicht wurde und was passiert wäre, wenn stattdessen eine andere Intervention verabreicht worden wäre, unter der Annahme, dass sonst alles andere gleich gewesen wäre^[ceteris paribus].$\square$
+Ein Effekt (eines Treatments $T$) ist hier definiert als der Unterschied im beobachteten (gemessenen) Ergebnis zwischen was passiert ist, nachdem das Treatment verabreicht wurde und was passiert wäre, wenn stattdessen eine andere Intervention verabreicht worden wäre, unter der Annahme, dass sonst alles andere gleich gewesen wäre^[ceteris paribus] [@reichardt_quasi-experimentation_2019].$\square$
 :::
 
 :::{#exm-kopfweh}
@@ -131,6 +136,8 @@ M[Messinstrument M] --> E
 - Je nach verwendeten Messinstrument oder Zielvariablen können die Effekte des Treatments deutlicher oder weniger deutlich zum Tragen kommen.
 
 
+Prägnant zusammengefasst, kann man sagen, dass die Effektstärke (die Größe eines Effekts) eine Funktion von fünf Determinanten ist:
+
 $$ES = f(ZURMO)$$
 
 
@@ -140,7 +147,7 @@ $$ES = f(ZURMO)$$
 
 :::{#def-validitaet}
 ### Validität
-Unter der Validität einer Studie versteht man die *Gültigkeit* in dem Sinne, ob die fünf Determinanten korrekt erkannt/beurteilt sind. In dem Maße wie sie falsch beurteilt sind, ist die Validität einbeschränkt.$\sqaure$
+Unter der Validität einer Studie versteht man die *Gültigkeit* in dem Sinne, ob die fünf Determinanten korrekt erkannt/beurteilt sind. In dem Maße wie sie falsch beurteilt sind, ist die Validität einbeschränkt.$\square$
 :::
 
 
@@ -249,6 +256,7 @@ Die Abhängige Variable (AV) bezeichnet die Variable, die den Effekt misst, die 
 Die Forschungsfrage formuliert, dass die AV von der UV kausal und statsistisch abhängig ist.
 
 ```{mermaid}
+flowchart LR
 UV --> AV
 ```
 
@@ -270,5 +278,141 @@ Nach John Stuart Mill müssen drei Bedingungen erfüllt sein, damit eine vermein
 
 
 
+## Interventionelle Versuchsdesigns
+
+
+### Between- vs. Within-Subject-Designs
+
+:::{#def-between}
+Bei einem *Between-Subject-Design* werden die Versuchspersonen genauer einer von zwei (oder mehreren) Gruppen (Bedingung) zugeordnet. Jede Person durchläuft nur eine Bedingung.$\square$
+:::
+
+
+
+
+:::{#exm-between}
+Ei Forschi untersucht den Effekt von Achtsamkeit auf die Konzentrationsfähigkeit.
+Zur Umsetzung wählt i ein Between-Subject-Design.
+Eine Hälfte der Versuchspersonen wird zufällig der Experimentalgruppe (Achtsamkeitsübung) zugeteilt, die zweite Hälfte der Kontrollgruppe (Daddeln am Handy).
+Vor und nach der Intervention wird bei jeder Person die Konzentationsfähigkeit gemessen, s. @fig-between.$\square$.
+:::
+
+```{mermaid}
+%%| label: fig-between
+%%| fig-cap: Beispiel für ein Between-Subject-Design
+flowchart LR
+  M1[1. Messung der Konzentration] --> R[Gruppenzuweisung]
+  R --> G1[Experimentalgruppe]
+  R --> G2[Kontrollgruppe]
+  G1 --> M2[2. Messung der Konzentration]
+  G2 --> M2[2. Messung der Konzentration]  
+```
+
+
+In einigen Situationen ist eine Messung der AV vor dem Treatment nicht nötig;
+grundsätzlich ist sie aber zu bevorzugen.
+
+
+:::{#def-within}
+Bei einem *einfachen Within-Subject-Design* durchäuft jede Versuchsperson alle Versuchsbedingungen in gleicher Reihenfolge, s. @fig-within.$\square$
+:::
+
+```{mermaid}
+%%| label: fig-within
+%%| fig-cap: Beispiel für ein Within-Subject-Design
+flowchart LR
+  M1[1. Messung der Konzentration] --> I1[Treatment 1]
+  I1 --> M2[2. Messung der Konzentration]
+  M2 --> I2[Treatment 2]
+  I2 --> M3[3. Messung der Konzentration]
+```
+
+
+Das einfache Within-Subject-Design hat den Nachteil, dass Reihenfolge-Effekte möglich sind.
+
+:::{#exm-within2}
+Ei Forschi untersucht den Effekt von Achtsamkeit auf die Konzentrationsfähigkeit.
+In dieser Studie führen alle Versuchspersonen eine Achtsamkeitsübung aus (Treatment 1);
+danach folgt eine Zeit des Handy-Daddelns (Treatment 2). Vor und nach den Treatments findet jeweils eine Konzentrationsmessung statt.$\square$
+:::
+
+
+:::{#exm-within1}
+Ei Forschi untersucht den Effekt des Markennamens von Süßwaren auf die Geschmacksbeurteilung. 
+Zuerst bekommen alle Versuchspersonen ein Markenprodukt dargeboten;
+danach folgt für alle ein No-Name-Produkt. Vor der ersten, nach der ersten und nach der zweiten Verkostung wird jeweils der Geschmack des Produkts beurteilt.$\square$
+:::
+
+
+:::{#def-within}
+Bei einem *Between-Within-Subject-Design* durchäuft jede Versuchsperson alle Versuchsbedingungen, aber die Reihenfolge unterscheidet sich zwischen den Versuchspersonen, s. @fig-within2.$\square$
+:::
+
+
+```{mermaid}
+%%| label: fig-within2
+%%| fig-cap: Beispiel für ein Between-Within-Subject-Design
+flowchart LR
+  M1[1. Messung der Konzentration] --> R[Zuweisung zu den Reihenfolge-Gruppen]
+  R --> G1[Treatment 1]
+  R --> G2[Treatment 2]
+  G1 --> M2[2. Messung der Konzentration]
+  G2 --> M2
+  
+  M2 --> G11[Treatment 2]
+  M2 --> G22[Treatment 1]  
+  
+  G11 --> M3[3. Messung der Konzentration]
+  G22 --> M3
+```
+
+
+
+
+Within- und Between-Subject-Designs haben jeweils Stärken und Schwächen:
+
+- Stärke des Within-Subject-Designs: Effekte werden leichter gefunden bzw. genauer geschätzt, da es weniger Rauschen gibt. Der Grund ist, dass die Unterschiede der Treatments in den gleichen Personen untersucht werden. So vermeidet man zusätzliches Rauschen, das aufgrund verschiedener Versuchspersonen entstehen würde. Anders gesagt reicht eine *kleinere* Stichprobe, um einen Effekt genau zu schätzen.
+
+- Stärke des Between-Subject-Designs: Manche Forschungsfragen erlauben keine wiederholte Intervention an den gleichen Versuchspersonen. Dann sind nur Between-Subject-Designs möglich. 
+
+- Schwäche des Within-Subject-Designs: Reihenfolge-Effekte können auftreten, diese sollten kontrolliert werden anhand des Between-Within-Subject-Designs.
+
+:::{#exm-no-within}
+Ei Forschi untersucht den Effekt der UV "Witz erzählen mit und ohne Lacher abgespielt im Hintergrund" auf die wahrgenommenen Lustigkeit eines Witzes.
+Einen Witz zum zweiten Mal zu hören, wird die Lustigkeit gegen Null gehen lassen.
+Daher ist in diesem Fall ein Within-Subject-Design kaum möglich.$\square$
+:::
+
+
+:::{.callout-tip}
+Wenn möglich sollte ein Within-Subject-Design - in der Variante mit Kontrolle der Reihenfolge (also Between-Within-Subject-Design) - bevorzugt werden.$\square$
+:::
+
+
+
+
+### Experiment als Königsweg
+
+
+
+Das Experiment ist eine Sonderform einer Interventionsstudie, die folgende Kriterien erfüllt:
+
+- Trennung mindestens einer unabhängigen Variablen (UV) von einer abhängigen Variablen (AV), wobei die AV gemäß der zu prüfenden Hypothese von der UV (kausal) beeinflusst wird.
+- Systematische Variation bzw. Manipulation der UV, um ihre Auswirkung auf die AV zu beobachten
+- Kontrolle anderer Einflussfaktoren („Störvariablen“) auf die AV
+- Randomisierung, d. h. die zufällige Zuordnung von Versuchspersonen zu Versuchsbedingungen oder der Reihenfolge von Versuchsbedingungen
+
+
+
+:::{.callout-important}
+Wann immer Experimente ethisch unbedenklich bzw. vertretbar und praktisch durchführbar sind, stellen sie das Mittel der Wahl dar, um Kausalzusammenhänge zu prüfen.$\square$
+:::
+
+
+
+## Vertiefung
+
+Bei @reichardt_quasi-experimentation_2019 findet sich eine umfassende Erläuterung des Handwerks der interventionellen Forschung.
+Ein Klassiker ist @Bortz2006, in dem sich viel Essenzielles zur Versuchsplanung findet.
 
 

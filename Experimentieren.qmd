@@ -1,0 +1,60 @@
+# Experiment
+
+
+
+
+## Lernsteuerung
+
+### Standort im Lernpfad
+
+@fig-ueberblick zeigt den Standort dieses Kapitels im Lernpfad und gibt damit einen Überblick über das Thema dieses Kapitels im Kontext aller Kapitel.
+
+
+
+
+```{r}
+#| echo: false
+library(tidyverse)
+ggplot2::theme_set(theme_minimal())
+```
+
+
+### Lernziele
+
+
+- Sie können Qualitätsmerkmale einer interventionellen Studie nennen und erläutern.
+
+
+## Die Kunst des Experiments
+
+
+### MAX-MIN-Prinzip
+
+
+### Randomisieren
+
+
+
+
+
+
+
+
+
+## Störvariablen
+
+
+Meist gibt es viele kausale Variablen, die eine AV beeinflussen (können).
+In einer Studie oder einem Experiment interessiert häufig nur der Einfluss einer bestimmten Variablen, um eine spezifische Hypothese zu prüfen (die UV).
+Alle in dieser Untersuchung nicht interessierenden Variablen, die die AV beeinflussen, heißen *Störvariablen.*
+Störvariablen mögen selbst theoretisch interessant sein, in einem Experiment versucht man jedoch, sie unter Kontrolle zu bringen, um den Einfluss der interessierenden UV untersuchen zu können
+Kontrolliert man Störvariablen nicht, kann eine Veränderung in AV nicht eindeutig auf UV zurückgeführt werden, ein Kausalschluss ist dann *nicht* möglich.
+Beobachtungsstudien haben meist weniger Kontrolle über Störvariablen als Studien mit Intervention.
+Studien in kontrolliertem Umfeld sind meist in geringerem Maße Störvariablen ausgesetzt als Studien in „freier Wildbahn“.
+Studien mit Randomisierung umgehen das Problem der personengebundenen Störvariablen (wenn die Fallzahl groß genug ist).
+
+
+
+### Beispiele für Störvariablen
+
+

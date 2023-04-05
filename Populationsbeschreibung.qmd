@@ -341,6 +341,25 @@ Dazu befragen Sie $n=300$ Studentis. Um eine möglichst zufällige oder zumindes
 :::
 
 
+## Fallbeispiel: World Happieness Report
+
+Der *World Happiness Report* berichtet und diskutiert die Lebenszufriedenheit der Menschen in vielen Ländern.
+Es handelt sich um eine Studie mit dem Anspruch der Populationsbeschreibung.
+
+@fig-whr-fig21 zeigt die mittlere Lebenszufriedenheit in den 25 zufriedensten Ländern.
+Neben dem Mittelwert, der als Balken dargestellt ist^[eine Praxis, von der man nur abraten kann, s. [Friends Don't Let Friends Make Bar Plots for Means Separation](https://github.com/cxli233/FriendsDontLetFriends#1-friends-dont-let-friends-make-bar-plots-for-means-separation)], ist das Konfidenzintervall (95%) dargestellt.
+Man erkennt es an dem kleinen grauen Kästchen am rechten Ende des jeweiligen Balkens.
+Diese Konfidenzintervalle sind Angaben zur Schätzgenauigkeit des Modells, d.h. des jeweiligen Mittelwerts.
+Man kann das Konfidenzintervall so interpretieren, dass es einen Bereich plausibler Werte für den Modellparameter (hier: mittlere Zufriedenheit) angibt.
+Da die Genauigkeit einer Schätzung abhängig ist von der Stichprobengröße und die Stichprobengröße (aufgrund des Zusammenwerfens der Daten mehrerer Jahre) relativ groß ist, sind die Konfidenzintervalle relativ klein, die Schätzung also recht präzise.
+Zumindest mutet das Diagramm so an.
+Allerdings ist auch angegeben, dass die Schätzinteralle überlappen.
+So sieht man, dass sich die Bereiche plausibler Werte für die Plätze 2-4 (Dänemark, Island, Israel) überlappen. 
+Man kann also argumentieren, dass die Rangfolge z.B. dieser drei Länder nicht sicher ist.
+
+
+![Zufriedenheitsranking,  Plätze 1-25, World Happiness Report, Daten der Jahre 2020-2022](img/whr-fig21.png){#fig-whr-fig21 width="75%"}
+[Quelle: WHR](https://worldhappiness.report/ed/2023/world-happiness-trust-and-social-connections-in-times-of-crisis/)
 
 
 ## Planung der Stichprobengröße
