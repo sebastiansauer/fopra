@@ -496,7 +496,7 @@ um den Parameter mit der angegebenen Genauigkeit zu messen.
 Voraussetzung ist natürlich eine Zufallsstichprobe.
 
 Damit man nicht selber ausrechnen muss, kann man auch eine Tabelle bemühen,
-etwa die von @Borth2006, s. @fig-bortz-tab26.
+etwa die von @Bortz2006, s. @fig-bortz-tab26.
 
 ![Stichprobenumfänge für Konfidenzintervalle zur Schätzung eines Populationsparameters](img/bortz-tab26.png){#fig-bortz-tab26}
 
@@ -506,6 +506,8 @@ In @fig-bortz-tab26 ist $e$ als Anteil der Streuung von $\sigma$ dargestellt.
 :::{#exm-schaetz1}
 ### Mittlere Daddelzeit 2
 Bei einem Fehler von 8 Minuten und einer Streuung von 20 Minuten ergäbe sich ein *relativer Schätzfehler* von 8/20 = 2/5 = .4 (unter der Annahme einer Normalverteilung und einer Zufallsstichprobe.)$\square$
+:::
+
 
 
 
