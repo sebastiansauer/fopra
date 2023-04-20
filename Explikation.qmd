@@ -27,6 +27,11 @@ ggplot2::theme_set(theme_minimal())
 - Sie können erklären, warum interventionelle Studien und speziell Experimente zur Explikation als epistemologisches Ziel von Studien eingesetzt werden können.
 - Sie können Validität definieren und in ihren Bestandteilen erläutern.
 - Sie können verschiedene Varianten von Versuchsdesigns aufführen.
+- Sie können Qualitätsmerkmale eines Experiments nennen und erläutern.
+- Sie können folgende Begriffe erläutern: Max-Kon-Min-Prinzip, Randomisieren, Störvariable.
+- Sie können ein Beispiel für ein Experiment aus der Psychologie nennen und die Studie beschreiben.
+
+
 
 
 
@@ -156,6 +161,7 @@ diese Streuung nennt man Rauschen oder Fehlerstreuung.$\square$
 ```{r}
 #| echo: false
 #| label: fig-signal-noise
+#| fig-cap: Signal (Mittelwertsdifferenz) und Rauschen (Streuung innerhalb der Geschlechter)
 
 library(pradadata)
 data("wo_men")
@@ -378,10 +384,18 @@ Nach John Stuart Mill müssen drei Bedingungen erfüllt sein, damit eine vermein
 
 
 
-## Interventionelle Versuchsdesigns
+## Varianten interventioneller Versuchsdesigns
 
+
+Man kann Studien (bzw. deren Aufbau, das Design) dahingehend unterscheiden,
+ob die Versuchspersonen alle Bedingungen nacheinander durchlaufen (Within-Subject-Design) oder ob jede Versuchsperson genau eine Bedingung durchläuft (Between-Subject-Design).
+Jede Variante hat Stärken und Schwächen,
+aber wenn möglich sollte man oft zu einem Within-Subject-Design tendieren.
 
 ### Between- vs. Within-Subject-Designs
+
+
+#### Between-Subject-Designs
 
 :::{#def-between}
 Bei einem *Between-Subject-Design* werden die Versuchspersonen genauer einer von zwei (oder mehreren) Gruppen (Bedingung) zugeordnet. Jede Person durchläuft nur eine Bedingung.$\square$
@@ -409,8 +423,10 @@ flowchart LR
 ```
 
 
-In einigen Situationen ist eine Messung der AV vor dem Treatment nicht nötig;
+In einigen Situationen ist eine Messung der AV *vor* dem Treatment nicht nötig;
 grundsätzlich ist sie aber zu bevorzugen.
+
+#### Within-Subject-Design
 
 
 :::{#def-within}
@@ -468,6 +484,7 @@ flowchart LR
 
 
 
+#### Stärken und Schwächen
 
 Within- und Between-Subject-Designs haben jeweils Stärken und Schwächen:
 
@@ -497,16 +514,211 @@ Wenn möglich sollte ein Within-Subject-Design - in der Variante mit Kontrolle d
 
 Das Experiment ist eine Sonderform einer Interventionsstudie, die folgende Kriterien erfüllt:
 
-- Trennung mindestens einer unabhängigen Variablen (UV) von einer abhängigen Variablen (AV), wobei die AV gemäß der zu prüfenden Hypothese von der UV (kausal) beeinflusst wird.
-- Systematische Variation bzw. Manipulation der UV, um ihre Auswirkung auf die AV zu beobachten
-- Kontrolle anderer Einflussfaktoren („Störvariablen“) auf die AV
-- Randomisierung, d. h. die zufällige Zuordnung von Versuchspersonen zu Versuchsbedingungen oder der Reihenfolge von Versuchsbedingungen
+- *Kausalmodell*: Trennung mindestens einer unabhängigen Variablen (UV) von einer abhängigen Variablen (AV), wobei die AV gemäß der zu prüfenden Hypothese von der UV (kausal) beeinflusst wird.
+- *Intervention*: Systematische Variation bzw. Manipulation der UV, um ihre Auswirkung auf die AV zu beobachten
+- *Kontrolle*: Kontrolle anderer Einflussfaktoren („Störvariablen“) auf die AV
+- *Randomisierung*: Zufällige Zuordnung von Versuchspersonen zu Versuchsbedingungen oder der Reihenfolge von Versuchsbedingungen
 
 
 
 :::{.callout-important}
 Wann immer Experimente ethisch unbedenklich bzw. vertretbar und praktisch durchführbar sind, stellen sie das Mittel der Wahl dar, um Kausalzusammenhänge zu prüfen.$\square$
 :::
+
+
+
+## Die Kunst des Experimentierens
+
+
+
+### MAX-KON-MIN-Prinzip
+
+Die Kunst des Experiments (bzw. des Experimentierens) kann man mit dem Max-Kon-Min-Prinzip zusammenfassen.
+@fig-max-kon-min stellt das Max-Kon-Min-Prinzip dar.
+
+```{mermaid}
+%%| label: fig-max-kon-min
+%%| fig-cap: Das Max-Kon-Min-Prinzip
+flowchart LR
+  subgraph MKM[Max-Kon-Min-Prinzip]
+    MAX
+    KON
+    MIN
+  end  
+```
+
+1. *MAXimiere* das Signal (Primär- oder Behandlungsvarianz) 
+2. *KONtrolliere* das Rauschen (Sekundärvarianz, systematischer Fehler)
+3. *MINimiere* das Rauschen (Zufallsfehler): Vermeide unsystematische (zufällige) Merkmalsfluktuationen auf Seiten der Versuchssituation, der Datenerfassung und der Datenverarbeitung.
+
+
+#### Maximiere das Signal
+
+Wähle die Stufen der UV so, dass möglichst große Unterschiede in der AV zwischen den Gruppen entstehen:
+
+  - Wähle Extremgruppen
+  - Intensiviere das Stimulusmaterial
+  - Stelle sicher, dass die Intervention gut funktioniert
+
+
+
+Ziel: die Effekte der UV durch die Versuchsplanung möglichst „maximal“ zum Vorschein bringen.
+
+Achtung: Die Wahl von Extremgruppen birgt die Gefahr von Trivialergebnissen.
+
+
+
+#### Kontrolliere das Rauschen
+
+Sorge dafür, dass systematische Fehler (bekannte Störvariablen) in allen Gruppen gleich wirken und/oder bestimme deren Einfluss:
+
+  - Nutze einer Coverstory
+  - Verblinde die Versuchspersonen und -durchführende
+  - Halte Störfaktoren konstant
+  - Randomisiere die Versuchspersonen
+  - Wandle Störfaktoren in UV um
+  - Schalte Störfaktoren aus (z.B. mittels eines schalldichten Raums)
+  - Balanciere die Gruppen aus (in jeder Versuchsbedingung z. B. die Hälfte in den lauten und die Hälfte in leisen Raum)
+  - Rechne nachträglich das Rauschen heraus mittels statistischer Verfahren (Kovarianzanalyse)
+
+
+
+Kontrolltechniken:
+
+- vor der Datenerhebung
+  - Umwandlung von Sekundärvarianz bzw. Störvariable in UV
+  - Randomisierung 
+  - Parallelisierung 
+  - Messwiederholung
+- während der Datenerhebung
+  - Konstanthalten der Versuchsbedingungen
+- nach der Datenerhebung
+  - statistische Kontrolle
+  
+  
+:::{#exm-versuchsbed}
+### Der weiße Kittel
+Ein Versuchsleiter untersucht den Effekt von extensiver Handynutzung auf die Konzentrationsfähigkeit.
+Er ist stolz auf sein Labor mit leistungsfähigen Geräten, die er nutzt, um seine Versuchspersonen genau zu vermessen: 
+Herzfrequenz, Hautleitwiderstand, Blutdruck, EEG ... 
+Die Probanden werden bei ihm ordentlich verkabelt. 
+Leider scheint das einige Probanden zu stören, sie fühlen sich sichtlich unwohl,
+so kabelbehangen.^[Das Abrasieren von Haarstellen für bessere Haftung der EEG-Elektroden musste er aufgeben.]
+Es ist davon auszugehen, dass das "Verkabeln" einen Effekt auf die Versuchspersonen bzw. deren Verhalten hat. 
+Das Verhalten der Versuchspersonen, bzw. die Variabilität in ihrem Verhalten, steigt:
+Je nach dem wie sehr sich jemand vom Verkabeln gestört fühlt, wird sie oder er anders reagieren.
+Damit sind die eigentlichen Effekte (des Treatments, Handynutzung) weniger gut oder weniger einfach festzustellen, da sie durch zusätzliche Einflüsse stärker übertönt werden.
+Der Versuchsleiter täte gut daran, behutsamer mit den Vesuchspersonen umzugehen.$\square$
+:::
+  
+Ziel: Effekte von „Nicht-UVn“, die als Störvariablen einen systematischen Einfluss haben können, bestmöglich unter Kontrolle halten. 
+
+
+:::{#exm-kontrolle-stoervars}
+### Motivation und Geschlecht als UV
+Eine Bildungsforscherin untersucht den Einfluss von Flipped-Classroom (Experimentalgruppe) im Vergleich zu Frontalunterricht (Kontrollgruppe).
+Da sie die Vermutung hat, dass Geschlecht und Motivation einen Einfluss auf die AV (Lernerfolg) haben, entschließt sie sich, Geschlecht und Motivation als weitere UV in ihren Versuchsplan aufzunehmen. Das bedeutet natürlich, dass sie mehr Untersuchungsbedingungen abzuarbeiten hat. Aber sie freut sich: Der Einfluss von Geschlecht und Motivation kann ihr nicht mehr den Effekt verwässern!$\square$
+:::
+
+
+
+#### Minimiere das Rauschen
+
+Vermeide unsystematische (zufällige) Merkmalsfluktuationen auf Seiten der Versuchssituation, der Datenerfassung und der Datenverarbeitung.
+
+Kontrolltechniken:
+
+- Kontrollierte Untersuchungsbedingungen (Abschirmung, Eliminierung, Instruktion)
+- Einsatz reliabler, valider und objektiver Erhebungsinstrumente (Beobachter, Messinstrumente) 
+- Doppelte Dateneingabe, um (Tipp-)Fehler zu vermeiden
+- Messwiederholungsdesign
+
+Ziel: Auswirkungen von unbekannten Störvariablen und (Daten-) Fehlern so klein wie möglich halten
+
+
+Eine zentrale Rolle, um Rauschen zu minimieren, ist die Instruktion:
+Die Information, die die Versuchspersonen vom Versuchsleiter erhalten,
+damit die Versuchspersonen wissen, was sie tun sollen.
+Die Instruktion im weiteren Sinne umfasst nicht nur den verbalen Anweisungsteil, sondern alle Versuchsumstände: die Umgebung, das Verhalten des Versuchsleiters, usw.
+Die Instruktion sollte daher möglichst schriftlich ausformuliert und standardisiert sein.
+
+
+
+
+### Randomisieren
+
+
+:::{#def-randomisieren}
+### Randomisieren
+Randomisieren ist das zufällige Zuteilen von Versuchsobjekten (z.B. Versuchspersonen) zu Versuchsbedingungen einer interventionellen Studie.
+Durch das Randomisieren sollen die alle personengebundenen Variablen in den Versuchsbedingungen gleiche Verteilungen erlangen, z.B. gleiche Mittelwerte.
+Wenn dies gewährleistet ist, sind Unterschiede zwischen den Versuchsbedingungen in der AV nicht mehr auf personenbezogene Unterschiede zurückzuführen.
+Auf diese Weise können wichtige Alternativerklärungen für den beobachteten Effekt ausgeschlossen werden.$\square$
+:::
+
+
+>    👨‍🏫 Hey Bot, erkläre "Randomisierung".
+
+>    🤖 Randomisierung ist ein wichtiger Aspekt von Experimenten und bezieht sich auf den Prozess der zufälligen Zuweisung von Teilnehmern oder Einheiten zu den verschiedenen Behandlungsgruppen oder Bedingungen eines Experiments. Die Randomisierung soll sicherstellen, dass die Teilnehmer oder Einheiten jeder Gruppe ähnlich sind, bevor die experimentelle Behandlung durchgeführt wird. Durch die zufällige Zuweisung der Teilnehmer oder Einheiten zu den Gruppen wird sichergestellt, dass mögliche Störfaktoren oder Einflüsse, die die Ergebnisse beeinflussen könnten, gleichmäßig auf die verschiedenen Gruppen verteilt werden. Dadurch wird die interne Validität des Experiments gestärkt und die Wahrscheinlichkeit verringert, dass die Ergebnisse auf Zufälligkeiten oder systematischen Verzerrungen zurückzuführen sind. Die Randomisierung ist ein wichtiges Merkmal eines Experiments, da sie eine grundlegende Voraussetzung für die Interpretation der Ergebnisse und die Übertragbarkeit auf die Population darstellt. Ohne Randomisierung können Verzerrungen in der Stichprobe und eine Einschränkung der Generalisierbarkeit auftreten.^[ChatGTP, 2023-04-23, Prompt: "Erkläre Randomisieren als Merkmal eines Experiments".]
+
+
+:::{#def-exp}
+### Experiment
+Ein Experiment ist eine Interventionsstudie und hat daher Explikationsanspruch, meist kausaler Art; es zeichnet sich durch Kontrolle von Rauschen (Störvariablen)
+ aus sowie durch Randomisieren.$\square$
+:::
+
+
+:::{.callout-tip}
+Die Stichproben der Bedingungen Ihres Experiments sollten (möglichst) gleich groß sein,
+das erhöht die Schätzgenauigkeit der Populationsparameter.$\square$
+:::
+
+
+
+Laut @Saint-Mont2015 kann man sich auf den Segen der Randomisieren erst bei hohen^[vierstelligen] Stichprobengrößen verlassen.
+Eine Vorab-Prüfung der AV, um die Vergleichbarkeit der Gruppen zu prüfen, bietet sich daher an.
+
+
+
+:::{#exr-alternativen-rand}
+### Welche Alternativen gibt es zum Randomisieren in einem Experiment?
+Stellen Sie ChatGPT diese Frage und beurteilen Sie die Güte der Information!$\square$
+:::
+
+
+
+
+
+## Störvariablen
+
+
+Meist gibt es viele kausale Variablen, die eine AV beeinflussen (können).
+In einer Studie oder einem Experiment interessiert häufig nur der Einfluss einer bestimmten Variablen, um eine spezifische Hypothese zu prüfen (die UV).
+
+:::{#def-stoervar}
+### Störvariable
+Eine Variable, die die AV beeinflusst, aber nicht die UV ist und nicht gemessen ist, heißt *Störvariable*.\square$
+:::
+
+
+Störvariablen mögen selbst theoretisch interessant sein, in einem Experiment versucht man jedoch, sie unter Kontrolle zu bringen, 
+um den Einfluss der interessierenden UV untersuchen zu können
+Kontrolliert man Störvariablen nicht, kann eine Veränderung in AV nicht eindeutig auf UV zurückgeführt werden, ein Kausalschluss ist dann *nicht* möglich.
+Beobachtungsstudien haben meist weniger Kontrolle über Störvariablen als Studien mit Intervention.
+Studien in kontrolliertem Umfeld sind meist in geringerem Maße Störvariablen ausgesetzt als Studien in „freier Wildbahn“.
+Studien mit Randomisierung umgehen das Problem der personengebundenen Störvariablen (wenn die Fallzahl groß genug ist).
+
+
+Wird eine Störvariable kontrolliert, so spricht von von einer *Kontrollvariablen*.
+
+
+
+:::{#exr-stoervar}
+### Nenne Beispiele von Störvariablen
+Fragen Sie ChatGTP nach Beispielen von Störvariablen und diskutieren Sie die Qualität der Antwort.$\square$
+:::
+
 
 
 ## Typische Versuchspläne
