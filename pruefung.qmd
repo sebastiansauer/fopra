@@ -11,12 +11,30 @@ Die Prüfungsleistung besteht aus:
 </br>
 
 
+```{r download-hinweise}
+#| echo: false
+#| cache: false
+
+
+# Hinweise-Pruefungsvorbereitung.qmd
+download.file(url = "https://raw.githubusercontent.com/sebastiansauer/Lehre/main/Hinweise/Hinweise-Pruefung-Seminararbeit.qmd",
+              destfile = "children/Hinweise-Pruefung-Seminararbeit.qmd",
+              quiet = TRUE)
+
+# Hinweise-Pruefung-Open-Book-Child.qmd
+download.file(url = "https://raw.githubusercontent.com/sebastiansauer/Lehre/main/Hinweise/Hinweise-Pruefung-Gruppenarbeit.qmd",
+              destfile = "children/Hinweise-Pruefung-Gruppenarbeit.qmd",
+              quiet = TRUE)
+```
+
+
+
 
 
 ## Hinweise
 
 
-{{< include Interna/Hinweise-Pruefung-Seminararbeit.qmd >}}
+{{< include children/Hinweise-Pruefung-Seminararbeit.qmd >}}
 
 
 
@@ -43,7 +61,7 @@ Die Einleitung soll gemeinsam unter Verwendung eines Textgenerators verfasst (un
 
 ### Allgemeines
 
-{{< include Interna/Hinweise-Pruefung-Gruppenarbeit.qmd >}}
+{{< include children/Hinweise-Pruefung-Gruppenarbeit.qmd >}}
 
 
 

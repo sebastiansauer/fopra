@@ -2,6 +2,43 @@
 
 
 
+```{r download-hinweise}
+#| echo: false
+#| cache: false
+
+# Hinweise-Lernhilfen.qmd
+download.file(url = "https://raw.githubusercontent.com/sebastiansauer/Lehre/main/Hinweise/Hinweise-Lernhilfen.qmd",
+              destfile = "children/Hinweise-Lernhilfen.qmd",
+              quiet = TRUE)
+
+
+# Hinweise-Unterricht.qmd
+download.file(url = "https://raw.githubusercontent.com/sebastiansauer/Lehre/main/Hinweise/Hinweise-Unterricht.qmd",
+              destfile = "children/Hinweise-Unterricht.qmd",
+              quiet = TRUE)
+
+
+# Hinweise-Didaktik.qmd 
+download.file(url = "https://raw.githubusercontent.com/sebastiansauer/Lehre/main/Hinweise/Hinweise-Didaktik.qmd",
+              destfile = "children/Hinweise-Didaktik.qmd",
+              quiet = TRUE)
+
+# 
+# # Hinweise-Pruefungsvorbereitung.qmd
+# download.file(url = "https://raw.githubusercontent.com/sebastiansauer/Lehre/main/Hinweise/Hinweise-Pruefungsvorbereitung.qmd",
+#               destfile = "children/Hinweise-Pruefungsvorbereitung.qmd",
+#               quiet = TRUE)
+# 
+# # Hinweise-Pruefung-Open-Book-Child.qmd
+# download.file(url = "https://raw.githubusercontent.com/sebastiansauer/Lehre/main/Hinweise/Hinweise-Pruefung-Open-Book-Child.qmd",
+#               destfile = "children/Hinweise-Pruefung-Open-Book-Child.qmd",
+#               quiet = TRUE)
+```
+
+
+
+
+
 
 
 ![Wissenschaft, das ist Analyse und Kreativität. Und cooles Hairstyling.](img/Albert_Einstein_Head.jpg){width=25%}
@@ -29,12 +66,12 @@ Meister Yoda rät: Lesen Sie die Hinweise (@fig-yoda).
 
 
 :::{.callout-important}
-Kurz gesagt: Sie lernen, eine echte, eigene Studie zu erstellen.
+Kurz gesagt: Sie lernen, eine echte, eigene Studie zu erstellen.$\square$
 :::
 
 
 
-- Die Studentis können eigenständig einige Arten von quantitativen psychologischen *Studien* in allen wesentlichen Schritten *durchführen*,f d.h. planen, erheben, auswerten, interpretieren und zusammenschreiben.
+- Die Studentis können eigenständig einige Arten von quantitativen psychologischen *Studien* in allen wesentlichen Schritten *durchführen*, d.h. planen, erheben, auswerten, interpretieren und zusammenschreiben.
     - Im Hinblick auf *Versuchsplanung* können die Studentis Versuchspläne passend zu ihrer Forschungsfrage auswählen und kritisch bewerten; darüber hinaus können Sie Fallzahlen vorab planen.
     - Im Hinblick auf *Datenerhebung* können die Studentis für ihre Forschungsfrage passende Messinstrumente auswählen. Zentrale rechtliche und ethische Aspekte sind ihnen bekannt. Softwarelösungen zur Datenerhebung können sie auswählen und einsetzen. Probleme und Lösungen im Hinblick auf Störvariablen können sie diskutieren.
     - Im Hinblick auf *Datenauswertung* können die Studentis die Verfahren aus den Modulen QM1 und QM2 praktisch auf ihre eigenen Daten anwenden.
@@ -47,9 +84,20 @@ Kurz gesagt: Sie lernen, eine echte, eigene Studie zu erstellen.
 ### Was lerne ich hier und wozu ist das gut?
 
 
-Das Modul "Research Project" ist das vielleicht schönste Modul in Ihrem Studiengang: Es vereint echtes Problemlösen mit Kreativität und wohl fundierter Analyse. Sie haben viele Freiheitsgrade: Führen Sie eine echte Studie durch, unterstützt von den Dozentis und nach Ihren Vorstellungen. Jedes Mal erlebt man als Dozenti aufs Neue studentische Studien, die begeistern. Um nur ein Beispiel zu nennen: Vor einiger Zeit zeigt eine Gruppe, dass es sich lohnt, Follower bei Instagram zu kaufen -- die Anzahl der Likes steigt überproportional an. Ach ja, falls Sie es sich schon mal gefragt haben: Wer als Mann mit einem Sportwagen auf dem Profilfoto der Single-Börse posiert, erntet ebenfalls mehr Likes als ohne Karre, zumindest laut einem studentischen Experiment ... Vielleicht sollten Sie diese Studie auch dringend replizieren, vielleicht wurde ja ein entscheidendes Detail übersehen? Sie Forschung wartet auf Sie! 
+Ein Forschungprojekt ist das vielleicht schönste Projekt in Ihrem Studiengang: E
+s vereint echtes Problemlösen mit Kreativität und wohl fundierter Analyse. 
+Sie haben viele Freiheitsgrade: Führen Sie eine echte Studie durch, unterstützt von den Dozentis und nach Ihren Vorstellungen. 
+Jedes Mal erlebt man als Dozenti aufs Neue studentische Studien, die begeistern. Um nur ein Beispiel zu nennen: 
+Vor einiger Zeit zeigt eine Gruppe, dass es sich lohnt, Follower bei Instagram zu kaufen -- die Anzahl der Likes steigt überproportional an. 
+Ach ja, falls Sie es sich schon mal gefragt haben: Wer als Mann mit einem Sportwagen auf dem Profilfoto der Single-Börse posiert, erntet ebenfalls mehr Likes als ohne Karre, zumindest laut einem studentischen Experiment ... 
+Vielleicht sollten Sie diese Studie auch dringend replizieren, vielleicht wurde ja ein entscheidendes Detail übersehen? 
+Die Forschung wartet auf Sie! 
 
-Kurz gesagt lernen Sie also, wie man eine wissenschaftliche Studie durchzieht. Das können Sie als Generalprobe für die Abschlussarbeit nutzen. Für Ihre berufliche Laufbahn ist Forschungskompetenz vielleicht die zentrale Kompetenz, wenn Sie nicht nur Bekanntes abarbeiten möchten, sondern Abläufe verbessern, Produkte erneuern, Chancen entdecken wollen – wenn Sie Neuland betreten und Dinge weiterentwickeln wollen.
+Kurz gesagt lernen Sie also, wie man eine wissenschaftliche Studie durchzieht. 
+Das können Sie als Generalprobe für die Abschlussarbeit nutzen. 
+Für Ihre berufliche Laufbahn ist Forschungskompetenz vielleicht eine zentrale Kompetenz, wenn Sie nicht nur Bekanntes abarbeiten möchten, sondern Abläufe verbessern, Produkte erneuern, Chancen entdecken wollen – 
+wenn Sie Neuland betreten und Dinge weiterentwickeln wollen.
+Let's do it.
 
 
 
@@ -117,7 +165,7 @@ Natürlich kann man sich auch andere sinnvolle Darstellungen dieses Ablaufs vors
 
 ```{r source-timetable, echo = FALSE, cache=FALSE}
 # zeitplan
-timetable_file <- "Interna/Modulverlauf.xlsx"
+timetable_file <- "children/Modulverlauf.xlsx"
 stopifnot(file.exists(timetable_file))
 timetable <- readxl::read_xlsx(timetable_file)
 
@@ -142,26 +190,9 @@ gt::gt(timetable) |>
 
 
 
-<!-- ### PDF-Version -->
-
-<!-- -- EXPERIMENTAL 🔬🧪 -- EXPERIMENTAL -->
-
-<!-- Von diesem "Webbuch" (HTML-Format) gibt es [hier eine PDF-Version](_book/statistik1.pdf). -->
-<!-- Die PDF-Version eignet sich zum Ausdrucken und zur Offline-Nutzung. -->
-
-<!-- Allerdings wurden die Inhalte *in erster Linie für ein Webbuch-Format* formatiert, -->
-<!-- die PDF-Ausgabe ist daher nicht ideal.  -->
-<!-- Es ist empfehlenswert, mit der Webbuch-Version zu arbeiten. -->
-<!-- Außerdem wird die PDF-Version nicht ganz aktuell gehalten - -->
-<!-- die aktuelle Version ist immer die Webbuch-Variante. -->
-<!-- Prüfen Sie im Zweifel das Datum der Erstellung des Dokuments. -->
 
 
-
-
-
-
-{{< include Interna/Hinweise-Lernhilfen.qmd >}}
+{{< include children/Hinweise-Lernhilfen.qmd >}}
 
 
 
@@ -177,7 +208,7 @@ gt::gt(timetable) |>
 
 
 
-{{< include Interna/Hinweise-Didaktik.qmd >}}
+{{< include children/Hinweise-Didaktik.qmd >}}
 
 
 
@@ -204,7 +235,7 @@ gt::gt(timetable) |>
 
 
 
-{{< include Interna/Hinweise-Unterricht.qmd >}}
+{{< include children/Hinweise-Unterricht.qmd >}}
 
 
 

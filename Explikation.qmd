@@ -1,4 +1,7 @@
-# Explikation
+# Erklärung
+
+
+
 
 
 
@@ -29,10 +32,48 @@ ggplot2::theme_set(theme_minimal())
 
 ## Interventionelle Studien
 
+### Explikation
+
+Explikation ist (hier) synonym zu *Erklären*.
+
+:::{#def-explikation}
+### Explikation
+Unter Explikation versteht man das Erkenntnis des Erklärens eines wissenschaftlich untersuchten Sachverhalts.
+In den meisten Fällen ist damit das Identifizieren einer (oder mehrerer) Ursachen eines Phänomens gemeint.
+In diesem Sinne kann man sagern: 
+Hat man eine oder gar alle Ursachen eines Phänomens erkannt, so hat man das Phänomen "erklärt".$\square$
+:::
+
+
+:::{#exm-explikation}
+### Explikation
+Eine Hauptursache der "Seefahrerkrankheit" Skorbut ist Vitaminmangel [@pearl_book_2018].
+Eine Ursache von Aggression ist Frustration [@jonas_sozialpsychologie_2014].
+*Social Proof* (soziale Bewährtheit) ist eine Ursache, so @cialdini_psychologie_2017, der Entscheidungsbildung in eine gewisse Richtung.$\square$
+:::
+
+
+### Nicht schauen, sondern machen
+
+In *Beobachtungsstudien* werden "nur" Daten erhoben, häufig in Form von Beobachtung.
+Im Gegensatz dazu gibt es Studien, in denen nicht "nur" beobachtet,
+sondern auch "gemacht" wird.
+
+
+:::{#def-interventionsstudie}
+### Interventionelle Studie
+Eine Interventionelle Studie (Interventionsstudie, Treatmentstudie) ist eine Studie, im Zuge derer die Versuchsobjekte auf eine Form (oder mehrere Formen) behandelt werden.
+Es werden also nicht nur Informationen vom Forschungsgegenstand erhoben,
+sondern die Forschis wirken auch auf das System, d.h. die Versuchsobjekte ein.
+Häufig verfolgt so eine Studie das Ziel, die Wirkung der Einwirkung auf die Versuchsobjekte zu untersuchen.$\square$
+:::
+
+
 
 Interventionelle Studien werden in der Regel mit dem Ziel der *Explikation*,^[auch als *Explanation* bezeichnet] zumeist im kausalen Sinne, eingesetzt.
 
 :::{#def-beob}
+### Beobachtungsstudie
 Nicht-Interventionelle bezeichnet man auch als *Beobachtungsstudien*, da man "nichts macht", im Sinne von keine Ausprägungen von Variablen aktiv ändert, sondern nur beobachtet bzw. den Wert der (interessierenden) Variablen misst.$\square$
 :::
 
@@ -74,6 +115,7 @@ Eine Bedingung (Gruppe), in der nur ein Treatment als Referenzwert verarbreicht 
 ### Definition
 
 :::{#def-effekt}
+### Effekt
 Ein Effekt (eines Treatments $T$) ist hier definiert als der Unterschied im beobachteten (gemessenen) Ergebnis zwischen was passiert ist, nachdem das Treatment verabreicht wurde und was passiert wäre, wenn stattdessen eine andere Intervention verabreicht worden wäre, unter der Annahme, dass sonst alles andere gleich gewesen wäre^[ceteris paribus] [@reichardt_quasi-experimentation_2019].$\square$
 :::
 
@@ -97,6 +139,64 @@ $$AVE = \sum_i^N[Y_i(1) - Y_i(0)]$$
 
 
 Man kann bei einer bestimmten Person nur entweder $Y_i(1)$ oder $Y_i(0)$ beobachten, aber nicht beides gleichzeitig.
+
+
+### Signal und Rauschen
+
+:::{#exm-signal1}
+@fig-signal-noise zeigt die Körpergrößen einiger Studentinnen (female) und Studenten (male) eines Studiengangs der Wirtschaftspsychologie.
+Hintergrund ist eine (fiktive) Studie, die nach dem *Unterschied der mittleren Körpergrößen*, $d$ von Studentis fragt.
+In dem Beispiel ist $d$ der Effekt, auch *Signal* genannt. Die einzelnen Datenpunkten,
+also die Körpergrößen der einzelnen Personen (als Punkte dargestellt) sind *Rauschen*.
+Genauer gesagt: Die Streuung innerhalb der Gruppen "übertönt" den Effekt $d$,
+diese Streuung nennt man Rauschen oder Fehlerstreuung.$\square$
+:::
+
+
+```{r}
+#| echo: false
+#| label: fig-signal-noise
+
+library(pradadata)
+data("wo_men")
+
+w2 <- 
+  wo_men %>% 
+  filter(sex %in% c("man", "woman"),
+         between(height, 150, 210))
+
+w2_summ <-
+  w2 %>% 
+  group_by(sex) %>% 
+  summarise(height = mean(height))
+
+effsize <- round(w2_summ$height[1] - w2_summ$height[2], 2)
+
+w2 %>% 
+  ggplot(aes(x = sex, y = height, color = sex)) +
+  geom_hline(aes(yintercept = height), data = w2_summ, linetype = "dashed",
+             color = "grey60") +
+  geom_jitter(width = 0.2) +
+  stat_summary(
+    geom = "point",
+    fun.y = "mean",
+    shape = 24,
+    size = 7,
+    color = "black"
+  ) +
+  annotate("segment",
+           x = 1.5,
+           xend = 1.5,
+           y = w2_summ$height[1],
+           yend = w2_summ$height[2],
+           size = 2) +
+    theme_minimal() +
+  labs(title = paste0("Die Größe des Effekts beträgt ", effsize, " cm."),
+       caption = "Die Dreiecke zeigen die Mittelwerte pro Gruppe.")
+
+```
+
+
 
 
 ### Die Stärke eines Effekts als Funktion von fünf Determinanten
@@ -407,6 +507,60 @@ Das Experiment ist eine Sonderform einer Interventionsstudie, die folgende Krite
 :::{.callout-important}
 Wann immer Experimente ethisch unbedenklich bzw. vertretbar und praktisch durchführbar sind, stellen sie das Mittel der Wahl dar, um Kausalzusammenhänge zu prüfen.$\square$
 :::
+
+
+## Typische Versuchspläne
+
+
+### Zwei-Gruppen-Nachher-Messung
+
+Teilt man die Versuchspersonen in zwei Gruppen ein (idealerweise durch Randomisierung),
+wendet dann die Intervention an und misst abschließend die AV,
+so spricht man von einem *Zwei-Gruppen-Nachher-Messung-Design*, s. @fig-design1.
+
+```{mermaid}
+%%| label: fig-design1
+%%| fig-cap: Zwei-Gruppen-Nachher-Messung-Design
+
+flowchart LR
+  A[Begrüßung und Aufklärung</br>der Probanden] --> C[Messung soziodemografischer</br>Variablen]
+  C --> D[Aufteilung in Gruppen]
+  D --> E1[Experimentalgruppe]
+  D --> E2[Kontrollgruppe]
+  E1 --> F[Messung der AV]
+  E2 --> F
+  F --> G[Verabschiedung]
+```
+
+
+### Zwei-Gruppen-Vorher-Nachher-Messung
+
+Teilt man die Versuchspersonen in zwei Gruppen ein (idealerweise durch Randomisierung),
+misst zunächst (zum ersten Mal) die AV,
+wendet dann die Intervention an und misst abschließend die AV (zum zweiten MAl),
+so spricht man von einem *Zwei-Gruppen-Vorher-Nachher-Messung-Design*, s. @fig-design2.
+
+
+```{mermaid}
+%%| label: fig-design2
+%%| fig-cap: Zwei-Gruppen-Vorher-Nachher-Messung-Design
+
+flowchart LR
+  A[Begrüßung und Aufklärung</br>der Probanden] --> C[Messung soziodemografischer</br>Variablen]
+  C --> C2[Messung der AV]
+  C2 --> D[Aufteilung in Gruppen]
+  D --> E1[Experimentalgruppe]
+  D --> E2[Kontrollgruppe]
+  E1 --> F[Messung der AV]
+  E2 --> F
+  F --> G[Verabschiedung]
+```
+
+### Kovarianzanalyse
+
+Bei der Kovarianzanalyse, ein Auswertungsansatz, kein Forschungsdesign, misst man neben der UV noch andere Variablen, die man kontrollieren möchte.
+Deren Einfluss wird nach der Datenerhebung statistisch kontrolliert, "herausgerechnet".
+
 
 
 

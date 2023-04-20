@@ -1,8 +1,21 @@
-# Populationsbeschreibung
+# Beschreibung
+
+
 
 
 
 ## Lernsteuerung
+
+
+### tl;dr
+
+In diesem Kapitel geht es um Studien mit dem Erkenntnisziel, eine Grundgesamtheit (Population) statistisch zu beschreiben:
+Es geht um *Populationsbeschreibung*.
+Ein Beispielstudie könnte das mittlere zur Verfügung stehende Finanzbudget von Studentis (pro Monat) untersuchen.
+
+>   Wie hoch ist wohl das das monatliche Budget von Studentis an der Hochschule Ansbach?
+
+
 
 ### Standort im Lernpfad
 
@@ -341,10 +354,10 @@ Dazu befragen Sie $n=300$ Studentis. Um eine möglichst zufällige oder zumindes
 :::
 
 
-## Fallbeispiel: World Happieness Report
+## Fallbeispiel: World Happiness Report
 
 Der *World Happiness Report* berichtet und diskutiert die Lebenszufriedenheit der Menschen in vielen Ländern.
-Es handelt sich um eine Studie mit dem Anspruch der Populationsbeschreibung.
+Es handelt sich um eine Studie mit dem Anspruch der *Populationsbeschreibung*.
 
 @fig-whr-fig21 zeigt die mittlere Lebenszufriedenheit in den 25 zufriedensten Ländern.
 Neben dem Mittelwert, der als Balken dargestellt ist^[eine Praxis, von der man nur abraten kann, s. [Friends Don't Let Friends Make Bar Plots for Means Separation](https://github.com/cxli233/FriendsDontLetFriends#1-friends-dont-let-friends-make-bar-plots-for-means-separation)], ist das Konfidenzintervall (95%) dargestellt.
@@ -358,8 +371,72 @@ So sieht man, dass sich die Bereiche plausibler Werte für die Plätze 2-4 (Dän
 Man kann also argumentieren, dass die Rangfolge z.B. dieser drei Länder nicht sicher ist.
 
 
-![Zufriedenheitsranking,  Plätze 1-25, World Happiness Report, Daten der Jahre 2020-2022](img/whr-fig21.png){#fig-whr-fig21 width="75%"}
+![Zufriedenheitsranking, Plätze 1-25, World Happiness Report, Daten der Jahre 2020-2022](img/whr-fig21.png){#fig-whr-fig21 width="75%"}
+
 [Quelle: WHR](https://worldhappiness.report/ed/2023/world-happiness-trust-and-social-connections-in-times-of-crisis/)
+
+
+## Typische Forschungsdesigns
+
+Da Studien mit Ziel der Populationsbeschreibung per Definition keine Treatment-Wirkungen untersuchen, sind die entsprechenden Studien nur auf Beobachtung (Informationsaufnahme) und nicht Intervention abgestellt.
+Beobachtungsstudien sind häufig einfacher strukturiert als Studien mit Treatment.
+
+
+:::{#def-forschungsdesign}
+### Forschungsdesign
+Unter dem Forschungsdesign (synonym: Versuchsplan) versteht man den Aufbau einer Studie.
+Speziell meint man damit den Aufbau insoweit er die Variablen betrifft, die in der Forschungsfrage oder den Forschungsfragen vorkommen.$\square$
+:::
+
+### Univariate Forschungsfragen
+
+Univariate (nur eine Variable) Forschungsfragen untersuchen nur eine einzelne Variable.
+
+:::{#exm-univariat}
+#### Mittlere Körpergröße deutscher Männer
+Fragt eine Studie nach der mittleren Körpergröße deutscher Männer, so liegt eine univariate Studie mit dem Ziel der Populationsbeschreibung vor.$\square$
+:::
+
+Entsprechend einfach sind die Studiendesigns solcher Forschungsfragen, s. @fig-univariat.
+
+
+```{mermaid}
+%%| label: fig-univariat
+%%| fig-cap: Studiendesign
+
+flowchart LR
+  A[Begrüßung und Aufklärung</br>der Probanden] --> B[Messung der Körpergröße]
+  B --> C[Messung soziodemografischer</br>Variablen]
+  C-->D[Verabschiedung]
+
+```
+
+
+### Gruppenvergleich
+
+Viele Studien mit Gruppenvergleich haben ein explikatives Ziel;
+es gibt aber Gruppenvergleich-Studien mit dem Ziel der Populationsbeschreibung.
+
+:::{#exm-gruppenvgl}
+#### Verfügbares Budget von Studentis im Vergleich von Studiengängen
+Fragt eine Studie nach dem verfügbaren Finanzbudget von Studentis in Abhängigkeit des Studiengangs - vergleicht die Studie also das Budget zwischen den Studiengängen - so liegt eine Deskriptionsstudie mit Gruppenvergleich vor, s. fig-gruppenvergleich.$\square$
+:::
+
+
+```{mermaid}
+%%| label: fig-gruppenvergleich
+%%| fig-cap: Studiendesign
+
+flowchart LR
+  A[Begrüßung und Aufklärung</br>der Probanden] --> B[Abfrage des Budgets]
+  B --> B2[Abfrage des Studiengangs]
+  B2 --> C[Messung soziodemografischer</br>Variablen]
+  C-->D[Verabschiedung]
+```
+
+
+Die Studie zum World Happiness Report ist ebenfalls ein Beispiel für einen Gruppenvergleich.
+
 
 
 ## Planung der Stichprobengröße
@@ -368,15 +445,16 @@ Man kann also argumentieren, dass die Rangfolge z.B. dieser drei Länder nicht s
 ### Schätzung eines normalverteilten Parameters 
 
 
-Sagen wir, wir möchten einen normalverteilten Parameter mit "hinreichender Genauigkeit", $e$ schätzen.
+Sagen wir, wir möchten einen normalverteilten Parameter $X$ mit "hinreichender Genauigkeit", $e$ schätzen.
+Dazu müssen Sie Annahmen treffen zur Verteilungsform und zur Streuung von $X$.
 
 
 :::{#exm-schaetz1}
-### Mittelre Daddelzeit
-Sagen wir, um es konkret zu machen, uns interessiert die Zeit, die mittelfränkisch junge Erwachsene pro Tag am Handy verbringen ("mittlere Daddelzeit"). Um uns Tipperei zu sparen, geben wir dieser Variablen den Namen 
+### Mittlere Daddelzeit
+Sagen wir, um es konkret zu machen, uns interessiert die Zeit, die mittelfränkische junge Erwachsene pro Tag am Handy verbringen ("mittlere Daddelzeit"). Um uns Tipperei zu sparen, geben wir dieser Variablen den Namen 
 $X$.
 
-Aus einer Vor-Untersuchung schätzen wir für die Population den Mittelwert auf $\mu=120$ und die Streuung $\sigma$ der Daddelzeit auf 20 (Minuten).
+Aus einer Vor-Untersuchung schätzen wir für die Population eine Streuung $\sigma$ der Daddelzeit von 20 (Minuten).
 Außerdem gehen wir davon aus, dass $X$ normalverteilt ist.
 
 *Gesucht*. Wir möchten gerne wissen, wie groß die Stichprobe sein muss, um $X$ mit einem 95%-KI der Breite von $b=8$ Minuten zu schätzen.
@@ -384,7 +462,7 @@ Außerdem gehen wir davon aus, dass $X$ normalverteilt ist.
 
 
 
-Der Radius $r=b/2$ eines Konfidenzintervalls hier so berechnet werden:
+Der Radius^[Der "Radius" eines Konfidenzintervalls ist die Hälfte der Breite des Konfidenzintervalls.] $r=b/2$ eines Konfidenzintervalls (KI) hier so berechnet werden:
 
 
 $$r = \frac{z \cdot \sigma} {\sqrt{n}}$$
@@ -417,6 +495,33 @@ Unsere Stichprobe sollte also (mindestens) `r ceiling(n)` Beobachtungseinheiten 
 um den Parameter mit der angegebenen Genauigkeit zu messen.
 Voraussetzung ist natürlich eine Zufallsstichprobe.
 
+Damit man nicht selber ausrechnen muss, kann man auch eine Tabelle bemühen,
+etwa die von @Borth2006, s. @fig-bortz-tab26.
+
+![Stichprobenumfänge für Konfidenzintervalle zur Schätzung eines Populationsparameters](img/bortz-tab26.png){#fig-bortz-tab26}
+
+In @fig-bortz-tab26 ist $e$ als Anteil der Streuung von $\sigma$ dargestellt.
+
+
+:::{#exm-schaetz1}
+### Mittlere Daddelzeit 2
+Bei einem Fehler von 8 Minuten und einer Streuung von 20 Minuten ergäbe sich ein *relativer Schätzfehler* von 8/20 = 2/5 = .4 (unter der Annahme einer Normalverteilung und einer Zufallsstichprobe.)$\square$
+
+
+
+Manchmal kennt man die Streuung nicht, aber der Range, $R$, (max-min) ist bekannt.
+In diesem Fall schlagen @Bortz2006 folgende Formel vor, um die Streuung $\sigma$ zu schätzen:
+
+$$\sigma = \frac{R}{5.15}$$
+
+
+:::{.callout-tip}
+Wenn Sie die Streuung des Merkmals $X$ nicht aus der Literatur ableiten können,
+können Sie sich behelfen, in dem Sie die Ausprägung von $X$ bei $n=20$ Versuchspersonen messen. Dann messen Sie wieder 20 Versuchspersonen.
+Sind beide Streuungen ähnlich, so haben Sie einen Schätzwert für die Streuung in der Population.
+Sind sie unähnlich, so erheben Sie weitere 20 Personen [@Bortz2006].$\square
+:::
+
 
 ### Schätzung für Korrelationen
 
@@ -448,6 +553,12 @@ Auf dieser Basis leiten der Autor folgende (Mindest-)Stichprobenanforderungen ab
 
 
 ![Mindest-Stichprobengrößen in Abhängigkeit der Effektstärke](img/cohen2.jpg){#fig-cohen2}
+
+Die hier angegebenen Stichprobengrößen beziehen sich auf das Ziel, mit 80% Wahrscheinlichkeit einen Effekt (von angegebener Größe: klein, mittel, groß) zu entdecken.
+Damit ist noch nichts über die Präzision der Parameterschätzung gesagt.
+Die Stichprobengrößen sind also nur gedacht für das bescheidene Ziel der Schätzung, ob ein Effekt ungleich 0 ist.
+Möchte man die wissen, wie viele Versuchspersonen man benötigt, um einen Effekt mit einer bestimmten Genauigkeit zu schätzen,
+würde man mehr Versuchspersonenen benötigen.
 
 
 

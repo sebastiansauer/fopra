@@ -1,6 +1,10 @@
 # Schreiben
 
 
+<!-- TODO: Dieses Kapitel lieber an den Schluss pakcen: Zu Beginn ist es wichtiger, -->
+<!-- dass die STudis ins Tun kommen, also lieber die Daten erheben. -->
+<!-- Außerdem sollten sie sich eh schon mit wiss. Schreiben auskennen. -->
+
 
 ```{r}
 #| include: false

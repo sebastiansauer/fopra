@@ -3,13 +3,15 @@ title: test
 
 ---
 
+
 ```{mermaid}
-%%| label: fig-between
-%%| fig-cap: Beispiel für ein Between-Subject-Design
+%%| label: fig-univariat
+%%| fig-cap: Studiendesign
+
 flowchart LR
-  M1[1. Messung der Konzentration] --> R[Gruppenzuweisung]
-  R --> G1[Experimentalgruppe]
-  R --> G2[Kontrollgruppe]
-  G1 --> M2[2. Messung der Konzentration]
-  G2 --> M2[2. Messung der Konzentration]  
+  A[Begrüßung und Aufklärung</br>der Probanden] --> B[Messung der Körpergröße]
+  B --> C[Messung soziodemografischer</br>Variablen]
+  C-->D[Verabschiedung]
+
 ```
+

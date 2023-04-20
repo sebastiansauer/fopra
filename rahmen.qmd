@@ -251,25 +251,42 @@ Modelle sind ähnlich zu Theorien, aber meist kleiner gefasst und die Analogie o
 
 ```{r}
 #| echo: false
-d <- read.csv("Interna/sciences-tab.csv")
+d <- read.csv("children/sciences-tab.csv")
 kable(d)
 ```
 
 
 
-### Taxonomie der Ziele einer empirischen Wissenschaft
+### Die drei Ziele einer empirischen Wissenschaft
 
-- Beschreiben
-- Vorhersagen
-- Erklären
-- Verändern
+@fig-ziele zeigt die drei Ziele einer empirischen Wissenschaft.
+Es gibt nur diese drei!
+Allerdings könnte man auch von Ziel*arten* sprechen.
+
+```{mermaid}
+%%| fig-cap: Zielarten der empirisichen Wissenschaft
+%%| label: fig-ziele
+
+graph TD
+  subgraph Ziele
+    A[beschreiben]
+    B[vorhersagen]
+    C[erklären]
+  end
+```
 
 
-### Taxonomie der psychologischen Modalitäten
+Beispiele für die einzelnen Zielarten:
 
-- Denken
-- Fühlen
-- Handeln
+- *Beschreiben*: "Wie groß ist der Gender-Paygap in der Branche X im Zeitraum Y?"
+- *Vorhersagen*: Wenn eine Person X^[z.B. ich] 100 Stunden auf die Statistikklausur lernen, welche Note kann diese Person dann erwarten?
+- *Erklären*: Wie viel bringt (mir) das Lernen auf die Statistikklausur?
+
+<!-- ### Taxonomie der psychologischen Modalitäten -->
+
+<!-- - Denken -->
+<!-- - Fühlen -->
+<!-- - Handeln -->
 
 
 
