@@ -5,13 +5,25 @@ title: test
 
 
 ```{mermaid}
-%%| label: fig-univariat
-%%| fig-cap: Studiendesign
-
 flowchart LR
-  A[Begrüßung und Aufklärung</br>der Probanden] --> B[Messung der Körpergröße]
-  B --> C[Messung soziodemografischer</br>Variablen]
-  C-->D[Verabschiedung]
+  subgraph ES[Empirisches System]
+    M1[Mann 1]
+    M2[Mann 2]
+    F1[Frau 1]
+    F2[Frau 2]
+    F3[Frau 3]
+  end
+  
+  subgraph NS[Numerisches System]
+    Z1[1]
+    Z0[0]
+  end
+  
+  M1 --> Z0
+  M2 --> Z0
+  F1 --> Z1
+  F2 --> Z1
+  F3 --> Z1
 
 ```
 

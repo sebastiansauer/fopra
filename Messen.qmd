@@ -1,0 +1,424 @@
+# Messen
+
+
+```{r}
+#| include: false
+library(tidyverse)
+```
+
+
+```{r}
+#| echo: false
+library(ggplot2)
+theme_set(theme_minimal())
+```
+
+## Lernsteuerung
+
+
+### Lernziele
+
+
+- Sie können den Begriff "Messen" definieren.
+- Sie können den Begriff "Fragebogen" definieren und anhand von Beispielen erläutern.
+- Sie können die Messgüte eines bestimmten Fragebogens einschätzen.
+- Sie können Beispiele nennen für implizites Messen in der Psychologie.
+
+
+
+### Position im Lernpfad
+
+Sie befinden sich im Abschnitt "Messinstrumente" in @fig-ueberblick.
+
+
+
+
+## Was ist Messen?
+
+
+### Operationalisierung
+
+
+Psychologische Variablen (Konstrukte) sind nicht (direkt) messbar,
+mann muss sie operationalisieren, dann kann sie erst messen, s. @fig-operat.
+
+```{mermaid}
+%%| label: fig-operat
+%%| fig-cap: Vom Kontrukt zum Messmodell
+flowchart LR
+  subgraph Konstrukt
+     direction LR
+    theoretisch
+    latent
+    nicht-beobachtbar
+  end
+  
+  subgraph Messmodell
+    direction LR
+    empirisch
+    manifest
+    beobachtbar
+  end
+  
+  Konstrukt --> Messmodell
+
+```
+
+
+:::{#exm-messmodell}
+### Extraversion bei den "Big Five"
+@satow_b5t_2020 operationalisiert in seinem Instrument *B5T* die Persönlichkeitsvariable *Extraversion* anhand von 10 Items, s. @fig-extra.
+Persönlichkeitsvariable sind Eigenschaften, die zeitlich stabil sind und sich situationsunabhängig auf eine bestimmte Weise im menschlichen Erleben und Verhalten manifestieren.
+Extraversion beschreibt das Ausmaß, in dem eine Person hohe Aktivität in sozialen Interaktionen und anstrebt.
+Hoch extravertierte Menschen sind dominant, gesellig, enthusiastisch und abenteuerlustig.$\square$
+:::
+
+
+![Extraversion im B5T](img/extra.png){#fig-extra}
+
+
+
+
+### Messen
+
+
+:::{#def-messen}
+Messen ist das Zuordnen eines empirischen Zusammenhangs in einen Zusammenhang, der in Zahlen ausgedrückt wird und zwar nach "vernünftigen Regeln", d.h. so, dass sich die empirischen Beziehungen in den numerischen Beziehungen widerspiegeln.$\square$
+:::
+
+>    👨‍🏫 Messen ist das Fundament einer empirischen Wissenschaft.
+
+>    🧑‍🎓 Wer viel misst, misst auch viel Mist!
+
+
+
+
+Eine ausführlichere Darstellung des Messens findet sich z.B. bei @Eid2013.
+
+
+
+Ein Beispiel für diese "vernünftigen Regeln" ist:
+
+- Misst man zwei Stöcke A und C, wobei C länger ist als A ($C \succ A$), so muss die Zahl, die C zugeordnet wird ($Z(C)$) größer sein, als die Zahl, die Stock C zugeordnet wird ($Z(C)$): $C \succ A \Leftrightarrow Z(C) > Z(A)$, s. @fig-stoecke.
+
+![Drei Stöcke: A, B und C, wobei A und B gleich lang sind und C länger ist](img/stoekce.png){#fig-stoecke width="50%"}
+
+
+Wenn Stöcke A und B gleich lang sind und zusammen so lang wie Stock C sind, s. @fig-stoecke, dann muss für die den Stöcken zugeordneten Zahlen $Z(A), Z(B), Z(C)$ gelten: 
+
+- Bedingung der Nominalskala: Gleichheit - $Z(A) = Z(B)$
+- Bedingung der Nominalskala:  Ungleichheit - $Z(A) \ne Z(C)$
+- Bedingung der Ordinalskala: Rangfolge - $Z(A) < Z(C), Z(B) < Z(C)$
+- Bedingung der metrischen Skala: Additivität - $Z(A) + Z(B) = Z(C)\square$
+
+
+
+Das Skalenniveau einer Variable kann nicht vorausgesetzt werden, sondern muss überprüft werden.
+
+
+
+:::{#exm-messen1}
+### Messen auf der Nominalskala
+Messen auf der Nominalskala kann bedeuten, dass man Frauen die Zahl `1` zuordnet und Männern die Zahl `0`, vgl. @fig-messen1.$\square$
+:::
+
+
+```{mermaid}
+%%| label: fig-messen1
+%%| fig-cap: "Messen: Die Zuordnung von Beziehungen in einem empirischen System (Kontext) zu Beziehungen in einem Zahlensystem."
+
+flowchart LR
+  subgraph ES[Empirisches System]
+    M1[Mann 1]
+    M2[Mann 2]
+    F1[Frau 1]
+    F2[Frau 2]
+    F3[Frau 3]
+  end
+  
+  subgraph NS[Numerisches System]
+    Z1[1]
+    Z0[0]
+  end
+  
+  M1 --> Z0
+  M2 --> Z0
+  F1 --> Z1
+  F2 --> Z1
+  F3 --> Z1
+
+```
+
+
+
+### Quiz
+
+
+[Quiz zum Skalenniveau](https://api.socrative.com/rc/KWVTiT)
+
+
+![QR-Code zum Quiz](img/msmpu7g-qr-code.png){width=25%}
+
+
+Wie "gut" eine Operationalisierung ist, kann man empirisch prüfen.
+Dafür gibt es einige Kennzahlen, s. @sec-messguete.
+
+
+
+
+## Fragebogen
+
+### Beispiele
+
+
+[Big-Five-Test "B5T" ausprobieren](https://www.psychomeda.de/online-tests/persoenlichkeitstest.html)
+
+
+### Definition
+
+
+Einen inhatlich psychologisch und methodisch psychologisch ("psychometrisch") fundierten Fragebogen bezeichnet man auch als *(psychologischen) Test*^[Das ist etwas verwirrend, weil der Begriff Test für alle möglichen Dinge verwendet wird. Zumeist lässt sich aus dem Kontext erschließen, was mit "Test" gemeint ist.]
+
+:::{#def-psytest}
+### Psychologischer Test
+Ein Test ist ein wissenschaftliches Routineverfahren zur Untersuchung eines oder mehrerer empirisch abgrenzbarer Persönlichkeitsmerkmale mit dem Ziel einer möglichst quantitativen Aussage über den relativen Grad der individuellen Merkmalsausprägung [@lienert_testaufbau_1998].$\square$
+:::
+
+
+
+### Elemente
+
+Ein (psychologischer) Test besteht aus folgenden Elementen:
+
+- *Item*: Eine Frage, auf die der Proband antworten soll bzw. die er lösen sollen. Ein Item operationalisiert einen Teilaspekt eines Konstrukts.
+- *Subtest*: Untertest aus mehreren Items eines Tests, die jeweils zu einem gemeinsamen Punktwert zusammengezogen werden.
+- *Itemantwort*: Antwortmöglichkeiten eines Items.
+- *Skala*: Andere Bezeichnung für einen Subtest oder Bezeichnung für einen Gesamttest, wenn dieser nur aus einem einzelnen Punktwert besteht.
+- *Score*: Punktwert eines Probanden aus einem Subtest oder einem Test.
+
+
+:::{#exm-item}
+Item 1 aus der Extraversionskala des B5T
+"Ich bin gerne mit anderen Menschen zusammen."$\square$
+:::
+
+
+
+
+:::{#exm-antwort1}
+Beispielitem: „Ich bin ein ängstlicher Typ“ [@satow_b5t_2020].
+
+Dieses Item hat folgende Itemantwort:
+
+1) trifft gar nicht zu (1 Punkt)
+
+2) trifft eher nicht zu (2 Punkte)
+
+3) trifft eher zu (3 Punkte)
+
+4) trifft genau zu (4 Punkte)
+:::
+
+
+
+### Antwortformate
+
+Eine Skala hat (fast) immer eine homogene Itemantwort, d.h. alle Items einer Skala haben i.d.R. das gleiche Antwortformat.
+Gängige Antwortformate sind:
+
+
+1. Häufigkeit: z.B. nie -- selten -- gelegentlich -- oft -- immer
+2. Intensität: z.B. gar nicht -- wenig -- mittelmäßig -- überwiegend -- völlig
+3. Bewertung z.B. trifft gar nicht zu -- trifft eher nicht zu -- trifft eher zu -- trifft völlig zu 
+
+
+Man kann Antwortformate dahingehend unterscheiden, ob sie uni- oder bipolar aufgebaut sind:
+
+1. unipolar: z.B. nie -- selten -- gelegentlich -- oft -- immer
+2. bipolar: z.B. trifft überhaupt nicht zu (-2) -- (-1) -- (0) -- (+1) -- (+2) trifft voll und ganz zu
+
+
+
+
+### Bezugsorte
+
+
+>   🧑‍🎓 Wo finde ich Tests? Welche darf ich wie benutzen?
+
+>   👨‍🏫 Hier sind einige Bezugsorte:
+
+- [Gesis-ZIS](https://zis.gesis.org/): Hier finden sich eine Anzahl an wissenschaftlich untersuchten Fragebögen, z. B. der BFI-10, ein Kurz-Fragebogen zu den Big Five mit nur 10 Items
+
+- Der [Psyndex](https://www.psyndex.de/) ist ein Verzeichnis der auf Deutsch publizierten Tests (ca. 7000), davon auch einige zum freien [Download](https://www.testarchiv.eu/).
+
+- Die [Hogrefe-Testzentrale](https://www.testzentrale.de/) ist der bekannteste kommerzielle Anbieter für psychologische Tests in Deutschland.
+
+- Viele (deutschsprachige) Tests sind in (deutschsprachigen) Fachzeitschriften (z. B. [Diagnostica](https://www.hogrefe.com/de/zeitschrift/diagnostica/#2+1)) publiziert.
+
+- Oft hilft es, die Autoren anzuschreiben.
+
+- Bei [Researchgate](https://www.researchgate.net/) (Facebook für Wissenschaftler), [OSF](https://osf.io/) und auf anderen Preprint-Servern sind viele (Preprint-) Paper hochgeladen und kostenlos abrufbar (ggf. Email-Adresse von Hochschule nötig).
+
+- [Testkuratorium der Deutschen Gesellschaft für Psychologie](https://www.bdp-verband.de/publikationen/testrezensionen)
+
+
+
+>   🧑‍🎓 Welche Tests darf ich wie benutzen?
+
+### Rechte und Pflichten
+
+
+
+
+:::{.callout-important}
+Kommerzielle Tests müssen von Ihnen käuflich erworben werden oder eine schriftliche Nutzungsgenehmigung durch den Verlag vorliegen, sonst ist die Nutzung nicht erlaubt. Andere, nicht-kommerzielle Tests (z. B. von Gesis) dürfen Sie ohne Rückfrage und ohne Gebühr verwenden. Die Zitationspflicht bleibt davon unberührt.$\square
+:::
+
+
+### Beispiele für Tests
+
+
+```{r}
+#| echo: false
+tests_tab <-
+  tibble::tribble(
+    ~Nr,   ~Kürzel,                                                        ~Name,           ~Bezugsquelle,                                                                            ~Beschreibung,
+     1L,    "MAAS",                  "Mindfulness Attention and Awareness Skala", "zpid, online, Journal",                                          "Fragebogen zu „mindlessness“ bzw. Achtsamkeit",
+     2L, "BIS/BAS",                "Behavioral Inhibition/ Activition System FB",         "zpid, Journal",                                                "Ein alternatives Persönlichkeits-System",
+     3L,      "AQ",                            "Deutscher Aggressionsfragebogen",                 "gesis",                                                                 "Messung von Aggresison",
+     4L,     "B5T",                                              "Big Five Test",                  "zpid",                                       "Das am besten untersuchte Persönlichkeits-System",
+     5L,   "BDI-S",                      "Becks Depressions-Inventar-Simplified",    "zpid, ResearchGate",                      "Einer der bekanntesten Depressions-Tests in vereinfachter Version",
+     6L,    "DISG",                           "Psycholog-Persönlichkeits-System",            "Buchhandel", "Einer in der dt. Wirtschaft am häufigsten eingesetzten Verfahren; Qualität zweifelhaft",
+     7L,     "EI4",                      "Emotionale Intelligenz in 4 Bereichen",                "Online",                                                "Das „Mode-Thema“ Emotionale Intelligenz",
+     8L,      "I8",                            "Impulsives Verhalten in 8 Items",                 "gesis",                 "Impulskontrolle etc. sind zentrale Forschungsthemen im Moment (immer?)",
+     9L,     "Pos",                                         "Positivitäts-Skala",                "Online",                                         "Metakonstrukt zu Wohlbefinden, Optimismus etc.",
+    10L,     "SES",                                           "Selbstwertkskala",          "Researchgate",                                                       "Zentrale Persönlichkeitsvariable",
+    11L,     "SWE",                        "Selbstwirksamkeits-Erwartungs-Skala",                  "zpid",                                                       "Zentrale Persönlichkeitsvariable",
+    12L,  "AISS-d", "Deutsche Version des Arnett Inventory of Sensation Seeking",                 "gesis",                                                        "Warum suchen manche den „Kick“?",
+    13L,     "NFA",                                            "Need for Affect",                "online",                                                                       "Some like it hot",
+    14L,     "KSA",                                   "Kurzskala Autoritarismus",                 "gesis",                      "Nach einer Hypothese liegt hier die Emfänglichkeit für Faschismus"
+    )
+
+tests_tab
+```
+
+
+### Make or buy?
+
+>    🧑‍🎓 Wieso der ganze Stress? Ich denk mir ein paar Fragen aus, und fertig ist der Lack!
+
+>    👩‍🏫 Bei nicht-psychologischen Variablen, die einfach zu beboachten sind, so wie z.B. Schuhgröße, ist das vollkommen ok. Bei psychologischen Variablen sollte man besser auf geprüfte Qualität zurückgreifen.
+
+:::{.callout-note}
+Selbst gestrickte (psychologische) Fragebögen sind meist problematisch, man sollte besser auf Instrumente mit geprüfter Qualität zurückgreifen.$\square$
+:::
+
+
+Verwenden Sie möglichst keine selbst gestrickten Fragebögen/Items für psychologische Konstrukte: Gütekriterien eines Tests aus selbst gestrickten Items sind unbekannt oder oft fragwürdig.
+Verwendet man eigene Messinstrumente (z. B. Fragebögen) so ist man für den Nachweise der Güte selber verantwortlich. Bei publizierten Verfahren kann man sich einfacher auf die Ergebnisse des publizierten Berichts berufen.
+Es ist z. B. fraglich, ob es sinnvoll/„erlaubt“ ist, einen Mittelwert von selbst gestrickten Items zu bilden: Item 1: „Meine Füße fühlen sich groß an“; Item 2: „Die letzten 10 Filme waren echt cool und die nächsten 10 Songs werden halb-cool sein oder spitze“. Was sagt der Mittelwert dieser beiden Items aus? Schwer zu sagen (nichts?!).
+
+Das Item „Ich glaube, ich habe zwei Arme“ wird sehr „leicht“ sein (d.h. hoher Mittelwert); daher wird die Streuung des Items gering sein. Daher wird die Korrelation mit einer anderen Skala gering sein. Das Item hat also kaum Informationswert und ist damit von geringem Wert.
+
+Insgesamt ist die Erstellung eines Fragebogens für ein psychologisches Konstrukt ein aufwändiges Unterfangen. In der Regel ist man besser beraten, ein existierendes Verfahren zu suchen/zu verwenden.
+
+Nicht-psychologische Variablen bzw. beobachtbare Dinge sind viel einfacher zu verwenden; hier sind selbst gestrickte Verfahren id.R. kein Problem (z. B. „Welche Automarke fahren Sie?“, „Wie viele Facebook-Freunde haben Sie?“, „Wie viele Kinder haben Sie?“)
+
+## Messgüte {#sec-messguete}
+
+Die Güte einer Messung wird in der Psychologie zumeist anhand dreier Kennzahlen festgemacht:
+
+- Reliabilität (Messgenauigkeit)
+- Objektivität (Unabhängigkeit vom Kontext)
+- Validität (Gültigkeit)
+
+
+### Reliabilität 
+
+Die Reliabilität von psychologischen (quantitativen) Skalen wird häufig über die sog. interne Konsistenz ermittelt.
+
+Es gibt mehrere Formeln zur Schätzung von Konsistenzkoeffizienten Hier sollen nur die am häufigsten verwendete dargestellt werden: Cronbachs Alpha Höhe des Koeffizienten hängt vom Verhältnis der Summe der einzelnen Itemvarianzen ($\sigma_i^2$) zur Gesamtvarianz ($\sigma^2$) des Tests ab.
+Zwei denkbare Extrem-Szenarien sind︎
+- Itemvarianzen hoch und Itemkovarianzen gering: Cronbach-alpha-Koeffizient *niedrig* ︎
+-  Itemvarianzen niedrig und die Itemkovarianzen hoch: Cronbach-alpha-Koeffizient *hoch*.
+
+
+
+### Objektivität
+
+Für die Objektivität wird meist keine Kennzahl angegeben.
+
+
+### Validität
+
+Für die Gültigkeit einer Skala wird oft die Korrelation zu anderen Konstrukten berichtet, die laut Theorie hoch oder gering oder gar nicht mit dem zu untersuchenden Konstrukt korreliert sein soll. Entspricht die beobachtete Korrelation der laut Theorie erwarteten,
+so ist dies als Beleg für die Validität des Verfahrens zu sehen.
+
+
+
+
+## Implizites Messen
+
+Zur Messung von sozialpsychologischen oder persönlichkeitspsychologischen Konstrukten wird häufig auf eines von zwei Operationalisierungsarten zurückgegriffen:
+
+1. Selbsteinschätzung via (psychometrisch fundiertem) Fragebogen (explizite Messung)
+2. Leistungstests often in Form von reaktionszeitbasierten Tests (implizite Messung)
+
+:::{#def-implizit}
+### Implizite Messung
+Eine Messung eines psychologischen Konstrukts, die erhalten wird, während die zu bewertende Person nicht weiß, dass die Messung stattfindet, die häufig zur Bewertung von Einstellungen, Stereotypen und Emotionen in der sozialen Kognitionsforschung verwendet wird. Typischerweise wird ein implizites Maß als Antwortergebnis eines experimentellen Verfahrens bewertet, bei dem der Teilnehmer mit einer kognitiven Aufgabe beschäftigt ist. Beispielsweise könnte eine Wortstamm-Vervollständigungsaufgabe verwendet werden, um Emotionen implizit zu bewerten, so dass "jo_" vervollständigt werden könnte, um ein positives emotionales Wort (z. B. Joy) oder ein neutrales Wort (z. B. Joggen) zu bilden.^[Quelle: https://dictionary.apa.org/implicit-measure, 2023-05-04]$\square$
+:::
+
+### Der Implizite Assoziationstest
+
+Der *Implizite Assoziationstest* (IAT) [@Greenwald1995] ist ein Verfahren zur Messung unbewusster Assoziation zwischen mentalen Repräsentationen von Objekten.
+Typische Anwendung ist die Messung von Vorurteilen.
+
+
+[IAT ausprobieren](https://implicit.harvard.edu/implicit/takeatest.html)
+
+
+### Fundort für implizite Verfahren 
+
+
+[Psytoolkit](https://www.psytoolkit.org/) erlaubt es, psychologische Experimente inkl. Reaktionszeit-Messungen zu entwickeln, kostenlos. Die Studien können direkt über die Plattform online gestellt werden.
+
+Die Reaktionszeitsmessungen müssen mit einer Skriptsprache geschrieben werden, aber es gibt von viele Beispiele (inkl. deren Skripte), die man einfach kopieren kann. Die Experimente können im Browser durchgeführt werden.
+
+
+[Hier gibt’s ein Tutorial](https://www.psytoolkit.org/lessons/project.html).
+
+
+
+:::{#exr-implizit}
+1. Wählen Sie ein Instrument zur Messung Reaktionszeit aus der [Liste von PsyToolkit](https://www.psytoolkit.org/experimentlibrary/#exps).
+
+2. Probieren Sie das Instrument aus.
+
+3. Erstellen Sie eine Kurzbeschreibung des Instruments:
+
+    a. Name
+    
+    b. Beschreibung/Ablauf
+    
+    c. Zu messendes Konstrukt
+    
+    d. Korrelate
+    
+    e. Forschungstand (z.B. Anzahl und Qualität der Befunde zu(un)gunsten des Instruments)
+    
+    f. Beispielhafte Hypothese für dieses Instrument
+    
+    g. Hinweis auf einen passenden Originalartikel
+:::
+
+## Weiterführende Literatur
+
+
+Ein Klassiker mit einem breitem Blick auf psychologische Forschung ist @Bortz2006.
+Einen zugänglichen Einstieg (allerdings auf englischer Sprache), der kostenlos und frei verfügbar ist, bieten @jhangiani_research_2019.
+Recht nützlich ist auch der Überblick von @peters_planen_2019.
+
+
+
+
