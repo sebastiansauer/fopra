@@ -32,11 +32,36 @@ Sie befinden sich im Abschnitt "Messinstrumente" in @fig-ueberblick.
 
 
 
+### Benötigte R-Pakete und Daten
+
+```{r}
+#| messagen: false
+library(tidyverse)
+library(gganimate)  # Animation
+library(plotly)  # Animation
+```
+
+
+```{r}
+data("airquality")  # Animination
+data("gapminder", package = "gapminder")  # Animation
+```
+
+Vergessen Sie nicht, dass Sie ggf. die Pakete zuerst (einmalig) installieren müssen.
 
 ## Was ist Messen?
 
 
 ### Operationalisierung
+
+
+:::{#def-operat}
+### Operationalisierung
+Operationalisierung ist der Vorgang des genauen Beschreibens, anhand welcher Operationen ein Konstrukt beobachtbar (im weiteren Sinne) und damit messbar gemacht wird. Da in der Pschologie die Variablen zumeist (per Definition) nicht direkt der Beobachtung zugänglich sind, kommt der Operationalisierung eine wichtige Rolle im Forschungsprozess zu.$\square$
+:::
+
+
+
 
 
 Psychologische Variablen (Konstrukte) sind nicht (direkt) messbar,
@@ -127,7 +152,7 @@ Messen auf der Nominalskala kann bedeuten, dass man Frauen die Zahl `1` zuordnet
 %%| label: fig-messen1
 %%| fig-cap: "Messen: Die Zuordnung von Beziehungen in einem empirischen System (Kontext) zu Beziehungen in einem Zahlensystem."
 
-flowchart LR
+flowchart TD
   subgraph ES[Empirisches System]
     M1[Mann 1]
     M2[Mann 2]
@@ -411,6 +436,197 @@ Die Reaktionszeitsmessungen müssen mit einer Skriptsprache geschrieben werden, 
     
     g. Hinweis auf einen passenden Originalartikel
 :::
+
+
+
+## Stimuli
+
+:::{#def-stimulus}
+### Stimulus
+Ein Stimulus (Plural: Stimuli) ist ein Objekt oder ein Ereignis für das die Reaktion (einer Versuchsperson) gemessen wird.$\square$
+:::
+
+Stimuli werden nicht gemessen, sind aber (u.U.) auch  *Operationalisierungen* eines Konstrukts.
+
+:::{#exm-stimulus}
+Im Rahmen einer Studis soll positive Stimmung (in den Versuchspersonen) induziert werden. Dazu werden die Versuchspersonen instruiert, 6 Erlebnisse aufzuschreiben, in denen ihnen etwas gut gelungen ist.$\square$
+:::
+
+In @exm-stimulus dient die Instruktion als Operationalisierung für das Konstrukt "positive Stimmung".
+
+
+Beispiele für Stimuli sind Bilder, Töne oder Instruktionen. 
+
+### Bilder und Töne
+
+Eine in der experimentellen Psychologie häufig eingesetzte Sammlung an Bildern ist der *International affective picture system (IAPS)*  [@Lang1997].
+[Hier](https://psychology.stackexchange.com/questions/7736/is-there-any-good-alternative-to-the-international-affective-picture-system-iap) werden Alternativen zum IAPS vorgestellt.
+
+Für Töne gibt es ähnliche Sammlungen [@redondo_affective_2008, @yang_affective_2018].
+
+
+### Animationen
+
+Für einige Forschungszwecke eignen sich Anminationen, etwa von Datenvisualisierung.
+Online finden sich viele Beispiele für animierte Diagramme, sowohl in Form von GIF-Bildern oder Web-Diagrammen^[zumeist auf Basis von JavaScript], die im Browser dynamisch bzw. animiert laufen.
+
+Zeitverläufe eignen sich vergleichsweise gut für Animationen.
+
+Man kann sich aber selber Animationen erstellen.
+
+#### gganimate
+
+Visualisieren wir den Verlauf der Temperatur in New York (Datensatz `airquality`).
+
+`gganimate` erstellt eine große Zahl von `ggplot`-Diagrammen, von denen jeweils eines als Bild im "Film" einer Animation gezeigt wird. Man kann die Bildern dann als GIF-Bild speichern.
+
+```{r}
+library(gganimate)
+```
+
+Zuerst die statische Variante des Diagramms, das wir mit `ggplot` erstellen:
+
+
+```{r}
+diagram1 <- airquality %>% 
+  ggplot(aes(x = Day, 
+             y = Temp, 
+             frame = Day, 
+             color = factor(Month))) +
+  geom_line()
+
+diagram1
+```
+
+
+Und hier die animierte Variante:
+
+```{r}
+diagram1 + transition_reveal(Day)
+```
+
+Hilfe für `gganimate` findet sich z.B. auf der [Homepage des Pakets](https://gganimate.com/).
+
+[`transition_reveal()`](https://gganimate.com/reference/transition_reveal.html) lässt die Werte (die Daten) nach und nach erscheinen.
+
+
+Speichern als GIF:
+
+```{r}
+anim_save("airquality.gif")
+```
+
+Gibt man kein Objekt an, wird die letzte Animation gespeichert;
+Mehr Optionen kann man auf der [Hilfe-Seite der Funktion](https://gganimate.com/reference/anim_save.html) nachlesen.
+
+
+#### Plotly
+
+[Plotly](https://plotly.com/r/) ist eine Browser-basierte Methode, die das Bild dynamisch im Browser erzeugt (und nur dort).
+Damit ist die Methode vor allem für Web-basierte Formate geeignet.
+
+
+Nehmen wir hier als Beispiel die Daten von `gapminder`.^[Das hat auch den Hintergrund, dass Liniendiagramme umständlich(er) mit Plotly zu erstellen sind.]
+
+
+Zunächst erstellen wir wieder ein statisches Diagramm,
+das die Veränderung im Zeitverlauf der Lebenserwartung in Abhängigkeit des Bruttosozialprodukts für viele Länder zeigt.
+
+
+```{r}
+diagram2 <- 
+  gapminder %>% 
+  ggplot(aes(x = gdpPercap, 
+             y = lifeExp, 
+             frame = year,  # Bild 
+             color = continent,
+             size = continent)) +
+  geom_point(alpha = .5)  # Punkte etwas durchsichtig
+
+diagram2
+```
+
+Für jeden Wert von `frame` wird ein eigenes Bild - ähnlich zu einem Video - erstellt.
+
+
+Das ggplot-Objekt können wir jetzt einfach in ein Plotly-Objekt übersetzen lassen:
+
+```{r}
+ggplotly(diagram2)
+```
+
+Oder wir schreiben Plotly-Code,
+was auch nicht so schwierig ist.
+
+```{r}
+gapminder %>%
+  plot_ly(
+    x = ~gdpPercap, 
+    y = ~lifeExp, 
+    size = ~pop, 
+    color = ~continent, 
+    frame = ~year, 
+    text = ~country, 
+    hoverinfo = "text",
+    type = 'scatter',
+    mode = 'markers'
+  )
+```
+
+[Online](https://statisticsglobe.com/animate-interactive-plotly-graph-r) finden sich viele Beispiele für den Einsatz von Plotly.
+
+### Weitere Animationen
+
+Einfache Beispiele für Animationen mit `gganimate` und `plotly` finden sich [unter dem Tag animation im 'Datenwerk'](https://datenwerk.netlify.app/#category=animation) und an ganz vielen weiteren Stellen.
+
+
+Alternative animierte Visualisierungen von Daten bieten z.B. die Diagramme des [R-Pakets 'htmlwidgets'](https://www.htmlwidgets.org/showcase_leaflet.html).
+
+So bietet `dygraphs` interaktive - aber nicht animierte - Diagramme.
+
+```{r}
+library(dygraphs)
+
+airquality %>% 
+  select(Day, Temp, Month) %>% 
+  pivot_wider(values_from = Temp, names_from = Month) %>% 
+  dygraph() %>% 
+  dyRangeSelector()
+```
+
+
+Neu dabei ist [Observable](https://observablehq.com/@slopp/observable-for-r-users), womit auch browserbasierte Diagramme erstellt werden können. Eigentlich ist es ein JavaScript-Tool, aber es gibt eine R-Andbindung, [RObservalbe](https://cran.r-project.org/web/packages/robservable/vignettes/introduction.html):
+
+```{r}
+library(robservable)
+
+library(palmerpenguins)
+df <- data.frame(table(penguins$species))
+# change column names to match the names used in the observable notebook
+names(df) <- c("Species", "Freq")
+
+series <- lapply(unique(gapminder$country), function(country) {
+  values <- gapminder[gapminder$country == country, "lifeExp", drop = TRUE]
+  list(name = country, values = values)
+})
+dates <- sort(unique(gapminder$year))
+dates <- as.Date(as.character(dates), format = "%Y")
+
+df <- list(
+  y = "Life expectancy",
+  series = series,
+  dates = to_js_date(dates)
+)
+
+robservable(
+  "@juba/multi-line-chart",
+  include = "chart",
+  input = list(data = df)
+)
+```
+
+
+
 
 ## Fazit
 

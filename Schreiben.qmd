@@ -226,7 +226,6 @@ Der Abstract erscheint nicht in der Gliederung.
 die bedeutsamsten Informationen aller Einzelabschnitte werden so knapp wie möglich, 
 jedoch klar und verständlich dargestellt:
 
-
 -︎ Forschungsfag︎e
 - Theorie 
 - Hypothesen 
@@ -772,13 +771,23 @@ Die zehn Gebote der Textformatierung:
 ### Urheberrecht
 
 
-Prüfen Sie die Nutzungsrechte bzw. die Nutzungslizenzen eines Werkes, bevor Sie es übernehmen. Urheberrechtlich geschützten Werken (wie Abbildungen) dürfen Sie nicht ohne schriftliche Genehmigung des Inhabers des Urheberrechts einer Abbildung übernehmen – auch nicht in leicht abgeänderter Form.
+Prüfen Sie die Nutzungsrechte bzw. die Nutzungslizenzen eines Werkes, 
+bevor Sie es übernehmen. Urheberrechtlich geschützten Werken (wie Abbildungen) dürfen Sie nicht ohne schriftliche Genehmigung des Inhabers des Urheberrechts einer Abbildung übernehmen – auch nicht in leicht abgeänderter Form.
 
 Bei permissiven Nutzungslizenzen wie CC-BY ist die Nutzung hingegen erlaubt.
 Es empfiehlt sich für wissenschaftliche Zwecke, Werke mit permissiven Nutzungsrechten zu nutzen.
-Es gibt zwar ein Zitatrecht für Bilder (§51 UrhG), doch ist es im Einzelfall nicht einfach, korrekt anzuwenden:︎  Zulässig ist die Vervielfältigung, Verbreitung und öffentliche Wiedergabe eines veröffentlichten Werkes zum Zweck des Zitats, sofern die Nutzung in ihrem Umfang durch den besonderen Zweck gerechtfertigt ist. 
-Zulässig ist dies insbesondere, wenn einzelne Werke nach der Veröffentlichung in ein selbständiges wissenschaftliches Werk zur Erläuterung des Inhalts aufgenommen werden Letzter Absatz lässt sich so interpretieren, dass der Text ohne Bild verständlich sein muss. Hey, das hier ist keine Rechtsberatung 🤓🤪 Für Zwecke der Lehre gelten laxere Regeln (§ 60 UrhG).
+Es gibt zwar ein Zitatrecht für Bilder (§51 UrhG), doch ist es im Einzelfall nicht einfach, korrekt anzuwenden:︎
+Zulässig ist die Vervielfältigung, Verbreitung und öffentliche Wiedergabe eines veröffentlichten Werkes zum Zweck des Zitats, sofern die Nutzung in ihrem Umfang durch den besonderen Zweck gerechtfertigt ist. 
+Zulässig ist dies insbesondere, 
+wenn einzelne Werke nach der Veröffentlichung in ein selbständiges wissenschaftliches Werk zur Erläuterung des Inhalts aufgenommen werden Letzter Absatz lässt sich so interpretieren,
+dass der Text ohne Bild verständlich sein muss.
+Hey, das hier ist keine Rechtsberatung 🤓🤪 Für Zwecke der Lehre gelten laxere Regeln (§ 60 UrhG).
 
+
+### Plagiate
+
+
+>   Psychologinnen und Psychologen präsentieren keine Arbeiten oder Daten anderer als ihre eigenen, auch nicht, wenn diese Quelle zitiert wird.[@bdp_und_dpgs_berufsethische_2016]
 
 
 ### Schreibprogramme
@@ -789,6 +798,8 @@ etwa Google Docs. Google Docs unterstützt auch ein Zotero-Plugin,
 was für wissenschaftliche Dokumente ein Muss ist.
 Technikfreunde mit Zukunftsblick schreiben vielleicht Ihr Dokument mit [Markdown](https://de.wikipedia.org/wiki/Markdown). 
 Die neueste Variante von Markdown ist [Quarto](https://quarto.org/docs/tools/rstudio.html).
+
+
 
 
 :::{.exr-word}

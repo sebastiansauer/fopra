@@ -39,7 +39,7 @@ ggplot2::theme_set(theme_minimal())
 
 ### Explikation
 
-Explikation ist (hier) synonym zu *Erklären*.
+Explikation ist (hier) synonym zu *Erklärung*.
 
 :::{#def-explikation}
 ### Explikation
@@ -698,7 +698,7 @@ In einer Studie oder einem Experiment interessiert häufig nur der Einfluss eine
 
 :::{#def-stoervar}
 ### Störvariable
-Eine Variable, die die AV beeinflusst, aber nicht die UV ist und nicht gemessen ist, heißt *Störvariable*.\square$
+Eine Variable, die die AV beeinflusst, aber nicht die UV ist und nicht gemessen ist, heißt *Störvariable*.$\square$
 :::
 
 
@@ -776,9 +776,13 @@ Deren Einfluss wird nach der Datenerhebung statistisch kontrolliert, "herausgere
 
 
 
-## Vertiefung
+## Weiterführende Literatur 
 
 Bei @reichardt_quasi-experimentation_2019 findet sich eine umfassende Erläuterung des Handwerks der interventionellen Forschung.
 Ein Klassiker ist @Bortz2006, in dem sich viel Essenzielles zur Versuchsplanung findet.
+Einen zugänglichen Einstieg (allerdings auf englischer Sprache), der kostenlos und frei verfügbar ist, bieten @jhangiani_research_2019.
+Recht nützlich ist auch der Überblick von @peters_planen_2019.
+
+
 
 

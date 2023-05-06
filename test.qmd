@@ -4,8 +4,13 @@ title: test
 ---
 
 
+
 ```{mermaid}
-flowchart LR
+%%| label: fig-messen1
+%%| fig-width: 100%
+%%| fig-cap: "Messen: Die Zuordnung von Beziehungen in einem empirischen System (Kontext) zu Beziehungen in einem Zahlensystem."
+
+flowchart TD
   subgraph ES[Empirisches System]
     M1[Mann 1]
     M2[Mann 2]
@@ -26,4 +31,5 @@ flowchart LR
   F3 --> Z1
 
 ```
+
 

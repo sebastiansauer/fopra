@@ -259,6 +259,10 @@ sessioninfo::session_info()
 
 
 
+## Danke
+
+Dieses Dokument entstand mit Unterstützung vieler Kolleginnen und Kollegen aus der FOM Hochschule. Vielen Dank!
+
 ## Literatur
 
 

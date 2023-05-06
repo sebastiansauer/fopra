@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.247">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>Forschungsprojekt - 8&nbsp; Auswerten: Inferenz</title>
+<title>Forschungsprojekt - 9&nbsp; Auswerten: Inferenz</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -80,7 +80,7 @@ div.csl-indent {
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
 <link href="./pruefung.html" rel="next">
-<link href="./Messen.html" rel="prev">
+<link href="./Erheben.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -117,7 +117,7 @@ div.csl-indent {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Bayes.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Auswerten: Inferenz</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./Bayes.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Auswerten: Inferenz</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
@@ -182,14 +182,20 @@ div.csl-indent {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./Erheben.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Erheben</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./Bayes.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Auswerten: Inferenz</span></span></a>
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Auswerten: Inferenz</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./pruefung.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Prüfung</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Prüfung</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -207,46 +213,46 @@ div.csl-indent {
    
   <ul>
 <li>
-<a href="#lernsteuerung" id="toc-lernsteuerung" class="nav-link active" data-scroll-target="#lernsteuerung"><span class="header-section-number">8.1</span> Lernsteuerung</a>
+<a href="#lernsteuerung" id="toc-lernsteuerung" class="nav-link active" data-scroll-target="#lernsteuerung"><span class="header-section-number">9.1</span> Lernsteuerung</a>
   <ul class="collapse">
-<li><a href="#lernziele" id="toc-lernziele" class="nav-link" data-scroll-target="#lernziele"><span class="header-section-number">8.1.1</span> Lernziele</a></li>
-  <li><a href="#position-im-lernpfad" id="toc-position-im-lernpfad" class="nav-link" data-scroll-target="#position-im-lernpfad"><span class="header-section-number">8.1.2</span> Position im Lernpfad</a></li>
-  <li><a href="#tldr" id="toc-tldr" class="nav-link" data-scroll-target="#tldr"><span class="header-section-number">8.1.3</span> tl;dr</a></li>
-  <li><a href="#ben%C3%B6tigte-r-pakete" id="toc-benötigte-r-pakete" class="nav-link" data-scroll-target="#ben%C3%B6tigte-r-pakete"><span class="header-section-number">8.1.4</span> Benötigte R-Pakete</a></li>
+<li><a href="#lernziele" id="toc-lernziele" class="nav-link" data-scroll-target="#lernziele"><span class="header-section-number">9.1.1</span> Lernziele</a></li>
+  <li><a href="#position-im-lernpfad" id="toc-position-im-lernpfad" class="nav-link" data-scroll-target="#position-im-lernpfad"><span class="header-section-number">9.1.2</span> Position im Lernpfad</a></li>
+  <li><a href="#tldr" id="toc-tldr" class="nav-link" data-scroll-target="#tldr"><span class="header-section-number">9.1.3</span> tl;dr</a></li>
+  <li><a href="#ben%C3%B6tigte-r-pakete" id="toc-benötigte-r-pakete" class="nav-link" data-scroll-target="#ben%C3%B6tigte-r-pakete"><span class="header-section-number">9.1.4</span> Benötigte R-Pakete</a></li>
   </ul>
 </li>
-  <li><a href="#warum-das-berichten-wichtig-ist" id="toc-warum-das-berichten-wichtig-ist" class="nav-link" data-scroll-target="#warum-das-berichten-wichtig-ist"><span class="header-section-number">8.2</span> Warum das Berichten wichtig ist</a></li>
-  <li><a href="#prinzipien-der-berichtlegung-von-bayes-statistik" id="toc-prinzipien-der-berichtlegung-von-bayes-statistik" class="nav-link" data-scroll-target="#prinzipien-der-berichtlegung-von-bayes-statistik"><span class="header-section-number">8.3</span> Prinzipien der Berichtlegung (von Bayes-Statistik)</a></li>
-  <li><a href="#allgemeine-richtlinien-zum-berichten-von-statistik" id="toc-allgemeine-richtlinien-zum-berichten-von-statistik" class="nav-link" data-scroll-target="#allgemeine-richtlinien-zum-berichten-von-statistik"><span class="header-section-number">8.4</span> Allgemeine Richtlinien zum Berichten von Statistik</a></li>
+  <li><a href="#warum-das-berichten-wichtig-ist" id="toc-warum-das-berichten-wichtig-ist" class="nav-link" data-scroll-target="#warum-das-berichten-wichtig-ist"><span class="header-section-number">9.2</span> Warum das Berichten wichtig ist</a></li>
+  <li><a href="#prinzipien-der-berichtlegung-von-bayes-statistik" id="toc-prinzipien-der-berichtlegung-von-bayes-statistik" class="nav-link" data-scroll-target="#prinzipien-der-berichtlegung-von-bayes-statistik"><span class="header-section-number">9.3</span> Prinzipien der Berichtlegung (von Bayes-Statistik)</a></li>
+  <li><a href="#allgemeine-richtlinien-zum-berichten-von-statistik" id="toc-allgemeine-richtlinien-zum-berichten-von-statistik" class="nav-link" data-scroll-target="#allgemeine-richtlinien-zum-berichten-von-statistik"><span class="header-section-number">9.4</span> Allgemeine Richtlinien zum Berichten von Statistik</a></li>
   <li>
-<a href="#theorieteil" id="toc-theorieteil" class="nav-link" data-scroll-target="#theorieteil"><span class="header-section-number">8.5</span> Theorieteil</a>
+<a href="#theorieteil" id="toc-theorieteil" class="nav-link" data-scroll-target="#theorieteil"><span class="header-section-number">9.5</span> Theorieteil</a>
   <ul class="collapse">
-<li><a href="#testen-oder-sch%C3%A4tzen" id="toc-testen-oder-schätzen" class="nav-link" data-scroll-target="#testen-oder-sch%C3%A4tzen"><span class="header-section-number">8.5.1</span> Testen oder Schätzen?</a></li>
-  <li><a href="#modell-definieren" id="toc-modell-definieren" class="nav-link" data-scroll-target="#modell-definieren"><span class="header-section-number">8.5.2</span> Modell definieren</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#methodenteil" id="toc-methodenteil" class="nav-link" data-scroll-target="#methodenteil"><span class="header-section-number">8.6</span> Methodenteil</a>
-  <ul class="collapse">
-<li><a href="#analyse" id="toc-analyse" class="nav-link" data-scroll-target="#analyse"><span class="header-section-number">8.6.1</span> Analyse</a></li>
+<li><a href="#testen-oder-sch%C3%A4tzen" id="toc-testen-oder-schätzen" class="nav-link" data-scroll-target="#testen-oder-sch%C3%A4tzen"><span class="header-section-number">9.5.1</span> Testen oder Schätzen?</a></li>
+  <li><a href="#modell-definieren" id="toc-modell-definieren" class="nav-link" data-scroll-target="#modell-definieren"><span class="header-section-number">9.5.2</span> Modell definieren</a></li>
   </ul>
 </li>
   <li>
-<a href="#ergebnisteil" id="toc-ergebnisteil" class="nav-link" data-scroll-target="#ergebnisteil"><span class="header-section-number">8.7</span> Ergebnisteil</a>
+<a href="#methodenteil" id="toc-methodenteil" class="nav-link" data-scroll-target="#methodenteil"><span class="header-section-number">9.6</span> Methodenteil</a>
   <ul class="collapse">
-<li><a href="#deskriptive-statistik" id="toc-deskriptive-statistik" class="nav-link" data-scroll-target="#deskriptive-statistik"><span class="header-section-number">8.7.1</span> Deskriptive Statistik</a></li>
-  <li><a href="#inferenzstatistik" id="toc-inferenzstatistik" class="nav-link" data-scroll-target="#inferenzstatistik"><span class="header-section-number">8.7.2</span> Inferenzstatistik</a></li>
-  <li><a href="#rope-1" id="toc-rope-1" class="nav-link" data-scroll-target="#rope-1"><span class="header-section-number">8.7.3</span> ROPE</a></li>
+<li><a href="#analyse" id="toc-analyse" class="nav-link" data-scroll-target="#analyse"><span class="header-section-number">9.6.1</span> Analyse</a></li>
   </ul>
 </li>
-  <li><a href="#diskussion" id="toc-diskussion" class="nav-link" data-scroll-target="#diskussion"><span class="header-section-number">8.8</span> Diskussion</a></li>
-  <li><a href="#reproduzierbarkeit" id="toc-reproduzierbarkeit" class="nav-link" data-scroll-target="#reproduzierbarkeit"><span class="header-section-number">8.9</span> Reproduzierbarkeit</a></li>
+  <li>
+<a href="#ergebnisteil" id="toc-ergebnisteil" class="nav-link" data-scroll-target="#ergebnisteil"><span class="header-section-number">9.7</span> Ergebnisteil</a>
+  <ul class="collapse">
+<li><a href="#deskriptive-statistik" id="toc-deskriptive-statistik" class="nav-link" data-scroll-target="#deskriptive-statistik"><span class="header-section-number">9.7.1</span> Deskriptive Statistik</a></li>
+  <li><a href="#inferenzstatistik" id="toc-inferenzstatistik" class="nav-link" data-scroll-target="#inferenzstatistik"><span class="header-section-number">9.7.2</span> Inferenzstatistik</a></li>
+  <li><a href="#rope-1" id="toc-rope-1" class="nav-link" data-scroll-target="#rope-1"><span class="header-section-number">9.7.3</span> ROPE</a></li>
+  </ul>
+</li>
+  <li><a href="#diskussion" id="toc-diskussion" class="nav-link" data-scroll-target="#diskussion"><span class="header-section-number">9.8</span> Diskussion</a></li>
+  <li><a href="#reproduzierbarkeit" id="toc-reproduzierbarkeit" class="nav-link" data-scroll-target="#reproduzierbarkeit"><span class="header-section-number">9.9</span> Reproduzierbarkeit</a></li>
   </ul></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <h1 class="title">
-<span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Auswerten: Inferenz</span>
+<span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Auswerten: Inferenz</span>
 </h1>
 </div>
 
@@ -260,38 +266,38 @@ div.csl-indent {
   </div>
   
 
-</header><section id="lernsteuerung" class="level2" data-number="8.1"><h2 data-number="8.1" class="anchored" data-anchor-id="lernsteuerung">
-<span class="header-section-number">8.1</span> Lernsteuerung</h2>
-<section id="lernziele" class="level3" data-number="8.1.1"><h3 data-number="8.1.1" class="anchored" data-anchor-id="lernziele">
-<span class="header-section-number">8.1.1</span> Lernziele</h3>
+</header><section id="lernsteuerung" class="level2" data-number="9.1"><h2 data-number="9.1" class="anchored" data-anchor-id="lernsteuerung">
+<span class="header-section-number">9.1</span> Lernsteuerung</h2>
+<section id="lernziele" class="level3" data-number="9.1.1"><h3 data-number="9.1.1" class="anchored" data-anchor-id="lernziele">
+<span class="header-section-number">9.1.1</span> Lernziele</h3>
 <ul>
 <li>Sie können Ihre Forschungfrage mit Methoden der Inferenzstatistik nach Bayes auswerten.</li>
-</ul></section><section id="position-im-lernpfad" class="level3" data-number="8.1.2"><h3 data-number="8.1.2" class="anchored" data-anchor-id="position-im-lernpfad">
-<span class="header-section-number">8.1.2</span> Position im Lernpfad</h3>
+</ul></section><section id="position-im-lernpfad" class="level3" data-number="9.1.2"><h3 data-number="9.1.2" class="anchored" data-anchor-id="position-im-lernpfad">
+<span class="header-section-number">9.1.2</span> Position im Lernpfad</h3>
 <p>Sie befinden sich im Abschnitt “Auswertung” in <a href="index.html#fig-ueberblick">Abbildung&nbsp;<span>1.2</span></a>.</p>
-</section><section id="tldr" class="level3" data-number="8.1.3"><h3 data-number="8.1.3" class="anchored" data-anchor-id="tldr">
-<span class="header-section-number">8.1.3</span> tl;dr</h3>
+</section><section id="tldr" class="level3" data-number="9.1.3"><h3 data-number="9.1.3" class="anchored" data-anchor-id="tldr">
+<span class="header-section-number">9.1.3</span> tl;dr</h3>
 <p>In diesem Kapitel wird folgende Frage beantwortet: “Wie man die Ergebnisse einer Bayes-Analyse berichtet”</p>
-</section><section id="benötigte-r-pakete" class="level3" data-number="8.1.4"><h3 data-number="8.1.4" class="anchored" data-anchor-id="benötigte-r-pakete">
-<span class="header-section-number">8.1.4</span> Benötigte R-Pakete</h3>
+</section><section id="benötigte-r-pakete" class="level3" data-number="9.1.4"><h3 data-number="9.1.4" class="anchored" data-anchor-id="benötigte-r-pakete">
+<span class="header-section-number">9.1.4</span> Benötigte R-Pakete</h3>
 <div class="cell" data-hash="Bayes_cache/html/unnamed-chunk-1_3bd5a95a9a858cfc46d2207cbd9a84cc">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://easystats.github.io/easystats/">easystats</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://mc-stan.org/rstanarm/">rstanarm</a></span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section></section><section id="warum-das-berichten-wichtig-ist" class="level2" data-number="8.2"><h2 data-number="8.2" class="anchored" data-anchor-id="warum-das-berichten-wichtig-ist">
-<span class="header-section-number">8.2</span> Warum das Berichten wichtig ist</h2>
+</section></section><section id="warum-das-berichten-wichtig-ist" class="level2" data-number="9.2"><h2 data-number="9.2" class="anchored" data-anchor-id="warum-das-berichten-wichtig-ist">
+<span class="header-section-number">9.2</span> Warum das Berichten wichtig ist</h2>
 <p>Statistische Analysen können komplex und schwierig zu verstehen sein. Die Versuchung ist daher immer gegeben, beim Berichten einer Analyse wichtige Aspekte unerwähnt oder unerklärt zu lassen. Lässt man aber wichtige Informationen aus, steigt die Gefahr, dass die Analyse nicht nachvollziehbar ist. Am schönsten ist dieses Problem im <a href="http://www.sciencecartoonsplus.com/pages/gallery.php">Cartoon mit den zwei Wissenschaftlern von einer Tafel (von Sidney Harris)</a> dargestellt.</p>
-</section><section id="prinzipien-der-berichtlegung-von-bayes-statistik" class="level2" data-number="8.3"><h2 data-number="8.3" class="anchored" data-anchor-id="prinzipien-der-berichtlegung-von-bayes-statistik">
-<span class="header-section-number">8.3</span> Prinzipien der Berichtlegung (von Bayes-Statistik)</h2>
+</section><section id="prinzipien-der-berichtlegung-von-bayes-statistik" class="level2" data-number="9.3"><h2 data-number="9.3" class="anchored" data-anchor-id="prinzipien-der-berichtlegung-von-bayes-statistik">
+<span class="header-section-number">9.3</span> Prinzipien der Berichtlegung (von Bayes-Statistik)</h2>
 <p>Im Folgenden sind einige Grundlagen des Berichtens von Statistiken dargestellt. Zwar wird in einigen Teilen auf die Bayes-Methode abgestellt, aber viele Teile gelten für alle statistischen Analysen. Dabei sei hinzugefügt, dass Statistik, so nüchtern sie den geneigten Studenis auch erscheinen mag, durchaus Eitel- und Partikularitäten aufweist: Nicht jeder Autor oder Dozent oder jede Richtlinie gibt die gleichen Anweisungen oder Empfehlungen! Die folgenden Hinweise entsprechen der (aktuellen, sich durchaus im Lauf der Zeit ändernden) Sicht dieses Dozenten.</p>
 <p>Das <em>erste</em> Prinzip des Berichtlegens lautet “so viel wie nötig, aber so wenig wie möglich”. Man will die Lesis nicht überfrachten, aber alle nötigen Informationen übermitteln. Das <em>zweite</em> Prinzip lautet, dass man die Informationen am rechten Ort vermittelt. So wird ei Lesi die Erklärung der Zusammensetzung der Stichprobe nicht im Diskussionsteil vermuten und sich zu Recht wundern, im Methodenteil nichts zur Stichprobe zu finden. Das <em>dritte</em> Prinzip lautet, dass man priorisiert. Wichtiges in den Hauptteil, Details in den Anhang (bzw. in ergänzende Datein, “supplementary files”). Detaillreiche Statistiken berichtet man eher in Tabellen; geht es um einen Überblick, bietet sich häufig ein Diagramm an. Berichtet man im Text, so schreibt man auf “gut Deutsch” die Aussage in den Satz, und die Zahlen eher in Klammern dahinter. Das <em>vierte</em> Prinzip lautet, konsistent zu sein. Es gibt viele Wege nach Rom, bzw. viele Ansätze, nützlich und effektiv - mithin “richtig” - zu berichten. Wichtiger als die Wahl einer bestimmten Art und Weise, ist es, konsistent zu sein, ähnlich wie beim Zitieren. Das <em>fünfte</em> Prinzip, könnte man sagen, ist so selbstverständlich, dass es keiner Erwähnung bedarfe, aber die Realität lehrt uns leider mitunter das Gegenteil. Es lautet Lauterkeit oder Rechtschaffenheit. Kennzahlen bewusst falsch zu berichten rangiert irgendwo zwischen Straftat und beruflichem Fehlverhalten, je nach Kontext und kann harte Bestrafung verdienen. Gängiger sicherlich sind subtilere Arten, dieses Prinzip zu verletzen. Dazu ist als erstes das selektive Berichten zu nennen: Unliebsame Befunde werden verschwiegen, hypothesenkonforme hingegen nach vorne gestellt. Das ist zwar dann nicht gelogen aber die Irreführung wird bewusst in Kauf genommen.</p>
 <p>Die <em>gute</em> Nachricht für alle Studentis: Es gibt für Sie keinen Anreiz, die Ergebnisse “aufzuhübschen” (im Gegensatz zu Berufswissenschaftlis). Ihre Note wird nicht daran gemessen, ob Sie einen neuen <a href="https://de.wikipedia.org/wiki/Exoplanet">Expoplaneten</a> entdecken, oder sonstige “starke” Ergebnisse aufweisen können. Nein! Unklare, nicht-bestätigende oder unerwartete Ergebnisse sind genauso gut - auch wissenschaftlich übrigens haben sie die gleiche Daseinsberechtigung, wie die Ergebnisse, die im “Journal of Flashy Results” für Presseberichte sorgen. Für ihre Note ist es unerheblich, wie “signifikant”, “effektstark”, “präzise” oder “hypothesenkonform” ihre Ergebnisse sind.</p>
 <p>Es ist hilfreich, im Sinne des vierten Prinzips (Konsistenz) sich nach einer bekannten, vielleicht sogar verbreiteten Nomenklatur bzw. Vorgehensweise zu richten. Für Bayes-Analysen gibt es dazu Richtlinien und Checklisten; die folgenden Hinweise orientieren sich an <span class="citation" data-cites="kruschke_bayesian_2021">Kruschke (<a href="references.html#ref-kruschke_bayesian_2021" role="doc-biblioref">2021</a>)</span>, genannt <em>BARG</em> (Bayesian Analysis Reporting Guidelines); der Volltext ist <a href="https://www.nature.com/articles/s41562-021-01177-7">hier</a> zugänglich. Auch die APA (American Psychological Assocation) hat eine <a href="https://data-se.netlify.app/2022/01/27/warum-bayes/">Checkliste herausgegeben</a>, wie Bayes-Statistik berichtet werden sollte.</p>
 <p>Die wichtigsten Ergebnisse der BARG sind <a href="https://www.nature.com/articles/s41562-021-01177-7/tables/1">in dieser Tabelle ausgelegt</a>. Im folgenden wird eine Auswahl der BARG vorgestellt. Das Ziel ist nicht eine umfassende Darstellung mit einer hohen Tiefe der Exposition. Vielmehr soll - angepasst an den Kenntnissstand von Bachelor-Studentis - ein angemessener Überblick ausgewählt werden. Ambitionierte Studentis sind aufgefordert, breite und tiefer als in der folgenden Ausführtung erläutert, zu berichten. Die folgende Ausführung orientiert sich an der Standardgliederung wissenschaftlicher Berichte.</p>
 <p>Lesis seien verwiesen auf das Buch von <span class="citation" data-cites="jhangiani_research_2019">Jhangiani, Chiang, und Cuttler (<a href="references.html#ref-jhangiani_research_2019" role="doc-biblioref">2019</a>)</span>, die einen hervorragenden Überblick über die Materie vermitteln.</p>
-</section><section id="allgemeine-richtlinien-zum-berichten-von-statistik" class="level2" data-number="8.4"><h2 data-number="8.4" class="anchored" data-anchor-id="allgemeine-richtlinien-zum-berichten-von-statistik">
-<span class="header-section-number">8.4</span> Allgemeine Richtlinien zum Berichten von Statistik</h2>
+</section><section id="allgemeine-richtlinien-zum-berichten-von-statistik" class="level2" data-number="9.4"><h2 data-number="9.4" class="anchored" data-anchor-id="allgemeine-richtlinien-zum-berichten-von-statistik">
+<span class="header-section-number">9.4</span> Allgemeine Richtlinien zum Berichten von Statistik</h2>
 <p>Die APA hat eine <a href="https://www.apa.org/pubs/authors/jars.pdf">Checkliste bzw. Richtlinie herausgegeben zum Berichten von Statistik</a> <span class="citation" data-cites="cooper_reporting_2020">(vgl. <a href="references.html#ref-cooper_reporting_2020" role="doc-biblioref">Cooper 2020</a>)</span>. Die lesenswerten Schwesterbüch von <span class="citation" data-cites="peters_planen_2019">Jan Hendrik Peters und Dörfler (<a href="references.html#ref-peters_planen_2019" role="doc-biblioref">2019</a>)</span> bzw. <span class="citation" data-cites="peters_abschlussarbeiten_2015">Jan H. Peters und Dörfler (<a href="references.html#ref-peters_abschlussarbeiten_2015" role="doc-biblioref">2015</a>)</span> geben nicht nur Formulierungshilfen, sondern erläutern, wie man eine sinnvolle Gliederung erstellt und welche Inhalte in welchem Abschnitt gehören.</p>
 <p>Grundlegende Prinzipien des Berichtens von Statistiken sind:</p>
 <ol type="1">
@@ -300,15 +306,15 @@ div.csl-indent {
 <li>Von einfach zu komplex: Es ist verbreitet, zunächst grundlegende Ergebnisse, dann komplexere Modellanalysen zu präsentieren.</li>
 <li>Deskriptiv: Ergebnisse werden berichtet, aber nicht bewertet (das kommt erst im Diskussionsteil).</li>
 <li>Lauter: Alle relevanten Ergebnisse werden offengelegt.</li>
-</ol></section><section id="theorieteil" class="level2" data-number="8.5"><h2 data-number="8.5" class="anchored" data-anchor-id="theorieteil">
-<span class="header-section-number">8.5</span> Theorieteil</h2>
-<section id="testen-oder-schätzen" class="level3" data-number="8.5.1"><h3 data-number="8.5.1" class="anchored" data-anchor-id="testen-oder-schätzen">
-<span class="header-section-number">8.5.1</span> Testen oder Schätzen?</h3>
+</ol></section><section id="theorieteil" class="level2" data-number="9.5"><h2 data-number="9.5" class="anchored" data-anchor-id="theorieteil">
+<span class="header-section-number">9.5</span> Theorieteil</h2>
+<section id="testen-oder-schätzen" class="level3" data-number="9.5.1"><h3 data-number="9.5.1" class="anchored" data-anchor-id="testen-oder-schätzen">
+<span class="header-section-number">9.5.1</span> Testen oder Schätzen?</h3>
 <p>Am Ende des Theorieteils bietet es sich an, die Hypothesen oder die Forschungsfrage zu spezifizieren. Sie können sich für eines von beiden entscheiden oder auch beides angehen.</p>
 <p>In der bisherigen Literatur (in der Psychologie) werden zumeist Hypothesen getestet, nach dem Motto “jo, unsere Vermutung scheint zu stimmen!” oder “nein, das Zeugs taugt nix!”. Das Problem ist, dass solches Denken etwas simpel ist, Schwarz-Weiß eben. Außerdem sind Nullhypothesen streng genommen immer falsch, weswegen es eigentlich keinen Sinn macht, sie zu untersuchen. Aber dafür ist das Schwarz-Weiß-Denken schön einfach.</p>
 <p>Parameterschätzung fragt nicht <em>ob</em>, sondern <em>wieviel</em>. Nicht viel komplizierter, aber viel nuancierter. Eigentlich besser. Außerdem enthält das Parameterschätzen auch das Hypothesentesten: Ist die Null im Schätz-Intervall nicht enthalten, so kann man die Null-Hypothese ausschließen.</p>
-</section><section id="modell-definieren" class="level3" data-number="8.5.2"><h3 data-number="8.5.2" class="anchored" data-anchor-id="modell-definieren">
-<span class="header-section-number">8.5.2</span> Modell definieren</h3>
+</section><section id="modell-definieren" class="level3" data-number="9.5.2"><h3 data-number="9.5.2" class="anchored" data-anchor-id="modell-definieren">
+<span class="header-section-number">9.5.2</span> Modell definieren</h3>
 <p>Es bietet sich auch an, ein Modell mit einem Pfaddiagramm bzw. DAG zu visualisieren, z.B. so:</p>
 <div class="cell" data-fig.asp="0.5" data-hash="Bayes_cache/html/unnamed-chunk-2_aa49d045387f63eb9298ee5cb3970c3b">
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://www.dagitty.net">dagitty</a></span><span class="op">)</span></span>
@@ -351,12 +357,12 @@ div.csl-indent {
 <p>Mit <code>prior_summary(mein_model)</code> bekommt man einen Überblick über die Prioriwerte, die im Modell <code>mein_modell</code> verwendet wurden.</p>
 <p>Es macht Sinn, zu begründen, warum sie das Modell so gewählt haben, wie sie es gewählt haben. Wenn Sie eine Normalverteilung für die Priori-Verteilungen wählen, haben Sie Argumentationslinien: epistemologisch und ontologisch. Epistemologisch können Sie argumentieren, dass die Normalverteilung die Entropie maximiert, also die Verteilung mit den wenigsten Vorannahmen ist, wenn man davon ausgeht, dass die gesuchte Verteilung über eine endliche Varianz und einen endlichen Mittelwert verfügt. Ontologisch können Sie argumentieren, dass z.B. Körpergröße (innerhalb eines Geschlechts zumindest) hinreichend normalverteilt ist.</p>
 <p>Die Begründung für das lineare Modelle erschließt sich aus der Theorie, nämlich dass z.B. die gewählten UV den gesuchten Effekt gut beschreiben.</p>
-<section id="kausal--vs.-korrelationsmodell" class="level4" data-number="8.5.2.1"><h4 data-number="8.5.2.1" class="anchored" data-anchor-id="kausal--vs.-korrelationsmodell">
-<span class="header-section-number">8.5.2.1</span> Kausal- vs.&nbsp;Korrelationsmodell</h4>
+<section id="kausal--vs.-korrelationsmodell" class="level4" data-number="9.5.2.1"><h4 data-number="9.5.2.1" class="anchored" data-anchor-id="kausal--vs.-korrelationsmodell">
+<span class="header-section-number">9.5.2.1</span> Kausal- vs.&nbsp;Korrelationsmodell</h4>
 <p>Sie wollten weiterhin angeben, ob sie ein kausales Modell im Kopf haben oder ein rein korrelatives. Bei einem kausalen Modell sollen dann die Pfeile Wirkungsrichtungen, also Ursache-Wirkungs-Beziehungen angeben. Soll ihr Diagramm lediglich Korrelationen bzw. statistische Abhängigkeiten angeben, so geben Sie dieses an.</p>
 <p>Auch wenn ihre Studie nicht die “Kraft” hat, Kausalbeziehungen (in Gänze) aufzudecken, ist es trotzdem meistens sinnvoll, ein Kausalmodell aufzustellen, da Theorien (und Praxis) meist an Kausalbeziehungen interessiert sind, und an Korrelationsbeziehungen wenig(er).</p>
-</section><section id="hypothesen-testen" class="level4" data-number="8.5.2.2"><h4 data-number="8.5.2.2" class="anchored" data-anchor-id="hypothesen-testen">
-<span class="header-section-number">8.5.2.2</span> Hypothesen testen</h4>
+</section><section id="hypothesen-testen" class="level4" data-number="9.5.2.2"><h4 data-number="9.5.2.2" class="anchored" data-anchor-id="hypothesen-testen">
+<span class="header-section-number">9.5.2.2</span> Hypothesen testen</h4>
 <p>Das Testen der Hypothese ist eine Umsetzung der Idee, eine Behauptung einer empirisch-rationalen Prüfung zu unterziehen.</p>
 <p>Es bietet sich an, eine Hypothese zu wählen, wenn der Stand der Theorie dies erlaubt, idealerweise mehr als nur eine Null-Effekt-Hypothese, etwas <span class="math inline">\(\beta=0\)</span>. Dass nämlich ein Effekt <em>exakt</em> Null ist, erscheint für die meisten Situationen der Sozialwissenschaften reichlich unplausibel.</p>
 <p>Sie sollten die Hypothese zuerst als Aussage formulieren, aber danach möglichst mit mathematischen Symbolen präzisieren (“statistische Hypothesen”).</p>
@@ -372,8 +378,8 @@ div.csl-indent {
 <p>Dabei meint <span class="math inline">\(\beta\)</span> ein Regressiongewicht, <span class="math inline">\(d\)</span> eine Differenz (zweier Gruppen) und <span class="math inline">\(R^2\)</span> die erklärte Varianz eines Modells.</p>
 <p><span class="math inline">\(R^2\)</span> als Kennzahl einer Hypothese ist interessant, weil es Ihnen erlaubt, ein ganzes Modell als Hypothese zu formulieren. Also “Verbundhypothesen” aufzustellen, die mehr als eine oder zwei Variablen umfassen.</p>
 <p>Möchten Sie eine Hypothese zu einem Parameter testen, der einen Nullwert beinhaltet, bietet sich das ROPE-Verfahren an, vgl. <span class="citation" data-cites="kruschke_rejecting_2018">Kruschke (<a href="references.html#ref-kruschke_rejecting_2018" role="doc-biblioref">2018</a>)</span>.</p>
-</section><section id="parameterschätzung" class="level4" data-number="8.5.2.3"><h4 data-number="8.5.2.3" class="anchored" data-anchor-id="parameterschätzung">
-<span class="header-section-number">8.5.2.3</span> Parameterschätzung</h4>
+</section><section id="parameterschätzung" class="level4" data-number="9.5.2.3"><h4 data-number="9.5.2.3" class="anchored" data-anchor-id="parameterschätzung">
+<span class="header-section-number">9.5.2.3</span> Parameterschätzung</h4>
 <p>Bei einer Parameterschätzung formulieren Sie ein Modell, genau wie beim Hypothesen testen, nur eben ohne Hypothesen. Es geht Ihnen dann nicht um die Frage, <em>ob</em> irgend ein Sachverhalt der Fall ist (das ist Hypothesen prüfen). Stattdessen interessieren Sie sich für die Frage, <em>wie sehr</em> etwas der Fall ist:</p>
 <ul>
 <li>“Wie stark ist der Zusammenhang von Lernzeit und Prüfungserfolg?”</li>
@@ -388,12 +394,12 @@ div.csl-indent {
 </ul>
 <p>Geben Sie weiter an, welches Intervall Sie berichten, z.B. “Die Parameterschätzungen werden anhand eines 95%-HDI berichtet”.</p>
 <p>Auch wenn Sie eine Hypothese testen, sollten Sie Bereichsschätzungen für die Parameter vornehmen, also Schätzbereiche aus der Posteriori-Verteilung berichten.</p>
-</section></section></section><section id="methodenteil" class="level2" data-number="8.6"><h2 data-number="8.6" class="anchored" data-anchor-id="methodenteil">
-<span class="header-section-number">8.6</span> Methodenteil</h2>
-<section id="analyse" class="level3" data-number="8.6.1"><h3 data-number="8.6.1" class="anchored" data-anchor-id="analyse">
-<span class="header-section-number">8.6.1</span> Analyse</h3>
-<section id="bayes-erklären" class="level4" data-number="8.6.1.1"><h4 data-number="8.6.1.1" class="anchored" data-anchor-id="bayes-erklären">
-<span class="header-section-number">8.6.1.1</span> Bayes erklären</h4>
+</section></section></section><section id="methodenteil" class="level2" data-number="9.6"><h2 data-number="9.6" class="anchored" data-anchor-id="methodenteil">
+<span class="header-section-number">9.6</span> Methodenteil</h2>
+<section id="analyse" class="level3" data-number="9.6.1"><h3 data-number="9.6.1" class="anchored" data-anchor-id="analyse">
+<span class="header-section-number">9.6.1</span> Analyse</h3>
+<section id="bayes-erklären" class="level4" data-number="9.6.1.1"><h4 data-number="9.6.1.1" class="anchored" data-anchor-id="bayes-erklären">
+<span class="header-section-number">9.6.1.1</span> Bayes erklären</h4>
 <ol type="1">
 <li><p>Erklären Sie, warum Sie eine Bayes-Analyse verwenden und nicht eine frequentistische. Eine ehrliche Antwort wäre zwar, “mein Dozent wollte es so, was bleibt mir groß übrig”, aber es gibt (vermutlich?!) auch fachliche Gründe (z.B.: Eine Priori-Annahme zur Wahrscheinlichkeit eines Parameters wird durch Daten zu einer Wahrscheinlichkeit verschoben). Die sollten sie anführen.</p></li>
 <li><p>Erklären, was eine Bayes-Analyse ist. (Man bekommt Wahrscheinlichkeiten für Hypothesen, was man beim Frequentismus nicht bekommt.)</p></li>
@@ -401,8 +407,8 @@ div.csl-indent {
 </ol>
 <p>Bayes-Statistiken sollten Sie im kurz erläutern, da sie vielen Lesis nicht so gut vertraut sein wird.</p>
 <p>Sie können z.B. bei <span class="citation" data-cites="kruschke_rejecting_2018">Kruschke (<a href="references.html#ref-kruschke_rejecting_2018" role="doc-biblioref">2018</a>)</span>” die Grundlagen des ROPE-Konzepts nachlesen. Vielleicht findet sich ja auch in Ihrem Statistik-Skript etwas Passendes?</p>
-</section><section id="rope" class="level4" data-number="8.6.1.2"><h4 data-number="8.6.1.2" class="anchored" data-anchor-id="rope">
-<span class="header-section-number">8.6.1.2</span> ROPE</h4>
+</section><section id="rope" class="level4" data-number="9.6.1.2"><h4 data-number="9.6.1.2" class="anchored" data-anchor-id="rope">
+<span class="header-section-number">9.6.1.2</span> ROPE</h4>
 <p>Kurz gesagt wird beim ROPE geprüft, welcher Anteil des Posteriori-Intervalls zu einem Bereich “vernachlässigbar kleiner” Parameterwerte bewegt. Die folgende Abbildung illustriert ein Rope für die Forschungsfrage “Wie stark ist der Effekt der Zylinderzahl auf den Spritverbrauch?”; genauer gesagt ist die Posteriori-Verteilung für den (Regressions-)Effekt, <span class="math inline">\(\beta\)</span>, des Parameters <code>cyl</code> gezeigt. Wie man sieht, ist die Posteriori-Verteilung (glockenförmige Verteilung) komplett außerhalb des Bereichs “sehr kleiner” Werte (ROPE; blaues Rechteck rechts). Wir resümieren: “Es ist auszuschließen, dass der Effekt der Variable Zylinder auf den Spritverbrauch praktisch Null (sehr klein) ist”.</p>
 <p>Wenn man die Null bzw. den Nullbereich (ROPE) eines Parameters ausschließt, nennt man das Ergebnis bzw. den Effekt auch “signifikant” (leider ein häufig missbrauchter und missverstandener Begriff). Unser Effekt in diesem Beispiel ist also signifikant (nach dieser Definition). Ist ein Effekt signifikant, so heißt das synonym, dass die Nullhypothese ausgeschlossen ist (falsifiziert), natürlich immer auf Basis des vorliegenden Modells bzw. der vorliegenden Daten.</p>
 <div class="cell" data-hash="Bayes_cache/html/unnamed-chunk-3_5bb6e89ca856d34be54ffc0e6e21f597">
@@ -410,12 +416,12 @@ div.csl-indent {
 <p><img src="Bayes_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section></section></section><section id="ergebnisteil" class="level2" data-number="8.7"><h2 data-number="8.7" class="anchored" data-anchor-id="ergebnisteil">
-<span class="header-section-number">8.7</span> Ergebnisteil</h2>
-<section id="deskriptive-statistik" class="level3" data-number="8.7.1"><h3 data-number="8.7.1" class="anchored" data-anchor-id="deskriptive-statistik">
-<span class="header-section-number">8.7.1</span> Deskriptive Statistik</h3>
-<section id="was-soll-ich-schreiben" class="level4" data-number="8.7.1.1"><h4 data-number="8.7.1.1" class="anchored" data-anchor-id="was-soll-ich-schreiben">
-<span class="header-section-number">8.7.1.1</span> Was soll ich schreiben?</h4>
+</section></section></section><section id="ergebnisteil" class="level2" data-number="9.7"><h2 data-number="9.7" class="anchored" data-anchor-id="ergebnisteil">
+<span class="header-section-number">9.7</span> Ergebnisteil</h2>
+<section id="deskriptive-statistik" class="level3" data-number="9.7.1"><h3 data-number="9.7.1" class="anchored" data-anchor-id="deskriptive-statistik">
+<span class="header-section-number">9.7.1</span> Deskriptive Statistik</h3>
+<section id="was-soll-ich-schreiben" class="level4" data-number="9.7.1.1"><h4 data-number="9.7.1.1" class="anchored" data-anchor-id="was-soll-ich-schreiben">
+<span class="header-section-number">9.7.1.1</span> Was soll ich schreiben?</h4>
 <p>Bevor Sie die Ergebnisse Ihrer Modellierung zeigen, bietet sich etwas “Aufwärmen” an, vor dem Fußballspiel wärmt man sich ja auch erstmal auf. Dazu bieten sich die <em>deskriptiven Statistiken</em> zu Ihren Daten an.</p>
 <p>Häufig wird man ein Maß der zentralen Tendenz (Mittelwert oder Median) sowie ein dazu passendes Streuungsmaß berichten (z.B. SD) berichten. Evtl. kann man ein Maß zur Präzision des Mittelwerts angeben (SE). Bei schiefen Verteilungen greift man meist auf robuste Kennwerte zurück; bei normalverteilten Verteilungen ist Mittelwert und SD die Statistik der Wahl.</p>
 <p><em>Formulierungsvorschlag</em></p>
@@ -424,8 +430,8 @@ div.csl-indent {
 </blockquote>
 <p>Hat man eine größere Zahl an Statistiken, so bietet es sich an, die Ergebnisse nicht im Fließtext, sondern in einer Tabelle zu berichten.</p>
 <p>Eine nützliche Ergänzung ist es, zusätzlich zu den univariaten Statistiken noch Zusammenhangskoeffizienten (Korrelationen) zu berichten.</p>
-</section><section id="umsetzung-mit-r" class="level4" data-number="8.7.1.2"><h4 data-number="8.7.1.2" class="anchored" data-anchor-id="umsetzung-mit-r">
-<span class="header-section-number">8.7.1.2</span> Umsetzung mit R</h4>
+</section><section id="umsetzung-mit-r" class="level4" data-number="9.7.1.2"><h4 data-number="9.7.1.2" class="anchored" data-anchor-id="umsetzung-mit-r">
+<span class="header-section-number">9.7.1.2</span> Umsetzung mit R</h4>
 <p>Mit gängigen R-Methoden kann man sich deskriptive Statistiken ausgeben lassen:</p>
 <div class="cell" data-hash="Bayes_cache/html/unnamed-chunk-4_0c39d5e0d2fcae98132dd786d74b3048">
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">mtcars</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
@@ -1548,15 +1554,15 @@ div.csl-indent {
 </div>
 </div>
 <p>Vergessen Sie nicht, das Tabellen (genau wie Abbildungen) im Text zu referenzieren sind.</p>
-</section></section><section id="inferenzstatistik" class="level3" data-number="8.7.2"><h3 data-number="8.7.2" class="anchored" data-anchor-id="inferenzstatistik">
-<span class="header-section-number">8.7.2</span> Inferenzstatistik</h3>
-<section id="posteriori-verteilung" class="level4" data-number="8.7.2.1"><h4 data-number="8.7.2.1" class="anchored" data-anchor-id="posteriori-verteilung">
-<span class="header-section-number">8.7.2.1</span> Posteriori-Verteilung</h4>
+</section></section><section id="inferenzstatistik" class="level3" data-number="9.7.2"><h3 data-number="9.7.2" class="anchored" data-anchor-id="inferenzstatistik">
+<span class="header-section-number">9.7.2</span> Inferenzstatistik</h3>
+<section id="posteriori-verteilung" class="level4" data-number="9.7.2.1"><h4 data-number="9.7.2.1" class="anchored" data-anchor-id="posteriori-verteilung">
+<span class="header-section-number">9.7.2.1</span> Posteriori-Verteilung</h4>
 <p>Für jede Hypothese müssen Sie die zentralen Ergebnisse berichten. Die Hypothesen beziehen sich auf Populationen, also benötigen wir Inferenzstatistik. In der frequentistischen Statistik finden hier Statistiken wie der p-Wert und das (frequentistische) Konfidenzintervall Verwendung. In einer Bayes-Analyse ist die Posteriori-Verteilung der Dreh- und Angelpunkt der Ergebnisse.</p>
 <p>Die Post-Verteilung gibt an, wie wahrscheinlich ein bestimmter Parameterwert jetzt ist, nachdem die Daten bekannt sind.</p>
 <p>Ein statistisches Modell wird zumeist mit einem Regressionsmodell umgesetzt. Ein Regressionsmodell kann man in R mit <code><a href="https://rdrr.io/r/stats/lm.html">lm()</a></code> (frequentistisch) oder z.B. <code><a href="https://mc-stan.org/rstanarm/reference/stan_glm.html">stan_glm()</a></code> (Bayes) berechnen. Die Syntax ist sehr ähnlich.</p>
-</section><section id="umsetzung-in-r" class="level4" data-number="8.7.2.2"><h4 data-number="8.7.2.2" class="anchored" data-anchor-id="umsetzung-in-r">
-<span class="header-section-number">8.7.2.2</span> Umsetzung in R</h4>
+</section><section id="umsetzung-in-r" class="level4" data-number="9.7.2.2"><h4 data-number="9.7.2.2" class="anchored" data-anchor-id="umsetzung-in-r">
+<span class="header-section-number">9.7.2.2</span> Umsetzung in R</h4>
 <p>Sie können eine Posteriori-Verteilung z.B. für ihr Modell berechnen:</p>
 <div class="cell" data-hash="Bayes_cache/html/unnamed-chunk-9_5aecd540af38c9b00d38d4bee28bc765">
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://mc-stan.org/rstanarm/">rstanarm</a></span><span class="op">)</span></span>
@@ -2139,8 +2145,8 @@ div.csl-indent {
 <p><img src="Bayes_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section></section><section id="rope-1" class="level3" data-number="8.7.3"><h3 data-number="8.7.3" class="anchored" data-anchor-id="rope-1">
-<span class="header-section-number">8.7.3</span> ROPE</h3>
+</section></section><section id="rope-1" class="level3" data-number="9.7.3"><h3 data-number="9.7.3" class="anchored" data-anchor-id="rope-1">
+<span class="header-section-number">9.7.3</span> ROPE</h3>
 <p>Testen Sie eine Hypothese, die einen “praktischen Nullwert” ausschließen möchte, so bietet sich das ROPE-Verfahren an.</p>
 <p>Mit ROPE testet man demnach keine “Exaktnullhypothese”, sondern eine “Praktischnullhypothese”, nämlich dass ein Effekt so klein ist, dass er praktisch keine Bedeutung hat.</p>
 <p>Diesem Konzept liegt die Überlegung zugrunde, dass es in der freien Wildbahn kaum oder keine Effekte gibt, die <em>exakt</em> Null sind, also “0,0000000000000000000000000 …” und so weiter bis alle Unendlichkeit.</p>
@@ -2191,8 +2197,8 @@ div.csl-indent {
 <p>Schneidet ROPE mit dem Berg, dem roten, dann Verwerfen ist verboten!</p>
 </blockquote>
 <p>Mit “Verwerfen” ist das Verwerfen der “Praktischnullhypothese” gemeint.</p>
-<section id="standardisierte-effektstärke" class="level4" data-number="8.7.3.1"><h4 data-number="8.7.3.1" class="anchored" data-anchor-id="standardisierte-effektstärke">
-<span class="header-section-number">8.7.3.1</span> Standardisierte Effektstärke</h4>
+<section id="standardisierte-effektstärke" class="level4" data-number="9.7.3.1"><h4 data-number="9.7.3.1" class="anchored" data-anchor-id="standardisierte-effektstärke">
+<span class="header-section-number">9.7.3.1</span> Standardisierte Effektstärke</h4>
 <p>Vergleicht man Gruppen und ist z.B. die AV wenig anschaulich (etwa ein Summenscore), so bietet es sich, standardisierte Maße des Gruppenunterschieds anzugeben. Man nennt sie auch Maße der Effektstärke.</p>
 <p>Bei Gruppenvergleichen ist <em>Cohens d</em> ein bekanntes Maß. Man kann es sich so ausgeben lassen:</p>
 <div class="cell" data-hash="Bayes_cache/html/unnamed-chunk-20_5f6504938c5896bebb79ca7b4ba3ab78">
@@ -2230,8 +2236,8 @@ div.csl-indent {
 </div>
 </div>
 </div>
-</section><section id="r-paket-report" class="level4" data-number="8.7.3.2"><h4 data-number="8.7.3.2" class="anchored" data-anchor-id="r-paket-report">
-<span class="header-section-number">8.7.3.2</span> R-Paket <code>report</code>
+</section><section id="r-paket-report" class="level4" data-number="9.7.3.2"><h4 data-number="9.7.3.2" class="anchored" data-anchor-id="r-paket-report">
+<span class="header-section-number">9.7.3.2</span> R-Paket <code>report</code>
 </h4>
 <p>Vielleicht ist das R-Paket <code>report</code> für Sie nützlich. Ich bin nicht ganz sicher, denn das Paket ist noch sehr neu und berichtet recht viel Informationen. Aber vielleicht wollen Sie es ja mal ausprobieren.</p>
 <div class="cell" data-hash="Bayes_cache/html/unnamed-chunk-23_4f9d2ba0f1ae6ade118135a5027a2fc1">
@@ -2377,12 +2383,12 @@ div.csl-indent {
 <span><span class="co">## Effective Sample Size (ESS), which should be greater than 1000 (Burkner, 2017).</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p><code>report</code> berichtet Statistiken nach dem sog. SEXIT-Konzept <span class="citation" data-cites="makowski_indices_2019">Makowski u.&nbsp;a. (<a href="references.html#ref-makowski_indices_2019" role="doc-biblioref">2019</a>)</span>. Wenn Ihnen einige Statistiken nicht geläufig sind, ignorieren Sie sich einfach oder lesen Sie sie nach.</p>
-</section></section></section><section id="diskussion" class="level2" data-number="8.8"><h2 data-number="8.8" class="anchored" data-anchor-id="diskussion">
-<span class="header-section-number">8.8</span> Diskussion</h2>
+</section></section></section><section id="diskussion" class="level2" data-number="9.8"><h2 data-number="9.8" class="anchored" data-anchor-id="diskussion">
+<span class="header-section-number">9.8</span> Diskussion</h2>
 <p>Im Diskussionsteil fasst man die zentralen Ergebnisse zusammen und interpretiert sie. Danach schließt sich eine Kritik der Ergebnisse (oder vielmehr des Vorgehens) an.</p>
 <p>Ob man eine Hypothese “annimmt” oder “verwirft”, sollte nicht von einer einzelnen Zahl abhängig sein. Vielmehr ist es keine Schwarz-Weiß-, sondern eine Grauton-Entscheidung mit mehreren Einflussgrößen, wie Präzision der Schätzung, Effektstärke, Stichprobengröße, Güte der Daten, Stärke des Versuchsplans, Generalisierbarkeit, um nur einige wichtige zu nennen.</p>
-</section><section id="reproduzierbarkeit" class="level2" data-number="8.9"><h2 data-number="8.9" class="anchored" data-anchor-id="reproduzierbarkeit">
-<span class="header-section-number">8.9</span> Reproduzierbarkeit</h2>
+</section><section id="reproduzierbarkeit" class="level2" data-number="9.9"><h2 data-number="9.9" class="anchored" data-anchor-id="reproduzierbarkeit">
+<span class="header-section-number">9.9</span> Reproduzierbarkeit</h2>
 <p>Der Geist der Wissenschaft heißt <em>Transparenz.</em> Also machen Sie ihre Arbeit nachprüfbar und legen Sie die zentralen Schritte offen:</p>
 <ul>
 <li>Reichen Sie die Daten ein.</li>
@@ -2652,13 +2658,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="./Messen.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Messen</span></span>
+      <a href="./Erheben.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Erheben</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="./pruefung.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Prüfung</span></span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Prüfung</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

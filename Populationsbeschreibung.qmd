@@ -192,7 +192,7 @@ die Inferenzstatistik schließt von einer Statistik auf die entsprechende Kennza
 
 :::{#exm-desk-inf}
 ### Anteil der heimlichen Statistik-Fans?
-@fig-desk-inf-fans illustriert an einem Beispiel den Unterschied zwischen Deskriptiv- und Inferenzstatsistik.
+@fig-desk-inf illustriert an einem Beispiel den Unterschied zwischen Deskriptiv- und Inferenzstatsistik.
 Deskriptivstatistik errechnet eine Statistik: Den Anteil der heimlichen Statistikfans in der vorliegenden Stichprobe. Es gibt hier keine Ungewissheit: Wir haben alle Studis befragt und ihre Antwort aufgeschrieben.^[Unter der Annahme, die Messung ist fehlerfrei; insbesondere unter der Annahme, alle Studis haben ehrlich geantwortet. Es ist zu hoffen, dass niemand muss seine Liebe geheimhalten muss.]
 Die Inferenzstatistik schließt auf der Basis des Kennwerts und der Stichprobengröße auf die Population: Wie genau gibt die Statistik wohl den Anteil in der Grundgesamtheit wieder?$\square$
 :::
