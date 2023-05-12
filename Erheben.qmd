@@ -256,13 +256,30 @@ Anfangsbuchstabe des Mädchennamen Ihrer Mutter Anfangsbuchstabe des Vornamens I
 
 ## Online-Umfragetools 
 
+
+### Was ist das und wozu ist es gut?
+
+Mit Hilfe eines Online-Umfragetools können Sie Umfragen online durchführen.
+
+Schauen Sie sich mal folgendes Beispiel zum Thema Smartphone-Nutzung und mögliche Smartphone-Sucht [@kwon_smartphone_2013]:
+
+
+<iframe  src="https://docs.google.com/forms/d/e/1FAIpQLSe-eVXB9niWYxUBeW6y9tw9o2EUQjYfs40FPWwoE4CNXiF5Jw/viewform?usp=sf_link" width="780" height="500" frameborder="0" marginheight="0" marginwidth="0" title="Umfrage zur Smartphone-Nuzung"></iframe>
+
+
+
+
 Auch wenn Sie z.B. ein Experiment durchführen, kann es oft nützlich sein, ihre Studie mit Hilfe eine Online-Umfragetools aufzusetzen:
 
 1. Online-Studien sind somit einfach möglich, aber Offline-Studien genauso (sofern Internetanschluss vorhanden)
 2. Umfragetools sind komfortabel
 
 Es gibt eine Vielzahl an Umfragetools, die sich für eine Studie eignen.
-Empfehlenswert ist [SoSci-Survey](https://www.soscisurvey.de/de/index):
+
+### SoSci-Survey
+
+Ein empfehlenswertes Tool für Online-Umfragen ist [SoSci-Survey](https://www.soscisurvey.de/de/index).
+Se hat folgende Vorteile
 
 - Deutsch
 - DSGVO-konform
@@ -270,14 +287,39 @@ Empfehlenswert ist [SoSci-Survey](https://www.soscisurvey.de/de/index):
 - kostenlos (für wissenschaftliche Studien)
 
 
+#### Ein einfacher Fragebogen
+
+
 Ein einfacher Frageobgen [ist in fünf Minuten angelegt](https://www.soscisurvey.de/help/doku.php/de:create:basics).
 Mit SoSci-Survey ist es auch möglich, Randomisierung durchzuführen.
 
 
 
+#### Randomisierung
+
+
+Für ein Experiment, ob online oder offline, benötigen Sie eine Randomisierung.
+Eine Randomisierung können Sie relativ einfach mit SoSci-Survey erstellen.
+
 >    🧑‍🎓 Aber ich könnte doch auch einfach zwei Umfragen anlegen für mein Experiment? 
 
 >    👨‍🏫  Ja, das geht schon auch, aber birgt die Gefahr, dass die Gruppen dann unterschiedlich groß sind. Außerdem müssen Sie dann zwei Umfragen in Schuss halten, nicht nur eine.
+
+
+[Hier](https://www.soscisurvey.de/help/doku.php/de:create:randomization-einfaktoriell) ist eine Anleitung, wie man eine einfache Randomisierung in SoSci-Survey erstellt.
+Und [hier](https://youtu.be/piHPPGxvPOg) finden Sie ein Video-Tutorial dazu.
+
+Möchte man Bilder, Videos oder Audio-Dateien als Stimuli randomisieren, muss man diese Medien erst hochladen und dann einbinden. [In dieser Anleitung]() oder [diesem Video](https://youtu.be/RfdQ2TgxzWc) finden Sie eine Hilfestellung dazu.
+
+Eine ganze Liste an Videos findet sich [auf der SoSci-Seite](https://www.soscisurvey.de/de/privacy) und auf YouTube. Außerdem finden sich dort eine Menge Anleitungen inkl. dem [Benutzerhandbuch (aktuell v3.4.14)](https://www.soscisurvey.de/help/sosci.help.3.4.14.zip).
+
+
+
+
+SoSci-Survey [informiert hier](https://www.soscisurvey.de/de/privacy) über ihre Datenschutz-Maßnahmen.
+
+
+
 
 
 
