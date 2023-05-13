@@ -64,8 +64,8 @@ Operationalisierung ist der Vorgang des genauen Beschreibens, anhand welcher Ope
 
 
 
-Psychologische Variablen (Konstrukte) sind nicht (direkt) messbar,
-mann muss sie operationalisieren, dann kann sie erst messen, s. @fig-operat.
+Psychologische Variablen, auch als *Konstrukte* bezeichnet, sind nicht (direkt) messbar,
+mann muss sie *operationalisieren*, dann kann sie erst messen, s. @fig-operat.
 
 ```{mermaid}
 %%| label: fig-operat
@@ -100,6 +100,29 @@ Hoch extravertierte Menschen sind dominant, gesellig, enthusiastisch und abenteu
 
 
 ![Extraversion im B5T](img/extra.png){#fig-extra}
+
+
+:::{#def-skala}
+### (Psychometrische) Skala
+Eine (psychometrische) Skala ist eine Operationalisierung eines Konstrukts anhand eines psychometrisch geprüften Messmodells.
+Sie besteht aus mehreren zusammengehörigen Items, vgl. @fig-extra.
+Den Antworten der Versuchspersonen auf die Items werden Zahlen zugeordnet und über die Items aufsummiert.
+Häufig werden die Werte einer Skala als intervallskaliert angenommen ([Quelle](https://lehrbuch-psychologie.springer.com/glossar/psychometrische-skala)].
+Im häufigen Fall eines sog. *reflektiven* Messmodells geht man davon aus,
+dass die latente Variable die (einzige) Ursache der Werte (Streuung) in den Items ist.$\square$
+:::
+
+
+
+:::{#exm-messmodell}
+### Deutschsprachige Drive for Muscularity Scale (DMS)
+Die DMS [@waldorf_deutschsprachige_2016] sich als Maß für Muskulösitätsstreben etabliert.
+Das Instrument besteht aus zwei (korrelierten) Skalen: Muskulatur-bezogene Kognition und Muskulatur-bezogenes Verhalten; der Volltext und weitere Informationen findet sich [hier](https://zis.gesis.org/skala/Waldorf-Cordes-Vocks-McCreary-Deutschsprachige-Drive-for-Muscularity-Scale-(DMS)).
+Jedem der beiden Sckalen sind mehrere Items zugeordnet, s. @fig-dms.
+Die Zuordnung der Items zur jeweiligen Skala und ihre psychometrischen (statistischen) Eigenschaften definieren das jeweilige Messmodell.$\square$
+
+
+![Messmodell der Drive for Muscularity Scale (DMS)](img/dms.png){#fig-dms width="50%"}
 
 
 
@@ -223,7 +246,7 @@ Ein (psychologischer) Test besteht aus folgenden Elementen:
 
 
 :::{#exm-item}
-Item 1 aus der Extraversionskala des B5T
+Item 1 aus der Extraversionskala des B5T [@satow_b5t_2020]
 "Ich bin gerne mit anderen Menschen zusammen."$\square$
 :::
 
@@ -249,7 +272,24 @@ Dieses Item hat folgende Itemantwort:
 ### Antwortformate
 
 Eine Skala hat (fast) immer eine homogene Itemantwort, d.h. alle Items einer Skala haben i.d.R. das gleiche Antwortformat.
-Gängige Antwortformate sind:
+
+Es gibt viele verschiedene Antwortformate [vgl. @Buhner2011]; eine gängige Variante sind *Ratingskalen*.
+
+
+:::{#def-ratingskala}
+### Ratingskala und Likertskala
+Eine Rating- oder Beurteilungsskala präsentiert der Versuchsperson  Items mit einem Antwortformat,
+bei dem derjenige Punkte bzw. diejenige Antwortoption gewählt werden soll, die der Beurteilung der Versuchsperson am besten entspricht, vgl. @fig-likert.
+Eine gängige Variante von Ratingskalen sind Likert-Skalen.
+Items von Likert-Skalen sind Aussagen bei denen die Versuchspersonen den Grad Ihr Zustimmung bzw. Ablehnung ausdrücken^[in diskreten Stufen; bei stufenlos wählbaren Stufen spricht man von einer *visuellen Analogskala*. Visuelle Analogskalen sind entweder gleichwertig zu Likert-Skalen oder denen überlegen, wie einige Forschung konstatiert [@grant_comparison_1999]]. Generell gilt, dass höhere Zustimmung zu einem Item der Likert-Skala auf einen höheren Wert im zugrundliegenden Konstrukt geschlossen werden kann.$\square$
+:::
+
+
+![Beispiel für eine Likert-Skala](img/likertscale.png){#fig-likert}
+
+[Quelle: Nicholas Smith, CC BY-SA 3.0](https://en.wikipedia.org/wiki/Likert_scale#/media/File:Example_Likert_Scale.svg)
+
+Gängige Antwortformate in Ratingskalen sind:
 
 
 1. Häufigkeit: z.B. nie -- selten -- gelegentlich -- oft -- immer
@@ -265,12 +305,14 @@ Man kann Antwortformate dahingehend unterscheiden, ob sie uni- oder bipolar aufg
 
 
 
-### Bezugsorte
+
+
+### Bezugsquellen
 
 
 >   🧑‍🎓 Wo finde ich Tests? Welche darf ich wie benutzen?
 
->   👨‍🏫 Hier sind einige Bezugsorte:
+>   👨‍🏫 Vielleicht ist die beste Strategie, die Papers zur eigenen Forschungsfrage zu lesen. Dann orientiert man sich (eng) an dem Vorgehen dieser Autoren. Die nächstbeste Lösung ist, nach Instrumenten zu suchen; hier sind einige Bezugsorte:
 
 - [Gesis-ZIS](https://zis.gesis.org/): Hier finden sich eine Anzahl an wissenschaftlich untersuchten Fragebögen, z. B. der BFI-10, ein Kurz-Fragebogen zu den Big Five mit nur 10 Items
 
@@ -278,14 +320,36 @@ Man kann Antwortformate dahingehend unterscheiden, ob sie uni- oder bipolar aufg
 
 - Die [Hogrefe-Testzentrale](https://www.testzentrale.de/) ist der bekannteste kommerzielle Anbieter für psychologische Tests in Deutschland.
 
-- Viele (deutschsprachige) Tests sind in (deutschsprachigen) Fachzeitschriften (z. B. [Diagnostica](https://www.hogrefe.com/de/zeitschrift/diagnostica/#2+1)) publiziert.
+- Viele (deutschsprachige) Tests sind in (deutschsprachigen) Fachzeitschriften (z. B. [Diagnostica](https://www.hogrefe.com/de/zeitschrift/diagnostica/#2+1)) publiziert. 
 
-- Oft hilft es, die Autoren anzuschreiben.
+- [Psytoolkit](https://www.psytoolkit.org/survey-library/#scales) stellt eine Auswahl an über 100 frei nutzbaren psychologischen Skalen bereit (in englischer Sprache).
+
+
+- [PsychologyTools](https://www.psychologytools.com/download-scales-and-measures/) stellt eine Auswahl an Skalen, in englischer Sprache, bereit.
+
+- @fisher_developing_2016-1 untersuchen Single-Item-Skalen (also einzelne Items) und präsentieren eine Auswahl an geeigneten Items in Tabelle 9. Die Skalen sind zumeist orientiert an Fragen der Gesundheitspsychologie.
+
+- [Arabpsychology](https://scales.arabpsychology.com/) stellt eine breite Auswahl psychologischer Skalen bereit.
+
+- Im [Open Test Archive: Repositorium für Open-Access-Tests](https://www.testarchiv.eu/) findet sich eine Aufstellung von 230 Open-Access-Testverfahern in deutscher Sprache.
+
+- [Creativity and Arts Tasks and Scales: Free for Public Use](https://osf.io/4s9p6/) ist ein Repo bei [OSF](https://osf.io/), das freie psychologische Skalen aus dem Bereich Kreativität bereitstellt.
+
+- [Social-Personality Psychology Questionnaire Instrument Compendium (QIC)](http://www.webpages.ttu.edu/areifman/qic.htm) ist eine Sammlung freier Skalen eines US-Professors.
+
+- Im [Handbook of Management Scales](https://en.wikibooks.org/wiki/Handbook_of_Management_Scales) findet sich eine umfangreiche Sammlung an Skalen aus dem Bereich Management-Forschung.
+
+- Das [Handbook of Marketing Scales: Multi-Item Measures for Marketing and Consumer Behavior Research](https://books.google.de/books/about/Handbook_of_Marketing_Scales.html?id=AFB2AwAAQBAJ&redir_esc=y) [@netemeyer_handbook_2011] stellt eine große Auswahl an Skalen für Marketing-Forschung bereit; ein Teil ist (via Google Books) einsehbar.
 
 - Bei [Researchgate](https://www.researchgate.net/) (Facebook für Wissenschaftler), [OSF](https://osf.io/) und auf anderen Preprint-Servern sind viele (Preprint-) Paper hochgeladen und kostenlos abrufbar (ggf. Email-Adresse von Hochschule nötig).
 
 - [Testkuratorium der Deutschen Gesellschaft für Psychologie](https://www.bdp-verband.de/publikationen/testrezensionen)
 
+- Die [University of Texas at Arlington UTA](https://libraries.uta.edu/tmdb/) stellt eine große Auswahl an Testverfahren bereit.
+
+
+
+- Oft hilft es, die Autoren anzuschreiben.
 
 
 >   🧑‍🎓 Welche Tests darf ich wie benutzen?
@@ -300,7 +364,87 @@ Kommerzielle Tests müssen von Ihnen käuflich erworben werden oder eine schrift
 :::
 
 
-### Beispiele für Tests
+### Fallbeispiel Mensch-Maschine-Interaktion
+
+Die Evaluation technischer Geräte beleuchtet in der psychologischen Forschung häufig Aspekte der Nutzerfreundlichkeit (*Usability*) oder *User Experience*.
+
+#### Usability-Skala
+
+Ein verbreitetes Verfahren, um die Usability von technischen Geräten oder Systemen zu quantifizieren,
+ist die *System Usability Scale* (SUS) [@@bangor_empirical_2008; lewis_system_2018].
+Die SUS ist technologieunabhängig und daher breit einsetzbar.
+
+Eine Version der SUS-Items lauten:
+
+
+1. Ich kann mir sehr gut vorstellen, das System regelmäßig zu nutzen.
+1. Ich empfinde das System als unnötig komplex.*
+1. Ich empfinde das System als einfach zu nutzen.
+1. Ich denke, dass ich technischen Support brauchen würde, um das System zu nutzen.*
+1. Ich finde, dass die verschiedenen Funktionen des Systems gut integriert sind.
+1. Ich finde, dass es im System zu viele Inkonsistenzen gibt.*
+1. Ich kann mir vorstellen, dass die meisten Leute das System schnell zu beherrschen lernen.
+1. Ich empfinde die Bedienung als sehr umständlich.*
+1. Ich habe mich bei der Nutzung des Systems sehr sicher gefühlt.
+1. Ich musste eine Menge Dinge lernen, bevor ich mit dem System arbeiten konnte.*
+
+*: Negativ gepoltes Item.
+
+Ein verwendetes Antwortformat ist eine fünfstufige Likertskala mit den Polen "stimme überhaupt nicht zu" und "stimme voll und ganz zu" [@@lewis_factor_2009].
+Weitere Hinweise zur psychometrischen Qualität, Normierung und Faktorstruktur findet man bei @lewis_factor_2009.
+
+
+
+Um die Items für ein bestimmtes System anzupassen, sind (geringfügige) Änderungen sinnvoll.
+
+
+#### Wissenstest bei Instruktionssystemen
+
+
+Präsentiert man den Versuchspersonen ein System, das Ihnen helfen soll, etwas zu lernen,
+so sind Wissenstest eine einfache und sinnvolle Art, die AV zu operationalisieren.
+
+
+
+
+#### Interaktion mit Robotern
+
+
+Um Messinstrumente für eine eigene Studie zu finden, ist es häufig nützlich,
+ähnliche, bereits veröffentlichte Studien zu begutachten, und die Messverfahren, 
+die sich in diesen Studien bewährt haben, zu verwenden.
+So berichten @song_uncanny_2022 in [Abschnitt 4.5, Messinstrumente](https://www.tandfonline.com/doi/full/10.1080/10447318.2022.2121038?src=) 
+über folgende Instrumente zur Messung der AV:
+
+
+Um die "*Unheimlichkeit*" (eeriness) des Umgangs mit dem Roboter zu messen,
+wurden das entsprechende Semantische Differenzial aus der Studie von @ho_revisiting_2010 übernommen.
+In letzter Studie finden sich weitere Messinstrumente [vgl. Volltext hier](http://macdorman.com/kfm/writings/pubs/Ho2010UncannyValleyIndices.pdf):
+*perceived humanness*, *warmth*, *eeriness* und *attractiveness.*
+
+Zweitens wurde das *Vertrauen* in den Robotern mittels vier Items (Likert-Skala mit  7 Stufen) gemessen.
+Ein Beispiel-Item lautet: "I find the chatbot to be benevolent" mit den Polen 1 = completely disagree  und 7 = completely agree.
+Die Skala stammt wiederum aus der Studie von @natour_adoption_2011 [Volltext hier](https://www.researchgate.net/profile/Sameh-Al-Natour/publication/220580434_The_Adoption_of_Online_Shopping_Assistants_Perceived_Similarity_as_an_Antecedent_to_Evaluative_Beliefs/links/0deec521a214ec8489000000/The-Adoption-of-Online-Shopping-Assistants-Perceived-Similarity-as-an-Antecedent-to-Evaluative-Beliefs.pdf?_sg%5B0%5D=started_experiment_milestone&origin=journalDetail&_rtd=e30%3D).
+Auch in dem Paper finden sich noch einige nützliche weiterführende Hinweise.
+
+Drittens wurde die Bereitschaft, den Roboter weiter zu verwenden mit einem Single-Item-Ansatz gemessen:
+"I would be willing to use the virtual assistant again" (7 Stufen von "stimme überhaupt nicht zu" bis "stimme voll und ganz zu", auf Englisch).
+
+Die Autoren berichten, dass sie die Instrumente vorab auf psychometrische Qualität hin untersucht haben und bereichten akzektable Ergebnisse.
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Beispiele für Persönlichkeitstests
 
 
 ```{r}
@@ -349,6 +493,24 @@ Insgesamt ist die Erstellung eines Fragebogens für ein psychologisches Konstruk
 
 Nicht-psychologische Variablen bzw. beobachtbare Dinge sind viel einfacher zu verwenden; hier sind selbst gestrickte Verfahren id.R. kein Problem (z. B. „Welche Automarke fahren Sie?“, „Wie viele Facebook-Freunde haben Sie?“, „Wie viele Kinder haben Sie?“)
 
+
+#### Neue Messung selber entwickeln
+
+Hier sind Beispiele für Variablen, die *einfach zu messen* sind, und daher für die Messung keiner besonderen Entwicklung oder Überprüfung bedürfen: Manifeste Variablen wie Körpergröße, Gewicht, Alter, Geschlecht, Herkunftsland.
+
+
+
+
+#### Bestehende Messung übernehmen
+
+*Latente* Variablen, die also nicht direkt beobachtbar sind, sind schwer zu messen. Psychologische Variablen gehören in der Regel dazu. Daher sollten Sie solche Variablen nicht mit eigenen, selbst entwickelten Instrumenten erheben. Das Problem ist, dass es unklar ist, ob Ihr "Messgerät" funktioniert.
+Viel besser ist in diesem Fall, auf bestehende Messgeräte zurückzugreifen.
+
+Beispiele für Variablen, die Sie lieber mit existierenden Messinstrumenten messen:
+
+- Persönlichkeitsvariablen
+
+
 ## Messgüte {#sec-messguete}
 
 Die Güte einer Messung wird in der Psychologie zumeist anhand dreier Kennzahlen festgemacht:
@@ -365,7 +527,20 @@ Die Reliabilität von psychologischen (quantitativen) Skalen wird häufig über 
 Es gibt mehrere Formeln zur Schätzung von Konsistenzkoeffizienten Hier sollen nur die am häufigsten verwendete dargestellt werden: Cronbachs Alpha Höhe des Koeffizienten hängt vom Verhältnis der Summe der einzelnen Itemvarianzen ($\sigma_i^2$) zur Gesamtvarianz ($\sigma^2$) des Tests ab.
 Zwei denkbare Extrem-Szenarien sind︎
 - Itemvarianzen hoch und Itemkovarianzen gering: Cronbach-alpha-Koeffizient *niedrig* ︎
--  Itemvarianzen niedrig und die Itemkovarianzen hoch: Cronbach-alpha-Koeffizient *hoch*.
+- Itemvarianzen niedrig und die Itemkovarianzen hoch: Cronbach-alpha-Koeffizient *hoch*.
+
+
+
+:::{#def-cronbachsalpha}
+### Cronbachs Alpha
+Cronbachs Alpha ist ein gebräuchliches Maß der Reliabilität einer Skala,
+genauer der internen Konsistenz [@Buhner2011].
+Der Kennwert hat einen Wertebereich von 0 bis 1, wobei höhere Werte eine hörere Reliabilität anzeigen.
+Einfach ausgedrückt kann man den Kennwert als ein Maß der mittleren Korrelation der Items untereinander verstehen.
+Werte ab .7 werden mitunter als akzeptabel und ab .8 als gut eingeschätzt.$\square$
+:::
+
+
 
 
 
@@ -640,9 +815,8 @@ robservable(
 ## Weiterführende Literatur
 
 
-Ein Klassiker mit einem breitem Blick auf psychologische Forschung ist @Bortz2006.
-Einen zugänglichen Einstieg (allerdings auf englischer Sprache), der kostenlos und frei verfügbar ist, bieten @jhangiani_research_2019.
-Recht nützlich ist auch der Überblick von @peters_planen_2019.
+moosbrugger_testtheorie_2012 bieten einen für Einsteiger geeigneten, dennoch breiten Überblick in die Testtheorie und Fragebogenkonstruktion; ähnliches gilt für Amelang2012.
+
 
 
 

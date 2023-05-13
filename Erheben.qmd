@@ -337,4 +337,10 @@ Es gibt einige Checklisten zur Überprüfung der Qualität einer Studie:
 
 
 
+## Weiterführende Literatur
+
+Praktische Hinweise zur Durchführung einer Fragebogen basierten Erhebung finden sich z.B. bei @porst_fragebogen_2014.
+
+
+
 
