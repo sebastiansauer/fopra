@@ -103,7 +103,7 @@ Hoch extravertierte Menschen sind dominant, gesellig, enthusiastisch und abenteu
 
 
 :::{#def-skala}
-### (Psychometrische) Skala
+### Psychometrische Skala
 Eine (psychometrische) Skala ist eine Operationalisierung eines Konstrukts anhand eines psychometrisch geprüften Messmodells.
 Sie besteht aus mehreren zusammengehörigen Items, vgl. @fig-extra.
 Den Antworten der Versuchspersonen auf die Items werden Zahlen zugeordnet und über die Items aufsummiert.
@@ -120,6 +120,7 @@ Die DMS [@waldorf_deutschsprachige_2016] sich als Maß für Muskulösitätsstreb
 Das Instrument besteht aus zwei (korrelierten) Skalen: Muskulatur-bezogene Kognition und Muskulatur-bezogenes Verhalten; der Volltext und weitere Informationen findet sich [hier](https://zis.gesis.org/skala/Waldorf-Cordes-Vocks-McCreary-Deutschsprachige-Drive-for-Muscularity-Scale-(DMS)).
 Jedem der beiden Sckalen sind mehrere Items zugeordnet, s. @fig-dms.
 Die Zuordnung der Items zur jeweiligen Skala und ihre psychometrischen (statistischen) Eigenschaften definieren das jeweilige Messmodell.$\square$
+:::
 
 
 ![Messmodell der Drive for Muscularity Scale (DMS)](img/dms.png){#fig-dms width="50%"}
@@ -271,7 +272,7 @@ Dieses Item hat folgende Itemantwort:
 
 ### Antwortformate
 
-Eine Skala hat (fast) immer eine homogene Itemantwort, d.h. alle Items einer Skala haben i.d.R. das gleiche Antwortformat.
+Eine Skala hat (fast) immer ein homogenes Itemantformat, d.h. alle Items einer Skala haben i.d.R. das gleiche Antwortformat.
 
 Es gibt viele verschiedene Antwortformate [vgl. @Buhner2011]; eine gängige Variante sind *Ratingskalen*.
 
@@ -390,7 +391,7 @@ Eine Version der SUS-Items lauten:
 
 *: Negativ gepoltes Item.
 
-Ein verwendetes Antwortformat ist eine fünfstufige Likertskala mit den Polen "stimme überhaupt nicht zu" und "stimme voll und ganz zu" [@@lewis_factor_2009].
+Ein verwendetes Antwortformat ist eine fünfstufige Likertskala mit den Polen "stimme überhaupt nicht zu" und "stimme voll und ganz zu" [@lewis_factor_2009].
 Weitere Hinweise zur psychometrischen Qualität, Normierung und Faktorstruktur findet man bei @lewis_factor_2009.
 
 
@@ -424,10 +425,10 @@ In letzter Studie finden sich weitere Messinstrumente [vgl. Volltext hier](http:
 
 Zweitens wurde das *Vertrauen* in den Robotern mittels vier Items (Likert-Skala mit  7 Stufen) gemessen.
 Ein Beispiel-Item lautet: "I find the chatbot to be benevolent" mit den Polen 1 = completely disagree  und 7 = completely agree.
-Die Skala stammt wiederum aus der Studie von @natour_adoption_2011 [Volltext hier](https://www.researchgate.net/profile/Sameh-Al-Natour/publication/220580434_The_Adoption_of_Online_Shopping_Assistants_Perceived_Similarity_as_an_Antecedent_to_Evaluative_Beliefs/links/0deec521a214ec8489000000/The-Adoption-of-Online-Shopping-Assistants-Perceived-Similarity-as-an-Antecedent-to-Evaluative-Beliefs.pdf?_sg%5B0%5D=started_experiment_milestone&origin=journalDetail&_rtd=e30%3D).
+Die Skala stammt wiederum aus der Studie von @al-natour_adoption_2011 [Volltext hier](https://www.researchgate.net/profile/Sameh-Al-Natour/publication/220580434_The_Adoption_of_Online_Shopping_Assistants_Perceived_Similarity_as_an_Antecedent_to_Evaluative_Beliefs/links/0deec521a214ec8489000000/The-Adoption-of-Online-Shopping-Assistants-Perceived-Similarity-as-an-Antecedent-to-Evaluative-Beliefs.pdf?_sg%5B0%5D=started_experiment_milestone&origin=journalDetail&_rtd=e30%3D).
 Auch in dem Paper finden sich noch einige nützliche weiterführende Hinweise.
 
-Drittens wurde die Bereitschaft, den Roboter weiter zu verwenden mit einem Single-Item-Ansatz gemessen:
+Drittens wurde die *Bereitschaft, den Roboter weiter zu verwenden* mit einem Single-Item-Ansatz gemessen:
 "I would be willing to use the virtual assistant again" (7 Stufen von "stimme überhaupt nicht zu" bis "stimme voll und ganz zu", auf Englisch).
 
 Die Autoren berichten, dass sie die Instrumente vorab auf psychometrische Qualität hin untersucht haben und bereichten akzektable Ergebnisse.
