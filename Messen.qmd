@@ -313,11 +313,14 @@ Man kann Antwortformate dahingehend unterscheiden, ob sie uni- oder bipolar aufg
 
 >   🧑‍🎓 Wo finde ich Tests? Welche darf ich wie benutzen?
 
->   👨‍🏫 Vielleicht ist die beste Strategie, die Papers zur eigenen Forschungsfrage zu lesen. Dann orientiert man sich (eng) an dem Vorgehen dieser Autoren. Die nächstbeste Lösung ist, nach Instrumenten zu suchen; hier sind einige Bezugsorte:
+>   👨‍🏫 Vielleicht ist die beste Strategie, die Papers zur eigenen Forschungsfrage zu lesen. Dann orientiert man sich (eng) an dem Vorgehen dieser Autoren. Die nächstbeste Lösung ist, nach Instrumenten zu suchen; hier sind einige Bezugsorte.
+
+
+#### Reichhaltige Fundorte
 
 - [Gesis-ZIS](https://zis.gesis.org/): Hier finden sich eine Anzahl an wissenschaftlich untersuchten Fragebögen, z. B. der BFI-10, ein Kurz-Fragebogen zu den Big Five mit nur 10 Items
 
-- Der [Psyndex](https://www.psyndex.de/) ist ein Verzeichnis der auf Deutsch publizierten Tests (ca. 7000), davon auch einige zum freien [Download](https://www.testarchiv.eu/).
+- Der [Psyndex](https://www.psyndex.de/) ist ein Verzeichnis der auf Deutsch publizierten Tests (ca. 7000), davon sind einige zum freien [Download](https://www.testarchiv.eu/) bei Psyndex enthalten. Andere müssen - genaue wie alle übrige Fachliteratur - über einschlägige Quellen bezogen werden.
 
 - Die [Hogrefe-Testzentrale](https://www.testzentrale.de/) ist der bekannteste kommerzielle Anbieter für psychologische Tests in Deutschland.
 
@@ -348,28 +351,65 @@ Man kann Antwortformate dahingehend unterscheiden, ob sie uni- oder bipolar aufg
 
 - Die [University of Texas at Arlington UTA](https://libraries.uta.edu/tmdb/) stellt eine große Auswahl an Testverfahren bereit.
 
-
-
 - Oft hilft es, die Autoren anzuschreiben.
 
 
->   🧑‍🎓 Welche Tests darf ich wie benutzen?
+Wer in den für die Forschungsfrage einschlägigen Papers stöbert, findet über kurz (oder lang) Ansatzpunkte bzw. Messinstrumente, die sich in anderen Studien bewährt haben.
+So ist ein Beispiel für Messinstrumente um emotionale Reaktionen von Versuchspersonen auf Werbung in @escalas_sympathy_2003 zu finden.
+
+
+
+#### Fallbeispiel Psyndex
+
+>   PSYNDEX - die Datenbank des ZPID für Publikationsnachweise (...) inklusive redaktionell beschriebener Testinstrumente und Interventionsprogramme.^[https://psyndex.de/, 2023-05-14]
+
+
+So lieferte ein Suche bei Psyndex mit dem Suchterm *Usability* zu 683 Treffern.[Datum: 2023-05-14]
+
+Die ersten fünf Treffer waren folgende Fachbeiträgen:
+
+1. [The influence of design aesthetics in usability testing: Effects on user performance and perceived usability](https://www.sciencedirect.com/science/article/abs/pii/S0003687009001148?via%3Dihub)^[Der Einfluss von ästhetischem Design beim Usability-Testing: Auswirkungen auf Benutzerverhalten und wahrgenommene Usability]
+2. [Perceived software usability and usability-related stress in German craft enterprises](https://doi.org/10.3233/WOR-211257)^[Wahrgenommene Software-Usability und Usability-bezogener Stress in deutschen Handwerksbetrieben]
+3. [Qualitätssicherung im Usability-Testing - zur Reliabilität eines Klassifikationssystems für Nutzungsprobleme](https://dl.gi.de/handle/20.500.12116/6847)
+4. Usability von Online-Trainings
+5. [Usability in online shops: scale construction, validation and the influence on the buyers' intention and decision](https://www.tandfonline.com/doi/abs/10.1080/0144929031000107072)^[Usability beim Internet-Shopping: Skalenkonstruktion, Validierung und der Einfluss von Kaufabsicht und Entscheidung]
+
+
+Insgesamt lieferte diese kurze Recherche bereits einen vielversprechenden Einstieg in deutschsprachige Instrumente zur Messung von Usability.
+
+
+
 
 ### Rechte und Pflichten
 
 
-
+>   🧑‍🎓 Welche Tests darf ich wie benutzen?
 
 :::{.callout-important}
 Kommerzielle Tests müssen von Ihnen käuflich erworben werden oder eine schriftliche Nutzungsgenehmigung durch den Verlag vorliegen, sonst ist die Nutzung nicht erlaubt. Andere, nicht-kommerzielle Tests (z. B. von Gesis) dürfen Sie ohne Rückfrage und ohne Gebühr verwenden. Die Zitationspflicht bleibt davon unberührt.$\square
 :::
 
 
-### Fallbeispiel Mensch-Maschine-Interaktion
+### Beispiele für Messinstrumente
+
+Wer in den für die Forschungsfrage einschlägigen Papers stöbert, findet über kurz (oder lang) Ansatzpunkte bzw. Messinstrumente, die sich in anderen Studien bewährt haben.
+
+#### Konsumentenforschung
+
+
+So ist ein Beispiel für Messinstrumente um emotionale Reaktionen von Versuchspersonen auf Werbung in @escalas_sympathy_2003 zu finden.
+Skalen für Kundenzufriedenheit und Kaufabsicht finden sich etwa bei @maxham_longitudinal_2002 oder bei @grewal_effects_1998.
+@graf_measuring_2018 messen *cognitive fluency*, das sie als ein "subjective feeling of easy or difficulty associated with any type of mental processing" definieren (S. 394).
+So könnte etwa die "kognitive Leichtigkeit" mit der ein (Werbe-)Diagramm mental verarbeitet wird,
+mit der Subskala *Perceptual Fluency* messen, die als semantisches Differenzial mit 5 Items aufebaut ist (vgl. S. 400).
+
+
+
+
+#### Usability
 
 Die Evaluation technischer Geräte beleuchtet in der psychologischen Forschung häufig Aspekte der Nutzerfreundlichkeit (*Usability*) oder *User Experience*.
 
-#### Usability-Skala
 
 Ein verbreitetes Verfahren, um die Usability von technischen Geräten oder Systemen zu quantifizieren,
 ist die *System Usability Scale* (SUS) [@@bangor_empirical_2008; lewis_system_2018].
@@ -397,6 +437,12 @@ Weitere Hinweise zur psychometrischen Qualität, Normierung und Faktorstruktur f
 
 
 Um die Items für ein bestimmtes System anzupassen, sind (geringfügige) Änderungen sinnvoll.
+
+
+@ferreira-barbosa_mediating_2023-1 präsentieren mehrere Skalen zur Messung der Usability und Nutzungsbereitschaft einer App, neben anderen Skalen wie Kundenzufriedenheit und Skalen des "e-Lifestyle".
+
+
+
 
 
 #### Wissenstest bei Instruktionssystemen
@@ -504,12 +550,27 @@ Hier sind Beispiele für Variablen, die *einfach zu messen* sind, und daher für
 
 #### Bestehende Messung übernehmen
 
-*Latente* Variablen, die also nicht direkt beobachtbar sind, sind schwer zu messen. Psychologische Variablen gehören in der Regel dazu. Daher sollten Sie solche Variablen nicht mit eigenen, selbst entwickelten Instrumenten erheben. Das Problem ist, dass es unklar ist, ob Ihr "Messgerät" funktioniert.
+*Latente* Variablen, die also nicht direkt beobachtbar sind, sind schwer zu messen. 
+Psychologische Variablen gehören in der Regel dazu. 
+Daher sollten Sie solche Variablen nicht mit eigenen, selbst entwickelten Instrumenten erheben. 
+Das Problem ist, dass es unklar ist, ob Ihr "Messgerät" funktioniert.
 Viel besser ist in diesem Fall, auf bestehende Messgeräte zurückzugreifen.
+Persönlichkeitsvariablen sind typische Beispiele für Variablen, die Sie lieber mit existierenden Messinstrumenten messen.
 
-Beispiele für Variablen, die Sie lieber mit existierenden Messinstrumenten messen:
 
-- Persönlichkeitsvariablen
+
+
+
+
+
+### ... or translate?
+
+Ein Mittelweg zwischen "Make" (Selber ein neues Instrument entwickeln) und "Buy" (ein existierendes Instrument verwenden) ist "Translate", 
+also ein Instrument in eine andere Sprache zu übersetzen bzw. für diese neue Sprache anzupassen.
+Bei @gudmundsson_guidelines_2009-1 finden sich Hinweise, 
+zum Übersetzen mit hohen Qualitätsstandards eines Instruments in eine andere Sprache übersetzt.
+
+
 
 
 ## Messgüte {#sec-messguete}
@@ -635,10 +696,11 @@ Beispiele für Stimuli sind Bilder, Töne oder Instruktionen.
 
 ### Bilder und Töne
 
-Eine in der experimentellen Psychologie häufig eingesetzte Sammlung an Bildern ist der *International affective picture system (IAPS)*  [@Lang1997].
+Eine in der experimentellen Psychologie häufig eingesetzte Sammlung an Bildern ist der *International affective picture system (IAPS)*  [@Lang1997] oder, neuer, die *Open Affective Standardized Image Set (OASIS)*  [@kurdi_introducing_2017].
 [Hier](https://psychology.stackexchange.com/questions/7736/is-there-any-good-alternative-to-the-international-affective-picture-system-iap) werden Alternativen zum IAPS vorgestellt.
 
-Für Töne gibt es ähnliche Sammlungen [@redondo_affective_2008, @yang_affective_2018].
+Für Töne gibt es ähnliche Sammlungen [@redondo_affective_2008, @yang_affective_2018];
+eine breite Sammlung an Audio-Daten nützlich für psychologische Studien, u.a. mit emotionalem Gehalt, findet sich z.B. [hier](https://towardsdatascience.com/40-open-source-audio-datasets-for-ml-59dc39d48f06).
 
 
 ### Animationen
