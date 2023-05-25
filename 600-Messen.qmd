@@ -390,166 +390,6 @@ Kommerzielle Tests müssen von Ihnen käuflich erworben werden oder eine schrift
 :::
 
 
-### Beispiele für Messinstrumente
-
-Wer in den für die Forschungsfrage einschlägigen Papers stöbert, findet über kurz (oder lang) Ansatzpunkte bzw. Messinstrumente, die sich in anderen Studien bewährt haben.
-
-#### Konsumentenforschung
-
-
-So ist ein Beispiel für Messinstrumente um emotionale Reaktionen von Versuchspersonen auf Werbung in @escalas_sympathy_2003 zu finden.
-Skalen für Kundenzufriedenheit und Kaufabsicht finden sich etwa bei @maxham_longitudinal_2002 oder bei @grewal_effects_1998.
-@graf_measuring_2018 messen *cognitive fluency*, das sie als ein "subjective feeling of easy or difficulty associated with any type of mental processing" definieren (S. 394).
-So könnte etwa die "kognitive Leichtigkeit" mit der ein (Werbe-)Diagramm mental verarbeitet wird,
-mit der Subskala *Perceptual Fluency* messen, die als semantisches Differenzial mit 5 Items aufebaut ist (vgl. S. 400).
-
-
-
-
-#### Usability
-
-Die Evaluation technischer Geräte beleuchtet in der psychologischen Forschung häufig Aspekte der Nutzerfreundlichkeit (*Usability*) oder *User Experience*.
-
-
-Ein verbreitetes Verfahren, um die Usability von technischen Geräten oder Systemen zu quantifizieren,
-ist die *System Usability Scale* (SUS) [@@bangor_empirical_2008; lewis_system_2018].
-Die SUS ist technologieunabhängig und daher breit einsetzbar.
-
-Eine Version der SUS-Items lauten:
-
-
-1. Ich kann mir sehr gut vorstellen, das System regelmäßig zu nutzen.
-1. Ich empfinde das System als unnötig komplex.*
-1. Ich empfinde das System als einfach zu nutzen.
-1. Ich denke, dass ich technischen Support brauchen würde, um das System zu nutzen.*
-1. Ich finde, dass die verschiedenen Funktionen des Systems gut integriert sind.
-1. Ich finde, dass es im System zu viele Inkonsistenzen gibt.*
-1. Ich kann mir vorstellen, dass die meisten Leute das System schnell zu beherrschen lernen.
-1. Ich empfinde die Bedienung als sehr umständlich.*
-1. Ich habe mich bei der Nutzung des Systems sehr sicher gefühlt.
-1. Ich musste eine Menge Dinge lernen, bevor ich mit dem System arbeiten konnte.*
-
-*: Negativ gepoltes Item.
-
-Ein verwendetes Antwortformat ist eine fünfstufige Likertskala mit den Polen "stimme überhaupt nicht zu" und "stimme voll und ganz zu" [@lewis_factor_2009].
-Weitere Hinweise zur psychometrischen Qualität, Normierung und Faktorstruktur findet man bei @lewis_factor_2009.
-
-
-
-Um die Items für ein bestimmtes System anzupassen, sind (geringfügige) Änderungen sinnvoll.
-
-
-@ferreira-barbosa_mediating_2023 präsentieren mehrere Skalen zur Messung der Usability und Nutzungsbereitschaft einer App, neben anderen Skalen wie Kundenzufriedenheit und Skalen des "e-Lifestyle".
-
-
-
-
-
-#### Wissenstest bei Instruktionssystemen
-
-
-Präsentiert man den Versuchspersonen ein System, das Ihnen helfen soll, etwas zu lernen,
-so sind Wissenstest eine einfache und sinnvolle Art, die AV zu operationalisieren.
-
-
-
-
-#### Interaktion mit Robotern
-
-
-Um Messinstrumente für eine eigene Studie zu finden, ist es häufig nützlich,
-ähnliche, bereits veröffentlichte Studien zu begutachten, und die Messverfahren, 
-die sich in diesen Studien bewährt haben, zu verwenden.
-So berichten @song_uncanny_2022 in [Abschnitt 4.5, Messinstrumente](https://www.tandfonline.com/doi/full/10.1080/10447318.2022.2121038?src=) 
-über folgende Instrumente zur Messung der AV:
-
-
-Um die "*Unheimlichkeit*" (eeriness) des Umgangs mit dem Roboter zu messen,
-wurden das entsprechende Semantische Differenzial aus der Studie von @ho_revisiting_2010 übernommen.
-In letzter Studie finden sich weitere Messinstrumente [vgl. Volltext hier](http://macdorman.com/kfm/writings/pubs/Ho2010UncannyValleyIndices.pdf):
-*perceived humanness*, *warmth*, *eeriness* und *attractiveness.*
-
-Zweitens wurde das *Vertrauen* in den Robotern mittels vier Items (Likert-Skala mit  7 Stufen) gemessen.
-Ein Beispiel-Item lautet: "I find the chatbot to be benevolent" mit den Polen 1 = completely disagree  und 7 = completely agree.
-Die Skala stammt wiederum aus der Studie von @al-natour_adoption_2011 [Volltext hier](https://www.researchgate.net/profile/Sameh-Al-Natour/publication/220580434_The_Adoption_of_Online_Shopping_Assistants_Perceived_Similarity_as_an_Antecedent_to_Evaluative_Beliefs/links/0deec521a214ec8489000000/The-Adoption-of-Online-Shopping-Assistants-Perceived-Similarity-as-an-Antecedent-to-Evaluative-Beliefs.pdf?_sg%5B0%5D=started_experiment_milestone&origin=journalDetail&_rtd=e30%3D).
-Auch in dem Paper finden sich noch einige nützliche weiterführende Hinweise.
-
-Drittens wurde die *Bereitschaft, den Roboter weiter zu verwenden* mit einem Single-Item-Ansatz gemessen:
-"I would be willing to use the virtual assistant again" (7 Stufen von "stimme überhaupt nicht zu" bis "stimme voll und ganz zu", auf Englisch).
-
-Die Autoren berichten, dass sie die Instrumente vorab auf psychometrische Qualität hin untersucht haben und bereichten akzektable Ergebnisse.
-
-
-
-
-#### Einstellung gegenüber KI
-
-@sindermann_assessing_2021 präsentieren ein Messinstrument (auf Deutsch, Englisch und Chinesisch), um die Einstellung gegenüber künstlicher Intelligenz zu messen.
-Die Autoren resümeren, dass es sich um ein ökonomisches, reliables und valides Instrument handle.
-
-Die Items sind in [Tabelle 1 des Papers](https://link.springer.com/article/10.1007/s13218-020-00689-0/tables/1) dargestelt:
-
-01. Ich habe Angst vor künstlicher Intelligenz.
-02. Ich vertraue künstlicher Intelligenz.
-03. Künstliche Intelligenz wird die Menschheit zerstören.
-04. Künstliche Intelligenz wird eine Bereicherung für die Menschheit sein.
-05. Künstliche Intelligenz wird für viel Arbeitslosigkeit sorgen.
-
-
-@schepman_general_2022 stellen die Skala "The General Attitudes towards Artificial Intelligence Scale (GAAIS)" vor.^[Die Skala ist der erste Treffer, wenn man bei [Psyndex](https://psyndex.de/) "attitude towards artificial intelligence" eingibt (2023-05-25)]
-Insgesamt sehen die Autoren in ihrem Instrument einen nützlichen Ansatz, um Einstellung gegenüber künstlicher Intelligenz zu messen.
-Das Instrument teilt sich in zwei Subskalen auf; eine misst positiv konnotierte Einstellung, eine negativ konnotierte.
-Die Items sind in [Tabelle 1 des Papers](https://www.tandfonline.com/doi/full/10.1080/10447318.2022.2085400) dargestellt.
-
-
-Sucht man bei [elicit](elicit.org) nach Artikeln mit dem Prompt *how to measure to attitude of people towards artificial intelligence?* so findet man eine [nützliche Auswahl an Papers](https://elicit.org/search?q=how+to+measure+to+attitude+of+people+towards+artificial+intelligence%3F&token=01H1AD687NN72CS75C1QHMWBZW).
-
-@suh_development_2022 listen etwa eine Reihe von Instrumten auf ([Tabelle 1](https://journals.sagepub.com/doi/10.1177/21582440221100463)), die die Einstellung gegenüber KI messen.
-Im Anhang des Papers listen Sie die Items, geordnet nach Subskalen, auf.
-
-
-@venkatesh_technology_2008 stellen eine überarbeitete Version des *Technology Acceptance Models* bereit (inkl. items im [Anhang](https://zenodo.org/record/895412)).
-
-
-Eine weitere Möglichkeit stellt der *Computer Attitude Questionnaire (CAQ)* dar, 
-die die Einstellung von Schülern zu Computern, inkl. Computerängstlichkeit, misst.^[https://iittl.unt.edu/content/computer-attitude-questionnaire-caq]
-
-#### Persönlichkeitstests
-
-
-
-```{r}
-#| echo: false
-tests_tab <-
-  tibble::tribble(
-    ~Nr,   ~Kürzel,                                                        ~Name,           ~Bezugsquelle,                                                                            ~Beschreibung,
-     1L,    "MAAS",                  "Mindfulness Attention and Awareness Skala", "zpid, online, Journal",                                          "Fragebogen zu „mindlessness“ bzw. Achtsamkeit",
-     2L, "BIS/BAS",                "Behavioral Inhibition/ Activition System FB",         "zpid, Journal",                                                "Ein alternatives Persönlichkeits-System",
-     3L,      "AQ",                            "Deutscher Aggressionsfragebogen",                 "gesis",                                                                 "Messung von Aggresison",
-     4L,     "B5T",                                              "Big Five Test",                  "zpid",                                       "Das am besten untersuchte Persönlichkeits-System",
-     5L,   "BDI-S",                      "Becks Depressions-Inventar-Simplified",    "zpid, ResearchGate",                      "Einer der bekanntesten Depressions-Tests in vereinfachter Version",
-     6L,    "DISG",                           "Psycholog-Persönlichkeits-System",            "Buchhandel", "Einer in der dt. Wirtschaft am häufigsten eingesetzten Verfahren; Qualität zweifelhaft",
-     7L,     "EI4",                      "Emotionale Intelligenz in 4 Bereichen",                "Online",                                                "Das „Mode-Thema“ Emotionale Intelligenz",
-     8L,      "I8",                            "Impulsives Verhalten in 8 Items",                 "gesis",                 "Impulskontrolle etc. sind zentrale Forschungsthemen im Moment (immer?)",
-     9L,     "Pos",                                         "Positivitäts-Skala",                "Online",                                         "Metakonstrukt zu Wohlbefinden, Optimismus etc.",
-    10L,     "SES",                                           "Selbstwertkskala",          "Researchgate",                                                       "Zentrale Persönlichkeitsvariable",
-    11L,     "SWE",                        "Selbstwirksamkeits-Erwartungs-Skala",                  "zpid",                                                       "Zentrale Persönlichkeitsvariable",
-    12L,  "AISS-d", "Deutsche Version des Arnett Inventory of Sensation Seeking",                 "gesis",                                                        "Warum suchen manche den „Kick“?",
-    13L,     "NFA",                                            "Need for Affect",                "online",                                                                       "Some like it hot",
-    14L,     "KSA",                                   "Kurzskala Autoritarismus",                 "gesis",                      "Nach einer Hypothese liegt hier die Emfänglichkeit für Faschismus"
-    )
-
-tests_tab
-```
-
-
-#### State-Tests
-
-Tests, die Zustände, also kurzzeitige Befindlichkeiten, messen bezeichnet man als Tests für *States*.
-
-- [Emotionale Befindlichkeit](https://www.fdz-bildung.de/skala.php?skala_id=1359&erhebung_id=0)
-- [PANAS: Positive and Negative Affect Schedule](https://link.springer.com/referenceworkentry/10.1007/978-1-4419-1005-9_978)
-- [The General Attitudes towards Artificial Intelligence Scale (GAAIS)](https://www.tandfonline.com/doi/full/10.1080/10447318.2022.2085400); die Skala besteht aus zwei Subskalen, wie in Tabelle 1 des Papers erläutert
 
 ### Make or buy?
 
@@ -573,7 +413,7 @@ Insgesamt ist die Erstellung eines Fragebogens für ein psychologisches Konstruk
 Nicht-psychologische Variablen bzw. beobachtbare Dinge sind viel einfacher zu verwenden; hier sind selbst gestrickte Verfahren id.R. kein Problem (z. B. „Welche Automarke fahren Sie?“, „Wie viele Facebook-Freunde haben Sie?“, „Wie viele Kinder haben Sie?“)
 
 
-#### Neue Messung selber entwickeln
+#### Neue Messinstrumente selber entwickeln
 
 Hier sind Beispiele für Variablen, die *einfach zu messen* sind, und daher für die Messung keiner besonderen Entwicklung oder Überprüfung bedürfen: Manifeste Variablen wie Körpergröße, Gewicht, Alter, Geschlecht, Herkunftsland.
 
@@ -600,7 +440,7 @@ und diesen ohne weitere Validierung in der eigenen Studie zu verwenden.
 
 
 
-### ... or translate?
+#### ... or translate?
 
 Ein Mittelweg zwischen "Make" (Selber ein neues Instrument entwickeln) und "Buy" (ein existierendes Instrument verwenden) ist "Translate", 
 also ein Instrument in eine andere Sprache zu übersetzen bzw. für diese neue Sprache anzupassen.
@@ -904,6 +744,176 @@ robservable(
   input = list(data = df)
 )
 ```
+
+
+
+
+
+
+
+## Beispiele für Messinstrumente
+
+Wer in den für die Forschungsfrage einschlägigen Papers stöbert, findet über kurz (oder lang) Ansatzpunkte bzw. Messinstrumente, die sich in anderen Studien bewährt haben.
+
+### Konsumentenforschung
+
+
+So ist ein Beispiel für Messinstrumente um emotionale Reaktionen von Versuchspersonen auf Werbung in @escalas_sympathy_2003 zu finden.
+Skalen für Kundenzufriedenheit und Kaufabsicht finden sich etwa bei @maxham_longitudinal_2002 oder bei @grewal_effects_1998.
+@graf_measuring_2018 messen *cognitive fluency*, das sie als ein "subjective feeling of easy or difficulty associated with any type of mental processing" definieren (S. 394).
+So könnte etwa die "kognitive Leichtigkeit" mit der ein (Werbe-)Diagramm mental verarbeitet wird,
+mit der Subskala *Perceptual Fluency* messen, die als semantisches Differenzial mit 5 Items aufebaut ist (vgl. S. 400).
+
+
+
+
+### Usability
+
+Die Evaluation technischer Geräte beleuchtet in der psychologischen Forschung häufig Aspekte der Nutzerfreundlichkeit (*Usability*) oder *User Experience*.
+
+
+Ein verbreitetes Verfahren, um die Usability von technischen Geräten oder Systemen zu quantifizieren,
+ist die *System Usability Scale* (SUS) [@bangor_empirical_2008; lewis_system_2018].
+Die SUS ist technologieunabhängig und daher breit einsetzbar.
+
+Eine Version der SUS-Items lauten:
+
+
+1. Ich kann mir sehr gut vorstellen, das System regelmäßig zu nutzen.
+1. Ich empfinde das System als unnötig komplex.*
+1. Ich empfinde das System als einfach zu nutzen.
+1. Ich denke, dass ich technischen Support brauchen würde, um das System zu nutzen.*
+1. Ich finde, dass die verschiedenen Funktionen des Systems gut integriert sind.
+1. Ich finde, dass es im System zu viele Inkonsistenzen gibt.*
+1. Ich kann mir vorstellen, dass die meisten Leute das System schnell zu beherrschen lernen.
+1. Ich empfinde die Bedienung als sehr umständlich.*
+1. Ich habe mich bei der Nutzung des Systems sehr sicher gefühlt.
+1. Ich musste eine Menge Dinge lernen, bevor ich mit dem System arbeiten konnte.*
+
+*: Negativ gepoltes Item.
+
+Ein verwendetes Antwortformat ist eine fünfstufige Likertskala mit den Polen "stimme überhaupt nicht zu" und "stimme voll und ganz zu" [@lewis_factor_2009].
+Weitere Hinweise zur psychometrischen Qualität, Normierung und Faktorstruktur findet man bei @lewis_factor_2009.
+
+
+
+Um die Items für ein bestimmtes System anzupassen, sind (geringfügige) Änderungen sinnvoll - und im Rahmen einer Seminararbeit auch ohne weitere Validierungsstudien erlaubt.
+
+
+
+@ferreira-barbosa_mediating_2023 präsentieren mehrere Skalen zur Messung der Usability und Nutzungsbereitschaft einer App, neben anderen Skalen wie Kundenzufriedenheit und Skalen des "e-Lifestyle".
+
+
+
+
+
+### Wissenstest bei Instruktionssystemen
+
+
+Präsentiert man den Versuchspersonen ein System, das Ihnen helfen soll, etwas zu lernen,
+so sind Wissenstest eine einfache und sinnvolle Art, die AV zu operationalisieren.
+
+
+
+
+### Interaktion mit Robotern
+
+
+Um Messinstrumente für eine eigene Studie zu finden, ist es häufig nützlich,
+ähnliche, bereits veröffentlichte Studien zu begutachten, und die Messverfahren, 
+die sich in diesen Studien bewährt haben, zu verwenden.
+So berichten @song_uncanny_2022 in [Abschnitt 4.5, Messinstrumente](https://www.tandfonline.com/doi/full/10.1080/10447318.2022.2121038?src=) 
+über folgende Instrumente zur Messung der AV:
+
+
+Um die "*Unheimlichkeit*" (eeriness) des Umgangs mit dem Roboter zu messen,
+wurden das entsprechende Semantische Differenzial aus der Studie von @ho_revisiting_2010 übernommen.
+In letzter Studie finden sich weitere Messinstrumente [vgl. Volltext hier](http://macdorman.com/kfm/writings/pubs/Ho2010UncannyValleyIndices.pdf):
+*perceived humanness*, *warmth*, *eeriness* und *attractiveness.*
+
+Zweitens wurde das *Vertrauen* in den Robotern mittels vier Items (Likert-Skala mit  7 Stufen) gemessen.
+Ein Beispiel-Item lautet: "I find the chatbot to be benevolent" mit den Polen 1 = completely disagree  und 7 = completely agree.
+Die Skala stammt wiederum aus der Studie von @al-natour_adoption_2011 [Volltext hier](https://www.researchgate.net/profile/Sameh-Al-Natour/publication/220580434_The_Adoption_of_Online_Shopping_Assistants_Perceived_Similarity_as_an_Antecedent_to_Evaluative_Beliefs/links/0deec521a214ec8489000000/The-Adoption-of-Online-Shopping-Assistants-Perceived-Similarity-as-an-Antecedent-to-Evaluative-Beliefs.pdf?_sg%5B0%5D=started_experiment_milestone&origin=journalDetail&_rtd=e30%3D).
+Auch in dem Paper finden sich noch einige nützliche weiterführende Hinweise.
+
+Drittens wurde die *Bereitschaft, den Roboter weiter zu verwenden* mit einem Single-Item-Ansatz gemessen:
+"I would be willing to use the virtual assistant again" (7 Stufen von "stimme überhaupt nicht zu" bis "stimme voll und ganz zu", auf Englisch).
+
+Die Autoren berichten, dass sie die Instrumente vorab auf psychometrische Qualität hin untersucht haben und bereichten akzektable Ergebnisse.
+
+
+
+
+### Einstellung gegenüber KI
+
+@sindermann_assessing_2021 präsentieren ein Messinstrument (auf Deutsch, Englisch und Chinesisch), um die Einstellung gegenüber künstlicher Intelligenz zu messen.
+Die Autoren resümeren, dass es sich um ein ökonomisches, reliables und valides Instrument handle.
+
+Die Items sind in [Tabelle 1 des Papers](https://link.springer.com/article/10.1007/s13218-020-00689-0/tables/1) dargestelt:
+
+01. Ich habe Angst vor künstlicher Intelligenz.
+02. Ich vertraue künstlicher Intelligenz.
+03. Künstliche Intelligenz wird die Menschheit zerstören.
+04. Künstliche Intelligenz wird eine Bereicherung für die Menschheit sein.
+05. Künstliche Intelligenz wird für viel Arbeitslosigkeit sorgen.
+
+
+@schepman_general_2022 stellen die Skala "The General Attitudes towards Artificial Intelligence Scale (GAAIS)" vor.^[Die Skala ist der erste Treffer, wenn man bei [Psyndex](https://psyndex.de/) "attitude towards artificial intelligence" eingibt (2023-05-25)]
+Insgesamt sehen die Autoren in ihrem Instrument einen nützlichen Ansatz, um Einstellung gegenüber künstlicher Intelligenz zu messen.
+Das Instrument teilt sich in zwei Subskalen auf; eine misst positiv konnotierte Einstellung, eine negativ konnotierte.
+Die Items sind in [Tabelle 1 des Papers](https://www.tandfonline.com/doi/full/10.1080/10447318.2022.2085400) dargestellt.
+
+
+Sucht man bei [elicit](elicit.org) nach Artikeln mit dem Prompt *how to measure to attitude of people towards artificial intelligence?* so findet man eine [nützliche Auswahl an Papers](https://elicit.org/search?q=how+to+measure+to+attitude+of+people+towards+artificial+intelligence%3F&token=01H1AD687NN72CS75C1QHMWBZW).
+
+@suh_development_2022 listen etwa eine Reihe von Instrumten auf ([Tabelle 1](https://journals.sagepub.com/doi/10.1177/21582440221100463)), die die Einstellung gegenüber KI messen.
+Im Anhang des Papers listen Sie die Items, geordnet nach Subskalen, auf.
+
+
+@venkatesh_technology_2008 stellen eine überarbeitete Version des *Technology Acceptance Models* bereit (inkl. items im [Anhang](https://zenodo.org/record/895412)).
+
+
+Eine weitere Möglichkeit stellt der *Computer Attitude Questionnaire (CAQ)* dar, 
+die die Einstellung von Schülern zu Computern, inkl. Computerängstlichkeit, misst.^[https://iittl.unt.edu/content/computer-attitude-questionnaire-caq]
+
+### Persönlichkeitstests
+
+
+
+```{r}
+#| echo: false
+tests_tab <-
+  tibble::tribble(
+    ~Nr,   ~Kürzel,                                                        ~Name,           ~Bezugsquelle,                                                                            ~Beschreibung,
+     1L,    "MAAS",                  "Mindfulness Attention and Awareness Skala", "zpid, online, Journal",                                          "Fragebogen zu „mindlessness“ bzw. Achtsamkeit",
+     2L, "BIS/BAS",                "Behavioral Inhibition/ Activition System FB",         "zpid, Journal",                                                "Ein alternatives Persönlichkeits-System",
+     3L,      "AQ",                            "Deutscher Aggressionsfragebogen",                 "gesis",                                                                 "Messung von Aggresison",
+     4L,     "B5T",                                              "Big Five Test",                  "zpid",                                       "Das am besten untersuchte Persönlichkeits-System",
+     5L,   "BDI-S",                      "Becks Depressions-Inventar-Simplified",    "zpid, ResearchGate",                      "Einer der bekanntesten Depressions-Tests in vereinfachter Version",
+     6L,    "DISG",                           "Psycholog-Persönlichkeits-System",            "Buchhandel", "Einer in der dt. Wirtschaft am häufigsten eingesetzten Verfahren; Qualität zweifelhaft",
+     7L,     "EI4",                      "Emotionale Intelligenz in 4 Bereichen",                "Online",                                                "Das „Mode-Thema“ Emotionale Intelligenz",
+     8L,      "I8",                            "Impulsives Verhalten in 8 Items",                 "gesis",                 "Impulskontrolle etc. sind zentrale Forschungsthemen im Moment (immer?)",
+     9L,     "Pos",                                         "Positivitäts-Skala",                "Online",                                         "Metakonstrukt zu Wohlbefinden, Optimismus etc.",
+    10L,     "SES",                                           "Selbstwertkskala",          "Researchgate",                                                       "Zentrale Persönlichkeitsvariable",
+    11L,     "SWE",                        "Selbstwirksamkeits-Erwartungs-Skala",                  "zpid",                                                       "Zentrale Persönlichkeitsvariable",
+    12L,  "AISS-d", "Deutsche Version des Arnett Inventory of Sensation Seeking",                 "gesis",                                                        "Warum suchen manche den „Kick“?",
+    13L,     "NFA",                                            "Need for Affect",                "online",                                                                       "Some like it hot",
+    14L,     "KSA",                                   "Kurzskala Autoritarismus",                 "gesis",                      "Nach einer Hypothese liegt hier die Emfänglichkeit für Faschismus"
+    )
+
+tests_tab
+```
+
+
+### State-Tests
+
+Tests, die Zustände, also kurzzeitige Befindlichkeiten, messen bezeichnet man als Tests für *States*.
+
+Beispiele für solche Tests sind:
+
+- [Emotionale Befindlichkeit](https://www.fdz-bildung.de/skala.php?skala_id=1359&erhebung_id=0)
+- [PANAS: Positive and Negative Affect Schedule](https://link.springer.com/referenceworkentry/10.1007/978-1-4419-1005-9_978)
+- [The General Attitudes towards Artificial Intelligence Scale (GAAIS)](https://www.tandfonline.com/doi/full/10.1080/10447318.2022.2085400); die Skala besteht aus zwei Subskalen, wie in Tabelle 1 des Papers erläutert
 
 
 
