@@ -1,0 +1,346 @@
+# Erheben
+
+
+
+
+## Lernsteuerung
+
+### Standort im Lernpfad
+
+@fig-ueberblick zeigt den Standort dieses Kapitels im Lernpfad und gibt damit einen Überblick über das Thema dieses Kapitels im Kontext aller Kapitel.
+
+
+
+
+```{r}
+#| echo: false
+library(tidyverse)
+ggplot2::theme_set(theme_minimal())
+```
+
+
+### Lernziele
+
+
+- Sie können die berufsethischen Richtlinien der Psychologie auf den Umgang mit wissenschaftlichen Studien anwenden.
+- Sie wissen, wie man eine Umfrage anlegt.
+- Sie kennen Checklisten zur Prüfung der Qualität einer Studie.
+
+
+## Ethik
+
+
+### Schutz der Versuchspersonen
+
+#### „no risk research“ bzw. „minimal risk research“
+
+Das sind Studien, die für die Versuchsperson (VP) keinerlei bzw. dem Alltag entsprechende Belastungen mit sich bringen. 
+In diesen Fällen kann auf umfangreiche Aufklärung und informierte Einwilligung verzichtet werden.
+
+:::{#exm-noriskresearch}
+### Bildschirmzeit und Merkfähigkeit
+Für eine Beobachtungsstudie, die den (kausalen) Zusammenhang von Bildschirmzeit und Konzentrationsfähigkeit untersucht, ist keine informierte Einwilligung der VP nötig, 
+da durch die Teilnahme keine Risiken (die über Alltagsrisiken hinausgehen) zu erwarten sind.$\square$
+:::
+
+
+#### „greater than minimal risk research“
+
+Für alle Studien, die mehr als ein minimales Belastungsrisiko bergen,
+ist ︎ein Einverständniserklärung („informed consent“) zwingend notwendig.
+
+Die Einwilligung jeder VP ist vom Forschenden zu dokumentieren und aufzubewahren.
+
+Die Aufklärung sollte folgende Informationen enthalten: Zweck der Forschung, erwartete Dauer der Untersuchung, Recht auf Nichtteilnahme und Abbruch der Teilnahme, absehbare Konsequenzen, Risiken, negative Auswirkungen, den voraussichtlichen Erkenntnisgewinn, Gewährleistung von Anonymität, evtl. Höhe der Aufwandsentschädigung, Kontakt für weitere Fragen.
+
+
+
+>   Sie stellen sicher, dass durch die Forschung Würde und Integrität der teilnehmenden Personen nicht beeinträchtigt werden. Sie treffen alle geeigneten Maßnahmen, um Sicherheit und Wohl der an der Forschung teilnehmenden Personen zu gewährleisten, und versuchen, Risiken auszuschließen [@bdp_und_dpgs_berufsethische_2016].
+
+
+:::{#callout-note}
+### Unversehrtheit der Teilnehmer
+Die Probanden sollen (mindestens) genauso gut aus der Untersuchung heraus gehen, wie sie hinein gekommen sind.
+Das Wohl des Einzelnen geht im Zweifel über den Nutzen für die Forschung. Das Recht zur Selbstbestimmung ist ein sehr hohes Gut.
+:::
+
+
+### Richtlinien zum Umgang mit Versuchspersonen
+
+Die Untersuchungsteilnehmer sind vor negativen Folgen der Untersuchung zu schützen! Belastungen sind so weit wie möglich zu minimieren.
+
+Vor der Durchführung der Untersuchung sind die möglichen Einwände und ethischen Bedenken gegen eine Untersuchung zu prüfen und ggf. ist eine Ethikkommission um eine Stellungnahme zu bitten.
+
+Die Versuchsteilnehmer sind über alle Gesichtspunkte der Untersuchung zu informieren, welche die Bereitschaft der Versuchspersonen zur Teilnahme beeinflussen könnten.
+
+Fordern methodologische Grundsätze einer Studien eine Verheimlichung oder gar eine Täuschung über die wahren Ziele der Untersuchung, 
+muss sich der Forscher umso mehr seiner persönlichen Verantwortung für das Wohl und die Würde seiner Untersuchungsteilnehmer bewusst sein und zum frühestmöglichen Zeitpunkt für Aufklärung sorgen. 
+Einer Versuchsperson muss immer die Freiheit eingeräumt werden, 
+seine Teilnahmebereitschaft zurückzuziehen oder zu jedem Zeitpunkt der Untersuchung abzubrechen.
+
+Nach Abschluss der Datenerhebung sind die Vpn im vollen Umfang über die tatsächlichen Ziele der Untersuchung aufzuklären. (Ausnahme: wenn dies schmerzhaft oder sehr unangenehm wäre).
+
+Die in einer Untersuchung gewonnenen Informationen über Versuchsteilnehmer sind absolut vertraulich zu behandeln [@reis_experimentelle_2012].
+
+
+:::{#exr-ethikbdp}
+### Ethik-Richtlinien der Deutschen Gesellschaft für Psychologie (DGPs)
+Lesen und diskutieren Sie die [Ethik-Richtlinien der DGPS](https://www.dgps.de/die-dgps/aufgaben-und-ziele/berufsethische-richtlinien),
+speziell Kapitel 7 "7. Psychologie in Forschung und Lehre".
+:::
+
+
+### Wissenschaftsethik
+
+Legen Sie Ihr Vorgehen offen, so dass andere Ihre Studie nachprüfen (reproduzieren) und wiederholen (replizieren) können. Alle dazu nötigen Informationen sollten von Ihnen angegeben werden.
+
+Reichen Sie alle Materialien ein, die nötig sind, um Ihre Ergebnisse nachzuvollziehen („reproduzieren"). 
+Das sind v.a.
+
+- *anonyme* oder *pseudonymisierte* Daten
+- Codebook^[synonym: Data Dictionnary]
+- Stimuli
+- Syntax der Datenanalyse
+- Beschreibung des Versuchsdesigns
+
+
+:::{#callout-important}
+Veröffentlichen Sie niemals Daten, die einen Rückschluss auf einzelne Personen erlauben!
+Zu solchen Daten gehören u.a. Name, Adresse, E-Mail-Adressen, Fingerabdruck, Geburtstadatum, genetische Daten.
+:::
+
+
+>    🧑‍🎓 Warum ist "open data" eigentlich so wichtig?
+
+
+>   Nullius in verba^[Motto der Royal Society, der ältesten Wissenschaftsgesellschaft] 
+
+-- Glaube etwas nicht bloß deshalb, weil jemand es behauptet.
+Stattdessen: Wissenschaft ist auf Nachprüfbarkeit gebaut, nicht auf blindem Glauben.
+
+
+Die meiste Forschung wird von den Steuerzahlern gezahlt. Daher sollte die Gesellschaft das Recht haben, auf die Ergebnisse ihrer Investition Zugriff zu haben.
+
+
+Daten sollten nicht nur offen, sondern auch *fair* sein:
+
+
+- **F**indable
+- **A**ccessible
+- **I**nterorable
+- **R**eusable
+
+Das *FAIR*-Prinzip ist die Grundlage guten Forschungsdaten-Managements.
+
+
+
+### Datenschutzrecht (DSGVO)
+
+Das Erheben, Speichern und Verarbeiten (kurz: „Einbeziehen“) personenbezogener Daten ist laut europäischem Recht grundsätzlich nicht erlaubt – es sei denn es existieren im Einzelfall andere gesetzliche Regelungen oder die betreffende Person stimmt zu.
+
+Unter personenbezogenen Daten (vgl. DGSVO Art. 4, Abs. 1) versteht man alle Daten, die einem Menschen beschreiben. Dazu gehören Adressdaten, Kennnummern (z. B. Personalausweis), Online-Daten (IP-Adresse), physische Merkmale (z. B. Geschlecht, Größe), Kundendaten, Zeugnisse, Standortdaten, aber auch genetische oder psychologische Daten (z. B. Ergebnis eines IQ- oder Persönlichkeitstests).
+
+Besonders schützenswerte personenbezogene Daten sind etwa Daten zum Gesundheitszustand, zum ethnischen Hintergrund sowie zur politischen, religiösen oder sexuellen Einstellung (DSGVO Art. 9). Solche Daten dürfen nur mit erhöhtem Datenschutzaufwand einbezogen werden (vgl. DSGVO Art. 35).
+
+Personenbezogene Daten, die vom Urheber offensichtlich öffentlich gemacht wurden, dürfen einbezogen werden (DSGVO Art. 9, Abs. 2e).
+
+Zu beachten ist, dass eine Anonymisierung u. U. aufgehoben werden kann: Wie viele weibliche, 18-jährige Azubis gibt es im Unternehmen X in der Abteilung Y im Jahr Z?
+
+Es gilt das Prinzip der Datensparsamkeit: personenbezogene Daten dürfen nur insoweit einbezogen werden, als es für die Untersuchung nötig ist.
+
+Zudem gilt die Zweckbindung: Daten dürfen nur für den Zweck verwendet werden, der ihrer Erhebung zugrunde lag.
+
+Forschende sind verpflichtet, geeignete Maßnahmen des Datenschutzes zu treffen, wie das Verwenden starker Passwörter, abschließbare Räumlichkeiten/Schränke sowie Berücksichtigung des aktuellen Stands der Technik (z. B. aktuelle Versionen von verwendeter Software, Virenschutzprogramme, Datenverschlüsselung).
+
+Die Nachweis- und Dokumentationspflicht liegt beim Projektverantwortlichen.
+
+Es liegt eine Informationsbringschuld seitens der Forschenden vor; Informationen müssen transparent, verständlich und umfassend sein – auch im Hinblick auf Rechte und Pflichte der Teilnehmenden (DSGVO Art. 12, 13).
+
+Personenbezogene Daten von EU-Bürgern dürfen nicht außerhalb der EU einbezogen werden, es sei denn, diese erfüllen die Voraussetzungen der DSGVO (ja: z. B. Kanada, Schweiz, Australien; nein: Indien, China, USA). Zwei weitere Ausnahmen sind, a) das Vorliegen spezieller Verträge, die die Grundlagen der DSGVO im betreffenden Fall garantieren, b) die informierte Einwilligung der betreffenden Personen.
+
+Sind Forschungsdaten anonymisiert oder pseudonomyisiert, so liegen sie (oft) nicht mehr im Anwendungsbereich des Datenschutzes.
+
+
+:::{#callout-note}
+Alle Angaben ohne Gewähr. Der Autor ist kein Rechtsanwalt^[sondern bestenfalls ein Nerd 🤓].
+Eine einfache Lösung lautet: Verwenden Sie anonymisierte (pseudonymisierte) Daten.
+:::
+
+## Handwerkszeug
+
+
+### Vorlage einer Einverstädniserklärung
+
+Die folgende Vorlage basiert auf @Schönbrodt_Heene_Zehetleitner_Maier_Scheel_Zygar-Hoffmann_Schoedel_Sust_Schiestel_Ihle_2023.
+
+#### Erklärung zur Studie
+
+Es freut uns sehr, dass Sie sich bereit erklärt haben, an unserer Studie teilzunehmen. Diese Studie untersucht XXX. Die jeweilige Aufgabe wird Ihnen zuvor genau beschrieben und erklärt. Alle Schritte der Studie bestehen aus etablierten psychologischen Verfahren, von denen keinerlei besondere Belastungen oder gar Schaden zu erwarten sind. Bitte lesen Sie sich die folgenden Hinweise sorgfältig durch.
+
+#### Freiwilligkeit
+
+
+Die Teilnahme an der Studie ist freiwillig. Sie können jederzeit und ohne Angabe von Gründen Ihre Einwilligung zur Teilnahme an dieser Studie widerrufen, ohne dass Ihnen daraus Nachteile entstehen. Sie können Ihr Einverständnis zur Speicherung Ihrer aus dem Versuch entstandenen Daten bis zum Ende der Datenerhebung widerrufen, ohne dass Ihnen daraus Nachteile entstehen.
+
+#### Datenschutz
+
+Da keine personenbezogenen Daten erhoben werden, ist nach Abschluss der Datenerhebung prinzipiell keine Zuordnung mehr zwischen den Daten im Datensatz und Ihrer Person mehr möglich – der Datensatz ist dann komplett anonymisiert. Entsprechend ist nach Abschluss dieser Datenerhebung auch keine gezielte Löschung Ihres Datensatzes mehr möglich.
+
+#### Verwendung der anonymisierten Daten
+
+︎Die Ergebnisse und Primärdaten dieser Studie sind Teil einer Qualifikationsleistung im Rahmen eines Hochschulstudiums. Die Daten können auch Teil einer wissenschaftlichen Publikation werden. Daten werden nur in anonymisierter Form publiziert, d. h. ohne dass die Daten einer spezifischen Person zugeordnet werden können. Die vollständig anonymisierten Daten dieser Studie werden u. U. als open data in einem internetbasierten Repositorium namens Open Science Framework (https://osf.io) zugänglich gemacht. Damit folgt diese Studie den Empfehlungen der Deutschen Forschungsgemeinschaft (DFG) zur Qualitätssicherung in Bezug auf Nachprüfbarkeit und Reproduzierbarkeit wissenschaftlicher Ergebnisse sowie der optimalen Datennachnutzung.
+
+Studienleitung: [Name der/des Studierenden]
+
+Betreuende/r Dozent/in: [Name der/des Dozenten/in]
+
+#### Zusammenfassung: Einverständniserklärung und Teilnahmebedingungen
+
+Die Teilnahme an dieser Studie erfolgt freiwillig und kann jederzeit ohne Angabe von Gründen zurückgezogen werden. Der Rücktritt bleibt für Studienteilnehmer/innen folgenlos. Da keine personenbezogenen Daten gespeichert wurden, sondern nur anonymisierte Daten, ist es nicht möglich, die von Ihnen erzeugten Daten im Nachgang zu löschen, da Ihre Daten nicht mehr zugeordnet werden können. Die anonymen Daten werden zur weiteren Nutzung als open data bereitgestellt.
+
+Durch einen Klick auf Weiter versichere ich, dass ich die oben beschriebenen Teilnehmerinformationen verstanden habe und mit den genannten Teilnahmebedingungen einverstanden bin.
+
+### Steckbrief
+
+Werben Sie mit einem Steckbrief für Ihre Studie.
+So könnte Ihr Steckbrief aufgebaut sein:
+
+
+*Titel der Studie*: Ansprechend und prägnant Thema: Was ist die Forschungsfrage bzw. wenn Sie weniger präzise sein möchten: Was ist das Thema der Studie? Ansprechpartner: Die Studentis, die die Studie durchführen mit Kontaktdaten (Name und Hochschul-Email-Adresse) Betreuende:r Dozent:in: Dozent:in Ihrer Coachinggruppe mit Emailadresse Zeitaufwand: Wie viel Zeit muss ein:e Proband:in einplanen? Gibt es ggf. mehrere Termine?
+
+*Präsenz vs. Online*: Wo (Ort oder URL) findet die Studie statt?
+
+*Zeitraum*? Ggf. zu welcher Zeit findet die Studie statt? Wann beginnt und wann endet der Zeitraum der Teilnahme? Was ein: Proband:in tun muss? Worin besteht die Teilnahme aus Probandensicht?
+
+*Teilnahmebedingungen*: Was sind Ein- bzw. Ausschlusskriterien für die Teilnahme?
+
+*Risiken und Nebenwirkungen*: Es sollte möglichst keine geben, die über Alltagsrisiken hinausgehen. Informieren Sie dazu.
+
+*Anreize*: Gibt es Belohnungen zur Teilnahme?
+
+*Anonymität und Datenschutz*: Ist die Teilnahme anonym? Pseudonym? Wie wird der Datenschutz gewährleistet?
+
+
+
+### Gestaltung der Einleitung zur Befragung/Studie
+
+Stellen Sie sich als ForscherIn vor: Wer sind Sie und warum führen Sie diese Studie durch?
+
+Führen Sie in das Thema ein: Zu genaue Erläuterung der Forschungsfrage kann die Antworten der Befragten verzerren. Allerdings haben die Versuchspersonen ein Recht, so genau wie möglich das Thema (die Forschungsfrage) der Untersuchung zu erfahren.
+
+Informieren Sie zu Risiken, Nebenwirkungen und Nutzen: Die Teilnahme an einer Studie kann Vor- und Nachteile nach sich ziehen wie z.B. Vergütung. Alle Teilnehmenden sollten darüber informiert sein.
+
+Fragen Sie die Einwilligung auf informierter Basis ab: Die TeilnehmerInnen sollen die Möglichkeit (und Pflicht) haben, Ihre Einwilligung zu geben oder zu verweigern, bevor die eigentlich Studie beginnt. Die Einwilligung ist nur dann (rechtlich) wirksam, wenn Sie zuvor ausreichend über die Studie informiert haben.
+
+Sagen Sie, wie lange es dauert: Geben Sie die ungefähre (möglichst genaue) Dauer (in Minuten) an, denn die Befragten wollen zu Recht wissen, wie lange sie eingespannt sind.
+
+Informieren Sie zum Datenschutz: Geben Sie an, wie Sie mit persönlichen Daten umgehen und wie die Daten gespeichert, geteilt und genutzt werden.
+
+
+### Pseudonyme: Geheime Codes
+
+Um Daten aus mehreren Versuchen bzw. Versuchsteilen zusammenführen zu können (unter Wahrung der Anonymität), bietet sich die Verwendung eines anonymen Codes an.
+
+Ein “geheimer Code”” ist ein „Deckname“, der die Identität des Nutzers/der Nutzerin verbirgt, also nur dieser Person bekannt ist.
+
+Idealerweise sollte ein anonymer Code so kurz wie möglich sein (der Einfachheit halber), aber so lang wie möglich, um Duplikate zu vermeiden.
+
+So könnte eine Anweisung aussehen, um einen anonymen Code zu erstellen:
+
+
+>    Bitte erstellen Sie jetzt Ihren “Decknamen”. Wir nutzen diesen Code, um Ihre Daten aus mehreren Studien zusammen zu stellen. Ihre Anonymität bleibt dabei gewährleistet, aber Sie (und nur Sie) wissen, dass es Ihre Daten sind. Bitte erstellen Sie Ihren Code nach folgendem Schema:
+
+Anfangsbuchstabe des Mädchennamen Ihrer Mutter Anfangsbuchstabe des Vornamens Ihres Großvaters (väterlicherseits) Anfangsbuchstabe Ihres Geburtstorts Tag (1-31) im Monat Ihrer Geburt (bitte zweistellig eingeben) Beispiel: Ihre Mutter hat den Mädchenname „Altmann“, Ihr Großvater heißt „Berthold“ und Sie wurden in „Coburg“ geboren, am 1.12., so lautet Ihr Pseudonym: „ABC01“.
+
+
+
+## Online-Umfragetools 
+
+
+### Was ist das und wozu ist es gut?
+
+Mit Hilfe eines Online-Umfragetools können Sie Umfragen online durchführen.
+
+Schauen Sie sich mal folgendes Beispiel zum Thema Smartphone-Nutzung und mögliche Smartphone-Sucht [@kwon_smartphone_2013]:
+
+
+<iframe  src="https://docs.google.com/forms/d/e/1FAIpQLSe-eVXB9niWYxUBeW6y9tw9o2EUQjYfs40FPWwoE4CNXiF5Jw/viewform?usp=sf_link" width="780" height="500" frameborder="0" marginheight="0" marginwidth="0" title="Umfrage zur Smartphone-Nuzung"></iframe>
+
+
+
+
+Auch wenn Sie z.B. ein Experiment durchführen, kann es oft nützlich sein, ihre Studie mit Hilfe eine Online-Umfragetools aufzusetzen:
+
+1. Online-Studien sind somit einfach möglich, aber Offline-Studien genauso (sofern Internetanschluss vorhanden)
+2. Umfragetools sind komfortabel
+
+Es gibt eine Vielzahl an Umfragetools, die sich für eine Studie eignen.
+
+### SoSci-Survey
+
+Ein empfehlenswertes Tool für Online-Umfragen ist [SoSci-Survey](https://www.soscisurvey.de/de/index).
+Se hat folgende Vorteile
+
+- Deutsch
+- DSGVO-konform
+- Mächtig
+- kostenlos (für wissenschaftliche Studien)
+
+
+#### Ein einfacher Fragebogen
+
+
+Ein einfacher Frageobgen [ist in fünf Minuten angelegt](https://www.soscisurvey.de/help/doku.php/de:create:basics).
+Mit SoSci-Survey ist es auch möglich, Randomisierung durchzuführen.
+
+
+
+#### Randomisierung
+
+
+Für ein Experiment, ob online oder offline, benötigen Sie eine Randomisierung.
+Eine Randomisierung können Sie relativ einfach mit SoSci-Survey erstellen.
+
+>    🧑‍🎓 Aber ich könnte doch auch einfach zwei Umfragen anlegen für mein Experiment? 
+
+>    👨‍🏫  Ja, das geht schon auch, aber birgt die Gefahr, dass die Gruppen dann unterschiedlich groß sind. Außerdem müssen Sie dann zwei Umfragen in Schuss halten, nicht nur eine.
+
+
+[Hier](https://www.soscisurvey.de/help/doku.php/de:create:randomization-einfaktoriell) ist eine Anleitung, wie man eine einfache Randomisierung in SoSci-Survey erstellt.
+Und [hier](https://youtu.be/piHPPGxvPOg) finden Sie ein Video-Tutorial dazu.
+
+Möchte man Bilder, Videos oder Audio-Dateien als Stimuli randomisieren, muss man diese Medien erst hochladen und dann einbinden. [In dieser Anleitung]() oder [diesem Video](https://youtu.be/RfdQ2TgxzWc) finden Sie eine Hilfestellung dazu.
+
+Eine ganze Liste an Videos findet sich [auf der SoSci-Seite](https://www.soscisurvey.de/de/privacy) und auf YouTube. Außerdem finden sich dort eine Menge Anleitungen inkl. dem [Benutzerhandbuch (aktuell v3.4.14)](https://www.soscisurvey.de/help/sosci.help.3.4.14.zip).
+
+
+
+
+SoSci-Survey [informiert hier](https://www.soscisurvey.de/de/privacy) über ihre Datenschutz-Maßnahmen.
+
+
+
+
+
+
+
+
+
+## Checklisten
+
+
+Es gibt einige Checklisten zur Überprüfung der Qualität einer Studie:
+
+- Beobachtungsstudien: [STROBE](https://www.strobe-statement.org/) [deutsche Version](https://www.strobe-statement.org/download/german-translation-of-strobe-statement)
+- Experimente: [CONSORT](http://www.consort-statement.org/)
+
+
+
+
+## Weiterführende Literatur
+
+Praktische Hinweise zur Durchführung einer Fragebogen basierten Erhebung finden sich z.B. bei @porst_fragebogen_2014.
+
+
+
+

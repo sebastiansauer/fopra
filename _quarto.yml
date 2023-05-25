@@ -11,14 +11,15 @@ book:
   date: now
   chapters:
     - index.qmd
-    - rahmen.qmd
-    - themawahl.qmd
-    - Schreiben.qmd
-    - Populationsbeschreibung.qmd
-    - Explikation.qmd
-    - Messen.qmd
-    - Erheben.qmd
-    - Bayes.qmd
+    - 100-rahmen.qmd
+    - 200-themawahl.qmd
+    - 300-Schreiben.qmd
+    - 400-Populationsbeschreibung.qmd
+    - 500-Explikation.qmd
+    - 600-Messen.qmd
+    - 700-Erheben.qmd
+    - 800-Auswerten.qmd
+    - 900-Bayes.qmd
 
     - pruefung.qmd
     - abschluss.qmd

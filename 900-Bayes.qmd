@@ -1,0 +1,799 @@
+# Auswerten: Inferenz
+
+
+
+## Lernsteuerung
+
+
+### Lernziele
+
+
+- Sie können Ihre Forschungfrage mit Methoden der Inferenzstatistik nach Bayes auswerten.
+
+
+
+
+### Position im Lernpfad
+
+Sie befinden sich im Abschnitt "Auswertung" in @fig-ueberblick.
+
+
+
+### tl;dr
+
+In diesem Kapitel wird folgende Frage beantwortet: "Wie man die Ergebnisse einer Bayes-Analyse berichtet"
+
+
+### Benötigte R-Pakete
+
+
+```{r message=FALSE, echo = TRUE}
+library(tidyverse)
+library(easystats)
+library(rstanarm)
+```
+
+
+
+
+## Warum das Berichten wichtig ist
+
+
+Statistische Analysen können komplex und schwierig zu verstehen sein.
+Die Versuchung ist daher immer gegeben, beim Berichten einer Analyse wichtige Aspekte
+unerwähnt oder unerklärt zu lassen.
+Lässt man aber wichtige Informationen aus, steigt die Gefahr,
+dass die Analyse nicht nachvollziehbar ist.
+Am schönsten ist dieses Problem im [Cartoon mit den zwei Wissenschaftlern von einer Tafel (von Sidney Harris)](http://www.sciencecartoonsplus.com/pages/gallery.php) dargestellt.
+
+
+
+## Prinzipien der Berichtlegung (von Bayes-Statistik)
+
+Im Folgenden sind einige Grundlagen des Berichtens von Statistiken dargestellt.
+Zwar wird in einigen Teilen auf die Bayes-Methode abgestellt, 
+aber viele Teile gelten für alle statistischen Analysen.
+Dabei sei hinzugefügt, dass Statistik, so nüchtern sie den geneigten Studenis auch erscheinen mag,
+durchaus Eitel- und Partikularitäten aufweist:
+Nicht jeder Autor oder Dozent oder jede Richtlinie gibt die gleichen Anweisungen oder Empfehlungen!
+Die folgenden Hinweise entsprechen der (aktuellen, sich durchaus im Lauf der Zeit ändernden) Sicht dieses Dozenten.
+
+
+Das *erste* Prinzip des Berichtlegens lautet "so viel wie nötig, aber so wenig wie möglich".
+Man will die Lesis nicht überfrachten, aber alle nötigen Informationen übermitteln.
+Das *zweite* Prinzip lautet, dass man die Informationen am rechten Ort vermittelt.
+So wird ei Lesi die Erklärung der Zusammensetzung der Stichprobe nicht im Diskussionsteil vermuten 
+und sich zu Recht wundern, im Methodenteil nichts zur Stichprobe zu finden.
+Das *dritte* Prinzip lautet, dass man priorisiert. 
+Wichtiges in den Hauptteil, Details in den Anhang (bzw. in ergänzende Datein, "supplementary files").
+Detaillreiche Statistiken berichtet man eher in Tabellen;
+geht es um einen Überblick, bietet sich häufig ein Diagramm an.
+Berichtet man im Text, so schreibt man auf "gut Deutsch" die Aussage in den Satz,
+und die Zahlen eher in Klammern dahinter.
+Das *vierte* Prinzip lautet, konsistent zu sein. 
+Es gibt viele Wege nach Rom, bzw. viele Ansätze, nützlich und effektiv -
+mithin "richtig" - zu berichten. Wichtiger als die Wahl einer bestimmten Art und Weise,
+ist es, konsistent zu sein, ähnlich wie beim Zitieren.
+Das *fünfte* Prinzip, könnte man sagen,  ist so selbstverständlich,
+dass es keiner Erwähnung bedarfe, aber die Realität lehrt uns leider mitunter das Gegenteil.
+Es lautet Lauterkeit oder Rechtschaffenheit.
+Kennzahlen bewusst falsch zu berichten rangiert irgendwo zwischen Straftat und beruflichem Fehlverhalten,
+je nach Kontext und kann harte Bestrafung verdienen.
+Gängiger sicherlich sind subtilere Arten, dieses Prinzip zu verletzen.
+Dazu ist als erstes das selektive Berichten zu nennen: Unliebsame Befunde werden verschwiegen,
+hypothesenkonforme hingegen nach vorne gestellt.
+Das ist zwar dann nicht gelogen aber die Irreführung wird bewusst in Kauf genommen.
+
+Die *gute* Nachricht für alle Studentis: Es gibt für Sie keinen Anreiz,
+die Ergebnisse "aufzuhübschen" (im Gegensatz zu Berufswissenschaftlis). 
+Ihre Note wird nicht daran gemessen, ob Sie einen neuen [Expoplaneten](https://de.wikipedia.org/wiki/Exoplanet)
+entdecken, 
+oder sonstige "starke" Ergebnisse aufweisen können.
+Nein! Unklare, nicht-bestätigende oder unerwartete Ergebnisse sind genauso gut -
+auch wissenschaftlich übrigens haben sie die gleiche Daseinsberechtigung,
+wie die Ergebnisse, die im "Journal of Flashy Results" für Presseberichte sorgen.
+Für ihre Note ist es unerheblich, wie "signifikant", "effektstark", "präzise" oder "hypothesenkonform"
+ihre Ergebnisse sind.
+
+Es ist hilfreich, im Sinne des vierten Prinzips (Konsistenz) sich nach einer
+bekannten, vielleicht sogar verbreiteten Nomenklatur bzw. Vorgehensweise zu richten.
+Für Bayes-Analysen gibt es dazu Richtlinien und Checklisten; 
+die folgenden Hinweise orientieren sich an @kruschke_bayesian_2021, genannt *BARG* (Bayesian Analysis Reporting Guidelines);
+der Volltext ist [hier](https://www.nature.com/articles/s41562-021-01177-7) zugänglich.
+Auch die APA (American Psychological Assocation) hat eine [Checkliste herausgegeben](https://data-se.netlify.app/2022/01/27/warum-bayes/),
+wie Bayes-Statistik berichtet werden sollte.
+
+
+Die wichtigsten Ergebnisse der BARG sind [in dieser Tabelle ausgelegt](https://www.nature.com/articles/s41562-021-01177-7/tables/1).
+Im folgenden wird eine Auswahl der BARG vorgestellt.
+Das Ziel ist nicht eine umfassende Darstellung mit einer hohen Tiefe der Exposition.
+Vielmehr soll - angepasst an den Kenntnissstand von Bachelor-Studentis - ein
+angemessener Überblick ausgewählt werden.
+Ambitionierte Studentis sind aufgefordert, breite und tiefer als in der folgenden Ausführtung erläutert,
+zu berichten.
+Die folgende Ausführung orientiert sich an der Standardgliederung wissenschaftlicher Berichte.
+
+Lesis seien verwiesen auf das Buch von  @jhangiani_research_2019,
+die einen hervorragenden Überblick über die Materie vermitteln.
+
+
+
+
+## Allgemeine Richtlinien zum Berichten von Statistik
+
+
+Die APA hat eine [Checkliste bzw. Richtlinie herausgegeben zum Berichten von Statistik](https://www.apa.org/pubs/authors/jars.pdf) [vgl. @cooper_reporting_2020].
+Die lesenswerten Schwesterbüch von @peters_planen_2019 bzw. @peters_abschlussarbeiten_2015 geben nicht nur Formulierungshilfen,
+sondern erläutern, wie man eine sinnvolle Gliederung erstellt und welche Inhalte in welchem Abschnitt gehören.
+
+Grundlegende Prinzipien des Berichtens von Statistiken sind:
+
+1. Begründet: Eine Erläuterung, warum ein Vorgehen gewählt wurde, wird gegeben.
+2. Nachvollziehbar: Lesis können anhand des Berichts (potenziell) nachvollziehen, wie die Autoren zu einem Ergebnis gelangt sind.
+3. Von einfach zu komplex: Es ist verbreitet, zunächst grundlegende Ergebnisse, dann komplexere Modellanalysen zu präsentieren.
+4. Deskriptiv: Ergebnisse werden berichtet, aber nicht bewertet (das kommt erst im Diskussionsteil).
+5. Lauter: Alle relevanten Ergebnisse werden offengelegt.
+
+
+## Theorieteil
+
+
+### Testen oder Schätzen?
+
+Am Ende des Theorieteils bietet es sich an,
+die Hypothesen oder die Forschungsfrage zu spezifizieren.
+Sie können sich für eines von beiden entscheiden oder auch beides angehen.
+
+In der bisherigen Literatur (in der Psychologie) werden zumeist Hypothesen getestet,
+nach dem Motto "jo, unsere Vermutung scheint zu stimmen!" oder "nein, das Zeugs taugt nix!".
+Das Problem ist, dass solches Denken etwas simpel ist, Schwarz-Weiß eben. 
+Außerdem sind Nullhypothesen streng genommen immer falsch,
+weswegen es eigentlich keinen Sinn macht, sie zu untersuchen.
+Aber dafür ist das Schwarz-Weiß-Denken schön einfach.
+
+Parameterschätzung fragt nicht *ob*, sondern *wieviel*. 
+Nicht viel komplizierter, aber viel nuancierter. Eigentlich besser.
+Außerdem enthält das Parameterschätzen auch das Hypothesentesten:
+Ist die Null im Schätz-Intervall nicht enthalten,
+so kann man die Null-Hypothese ausschließen.
+
+
+
+
+### Modell definieren
+
+Es bietet sich auch an, ein Modell mit einem Pfaddiagramm bzw. DAG zu visualisieren,
+z.B. so:
+
+
+```{r out.width = "100%", fig.asp = .5}
+library(dagitty)
+
+mein_modell <- "dag{
+lern -> erfolg
+mot -> erfolg
+mot -> lern
+}"
+
+plot(graphLayout(mein_modell))
+```
+
+
+Dabei steht `lern` für "Lernzeit in Stunden",
+`mot` für "Motivation" und `lern` für "Lernerfolg".
+Die Operationalisierung der Variablen sollten im Methodenteil genauer beschrieben sein.
+
+Übrigens: R-Quellcode sollte *nicht* im Hauptteil eines wissenschaftlichen Berichts stehen,
+verbannen Sie ihn in den Anhang (es sei denn, der Quellcode bzw. die Entwicklung von Syntax ist Gegenstand der Arbeit).
+
+Außerdem macht es Sinn, 
+das Modell formal zu spezifizieren,
+etwa so:
+
+
+
+
+
+$$
+\begin{aligned}
+\text{erfolg} &\sim N(\mu_i, \sigma) \qquad \text{Likelihood} \\
+\mu_i &= \beta_0 + \beta_1 \text{lern} + \beta_2 \text{mot} \qquad \text{lineares Modell} \\
+\beta_0 &\sim N(0, 2.5)  \qquad \text{Prior Achsenabschnitt} \\
+\beta_1 &\sim N(0, 2.5)  \qquad \text{Prior Regressiongewicht lern} \\
+\beta_2 &\sim N(0, 2.5)  \qquad \text{Prior Regressiongewicht mot} \\
+\sigma &\sim Exp(1) \qquad \text{Prior Streuung} \\
+\end{aligned}
+$$
+
+
+
+Wenn Sie das Modell mit STAN berechnen, also vermittelt über z.B. `rstanarm`,
+dann wählt `stan_glm()` für Sie folgende Priori-Werte:
+
+- $\beta$s: Normalverteilt mit Mittelwert 0 und SD 2.5
+- $\sigma$: Exponentialverteilt mit Streckung 1
+
+Die $\beta$s sind am einfachsten als z-Werte zu verstehen:
+Grob übersetzt sagt `rstanarm` "Mei, ich geh davon aus, dass der Effekt vermutlich 2.5-SD-Einheiten
+um den Mittelwert rum liegt, könnten auch etwas mehr sein, aber mehr als 5-SD-Einheiten sind schon echt unwahrscheinlich".
+Das nennt man einen "schwach informativen Prior":
+der erlaubt viel, aber den größten Quatsch schließt er aus.
+
+Praktischerweise müssten sie nicht mal ihre Variablen z-tranformieren (aber Sie können ohne Schaden!),
+denn `rstanarm` macht das für Sie.
+
+
+Tipp: Geben Sie an, dass Sie die Standardwerte (Voreinstellung) der von Ihnen verwendeten Software (wie `rstanarm`) verwendet haben.
+Zitieren Sie möglichst die Software (in der verwendeten Version) und reichen Sie die Syntax ein.
+
+Mehr zu Prioris bei `rstanarm` findet sich [hier](https://mc-stan.org/rstanarm/articles/priors.html).
+
+Mit `prior_summary(mein_model)` bekommt man einen Überblick über die Prioriwerte,
+die im Modell `mein_modell` verwendet wurden.
+
+
+Es macht Sinn, zu begründen, warum sie das Modell so gewählt haben,
+wie sie es gewählt haben.
+Wenn Sie eine Normalverteilung für die Priori-Verteilungen wählen,
+haben Sie Argumentationslinien: epistemologisch und ontologisch.
+Epistemologisch können Sie argumentieren, dass die Normalverteilung die Entropie maximiert,
+also die Verteilung mit den wenigsten Vorannahmen ist, wenn man davon ausgeht,
+dass die gesuchte Verteilung über eine endliche Varianz und einen endlichen Mittelwert verfügt.
+Ontologisch können Sie argumentieren, dass z.B. Körpergröße (innerhalb eines Geschlechts zumindest)
+hinreichend normalverteilt ist.
+
+Die Begründung für das lineare Modelle erschließt sich aus der Theorie,
+nämlich dass z.B. die gewählten UV den gesuchten Effekt gut beschreiben.
+
+
+
+#### Kausal- vs. Korrelationsmodell
+
+
+Sie wollten weiterhin angeben,
+ob sie ein kausales Modell im Kopf haben oder ein rein korrelatives.
+Bei einem kausalen Modell sollen dann die Pfeile Wirkungsrichtungen, 
+also Ursache-Wirkungs-Beziehungen angeben.
+Soll ihr Diagramm lediglich Korrelationen bzw. statistische Abhängigkeiten angeben,
+so geben Sie dieses an.
+
+Auch wenn ihre Studie nicht die "Kraft" hat,
+Kausalbeziehungen (in Gänze) aufzudecken,
+ist es trotzdem meistens sinnvoll,
+ein Kausalmodell aufzustellen,
+da Theorien (und Praxis) meist an Kausalbeziehungen interessiert sind,
+und an Korrelationsbeziehungen wenig(er).
+
+
+#### Hypothesen testen
+
+Das Testen der Hypothese ist eine Umsetzung der Idee,
+eine Behauptung einer empirisch-rationalen Prüfung zu unterziehen.
+
+
+Es bietet sich an, eine Hypothese zu wählen,
+wenn der Stand der Theorie dies erlaubt,
+idealerweise mehr als nur eine Null-Effekt-Hypothese, 
+etwas $\beta=0$.
+Dass nämlich ein Effekt *exakt* Null ist,
+erscheint für die meisten Situationen der Sozialwissenschaften reichlich unplausibel.
+
+Sie sollten die Hypothese zuerst als Aussage formulieren,
+aber danach möglichst mit mathematischen Symbolen präzisieren ("statistische Hypothesen").
+
+Hier sind Beispiele für statistische Hypothesen:
+
+- $H: \mu > 0$
+- $H: \mu = 0$
+- $H: \mu \ne 0$
+- $H: \beta > 0$
+- $H: d > 0$
+- $H: R^2 > 0$
+
+
+
+
+Dabei meint $\beta$ ein Regressiongewicht,
+$d$ eine Differenz (zweier Gruppen) und 
+$R^2$ die erklärte Varianz eines Modells.
+
+$R^2$ als Kennzahl einer Hypothese ist interessant,
+weil es Ihnen erlaubt, ein ganzes Modell als Hypothese zu formulieren.
+Also "Verbundhypothesen" aufzustellen, die mehr als eine oder zwei Variablen umfassen.
+
+
+Möchten Sie eine Hypothese zu einem Parameter testen,
+der einen Nullwert beinhaltet, bietet sich das ROPE-Verfahren an, vgl. @kruschke_rejecting_2018.
+
+
+
+#### Parameterschätzung
+
+
+Bei einer Parameterschätzung formulieren Sie ein Modell,
+genau wie beim Hypothesen testen, nur eben ohne Hypothesen.
+Es geht Ihnen dann nicht um die Frage, *ob* irgend ein Sachverhalt der Fall ist (das ist Hypothesen prüfen).
+Stattdessen interessieren Sie sich für die Frage, *wie sehr* etwas der Fall ist:
+
+- "Wie stark ist der Zusammenhang von Lernzeit und Prüfungserfolg?"
+- "Um wie viele Sekunden parken Frauen im Schnitt schneller ein als Männer?"
+- "Wie groß ist der statistische Effekt eines Sportwagens auf einem männlichen Profilbild beim Online-Dating?"
+
+Auch hier ist es erlaubt und sinnvoll, eine sprachliche Frage, die oft vage ist,
+schon aufgrund der natürlichen Ambuität der Sprache, mit Hilfe mathematischer Notation zu präzisieren:
+
+- "Der Zusammenhang $\beta$ ist definiert als das Regressiongewicht der Variable `lern` im Modell `m1`.
+- "Operationalisiert wurde die Einparkgeschwindigkeit als die Dauer der Durchführung in Sekunden nach Instruktion wie im Abschnitt XYZ beschrieben. Unser Modell (`m1`) schätzte den Parameter `s`.
+- "Der statistische Effekt ist definiert als das Regressiongewicht der experimentellen Bedingung (binäre Variable `group`) im Modell `m1`.
+
+Geben Sie weiter an, welches Intervall Sie berichten, z.B. "Die Parameterschätzungen werden anhand eines 95%-HDI berichtet".
+
+Auch wenn Sie eine Hypothese testen, sollten Sie Bereichsschätzungen für die Parameter vornehmen,
+also Schätzbereiche aus der Posteriori-Verteilung berichten.
+
+
+## Methodenteil
+
+### Analyse
+
+#### Bayes erklären
+
+1. Erklären Sie, warum Sie eine Bayes-Analyse verwenden und nicht eine frequentistische.
+Eine ehrliche Antwort wäre zwar, "mein Dozent wollte es so, was bleibt mir groß übrig",
+aber es gibt (vermutlich?!) auch fachliche Gründe (z.B.: Eine Priori-Annahme zur Wahrscheinlichkeit eines Parameters wird durch Daten zu einer Wahrscheinlichkeit verschoben).
+Die sollten sie anführen.
+
+2. Erklären, was eine Bayes-Analyse ist. (Man bekommt Wahrscheinlichkeiten für Hypothesen, was man beim Frequentismus nicht bekommt.)
+
+3. Führen Sie an, ob Sie an einer Parameterschätzung oder einer Hypothesentestung interessiert sind. Beides ist ok.
+
+Bayes-Statistiken sollten Sie im kurz erläutern,
+da sie vielen Lesis nicht so gut vertraut sein wird.
+
+Sie können z.B. bei @kruschke_rejecting_2018" die Grundlagen des ROPE-Konzepts nachlesen.
+Vielleicht findet sich ja auch in Ihrem Statistik-Skript etwas Passendes?
+
+
+#### ROPE
+
+Kurz gesagt wird beim ROPE geprüft, welcher Anteil des Posteriori-Intervalls zu einem Bereich "vernachlässigbar kleiner" Parameterwerte bewegt. 
+Die folgende Abbildung illustriert ein Rope für die Forschungsfrage "Wie stark ist der Effekt der Zylinderzahl auf den Spritverbrauch?";
+genauer gesagt ist die Posteriori-Verteilung für den (Regressions-)Effekt, $\beta$, des Parameters `cyl` gezeigt.
+Wie man sieht, ist die Posteriori-Verteilung (glockenförmige Verteilung) komplett außerhalb des
+Bereichs "sehr kleiner" Werte (ROPE; blaues Rechteck rechts).
+Wir resümieren: "Es ist auszuschließen, dass der Effekt der Variable Zylinder auf den Spritverbrauch praktisch Null (sehr klein) ist". 
+
+Wenn man die Null bzw. den Nullbereich (ROPE) eines Parameters ausschließt,
+nennt man das Ergebnis bzw. den Effekt auch "signifikant" (leider ein häufig missbrauchter und missverstandener Begriff).
+Unser Effekt in diesem Beispiel ist also signifikant (nach dieser Definition).
+Ist ein Effekt signifikant, so heißt das synonym, dass die Nullhypothese ausgeschlossen ist (falsifiziert),
+natürlich immer auf Basis des vorliegenden Modells bzw. der vorliegenden Daten.
+
+
+```{r echo = FALSE}
+library(easystats)
+library(rstanarm)
+m1 <- stan_glm(mpg ~ cyl, data = mtcars, refresh = 0)
+
+plot(rope(m1))
+```
+
+
+
+
+## Ergebnisteil
+
+### Deskriptive Statistik
+
+#### Was soll ich schreiben?
+
+
+Bevor Sie die Ergebnisse Ihrer Modellierung zeigen,
+bietet sich etwas "Aufwärmen" an,
+vor dem Fußballspiel wärmt man sich ja auch erstmal auf.
+Dazu bieten sich die *deskriptiven Statistiken* zu Ihren Daten an.
+
+Häufig wird man ein Maß der zentralen Tendenz (Mittelwert oder Median) sowie 
+ein dazu passendes Streuungsmaß berichten (z.B. SD) berichten.
+Evtl. kann man ein Maß zur Präzision des Mittelwerts angeben (SE).
+Bei schiefen Verteilungen greift man meist auf robuste Kennwerte zurück;
+bei normalverteilten Verteilungen ist Mittelwert und SD die Statistik der Wahl.
+
+
+
+*Formulierungsvorschlag*
+
+>   Der mittlere Achtsamkeits-Wert lag in der Stichprobe bei *M* = 12.23 (*SD* = 1.23).
+
+Hat man eine größere Zahl an Statistiken,
+so bietet es sich an, die Ergebnisse nicht im Fließtext, sondern in einer Tabelle zu berichten.
+
+Eine nützliche Ergänzung ist es,
+zusätzlich zu den univariaten Statistiken noch Zusammenhangskoeffizienten (Korrelationen) zu berichten.
+
+#### Umsetzung mit R
+
+Mit gängigen R-Methoden kann man sich deskriptive Statistiken ausgeben lassen:
+
+```{r}
+mtcars %>% 
+  summarise(mpg_avg = mean(mpg),
+            mpg_sd = sd(mpg),
+            cor_mpg_hp = cor(mpg, hp))
+```
+
+
+Oder aber man nutzt "Statistik-Fast-Food" und lässt sich einen Haufen Zahlen auf einmal ausgeben.
+Die R-Pakete `r_statix` oder `easystats` helfen dabei.
+
+```{r}
+library(easystats)
+
+describe_distribution(mtcars)
+```
+
+
+Tabellen mit `flextable()` oder `gt()` kann man sich eine schicke Tabelle (im HTML-Format) ausgeben lassen,
+die man dann per Copy-Paste in Word, d.h. den eigene Forschungsbericht, übernehmen kann:
+
+
+```{r}
+library(gt)  # gt wie "grammer of tables"
+library(flextable)
+
+
+meine_tab <- 
+  describe_distribution(mtcars) %>% 
+  gt() %>%  # erzeugt schicke Tabelle
+  fmt_number(where(is.numeric), decimals = 2) # Anzahl der Dezimalstellen
+
+meine_tab
+```
+
+
+
+
+[Hier](https://data-se.netlify.app/2022/05/02/kontigenztabellen-in-r/#exportieren) findet sich noch mehr zum Thema Exportieren von Tabellen aus R nach Word.
+
+Eine *tidy* Korrelationstabelle kann man sich z.B. (mit `easystats`, aber es gibt mehrere R-Pakete für diesen Zweck) so ausgeben lassen:
+
+```{r}
+meine_cor_tab <-
+  mtcars %>% 
+  select(mpg, hp, disp) %>% 
+  correlation()
+
+meine_cor_tab
+```
+
+
+Möchten man eine *quadratische* Korrelationstabelle - was der üblichen Berichtsform entspricht - kann man das so bekommen:
+
+```{r}
+summary(meine_cor_tab) %>% 
+  gt() %>%  # machen wir gleich eine schicke HTML-Tabelle
+  fmt_number(where(is.numeric), decimals = 2)
+```
+
+Vergessen Sie nicht, das Tabellen (genau wie Abbildungen) im Text zu referenzieren sind.
+
+
+### Inferenzstatistik
+
+
+#### Posteriori-Verteilung
+
+Für jede Hypothese müssen Sie die zentralen Ergebnisse berichten.
+Die Hypothesen beziehen sich auf Populationen, 
+also benötigen wir Inferenzstatistik.
+In der frequentistischen Statistik finden hier Statistiken wie der p-Wert und
+das (frequentistische) Konfidenzintervall Verwendung.
+In einer Bayes-Analyse ist die Posteriori-Verteilung der Dreh- und Angelpunkt der Ergebnisse.
+
+Die Post-Verteilung gibt an, wie wahrscheinlich ein bestimmter Parameterwert jetzt ist,
+nachdem die Daten bekannt sind.
+
+
+Ein statistisches Modell wird zumeist mit einem Regressionsmodell umgesetzt.
+Ein Regressionsmodell kann man in R mit `lm()` (frequentistisch) oder z.B. `stan_glm()` (Bayes) berechnen.
+Die Syntax ist sehr ähnlich.
+
+
+
+#### Umsetzung in R
+
+Sie können eine Posteriori-Verteilung z.B. für ihr Modell berechnen:
+
+```{r results='hide'}
+library(rstanarm)
+
+m1 <- stan_glm(mpg ~ am, data = mtcars)
+```
+
+
+
+```{r}
+posterior_interval(m1, prob = .95)
+```
+
+
+Wir bekommen ein 95%-Perzentilintervall (PI, kein HDI, ist aber auch ok, allerdings ist das HDI einen Tick besser).
+Es erlaubt uns zu sagen, dass der Unterschied im Spritverbrauch zwischen 3.6 und 11 Meilen (pro Gallone Sprit) liegt,
+laut dem Modell.
+
+Ein HDI bekommen Sie so:
+
+```{r}
+library(easystats)
+hdi(m1)
+```
+
+Die Tabelle können Sie natürlich auch gleich wieder aufhübschen, für Ihren Bericht:
+
+```{r}
+hdi(m1) %>% 
+  gt() %>% 
+  fmt_number(where(is.numeric), decimals = 2)
+```
+
+
+Den Punktschätzer (`mean`) zum Unterschied für die Gruppen (Automatik vs. Schaltgetriebe) bekommen wir z.B. mit `summary(m1)`:
+
+
+```{r}
+summary(m1)
+```
+
+Der Unterschied zwischen den beiden Gruppen liegt laut Modell bei ca. 7.2 Meilen
+
+Im Bericht könnte man z.B. schreiben:
+
+*Formulierungsvorschlag*
+
+>    Der Unterschied im Spritverbrauch zwischen den beiden Gruppen (Automatik vs. Schaltgetriebe) wurde auf 7.2 Meilen geschätzt, 95% PI [3.7, 11.0]. 
+
+Weiter macht es Sinn zu überlegen, ob Sie den Effekt für "klein" oder "groß" halten.
+Das ist eine subjektive Frage, die Sie am besten auf Basis theoretischer (nicht statistischer) Überlegungen
+entscheiden.
+Am besten Sie erwähnen im Methodenteil, was Sie als "kleinen" und "großen" Effekt einschätzen.
+So könnten Sie argumentieren, dass ein Unterschied von 1 Meile "klein" ist und 5 Meilen "groß".
+Demnach sprechen unsere Ergebnisse deutlich gegen einen kleinen Effekt und 
+sind gut mit einem "großen" Effekt kompatibel.
+
+
+Es bietet sich an, die Parameter-Schätzbereiche zu visualisieren.
+Das kann man z.B. so machen:
+
+
+```{r out.width="100%", fig.asp = .3}
+plot(m1)
+```
+
+Das Diagramm zeigt den Mittelwert im Standard den Medien sowie 50% und 90% PI,
+das kann man aber ändern [wie hier erläutert](https://mc-stan.org/rstanarm/reference/plot.stanreg.html):
+
+```{r out.width="100%", fig.asp = .3}
+plot(m1, prob = .5, prob_outer = .95)
+```
+
+
+
+Möchte man verschiedenen Regressiongsgewichte vergleichen,
+bietet es u.U. an, diese vorab zu standardisieren mit der z-Transformation.
+
+
+Mehr zur Analyse mit `rstanarm` findet sich z.B. [hier](http://mc-stan.org/rstanarm/articles/rstanarm.html) oder bei @gelman_regression_2021.
+
+
+Übrigens kann man ein `hdi()` auch plotten,
+wenn man möchte:
+
+```{r}
+plot(hdi(m1))
+```
+
+
+Sieht auch ganz schick aus; im Hintergrund wird `{easystats}` zum Plotten verwendet.
+Praktischerweise ist es ein ggplot-Diagramm, 
+man kann also mit bekannten Methoden nachpolieren, z.B.
+
+```{r}
+plot(hdi(m1)) +
+  labs(title ="Hier steht mein Titel",
+       y = "",
+       x = "Parameterwert") +
+  theme_minimal()
+```
+
+
+
+### ROPE
+
+Testen Sie eine Hypothese, die einen "praktischen Nullwert" ausschließen möchte, so bietet sich das ROPE-Verfahren an.
+
+Mit ROPE testet man demnach keine "Exaktnullhypothese", sondern eine "Praktischnullhypothese",
+nämlich dass ein Effekt so klein ist, dass er praktisch keine Bedeutung hat.
+
+Diesem Konzept liegt die Überlegung zugrunde,
+dass es in der freien Wildbahn kaum oder keine Effekte gibt,
+die *exakt* Null sind, also "0,0000000000000000000000000 ..." und so weiter bis alle Unendlichkeit.
+
+Sinnvoller ist es daher zu prüfen, ob ein Effekt *vernachlässigbar klein* ist für
+praktische Belange.
+
+Wie klein ein Effekt sein muss, um "klein genug" für "vernachlässigbar klein" zu sein,
+ist erstmal keine statistische Frage.
+
+Schauen Sie: Wie groß muss der Nutzen des Besuchens einer Vorlesung sein,
+damit Sie sie besuchen? Die Antwort der Frage hängt von mehreren Faktoren ab,
+und sie ist subjektiv in dem Sinne, dass die Antwort von persönlichen Präferenzen abhängt,
+die letztlich nicht objektiv zu begründen sind.
+
+
+So kann man in R ein ROPE berechnen (lassen):‚
+
+```{r out.width = "70%", fig.asp = .5}
+library(easystats)
+
+rope(m1)
+```
+
+
+Das Ergebnis sagt uns, dass 0% des 95%-HDI innerhalb des ROPE-Bereichs liegen.
+Die Nullhypothese ist also für praktische Zwecke auszuschließen.
+
+*Formulierungsvorschlag*
+>   Die Nullhypothese $H^1_0$ ist auszuschließen laut Modell m1, 0% ROPE. Der Effekt ist demnach in diesem Sinne signifikant.
+
+
+
+
+Das kann man sich auch plotten lassen:
+
+```{r out.width="100%", fig.asp = .3}
+plot(rope(m1))
+```
+
+Die Hilfeseite von `rope` sagt uns:
+
+>   Compute the proportion of the HDI (default to the 89% HDI) of a posterior distribution that lies within a region of practical equivalence.
+
+
+
+
+Weiter steht dort:
+
+`rope(x, range = "default", ci = 0.95, ci_method = "ETI", verbose = TRUE, ...)`
+
+`ETI` steht für "Equal Tail Interval", das ist ein Perzentilintervall.
+
+Zum Argument `range` ist zu lesen:
+
+>   ROPE's lower and higher bounds. Should be "default" or depending on the number of outcome variables a vector or a list. In models with one response, range should be a vector of length two (e.g., c(-0.1, 0.1)). In multivariate models, range should be a list with a numeric vectors for each response variable. Vector names should correspond to the name of the response variables. If "default" and input is a vector, the range is set to c(-0.1, 0.1). If "default" and input is a Bayesian model, rope_range() is used.
+
+
+Und `rope_range()` sagt uns in der Hilfeseite:
+
+>   Kruschke (2018) suggests that the region of practical equivalence could be set, by default, to a range from -0.1 to 0.1 of a standardized parameter (negligible effect size according to Cohen, 1988).
+
+
+
+
+Wobei man schon im Methodenteil ROPE definieren sollte, dann müsste man das hier nicht mehr tun.
+
+
+Merkhilfe zur Entscheidung mit ROPE:
+
+
+>   Schneidet ROPE mit dem Berg, dem roten, dann Verwerfen ist verboten!
+
+
+Mit "Verwerfen" ist das Verwerfen der "Praktischnullhypothese" gemeint.
+
+
+
+#### Standardisierte Effektstärke
+
+Vergleicht man Gruppen und ist z.B. die AV wenig anschaulich (etwa ein Summenscore),
+so bietet es sich, standardisierte Maße des Gruppenunterschieds anzugeben.
+Man nennt sie auch Maße der Effektstärke.
+
+Bei Gruppenvergleichen ist *Cohens d* ein bekanntes Maß.
+Man kann es sich so ausgeben lassen:
+
+```{r}
+library(easystats)
+cohens_d(mpg ~ am, data = mtcars)
+```
+
+Man gibt also die Regressionsformel und die Daten an.
+Zu beachten ist, 
+dass die AV zweistufig sein muss, sonst ist Cohens *d* nicht definiert.
+
+Praktischerweise kann man sich die Effektstärke auch gleich interpretieren lassen:
+
+```{r}
+interpret_cohens_d(-1.48)
+```
+
+
+Um $R^2$ in einem Bayes-Modell zu bekommen, bietet sich die Funktion `bayes_R2()` an: 
+
+```{r}
+m1_R2 <- 
+  bayes_R2(m1) %>% 
+  as_tibble()
+
+hdi(m1_R2)
+```
+
+
+
+#### R-Paket `report`
+
+Vielleicht ist das R-Paket `report` für Sie nützlich. Ich bin nicht ganz sicher,
+denn das Paket ist noch sehr neu und berichtet recht viel Informationen.
+Aber vielleicht wollen Sie es ja mal ausprobieren.
+
+```{r}
+library(easystats)
+```
+
+`report` lieft z.B. eine Beschreibung der Stichprobe:
+
+```{r}
+mtcars %>% 
+  select(1:3) %>%  # hier nur die Variablen 1 bis 3, der Einfachheit halber
+  report()
+```
+
+Oder auch für (Bayes-)Regressionsmodelle:
+
+
+```{r}
+report(m1)
+```
+
+
+`report` berichtet Statistiken nach dem sog. SEXIT-Konzept @makowski_indices_2019.
+Wenn Ihnen einige Statistiken nicht geläufig sind, ignorieren Sie sich einfach
+oder lesen Sie sie nach.
+ 
+## Diskussion
+
+
+Im Diskussionsteil fasst man die zentralen Ergebnisse zusammen und interpretiert sie.
+Danach schließt sich eine Kritik der Ergebnisse (oder vielmehr des Vorgehens) an.
+
+Ob man eine Hypothese "annimmt" oder "verwirft", sollte
+nicht von einer einzelnen Zahl abhängig sein.
+Vielmehr ist es keine Schwarz-Weiß-,
+sondern eine Grauton-Entscheidung mit mehreren Einflussgrößen,
+wie Präzision der Schätzung, Effektstärke, Stichprobengröße, Güte der Daten, Stärke des Versuchsplans, Generalisierbarkeit,
+um nur einige wichtige zu nennen.
+
+
+
+
+## Reproduzierbarkeit
+
+
+Der Geist der Wissenschaft heißt *Transparenz.*
+Also machen Sie ihre Arbeit nachprüfbar und legen Sie die zentralen Schritte offen:
+
+- Reichen Sie die Daten ein.
+- Reichen Sie die Syntax ein.
+- Reichen Sie die Messinstrumente und Stimuli ein (sofern nicht öffentlich einsehbar).
+- Explizieren Sie Ihr Vorgehen prägnant.
+- Erläutern Sie Ihre theoretischen Argumente nachvollziehbar und unter Bezug auf die Literatur.
+
+
+
+
+
+
+
+
+
+
+
