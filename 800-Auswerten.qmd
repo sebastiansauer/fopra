@@ -1,4 +1,4 @@
-# Auswerten
+# Auswerten: Überblick
 
 
 ```{r}
@@ -18,9 +18,9 @@ theme_set(theme_minimal())
 
 ### Lernziele
 
-
-- Sie können grundlagende Forschungsdesigns auswerten (mit R)
-- Sie können Grenzen Ihrer Auswertungsmethodik nennen
+- Sie können die typischen Schritte einer Datenanalyse (von Forschungsdaten der Psychologie) benennen.
+- Sie können grundlagende Forschungsdesigns auswerten (mit R).
+- Sie können Grenzen Ihrer Auswertungsmethodik nennen.
 
 
 

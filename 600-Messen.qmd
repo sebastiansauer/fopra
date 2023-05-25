@@ -439,7 +439,7 @@ Weitere Hinweise zur psychometrischen Qualität, Normierung und Faktorstruktur f
 Um die Items für ein bestimmtes System anzupassen, sind (geringfügige) Änderungen sinnvoll.
 
 
-@ferreira-barbosa_mediating_2023-1 präsentieren mehrere Skalen zur Messung der Usability und Nutzungsbereitschaft einer App, neben anderen Skalen wie Kundenzufriedenheit und Skalen des "e-Lifestyle".
+@ferreira-barbosa_mediating_2023 präsentieren mehrere Skalen zur Messung der Usability und Nutzungsbereitschaft einer App, neben anderen Skalen wie Kundenzufriedenheit und Skalen des "e-Lifestyle".
 
 
 
@@ -514,7 +514,7 @@ Im Anhang des Papers listen Sie die Items, geordnet nach Subskalen, auf.
 Eine weitere Möglichkeit stellt der *Computer Attitude Questionnaire (CAQ)* dar, 
 die die Einstellung von Schülern zu Computern, inkl. Computerängstlichkeit, misst.^[https://iittl.unt.edu/content/computer-attitude-questionnaire-caq]
 
-### Beispiele für Persönlichkeitstests
+#### Persönlichkeitstests
 
 
 
@@ -543,7 +543,7 @@ tests_tab
 ```
 
 
-### Beispele für State-Tests
+#### State-Tests
 
 Tests, die Zustände, also kurzzeitige Befindlichkeiten, messen bezeichnet man als Tests für *States*.
 
