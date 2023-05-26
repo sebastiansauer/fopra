@@ -452,6 +452,21 @@ Für die Zwecke einer Seminararbeit ist es ausreichend, Items (z.B. aus dem Engl
 :::
 
 
+### Tipps wie man ein Messinstrument findet
+
+
+Anstelle eines Fazits folgt hier eine kurze Zusammenfassung in Form von Tipps,
+wie man ein geeignetes Messinstrument finden kann:
+
+
+1. Nicht immer sind Messinstrumente für Ihren Zweck eigenständig publiziert. Stattdessen sind sie Teil einer Studie. Lesen Sie daher *einschlägige Fachartikel* und übernehmen Sie die Messmethode der Autoren
+
+2. Recherchieren Sie bei einschlägigen wissenschaftlichen *Suchmaschinen* wie Google Scholar, Psyndex oder Elicit nach Instrumenten und Fachartikeln.
+
+3. Überlegen Sie, ob Sie einen Fragebogen durch *Verhaltensbeobachtung* ersetzen: Reaktionszeit bei der Wahl einer Alternative, akzeptabler subjektive Kaufpreis, Wissenstest, implizite Verfahren ... Solche Maße können Sie (für die Zwecke der Seminararbeit) ohne Prüfung der Validität einsetzen.
+
+
+
 
 
 
