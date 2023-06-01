@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.247">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
-<title>Forschungsprojekt - 13&nbsp; Abschluss</title>
+<title>Forschungsprojekt - 9&nbsp; Kausalinferenz</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,8 +17,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
-
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
@@ -30,8 +60,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./references.html" rel="next">
-<link href="./pruefung.html" rel="prev">
+<link href="./800-Auswerten.html" rel="next">
+<link href="./700-Erheben.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -40,10 +70,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
-<script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -61,35 +88,26 @@ ul.task-list li input[type="checkbox"] {
     "search-detached-cancel-button-title": "Abbrechen",
     "search-submit-button-title": "Abschicken"
   }
-}</script>
-
-
-<link rel="stylesheet" href="styles.css">
+}</script><link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><link rel="stylesheet" href="styles.css">
 </head>
-
 <body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./abschluss.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Abschluss</span></a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./750-kausal.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Kausalinferenz</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Suchen" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Forschungsprojekt</a> 
     </div>
@@ -101,7 +119,7 @@ ul.task-list li input[type="checkbox"] {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Hinweise</span></span></a>
@@ -151,7 +169,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./750-kausal.html" class="sidebar-item-text sidebar-link">
+  <a href="./750-kausal.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Kausalinferenz</span></span></a>
   </div>
 </li>
@@ -175,7 +193,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./abschluss.html" class="sidebar-item-text sidebar-link active">
+  <a href="./abschluss.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Abschluss</span></span></a>
   </div>
 </li>
@@ -186,19 +204,33 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Inhaltsverzeichnis</h2>
+   
+  <ul>
+<li>
+<a href="#lernsteuerung" id="toc-lernsteuerung" class="nav-link active" data-scroll-target="#lernsteuerung"><span class="header-section-number">9.1</span> Lernsteuerung</a>
+  <ul class="collapse">
+<li><a href="#lernziele" id="toc-lernziele" class="nav-link" data-scroll-target="#lernziele"><span class="header-section-number">9.1.1</span> Lernziele</a></li>
+  <li><a href="#position-im-lernpfad" id="toc-position-im-lernpfad" class="nav-link" data-scroll-target="#position-im-lernpfad"><span class="header-section-number">9.1.2</span> Position im Lernpfad</a></li>
+  <li><a href="#ben%C3%B6tigte-r-pakete" id="toc-benötigte-r-pakete" class="nav-link" data-scroll-target="#ben%C3%B6tigte-r-pakete"><span class="header-section-number">9.1.3</span> Benötigte R-Pakete</a></li>
+  <li><a href="#tldr" id="toc-tldr" class="nav-link" data-scroll-target="#tldr"><span class="header-section-number">9.1.4</span> tl;dr</a></li>
+  </ul>
+</li>
+  <li><a href="#einf%C3%BChrung-in-die-kausalanalyse" id="toc-einführung-in-die-kausalanalyse" class="nav-link" data-scroll-target="#einf%C3%BChrung-in-die-kausalanalyse"><span class="header-section-number">9.2</span> Einführung in die Kausalanalyse</a></li>
+  <li><a href="#kausalanalyse-praktisch-dagitty.net" id="toc-kausalanalyse-praktisch-dagitty.net" class="nav-link" data-scroll-target="#kausalanalyse-praktisch-dagitty.net"><span class="header-section-number">9.3</span> Kausalanalyse praktisch: dagitty.net</a></li>
+  <li><a href="#kausalanalyse-in-der-praxis" id="toc-kausalanalyse-in-der-praxis" class="nav-link" data-scroll-target="#kausalanalyse-in-der-praxis"><span class="header-section-number">9.4</span> Kausalanalyse in der Praxis</a></li>
+  <li><a href="#aufgaben" id="toc-aufgaben" class="nav-link" data-scroll-target="#aufgaben"><span class="header-section-number">9.5</span> Aufgaben</a></li>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Abschluss</span></h1>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title">
+<span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Kausalinferenz</span>
+</h1>
 </div>
 
 
@@ -211,15 +243,72 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
-</header>
+</header><section id="lernsteuerung" class="level2" data-number="9.1"><h2 data-number="9.1" class="anchored" data-anchor-id="lernsteuerung">
+<span class="header-section-number">9.1</span> Lernsteuerung</h2>
+<section id="lernziele" class="level3" data-number="9.1.1"><h3 data-number="9.1.1" class="anchored" data-anchor-id="lernziele">
+<span class="header-section-number">9.1.1</span> Lernziele</h3>
+<ul>
+<li>Sie wissen, ob in Ihrer der Kausaleffekt Ihrer Hypothese identifizierbar ist.</li>
+<li>Sie wissen, wie man einen DAG erstellt und prüft, um die Identifizierbarkeit eines Kausaleffekts zu untersuchen.</li>
+</ul></section><section id="position-im-lernpfad" class="level3" data-number="9.1.2"><h3 data-number="9.1.2" class="anchored" data-anchor-id="position-im-lernpfad">
+<span class="header-section-number">9.1.2</span> Position im Lernpfad</h3>
+<p>Sie befinden sich im Abschnitt “Auswertung” in <a href="index.html#fig-ueberblick">Abbildung&nbsp;<span>1.2</span></a>.</p>
+</section><section id="benötigte-r-pakete" class="level3" data-number="9.1.3"><h3 data-number="9.1.3" class="anchored" data-anchor-id="benötigte-r-pakete">
+<span class="header-section-number">9.1.3</span> Benötigte R-Pakete</h3>
+<div class="cell" data-hash="750-kausal_cache/html/unnamed-chunk-1_c06c930a164b5aa9eaa1b1e5feaf3ed4">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://easystats.github.io/easystats/">easystats</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://mc-stan.org/rstanarm/">rstanarm</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://www.dagitty.net">dagitty</a></span><span class="op">)</span>  <span class="co"># DAGs prüfen</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="tldr" class="level3" data-number="9.1.4"><h3 data-number="9.1.4" class="anchored" data-anchor-id="tldr">
+<span class="header-section-number">9.1.4</span> tl;dr</h3>
+<p>In diesem Kapitel wird folgende Frage beantwortet: “Macht es überhaupt Sinn, Statistik zu bemühen und einen Effekt meiner UV auf die AV auszurechnen?”. In der Regel untersucht Ihre Forschungsfrage eine Kausalfrage. Eine Kausalfrage fragt, ob X eine Auswirkung (einen “Effekt”) auf Y hat, vgl. <a href="200-themawahl.html#sec-taxo"><span>Kapitel&nbsp;3.2.3</span></a> und <a href="200-themawahl.html#fig-ziele">Abbildung&nbsp;<span>3.4</span></a>.</p>
+<p>(Nur) wenn man aufgrund des DAGs sagen kann, dass der Effekt der UV (auf die AV) “rein” ist, also nicht von anderen Variablen überlagert wird, ist der Effekt der UV <em>identifiziert</em>.</p>
+<div id="exm-stoerche" class="theorem example">
+<p><span class="theorem-title"><strong>Beispiel 9.1 </strong></span>Der Effekt von Störchen auf Babies ist nicht identifiziert. Der Einfluss von Störchen auf Babies ist konfundiert durch den Einfluss der Umwelt. Das heißt, dass der Zusammenhang von Störchen und Babies nicht kausal ist, sondern ein Scheinkorrelation, vgl. <a href="#fig-stoerche">Abbildung&nbsp;<span>9.1</span></a>.<span class="math inline">\(\square\)</span></p>
+</div>
+<div class="cell" data-hash="750-kausal_cache/html/fig-stoerche_a7ec2a44e82ddcac0608f59accaab19d">
+<div class="cell-output-display">
+<div id="fig-stoerche" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="750-kausal_files/figure-html/fig-stoerche-1.png" class="img-fluid figure-img" width="672"></p>
+<p></p><figcaption class="figure-caption">Abbildung&nbsp;9.1: Kausalmodell für das Lehrbuchbeispiel ‘Störche und Babies’</figcaption><p></p>
+</figure>
+</div>
+</div>
+</div>
+</section></section><section id="einführung-in-die-kausalanalyse" class="level2" data-number="9.2"><h2 data-number="9.2" class="anchored" data-anchor-id="einführung-in-die-kausalanalyse">
+<span class="header-section-number">9.2</span> Einführung in die Kausalanalyse</h2>
+<p><a href="">Dieses Kapitel</a> gibt eine Einführung in die Kausalanalyse.</p>
+</section><section id="kausalanalyse-praktisch-dagitty.net" class="level2" data-number="9.3"><h2 data-number="9.3" class="anchored" data-anchor-id="kausalanalyse-praktisch-dagitty.net">
+<span class="header-section-number">9.3</span> Kausalanalyse praktisch: dagitty.net</h2>
+<p><a href="http://dagitty.net/dags.html">dagitty.net</a> erlaubt, DAGs online zu zeichnen und ihre Identizierbarkeit zu prüfen.</p>
+</section><section id="kausalanalyse-in-der-praxis" class="level2" data-number="9.4"><h2 data-number="9.4" class="anchored" data-anchor-id="kausalanalyse-in-der-praxis">
+<span class="header-section-number">9.4</span> Kausalanalyse in der Praxis</h2>
+<ol type="1">
+<li>Lesen Sie die Literatur zu den Kausaleffekten zwischen Ihrer UV und AV.</li>
+<li>Zeichnen Sie bei Dagitty DAGs, die zur Literatur passen.</li>
+<li>Lassen Sie sich von Dagitty angeben, welche Variablen Sie kontrollieren müssen, um den Kausaleffekt zu identifizieren.</li>
+</ol>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hinweis
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Nicht jede Forschungsfrage ist identifizierbar. Es ist keine Schande, wenn man erkennt, dass der Kausaleffekt der eigenen Studie nicht identifizierbar ist. Im Gegenteil: Sie haben eine wissenschaftlichen Fortschritt erzielt. Denn vor Ihrer Studie war (evtl.) nicht klar, dass es noch ein Problem zu lösen gibt, bevor man die Forschungsfrage beantworten kann. Man war falschen Tatsachen aufgesessen. Jetzt, durch Ihre Studie, ist man einen Schritt weiter: Man weiß, wo das Problem liegt - und irgendwann wird die Forschung (vielleicht) auch diesen Kausaleffekt identifizieren. Für Ihre Note in einer Qualifizierungsarbeit spielt es keine Rolle, ob der Effekt identifizierbar ist. Für Ihre Note zählt alleine, ob Sie sorgfältig gearbeitet haben.<span class="math inline">\(\square\)</span></p>
+</div>
+</div>
+</section><section id="aufgaben" class="level2" data-number="9.5"><h2 data-number="9.5" class="anchored" data-anchor-id="aufgaben">
+<span class="header-section-number">9.5</span> Aufgaben</h2>
+<p>Im <a href="https://datenwerk.netlify.app/">Datenwerk</a> unter dem Tag <a href="https://datenwerk.netlify.app/#category=causal">causal</a> finden sich eine Reihe von Aufgaben zur Kausalanalyse.</p>
 
-<p>Sie haben dieses Modul abgeschlossen.</p>
-<p><i class="fa-solid fa-award" aria-label="award"></i></p>
 
-
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -451,16 +540,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="./pruefung.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Prüfung</span></span>
+</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="./700-Erheben.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Erheben</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./references.html" class="pagination-link">
-        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./800-Auswerten.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Auswerten: Überblick</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

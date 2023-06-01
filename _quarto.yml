@@ -18,6 +18,7 @@ book:
     - 500-Explikation.qmd
     - 600-Messen.qmd
     - 700-Erheben.qmd
+    - 750-kausal.qmd
     - 800-Auswerten.qmd
     - 900-Bayes.qmd
 

@@ -125,6 +125,8 @@ Beachten Sie, dass eine Forschungsfrage nicht so aussehen muss; sie kann auch an
 
 
 
+### Taxonomie von Forschungsfragen {#sec-taxo}
+
 
 Man kann Forschungsfragen in drei Arten gliedern, s. @fig-ziele.
 
