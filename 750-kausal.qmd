@@ -26,7 +26,6 @@ Sie befinden sich im Abschnitt "Auswertung" in @fig-ueberblick.
 library(tidyverse)
 library(easystats)
 library(rstanarm)
-library(dagitty)  # DAGs prüfen
 ```
 
 
@@ -83,9 +82,16 @@ print(km1)
 ## Kausalanalyse in der Praxis
 
 
-1. Lesen Sie die Literatur zu den Kausaleffekten zwischen Ihrer UV und AV.
-2. Zeichnen Sie bei Dagitty DAGs, die zur Literatur passen.
-3. Lassen Sie sich von Dagitty angeben, welche Variablen Sie kontrollieren müssen, um den Kausaleffekt zu identifizieren.
+1. {{< fa book >}} Lesen Sie die Literatur zu den Kausaleffekten zwischen Ihrer UV und AV.
+2. {{< fa pen >}} Zeichnen Sie bei Dagitty DAGs, die zur Literatur passen.
+3. {{< fa file-check >}} Lassen Sie sich von Dagitty angeben, welche Variablen Sie kontrollieren müssen, um den Kausaleffekt zu identifizieren.
+
+
+Gute Nachricht: Ein *schwacher* konfundierender Einfluss darf als "marginal" deklariert und ignoriert werden.
+Fragt sich nur, ab wann ist schwach schwach? 
+Eine Antwort darauf ist, wenn der entsprechende Regressionskoeffizient kleiner ist als 5% der Streuung (SD) der AV [@kruschke_rejecting_2018].
+
+
 
 
 :::{.callout-note}
@@ -96,12 +102,17 @@ Denn vor Ihrer Studie war (evtl.) nicht klar, dass es noch ein Problem zu lösen
 bevor man die Forschungsfrage beantworten kann. 
 Man war falschen Tatsachen aufgesessen.
 Jetzt, durch Ihre Studie, ist man einen Schritt weiter:
-Man weiß, wo das Problem liegt - und irgendwann wird die Forschung (vielleicht) auch diesen Kausaleffekt identifizieren.
+Man weiß jetzt, wo das Problem liegt - und irgendwann wird die Forschung (vielleicht) auch diesen Kausaleffekt identifizieren. {{< fa award >}}
 Für Ihre Note in einer Qualifizierungsarbeit spielt es keine Rolle,
 ob der Effekt identifizierbar ist.
 Für Ihre Note zählt alleine, ob Sie sorgfältig gearbeitet haben.$\square$
 :::
 
+
+## Literaturempfehlung
+
+@huntington-klein_effect_2022 beschreibt auf anschauliche Weise die Praxis der Versuchsplanung mit einem Schwerpunkt auf die Kausalanalyse. 
+Ein weiteres Plus ist, dass das Buch [frei im Internet zu lesen](https://theeffectbook.net/) ist.
 
 ## Aufgaben
 

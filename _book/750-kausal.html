@@ -51,7 +51,26 @@ div.sourceCode
 @media screen {
 pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
@@ -70,7 +89,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -223,7 +244,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#einf%C3%BChrung-in-die-kausalanalyse" id="toc-einführung-in-die-kausalanalyse" class="nav-link" data-scroll-target="#einf%C3%BChrung-in-die-kausalanalyse"><span class="header-section-number">9.2</span> Einführung in die Kausalanalyse</a></li>
   <li><a href="#kausalanalyse-praktisch-dagitty.net" id="toc-kausalanalyse-praktisch-dagitty.net" class="nav-link" data-scroll-target="#kausalanalyse-praktisch-dagitty.net"><span class="header-section-number">9.3</span> Kausalanalyse praktisch: dagitty.net</a></li>
   <li><a href="#kausalanalyse-in-der-praxis" id="toc-kausalanalyse-in-der-praxis" class="nav-link" data-scroll-target="#kausalanalyse-in-der-praxis"><span class="header-section-number">9.4</span> Kausalanalyse in der Praxis</a></li>
-  <li><a href="#aufgaben" id="toc-aufgaben" class="nav-link" data-scroll-target="#aufgaben"><span class="header-section-number">9.5</span> Aufgaben</a></li>
+  <li><a href="#literaturempfehlung" id="toc-literaturempfehlung" class="nav-link" data-scroll-target="#literaturempfehlung"><span class="header-section-number">9.5</span> Literaturempfehlung</a></li>
+  <li><a href="#aufgaben" id="toc-aufgaben" class="nav-link" data-scroll-target="#aufgaben"><span class="header-section-number">9.6</span> Aufgaben</a></li>
   </ul></nav>
     </div>
 <!-- main -->
@@ -255,11 +277,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Sie befinden sich im Abschnitt “Auswertung” in <a href="index.html#fig-ueberblick">Abbildung&nbsp;<span>1.2</span></a>.</p>
 </section><section id="benötigte-r-pakete" class="level3" data-number="9.1.3"><h3 data-number="9.1.3" class="anchored" data-anchor-id="benötigte-r-pakete">
 <span class="header-section-number">9.1.3</span> Benötigte R-Pakete</h3>
-<div class="cell" data-hash="750-kausal_cache/html/unnamed-chunk-1_c06c930a164b5aa9eaa1b1e5feaf3ed4">
+<div class="cell" data-hash="750-kausal_cache/html/unnamed-chunk-1_e75cbc73d23c978a6eb6090406d04f51">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://easystats.github.io/easystats/">easystats</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://mc-stan.org/rstanarm/">rstanarm</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://www.dagitty.net">dagitty</a></span><span class="op">)</span>  <span class="co"># DAGs prüfen</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://mc-stan.org/rstanarm/">rstanarm</a></span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section><section id="tldr" class="level3" data-number="9.1.4"><h3 data-number="9.1.4" class="anchored" data-anchor-id="tldr">
 <span class="header-section-number">9.1.4</span> tl;dr</h3>
@@ -286,10 +307,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section><section id="kausalanalyse-in-der-praxis" class="level2" data-number="9.4"><h2 data-number="9.4" class="anchored" data-anchor-id="kausalanalyse-in-der-praxis">
 <span class="header-section-number">9.4</span> Kausalanalyse in der Praxis</h2>
 <ol type="1">
-<li>Lesen Sie die Literatur zu den Kausaleffekten zwischen Ihrer UV und AV.</li>
-<li>Zeichnen Sie bei Dagitty DAGs, die zur Literatur passen.</li>
-<li>Lassen Sie sich von Dagitty angeben, welche Variablen Sie kontrollieren müssen, um den Kausaleffekt zu identifizieren.</li>
+<li>
+<i class="fa-solid fa-book" aria-label="book"></i> Lesen Sie die Literatur zu den Kausaleffekten zwischen Ihrer UV und AV.</li>
+<li>
+<i class="fa-solid fa-pen" aria-label="pen"></i> Zeichnen Sie bei Dagitty DAGs, die zur Literatur passen.</li>
+<li>
+<i class="fa-solid fa-file-check" aria-label="file-check"></i> Lassen Sie sich von Dagitty angeben, welche Variablen Sie kontrollieren müssen, um den Kausaleffekt zu identifizieren.</li>
 </ol>
+<p>Gute Nachricht: Ein <em>schwacher</em> konfundierender Einfluss darf als “marginal” deklariert und ignoriert werden. Fragt sich nur, ab wann ist schwach schwach? Eine Antwort darauf ist, wenn der entsprechende Regressionskoeffizient kleiner ist als 5% der Streuung (SD) der AV <span class="citation" data-cites="kruschke_rejecting_2018">(<a href="references.html#ref-kruschke_rejecting_2018" role="doc-biblioref">Kruschke 2018</a>)</span>.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -300,14 +325,25 @@ Hinweis
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Nicht jede Forschungsfrage ist identifizierbar. Es ist keine Schande, wenn man erkennt, dass der Kausaleffekt der eigenen Studie nicht identifizierbar ist. Im Gegenteil: Sie haben eine wissenschaftlichen Fortschritt erzielt. Denn vor Ihrer Studie war (evtl.) nicht klar, dass es noch ein Problem zu lösen gibt, bevor man die Forschungsfrage beantworten kann. Man war falschen Tatsachen aufgesessen. Jetzt, durch Ihre Studie, ist man einen Schritt weiter: Man weiß, wo das Problem liegt - und irgendwann wird die Forschung (vielleicht) auch diesen Kausaleffekt identifizieren. Für Ihre Note in einer Qualifizierungsarbeit spielt es keine Rolle, ob der Effekt identifizierbar ist. Für Ihre Note zählt alleine, ob Sie sorgfältig gearbeitet haben.<span class="math inline">\(\square\)</span></p>
+<p>Nicht jede Forschungsfrage ist identifizierbar. Es ist keine Schande, wenn man erkennt, dass der Kausaleffekt der eigenen Studie nicht identifizierbar ist. Im Gegenteil: Sie haben eine wissenschaftlichen Fortschritt erzielt. Denn vor Ihrer Studie war (evtl.) nicht klar, dass es noch ein Problem zu lösen gibt, bevor man die Forschungsfrage beantworten kann. Man war falschen Tatsachen aufgesessen. Jetzt, durch Ihre Studie, ist man einen Schritt weiter: Man weiß jetzt, wo das Problem liegt - und irgendwann wird die Forschung (vielleicht) auch diesen Kausaleffekt identifizieren. <i class="fa-solid fa-award" aria-label="award"></i> Für Ihre Note in einer Qualifizierungsarbeit spielt es keine Rolle, ob der Effekt identifizierbar ist. Für Ihre Note zählt alleine, ob Sie sorgfältig gearbeitet haben.<span class="math inline">\(\square\)</span></p>
 </div>
 </div>
-</section><section id="aufgaben" class="level2" data-number="9.5"><h2 data-number="9.5" class="anchored" data-anchor-id="aufgaben">
-<span class="header-section-number">9.5</span> Aufgaben</h2>
+</section><section id="literaturempfehlung" class="level2" data-number="9.5"><h2 data-number="9.5" class="anchored" data-anchor-id="literaturempfehlung">
+<span class="header-section-number">9.5</span> Literaturempfehlung</h2>
+<p><span class="citation" data-cites="huntington-klein_effect_2022">Huntington-Klein (<a href="references.html#ref-huntington-klein_effect_2022" role="doc-biblioref">2022</a>)</span> beschreibt auf anschauliche Weise die Praxis der Versuchsplanung mit einem Schwerpunkt auf die Kausalanalyse. Ein weiteres Plus ist, dass das Buch <a href="https://theeffectbook.net/">frei im Internet zu lesen</a> ist.</p>
+</section><section id="aufgaben" class="level2" data-number="9.6"><h2 data-number="9.6" class="anchored" data-anchor-id="aufgaben">
+<span class="header-section-number">9.6</span> Aufgaben</h2>
 <p>Im <a href="https://datenwerk.netlify.app/">Datenwerk</a> unter dem Tag <a href="https://datenwerk.netlify.app/#category=causal">causal</a> finden sich eine Reihe von Aufgaben zur Kausalanalyse.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
+<div id="ref-huntington-klein_effect_2022" class="csl-entry" role="listitem">
+Huntington-Klein, Nick. 2022. <em>The Effect: An Introduction to Research Design and Causality</em>. <span>Boca Raton</span>: <span>CRC Press, Taylor &amp; Francis Group</span>. <a href="https://theeffectbook.net/">https://theeffectbook.net/</a>.
+</div>
+<div id="ref-kruschke_rejecting_2018" class="csl-entry" role="listitem">
+Kruschke, John K. 2018. <span>„Rejecting or <span>Accepting Parameter Values</span> in <span>Bayesian Estimation</span>“</span>. <em>Advances in Methods and Practices in Psychological Science</em> 1 (2): 270–80. <a href="https://doi.org/10.1177/2515245918771304">https://doi.org/10.1177/2515245918771304</a>.
+</div>
+</div>
 </section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
