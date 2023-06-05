@@ -20,7 +20,8 @@ book:
     - 700-Erheben.qmd
     - 750-kausal.qmd
     - 800-Auswerten.qmd
-    - 900-Bayes.qmd
+    - 900-Modellieren.qmd
+    - 1000-Statistiken-berichten.qmd
 
     - pruefung.qmd
     - abschluss.qmd

@@ -84,7 +84,7 @@ print(km1)
 
 1. {{< fa book >}} Lesen Sie die Literatur zu den Kausaleffekten zwischen Ihrer UV und AV.
 2. {{< fa pen >}} Zeichnen Sie bei Dagitty DAGs, die zur Literatur passen.
-3. {{< fa file-check >}} Lassen Sie sich von Dagitty angeben, welche Variablen Sie kontrollieren müssen, um den Kausaleffekt zu identifizieren.
+3. {{< fa file >}} Lassen Sie sich von Dagitty angeben, welche Variablen Sie kontrollieren müssen, um den Kausaleffekt zu identifizieren.
 
 
 Gute Nachricht: Ein *schwacher* konfundierender Einfluss darf als "marginal" deklariert und ignoriert werden.
@@ -113,6 +113,8 @@ Für Ihre Note zählt alleine, ob Sie sorgfältig gearbeitet haben.$\square$
 
 @huntington-klein_effect_2022 beschreibt auf anschauliche Weise die Praxis der Versuchsplanung mit einem Schwerpunkt auf die Kausalanalyse. 
 Ein weiteres Plus ist, dass das Buch [frei im Internet zu lesen](https://theeffectbook.net/) ist.
+Tipp: Mit dem Übersetzungtool eines jeden Browers kann man sich das Buch schnell auf Deutsch übersetzen lassen.
+
 
 ## Aufgaben
 

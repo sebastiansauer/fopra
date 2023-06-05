@@ -1,4 +1,4 @@
-# Auswerten: Inferenz
+# Auswerten: Berichten von Statistiken
 
 
 
@@ -39,7 +39,7 @@ library(rstanarm)
 ## Warum das Berichten wichtig ist
 
 
-Statistische Analysen können komplex und schwierig zu verstehen sein.
+Statistische Analysen können komplex und schwierig zu verstehen sein.^[Das war Ihnen noch nicht aufgefallen? Ach so.]
 Die Versuchung ist daher immer gegeben, beim Berichten einer Analyse wichtige Aspekte
 unerwähnt oder unerklärt zu lassen.
 Lässt man aber wichtige Informationen aus, steigt die Gefahr,
@@ -163,10 +163,12 @@ so kann man die Null-Hypothese ausschließen.
 ### Modell definieren
 
 Es bietet sich auch an, ein Modell mit einem Pfaddiagramm bzw. DAG zu visualisieren,
-z.B. so:
+z.B. so, s. @fig-dagmodell1.
 
 
 ```{r out.width = "100%", fig.asp = .5}
+#| label: fig-dagmodell1
+#| fig-cap: Beispielhafter DAG
 library(dagitty)
 
 mein_modell <- "dag{
@@ -251,11 +253,10 @@ nämlich dass z.B. die gewählten UV den gesuchten Effekt gut beschreiben.
 
 
 Sie wollten weiterhin angeben,
-ob sie ein kausales Modell im Kopf haben oder ein rein korrelatives.
+ob Ihre Forschungsfrage ein kausales Modell annimmt oder ein deskiptives (korrelatives).
 Bei einem kausalen Modell sollen dann die Pfeile Wirkungsrichtungen, 
 also Ursache-Wirkungs-Beziehungen angeben.
-Soll ihr Diagramm lediglich Korrelationen bzw. statistische Abhängigkeiten angeben,
-so geben Sie dieses an.
+
 
 Auch wenn ihre Studie nicht die "Kraft" hat,
 Kausalbeziehungen (in Gänze) aufzudecken,
@@ -263,6 +264,9 @@ ist es trotzdem meistens sinnvoll,
 ein Kausalmodell aufzustellen,
 da Theorien (und Praxis) meist an Kausalbeziehungen interessiert sind,
 und an Korrelationsbeziehungen wenig(er).
+
+Viele wissenschaftliche Studien haben ein kausales Erkenntnisziel,
+nicht ein deskriptives.
 
 
 #### Hypothesen testen
@@ -424,7 +428,7 @@ mtcars %>%
 
 
 Oder aber man nutzt "Statistik-Fast-Food" und lässt sich einen Haufen Zahlen auf einmal ausgeben.
-Die R-Pakete `r_statix` oder `easystats` helfen dabei.
+Die R-Pakete `r_statix`, `skimr` oder `easystats` helfen dabei.
 
 ```{r}
 library(easystats)
@@ -513,19 +517,19 @@ m1 <- stan_glm(mpg ~ am, data = mtcars)
 
 
 ```{r}
-posterior_interval(m1, prob = .95)
+parameters(m1, prob = .95)
 ```
 
 
 Wir bekommen ein 95%-Perzentilintervall (PI, kein HDI, ist aber auch ok, allerdings ist das HDI einen Tick besser).
 Es erlaubt uns zu sagen, dass der Unterschied im Spritverbrauch zwischen 3.6 und 11 Meilen (pro Gallone Sprit) liegt,
 laut dem Modell.
+Der Schalter `prob` erlaubt, andere CI-Größen, z.B. 97% zu wählen.
 
 Ein HDI bekommen Sie so:
 
 ```{r}
-library(easystats)
-hdi(m1)
+parameters(m1, prob = .95, ci_method = "hdi")  # oder: hdi(m1)
 ```
 
 Die Tabelle können Sie natürlich auch gleich wieder aufhübschen, für Ihren Bericht:
@@ -537,14 +541,7 @@ hdi(m1) %>%
 ```
 
 
-Den Punktschätzer (`mean`) zum Unterschied für die Gruppen (Automatik vs. Schaltgetriebe) bekommen wir z.B. mit `summary(m1)`:
-
-
-```{r}
-summary(m1)
-```
-
-Der Unterschied zwischen den beiden Gruppen liegt laut Modell bei ca. 7.2 Meilen
+Den Punktschätzer (`Meidan`) zum Unterschied für die Gruppen (Automatik vs. Schaltgetriebe) hat uns die Funktion `parameters()` auch geliefert. Der Unterschied zwischen den beiden Gruppen liegt laut Modell bei ca. 7.2 Meilen.
 
 Im Bericht könnte man z.B. schreiben:
 
@@ -566,15 +563,10 @@ Das kann man z.B. so machen:
 
 
 ```{r out.width="100%", fig.asp = .3}
-plot(m1)
+parameters(m1) %>% plot(show_intercept = TRUE)
 ```
 
-Das Diagramm zeigt den Mittelwert im Standard den Medien sowie 50% und 90% PI,
-das kann man aber ändern [wie hier erläutert](https://mc-stan.org/rstanarm/reference/plot.stanreg.html):
-
-```{r out.width="100%", fig.asp = .3}
-plot(m1, prob = .5, prob_outer = .95)
-```
+Der Schalter `show_intercept` regelt, ob der Schätzwert für den Achsenabschnitt gezeigt werden soll oder nicht. 
 
 
 

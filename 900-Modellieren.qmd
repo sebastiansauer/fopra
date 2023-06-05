@@ -1,0 +1,328 @@
+# Auswerten: Modellieren
+
+
+```{r}
+#| include: false
+library(tidyverse)
+```
+
+
+```{r}
+#| echo: false
+library(ggplot2)
+theme_set(theme_minimal())
+```
+
+## Lernsteuerung
+
+
+### Lernziele
+
+
+- Sie können die Modellformel Ihrer Forschungsfrage nennen.
+- Sie können Ihre Modellformel (korrekt) in R spezifizieren.
+
+
+### Benötigte R-Pakete
+
+
+```{r}
+#| message: false
+library(tidyverse)
+library(easystats)
+library(ggstatsplot)
+library(rstanarm)
+```
+
+
+
+### Position im Lernpfad
+
+Sie befinden sich im Abschnitt "Auswerten" in @fig-ueberblick.
+
+
+
+
+
+
+## Metrische AV, between-Design
+
+
+Gängige Forschungsfragen dieser Art sind [hier](https://start-bayes.netlify.app/metrische-av) erläutert.
+
+
+
+## Metrische AV, within-Design
+
+
+### 1 within-Variable
+
+
+Eine Studie mit Vorher-Nachher-Messung setzt ein Within-Design um.
+
+
+:::{#exm-within1}
+### Statisches Diagramm vs. animiertes Diagramm
+Ein Forschungsteam untersuch den Effekt der UV *Diagrammart* `D` (mit den zwei Stufen `D.1` *animiert* und `D.2` *statisch*) auf die Behaltensleistung (`y`) von Probanden.
+Nach jeder Bedingung wird die Behaltensleistung gemessen (anhand von 10 Wissensfragen, die jeweils als "richtig" oder "falsch" bewertet wurden), mit `y1` nach `D.1` und `y2` für `D.2`.
+:::
+
+
+
+#### Design
+
+
+Forschungsfrage:
+
+>    Hat die Diagrammart einen Einfluss auf die Behaltensleistung? Anders gesagt: Unterscheiden sich die Diagrammarten in ihrem Einfluss auf die Behaltensleistung?
+
+
+Die zugehörige Hypothese kann man so formulieren: $d \ne 0$, wobei $d = y_1 - y_2$.
+
+Die Modellformel lautet: `d ~ 1`,
+das ist ein *Interceptmodell*, also ein Modell ohne Prädiktor. 
+Uns interessiert, ob die Variable `d` im Mittelwert ungleich Null ist.
+
+```{mermaid}
+flowchart LR
+  D.1 --> y1 --> D.2 --> y2
+```
+
+
+#### Deskriptive Analyse
+
+Hier sind einige Spieldaten:
+
+```{r}
+#| message: false
+d_within <- 
+  read_csv("https://raw.githubusercontent.com/sebastiansauer/Lehre/main/data/withindesign.csv") %>% 
+  select(-c(y3, g)) # diese beiden Variablen ignorieren wir für den Augenblick
+
+head(d_within)
+```
+
+
+Wir berechnen `d`:
+
+```{r}
+d_within <-
+  d_within %>% 
+  mutate(d = y1 - y2)
+
+head(d_within)
+```
+
+
+```{r}
+gghistostats(d_within,
+             x = d,
+             results.subtitle = FALSE  # verzichte auf zusätzliche Statistiken
+             )
+```
+
+Da `d` im Mittel negativ ist, ist der Mittelwert von `y2` höher als der von `y1`.
+
+
+```{r}
+d_within %>% 
+  describe_distribution(d)
+```
+
+
+Um die Daten noch anders  visualisieren zu können, formen wir sie ins "lange Format" um.
+
+```{r}
+d_long <-
+  d_within %>% 
+  pivot_longer(cols = c(y1, y2), names_to = "time", values_to = "y")
+
+head(d_long)
+```
+
+
+Visualisieren wir uns die Daten:
+
+```{r}
+ggwithinstats(
+  data = d_long,
+  x = time,
+  y = y,
+  results.subtitle = FALSE  # verzichte auf zusätzliche Statistiken
+)
+```
+
+
+#### Inferenzanalyse
+
+Wir berechnen das Modell:
+
+```{r}
+m1 <- stan_glm(d ~ 1, data = d_within, refresh = 0)
+parameters(m1)
+```
+
+Hier ist eine Visualisierung des 95%-ETI des Unterschieds (`d`) zwischen den Bedingungen:
+
+```{r}
+parameters(m1) %>% plot(show_intercept = TRUE)
+```
+
+
+### 1 within-Variable, 1 between-Variable
+
+
+
+
+>    Hat die Diagrammart einen Einfluss auf die Behaltensleistung? Anders gesagt: Unterscheiden sich die Diagrammarten in ihrem Einfluss auf die Behaltensleistung? Dabei kontrollieren wir die Reihenfolge.
+
+
+Die zugehörige Hypothese kann man so formulieren: $d \ne 0$, wobei $d = y_1 - y_2$.
+
+Die Modellformel lautet: `d ~ 1 + g`.
+Das kann man synonym so schreiben: `d ~ g`.
+Uns interessiert, ob die Variable `d` im Mittelwert ungleich Null ist.
+
+
+
+```{mermaid}
+flowchart LR
+  subgraph g2
+    direction LR
+    D.1 --> y1 --> D.2 --> y2
+  end
+  subgraph g1
+    direction LR
+    D2[D.2] --> y22[y2] --> D1[D.1] --> y11[y1] 
+  end
+```
+
+
+#### Deskriptive Analyse
+
+Hier sind einige Spieldaten:
+
+```{r}
+#| message: false
+d_within <- 
+  read_csv("https://raw.githubusercontent.com/sebastiansauer/Lehre/main/data/withindesign.csv") %>% 
+  select(-c(y3)) # die  Variable `y3` ignorieren wir für den Augenblick
+
+head(d_within)
+```
+
+
+
+Wir berechnen `d`:
+
+```{r}
+d_within <-
+  d_within %>% 
+  mutate(d = y1 - y2)
+
+head(d_within)
+```
+
+
+```{r}
+ggbetweenstats(
+  d_within,
+  x = g,
+  y = d,
+  results.subtitle = FALSE
+)
+```
+
+Es gibt einen gewissen Unterschied zwischen den Bedingungen;
+die Reihenfolge könnte einen Einfluss haben.
+Aber wir müssen inferenzstatistisch prüfen, wie groß der Einfluss ist.
+
+
+
+#### Inferenzanalyse
+
+
+
+```{r}
+m2 <- stan_glm(d ~ g, data = d_within, refresh = 0)
+parameters(m2)
+```
+
+Das CI für die Reihenfolge (Variable `gB`) beinhaltet die Null nicht;
+der Koeffizient `pd` gibt knapp 90% Wahrscheinlichkeit für einen (negativen Effekt) an.
+Damit haben wir einige Evidenz für einen Reihenfolgeneffekt.
+
+Der Effekt für `d` (`(Intercept)`) zeigt ein Intervall, das die Null nicht enthält.
+Daher haben wir auch hier wieder Evidenz gegen die Nullhypothese.
+
+
+
+### 1 within-Variable mit mehr als zwei Stufen
+
+{{< fa dumbbell >}} VERTIEFUNG {{< fa dumbbell >}}
+
+
+#### Deskriptive Analyse
+
+Hier sind einige Spieldaten:
+
+```{r}
+#| message: false
+d_within <- 
+  read_csv("https://raw.githubusercontent.com/sebastiansauer/Lehre/main/data/withindesign.csv")
+
+head(d_within)
+```
+
+Hier benötigen wir die Daten in Langform:
+
+
+```{r}
+d_long <-
+  d_within %>% 
+  pivot_longer(cols = y1:y3, names_to = "time", values_to = "y")
+
+head(d_long)
+```
+
+
+#### Inferenzanalyse
+
+
+
+```{r}
+m3 <- stan_lmer(y ~ 1 + (1 | time), data = d_long, refresh = 0)
+summary(m3)
+```
+
+Nur die festen (fixed) Effekte kann man sich so ausgeben lassen:
+
+```{r}
+fixef(m3)
+```
+
+
+Im Durchschnitt werden ca. 7.1 Fragen richtig beantwortet (Gesamtmittel).
+
+
+Nur die Random-Effekte kann man sich so ausgeben lassen:
+
+```{r}
+ranef(m3)
+```
+
+Das sind jeweils die Abweichungen der Gruppenmittelwerte (y1, y2, y3) vom Gesamtmittel.
+
+```{r}
+plot(m3)
+```
+
+
+
+## Aufgaben
+
+
+S. bei [Datenwerk]() die Aufgaben mit dem Tag [research-question](https://datenwerk.netlify.app/#category=research-question) und [researchdesign](https://datenwerk.netlify.app/#category=researchdesign)
+
+
+- [within-design-analysis1](https://datenwerk.netlify.app/posts/within-design-analysis1/within-design-analysis1.html)
