@@ -48,11 +48,11 @@ Sie befinden sich im Abschnitt "Auswerten" in @fig-ueberblick.
 
 
 
-## Metrische AV, between-Design
 
-### 1 between-Variable
 
-#### Design
+## 1 between-Variable
+
+### Design
 
 @sauer_effect_2023 untersuchten in einer Querschnittsstudie den Effekt des Wirkstoff *Bringnixtin* auf die fluide Intelligenz. Die Autoren nahmen an, dass der Wirkstoff den individuellen Wert der abhängigen Variable erhöhen würde.
 
@@ -64,7 +64,9 @@ Der Ablauf (aus Sicht der Probandis) ist in @fig-bringtnixtin-flow dargestellt.
 `outro` meint die Verabschiedung der Probanden sowie einige Fragen zu Compliance.
 
 
-Die Hypothese lautet: $\mu_{g.2} > \mu_{g.1}$. In Worten:
+Die Hypothese lautet: $\mu_{g.2} > \mu_{g.1}$. 
+
+In Worten:
 
 >  Wir erwarten, dass der Mittelwert der Experimentalgruppe höher ist als der Mittelwert der Kontrollgruppe.
 
@@ -133,17 +135,29 @@ d_bringtnixtin <- read_csv(d_bringtnixtin_path)
 Die Autoren der Studie geben an, dass die Daten in z-Einheiten skaliert sind.
 
 
-#### Deskriptive Analyse
+### Deskriptive Analyse
 
 
 ```{r}
+#| eval: false
 d_bringtnixtin %>% 
   group_by(g) %>% 
   summarise(iq_mw = mean(y2),
             iq_sd = sd(y2)) 
 ```
 
-Die deskiptiven Kennwerte sind in @fig-bringtnixtin-desk dargestellt.
+
+```{r}
+#| echo: false
+#| label: tbl-bringtnixtin-desk
+#| tbl-cap: "Mittlere fluide Intelligenz nach der Bringtnixtin-Intervention in Abhängigkeit der Gruppe"
+d_bringtnixtin %>% 
+  group_by(g) %>% 
+  summarise(iq_mw = mean(y2),
+            iq_sd = sd(y2)) 
+```
+
+Die deskriptiven Kennwerte sind in @fig-bringtnixtin-desk dargestellt.
 Das sieht nicht gerade nach einem großen Effekt aus ...^[Die Mittelwerte der beiden Gruppen sind praktisch identisch.]
 
 
@@ -160,7 +174,7 @@ ggbetweenstats(
 
 
 
-#### Modellierung
+### Modellierung
 
 
 Wir berechnen ein lineares Modell mit der Modellformel `y2 ~ g`. 
@@ -204,17 +218,21 @@ dass Bringtnixtin nix bringt.
 >   👩‍🏫 Herr Professor Sauer, auch ein negatives Ergebnis bringt die Wissenschaft weiter.
 
 
-Testen wir eine Nullhypothese mit dem ROPE-Verfahren, s. @tbl-m1-rope und @fig-m1-rope.
+Testen wir eine Nullhypothese mit dem ROPE-Verfahren: `rope(m_bringtnixtin)`, s. @tbl-m1-rope und @fig-m1-rope.
+
+
+
 
 ```{r}
 #| label: tbl-m1-rope
 #| tbl-cap: ROPE für Modell m_bringtnixtin
-rope(m_bringtnixtin)
+#| echo: false
+rope(m_bringtnixtin) %>% print_md()
 ```
 
 ```{r}
 #| label: fig-m1-rope
-#| fig-cap: ROPE für MOdell m_bringtnixtin
+#| fig-cap: "ROPE für Modell `m_bringtnixtin`"
 
 rope(m_bringtnixtin) %>% plot()
 ```
@@ -233,7 +251,7 @@ m1_pd <- pd(m_bringtnixtin)$pd[2] %>% round(2)
 Eine vergleichbare Information bietet uns die Kennzahl `pd`, s. @tbl-m1-params.
 Der Wert für `g` liegt bei ca. `r m1_pd`.
 
-:::{#callout-note}
+:::{.callout-note}
 `pd` gibt die Wahrscheinlichkeit (laut Modell) an, dass der Effekt in der Population negativ bzw. positiv ist (d.h. gleich dem Vorzeichen des Punktschätzers; in diesem Fall negativ).$\square$
 :::
 
@@ -247,16 +265,16 @@ Das Modell ist sicher ziemlich sicher, dass der Effekt von `g` (in der Populatio
 
 
 
-### Vorher-Nachher-Messung, 1 between-Variable
+## Vorher-Nachher-Messung, 1 between-Variable
 
 
-#### Design
+### Design
 
 @sauer_effect_2023 fiel auf, dass es sinnvoller ist, zuerst die AV mittels eines Vortests zu messen, dann die Intervention anzuwenden, und dann nachher (Posttest) die AV wieder zu messen.
-Daher haben sie sowohl vor der Intervention (`y1`) als auch nach der Intervention (Gabe von Bringtnixtin), `y2` die AV gemesessen.
+Daher haben sie sowohl vor der Intervention (`t1`) als auch nach der Intervention (Gabe von Bringtnixtin), `t2`, die AV (`y`, Behaltensleistung) gemessen.
 
 
-:::{#callout-note}
+:::{.callout-note}
 Eine Vorher-Nachher-Messung hat den Verteil, dass sie - im Gegensatz zur Nur-Nachher-Messung - unterschiedliche Ausgangswerte in der AV herausrechnet. 
 Bei großen Gruppen wird sich bei einer randomisierten Zuweisung zu den Gruppen der Ausgangswert der AV angleichen. Bei nicht so großen Gruppen kann aber auch bei Randomisierung ein - mitunter erheblicher - Unterschied zwischen den Gruppen verbleiben.
 Findet man bei der Post-Messung einen Effekt, so kann es sein, dass dieser nicht auf die Intervention beruht, sondern auf die von vornherein vorhandenen Unterschieden zwischen den Gruppen.$\square$
@@ -301,7 +319,8 @@ u -> d
 
 plot(graphLayout(mein_modell))
 ```
-#### Deskriptive Analyse
+
+### Deskriptive Analyse
 
 Eine einfache (und sinnvolle) Art, solche Studiendesigns auszuwerten ist die Bildung einer Differenz-Variable^[auch Delta-Veriable genannt].
 Diese Differenzvariable gibt die Veränderung der fluiden Intelligenz durch die Intervention an.
@@ -313,12 +332,14 @@ d_bringtnixtin <-
   mutate(d = y2 - y1)
 ```
 
-Schauen wir uns die ersten paar d-Werte für jede der beiden Gruppen (`g=0?  bzw. `g=1`) an.
+Schauen wir uns die ersten paar d-Werte für jede der beiden Gruppen (`g=0`  bzw. `g=1`) an:
 
 ```{r}
+#| echo: false
 d_bringtnixtin %>% 
   group_by(g) %>% 
-  slice_head(n = 5)
+  slice_head(n = 3) %>% 
+  print_md()
 ```
 
 
@@ -341,10 +362,22 @@ d_bringtnixtin <-
 Hier sind die Mittelwerte für jede der beiden Gruppen:
 
 
+
 ```{r}
+#| eval: false
 d_bringtnixtin %>% 
   group_by(g_text) %>%
   summarise(d = mean(d))
+```
+
+```{r}
+#| echo: false
+#| label: d-bringtnixtin-mean
+#| tbl-cap: "Mittelwerte der Veränderung der Behaltensleistung nach Gruppe"
+d_bringtnixtin %>% 
+  group_by(g_text) %>%
+  summarise(d = mean(d)) %>% 
+  print_md()
 ```
 
 Die deskiptiven Kennwerte sind in @fig-bringtnixtin-desk2 dargestellt.
@@ -363,18 +396,28 @@ ggbetweenstats(
 
 
 
-#### Modellierung
+### Modellierung
 
-Wir modellieren (in `m_bringtnixtin2`) jetzt die Veränderung `d = y2 - y1` als AV; UV ist wieder `g`.
+Wir modellieren (in `m_bringtnixtin2`) jetzt die Veränderung `d = y2 - y1` als AV; UV ist wieder `g`, s. @tbl-m-bringtnixtin2-params.
 
 ```{r}
+#| results: hide
 m_bringtnixtin2 <- stan_glm(d ~ g, data = d_bringtnixtin, refresh = 0)
 parameters(m_bringtnixtin2)
 ```
+```{r}
+#| echo: false
+#| label: tbl-m-bringtnixtin2-params
+#| tbl-cap: "Parameter von `m_bringtnixtin2`"
+parameters(m_bringtnixtin2) %>% 
+  print_md()
+```
+
+
 @fig-bringtnixtin2-params zeigt die Parameterwerte für `m_bringtnixtin2`,
 
 ```{r}
-#| fig-cap: "Parameterwerte von m_bringtnixtin2 (Intercept ist nicht dargestellt), 95%-ETI"
+#| fig-cap: "Parameterwerte von m_bringtnixtin2 (Intercept ist nicht dargestellt), 95%-ETI; die Null ist nicht enthalten, der Mittelwert ist negativ."
 #| label: fig-bringtnixtin2-params
 plot(parameters(m_bringtnixtin2))
 ```
@@ -385,16 +428,16 @@ ist sich das Modell sehr sicher, dass der Effekt von Bringtnixtin *negativ* ist.
 <!-- ist sich das Modell nicht sicher, welche Richtung der Effekt von Bringtnixtin hat. -->
 
 
-### Weitere Beispiele
+## Beobachtungsstudien
 
-Gängige Forschungsfragen dieser Art sind [hier](https://start-bayes.netlify.app/https://start-bayes.netlify.app/1000-metrische-av) erläutert.
-
-
-
-## Metrische AV, within-Design
+Gängige Forschungsfragen für Beobachtungsstudien sind [hier](https://start-bayes.netlify.app/https://start-bayes.netlify.app/1000-metrische-av) erläutert.
 
 
-### 1 within-Variable
+
+
+
+
+## 1 within-Variable
 
 
 Eine Studie mit Vorher-Nachher-Messung setzt ein Within-Design um.
@@ -403,32 +446,56 @@ Eine Studie mit Vorher-Nachher-Messung setzt ein Within-Design um.
 :::{#exm-within1}
 ### Statisches Diagramm vs. animiertes Diagramm
 Ein Forschungsteam untersuch den Effekt der UV *Diagrammart* `D` (mit den zwei Stufen `D.1` *animiert* und `D.2` *statisch*) auf die Behaltensleistung (`y`) von Probanden.
-Nach jeder Bedingung wird die Behaltensleistung gemessen (anhand von 10 Wissensfragen, die jeweils als "richtig" oder "falsch" bewertet wurden), mit `y1` nach `D.1` und `y2` für `D.2`.
+Nach jeder Bedingung wird die Behaltensleistung gemessen (anhand von 10 Wissensfragen, die jeweils als "richtig" oder "falsch" bewertet wurden), mit `y1` nach `D.1` und `y2` für `D.2`.$\square$
 :::
 
 
 
-#### Design
+### Design
 
 
 Forschungsfrage:
 
->    Hat die Diagrammart einen Einfluss auf die Behaltensleistung? Anders gesagt: Unterscheiden sich die Diagrammarten in ihrem Einfluss auf die Behaltensleistung?
+>    Hat die Diagrammart einen Einfluss auf die Behaltensleistung? Anders gesagt: Unterscheiden sich die Diagrammarten in ihrem Einfluss auf die mittlere Behaltensleistung?
 
 
-Die zugehörige Hypothese kann man so formulieren: $d \ne 0$, wobei $d = y_1 - y_2$.
+Die zugehörige statistische Hypothese kann man so formulieren: $\bar{d} \ne 0$, wobei $d = y_1 - y_2$.
+$d$ misst also den Unterschied der Behaltensleistung von animierten und statischen Diagrammen,
+wobei positive Werte zugunsten von statischen Diagrammen sprechen.
 
 Die Modellformel lautet: `d ~ 1`,
-das ist ein *Interceptmodell*, also ein Modell ohne Prädiktor. 
-Uns interessiert, ob die Variable `d` im Mittelwert ungleich Null ist.
+das ist ein *Intercept-Modell*, also ein Modell ohne Prädiktor. 
+Uns interessiert, ob die Variable `d` im Mittelwert ungleich Null ist oder positiv (zugunsten statischer Diagramme) oder negativ (Behaltensleistung höher bei animierten Diagrammen).
+
+Der Ablauf ist in @fig-diagrammart-flow dargestellt.
 
 ```{mermaid}
+%%| label: fig-diagrammart-flow
+%%| fig-cap: "Ablauf der Studie zur Behaltensleistung y2 in Abhängigkeit der Diagrammart D (Within-Variable)"
 flowchart LR
   D.1 --> y1 --> D.2 --> y2
 ```
 
 
-#### Deskriptive Analyse
+
+
+Der DAG des Experiments ist in @fig-diagrammarten-dag dargestellt.
+
+
+```{r out.width = "100%", fig.asp = .5}
+#| label: fig-diagrammarten-dag 
+#| fig-cap: "DAG für die Studie zur Behaltensleistung y2 in Abhängigkeit der Diagrammart D"
+#| echo: false
+
+mein_modell <- "dag{
+D -> y2
+u -> y2
+}"
+
+plot(graphLayout(mein_modell))
+```
+
+### Deskriptive Analyse
 
 Hier sind einige Spieldaten:
 
@@ -443,7 +510,11 @@ head(d_within)
 
 {{< downloadthis data/withindesign.csv >}}
 
-Wir berechnen `d`:
+
+
+
+Wir berechnen `d`, das die zentrale Variable der Forschungsfrage ist.
+
 
 ```{r}
 d_within <-
@@ -453,20 +524,36 @@ d_within <-
 head(d_within)
 ```
 
+Es klingt trivial, aber man muss sich ein Bild von den Daten (hier `d`) machen, wortwörtlich, s. @fig-d1.
 
 ```{r}
+#| label: fig-d1
+#| fig-cap: "Die Verteilung von d: Die Behaltensleistung ist im Mittel besser für animierte Diagramme (in diesen Daten)"
 gghistostats(d_within,
              x = d,
              results.subtitle = FALSE  # verzichte auf zusätzliche Statistiken
              )
 ```
 
-Da `d` im Mittel negativ ist, ist der Mittelwert von `y2` höher als der von `y1`.
+Da `d` im Mittel negativ ist, ist der Mittelwert von `y2` (animiert) höher als der von `y1` (statisch).
+
+Lassen wir uns die deskriptiven Kennwerte ausgeben, s. @tbl-d1-desk.
 
 
 ```{r}
+#| eval: false
 d_within %>% 
   describe_distribution(d)
+```
+
+
+```{r}
+#| label: tbl-d1-desk
+#| tbl-cap: Statistiken für `d` 
+#| echo: false
+d_within %>% 
+  describe_distribution(d) %>% 
+  print_md()
 ```
 
 
@@ -476,14 +563,19 @@ Um die Daten noch anders  visualisieren zu können, formen wir sie ins "lange Fo
 d_long <-
   d_within %>% 
   pivot_longer(cols = c(y1, y2), names_to = "time", values_to = "y")
+```
+Hier ist ein Auszug aus der Tabelle:
 
+```{r}
 head(d_long)
 ```
 
 
-Visualisieren wir uns die Daten:
+Visualisieren wir uns die Daten, s. @fig-d2.
 
 ```{r}
+#| label: fig-d2
+#| fig-cap: Der Unterschied in der Behaltensleistung pro Versuchsperson; im Durchschnitt ist der Wert bei y2 höher als bei y1
 ggwithinstats(
   data = d_long,
   x = time,
@@ -493,39 +585,52 @@ ggwithinstats(
 ```
 
 
-#### Inferenzanalyse
+### Inferenzanalyse
 
-Wir berechnen das Modell:
+Wir berechnen das Modell (`m_within`):
 
 ```{r}
+#| results: hide
 m_within <- stan_glm(d ~ 1, data = d_within, refresh = 0)
 parameters(m_within)
 ```
 
-Hier ist eine Visualisierung des 95%-ETI des Unterschieds (`d`) zwischen den Bedingungen:
-
 ```{r}
-parameters(m_within) %>% plot(show_intercept = TRUE)
+#| echo: false
+parameters(m_within) %>% 
+  print_md()
 ```
 
 
-### 1 within-Variable, 1 between-Variable
+Hier ist eine Visualisierung des 95%-ETI des Unterschieds (`d`) zwischen den beiden Bedingungen (@fig-m-within-params).
+
+```{r}
+#| label: fig-m-within-params
+#| fig-cap: "95%-CI für d (Achsenabschnitt mit Modell m_within)" 
+parameters(m_within) %>% plot(show_intercept = TRUE)
+```
+
+Wie man sieht, ist die Null nicht im CI enthalten. Wir können daher resümieren,
+dass es einen Unterschied zwischen den Bedingungen (statisch vs. animiert) gibt hinsichtlich `y2` (Behaltensleistung). Die Behaltensleistung animierter Diagramme ist der von statischen Diagrammen überlegen (laut diesem Modell).
 
 
+## 1 within-Variable, 1 between-Variable
+
+### Design
+
+Forschungsfrage:
 
 
 >    Hat die Diagrammart einen Einfluss auf die Behaltensleistung? Anders gesagt: Unterscheiden sich die Diagrammarten in ihrem Einfluss auf die Behaltensleistung? Dabei kontrollieren wir die Reihenfolge.
 
-
-Die zugehörige Hypothese kann man so formulieren: $d \ne 0$, wobei $d = y_1 - y_2$.
-
-Die Modellformel lautet: `d ~ 1 + g`.
-Das kann man synonym so schreiben: `d ~ g`.
-Uns interessiert, ob die Variable `d` im Mittelwert ungleich Null ist.
-
+Forschungspraktisch bedeutet das, dass es zwei Gruppen, `g1` und `g2` in diesem Experiment gibt.
+Diese beiden Gruppen definieren eine between-Variable, `g`, die die Reihenfolge der Darbietung kontrolliert, s. @fig-within2-flow.
+Die Diagrammart `D` ist auch eine UV, aber als Within-Variable konzipiert.
 
 
 ```{mermaid}
+%%| label: fig-within2-flow
+%%| fig-cap: "Ablaufdiagramm für die Studie mit der Modellgleichung mit einem Within- und einem Between-Faktor"
 flowchart LR
   subgraph g2
     direction LR
@@ -538,7 +643,38 @@ flowchart LR
 ```
 
 
-#### Deskriptive Analyse
+
+Da es zwei UVs gibt, gibt es auch zwei Hypothesen:
+
+1. H1: $\bar{d} < 0$, mit $d = y_1 - y_2$: Die mittlere Behaltensleistung ist in der Bedingung *animiert*  höher als in der Bedingung *statisch*.
+2. H2: $\bar{d}_{g.1} = \bar{d}_{g.2}$: Der Unterschied in der Behaltensleistung zwischen den zwei Bedingung unterscheidet sich nicht von der Reihenfolge der Darbietung.
+
+
+
+Die Modellformel lautet: `d ~ 1 + g`.
+Das kann man synonym so schreiben: `d ~ g`.
+
+
+Der DAG des Experiments ist in @fig-within2-dag dargestellt.
+
+
+```{r out.width = "100%", fig.asp = .5}
+#| label: fig-within2-dag
+#| fig-cap: "DAG für die Studie mit der Modellgleichung mit einem Within- und einem Between-Faktor. Es wird kein Effekt für g erwartet, wohl aber ein Effekt für D"
+#| echo: false
+
+mein_modell <- "dag{
+D -> y2
+u -> y2
+g 
+}"
+
+plot(graphLayout(mein_modell))
+```
+
+
+
+### Deskriptive Analyse
 
 Hier sind einige Spieldaten:
 
@@ -553,7 +689,7 @@ head(d_within)
 
 
 
-Wir berechnen `d`:
+Wir berechnen `d`, der Unterschied zwischen den beiden Bedingungen:
 
 ```{r}
 d_within <-
@@ -563,8 +699,11 @@ d_within <-
 head(d_within)
 ```
 
+Betrachten wir den Unterschied von `d` zwischen den Gruppen (H2), s. @fig-d-within2.
 
 ```{r}
+#| label: fig-d-within2
+#| fig-cap: Der Unterschied der Behaltensleistung (d) in Abhängigkeit von der Reihenfolge der Darbietung
 ggbetweenstats(
   d_within,
   x = g,
@@ -573,36 +712,54 @@ ggbetweenstats(
 )
 ```
 
-Es gibt einen gewissen Unterschied zwischen den Bedingungen;
-die Reihenfolge könnte einen Einfluss haben.
+Es gibt einen gewissen Unterschied zwischen den beiden Reihenfolgen (A und B) wie @fig-d-within2 zeigt;
+die Reihenfolge könnte also einen Einfluss auf `d` haben.
 Aber wir müssen inferenzstatistisch prüfen, wie groß der Einfluss ist.
 
 
 
-#### Inferenzanalyse
+### Inferenzanalyse
 
+Berechnen wir `m_within2`, das nicht nur den Intercept prüft (wie `m_within1`), 
+sondern auch zusätzlich den Effekt der Reihenfolge (`g`).
 
-
-```{r}
+```{r m-within2}
 m_within2 <- stan_glm(d ~ g, data = d_within, refresh = 0)
-parameters(m_within2)
 ```
 
-Das CI für die Reihenfolge (Variable `gB`) beinhaltet die Null nicht;
-der Koeffizient `pd` gibt knapp 90% Wahrscheinlichkeit für einen (negativen Effekt) an.
-Damit haben wir einige Evidenz für einen Reihenfolgeneffekt.
-
-Der Effekt für `d` (`(Intercept)`) zeigt ein Intervall, das die Null nicht enthält.
-Daher haben wir auch hier wieder Evidenz gegen die Nullhypothese.
-
+```{r}
+#| echo: false
+parameters(m_within2) %>% 
+  print_md()
+```
 
 
-### 1 within-Variable mit mehr als zwei Stufen
+Das CI für die Reihenfolge (Variable `gB`) beinhaltet die Null;
+Daher kann ein Nulleffekt der Reihenfolge - also kein Effekt der Reihenfolge - nicht ausgeschlossen werden, `g=0` ist also im Bereich der plausiblen Werte.
 
-{{< fa dumbbell >}} VERTIEFUNG {{< fa dumbbell >}}
+Der Effekt für `d` (`(Intercept)`) zeigt ein Intervall, das die Null (knapp) enthält.
+Daher können wir wir die Nullhypothese nicht mit hoher Sicherheit ausschließen.
+
+In Summe:
+
+1. H1 (Höhere Behaltensleistung von *animiert*) konnte nicht bestätigt werden, aber tendenziell fand sich ein Effekt in erwarteter Richtung (zugunsten einer höheren Behaltensleistung von *animiert*).
+2. H2 (Reihenfolgeeffekt) konnte nicht bestätigt werden.
 
 
-#### Deskriptive Analyse
+
+## 1 within-Variable mit mehr als zwei Stufen
+
+{{< fa dumbbell >}} VERTIEFUNG {{< fa dumbbell >}} - Sie können diesen Abschnitt ohne Gefahr ignorieren.
+
+
+### Design
+
+Eine Forscherin hat die Gesundheit (`y`) von Studentis drei Mal (t1, t2, t3) im Zeitraum eines Semesters untersucht.
+
+Ihre Forschungsfrage lautet, ob sich die Gesundheit im Laufe des Semesters substanziell verändert.
+Ihre Hypothese lautet, dass die Werte über die Zeit hinweg stabil bleiben.
+
+### Deskriptive Analyse
 
 Hier sind einige Spieldaten:
 
@@ -626,7 +783,56 @@ head(d_long)
 ```
 
 
-#### Inferenzanalyse
+Es hilft (wie meistens), sich die Daten zu visualisieren, s. @fig-within-y3.
+
+```{r}
+#| label: fig-within-y3
+#| fig-cap: "Messwerte (y) in Abhängigkeit vom Messzeitpunkt (t1, t2, t3)"
+#| fig-subcap: 
+#|   - Einfaches Punktediagramm
+#|   - Informationsreiches Punkte-, Boxplot- und Violinendiagramm mit Statistiken der Veränderung angereichert
+#| layout-ncol: 2
+p_y123_a <-
+  d_long %>% 
+  ggplot(aes(x = time, y = y)) +
+  geom_jitter(width = .2)
+
+p_y123_b <-
+  ggwithinstats(d_long, 
+                x = time,
+                y = y,
+                results.subtitle = FALSE)
+
+p_y123_a
+p_y123_b
+```
+
+
+Berechnen wir die Mittelwerte von `y` pro Messzeitpunkte sowie die Veränderung von t1 zu t2 bzw. von t2 zu t3, s. @tbl-d123.
+
+```{r}
+#| eval: false
+d_long %>% 
+  group_by(time) %>% 
+  summarise(y_mean = mean(y)) %>% 
+  mutate(d = y_mean - lag(y_mean))
+```
+
+
+```{r}
+#| label: tbl-d123
+#| tbl-cap: "Mittelwerte von `y` pro Messzeitpunkte (`y_mean`) sowie die Veränderung von t1 zu t2 bzw. von t2 zu t3 (`d`)"
+#| echo: false
+d_long %>% 
+  group_by(time) %>% 
+  summarise(y_mean = mean(y)) %>% 
+  mutate(d = y_mean - lag(y_mean)) %>% 
+  print_md()
+```
+
+
+
+### Inferenzanalyse
 
 
 
@@ -635,14 +841,22 @@ m_within3 <- stan_lmer(y ~ 1 + (1 | time), data = d_long, refresh = 0)
 summary(m_within3)
 ```
 
-Nur die festen (fixed) Effekte kann man sich so ausgeben lassen:
+Die Schreibweise `(1 | time)` soll sagen, dass die Messwerte innerhalb von `time` verschachtelt sind und variieren. 
+Die `1` sagt, dass es sich bei der variierenden Größe um den Intercept handelt,
+nicht um eine UV.
+
+Ein "fixer" Effekt ist ein Effekt, für den kein Pooling stattfindet,
+das ist hier der Intercept.
+
+Nur die festen (*fixed*) Effekte kann man sich so ausgeben lassen:
 
 ```{r}
 fixef(m_within3)
 ```
 
 
-Im Durchschnitt werden ca. 7.1 Fragen richtig beantwortet (Gesamtmittel).
+Im Durchschnitt werden ca. 7.1 Fragen richtig beantwortet (Gesamtmittel);
+das ist die Information die der Punktschätzer des Intercepts bietet.
 
 
 Nur die Random-Effekte kann man sich so ausgeben lassen:
@@ -652,11 +866,19 @@ ranef(m_within3)
 ```
 
 Das sind jeweils die Abweichungen der Gruppenmittelwerte (y1, y2, y3) vom Gesamtmittel.
+Die Random-Effekte kann man sich visualisieren lassen, s. @fig-randef-m3.
 
 ```{r}
+#| label: fig-randef-m3
+#| fig-cap: "95%-CI der Random-Effekte von `m_within3`"
 plot(m_within3)
 ```
 
+
+## Fazit
+
+Unter Modellieren versteht man in der Forschungspraxis meist ein Regressionsmodell der Form `av ~ uv`.
+Die Inferenzstatistik hilft, die Modellparameter mit Schätzwerten für die Population zu versehen.
 
 
 ## Aufgaben
