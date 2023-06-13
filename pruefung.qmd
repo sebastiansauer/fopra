@@ -42,7 +42,9 @@ download.file(url = "https://raw.githubusercontent.com/sebastiansauer/Lehre/main
 
 ## Chat-GPT
 
-Verwenden Sie Textgeneratoren wie Chat-GPT für den gemeinsam verfassten Einleitungsteil (Einführung). Kennzeichnen Sie die Passagen aus dem Textgenerator wie eine normale Quellenangabe (Internetquelle). Diskutieren Sie die Ergebnisse des Textgenerators und geben Sie die verwendeten Prompts an.
+Verwenden Sie Textgeneratoren wie Chat-GPT für den gemeinsam verfassten Einleitungsteil (Einführung). 
+Kennzeichnen Sie die Passagen aus dem Textgenerator wie eine normale Quellenangabe (Internetquelle). 
+    Diskutieren Sie die Ergebnisse des Textgenerators und geben Sie die verwendeten Prompts an.
 Für die übrigen Teile der Arbeit darf kein Textgenerator verwendet werden.
 
 
