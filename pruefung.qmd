@@ -52,16 +52,6 @@ Für die übrigen Teile der Arbeit darf kein Textgenerator verwendet werden.
 
 ## Besonderheiten von Gruppenarbeiten
 
-Die Gruppengröße (min., max.) beträgt *zwei (2) Personen*.
-
-
-### Arbeitsteilung der Gruppenmitglieder
-
-Die Aufteilung der Teilaspekte der Arbeit soll so erfolgen, dass jedes Mitglied des 2er Teams einen empirischen Teil (Methodenteil oder Ergebnisteil) und einen theoretischen Teil (Theorieteil oder Diskussion) verfasst. 
-Die Einleitung soll gemeinsam unter Verwendung eines Textgenerators verfasst (und diskutiert) werden.
-
-
-### Allgemeines
 
 {{< include children/Hinweise-Pruefung-Gruppenarbeit.qmd >}}
 
