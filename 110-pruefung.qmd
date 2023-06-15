@@ -1,0 +1,67 @@
+# Prüfung
+
+
+
+Die Prüfungsleistung besteht aus:
+
+  - Projektarbeit im Form einer Seminararbeit
+  - Bonusleistung
+
+</br>
+</br>
+
+
+```{r download-hinweise}
+#| echo: false
+#| cache: false
+
+
+# Hinweise-Pruefungsvorbereitung.qmd
+download.file(url = "https://raw.githubusercontent.com/sebastiansauer/Lehre/main/Hinweise/Hinweise-Pruefung-Seminararbeit.qmd",
+              destfile = "children/Hinweise-Pruefung-Seminararbeit.qmd",
+              quiet = TRUE)
+
+# Hinweise-Pruefung-Gruppenarbeit.qmd
+download.file(url = "https://raw.githubusercontent.com/sebastiansauer/Lehre/main/Hinweise/Hinweise-Pruefung-Gruppenarbeit.qmd",
+              destfile = "children/Hinweise-Pruefung-Gruppenarbeit.qmd",
+              quiet = TRUE)
+```
+
+
+
+
+
+
+
+{{< include children/Hinweise-Pruefung-Seminararbeit.qmd >}}
+
+
+
+
+
+## Chat-GPT
+
+Verwenden Sie Textgeneratoren wie Chat-GPT für den gemeinsam verfassten Einleitungsteil (Einführung). 
+Kennzeichnen Sie die Passagen aus dem Textgenerator wie eine normale Quellenangabe (Internetquelle). 
+    Diskutieren Sie die Ergebnisse des Textgenerators und geben Sie die verwendeten Prompts an (als Fußnote oder im Anhang).
+Für die übrigen Teile der Arbeit darf kein Textgenerator verwendet werden.
+
+
+
+
+## Besonderheiten von Gruppenarbeiten
+
+
+{{< include children/Hinweise-Pruefung-Gruppenarbeit.qmd >}}
+
+
+
+
+
+
+## Fazit
+
+
+🍀🍀🍀 Viel Erfolg! 🍀🍀🍀
+
+
