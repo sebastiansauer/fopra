@@ -43,7 +43,6 @@ download.file(url = "https://raw.githubusercontent.com/sebastiansauer/Lehre/main
 
 
 ## Hinweise zur Projektarbeit
-=======
 
 
 {{< include children/Hinweise-Pruefung-Seminararbeit.qmd >}}

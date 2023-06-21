@@ -105,7 +105,7 @@ Wesentliche Faktoren dafür sind:
 
 ### Codebook
 
-Ein Teil der Dokumentation ist ein Codebook. Ein Codebook erläutert die Namen der Variablen in Ihrer Datentabelle, s. @fig-codebook.
+Ein Teil der Dokumentation ist ein Codebook. Ein Codebook erläutert die Namen der Variablen in Ihrer (Roh-)Datentabelle, s. @fig-codebook.
 
 ![Beispiel für ein Codebook](img/codebook.jpg){#fig-codebook}
 
@@ -130,17 +130,17 @@ Hier sehen Sie im Überblick die Schritte, die in vielen Fällen sinnvoll sind, 
 
 
 1. Vorverarbeitung
-  1. Importieren
-  2. Aufbereiten (Umkodieren, fehlende Wert versorgen, Transformieren, neue Spalten berechnen)
+    1. Importieren
+    2. Aufbereiten (Umkodieren, fehlende Wert versorgen, Transformieren, neue Spalten berechnen)
 2. Explorative Analyse
-  1. Daten zusammenfassen (zentrale Tendenz, Streuung, Zusammenhang)
-  2. Daten visualisieren
+    1. Daten zusammenfassen (zentrale Tendenz, Streuung, Zusammenhang)
+    2. Daten visualisieren
 3. Modellierung
-  1. Modell berechnen
-  2. Parameter berichten (Punkt- und Intervallschätzer)
-  3. Parameter visualisieren
-  4. Nullhypothesen testen (ROPE)
-  5. Modellgüte berichten (R-Quadrat)
+    1. Modell berechnen
+    2. Parameter berichten (Punkt- und Intervallschätzer)
+    3. Parameter visualisieren
+    4. Nullhypothesen testen (ROPE)
+    5. Modellgüte berichten (R-Quadrat)
 
 
 
