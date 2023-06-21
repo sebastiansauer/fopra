@@ -112,6 +112,10 @@ Ein Teil der Dokumentation ist ein Codebook. Ein Codebook erläutert die Namen d
 [Quelle](https://www.psycharchives.org/en/item/8b13c82b-1c31-481a-b4be-0d5779d87033)
 
 
+## Grundlagen der Datenanalyse
+
+[Hier](https://statistik1.netlify.app/) finden Sie einen Überblick zu den Grundlagen der Datenanalyse mit einem Fokus auf die Regressionsanalyse.
+
 
 ## Wie man Umfragedaten auswertet
 
@@ -120,12 +124,26 @@ Ein Teil der Dokumentation ist ein Codebook. Ein Codebook erläutert die Namen d
 
 
 
-<!-- TODO Within-Designs auswerten -->
+## Checkliste zur Datenanalyse
 
-<!-- ## Fallstudien -->
+Hier sehen Sie im Überblick die Schritte, die in vielen Fällen sinnvoll sind, um Daten auf einem guten Niveau auszuwerten.
 
 
-<!-- ### Within-Design 1 -->
+1. Vorverarbeitung
+  1. Importieren
+  2. Aufbereiten (Umkodieren, fehlende Wert versorgen, Transformieren, neue Spalten berechnen)
+2. Explorative Analyse
+  1. Daten zusammenfassen (zentrale Tendenz, Streuung, Zusammenhang)
+  2. Daten visualisieren
+3. Modellierung
+  1. Modell berechnen
+  2. Parameter berichten (Punkt- und Intervallschätzer)
+  3. Parameter visualisieren
+  4. Nullhypothesen testen (ROPE)
+  5. Modellgüte berichten (R-Quadrat)
+
+
+
 
 
 

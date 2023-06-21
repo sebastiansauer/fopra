@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.247">
+<meta name="generator" content="quarto-1.3.269">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Forschungsprojekt - 12&nbsp; Auswerten: Berichten von Statistiken</title>
 <style>
@@ -86,10 +86,12 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -108,7 +110,7 @@ div.csl-indent {
     "search-submit-button-title": "Abschicken"
   }
 }</script><link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
-<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><link rel="stylesheet" href="styles.css">
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><link rel="stylesheet" href="styles.css">
 </head>
 <body class="nav-sidebar floating">
 
@@ -129,6 +131,9 @@ div.csl-indent {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Forschungsprojekt</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Dunkelmodus umschalten"><i class="bi"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -265,8 +270,9 @@ div.csl-indent {
 <a href="#ergebnisteil" id="toc-ergebnisteil" class="nav-link" data-scroll-target="#ergebnisteil"><span class="header-section-number">12.7</span> Ergebnisteil</a>
   <ul class="collapse">
 <li><a href="#deskriptive-statistik" id="toc-deskriptive-statistik" class="nav-link" data-scroll-target="#deskriptive-statistik"><span class="header-section-number">12.7.1</span> Deskriptive Statistik</a></li>
-  <li><a href="#inferenzstatistik" id="toc-inferenzstatistik" class="nav-link" data-scroll-target="#inferenzstatistik"><span class="header-section-number">12.7.2</span> Inferenzstatistik</a></li>
-  <li><a href="#rope-1" id="toc-rope-1" class="nav-link" data-scroll-target="#rope-1"><span class="header-section-number">12.7.3</span> ROPE</a></li>
+  <li><a href="#diagramme-exportieren" id="toc-diagramme-exportieren" class="nav-link" data-scroll-target="#diagramme-exportieren"><span class="header-section-number">12.7.2</span> Diagramme exportieren</a></li>
+  <li><a href="#inferenzstatistik" id="toc-inferenzstatistik" class="nav-link" data-scroll-target="#inferenzstatistik"><span class="header-section-number">12.7.3</span> Inferenzstatistik</a></li>
+  <li><a href="#rope-1" id="toc-rope-1" class="nav-link" data-scroll-target="#rope-1"><span class="header-section-number">12.7.4</span> ROPE</a></li>
   </ul>
 </li>
   <li><a href="#diskussion" id="toc-diskussion" class="nav-link" data-scroll-target="#diskussion"><span class="header-section-number">12.8</span> Diskussion</a></li>
@@ -352,7 +358,7 @@ div.csl-indent {
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/dagitty/man/graphLayout.html">graphLayout</a></span><span class="op">(</span><span class="va">mein_modell</span><span class="op">)</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-dagmodell1" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="1000-Statistiken-berichten_files/figure-html/fig-dagmodell1-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figure class="figure"><p><img src="1000-Statistiken-berichten_files/figure-html/fig-dagmodell1-1.png" class="quarto-discovered-preview-image img-fluid figure-img" style="width:100.0%"></p>
 <p></p><figcaption class="figure-caption">Abbildung&nbsp;12.1: Beispielhafter DAG</figcaption><p></p>
 </figure>
 </div>
@@ -504,23 +510,23 @@ div.csl-indent {
 <span><span class="va">meine_tab</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
-<div id="hhuvsqmjvi" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#hhuvsqmjvi table {
+<div id="pttgxxdfog" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#pttgxxdfog table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#hhuvsqmjvi thead, #hhuvsqmjvi tbody, #hhuvsqmjvi tfoot, #hhuvsqmjvi tr, #hhuvsqmjvi td, #hhuvsqmjvi th {
+#pttgxxdfog thead, #pttgxxdfog tbody, #pttgxxdfog tfoot, #pttgxxdfog tr, #pttgxxdfog td, #pttgxxdfog th {
   border-style: none;
 }
 
-#hhuvsqmjvi p {
+#pttgxxdfog p {
   margin: 0;
   padding: 0;
 }
 
-#hhuvsqmjvi .gt_table {
+#pttgxxdfog .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -546,12 +552,12 @@ div.csl-indent {
   border-left-color: #D3D3D3;
 }
 
-#hhuvsqmjvi .gt_caption {
+#pttgxxdfog .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#hhuvsqmjvi .gt_title {
+#pttgxxdfog .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -563,7 +569,7 @@ div.csl-indent {
   border-bottom-width: 0;
 }
 
-#hhuvsqmjvi .gt_subtitle {
+#pttgxxdfog .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -575,7 +581,7 @@ div.csl-indent {
   border-top-width: 0;
 }
 
-#hhuvsqmjvi .gt_heading {
+#pttgxxdfog .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -587,13 +593,13 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-#hhuvsqmjvi .gt_bottom_border {
+#pttgxxdfog .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#hhuvsqmjvi .gt_col_headings {
+#pttgxxdfog .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -608,7 +614,7 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-#hhuvsqmjvi .gt_col_heading {
+#pttgxxdfog .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -628,7 +634,7 @@ div.csl-indent {
   overflow-x: hidden;
 }
 
-#hhuvsqmjvi .gt_column_spanner_outer {
+#pttgxxdfog .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -640,15 +646,15 @@ div.csl-indent {
   padding-right: 4px;
 }
 
-#hhuvsqmjvi .gt_column_spanner_outer:first-child {
+#pttgxxdfog .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#hhuvsqmjvi .gt_column_spanner_outer:last-child {
+#pttgxxdfog .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#hhuvsqmjvi .gt_column_spanner {
+#pttgxxdfog .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -660,11 +666,11 @@ div.csl-indent {
   width: 100%;
 }
 
-#hhuvsqmjvi .gt_spanner_row {
+#pttgxxdfog .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#hhuvsqmjvi .gt_group_heading {
+#pttgxxdfog .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -690,7 +696,7 @@ div.csl-indent {
   text-align: left;
 }
 
-#hhuvsqmjvi .gt_empty_group_heading {
+#pttgxxdfog .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -705,15 +711,15 @@ div.csl-indent {
   vertical-align: middle;
 }
 
-#hhuvsqmjvi .gt_from_md > :first-child {
+#pttgxxdfog .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#hhuvsqmjvi .gt_from_md > :last-child {
+#pttgxxdfog .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#hhuvsqmjvi .gt_row {
+#pttgxxdfog .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -732,7 +738,7 @@ div.csl-indent {
   overflow-x: hidden;
 }
 
-#hhuvsqmjvi .gt_stub {
+#pttgxxdfog .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -745,7 +751,7 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#hhuvsqmjvi .gt_stub_row_group {
+#pttgxxdfog .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -759,15 +765,15 @@ div.csl-indent {
   vertical-align: top;
 }
 
-#hhuvsqmjvi .gt_row_group_first td {
+#pttgxxdfog .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#hhuvsqmjvi .gt_row_group_first th {
+#pttgxxdfog .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#hhuvsqmjvi .gt_summary_row {
+#pttgxxdfog .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -777,16 +783,16 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#hhuvsqmjvi .gt_first_summary_row {
+#pttgxxdfog .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#hhuvsqmjvi .gt_first_summary_row.thick {
+#pttgxxdfog .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#hhuvsqmjvi .gt_last_summary_row {
+#pttgxxdfog .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -796,7 +802,7 @@ div.csl-indent {
   border-bottom-color: #D3D3D3;
 }
 
-#hhuvsqmjvi .gt_grand_summary_row {
+#pttgxxdfog .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -806,7 +812,7 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#hhuvsqmjvi .gt_first_grand_summary_row {
+#pttgxxdfog .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -816,7 +822,7 @@ div.csl-indent {
   border-top-color: #D3D3D3;
 }
 
-#hhuvsqmjvi .gt_last_grand_summary_row_top {
+#pttgxxdfog .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -826,11 +832,11 @@ div.csl-indent {
   border-bottom-color: #D3D3D3;
 }
 
-#hhuvsqmjvi .gt_striped {
+#pttgxxdfog .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#hhuvsqmjvi .gt_table_body {
+#pttgxxdfog .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -839,7 +845,7 @@ div.csl-indent {
   border-bottom-color: #D3D3D3;
 }
 
-#hhuvsqmjvi .gt_footnotes {
+#pttgxxdfog .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -853,7 +859,7 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-#hhuvsqmjvi .gt_footnote {
+#pttgxxdfog .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -862,7 +868,7 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#hhuvsqmjvi .gt_sourcenotes {
+#pttgxxdfog .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -876,7 +882,7 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-#hhuvsqmjvi .gt_sourcenote {
+#pttgxxdfog .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -884,63 +890,63 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#hhuvsqmjvi .gt_left {
+#pttgxxdfog .gt_left {
   text-align: left;
 }
 
-#hhuvsqmjvi .gt_center {
+#pttgxxdfog .gt_center {
   text-align: center;
 }
 
-#hhuvsqmjvi .gt_right {
+#pttgxxdfog .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#hhuvsqmjvi .gt_font_normal {
+#pttgxxdfog .gt_font_normal {
   font-weight: normal;
 }
 
-#hhuvsqmjvi .gt_font_bold {
+#pttgxxdfog .gt_font_bold {
   font-weight: bold;
 }
 
-#hhuvsqmjvi .gt_font_italic {
+#pttgxxdfog .gt_font_italic {
   font-style: italic;
 }
 
-#hhuvsqmjvi .gt_super {
+#pttgxxdfog .gt_super {
   font-size: 65%;
 }
 
-#hhuvsqmjvi .gt_footnote_marks {
+#pttgxxdfog .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#hhuvsqmjvi .gt_asterisk {
+#pttgxxdfog .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#hhuvsqmjvi .gt_indent_1 {
+#pttgxxdfog .gt_indent_1 {
   text-indent: 5px;
 }
 
-#hhuvsqmjvi .gt_indent_2 {
+#pttgxxdfog .gt_indent_2 {
   text-indent: 10px;
 }
 
-#hhuvsqmjvi .gt_indent_3 {
+#pttgxxdfog .gt_indent_3 {
   text-indent: 15px;
 }
 
-#hhuvsqmjvi .gt_indent_4 {
+#pttgxxdfog .gt_indent_4 {
   text-indent: 20px;
 }
 
-#hhuvsqmjvi .gt_indent_5 {
+#pttgxxdfog .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -1113,30 +1119,30 @@ div.csl-indent {
 </div>
 </div>
 </div>
-<p>Möchten man eine <em>quadratische</em> Korrelationstabelle - was der üblichen Berichtsform entspricht - kann man das so bekommen:</p>
+<p>Möchten man eine <em>quadratische</em> Korrelationstabelle (was der üblicheren Berichtsform entspricht) kann man das so bekommen:</p>
 <div class="cell" data-hash="1000-Statistiken-berichten_cache/html/unnamed-chunk-8_ec61ca34736d8fe39ba8cd42cadcbdea">
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">meine_cor_tab</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="https://gt.rstudio.com/reference/gt.html">gt</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>  <span class="co"># machen wir gleich eine schicke HTML-Tabelle</span></span>
 <span>  <span class="fu"><a href="https://gt.rstudio.com/reference/fmt_number.html">fmt_number</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/where.html">where</a></span><span class="op">(</span><span class="va">is.numeric</span><span class="op">)</span>, decimals <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
-<div id="qebjsouxaj" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#qebjsouxaj table {
+<div id="ntqfexkjpp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#ntqfexkjpp table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#qebjsouxaj thead, #qebjsouxaj tbody, #qebjsouxaj tfoot, #qebjsouxaj tr, #qebjsouxaj td, #qebjsouxaj th {
+#ntqfexkjpp thead, #ntqfexkjpp tbody, #ntqfexkjpp tfoot, #ntqfexkjpp tr, #ntqfexkjpp td, #ntqfexkjpp th {
   border-style: none;
 }
 
-#qebjsouxaj p {
+#ntqfexkjpp p {
   margin: 0;
   padding: 0;
 }
 
-#qebjsouxaj .gt_table {
+#ntqfexkjpp .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1162,12 +1168,12 @@ div.csl-indent {
   border-left-color: #D3D3D3;
 }
 
-#qebjsouxaj .gt_caption {
+#ntqfexkjpp .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#qebjsouxaj .gt_title {
+#ntqfexkjpp .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1179,7 +1185,7 @@ div.csl-indent {
   border-bottom-width: 0;
 }
 
-#qebjsouxaj .gt_subtitle {
+#ntqfexkjpp .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1191,7 +1197,7 @@ div.csl-indent {
   border-top-width: 0;
 }
 
-#qebjsouxaj .gt_heading {
+#ntqfexkjpp .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1203,13 +1209,13 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-#qebjsouxaj .gt_bottom_border {
+#ntqfexkjpp .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#qebjsouxaj .gt_col_headings {
+#ntqfexkjpp .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1224,7 +1230,7 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-#qebjsouxaj .gt_col_heading {
+#ntqfexkjpp .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1244,7 +1250,7 @@ div.csl-indent {
   overflow-x: hidden;
 }
 
-#qebjsouxaj .gt_column_spanner_outer {
+#ntqfexkjpp .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1256,15 +1262,15 @@ div.csl-indent {
   padding-right: 4px;
 }
 
-#qebjsouxaj .gt_column_spanner_outer:first-child {
+#ntqfexkjpp .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#qebjsouxaj .gt_column_spanner_outer:last-child {
+#ntqfexkjpp .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#qebjsouxaj .gt_column_spanner {
+#ntqfexkjpp .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1276,11 +1282,11 @@ div.csl-indent {
   width: 100%;
 }
 
-#qebjsouxaj .gt_spanner_row {
+#ntqfexkjpp .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#qebjsouxaj .gt_group_heading {
+#ntqfexkjpp .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1306,7 +1312,7 @@ div.csl-indent {
   text-align: left;
 }
 
-#qebjsouxaj .gt_empty_group_heading {
+#ntqfexkjpp .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1321,15 +1327,15 @@ div.csl-indent {
   vertical-align: middle;
 }
 
-#qebjsouxaj .gt_from_md > :first-child {
+#ntqfexkjpp .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#qebjsouxaj .gt_from_md > :last-child {
+#ntqfexkjpp .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#qebjsouxaj .gt_row {
+#ntqfexkjpp .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1348,7 +1354,7 @@ div.csl-indent {
   overflow-x: hidden;
 }
 
-#qebjsouxaj .gt_stub {
+#ntqfexkjpp .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1361,7 +1367,7 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#qebjsouxaj .gt_stub_row_group {
+#ntqfexkjpp .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1375,15 +1381,15 @@ div.csl-indent {
   vertical-align: top;
 }
 
-#qebjsouxaj .gt_row_group_first td {
+#ntqfexkjpp .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#qebjsouxaj .gt_row_group_first th {
+#ntqfexkjpp .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#qebjsouxaj .gt_summary_row {
+#ntqfexkjpp .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1393,16 +1399,16 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#qebjsouxaj .gt_first_summary_row {
+#ntqfexkjpp .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#qebjsouxaj .gt_first_summary_row.thick {
+#ntqfexkjpp .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#qebjsouxaj .gt_last_summary_row {
+#ntqfexkjpp .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1412,7 +1418,7 @@ div.csl-indent {
   border-bottom-color: #D3D3D3;
 }
 
-#qebjsouxaj .gt_grand_summary_row {
+#ntqfexkjpp .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1422,7 +1428,7 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#qebjsouxaj .gt_first_grand_summary_row {
+#ntqfexkjpp .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1432,7 +1438,7 @@ div.csl-indent {
   border-top-color: #D3D3D3;
 }
 
-#qebjsouxaj .gt_last_grand_summary_row_top {
+#ntqfexkjpp .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1442,11 +1448,11 @@ div.csl-indent {
   border-bottom-color: #D3D3D3;
 }
 
-#qebjsouxaj .gt_striped {
+#ntqfexkjpp .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#qebjsouxaj .gt_table_body {
+#ntqfexkjpp .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1455,7 +1461,7 @@ div.csl-indent {
   border-bottom-color: #D3D3D3;
 }
 
-#qebjsouxaj .gt_footnotes {
+#ntqfexkjpp .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1469,7 +1475,7 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-#qebjsouxaj .gt_footnote {
+#ntqfexkjpp .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1478,7 +1484,7 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#qebjsouxaj .gt_sourcenotes {
+#ntqfexkjpp .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1492,7 +1498,7 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-#qebjsouxaj .gt_sourcenote {
+#ntqfexkjpp .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1500,63 +1506,63 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#qebjsouxaj .gt_left {
+#ntqfexkjpp .gt_left {
   text-align: left;
 }
 
-#qebjsouxaj .gt_center {
+#ntqfexkjpp .gt_center {
   text-align: center;
 }
 
-#qebjsouxaj .gt_right {
+#ntqfexkjpp .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#qebjsouxaj .gt_font_normal {
+#ntqfexkjpp .gt_font_normal {
   font-weight: normal;
 }
 
-#qebjsouxaj .gt_font_bold {
+#ntqfexkjpp .gt_font_bold {
   font-weight: bold;
 }
 
-#qebjsouxaj .gt_font_italic {
+#ntqfexkjpp .gt_font_italic {
   font-style: italic;
 }
 
-#qebjsouxaj .gt_super {
+#ntqfexkjpp .gt_super {
   font-size: 65%;
 }
 
-#qebjsouxaj .gt_footnote_marks {
+#ntqfexkjpp .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#qebjsouxaj .gt_asterisk {
+#ntqfexkjpp .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#qebjsouxaj .gt_indent_1 {
+#ntqfexkjpp .gt_indent_1 {
   text-indent: 5px;
 }
 
-#qebjsouxaj .gt_indent_2 {
+#ntqfexkjpp .gt_indent_2 {
   text-indent: 10px;
 }
 
-#qebjsouxaj .gt_indent_3 {
+#ntqfexkjpp .gt_indent_3 {
   text-indent: 15px;
 }
 
-#qebjsouxaj .gt_indent_4 {
+#ntqfexkjpp .gt_indent_4 {
   text-indent: 20px;
 }
 
-#qebjsouxaj .gt_indent_5 {
+#ntqfexkjpp .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -1583,15 +1589,18 @@ div.csl-indent {
 </div>
 </div>
 <p>Vergessen Sie nicht, das Tabellen (genau wie Abbildungen) im Text zu referenzieren sind.</p>
-</section></section><section id="inferenzstatistik" class="level3" data-number="12.7.2"><h3 data-number="12.7.2" class="anchored" data-anchor-id="inferenzstatistik">
-<span class="header-section-number">12.7.2</span> Inferenzstatistik</h3>
-<section id="posteriori-verteilung" class="level4" data-number="12.7.2.1"><h4 data-number="12.7.2.1" class="anchored" data-anchor-id="posteriori-verteilung">
-<span class="header-section-number">12.7.2.1</span> Posteriori-Verteilung</h4>
+</section></section><section id="diagramme-exportieren" class="level3" data-number="12.7.2"><h3 data-number="12.7.2" class="anchored" data-anchor-id="diagramme-exportieren">
+<span class="header-section-number">12.7.2</span> Diagramme exportieren</h3>
+<p>Diagramme, die Sie mit <code>ggplot</code> erstellt haben, können Sie z.B. mit dem Befehl <a href="https://ggplot2.tidyverse.org/reference/ggsave.html"><code>ggsave</code></a> in eine Datei speichern (z.B. im Format PNG oder PDF).</p>
+</section><section id="inferenzstatistik" class="level3" data-number="12.7.3"><h3 data-number="12.7.3" class="anchored" data-anchor-id="inferenzstatistik">
+<span class="header-section-number">12.7.3</span> Inferenzstatistik</h3>
+<section id="posteriori-verteilung" class="level4" data-number="12.7.3.1"><h4 data-number="12.7.3.1" class="anchored" data-anchor-id="posteriori-verteilung">
+<span class="header-section-number">12.7.3.1</span> Posteriori-Verteilung</h4>
 <p>Für jede Hypothese müssen Sie die zentralen Ergebnisse berichten. Die Hypothesen beziehen sich auf Populationen, also benötigen wir Inferenzstatistik. In der frequentistischen Statistik finden hier Statistiken wie der p-Wert und das (frequentistische) Konfidenzintervall Verwendung. In einer Bayes-Analyse ist die Posteriori-Verteilung der Dreh- und Angelpunkt der Ergebnisse.</p>
 <p>Die Post-Verteilung gibt an, wie wahrscheinlich ein bestimmter Parameterwert jetzt ist, nachdem die Daten bekannt sind.</p>
 <p>Ein statistisches Modell wird zumeist mit einem Regressionsmodell umgesetzt. Ein Regressionsmodell kann man in R mit <code><a href="https://rdrr.io/r/stats/lm.html">lm()</a></code> (frequentistisch) oder z.B. <code><a href="https://mc-stan.org/rstanarm/reference/stan_glm.html">stan_glm()</a></code> (Bayes) berechnen. Die Syntax ist sehr ähnlich.</p>
-</section><section id="umsetzung-in-r" class="level4" data-number="12.7.2.2"><h4 data-number="12.7.2.2" class="anchored" data-anchor-id="umsetzung-in-r">
-<span class="header-section-number">12.7.2.2</span> Umsetzung in R</h4>
+</section><section id="umsetzung-in-r" class="level4" data-number="12.7.3.2"><h4 data-number="12.7.3.2" class="anchored" data-anchor-id="umsetzung-in-r">
+<span class="header-section-number">12.7.3.2</span> Umsetzung in R</h4>
 <p>Sie können eine Posteriori-Verteilung z.B. für ihr Modell berechnen:</p>
 <div class="cell" data-hash="1000-Statistiken-berichten_cache/html/unnamed-chunk-9_b865011796e595d4c77dd4a7177c7564">
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://mc-stan.org/rstanarm/">rstanarm</a></span><span class="op">)</span></span>
@@ -1604,7 +1613,7 @@ div.csl-indent {
 
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
-{"columns":[{"label":["Parameter"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Median"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["CI"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["CI_low"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["CI_high"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["pd"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["Rhat"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["ESS"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["Prior_Distribution"],"name":[9],"type":["chr"],"align":["left"]},{"label":["Prior_Location"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["Prior_Scale"],"name":[11],"type":["dbl"],"align":["right"]}],"data":[{"1":"(Intercept)","2":"17.153625","3":"0.95","4":"14.831950","5":"19.45961","6":"1","7":"1.000014","8":"3843.231","9":"normal","10":"20.09062","11":"15.06737"},{"1":"am","2":"7.232371","3":"0.95","4":"3.692618","5":"10.83987","6":"1","7":"1.000440","8":"3395.216","9":"normal","10":"0.00000","11":"30.19568"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["Parameter"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Median"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["CI"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["CI_low"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["CI_high"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["pd"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["Rhat"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["ESS"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["Prior_Distribution"],"name":[9],"type":["chr"],"align":["left"]},{"label":["Prior_Location"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["Prior_Scale"],"name":[11],"type":["dbl"],"align":["right"]}],"data":[{"1":"(Intercept)","2":"17.17577","3":"0.95","4":"14.851619","5":"19.42924","6":"1","7":"1.000008","8":"3367.322","9":"normal","10":"20.09062","11":"15.06737"},{"1":"am","2":"7.17597","3":"0.95","4":"3.594064","5":"10.74474","6":"1","7":"1.000444","8":"3608.694","9":"normal","10":"0.00000","11":"30.19568"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 </div>
@@ -1617,7 +1626,7 @@ div.csl-indent {
 
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
-{"columns":[{"label":["Parameter"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Median"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["CI"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["CI_low"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["CI_high"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["pd"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["Rhat"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["ESS"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["Prior_Distribution"],"name":[9],"type":["chr"],"align":["left"]},{"label":["Prior_Location"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["Prior_Scale"],"name":[11],"type":["dbl"],"align":["right"]}],"data":[{"1":"(Intercept)","2":"17.153625","3":"0.95","4":"14.852030","5":"19.46255","6":"1","7":"1.000014","8":"3843.231","9":"normal","10":"20.09062","11":"15.06737"},{"1":"am","2":"7.232371","3":"0.95","4":"3.610656","5":"10.75894","6":"1","7":"1.000440","8":"3395.216","9":"normal","10":"0.00000","11":"30.19568"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["Parameter"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Median"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["CI"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["CI_low"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["CI_high"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["pd"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["Rhat"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["ESS"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["Prior_Distribution"],"name":[9],"type":["chr"],"align":["left"]},{"label":["Prior_Location"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["Prior_Scale"],"name":[11],"type":["dbl"],"align":["right"]}],"data":[{"1":"(Intercept)","2":"17.17577","3":"0.95","4":"14.878991","5":"19.45038","6":"1","7":"1.000008","8":"3367.322","9":"normal","10":"20.09062","11":"15.06737"},{"1":"am","2":"7.17597","3":"0.95","4":"3.680408","5":"10.76392","6":"1","7":"1.000444","8":"3608.694","9":"normal","10":"0.00000","11":"30.19568"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 </div>
@@ -1629,23 +1638,23 @@ div.csl-indent {
 <span>  <span class="fu"><a href="https://gt.rstudio.com/reference/fmt_number.html">fmt_number</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/where.html">where</a></span><span class="op">(</span><span class="va">is.numeric</span><span class="op">)</span>, decimals <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
-<div id="ljoyifwqse" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#ljoyifwqse table {
+<div id="uhtfscwwdy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#uhtfscwwdy table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#ljoyifwqse thead, #ljoyifwqse tbody, #ljoyifwqse tfoot, #ljoyifwqse tr, #ljoyifwqse td, #ljoyifwqse th {
+#uhtfscwwdy thead, #uhtfscwwdy tbody, #uhtfscwwdy tfoot, #uhtfscwwdy tr, #uhtfscwwdy td, #uhtfscwwdy th {
   border-style: none;
 }
 
-#ljoyifwqse p {
+#uhtfscwwdy p {
   margin: 0;
   padding: 0;
 }
 
-#ljoyifwqse .gt_table {
+#uhtfscwwdy .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1671,12 +1680,12 @@ div.csl-indent {
   border-left-color: #D3D3D3;
 }
 
-#ljoyifwqse .gt_caption {
+#uhtfscwwdy .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#ljoyifwqse .gt_title {
+#uhtfscwwdy .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1688,7 +1697,7 @@ div.csl-indent {
   border-bottom-width: 0;
 }
 
-#ljoyifwqse .gt_subtitle {
+#uhtfscwwdy .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1700,7 +1709,7 @@ div.csl-indent {
   border-top-width: 0;
 }
 
-#ljoyifwqse .gt_heading {
+#uhtfscwwdy .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1712,13 +1721,13 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-#ljoyifwqse .gt_bottom_border {
+#uhtfscwwdy .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#ljoyifwqse .gt_col_headings {
+#uhtfscwwdy .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1733,7 +1742,7 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-#ljoyifwqse .gt_col_heading {
+#uhtfscwwdy .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1753,7 +1762,7 @@ div.csl-indent {
   overflow-x: hidden;
 }
 
-#ljoyifwqse .gt_column_spanner_outer {
+#uhtfscwwdy .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1765,15 +1774,15 @@ div.csl-indent {
   padding-right: 4px;
 }
 
-#ljoyifwqse .gt_column_spanner_outer:first-child {
+#uhtfscwwdy .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#ljoyifwqse .gt_column_spanner_outer:last-child {
+#uhtfscwwdy .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#ljoyifwqse .gt_column_spanner {
+#uhtfscwwdy .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1785,11 +1794,11 @@ div.csl-indent {
   width: 100%;
 }
 
-#ljoyifwqse .gt_spanner_row {
+#uhtfscwwdy .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#ljoyifwqse .gt_group_heading {
+#uhtfscwwdy .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1815,7 +1824,7 @@ div.csl-indent {
   text-align: left;
 }
 
-#ljoyifwqse .gt_empty_group_heading {
+#uhtfscwwdy .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1830,15 +1839,15 @@ div.csl-indent {
   vertical-align: middle;
 }
 
-#ljoyifwqse .gt_from_md > :first-child {
+#uhtfscwwdy .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#ljoyifwqse .gt_from_md > :last-child {
+#uhtfscwwdy .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#ljoyifwqse .gt_row {
+#uhtfscwwdy .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1857,7 +1866,7 @@ div.csl-indent {
   overflow-x: hidden;
 }
 
-#ljoyifwqse .gt_stub {
+#uhtfscwwdy .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1870,7 +1879,7 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#ljoyifwqse .gt_stub_row_group {
+#uhtfscwwdy .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1884,15 +1893,15 @@ div.csl-indent {
   vertical-align: top;
 }
 
-#ljoyifwqse .gt_row_group_first td {
+#uhtfscwwdy .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#ljoyifwqse .gt_row_group_first th {
+#uhtfscwwdy .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#ljoyifwqse .gt_summary_row {
+#uhtfscwwdy .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1902,16 +1911,16 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#ljoyifwqse .gt_first_summary_row {
+#uhtfscwwdy .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#ljoyifwqse .gt_first_summary_row.thick {
+#uhtfscwwdy .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#ljoyifwqse .gt_last_summary_row {
+#uhtfscwwdy .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1921,7 +1930,7 @@ div.csl-indent {
   border-bottom-color: #D3D3D3;
 }
 
-#ljoyifwqse .gt_grand_summary_row {
+#uhtfscwwdy .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1931,7 +1940,7 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#ljoyifwqse .gt_first_grand_summary_row {
+#uhtfscwwdy .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1941,7 +1950,7 @@ div.csl-indent {
   border-top-color: #D3D3D3;
 }
 
-#ljoyifwqse .gt_last_grand_summary_row_top {
+#uhtfscwwdy .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1951,11 +1960,11 @@ div.csl-indent {
   border-bottom-color: #D3D3D3;
 }
 
-#ljoyifwqse .gt_striped {
+#uhtfscwwdy .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#ljoyifwqse .gt_table_body {
+#uhtfscwwdy .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1964,7 +1973,7 @@ div.csl-indent {
   border-bottom-color: #D3D3D3;
 }
 
-#ljoyifwqse .gt_footnotes {
+#uhtfscwwdy .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1978,7 +1987,7 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-#ljoyifwqse .gt_footnote {
+#uhtfscwwdy .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1987,7 +1996,7 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#ljoyifwqse .gt_sourcenotes {
+#uhtfscwwdy .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2001,7 +2010,7 @@ div.csl-indent {
   border-right-color: #D3D3D3;
 }
 
-#ljoyifwqse .gt_sourcenote {
+#uhtfscwwdy .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2009,63 +2018,63 @@ div.csl-indent {
   padding-right: 5px;
 }
 
-#ljoyifwqse .gt_left {
+#uhtfscwwdy .gt_left {
   text-align: left;
 }
 
-#ljoyifwqse .gt_center {
+#uhtfscwwdy .gt_center {
   text-align: center;
 }
 
-#ljoyifwqse .gt_right {
+#uhtfscwwdy .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#ljoyifwqse .gt_font_normal {
+#uhtfscwwdy .gt_font_normal {
   font-weight: normal;
 }
 
-#ljoyifwqse .gt_font_bold {
+#uhtfscwwdy .gt_font_bold {
   font-weight: bold;
 }
 
-#ljoyifwqse .gt_font_italic {
+#uhtfscwwdy .gt_font_italic {
   font-style: italic;
 }
 
-#ljoyifwqse .gt_super {
+#uhtfscwwdy .gt_super {
   font-size: 65%;
 }
 
-#ljoyifwqse .gt_footnote_marks {
+#uhtfscwwdy .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#ljoyifwqse .gt_asterisk {
+#uhtfscwwdy .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#ljoyifwqse .gt_indent_1 {
+#uhtfscwwdy .gt_indent_1 {
   text-indent: 5px;
 }
 
-#ljoyifwqse .gt_indent_2 {
+#uhtfscwwdy .gt_indent_2 {
   text-indent: 10px;
 }
 
-#ljoyifwqse .gt_indent_3 {
+#uhtfscwwdy .gt_indent_3 {
   text-indent: 15px;
 }
 
-#ljoyifwqse .gt_indent_4 {
+#uhtfscwwdy .gt_indent_4 {
   text-indent: 20px;
 }
 
-#ljoyifwqse .gt_indent_5 {
+#uhtfscwwdy .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -2082,15 +2091,15 @@ div.csl-indent {
 <tr>
 <td headers="Parameter" class="gt_row gt_left">(Intercept)</td>
 <td headers="CI" class="gt_row gt_right">0.95</td>
-<td headers="CI_low" class="gt_row gt_right">14.85</td>
-<td headers="CI_high" class="gt_row gt_right">19.46</td>
+<td headers="CI_low" class="gt_row gt_right">14.88</td>
+<td headers="CI_high" class="gt_row gt_right">19.45</td>
 <td headers="Effects" class="gt_row gt_left">fixed</td>
 <td headers="Component" class="gt_row gt_left">conditional</td>
 </tr>
 <tr>
 <td headers="Parameter" class="gt_row gt_left">am</td>
 <td headers="CI" class="gt_row gt_right">0.95</td>
-<td headers="CI_low" class="gt_row gt_right">3.61</td>
+<td headers="CI_low" class="gt_row gt_right">3.68</td>
 <td headers="CI_high" class="gt_row gt_right">10.76</td>
 <td headers="Effects" class="gt_row gt_left">fixed</td>
 <td headers="Component" class="gt_row gt_left">conditional</td>
@@ -2135,8 +2144,8 @@ div.csl-indent {
 <p><img src="1000-Statistiken-berichten_files/figure-html/unnamed-chunk-15-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section></section><section id="rope-1" class="level3" data-number="12.7.3"><h3 data-number="12.7.3" class="anchored" data-anchor-id="rope-1">
-<span class="header-section-number">12.7.3</span> ROPE</h3>
+</section></section><section id="rope-1" class="level3" data-number="12.7.4"><h3 data-number="12.7.4" class="anchored" data-anchor-id="rope-1">
+<span class="header-section-number">12.7.4</span> ROPE</h3>
 <p>Testen Sie eine Hypothese, die einen “praktischen Nullwert” ausschließen möchte, so bietet sich das ROPE-Verfahren an.</p>
 <p>Mit ROPE testet man demnach keine “Exaktnullhypothese”, sondern eine “Praktischnullhypothese”, nämlich dass ein Effekt so klein ist, dass er praktisch keine Bedeutung hat.</p>
 <p>Diesem Konzept liegt die Überlegung zugrunde, dass es in der freien Wildbahn kaum oder keine Effekte gibt, die <em>exakt</em> Null sind, also “0,0000000000000000000000000 …” und so weiter bis alle Unendlichkeit.</p>
@@ -2187,8 +2196,8 @@ div.csl-indent {
 <p>Schneidet ROPE mit dem Berg, dem roten, dann Verwerfen ist verboten!</p>
 </blockquote>
 <p>Mit “Verwerfen” ist das Verwerfen der “Praktischnullhypothese” gemeint.</p>
-<section id="standardisierte-effektstärke" class="level4" data-number="12.7.3.1"><h4 data-number="12.7.3.1" class="anchored" data-anchor-id="standardisierte-effektstärke">
-<span class="header-section-number">12.7.3.1</span> Standardisierte Effektstärke</h4>
+<section id="standardisierte-effektstärke" class="level4" data-number="12.7.4.1"><h4 data-number="12.7.4.1" class="anchored" data-anchor-id="standardisierte-effektstärke">
+<span class="header-section-number">12.7.4.1</span> Standardisierte Effektstärke</h4>
 <p>Vergleicht man Gruppen und ist z.B. die AV wenig anschaulich (etwa ein Summenscore), so bietet es sich, standardisierte Maße des Gruppenunterschieds anzugeben. Man nennt sie auch Maße der Effektstärke.</p>
 <p>Bei Gruppenvergleichen ist <em>Cohens d</em> ein bekanntes Maß. Man kann es sich so ausgeben lassen:</p>
 <div class="cell" data-hash="1000-Statistiken-berichten_cache/html/unnamed-chunk-18_d2f1e6581e32b7e3d9223d80c3d8791c">
@@ -2221,13 +2230,13 @@ div.csl-indent {
 
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
-{"columns":[{"label":["Parameter"],"name":[1],"type":["chr"],"align":["left"]},{"label":["CI"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["CI_low"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["CI_high"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"value","2":"0.95","3":"0.09841903","4":"0.5575766"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["Parameter"],"name":[1],"type":["chr"],"align":["left"]},{"label":["CI"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["CI_low"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["CI_high"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"value","2":"0.95","3":"0.09473988","4":"0.5564941"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 </div>
 </div>
-</section><section id="r-paket-report" class="level4" data-number="12.7.3.2"><h4 data-number="12.7.3.2" class="anchored" data-anchor-id="r-paket-report">
-<span class="header-section-number">12.7.3.2</span> R-Paket <code>report</code>
+</section><section id="r-paket-report" class="level4" data-number="12.7.4.2"><h4 data-number="12.7.4.2" class="anchored" data-anchor-id="r-paket-report">
+<span class="header-section-number">12.7.4.2</span> R-Paket <code>report</code>
 </h4>
 <p>Vielleicht ist das R-Paket <code>report</code> für Sie nützlich. Ich bin nicht ganz sicher, denn das Paket ist noch sehr neu und berichtet recht viel Informationen. Aber vielleicht wollen Sie es ja mal ausprobieren.</p>
 <div class="cell" data-hash="1000-Statistiken-berichten_cache/html/unnamed-chunk-21_9f25f20214ca50944f2265b5e6fdc7b6">
@@ -2253,8 +2262,8 @@ div.csl-indent {
 <span><span class="co">## </span></span>
 <span><span class="co">## SAMPLING FOR MODEL 'continuous' NOW (CHAIN 1).</span></span>
 <span><span class="co">## Chain 1: </span></span>
-<span><span class="co">## Chain 1: Gradient evaluation took 2.8e-05 seconds</span></span>
-<span><span class="co">## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.28 seconds.</span></span>
+<span><span class="co">## Chain 1: Gradient evaluation took 3.5e-05 seconds</span></span>
+<span><span class="co">## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.35 seconds.</span></span>
 <span><span class="co">## Chain 1: Adjust your expectations accordingly!</span></span>
 <span><span class="co">## Chain 1: </span></span>
 <span><span class="co">## Chain 1: </span></span>
@@ -2271,15 +2280,15 @@ div.csl-indent {
 <span><span class="co">## Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)</span></span>
 <span><span class="co">## Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)</span></span>
 <span><span class="co">## Chain 1: </span></span>
-<span><span class="co">## Chain 1:  Elapsed Time: 0.05727 seconds (Warm-up)</span></span>
-<span><span class="co">## Chain 1:                0.062106 seconds (Sampling)</span></span>
-<span><span class="co">## Chain 1:                0.119376 seconds (Total)</span></span>
+<span><span class="co">## Chain 1:  Elapsed Time: 0.026938 seconds (Warm-up)</span></span>
+<span><span class="co">## Chain 1:                0.034543 seconds (Sampling)</span></span>
+<span><span class="co">## Chain 1:                0.061481 seconds (Total)</span></span>
 <span><span class="co">## Chain 1: </span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## SAMPLING FOR MODEL 'continuous' NOW (CHAIN 2).</span></span>
 <span><span class="co">## Chain 2: </span></span>
-<span><span class="co">## Chain 2: Gradient evaluation took 2.5e-05 seconds</span></span>
-<span><span class="co">## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.25 seconds.</span></span>
+<span><span class="co">## Chain 2: Gradient evaluation took 1.1e-05 seconds</span></span>
+<span><span class="co">## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.11 seconds.</span></span>
 <span><span class="co">## Chain 2: Adjust your expectations accordingly!</span></span>
 <span><span class="co">## Chain 2: </span></span>
 <span><span class="co">## Chain 2: </span></span>
@@ -2296,15 +2305,15 @@ div.csl-indent {
 <span><span class="co">## Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)</span></span>
 <span><span class="co">## Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)</span></span>
 <span><span class="co">## Chain 2: </span></span>
-<span><span class="co">## Chain 2:  Elapsed Time: 0.061295 seconds (Warm-up)</span></span>
-<span><span class="co">## Chain 2:                0.056618 seconds (Sampling)</span></span>
-<span><span class="co">## Chain 2:                0.117913 seconds (Total)</span></span>
+<span><span class="co">## Chain 2:  Elapsed Time: 0.034085 seconds (Warm-up)</span></span>
+<span><span class="co">## Chain 2:                0.03355 seconds (Sampling)</span></span>
+<span><span class="co">## Chain 2:                0.067635 seconds (Total)</span></span>
 <span><span class="co">## Chain 2: </span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## SAMPLING FOR MODEL 'continuous' NOW (CHAIN 3).</span></span>
 <span><span class="co">## Chain 3: </span></span>
-<span><span class="co">## Chain 3: Gradient evaluation took 2.2e-05 seconds</span></span>
-<span><span class="co">## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.22 seconds.</span></span>
+<span><span class="co">## Chain 3: Gradient evaluation took 1.2e-05 seconds</span></span>
+<span><span class="co">## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.12 seconds.</span></span>
 <span><span class="co">## Chain 3: Adjust your expectations accordingly!</span></span>
 <span><span class="co">## Chain 3: </span></span>
 <span><span class="co">## Chain 3: </span></span>
@@ -2321,15 +2330,15 @@ div.csl-indent {
 <span><span class="co">## Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)</span></span>
 <span><span class="co">## Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)</span></span>
 <span><span class="co">## Chain 3: </span></span>
-<span><span class="co">## Chain 3:  Elapsed Time: 0.063763 seconds (Warm-up)</span></span>
-<span><span class="co">## Chain 3:                0.058854 seconds (Sampling)</span></span>
-<span><span class="co">## Chain 3:                0.122617 seconds (Total)</span></span>
+<span><span class="co">## Chain 3:  Elapsed Time: 0.025322 seconds (Warm-up)</span></span>
+<span><span class="co">## Chain 3:                0.027093 seconds (Sampling)</span></span>
+<span><span class="co">## Chain 3:                0.052415 seconds (Total)</span></span>
 <span><span class="co">## Chain 3: </span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## SAMPLING FOR MODEL 'continuous' NOW (CHAIN 4).</span></span>
 <span><span class="co">## Chain 4: </span></span>
-<span><span class="co">## Chain 4: Gradient evaluation took 2.2e-05 seconds</span></span>
-<span><span class="co">## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.22 seconds.</span></span>
+<span><span class="co">## Chain 4: Gradient evaluation took 1.3e-05 seconds</span></span>
+<span><span class="co">## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.13 seconds.</span></span>
 <span><span class="co">## Chain 4: Adjust your expectations accordingly!</span></span>
 <span><span class="co">## Chain 4: </span></span>
 <span><span class="co">## Chain 4: </span></span>
@@ -2346,21 +2355,21 @@ div.csl-indent {
 <span><span class="co">## Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)</span></span>
 <span><span class="co">## Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)</span></span>
 <span><span class="co">## Chain 4: </span></span>
-<span><span class="co">## Chain 4:  Elapsed Time: 0.049475 seconds (Warm-up)</span></span>
-<span><span class="co">## Chain 4:                0.057417 seconds (Sampling)</span></span>
-<span><span class="co">## Chain 4:                0.106892 seconds (Total)</span></span>
+<span><span class="co">## Chain 4:  Elapsed Time: 0.025155 seconds (Warm-up)</span></span>
+<span><span class="co">## Chain 4:                0.03074 seconds (Sampling)</span></span>
+<span><span class="co">## Chain 4:                0.055895 seconds (Total)</span></span>
 <span><span class="co">## Chain 4:</span></span>
 <span><span class="co">## We fitted a Bayesian linear model (estimated using MCMC sampling with 4 chains</span></span>
 <span><span class="co">## of 2000 iterations and a warmup of 1000) to predict mpg with am (formula: mpg ~</span></span>
 <span><span class="co">## am). Priors over parameters were set as normal (mean = 0.00, SD = 30.20)</span></span>
 <span><span class="co">## distributions. The model's explanatory power is substantial (R2 = 0.35, 95% CI</span></span>
-<span><span class="co">## [0.10, 0.56], adj. R2 = 0.29). The model's intercept, corresponding to am = 0,</span></span>
-<span><span class="co">## is at 17.15 (95% CI [14.83, 19.46]). Within this model:</span></span>
+<span><span class="co">## [0.09, 0.56], adj. R2 = 0.29). The model's intercept, corresponding to am = 0,</span></span>
+<span><span class="co">## is at 17.18 (95% CI [14.85, 19.43]). Within this model:</span></span>
 <span><span class="co">## </span></span>
-<span><span class="co">##   - The effect of am (Median = 7.23, 95% CI [3.69, 10.84]) has a 100.00%</span></span>
-<span><span class="co">## probability of being positive (&gt; 0), 100.00% of being significant (&gt; 0.30), and</span></span>
-<span><span class="co">## 99.85% of being large (&gt; 1.81). The estimation successfully converged (Rhat =</span></span>
-<span><span class="co">## 1.000) and the indices are reliable (ESS = 3395)</span></span>
+<span><span class="co">##   - The effect of am (Median = 7.18, 95% CI [3.59, 10.74]) has a 100.00%</span></span>
+<span><span class="co">## probability of being positive (&gt; 0), 99.95% of being significant (&gt; 0.30), and</span></span>
+<span><span class="co">## 99.75% of being large (&gt; 1.81). The estimation successfully converged (Rhat =</span></span>
+<span><span class="co">## 1.000) and the indices are reliable (ESS = 3609)</span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## Following the Sequential Effect eXistence and sIgnificance Testing (SEXIT)</span></span>
 <span><span class="co">## framework, we report the median of the posterior distribution and its 95% CI</span></span>
@@ -2391,28 +2400,28 @@ div.csl-indent {
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
 <div id="ref-cooper_reporting_2020" class="csl-entry" role="listitem">
-Cooper, Harris. 2020. <span>„Reporting Standards for Research in Psychology: <span>Why</span> Do We Need Them? <span>What</span> Might They Be?“</span> In <em>Reporting Quantitative Research in Psychology: <span>How</span> to Meet <span>APA Style Journal Article Reporting Standards</span>, 2nd Ed</em>, 3–17. <span>Washington, DC, US</span>: <span>American Psychological Association</span>. <a href="https://doi.org/10.1037/0000178-001">https://doi.org/10.1037/0000178-001</a>.
+Cooper, Harris. 2020. <span>„Reporting standards for research in psychology: Why do we need them? What might they be?“</span> In <em>Reporting quantitative research in psychology: How to meet <span>APA</span> Style Journal Article Reporting Standards, 2nd ed</em>, 3–17. Washington, <span>DC</span>, <span>US</span>: American Psychological Association. <a href="https://doi.org/10.1037/0000178-001">https://doi.org/10.1037/0000178-001</a>.
 </div>
 <div id="ref-gelman_regression_2021" class="csl-entry" role="listitem">
-Gelman, Andrew, Jennifer Hill, und Aki Vehtari. 2021. <em>Regression and Other Stories</em>. Analytical Methods for Social Research. <span>Cambridge</span>: <span>Cambridge University Press</span>.
+Gelman, Andrew, Jennifer Hill, und Aki Vehtari. 2021. <em>Regression and other stories</em>. Analytical methods for social research. Cambridge: Cambridge University Press.
 </div>
 <div id="ref-jhangiani_research_2019" class="csl-entry" role="listitem">
-Jhangiani, Rajiv S, Jhangiani, I-Chant A Chiang, und Dana C Cuttler Leighton. 2019. <em>Research <span>Methods</span> in <span>Psychology</span></em>.
+Jhangiani, Rajiv S, Jhangiani, I-Chant A Chiang, und Dana C Cuttler Leighton. 2019. <em>Research Methods in Psychology</em>.
 </div>
 <div id="ref-kruschke_rejecting_2018" class="csl-entry" role="listitem">
-Kruschke, John K. 2018. <span>„Rejecting or <span>Accepting Parameter Values</span> in <span>Bayesian Estimation</span>“</span>. <em>Advances in Methods and Practices in Psychological Science</em> 1 (2): 270–80. <a href="https://doi.org/10.1177/2515245918771304">https://doi.org/10.1177/2515245918771304</a>.
+Kruschke, John K. 2018. <span>„Rejecting or Accepting Parameter Values in Bayesian Estimation“</span>. <em>Advances in Methods and Practices in Psychological Science</em> 1 (2): 270–80. <a href="https://doi.org/10.1177/2515245918771304">https://doi.org/10.1177/2515245918771304</a>.
 </div>
 <div id="ref-kruschke_bayesian_2021" class="csl-entry" role="listitem">
-———. 2021. <span>„Bayesian <span>Analysis Reporting Guidelines</span>“</span>. <em>Nature Human Behaviour</em> 5 (10, 10): 1282–91. <a href="https://doi.org/10.1038/s41562-021-01177-7">https://doi.org/10.1038/s41562-021-01177-7</a>.
+———. 2021. <span>„Bayesian Analysis Reporting Guidelines“</span>. <em>Nature Human Behaviour</em> 5 (10): 1282–91. <a href="https://doi.org/10.1038/s41562-021-01177-7">https://doi.org/10.1038/s41562-021-01177-7</a>.
 </div>
 <div id="ref-makowski_indices_2019" class="csl-entry" role="listitem">
-Makowski, Dominique, Mattan S. Ben-Shachar, S. H. Annabel Chen, und Daniel Lüdecke. 2019. <span>„Indices of <span>Effect Existence</span> and <span>Significance</span> in the <span>Bayesian Framework</span>“</span>. <em>Frontiers in Psychology</em> 10. <a href="https://www.frontiersin.org/article/10.3389/fpsyg.2019.02767">https://www.frontiersin.org/article/10.3389/fpsyg.2019.02767</a>.
+Makowski, Dominique, Mattan S. Ben-Shachar, S. H. Annabel Chen, und Daniel Lüdecke. 2019. <span>„Indices of Effect Existence and Significance in the Bayesian Framework“</span>. <em>Frontiers in Psychology</em> 10: 2767. <a href="https://doi.org/10.3389/fpsyg.2019.02767">https://doi.org/10.3389/fpsyg.2019.02767</a>.
 </div>
 <div id="ref-peters_abschlussarbeiten_2015" class="csl-entry" role="listitem">
-Peters, Jan H., und Tobias Dörfler. 2015. <em>Abschlussarbeiten in der Psychologie und den Sozialwissenschaften - Schreiben und Gestalten</em>. PS - Psychologie. <span>Hallbergmoos/Germany</span>: <span>Pearson</span>. <a href="https://www.pearson-studium.de/schreiben-und-gestalten-von-abschlussarbeiten-in-der-psychologie-und-den-sozialwissenschaften.html">https://www.pearson-studium.de/schreiben-und-gestalten-von-abschlussarbeiten-in-der-psychologie-und-den-sozialwissenschaften.html</a>.
+Peters, Jan H., und Tobias Dörfler. 2015. <em>Abschlussarbeiten in der Psychologie und den Sozialwissenschaften - Schreiben und Gestalten</em>. <span>PS</span> - Psychologie. Hallbergmoos/Germany: Pearson. <a href="https://www.pearson-studium.de/schreiben-und-gestalten-von-abschlussarbeiten-in-der-psychologie-und-den-sozialwissenschaften.html">https://www.pearson-studium.de/schreiben-und-gestalten-von-abschlussarbeiten-in-der-psychologie-und-den-sozialwissenschaften.html</a>.
 </div>
 <div id="ref-peters_planen_2019" class="csl-entry" role="listitem">
-Peters, Jan Hendrik, und Tobias Dörfler. 2019. <em>Planen, Durchführen und Auswerten von Abschlussarbeiten in der Psychologie und den Sozialwissenschaften</em>. <span>Pearson</span>. <a href="https://www.pearson-studium.de/planen-durchfuehren-und-auswerten-von-abschlussarbeiten-in-der-psychologie-und-den-sozialwissenschaften.html">https://www.pearson-studium.de/planen-durchfuehren-und-auswerten-von-abschlussarbeiten-in-der-psychologie-und-den-sozialwissenschaften.html</a>.
+Peters, Jan Hendrik, und Tobias Dörfler. 2019. <em>Planen, Durchführen und Auswerten von Abschlussarbeiten in der Psychologie und den Sozialwissenschaften</em>. Pearson. <a href="https://www.pearson-studium.de/planen-durchfuehren-und-auswerten-von-abschlussarbeiten-in-der-psychologie-und-den-sozialwissenschaften.html">https://www.pearson-studium.de/planen-durchfuehren-und-auswerten-von-abschlussarbeiten-in-der-psychologie-und-den-sozialwissenschaften.html</a>.
 </div>
 </div>
 </section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><hr>
@@ -2438,6 +2447,121 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {

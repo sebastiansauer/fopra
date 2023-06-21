@@ -45,10 +45,17 @@ Sie befinden sich im Abschnitt "Auswerten" in @fig-ueberblick.
 
 
 
+### Grundlagen der statischen Modellierung
+
+
+Die Grundlagen der statistischen Modellierung mit einem Fokus auf Bayes-Modellen können Sie [hier](https://start-bayes.netlify.app/) nachlesen.
 
 
 
+### Überblick
 
+In diesem Kapitel sind die grundlegenden Verfahren zur Modellierung und inferenzstatistischen Absicherung Ihrer Forschungsfragen angerissen.
+Die Darstellung zielt auf ein "so-geht's" ab, nicht auf eine vollständige Darstellung aller Auswertungsmöglichkeiten.
 
 ## 1 between-Variable
 
@@ -101,6 +108,16 @@ plot(graphLayout(mein_modell))
 ```
 
 
+:::{.callout-note}
+Im DAG  @fig-bringtnixtin-dag ist `u` als Ursache von `y2` angegeben.
+`u` steht hier stellvertretend für alle weiteren Ursachen von `y2`, vermutlich sind das sehr viele.
+Aber sie interessieren uns nicht.
+Daher können Sie `u` auch aus dem DAG weglassen.
+Streng genommen sollten Sie es sogar weglassen,
+denn im DAG zeigt man nur diejenigen Variablen, die für Ihre Hypothese von Belang sind. 
+Da `u` keine Verbindung zum Pfad `g -> y2` hat,
+brauchen wir es für die Bestimmung des Kausaleffekts nicht zu berücksichtigen.$\square$
+:::
 
 ```{r d_bringtnixtin}
 #| echo: false
@@ -445,8 +462,8 @@ Eine Studie mit Vorher-Nachher-Messung setzt ein Within-Design um.
 
 :::{#exm-within1}
 ### Statisches Diagramm vs. animiertes Diagramm
-Ein Forschungsteam untersuch den Effekt der UV *Diagrammart* `D` (mit den zwei Stufen `D.1` *animiert* und `D.2` *statisch*) auf die Behaltensleistung (`y`) von Probanden.
-Nach jeder Bedingung wird die Behaltensleistung gemessen (anhand von 10 Wissensfragen, die jeweils als "richtig" oder "falsch" bewertet wurden), mit `y1` nach `D.1` und `y2` für `D.2`.$\square$
+Ein Forschungsteam untersuch den Effekt der UV *Visualisierungsart* `V` (mit den zwei Stufen `V.1` *animiert* und `V.2` *statisch*) auf die Behaltensleistung (`y`) von Probanden.
+Nach jeder Bedingung wird die Behaltensleistung gemessen (anhand von 10 Wissensfragen, die jeweils als "richtig" oder "falsch" bewertet wurden), mit `y1` nach `V.1` und `y2` für `V.2`.$\square$
 :::
 
 
@@ -467,13 +484,13 @@ Die Modellformel lautet: `d ~ 1`,
 das ist ein *Intercept-Modell*, also ein Modell ohne Prädiktor. 
 Uns interessiert, ob die Variable `d` im Mittelwert ungleich Null ist oder positiv (zugunsten statischer Diagramme) oder negativ (Behaltensleistung höher bei animierten Diagrammen).
 
-Der Ablauf ist in @fig-diagrammart-flow dargestellt.
+Der Ablauf der Studie (aus Sicht der Probandis) ist in @fig-diagrammart-flow dargestellt.
 
 ```{mermaid}
 %%| label: fig-diagrammart-flow
-%%| fig-cap: "Ablauf der Studie zur Behaltensleistung y2 in Abhängigkeit der Diagrammart D (Within-Variable)"
+%%| fig-cap: "Ablauf der Studie zur Behaltensleistung y2 in Abhängigkeit der Visualisierungsart V (Within-Variable)"
 flowchart LR
-  D.1 --> y1 --> D.2 --> y2
+  V.1 --> y1 --> V.2 --> y2
 ```
 
 
@@ -484,12 +501,12 @@ Der DAG des Experiments ist in @fig-diagrammarten-dag dargestellt.
 
 ```{r out.width = "100%", fig.asp = .5}
 #| label: fig-diagrammarten-dag 
-#| fig-cap: "DAG für die Studie zur Behaltensleistung y2 in Abhängigkeit der Diagrammart D"
+#| fig-cap: "DAG für die Studie zur Behaltensleistung y2 in Abhängigkeit des Visualiserungstyp V"
 #| echo: false
 
 mein_modell <- "dag{
-D -> y2
-u -> y2
+V -> y
+u -> y
 }"
 
 plot(graphLayout(mein_modell))
@@ -513,7 +530,7 @@ head(d_within)
 
 
 
-Wir berechnen `d`, das die zentrale Variable der Forschungsfrage ist.
+Wir berechnen `d`, was die zentrale Variable der Forschungsfrage ist.
 
 
 ```{r}
@@ -610,8 +627,15 @@ Hier ist eine Visualisierung des 95%-ETI des Unterschieds (`d`) zwischen den bei
 parameters(m_within) %>% plot(show_intercept = TRUE)
 ```
 
+:::{.callout-note}
+Wenn Sie die `parameters` `plot`ten und nur einen Intercept haben, müssen Sie mit `show_intercept=TRUE` einschalten, dass er gezeigt wird.
+Sonst gibt es eine Fehlermeldung.$\square$
+:::
+
 Wie man sieht, ist die Null nicht im CI enthalten. Wir können daher resümieren,
 dass es einen Unterschied zwischen den Bedingungen (statisch vs. animiert) gibt hinsichtlich `y2` (Behaltensleistung). Die Behaltensleistung animierter Diagramme ist der von statischen Diagrammen überlegen (laut diesem Modell).
+Die exakte Nullhypothese ist zu verwerfen.
+Natürlich könnte man jetzt noch ein Rope berechnen.
 
 
 ## 1 within-Variable, 1 between-Variable
@@ -634,11 +658,11 @@ Die Diagrammart `D` ist auch eine UV, aber als Within-Variable konzipiert.
 flowchart LR
   subgraph g2
     direction LR
-    D.1 --> y1 --> D.2 --> y2
+    V.1 --> y1 --> V.2 --> y2
   end
   subgraph g1
     direction LR
-    D2[D.2] --> y22[y2] --> D1[D.1] --> y11[y1] 
+    D2[V.2] --> y22[y2] --> D1[V.1] --> y11[y1] 
   end
 ```
 
@@ -651,8 +675,11 @@ Da es zwei UVs gibt, gibt es auch zwei Hypothesen:
 
 
 
-Die Modellformel lautet: `d ~ 1 + g`.
-Das kann man synonym so schreiben: `d ~ g`.
+Die Modellformel lautet: `y ~ 1 + g`.
+Das kann man synonym so schreiben: `y ~ g`.
+`y` meint die Behaltensleistung;
+statisch erfassen wir den *Effekt* auf `y` anhand des Differenzmaßes `d`.
+
 
 
 Der DAG des Experiments ist in @fig-within2-dag dargestellt.
@@ -660,13 +687,13 @@ Der DAG des Experiments ist in @fig-within2-dag dargestellt.
 
 ```{r out.width = "100%", fig.asp = .5}
 #| label: fig-within2-dag
-#| fig-cap: "DAG für die Studie mit der Modellgleichung mit einem Within- und einem Between-Faktor. Es wird kein Effekt für g erwartet, wohl aber ein Effekt für D"
+#| fig-cap: "DAG für die Studie mit der Modellgleichung mit einem Within- und einem Between-Faktor. Es wird kein Effekt für g erwartet (daher kein Pfeil von g auf y), wohl aber ein Effekt für V"
 #| echo: false
 
 mein_modell <- "dag{
-D -> y2
-u -> y2
+V -> y
 g 
+u -> y
 }"
 
 plot(graphLayout(mein_modell))

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.247">
+<meta name="generator" content="quarto-1.3.269">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Forschungsprojekt - 11&nbsp; Auswerten: Modellieren</title>
 <style>
@@ -86,10 +86,12 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/downloadthis-1.9.1/downloadthis.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
@@ -113,7 +115,7 @@ div.csl-indent {
 }</script><meta name="mermaid-theme" content="neutral">
 <script src="site_libs/quarto-diagram/mermaid.min.js"></script><script src="site_libs/quarto-diagram/mermaid-init.js"></script><link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
-<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><link rel="stylesheet" href="styles.css">
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><link rel="stylesheet" href="styles.css">
 </head>
 <body class="nav-sidebar floating">
 
@@ -134,6 +136,9 @@ div.csl-indent {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Forschungsprojekt</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Dunkelmodus umschalten"><i class="bi"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -247,6 +252,8 @@ div.csl-indent {
 <li><a href="#lernziele" id="toc-lernziele" class="nav-link" data-scroll-target="#lernziele"><span class="header-section-number">11.1.1</span> Lernziele</a></li>
   <li><a href="#ben%C3%B6tigte-r-pakete" id="toc-benötigte-r-pakete" class="nav-link" data-scroll-target="#ben%C3%B6tigte-r-pakete"><span class="header-section-number">11.1.2</span> Benötigte R-Pakete</a></li>
   <li><a href="#position-im-lernpfad" id="toc-position-im-lernpfad" class="nav-link" data-scroll-target="#position-im-lernpfad"><span class="header-section-number">11.1.3</span> Position im Lernpfad</a></li>
+  <li><a href="#grundlagen-der-statischen-modellierung" id="toc-grundlagen-der-statischen-modellierung" class="nav-link" data-scroll-target="#grundlagen-der-statischen-modellierung"><span class="header-section-number">11.1.4</span> Grundlagen der statischen Modellierung</a></li>
+  <li><a href="#%C3%BCberblick" id="toc-überblick" class="nav-link" data-scroll-target="#%C3%BCberblick"><span class="header-section-number">11.1.5</span> Überblick</a></li>
   </ul>
 </li>
   <li>
@@ -331,6 +338,12 @@ div.csl-indent {
 </section><section id="position-im-lernpfad" class="level3" data-number="11.1.3"><h3 data-number="11.1.3" class="anchored" data-anchor-id="position-im-lernpfad">
 <span class="header-section-number">11.1.3</span> Position im Lernpfad</h3>
 <p>Sie befinden sich im Abschnitt “Auswerten” in <a href="index.html#fig-ueberblick">Abbildung&nbsp;<span>1.2</span></a>.</p>
+</section><section id="grundlagen-der-statischen-modellierung" class="level3" data-number="11.1.4"><h3 data-number="11.1.4" class="anchored" data-anchor-id="grundlagen-der-statischen-modellierung">
+<span class="header-section-number">11.1.4</span> Grundlagen der statischen Modellierung</h3>
+<p>Die Grundlagen der statistischen Modellierung mit einem Fokus auf Bayes-Modellen können Sie <a href="https://start-bayes.netlify.app/">hier</a> nachlesen.</p>
+</section><section id="überblick" class="level3" data-number="11.1.5"><h3 data-number="11.1.5" class="anchored" data-anchor-id="überblick">
+<span class="header-section-number">11.1.5</span> Überblick</h3>
+<p>In diesem Kapitel sind die grundlegenden Verfahren zur Modellierung und inferenzstatistischen Absicherung Ihrer Forschungsfragen angerissen. Die Darstellung zielt auf ein “so-geht’s” ab, nicht auf eine vollständige Darstellung aller Auswertungsmöglichkeiten.</p>
 </section></section><section id="between-variable" class="level2" data-number="11.2"><h2 data-number="11.2" class="anchored" data-anchor-id="between-variable">
 <span class="header-section-number">11.2</span> 1 between-Variable</h2>
 <section id="design" class="level3" data-number="11.2.1"><h3 data-number="11.2.1" class="anchored" data-anchor-id="design">
@@ -363,10 +376,23 @@ div.csl-indent {
 <div class="cell" data-fig.asp="0.5" data-hash="900-Modellieren_cache/html/fig-bringtnixtin-dag_e2a40691dc0de62ad6e9a900cf5c8b37">
 <div class="cell-output-display">
 <div id="fig-bringtnixtin-dag" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="900-Modellieren_files/figure-html/fig-bringtnixtin-dag-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figure class="figure"><p><img src="900-Modellieren_files/figure-html/fig-bringtnixtin-dag-1.png" class="quarto-discovered-preview-image img-fluid figure-img" style="width:100.0%"></p>
 <p></p><figcaption class="figure-caption">Abbildung&nbsp;11.2: DAG für der Bringtnixtin-Studie</figcaption><p></p>
 </figure>
 </div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hinweis
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Im DAG <a href="#fig-bringtnixtin-dag">Abbildung&nbsp;<span>11.2</span></a> ist <code>u</code> als Ursache von <code>y2</code> angegeben. <code>u</code> steht hier stellvertretend für alle weiteren Ursachen von <code>y2</code>, vermutlich sind das sehr viele. Aber sie interessieren uns nicht. Daher können Sie <code>u</code> auch aus dem DAG weglassen. Streng genommen sollten Sie es sogar weglassen, denn im DAG zeigt man nur diejenigen Variablen, die für Ihre Hypothese von Belang sind. Da <code>u</code> keine Verbindung zum Pfad <code>g -&gt; y2</code> hat, brauchen wir es für die Bestimmung des Kausaleffekts nicht zu berücksichtigen.<span class="math inline">\(\square\)</span></p>
 </div>
 </div>
 <p>Die Daten dieses Experiments sind hier zu beziehen:</p>
@@ -374,7 +400,7 @@ div.csl-indent {
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">d_bringtnixtin_path</span> <span class="op">&lt;-</span> <span class="st">"https://raw.githubusercontent.com/sebastiansauer/fopra/main/data/d_bringtnixtin.csv"</span></span>
 <span><span class="va">d_bringtnixtin</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="va">d_bringtnixtin_path</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><a href="#dnldts9415" onclick="fetch('data:text/csv;base64,aWQsZyx5MSx5MixkCjEsMCwxLjM3MDk1ODQ0NzE0NjY2ODUsMS40MTIxNTgxNjcxODY3MTkyLDAuMDQxMTk5NzIwMDQwMDUwNjgKMiwwLC0wLjU2NDY5ODE3MTM5NjA4ODcsLTAuNjM2OTA5NjMxMTA1ODIyLC0wLjA3MjIxMTQ1OTcwOTczMzMKMywwLDAuMzYzMTI4NDExMzM3MzM5MiwwLjUxNDc2MTA1ODQ3NzI0MjYsMC4xNTE2MzI2NDcxMzk5MDM0Mwo0LDAsMC42MzI4NjI2MDQ5NjEwNDA0LDAuNDg3NTIxNjM5NTQ1NzI1MzYsLTAuMTQ1MzQwOTY1NDE1MzE1MDUKNSwwLDAuNDA0MjY4MzIzMTQwOTk5MDMsMC4xMzA2MTIxMTQyNTcxNDAxLC0wLjI3MzY1NjIwODg4Mzg1ODk0CjYsMCwtMC4xMDYxMjQ1MTYwOTE0ODQwMywtMC4wMTk1NjA5MTA5MTM3NDA1OTgsMC4wODY1NjM2MDUxNzc3NDM0Mwo3LDAsMS41MTE1MjE5OTc0Mzg5MzksMS4zNDkyNDMzNjIyMDE2MDQ3LC0wLjE2MjI3ODYzNTIzNzMzNDIKOCwwLC0wLjA5NDY1OTAzODQxMzA5NzU2LDAuMTk0MTYxMjEzOTMxMTUzMDEsMC4yODg4MjAyNTIzNDQyNTA1Nwo5LDAsMi4wMTg0MjM3MTM4NzcwNDIsMS45MzIxMzQ0NzMzNTQzNzI2LC0wLjA4NjI4OTI0MDUyMjY2OTE3NQoxMCwwLC0wLjA2MjcxNDA5OTA1MjQyMSwwLjA2ODQxNTQ3NzYyODAyMDM3LDAuMTMxMTI5NTc2NjgwNDQxMzcKMTEsMCwxLjMwNDg2OTY1NDIyMzQ4NTIsMS4zNjkyNTQ3MDcyNjQyNzQ1LDAuMDY0Mzg1MDUzMDQwNzg5MjMKMTIsMCwyLjI4NjY0NTM5MjcwMTEwNywyLjEyOTg3NzYwNDUyNTAzMiwtMC4xNTY3Njc3ODgxNzYwNzQ5NQoxMywwLC0xLjM4ODg2MDcwMTExMjMzOTMsLTEuMDczNzE1MTk3MTUzOTQzOCwwLjMxNTE0NTUwMzk1ODM5NTQ3CjE0LDAsLTAuMjc4Nzg4NzY2ODE3MzcxMzYsLTAuMTUwMjA4OTA1NjczOTA4MDcsMC4xMjg1Nzk4NjExNDM0NjMzCjE1LDAsLTAuMTMzMzIxMzM2MzkzNjU4MDQsLTAuMTE1MzY5MjA3MDczNzM2OSwwLjAxNzk1MjEyOTMxOTkyMTEzCjE2LDAsMC42MzU5NTAzOTgwNzAwNzQ0LDAuNjkxMjYwNTQ3NTI4MzY3LDAuMDU1MzEwMTQ5NDU4MjkyNgoxNywwLC0wLjI4NDI1MjkyMTQxNjA3MjQsLTAuMTQ4Mzk1MTU4MjA1MDE4MjIsMC4xMzU4NTc3NjMyMTEwNTQxNwoxOCwwLC0yLjY1NjQ1NTQyMDkwNDc3NTcsLTIuNjM4NDg4ODQzNTg4OTU5MywwLjAxNzk2NjU3NzMxNTgxNjQxMgoxOSwwLC0yLjQ0MDQ2NjkyODU3NTUxOTQsLTMuMDM5MDg0OTQ1MjA2MTA2LC0wLjU5ODYxODAxNjYzMDU4NjgKMjAsMCwxLjMyMDExMzM0NTczMDE5MjEsMS4zNzcwODk5MzY0MzYzMjQsMC4wNTY5NzY1OTA3MDYxMzE5MjQKMjEsMSwtMC4zMDY2Mzg1OTQwNzg0NzQ1NSwtMC43MTM0MTg4NTU5NjAwMDMsLTAuNDA2NzgwMjYxODgxNTI4NDQKMjIsMSwtMS43ODEzMDg0MzM5OCwtMi4wNzc1OTU2NTQzNDAyMTE0LC0wLjI5NjI4NzIyMDM2MDIxMTQKMjMsMSwtMC4xNzE5MTczNTU3NTk2MjEzNiwtMC4zODg4ODU5NDM2MTk4NTMzNSwtMC4yMTY5Njg1ODc4NjAyMzIKMjQsMSwxLjIxNDY3NDY5OTE3MjU5ODcsMS4xNjEyODg3MzEyOTc4MDEsLTAuMDUzMzg1OTY3ODc0Nzk3NjYKMjUsMSwxLjg5NTE5MzQ2MTI2NDk2NTIsMS40MTY0MDE3MTYwMzY3MzksLTAuNDc4NzkxNzQ1MjI4MjI2MgoyNiwxLC0wLjQzMDQ2OTEzMTYwNjE5OTY1LC0wLjUwMzI5MzkzODUzMDcwNDMsLTAuMDcyODI0ODA2OTI0NTA0NgoyNywxLC0wLjI1NzI2OTM4Mjc2ODkyOTYzLC0wLjUyMzQzMzA5MjE1MTg0ODEsLTAuMjY2MTYzNzA5MzgyOTE4NDUKMjgsMSwtMS43NjMxNjMwODUxOTQ3ODAyLC0xLjg4ODc5NTE5ODc4ODU4OTEsLTAuMTI1NjMyMTEzNTkzODA5CjI5LDEsMC40NjAwOTczNTQ4MzEyNzE0LDAuMzEwOTA5NzM1MTU2MDY3NCwtMC4xNDkxODc2MTk2NzUyMDQKMzAsMSwtMC42Mzk5OTQ4NzU5NjAxMTkyLC0wLjgyOTE1MjU3NjcyMDA4LC0wLjE4OTE1NzcwMDc1OTk2MDg2CjMxLDEsMC40NTU0NTAxMjMyNDEyMTkzNiwtMC4wODY1MDY5OTc4MDU2ODQ5NywtMC41NDE5NTcxMjEwNDY5MDQzCjMyLDEsMC43MDQ4MzczMzcyMjg4MTkxLDAuMzUzNDY2NzI2NTczMzQ0NSwtMC4zNTEzNzA2MTA2NTU0NzQ2NQozMywxLDEuMDM1MTAzNTIxOTY5OTIyMywwLjgyNjQ3MzgyMTAzNjQ5NzcsLTAuMjA4NjI5NzAwOTMzNDI0NgozNCwxLC0wLjYwODkyNjM3NTQwNzIxMTEsLTEuMTMyOTY0MzgwMjk1MDEzMSwtMC41MjQwMzgwMDQ4ODc4MDIxCjM1LDEsMC41MDQ5NTUxMjMyOTc5NzAzLDAuMDYzMDU2MDI3MDQ5ODY1NjgsLTAuNDQxODk5MDk2MjQ4MTA0NjQKMzYsMSwtMS43MTcwMDg2NzkwNzMzNDI1LC0xLjkzNDE0MjcxMjg3MDMzOTIsLTAuMjE3MTM0MDMzNzk2OTk2NwozNywxLC0wLjc4NDQ1OTAwODM3OTQ5NiwtMC45NjQxNTY1OTQxNDU5MTExNSwtMC4xNzk2OTc1ODU3NjY0MTUxNQozOCwxLC0wLjg1MDkwNzU5NDE3NjUxODMsLTEuMDkxNDg3NDA5ODAxODE4MSwtMC4yNDA1Nzk4MTU2MjUyOTk4NAozOSwxLC0yLjQxNDIwNzY0OTk0NjYzMiwtMi45MjQ2OTYyNDI3NjE5MDEsLTAuNTEwNDg4NTkyODE1MjY5NAo0MCwxLDAuMDM2MTIyNjA2ODkyMjU1NjMsLTAuNTE3MTY2OTA2MTcwNjQ4OSwtMC41NTMyODk1MTMwNjI5MDQ1Cg==').then(res => res.blob()).then(blob => {
+<p><a href="#dnldts62129" onclick="fetch('data:text/csv;base64,aWQsZyx5MSx5MixkCjEsMCwxLjM3MDk1ODQ0NzE0NjY2ODUsMS40MTIxNTgxNjcxODY3MTkyLDAuMDQxMTk5NzIwMDQwMDUwNjgKMiwwLC0wLjU2NDY5ODE3MTM5NjA4ODcsLTAuNjM2OTA5NjMxMTA1ODIyLC0wLjA3MjIxMTQ1OTcwOTczMzMKMywwLDAuMzYzMTI4NDExMzM3MzM5MiwwLjUxNDc2MTA1ODQ3NzI0MjYsMC4xNTE2MzI2NDcxMzk5MDM0Mwo0LDAsMC42MzI4NjI2MDQ5NjEwNDA0LDAuNDg3NTIxNjM5NTQ1NzI1MzYsLTAuMTQ1MzQwOTY1NDE1MzE1MDUKNSwwLDAuNDA0MjY4MzIzMTQwOTk5MDMsMC4xMzA2MTIxMTQyNTcxNDAxLC0wLjI3MzY1NjIwODg4Mzg1ODk0CjYsMCwtMC4xMDYxMjQ1MTYwOTE0ODQwMywtMC4wMTk1NjA5MTA5MTM3NDA1OTgsMC4wODY1NjM2MDUxNzc3NDM0Mwo3LDAsMS41MTE1MjE5OTc0Mzg5MzksMS4zNDkyNDMzNjIyMDE2MDQ3LC0wLjE2MjI3ODYzNTIzNzMzNDIKOCwwLC0wLjA5NDY1OTAzODQxMzA5NzU2LDAuMTk0MTYxMjEzOTMxMTUzMDEsMC4yODg4MjAyNTIzNDQyNTA1Nwo5LDAsMi4wMTg0MjM3MTM4NzcwNDIsMS45MzIxMzQ0NzMzNTQzNzI2LC0wLjA4NjI4OTI0MDUyMjY2OTE3NQoxMCwwLC0wLjA2MjcxNDA5OTA1MjQyMSwwLjA2ODQxNTQ3NzYyODAyMDM3LDAuMTMxMTI5NTc2NjgwNDQxMzcKMTEsMCwxLjMwNDg2OTY1NDIyMzQ4NTIsMS4zNjkyNTQ3MDcyNjQyNzQ1LDAuMDY0Mzg1MDUzMDQwNzg5MjMKMTIsMCwyLjI4NjY0NTM5MjcwMTEwNywyLjEyOTg3NzYwNDUyNTAzMiwtMC4xNTY3Njc3ODgxNzYwNzQ5NQoxMywwLC0xLjM4ODg2MDcwMTExMjMzOTMsLTEuMDczNzE1MTk3MTUzOTQzOCwwLjMxNTE0NTUwMzk1ODM5NTQ3CjE0LDAsLTAuMjc4Nzg4NzY2ODE3MzcxMzYsLTAuMTUwMjA4OTA1NjczOTA4MDcsMC4xMjg1Nzk4NjExNDM0NjMzCjE1LDAsLTAuMTMzMzIxMzM2MzkzNjU4MDQsLTAuMTE1MzY5MjA3MDczNzM2OSwwLjAxNzk1MjEyOTMxOTkyMTEzCjE2LDAsMC42MzU5NTAzOTgwNzAwNzQ0LDAuNjkxMjYwNTQ3NTI4MzY3LDAuMDU1MzEwMTQ5NDU4MjkyNgoxNywwLC0wLjI4NDI1MjkyMTQxNjA3MjQsLTAuMTQ4Mzk1MTU4MjA1MDE4MjIsMC4xMzU4NTc3NjMyMTEwNTQxNwoxOCwwLC0yLjY1NjQ1NTQyMDkwNDc3NTcsLTIuNjM4NDg4ODQzNTg4OTU5MywwLjAxNzk2NjU3NzMxNTgxNjQxMgoxOSwwLC0yLjQ0MDQ2NjkyODU3NTUxOTQsLTMuMDM5MDg0OTQ1MjA2MTA2LC0wLjU5ODYxODAxNjYzMDU4NjgKMjAsMCwxLjMyMDExMzM0NTczMDE5MjEsMS4zNzcwODk5MzY0MzYzMjQsMC4wNTY5NzY1OTA3MDYxMzE5MjQKMjEsMSwtMC4zMDY2Mzg1OTQwNzg0NzQ1NSwtMC43MTM0MTg4NTU5NjAwMDMsLTAuNDA2NzgwMjYxODgxNTI4NDQKMjIsMSwtMS43ODEzMDg0MzM5OCwtMi4wNzc1OTU2NTQzNDAyMTE0LC0wLjI5NjI4NzIyMDM2MDIxMTQKMjMsMSwtMC4xNzE5MTczNTU3NTk2MjEzNiwtMC4zODg4ODU5NDM2MTk4NTMzNSwtMC4yMTY5Njg1ODc4NjAyMzIKMjQsMSwxLjIxNDY3NDY5OTE3MjU5ODcsMS4xNjEyODg3MzEyOTc4MDEsLTAuMDUzMzg1OTY3ODc0Nzk3NjYKMjUsMSwxLjg5NTE5MzQ2MTI2NDk2NTIsMS40MTY0MDE3MTYwMzY3MzksLTAuNDc4NzkxNzQ1MjI4MjI2MgoyNiwxLC0wLjQzMDQ2OTEzMTYwNjE5OTY1LC0wLjUwMzI5MzkzODUzMDcwNDMsLTAuMDcyODI0ODA2OTI0NTA0NgoyNywxLC0wLjI1NzI2OTM4Mjc2ODkyOTYzLC0wLjUyMzQzMzA5MjE1MTg0ODEsLTAuMjY2MTYzNzA5MzgyOTE4NDUKMjgsMSwtMS43NjMxNjMwODUxOTQ3ODAyLC0xLjg4ODc5NTE5ODc4ODU4OTEsLTAuMTI1NjMyMTEzNTkzODA5CjI5LDEsMC40NjAwOTczNTQ4MzEyNzE0LDAuMzEwOTA5NzM1MTU2MDY3NCwtMC4xNDkxODc2MTk2NzUyMDQKMzAsMSwtMC42Mzk5OTQ4NzU5NjAxMTkyLC0wLjgyOTE1MjU3NjcyMDA4LC0wLjE4OTE1NzcwMDc1OTk2MDg2CjMxLDEsMC40NTU0NTAxMjMyNDEyMTkzNiwtMC4wODY1MDY5OTc4MDU2ODQ5NywtMC41NDE5NTcxMjEwNDY5MDQzCjMyLDEsMC43MDQ4MzczMzcyMjg4MTkxLDAuMzUzNDY2NzI2NTczMzQ0NSwtMC4zNTEzNzA2MTA2NTU0NzQ2NQozMywxLDEuMDM1MTAzNTIxOTY5OTIyMywwLjgyNjQ3MzgyMTAzNjQ5NzcsLTAuMjA4NjI5NzAwOTMzNDI0NgozNCwxLC0wLjYwODkyNjM3NTQwNzIxMTEsLTEuMTMyOTY0MzgwMjk1MDEzMSwtMC41MjQwMzgwMDQ4ODc4MDIxCjM1LDEsMC41MDQ5NTUxMjMyOTc5NzAzLDAuMDYzMDU2MDI3MDQ5ODY1NjgsLTAuNDQxODk5MDk2MjQ4MTA0NjQKMzYsMSwtMS43MTcwMDg2NzkwNzMzNDI1LC0xLjkzNDE0MjcxMjg3MDMzOTIsLTAuMjE3MTM0MDMzNzk2OTk2NwozNywxLC0wLjc4NDQ1OTAwODM3OTQ5NiwtMC45NjQxNTY1OTQxNDU5MTExNSwtMC4xNzk2OTc1ODU3NjY0MTUxNQozOCwxLC0wLjg1MDkwNzU5NDE3NjUxODMsLTEuMDkxNDg3NDA5ODAxODE4MSwtMC4yNDA1Nzk4MTU2MjUyOTk4NAozOSwxLC0yLjQxNDIwNzY0OTk0NjYzMiwtMi45MjQ2OTYyNDI3NjE5MDEsLTAuNTEwNDg4NTkyODE1MjY5NAo0MCwxLDAuMDM2MTIyNjA2ODkyMjU1NjMsLTAuNTE3MTY2OTA2MTcwNjQ4OSwtMC41NTMyODk1MTMwNjI5MDQ1Cg==').then(res => res.blob()).then(blob => {
       const downloadURL = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       document.body.appendChild(a);
@@ -382,7 +408,7 @@ div.csl-indent {
       a.download = 'file.csv'; a.click();
       window.URL.revokeObjectURL(downloadURL);
       document.body.removeChild(a);
-        });"><button class="btn btn-default downloadthis  " id="dnldts9415"><i class="bi bi-download"></i> Download </button></a></p>
+        });"><button class="btn btn-default downloadthis  " id="dnldts62129"><i class="bi bi-download"></i> Download </button></a></p>
 <p>Die Autoren der Studie geben an, dass die Daten in z-Einheiten skaliert sind.</p>
 </section><section id="deskriptive-analyse" class="level3" data-number="11.2.2"><h3 data-number="11.2.2" class="anchored" data-anchor-id="deskriptive-analyse">
 <span class="header-section-number">11.2.2</span> Deskriptive Analyse</h3>
@@ -432,7 +458,7 @@ Abhängigkeit der Gruppe</p> </div>
 
 <div data-pagedtable="false"> <div class="table-caption">Tabelle&nbsp;11.2:  <p>Parameter des Modells m_bringtnixtin</p> </div>
   <script data-pagedtable-source="" type="application/json">
-{"columns":[{"label":["Parameter"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Median"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["CI"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["CI_low"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["CI_high"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["pd"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["Rhat"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["ESS"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["Prior_Distribution"],"name":[9],"type":["chr"],"align":["left"]},{"label":["Prior_Location"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["Prior_Scale"],"name":[11],"type":["dbl"],"align":["right"]}],"data":[{"1":"(Intercept)","2":"0.1935558","3":"0.95","4":"-0.363549","5":"0.74670987","6":"0.75275","7":"1.000637","8":"3399.861","9":"normal","10":"-0.1902336","11":"3.183966"},{"1":"g","2":"-0.7637960","3":"0.95","4":"-1.568911","5":"0.02499465","6":"0.97100","7":"1.000745","8":"3374.092","9":"normal","10":"0.0000000","11":"6.287828"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["Parameter"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Median"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["CI"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["CI_low"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["CI_high"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["pd"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["Rhat"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["ESS"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["Prior_Distribution"],"name":[9],"type":["chr"],"align":["left"]},{"label":["Prior_Location"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["Prior_Scale"],"name":[11],"type":["dbl"],"align":["right"]}],"data":[{"1":"(Intercept)","2":"0.1872474","3":"0.95","4":"-0.3734893","5":"0.7405634","6":"0.74825","7":"0.9994630","8":"3699.498","9":"normal","10":"-0.1902336","11":"3.183966"},{"1":"g","2":"-0.7621084","3":"0.95","4":"-1.5172969","5":"0.0207076","6":"0.97275","7":"0.9998109","8":"3497.294","9":"normal","10":"0.0000000","11":"6.287828"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 </div>
@@ -449,7 +475,7 @@ Abhängigkeit der Gruppe</p> </div>
 </div>
 </div>
 </div>
-<p>Der Gruppenunterschied wird auf 0.19, -0.76 geschätzt; das ist der Punktschätzer der UV <code>g</code>. Die Grenzen eines 95%-CI für die UV liegen bei -1.55 bzw. 0.04. Dieser Bereich enthält die Null, vgl. <a href="#fig-m1-params">Abbildung&nbsp;<span>11.4</span></a>. Daher kann nicht ausgeschlossen werden, dass Bringtnixtin nix bringt.</p>
+<p>Der Gruppenunterschied wird auf 0.19, -0.76 geschätzt; das ist der Punktschätzer der UV <code>g</code>. Die Grenzen eines 95%-CI für die UV liegen bei -1.55 bzw. -0.01. Dieser Bereich enthält die Null, vgl. <a href="#fig-m1-params">Abbildung&nbsp;<span>11.4</span></a>. Daher kann nicht ausgeschlossen werden, dass Bringtnixtin nix bringt.</p>
 <blockquote class="blockquote">
 <p>👨‍🏫 Frau Professor Lustig, wie kann das sein, dass sich die Hypothese nicht bestätigt?</p>
 </blockquote>
@@ -460,7 +486,7 @@ Abhängigkeit der Gruppe</p> </div>
 <div class="cell" data-hash="900-Modellieren_cache/html/tbl-m1-rope_a7571a53c5f1f08fdef6658abbe5b7ac">
 <div class="cell-output-display">
 <div id="tbl-m1-rope" class="anchored">
-<table class="table table-sm table-striped">
+<table class="table table-sm table-striped small">
 <caption>Tabelle&nbsp;11.3: ROPE für Modell m_bringtnixtin</caption>
 <colgroup>
 <col style="width: 16%">
@@ -599,7 +625,7 @@ Hinweis
 <p>Schauen wir uns die ersten paar d-Werte für jede der beiden Gruppen (<code>g=0</code> bzw. <code>g=1</code>) an:</p>
 <div class="cell" data-hash="900-Modellieren_cache/html/unnamed-chunk-19_5f618291baf92c19dbbbfe069e719a72">
 <div class="cell-output-display">
-<table class="table table-sm table-striped">
+<table class="table table-sm table-striped small">
 <thead><tr class="header">
 <th style="text-align: left;">id</th>
 <th style="text-align: left;">g</th>
@@ -671,7 +697,7 @@ Hinweis
 </div>
 <div class="cell" data-hash="900-Modellieren_cache/html/d-bringtnixtin-mean_b78cf603f1a4646559639e0f62cb3485">
 <div class="cell-output-display">
-<table class="table table-sm table-striped">
+<table class="table table-sm table-striped small">
 <caption>Mittelwerte der Veränderung der Behaltensleistung nach Gruppe </caption>
 <thead><tr class="header">
 <th style="text-align: left;">g_text</th>
@@ -716,7 +742,7 @@ Hinweis
 <div class="cell" data-hash="900-Modellieren_cache/html/tbl-m-bringtnixtin2-params_f990045aa61be0866bc379564ae1fbf4">
 <div class="cell-output-display">
 <div id="tbl-m-bringtnixtin2-params" class="anchored">
-<table class="table table-sm table-striped">
+<table class="table table-sm table-striped small">
 <caption>Tabelle&nbsp;11.4: Parameter von <code>m_bringtnixtin2</code>
 </caption>
 <colgroup>
@@ -740,20 +766,20 @@ Hinweis
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">(Intercept)</td>
-<td style="text-align: center;">-1.89e-04</td>
-<td style="text-align: center;">(-0.09, 0.08)</td>
-<td style="text-align: center;">50.18%</td>
+<td style="text-align: center;">-4.38e-04</td>
+<td style="text-align: center;">(-0.08, 0.08)</td>
+<td style="text-align: center;">50.58%</td>
 <td style="text-align: center;">1.001</td>
-<td style="text-align: center;">3312.00</td>
+<td style="text-align: center;">3611.00</td>
 <td style="text-align: center;">Normal (-0.15 +- 0.59)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">g</td>
 <td style="text-align: center;">-0.30</td>
-<td style="text-align: center;">(-0.41, -0.19)</td>
-<td style="text-align: center;">99.98%</td>
-<td style="text-align: center;">1.001</td>
-<td style="text-align: center;">3594.00</td>
+<td style="text-align: center;">(-0.42, -0.18)</td>
+<td style="text-align: center;">100%</td>
+<td style="text-align: center;">1.000</td>
+<td style="text-align: center;">3508.00</td>
 <td style="text-align: center;">Normal (0.00 +- 1.17)</td>
 </tr>
 </tbody>
@@ -780,7 +806,7 @@ Hinweis
 <span class="header-section-number">11.5</span> 1 within-Variable</h2>
 <p>Eine Studie mit Vorher-Nachher-Messung setzt ein Within-Design um.</p>
 <div id="exm-within1" class="theorem example">
-<p><span class="theorem-title"><strong>Beispiel 11.1 (Statisches Diagramm vs.&nbsp;animiertes Diagramm) </strong></span>Ein Forschungsteam untersuch den Effekt der UV <em>Diagrammart</em> <code>D</code> (mit den zwei Stufen <code>D.1</code> <em>animiert</em> und <code>D.2</code> <em>statisch</em>) auf die Behaltensleistung (<code>y</code>) von Probanden. Nach jeder Bedingung wird die Behaltensleistung gemessen (anhand von 10 Wissensfragen, die jeweils als “richtig” oder “falsch” bewertet wurden), mit <code>y1</code> nach <code>D.1</code> und <code>y2</code> für <code>D.2</code>.<span class="math inline">\(\square\)</span></p>
+<p><span class="theorem-title"><strong>Beispiel 11.1 (Statisches Diagramm vs.&nbsp;animiertes Diagramm) </strong></span>Ein Forschungsteam untersuch den Effekt der UV <em>Visualisierungsart</em> <code>V</code> (mit den zwei Stufen <code>V.1</code> <em>animiert</em> und <code>V.2</code> <em>statisch</em>) auf die Behaltensleistung (<code>y</code>) von Probanden. Nach jeder Bedingung wird die Behaltensleistung gemessen (anhand von 10 Wissensfragen, die jeweils als “richtig” oder “falsch” bewertet wurden), mit <code>y1</code> nach <code>V.1</code> und <code>y2</code> für <code>V.2</code>.<span class="math inline">\(\square\)</span></p>
 </div>
 <section id="design-2" class="level3" data-number="11.5.1"><h3 data-number="11.5.1" class="anchored" data-anchor-id="design-2">
 <span class="header-section-number">11.5.1</span> Design</h3>
@@ -790,26 +816,26 @@ Hinweis
 </blockquote>
 <p>Die zugehörige statistische Hypothese kann man so formulieren: <span class="math inline">\(\bar{d} \ne 0\)</span>, wobei <span class="math inline">\(d = y_1 - y_2\)</span>. <span class="math inline">\(d\)</span> misst also den Unterschied der Behaltensleistung von animierten und statischen Diagrammen, wobei positive Werte zugunsten von statischen Diagrammen sprechen.</p>
 <p>Die Modellformel lautet: <code>d ~ 1</code>, das ist ein <em>Intercept-Modell</em>, also ein Modell ohne Prädiktor. Uns interessiert, ob die Variable <code>d</code> im Mittelwert ungleich Null ist oder positiv (zugunsten statischer Diagramme) oder negativ (Behaltensleistung höher bei animierten Diagrammen).</p>
-<p>Der Ablauf ist in <a href="#fig-diagrammart-flow">Abbildung&nbsp;<span>11.10</span></a> dargestellt.</p>
+<p>Der Ablauf der Studie (aus Sicht der Probandis) ist in <a href="#fig-diagrammart-flow">Abbildung&nbsp;<span>11.10</span></a> dargestellt.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-diagrammart-flow" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><div>
 <pre class="mermaid mermaid-js" data-label="fig-diagrammart-flow">flowchart LR
-  D.1 --&gt; y1 --&gt; D.2 --&gt; y2
+  V.1 --&gt; y1 --&gt; V.2 --&gt; y2
 </pre>
 </div>
-<p></p><figcaption class="figure-caption">Abbildung&nbsp;11.10: Ablauf der Studie zur Behaltensleistung y2 in Abhängigkeit der Diagrammart D (Within-Variable)</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Abbildung&nbsp;11.10: Ablauf der Studie zur Behaltensleistung y2 in Abhängigkeit der Visualisierungsart V (Within-Variable)</figcaption><p></p>
 </figure>
 </div>
 </div>
 </div>
 <p>Der DAG des Experiments ist in <a href="#fig-diagrammarten-dag">Abbildung&nbsp;<span>11.11</span></a> dargestellt.</p>
-<div class="cell" data-fig.asp="0.5" data-hash="900-Modellieren_cache/html/fig-diagrammarten-dag_64a1f6c157c316ea1ae11f077b395ead">
+<div class="cell" data-fig.asp="0.5" data-hash="900-Modellieren_cache/html/fig-diagrammarten-dag_a017d98758fb810b09d054980b8f1e37">
 <div class="cell-output-display">
 <div id="fig-diagrammarten-dag" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><p><img src="900-Modellieren_files/figure-html/fig-diagrammarten-dag-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<p></p><figcaption class="figure-caption">Abbildung&nbsp;11.11: DAG für die Studie zur Behaltensleistung y2 in Abhängigkeit der Diagrammart D</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Abbildung&nbsp;11.11: DAG für die Studie zur Behaltensleistung y2 in Abhängigkeit des Visualiserungstyp V</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -832,7 +858,7 @@ Hinweis
 </div>
 </div>
 </div>
-<p><a href="#dnldts63875" onclick="fetch('data:text/csv;base64,aWQseTEseTIseTMsZwoxLDcsOCw5LEEKMiw3LDcsMTAsQQozLDQsOSw5LEEKNCw3LDQsOSxBCjUsNiw3LDgsQQo2LDUsNCw5LEEKNyw2LDUsMTAsQQo4LDMsNywxMCxBCjksNiw0LDEwLEEKMTAsNiw3LDEwLEEKMTEsNSw4LDksQQoxMiw2LDgsMTAsQQoxMyw3LDcsMTAsQQoxNCw0LDYsNyxBCjE1LDUsOSw4LEEKMTYsNyw2LDksQQoxNyw4LDYsMTAsQQoxOCwzLDgsOSxBCjE5LDUsOCw4LEEKMjAsNSw3LDksQQoyMSw3LDYsOSxCCjIyLDMsNCwxMCxCCjIzLDgsNiwxMCxCCjI0LDgsNyw5LEIKMjUsMyw2LDcsQgoyNiw1LDgsNyxCCjI3LDUsOCw4LEIKMjgsNyw2LDksQgoyOSw1LDYsOSxCCjMwLDcsOCwxMCxCCjMxLDYsOSw5LEIKMzIsNiw5LDgsQgozMyw1LDgsOCxCCjM0LDYsNyw5LEIKMzUsMSw4LDksQgozNiw3LDYsOSxCCjM3LDEsMTAsMTAsQgozOCw0LDgsOSxCCjM5LDcsNyw5LEIKNDAsNSwxMCw4LEIK').then(res => res.blob()).then(blob => {
+<p><a href="#dnldts28617" onclick="fetch('data:text/csv;base64,aWQseTEseTIseTMsZwoxLDcsOCw5LEEKMiw3LDcsMTAsQQozLDQsOSw5LEEKNCw3LDQsOSxBCjUsNiw3LDgsQQo2LDUsNCw5LEEKNyw2LDUsMTAsQQo4LDMsNywxMCxBCjksNiw0LDEwLEEKMTAsNiw3LDEwLEEKMTEsNSw4LDksQQoxMiw2LDgsMTAsQQoxMyw3LDcsMTAsQQoxNCw0LDYsNyxBCjE1LDUsOSw4LEEKMTYsNyw2LDksQQoxNyw4LDYsMTAsQQoxOCwzLDgsOSxBCjE5LDUsOCw4LEEKMjAsNSw3LDksQQoyMSw3LDYsOSxCCjIyLDMsNCwxMCxCCjIzLDgsNiwxMCxCCjI0LDgsNyw5LEIKMjUsMyw2LDcsQgoyNiw1LDgsNyxCCjI3LDUsOCw4LEIKMjgsNyw2LDksQgoyOSw1LDYsOSxCCjMwLDcsOCwxMCxCCjMxLDYsOSw5LEIKMzIsNiw5LDgsQgozMyw1LDgsOCxCCjM0LDYsNyw5LEIKMzUsMSw4LDksQgozNiw3LDYsOSxCCjM3LDEsMTAsMTAsQgozOCw0LDgsOSxCCjM5LDcsNyw5LEIKNDAsNSwxMCw4LEIK').then(res => res.blob()).then(blob => {
       const downloadURL = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       document.body.appendChild(a);
@@ -840,8 +866,8 @@ Hinweis
       a.download = 'file.csv'; a.click();
       window.URL.revokeObjectURL(downloadURL);
       document.body.removeChild(a);
-        });"><button class="btn btn-default downloadthis  " id="dnldts63875"><i class="bi bi-download"></i> Download </button></a></p>
-<p>Wir berechnen <code>d</code>, das die zentrale Variable der Forschungsfrage ist.</p>
+        });"><button class="btn btn-default downloadthis  " id="dnldts28617"><i class="bi bi-download"></i> Download </button></a></p>
+<p>Wir berechnen <code>d</code>, was die zentrale Variable der Forschungsfrage ist.</p>
 <div class="cell" data-hash="900-Modellieren_cache/html/unnamed-chunk-30_a103193d7a39829eafb71c89b37e65cf">
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">d_within</span> <span class="op">&lt;-</span></span>
 <span>  <span class="va">d_within</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
@@ -880,7 +906,7 @@ Hinweis
 <div class="cell" data-hash="900-Modellieren_cache/html/tbl-d1-desk_f41b891fcd3a47d86f419422946683b0">
 <div class="cell-output-display">
 <div id="tbl-d1-desk" class="anchored">
-<table class="table table-sm table-striped">
+<table class="table table-sm table-striped small">
 <caption>Tabelle&nbsp;11.5: Statistiken für <code>d</code>
 </caption>
 <colgroup>
@@ -963,7 +989,7 @@ Hinweis
 </div>
 <div class="cell" data-hash="900-Modellieren_cache/html/unnamed-chunk-38_2c594fd9a5649e0f68f3cd26dda055a5">
 <div class="cell-output-display">
-<table class="table table-sm table-striped">
+<table class="table table-sm table-striped small">
 <colgroup>
 <col style="width: 14%">
 <col style="width: 9%">
@@ -984,11 +1010,11 @@ Hinweis
 </tr></thead>
 <tbody><tr class="odd">
 <td style="text-align: left;">(Intercept)</td>
-<td style="text-align: center;">-1.61</td>
-<td style="text-align: center;">(-2.40, -0.78)</td>
-<td style="text-align: center;">99.95%</td>
+<td style="text-align: center;">-1.60</td>
+<td style="text-align: center;">(-2.43, -0.78)</td>
+<td style="text-align: center;">99.92%</td>
 <td style="text-align: center;">1.001</td>
-<td style="text-align: center;">2633.00</td>
+<td style="text-align: center;">2537.00</td>
 <td style="text-align: center;">Normal (-1.60 +- 6.57)</td>
 </tr></tbody>
 </table>
@@ -1005,7 +1031,20 @@ Hinweis
 </div>
 </div>
 </div>
-<p>Wie man sieht, ist die Null nicht im CI enthalten. Wir können daher resümieren, dass es einen Unterschied zwischen den Bedingungen (statisch vs.&nbsp;animiert) gibt hinsichtlich <code>y2</code> (Behaltensleistung). Die Behaltensleistung animierter Diagramme ist der von statischen Diagrammen überlegen (laut diesem Modell).</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hinweis
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Wenn Sie die <code>parameters</code> <code>plot</code>ten und nur einen Intercept haben, müssen Sie mit <code>show_intercept=TRUE</code> einschalten, dass er gezeigt wird. Sonst gibt es eine Fehlermeldung.<span class="math inline">\(\square\)</span></p>
+</div>
+</div>
+<p>Wie man sieht, ist die Null nicht im CI enthalten. Wir können daher resümieren, dass es einen Unterschied zwischen den Bedingungen (statisch vs.&nbsp;animiert) gibt hinsichtlich <code>y2</code> (Behaltensleistung). Die Behaltensleistung animierter Diagramme ist der von statischen Diagrammen überlegen (laut diesem Modell). Die exakte Nullhypothese ist zu verwerfen. Natürlich könnte man jetzt noch ein Rope berechnen.</p>
 </section></section><section id="within-variable-1-between-variable" class="level2" data-number="11.6"><h2 data-number="11.6" class="anchored" data-anchor-id="within-variable-1-between-variable">
 <span class="header-section-number">11.6</span> 1 within-Variable, 1 between-Variable</h2>
 <section id="design-3" class="level3" data-number="11.6.1"><h3 data-number="11.6.1" class="anchored" data-anchor-id="design-3">
@@ -1022,11 +1061,11 @@ Hinweis
 <pre class="mermaid mermaid-js" data-label="fig-within2-flow">flowchart LR
   subgraph g2
     direction LR
-    D.1 --&gt; y1 --&gt; D.2 --&gt; y2
+    V.1 --&gt; y1 --&gt; V.2 --&gt; y2
   end
   subgraph g1
     direction LR
-    D2[D.2] --&gt; y22[y2] --&gt; D1[D.1] --&gt; y11[y1] 
+    D2[V.2] --&gt; y22[y2] --&gt; D1[V.1] --&gt; y11[y1] 
   end
 </pre>
 </div>
@@ -1040,13 +1079,13 @@ Hinweis
 <li>H1: <span class="math inline">\(\bar{d} &lt; 0\)</span>, mit <span class="math inline">\(d = y_1 - y_2\)</span>: Die mittlere Behaltensleistung ist in der Bedingung <em>animiert</em> höher als in der Bedingung <em>statisch</em>.</li>
 <li>H2: <span class="math inline">\(\bar{d}_{g.1} = \bar{d}_{g.2}\)</span>: Der Unterschied in der Behaltensleistung zwischen den zwei Bedingung unterscheidet sich nicht von der Reihenfolge der Darbietung.</li>
 </ol>
-<p>Die Modellformel lautet: <code>d ~ 1 + g</code>. Das kann man synonym so schreiben: <code>d ~ g</code>.</p>
+<p>Die Modellformel lautet: <code>y ~ 1 + g</code>. Das kann man synonym so schreiben: <code>y ~ g</code>. <code>y</code> meint die Behaltensleistung; statisch erfassen wir den <em>Effekt</em> auf <code>y</code> anhand des Differenzmaßes <code>d</code>.</p>
 <p>Der DAG des Experiments ist in <a href="#fig-within2-dag">Abbildung&nbsp;<span>11.16</span></a> dargestellt.</p>
-<div class="cell" data-fig.asp="0.5" data-hash="900-Modellieren_cache/html/fig-within2-dag_a0d9f540193e0816329dd1be2a4aff1b">
+<div class="cell" data-fig.asp="0.5" data-hash="900-Modellieren_cache/html/fig-within2-dag_c6ecd2fc92710ca78e7746c6dd758b33">
 <div class="cell-output-display">
 <div id="fig-within2-dag" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><p><img src="900-Modellieren_files/figure-html/fig-within2-dag-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<p></p><figcaption class="figure-caption">Abbildung&nbsp;11.16: DAG für die Studie mit der Modellgleichung mit einem Within- und einem Between-Faktor. Es wird kein Effekt für g erwartet, wohl aber ein Effekt für D</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Abbildung&nbsp;11.16: DAG für die Studie mit der Modellgleichung mit einem Within- und einem Between-Faktor. Es wird kein Effekt für g erwartet (daher kein Pfeil von g auf y), wohl aber ein Effekt für V</figcaption><p></p>
 </figure>
 </div>
 </div>
@@ -1110,7 +1149,7 @@ Hinweis
 </div>
 <div class="cell" data-hash="900-Modellieren_cache/html/unnamed-chunk-45_882c39fce50f11a272748d5979547da6">
 <div class="cell-output-display">
-<table class="table table-sm table-striped">
+<table class="table table-sm table-striped small">
 <colgroup>
 <col style="width: 14%">
 <col style="width: 9%">
@@ -1132,20 +1171,20 @@ Hinweis
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">(Intercept)</td>
-<td style="text-align: center;">-1.14</td>
-<td style="text-align: center;">(-2.35, 0.12)</td>
-<td style="text-align: center;">96.53%</td>
-<td style="text-align: center;">0.999</td>
-<td style="text-align: center;">3740.00</td>
+<td style="text-align: center;">-1.15</td>
+<td style="text-align: center;">(-2.34, 0.04)</td>
+<td style="text-align: center;">97.15%</td>
+<td style="text-align: center;">1.001</td>
+<td style="text-align: center;">3568.00</td>
 <td style="text-align: center;">Normal (-1.60 +- 6.57)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;">gB</td>
-<td style="text-align: center;">-0.92</td>
-<td style="text-align: center;">(-2.66, 0.78)</td>
-<td style="text-align: center;">87.25%</td>
-<td style="text-align: center;">1.000</td>
-<td style="text-align: center;">3827.00</td>
+<td style="text-align: center;">-0.91</td>
+<td style="text-align: center;">(-2.57, 0.71)</td>
+<td style="text-align: center;">86.62%</td>
+<td style="text-align: center;">1.001</td>
+<td style="text-align: center;">3295.00</td>
 <td style="text-align: center;">Normal (0.00 +- 12.98)</td>
 </tr>
 </tbody>
@@ -1244,7 +1283,7 @@ Hinweis
 <div class="cell" data-hash="900-Modellieren_cache/html/tbl-d123_917ca987354fadb237e232ddf64a05c3">
 <div class="cell-output-display">
 <div id="tbl-d123" class="anchored">
-<table class="table table-sm table-striped">
+<table class="table table-sm table-striped small">
 <caption>Tabelle&nbsp;11.6: Mittelwerte von <code>y</code> pro Messzeitpunkte (<code>y_mean</code>) sowie die Veränderung von t1 zu t2 bzw. von t2 zu t3 (<code>d</code>)</caption>
 <thead><tr class="header">
 <th style="text-align: left;">time</th>
@@ -1290,12 +1329,12 @@ Hinweis
 <span><span class="co">## </span></span>
 <span><span class="co">## Estimates:</span></span>
 <span><span class="co">##                                       mean   sd   10%   50%   90%</span></span>
-<span><span class="co">## (Intercept)                          7.2    1.2  5.8   7.2   8.6 </span></span>
-<span><span class="co">## b[(Intercept) time:y1]              -1.7    1.2 -3.2  -1.7  -0.3 </span></span>
-<span><span class="co">## b[(Intercept) time:y2]              -0.1    1.2 -1.6  -0.1   1.3 </span></span>
-<span><span class="co">## b[(Intercept) time:y3]               1.7    1.2  0.3   1.7   3.2 </span></span>
+<span><span class="co">## (Intercept)                          7.1    1.2  5.7   7.1   8.6 </span></span>
+<span><span class="co">## b[(Intercept) time:y1]              -1.6    1.2 -3.1  -1.6  -0.2 </span></span>
+<span><span class="co">## b[(Intercept) time:y2]              -0.1    1.2 -1.5  -0.1   1.4 </span></span>
+<span><span class="co">## b[(Intercept) time:y3]               1.8    1.2  0.4   1.8   3.3 </span></span>
 <span><span class="co">## sigma                                1.5    0.1  1.3   1.4   1.6 </span></span>
-<span><span class="co">## Sigma[time:(Intercept),(Intercept)]  5.0    5.6  1.2   3.1  10.6 </span></span>
+<span><span class="co">## Sigma[time:(Intercept),(Intercept)]  4.9    5.5  1.2   3.3  10.0 </span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## Fit Diagnostics:</span></span>
 <span><span class="co">##            mean   sd   10%   50%   90%</span></span>
@@ -1305,14 +1344,14 @@ Hinweis
 <span><span class="co">## </span></span>
 <span><span class="co">## MCMC diagnostics</span></span>
 <span><span class="co">##                                     mcse Rhat n_eff</span></span>
-<span><span class="co">## (Intercept)                         0.0  1.0  1292 </span></span>
-<span><span class="co">## b[(Intercept) time:y1]              0.0  1.0  1317 </span></span>
-<span><span class="co">## b[(Intercept) time:y2]              0.0  1.0  1302 </span></span>
-<span><span class="co">## b[(Intercept) time:y3]              0.0  1.0  1312 </span></span>
-<span><span class="co">## sigma                               0.0  1.0  2832 </span></span>
-<span><span class="co">## Sigma[time:(Intercept),(Intercept)] 0.1  1.0  1934 </span></span>
-<span><span class="co">## mean_PPD                            0.0  1.0  4165 </span></span>
-<span><span class="co">## log-posterior                       0.1  1.0  1288 </span></span>
+<span><span class="co">## (Intercept)                         0.0  1.0  1065 </span></span>
+<span><span class="co">## b[(Intercept) time:y1]              0.0  1.0  1098 </span></span>
+<span><span class="co">## b[(Intercept) time:y2]              0.0  1.0  1061 </span></span>
+<span><span class="co">## b[(Intercept) time:y3]              0.0  1.0  1066 </span></span>
+<span><span class="co">## sigma                               0.0  1.0  2903 </span></span>
+<span><span class="co">## Sigma[time:(Intercept),(Intercept)] 0.1  1.0  1619 </span></span>
+<span><span class="co">## mean_PPD                            0.0  1.0  4272 </span></span>
+<span><span class="co">## log-posterior                       0.1  1.0  1412 </span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## For each parameter, mcse is Monte Carlo standard error, n_eff is a crude measure of effective sample size, and Rhat is the potential scale reduction factor on split chains (at convergence Rhat=1).</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -1322,7 +1361,7 @@ Hinweis
 <div class="cell" data-hash="900-Modellieren_cache/html/unnamed-chunk-52_ee8e0eb12ead2e3b2f0152f2d10f50dd">
 <div class="sourceCode" id="cb32"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/nlme/man/fixed.effects.html">fixef</a></span><span class="op">(</span><span class="va">m_within3</span><span class="op">)</span></span>
 <span><span class="co">## (Intercept) </span></span>
-<span><span class="co">##    7.197764</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">##    7.118985</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Im Durchschnitt werden ca. 7.1 Fragen richtig beantwortet (Gesamtmittel); das ist die Information die der Punktschätzer des Intercepts bietet.</p>
 <p>Nur die Random-Effekte kann man sich so ausgeben lassen:</p>
@@ -1330,9 +1369,9 @@ Hinweis
 <div class="sourceCode" id="cb33"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/nlme/man/random.effects.html">ranef</a></span><span class="op">(</span><span class="va">m_within3</span><span class="op">)</span></span>
 <span><span class="co">## $time</span></span>
 <span><span class="co">##    (Intercept)</span></span>
-<span><span class="co">## y1  -1.6939953</span></span>
-<span><span class="co">## y2  -0.1333408</span></span>
-<span><span class="co">## y3   1.7384619</span></span>
+<span><span class="co">## y1 -1.63580410</span></span>
+<span><span class="co">## y2 -0.07307133</span></span>
+<span><span class="co">## y3  1.79705935</span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## with conditional variances for "time"</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -1360,7 +1399,7 @@ Hinweis
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
 <div id="ref-sauer_effect_2023" class="csl-entry" role="listitem">
-Sauer, Sebastian, und Ludwilla Lustig. 2023. <span>„The Effect of <span>Bringtnixtin</span> on Fluid Intelligence: <span>A</span> Randomized, Controlled Trial“</span>. <em>Journal for Fake Data</em> 42 (1): 271–314.
+Sauer, Sebastian, und Ludwilla Lustig. 2023. <span>„The effect of Bringtnixtin on fluid intelligence: A randomized, controlled trial“</span>. <em>Journal for Fake Data</em> 42 (1): 271–314.
 </div>
 </div>
 </section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><hr>
@@ -1387,6 +1426,121 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {
