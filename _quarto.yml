@@ -11,21 +11,20 @@ book:
   date: now
   chapters:
     - index.qmd
-    - 100-rahmen.qmd
-    - 200-themawahl.qmd
-    - 300-Schreiben.qmd
-    - 400-Populationsbeschreibung.qmd
-    - 500-Explikation.qmd
-    - 600-Messen.qmd
-    - 700-Erheben.qmd
-    - 750-kausal.qmd
-    - 800-Auswerten.qmd
-    - 900-Modellieren.qmd
-    - 1000-Statistiken-berichten.qmd
-
-    - pruefung.qmd
-    - abschluss.qmd
-    - references.qmd
+    - 010-rahmen.qmd
+    - 020-themawahl.qmd
+    - 030-Schreiben.qmd
+    - 040-Populationsbeschreibung.qmd
+    - 050-Explikation.qmd
+    - 060-Messen.qmd
+    - 070-Erheben.qmd
+    - 075-kausal.qmd
+    - 080-Auswerten.qmd
+    - 090-Modellieren.qmd
+    - 100-Statistiken-berichten.qmd
+    - 110-pruefung.qmd
+    - 120-abschluss.qmd
+    - 130-references.qmd
     # - test.qmd
 
 website:
