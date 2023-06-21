@@ -312,7 +312,7 @@ Man kann Antwortformate dahingehend unterscheiden, ob sie uni- oder bipolar aufg
 
 
 
-### Bezugsquellen
+## Bezugsquellen von Messinstrumenten
 
 
 >   🧑‍🎓 Wo finde ich Tests? Welche darf ich wie benutzen?
@@ -320,7 +320,7 @@ Man kann Antwortformate dahingehend unterscheiden, ob sie uni- oder bipolar aufg
 >   👨‍🏫 Vielleicht ist die beste Strategie, die Papers zur eigenen Forschungsfrage zu lesen. Dann orientiert man sich (eng) an dem Vorgehen dieser Autoren. Die nächstbeste Lösung ist, nach Instrumenten zu suchen; hier sind einige Bezugsorte.
 
 
-#### Reichhaltige Fundorte
+### Reichhaltige Fundorte
 
 - [Gesis-ZIS](https://zis.gesis.org/): Hier finden sich eine Anzahl an wissenschaftlich untersuchten Fragebögen, z. B. der BFI-10, ein Kurz-Fragebogen zu den Big Five mit nur 10 Items
 
@@ -363,7 +363,7 @@ So ist ein Beispiel für Messinstrumente um emotionale Reaktionen von Versuchspe
 
 
 
-#### Fallbeispiel Psyndex
+### Fallbeispiel Psyndex
 
 >   PSYNDEX - die Datenbank des ZPID für Publikationsnachweise (...) inklusive redaktionell beschriebener Testinstrumente und Interventionsprogramme.^[https://psyndex.de/, 2023-05-14]
 
@@ -417,14 +417,14 @@ Insgesamt ist die Erstellung eines Fragebogens für ein psychologisches Konstruk
 Nicht-psychologische Variablen bzw. beobachtbare Dinge sind viel einfacher zu verwenden; hier sind selbst gestrickte Verfahren id.R. kein Problem (z. B. „Welche Automarke fahren Sie?“, „Wie viele Facebook-Freunde haben Sie?“, „Wie viele Kinder haben Sie?“)
 
 
-#### Neue Messinstrumente selber entwickeln
+### Neue Messinstrumente selber entwickeln
 
 Hier sind Beispiele für Variablen, die *einfach zu messen* sind, und daher für die Messung keiner besonderen Entwicklung oder Überprüfung bedürfen: Manifeste Variablen wie Körpergröße, Gewicht, Alter, Geschlecht, Herkunftsland.
 
 
 
 
-#### Bestehende Messung übernehmen
+### Bestehende Messung übernehmen
 
 *Latente* Variablen, die also nicht direkt beobachtbar sind, sind schwer zu messen. 
 Psychologische Variablen gehören in der Regel dazu. 
@@ -444,7 +444,7 @@ und diesen ohne weitere Validierung in der eigenen Studie zu verwenden.
 
 
 
-#### ... or translate?
+### ... or translate?
 
 Ein Mittelweg zwischen "Make" (Selber ein neues Instrument entwickeln) und "Buy" (ein existierendes Instrument verwenden) ist "Translate", 
 also ein Instrument in eine andere Sprache zu übersetzen bzw. für diese neue Sprache anzupassen.
@@ -454,6 +454,19 @@ zum Übersetzen mit hohen Qualitätsstandards eines Instruments in eine andere S
 :::{#callout-note}
 Für die Zwecke einer Seminararbeit ist es ausreichend, Items (z.B. aus dem Englischen) zu übersetzen (z.B. ins Deutsche) und anhang einer Rückübersetzung die Qualität der Übersetzung zu überprüfen.$\square$
 :::
+
+### Einzelne Items einer Skala entnehmen
+
+Entnimmt man beispielsweise aus einem Extraversionstest ein einzelnen Item, etwa "Ich bin ein Team-Player", lässt man dabei wesentliche Facetten des Konstrukts außen vor.
+Denn die weiteren Facetten von Extraversion würden etwa mit den 10 Items wie "Ich kann schnell gute Stimmung verbreiten" oder " Wenn nichts los ist, langweile ich mich schnell" [@satow2011].^[Quelle: <https://www.testarchiv.eu/de/test/9006357>]
+Daher ist es problematisch, aus einer Skala nur einen Teil der Items zu entnehmen, um das Konstrukt, auf das die komplette Skala abzielt, zu messen.
+Entnimmt man nur einen Teil der Items,
+so ist die Messgüte dieser Adhoc- oder Teilskala unbekannt.
+
+Ein (Behelfs-)Ausweg kann darin bestehen,
+Studien zu zitieren, die diese Adhoc-Skala verwendet haben, und damit einen Effekt finden konnten.
+
+
 
 
 ### Tipps wie man ein Messinstrument findet
@@ -485,7 +498,7 @@ Die Güte einer Messung wird in der Psychologie zumeist anhand dreier Kennzahlen
 
 ### Reliabilität 
 
-Die Reliabilität von psychologischen (quantitativen) Skalen wird häufig über die sog. interne Konsistenz ermittelt.
+Die Reliabilität von psychologischen (quantitativen) Skalen wird häufig über die sog. *interne Konsistenz* ermittelt.
 
 Es gibt mehrere Formeln zur Schätzung von Konsistenzkoeffizienten Hier sollen nur die am häufigsten verwendete dargestellt werden: Cronbachs Alpha Höhe des Koeffizienten hängt vom Verhältnis der Summe der einzelnen Itemvarianzen ($\sigma_i^2$) zur Gesamtvarianz ($\sigma^2$) des Tests ab.
 Zwei denkbare Extrem-Szenarien sind︎
@@ -502,6 +515,11 @@ Der Kennwert hat einen Wertebereich von 0 bis 1, wobei höhere Werte eine hörer
 Einfach ausgedrückt kann man den Kennwert als ein Maß der mittleren Korrelation der Items untereinander verstehen.
 Werte ab .7 werden mitunter als akzeptabel und ab .8 als gut eingeschätzt.$\square$
 :::
+
+In der Regel macht es wenig Sinn, Cronbachs Alpha in der eigenen Stichprobe zu berechnen.
+Der Grund liegt in der kleineren Stichprobe Ihrer Studie im Vergleich zur Validierungsstichprobe des Messintruments.
+Würde man diesen (oder jeden beliebigen anderen) Kennwert in einer kleineren anstelle einer größeren Stichprobe berechnen, so erhielte man einen ungenaueren ("verrauschten") Kennwert.
+
 
 
 
