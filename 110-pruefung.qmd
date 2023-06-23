@@ -21,6 +21,13 @@ download.file(url = "https://raw.githubusercontent.com/sebastiansauer/Lehre/main
               destfile = "children/Hinweise-Pruefung-Seminararbeit.qmd",
               quiet = TRUE)
 
+
+# Hiqnweise Prüfung allgemein
+download.file(url = "https://raw.githubusercontent.com/sebastiansauer/Lehre/main/Hinweise/Hinweise-Pruefung-allgemein.qmd",
+              destfile = "children/Hinweise-Pruefung-allgemein.qmd",
+              quiet = TRUE)
+
+
 # Hinweise-Pruefung-Gruppenarbeit.qmd
 download.file(url = "https://raw.githubusercontent.com/sebastiansauer/Lehre/main/Hinweise/Hinweise-Pruefung-Gruppenarbeit.qmd",
               destfile = "children/Hinweise-Pruefung-Gruppenarbeit.qmd",
@@ -28,9 +35,14 @@ download.file(url = "https://raw.githubusercontent.com/sebastiansauer/Lehre/main
 ```
 
 
+## Allgemeine Prüfungshinweise
+
+{{< include children/Hinweise-Pruefung-allgemein.qmd >}}
 
 
 
+
+## Hinweise zur Projektarbeit
 
 
 {{< include children/Hinweise-Pruefung-Seminararbeit.qmd >}}

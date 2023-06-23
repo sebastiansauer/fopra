@@ -86,10 +86,12 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -131,6 +133,9 @@ div.csl-indent {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Forschungsprojekt</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Dunkelmodus umschalten"><i class="bi"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -577,7 +582,7 @@ Vorsicht
 <li>Y</li>
 <li>Zusammenhang von X und Y (häufig kausal)</li>
 </ol>
-<p>Entsprechend schreiben Sie also im Theorieteil über diese drei Teile (und über nichts anderes), s. <a href="#fig-theorieteil">Abbildung&nbsp;<span>4.6</span></a>. Es bieten sich also <em>drei</em> Unterkapitel des Theorieteils an. Allerdings sind auch andere Untergliederungen Ihres Theoreteils möglich. So fließt der Zusammenhang von X und Y häufig schon in die Erläuterung von X und Y ein.</p>
+<p>Entsprechend schreiben Sie also im Theorieteil über diese drei Teile (und über nichts anderes), s. <a href="#fig-theorieteil">Abbildung&nbsp;<span>4.6</span></a>.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Es bieten sich also <em>drei</em> Unterkapitel des Theorieteils an. Allerdings sind auch andere Untergliederungen Ihres Theoreteils möglich. So fließt der Zusammenhang von X und Y häufig schon in die Erläuterung von X und Y ein.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-theorieteil" class="quarto-figure quarto-figure-center anchored">
@@ -666,7 +671,7 @@ Vorsicht
 <p>Die APA (v7) empfiehlt, die Einträge der Spalten i.d.R. zu zentrieren; eine Ausnahme ist die linke Spalte, deren Einträge linksbündig sein sollen. Außerdem sollten die Tabellen keine “Gitterstäbe” (vertikale Linien) aufweisen und auch nur drei horizontale Linienn, s. #fig-corr1 als Beispiel.</p>
 <p>Zentral bei der Gestaltung von Tabellen sind drei Prinzipien: 1) Übersichtlichkeit, 2) Konsistenz und 3) Ehrlichkeit.</p>
 <p>Man kann solche Tabellen von “Hand” erstellen, oder man nutzt Hilfen wie z.B. das <a href="https://dstanley4.github.io/apaTables/index.html">R-Paket <code>apaTables</code></a>, welche Tabellen im APA-Format erstellt und in Word exportiert.</p>
-<p>Betrachten wir ein Beispiel anhand des Datensatzes <code>mtcars</code><a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>, wie man mit <code>apaTables</code> eine Korrelationstabelle erstellt.</p>
+<p>Betrachten wir ein Beispiel anhand des Datensatzes <code>mtcars</code><a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>, wie man mit <code>apaTables</code> eine Korrelationstabelle erstellt.</p>
 <div class="cell" data-hash="030-Schreiben_cache/html/unnamed-chunk-7_4beeaeb346f3976416d3296cca1e11a8">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/dstanley4/apaTables">apaTables</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="va">mtcars</span><span class="op">)</span></span>
@@ -835,7 +840,7 @@ Hinweis
 <ul>
 <li>Nach Meinung/Auffassung von Müller ist …</li>
 <li>Meier vertritt dabei die Position …</li>
-<li>So akzentuiert der Autor<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>, dass … -…, so der Autor, …</li>
+<li>So akzentuiert der Autor<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>, dass … -…, so der Autor, …</li>
 <li>Dieser Umstand sei …</li>
 <li>Der Autor betont nach hier vertretener Auffassung zu Recht die Perspektive, dass …, denn … - - Ohne dies zu begründen, stellt der Autor die These auf, dass …</li>
 <li>Allerdings verzichtet der Autor darauf, zu explizieren, dass …</li>
@@ -874,7 +879,7 @@ Hinweis
 <span class="header-section-number">4.6.1</span> Richtlinien</h3>
 <p>Solange Sie keine anders lautenden Vorgaben von Ihrer Betreuungsperson haben, können Sie sich an diesen Richtlinien orientieren.</p>
 <ol type="1">
-<li>Verwenden Sie die Format-Vorgaben der APA (aktuelle Version)<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>, um Zitationen, Tabellen und Abbildungen zu formatieren.</li>
+<li>Verwenden Sie die Format-Vorgaben der APA (aktuelle Version)<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>, um Zitationen, Tabellen und Abbildungen zu formatieren.</li>
 <li>Fließtext (in längeren Print-Dokumenten wie einer Seminararbeit) ist mit Serifentext zu schreiben; Überschriften können serifenlos gesetzt sein.</li>
 <li>Fließtext soll in 11 Punkt Schriftgröße gesetzt sein.</li>
 <li>Der Text kann linksbündig oder im Blocksatz gesetzt sein.</li>
@@ -1000,35 +1005,36 @@ Hinweis
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
 <div id="ref-apa7" class="csl-entry" role="listitem">
-American Psychological Association. 2019. <em>Publication <span>Manual</span> of the <span>American Psychological Association</span>, 7th <span>Edition</span></em>. <span>Washington, DC</span>: <span>American Psychological Association (APA)</span>. <a href="https://www.amazon.com/Publication-Manual-American-Psychological-Association/dp/1433805618?SubscriptionId=0JYN1NVW651KCA56C102&amp;tag=techkie-20&amp;linkCode=xm2&amp;camp=2025&amp;creative=165953&amp;creativeASIN=1433805618">https://www.amazon.com/Publication-Manual-American-Psychological-Association/dp/1433805618?SubscriptionId=0JYN1NVW651KCA56C102&amp;tag=techkie-20&amp;linkCode=xm2&amp;camp=2025&amp;creative=165953&amp;creativeASIN=1433805618</a>.
+American Psychological Association. 2019. <em>Publication Manual of the American Psychological Association, 7th Edition</em>. Washington, <span>DC</span>: American Psychological Association (<span>APA</span>). <a href="https://www.amazon.com/Publication-Manual-American-Psychological-Association/dp/1433805618?SubscriptionId=0JYN1NVW651KCA56C102&amp;tag=techkie-20&amp;linkCode=xm2&amp;camp=2025&amp;creative=165953&amp;creativeASIN=1433805618">https://www.amazon.com/Publication-Manual-American-Psychological-Association/dp/1433805618?SubscriptionId=0JYN1NVW651KCA56C102&amp;tag=techkie-20&amp;linkCode=xm2&amp;camp=2025&amp;creative=165953&amp;creativeASIN=1433805618</a>.
 </div>
 <div id="ref-Dobelli2011" class="csl-entry" role="listitem">
-Dobelli, Rolf, und Birgit Lang. 2011. <em>Die <span>Kunst</span> Des Klaren <span>Denkens</span></em>. <span>Hanser</span>.
+Dobelli, Rolf, und Birgit Lang. 2011. <em>Die Kunst des klaren Denkens</em>. Hanser.
 </div>
 <div id="ref-bdp_und_dpgs_berufsethische_2016" class="csl-entry" role="listitem">
-DPGs, BDP und. 2016. <span>„Berufsethische <span>Richtlinien</span>“</span>. <span>Berufsverbandes Deutscher Psychologinnen und Psychologen e.V. und der Deutschen Gesellschaft für Psychologie e.V.</span> <a href="https://www.dgps.de/die-dgps/aufgaben-und-ziele/berufsethische-richtlinien">https://www.dgps.de/die-dgps/aufgaben-und-ziele/berufsethische-richtlinien</a>.
+DPGs, BDP und. 2016. <span>„Berufsethische Richtlinien“</span>. Berufsverbandes Deutscher Psychologinnen und Psychologen e.V. und der Deutschen Gesellschaft für Psychologie e.V. <a href="https://www.dgps.de/die-dgps/aufgaben-und-ziele/berufsethische-richtlinien">https://www.dgps.de/die-dgps/aufgaben-und-ziele/berufsethische-richtlinien</a>.
 </div>
 <div id="ref-gulbins_mut_2000" class="csl-entry" role="listitem">
-Gulbins, Jürgen, und Christine Kahrmann. 2000. <em>Mut zur Typographie: ein Kurs für Desktop-Publishing ; mit 40 Tabellen</em>. 2., überarb. und erw. Aufl. X.media.press. <span>Berlin</span>: <span>Springer</span>.
+Gulbins, Jürgen, und Christine Kahrmann. 2000. <em>Mut zur Typographie: ein Kurs für Desktop-Publishing ; mit 40 Tabellen</em>. 2., überarb. und erw. Aufl. X.media.press. Berlin: Springer.
 </div>
 <div id="ref-heesen_wissenschaftliches_2021" class="csl-entry" role="listitem">
-Heesen, Bernd. 2021. <em>Wissenschaftliches Arbeiten: Methodenwissen für Wirtschafts-, Ingenieur- und Sozialwissenschaftler</em>. <span>Berlin, Heidelberg</span>: <span>Springer Berlin Heidelberg</span>. <a href="https://doi.org/10.1007/978-3-662-62548-4">https://doi.org/10.1007/978-3-662-62548-4</a>.
+Heesen, Bernd. 2021. <em>Wissenschaftliches Arbeiten: Methodenwissen für Wirtschafts-, Ingenieur- und Sozialwissenschaftler</em>. Berlin, Heidelberg: Springer Berlin Heidelberg. <a href="https://doi.org/10.1007/978-3-662-62548-4">https://doi.org/10.1007/978-3-662-62548-4</a>.
 </div>
 <div id="ref-Kornmeier" class="csl-entry" role="listitem">
-Kornmeier, Martin. 2013. <em>Wissenschaftlich Schreiben Leicht Gemacht</em>. 6. Aufl. <span>Bern</span>: <span>Haupt-Verlag</span>.
+Kornmeier, Martin. 2013. <em>Wissenschaftlich schreiben leicht gemacht</em>. 6. Aufl. Bern: Haupt-Verlag.
 </div>
 <div id="ref-peters_schreiben_2019" class="csl-entry" role="listitem">
 Peters, Jan H, und Tobias Dörfler. 2019. <em>Schreiben und Gestalten von Abschlussarbeiten in der Psychologie und den Sozialwissenschaften</em>. <a href="https://www.pearson-studium.de/drm/reader/nu/code/uesgvaaidpsy">https://www.pearson-studium.de/drm/reader/nu/code/uesgvaaidpsy</a>.
 </div>
 <div id="ref-theisen_wissenschaftliches_2021" class="csl-entry" role="listitem">
-Theisen, Manuel René. 2021. <em>Wissenschaftliches Arbeiten: erfolgreich bei Bachelor- und Masterarbeit</em>. 18., neu bearbeitete und gekürzte Auflage. <span>München</span>: <span>Verlag Franz Vahlen</span>.
+Theisen, Manuel René. 2021. <em>Wissenschaftliches Arbeiten: erfolgreich bei Bachelor- und Masterarbeit</em>. 18., neu bearbeitete und gekürzte Auflage. München: Verlag Franz Vahlen.
 </div>
 </div>
 </section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><hr>
 <ol>
-<li id="fn1"><p>schon in R fest eingebaut, mit dem Befehl <code>data(mtcars)</code> können Sie den Datensatz “aktivieren”.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn2"><p>Damit sind nicht Sie gemeint, als Autor:in einer studentischen Arbeit, sondern der Mann, der den Text geschrieben hat, den Sie gerade zitieren<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>V7<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn1"><p>Ablaufdiagramme, DAGs, Schemata oder andere Nicht-Daten-Diagramme kann man z.B. mit einem Zeichenprogramm erstellen.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>schon in R fest eingebaut, mit dem Befehl <code>data(mtcars)</code> können Sie den Datensatz “aktivieren”.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Damit sind nicht Sie gemeint, als Autor:in einer studentischen Arbeit, sondern der Mann, der den Text geschrieben hat, den Sie gerade zitieren<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>V7<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -1049,6 +1055,121 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {

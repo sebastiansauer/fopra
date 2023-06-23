@@ -69,7 +69,7 @@ print(km1)
 ## Einführung in die Kausalanalyse
 
 
-[Dieses Kapitel]() gibt eine Einführung in die Kausalanalyse.
+[Dieses Kapitel](https://start-bayes.netlify.app/1100-kausal.html) gibt eine Einführung in die Kausalanalyse.
 
 
 

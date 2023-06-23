@@ -317,7 +317,7 @@ In dem Fall besteht Ihre Studie inhaltlich aus folgenden drei Teilen:
 2. Y
 3. Zusammenhang von X und Y (häufig kausal)
 
-Entsprechend schreiben Sie also im Theorieteil über diese drei Teile (und über nichts anderes), s. @fig-theorieteil.
+Entsprechend schreiben Sie also im Theorieteil über diese drei Teile (und über nichts anderes), s. @fig-theorieteil.^[Ablaufdiagramme, DAGs, Schemata oder andere Nicht-Daten-Diagramme kann man z.B. mit einem Zeichenprogramm erstellen.]
 Es bieten sich also *drei* Unterkapitel des Theorieteils an.
 Allerdings sind auch andere Untergliederungen Ihres Theoreteils möglich.
 So fließt der Zusammenhang von X und Y häufig schon in die Erläuterung von X und Y ein.

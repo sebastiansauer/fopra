@@ -86,10 +86,12 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -129,6 +131,9 @@ div.csl-indent {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Forschungsprojekt</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Dunkelmodus umschalten"><i class="bi"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -265,8 +270,9 @@ div.csl-indent {
 <a href="#ergebnisteil" id="toc-ergebnisteil" class="nav-link" data-scroll-target="#ergebnisteil"><span class="header-section-number">12.7</span> Ergebnisteil</a>
   <ul class="collapse">
 <li><a href="#deskriptive-statistik" id="toc-deskriptive-statistik" class="nav-link" data-scroll-target="#deskriptive-statistik"><span class="header-section-number">12.7.1</span> Deskriptive Statistik</a></li>
-  <li><a href="#inferenzstatistik" id="toc-inferenzstatistik" class="nav-link" data-scroll-target="#inferenzstatistik"><span class="header-section-number">12.7.2</span> Inferenzstatistik</a></li>
-  <li><a href="#rope-1" id="toc-rope-1" class="nav-link" data-scroll-target="#rope-1"><span class="header-section-number">12.7.3</span> ROPE</a></li>
+  <li><a href="#diagramme-exportieren" id="toc-diagramme-exportieren" class="nav-link" data-scroll-target="#diagramme-exportieren"><span class="header-section-number">12.7.2</span> Diagramme exportieren</a></li>
+  <li><a href="#inferenzstatistik" id="toc-inferenzstatistik" class="nav-link" data-scroll-target="#inferenzstatistik"><span class="header-section-number">12.7.3</span> Inferenzstatistik</a></li>
+  <li><a href="#rope-1" id="toc-rope-1" class="nav-link" data-scroll-target="#rope-1"><span class="header-section-number">12.7.4</span> ROPE</a></li>
   </ul>
 </li>
   <li><a href="#diskussion" id="toc-diskussion" class="nav-link" data-scroll-target="#diskussion"><span class="header-section-number">12.8</span> Diskussion</a></li>
@@ -1613,7 +1619,7 @@ div.csl-indent {
 </div>
 </div>
 </div>
-<p>Möchten man eine <em>quadratische</em> Korrelationstabelle - was der üblichen Berichtsform entspricht - kann man das so bekommen:</p>
+<p>Möchten man eine <em>quadratische</em> Korrelationstabelle (was der üblicheren Berichtsform entspricht) kann man das so bekommen:</p>
 <div class="cell" data-hash="100-Statistiken-berichten_cache/html/unnamed-chunk-9_4c45fd0ccb86ead4b9e7e5a68dd376f3">
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">meine_cor_tab</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="https://gt.rstudio.com/reference/gt.html">gt</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>  <span class="co"># machen wir gleich eine schicke HTML-Tabelle</span></span>
@@ -2083,6 +2089,9 @@ div.csl-indent {
 </div>
 </div>
 <p>Vergessen Sie nicht, das Tabellen (genau wie Abbildungen) im Text zu referenzieren sind.</p>
+</section></section><section id="diagramme-exportieren" class="level3" data-number="12.7.2"><h3 data-number="12.7.2" class="anchored" data-anchor-id="diagramme-exportieren">
+<span class="header-section-number">12.7.2</span> Diagramme exportieren</h3>
+<p>Diagramme, die Sie mit <code>ggplot</code> erstellt haben, können Sie z.B. mit dem Befehl <a href="https://ggplot2.tidyverse.org/reference/ggsave.html"><code>ggsave</code></a> in eine Datei speichern (z.B. im Format PNG oder PDF).</p>
 <p>Interessant könnte für Sie auch das Paket <code>qwraps2</code> sein, das u.a. einen Formulierungsvorschlag erstellt, wie man Statistiken im Fließtext anführt. Betrachten wir ein Beispiel mit <code>mtcars</code>. Sagen wir, wir möchten den mittleren Spritverbrauch berichten.</p>
 <div class="cell" data-hash="100-Statistiken-berichten_cache/html/unnamed-chunk-10_0c2e7addfb7c0e87f49c84608672e574">
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/dewittpe/qwraps2/">qwraps2</a></span><span class="op">)</span></span>
@@ -2091,15 +2100,15 @@ div.csl-indent {
 <span><span class="co">## [1] "20.09 $\\pm$ 6.03"</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Das Zeichen <code>$\\pm$</code> steht für “Plus-Minus” ± (im Formelmodus).</p>
-</section></section><section id="inferenzstatistik" class="level3" data-number="12.7.2"><h3 data-number="12.7.2" class="anchored" data-anchor-id="inferenzstatistik">
-<span class="header-section-number">12.7.2</span> Inferenzstatistik</h3>
-<section id="posteriori-verteilung" class="level4" data-number="12.7.2.1"><h4 data-number="12.7.2.1" class="anchored" data-anchor-id="posteriori-verteilung">
-<span class="header-section-number">12.7.2.1</span> Posteriori-Verteilung</h4>
+</section><section id="inferenzstatistik" class="level3" data-number="12.7.3"><h3 data-number="12.7.3" class="anchored" data-anchor-id="inferenzstatistik">
+<span class="header-section-number">12.7.3</span> Inferenzstatistik</h3>
+<section id="posteriori-verteilung" class="level4" data-number="12.7.3.1"><h4 data-number="12.7.3.1" class="anchored" data-anchor-id="posteriori-verteilung">
+<span class="header-section-number">12.7.3.1</span> Posteriori-Verteilung</h4>
 <p>Für jede Hypothese müssen Sie die zentralen Ergebnisse berichten. Die Hypothesen beziehen sich auf Populationen, also benötigen wir Inferenzstatistik. In der frequentistischen Statistik finden hier Statistiken wie der p-Wert und das (frequentistische) Konfidenzintervall Verwendung. In einer Bayes-Analyse ist die Posteriori-Verteilung der Dreh- und Angelpunkt der Ergebnisse.</p>
 <p>Die Post-Verteilung gibt an, wie wahrscheinlich ein bestimmter Parameterwert jetzt ist, nachdem die Daten bekannt sind.</p>
 <p>Ein statistisches Modell wird zumeist mit einem Regressionsmodell umgesetzt. Ein Regressionsmodell kann man in R mit <code><a href="https://rdrr.io/r/stats/lm.html">lm()</a></code> (frequentistisch) oder z.B. <code><a href="https://mc-stan.org/rstanarm/reference/stan_glm.html">stan_glm()</a></code> (Bayes) berechnen. Die Syntax ist sehr ähnlich.</p>
-</section><section id="umsetzung-in-r" class="level4" data-number="12.7.2.2"><h4 data-number="12.7.2.2" class="anchored" data-anchor-id="umsetzung-in-r">
-<span class="header-section-number">12.7.2.2</span> Umsetzung in R</h4>
+</section><section id="umsetzung-in-r" class="level4" data-number="12.7.3.2"><h4 data-number="12.7.3.2" class="anchored" data-anchor-id="umsetzung-in-r">
+<span class="header-section-number">12.7.3.2</span> Umsetzung in R</h4>
 <p>Sie können eine Posteriori-Verteilung z.B. für ihr Modell berechnen:</p>
 <div class="cell" data-hash="100-Statistiken-berichten_cache/html/unnamed-chunk-11_8d887e2a0e2398d950068d0aeeea8fd6">
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://mc-stan.org/rstanarm/">rstanarm</a></span><span class="op">)</span></span>
@@ -3099,13 +3108,14 @@ div.csl-indent {
 <div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="fu">hdi</span><span class="op">(</span><span class="va">m1</span><span class="op">)</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Sieht auch ganz schick aus; im Hintergrund wird <a href="https://easystats.github.io/easystats/">easystats</a> zum Plotten verwendet. Praktischerweise ist es ein ggplot-Diagramm, man kann also mit bekannten (ggplot-)Methoden nachpolieren, z.B s. <a href="#fig-m1-hdi">Abbildung&nbsp;<span>12.2</span></a>.</p>
-<div class="cell" data-hash="100-Statistiken-berichten_cache/html/fig-m1-hdi_0684ec18aada2ce7ddf33767520bb693">
+<div class="cell" data-hash="100-Statistiken-berichten_cache/html/fig-m1-hdi_5e77c93befd4d7907a6f6c6b268a0036">
 <div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="fu">hdi</span><span class="op">(</span><span class="va">m1</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span><span class="st">"Hier steht mein Titel"</span>,</span>
 <span>       y <span class="op">=</span> <span class="st">""</span>,</span>
 <span>       y <span class="op">=</span> <span class="st">""</span>,</span>
 <span>       x <span class="op">=</span> <span class="st">"Parameterwert"</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>axis.text.y <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span>  <span class="co"># keine Achsenlabels auf Y ("am" weg)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-m1-hdi" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><p><img src="100-Statistiken-berichten_files/figure-html/fig-m1-hdi-1.png" class="img-fluid figure-img" width="672"></p>
@@ -3114,8 +3124,8 @@ div.csl-indent {
 </div>
 </div>
 </div>
-</section></section><section id="rope-1" class="level3" data-number="12.7.3"><h3 data-number="12.7.3" class="anchored" data-anchor-id="rope-1">
-<span class="header-section-number">12.7.3</span> ROPE</h3>
+</section></section><section id="rope-1" class="level3" data-number="12.7.4"><h3 data-number="12.7.4" class="anchored" data-anchor-id="rope-1">
+<span class="header-section-number">12.7.4</span> ROPE</h3>
 <p>Testen Sie eine Hypothese, die einen “praktischen Nullwert” ausschließen möchte, so bietet sich das ROPE-Verfahren an.</p>
 <p>Mit ROPE testet man demnach keine “Exaktnullhypothese”, sondern eine “Praktischnullhypothese”, nämlich dass ein Effekt so klein ist, dass er praktisch keine Bedeutung hat.</p>
 <p>Diesem Konzept liegt die Überlegung zugrunde, dass es in der freien Wildbahn kaum oder keine Effekte gibt, die <em>exakt</em> Null sind, also “0,0000000000000000000000000 …” und so weiter bis alle Unendlichkeit.</p>
@@ -3166,8 +3176,8 @@ div.csl-indent {
 <p>Schneidet ROPE mit dem Berg, dem roten, dann Verwerfen ist verboten!</p>
 </blockquote>
 <p>Mit “Verwerfen” ist das Verwerfen der “Praktischnullhypothese” gemeint.</p>
-<section id="standardisierte-effektstärke" class="level4" data-number="12.7.3.1"><h4 data-number="12.7.3.1" class="anchored" data-anchor-id="standardisierte-effektstärke">
-<span class="header-section-number">12.7.3.1</span> Standardisierte Effektstärke</h4>
+<section id="standardisierte-effektstärke" class="level4" data-number="12.7.4.1"><h4 data-number="12.7.4.1" class="anchored" data-anchor-id="standardisierte-effektstärke">
+<span class="header-section-number">12.7.4.1</span> Standardisierte Effektstärke</h4>
 <p>Vergleicht man Gruppen und ist z.B. die AV wenig anschaulich (etwa ein Summenscore), so bietet es sich, standardisierte Maße des Gruppenunterschieds anzugeben. Man nennt sie auch Maße der Effektstärke.</p>
 <p>Bei Gruppenvergleichen ist <em>Cohens d</em> ein bekanntes Maß. Man kann es sich so ausgeben lassen:</p>
 <div class="cell" data-hash="100-Statistiken-berichten_cache/html/unnamed-chunk-21_7fe6b1570c6110b59155d3799f6f1bb1">
@@ -3205,8 +3215,8 @@ div.csl-indent {
 </div>
 </div>
 </div>
-</section><section id="r-paket-report" class="level4" data-number="12.7.3.2"><h4 data-number="12.7.3.2" class="anchored" data-anchor-id="r-paket-report">
-<span class="header-section-number">12.7.3.2</span> R-Paket <code>report</code>
+</section><section id="r-paket-report" class="level4" data-number="12.7.4.2"><h4 data-number="12.7.4.2" class="anchored" data-anchor-id="r-paket-report">
+<span class="header-section-number">12.7.4.2</span> R-Paket <code>report</code>
 </h4>
 <p>Vielleicht ist das R-Paket <code>report</code> für Sie nützlich. Ich bin nicht ganz sicher, denn das Paket ist noch sehr neu und berichtet recht viel Informationen. Aber vielleicht wollen Sie es ja mal ausprobieren.</p>
 <div class="cell" data-hash="100-Statistiken-berichten_cache/html/unnamed-chunk-24_ef1d1f60628d1c36ed4763fa964bbbe5">
@@ -3370,28 +3380,28 @@ div.csl-indent {
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">
 <div id="ref-cooper_reporting_2020" class="csl-entry" role="listitem">
-Cooper, Harris. 2020. <span>„Reporting Standards for Research in Psychology: <span>Why</span> Do We Need Them? <span>What</span> Might They Be?“</span> In <em>Reporting Quantitative Research in Psychology: <span>How</span> to Meet <span>APA Style Journal Article Reporting Standards</span>, 2nd Ed</em>, 3–17. <span>Washington, DC, US</span>: <span>American Psychological Association</span>. <a href="https://doi.org/10.1037/0000178-001">https://doi.org/10.1037/0000178-001</a>.
+Cooper, Harris. 2020. <span>„Reporting standards for research in psychology: Why do we need them? What might they be?“</span> In <em>Reporting quantitative research in psychology: How to meet <span>APA</span> Style Journal Article Reporting Standards, 2nd ed</em>, 3–17. Washington, <span>DC</span>, <span>US</span>: American Psychological Association. <a href="https://doi.org/10.1037/0000178-001">https://doi.org/10.1037/0000178-001</a>.
 </div>
 <div id="ref-gelman_regression_2021" class="csl-entry" role="listitem">
-Gelman, Andrew, Jennifer Hill, und Aki Vehtari. 2021. <em>Regression and Other Stories</em>. Analytical Methods for Social Research. <span>Cambridge</span>: <span>Cambridge University Press</span>.
+Gelman, Andrew, Jennifer Hill, und Aki Vehtari. 2021. <em>Regression and other stories</em>. Analytical methods for social research. Cambridge: Cambridge University Press.
 </div>
 <div id="ref-jhangiani_research_2019" class="csl-entry" role="listitem">
-Jhangiani, Rajiv S, Jhangiani, I-Chant A Chiang, und Dana C Cuttler Leighton. 2019. <em>Research <span>Methods</span> in <span>Psychology</span></em>.
+Jhangiani, Rajiv S, Jhangiani, I-Chant A Chiang, und Dana C Cuttler Leighton. 2019. <em>Research Methods in Psychology</em>.
 </div>
 <div id="ref-kruschke_rejecting_2018" class="csl-entry" role="listitem">
-Kruschke, John K. 2018. <span>„Rejecting or <span>Accepting Parameter Values</span> in <span>Bayesian Estimation</span>“</span>. <em>Advances in Methods and Practices in Psychological Science</em> 1 (2): 270–80. <a href="https://doi.org/10.1177/2515245918771304">https://doi.org/10.1177/2515245918771304</a>.
+Kruschke, John K. 2018. <span>„Rejecting or Accepting Parameter Values in Bayesian Estimation“</span>. <em>Advances in Methods and Practices in Psychological Science</em> 1 (2): 270–80. <a href="https://doi.org/10.1177/2515245918771304">https://doi.org/10.1177/2515245918771304</a>.
 </div>
 <div id="ref-kruschke_bayesian_2021" class="csl-entry" role="listitem">
-———. 2021. <span>„Bayesian <span>Analysis Reporting Guidelines</span>“</span>. <em>Nature Human Behaviour</em> 5 (10, 10): 1282–91. <a href="https://doi.org/10.1038/s41562-021-01177-7">https://doi.org/10.1038/s41562-021-01177-7</a>.
+———. 2021. <span>„Bayesian Analysis Reporting Guidelines“</span>. <em>Nature Human Behaviour</em> 5 (10): 1282–91. <a href="https://doi.org/10.1038/s41562-021-01177-7">https://doi.org/10.1038/s41562-021-01177-7</a>.
 </div>
 <div id="ref-makowski_indices_2019" class="csl-entry" role="listitem">
-Makowski, Dominique, Mattan S. Ben-Shachar, S. H. Annabel Chen, und Daniel Lüdecke. 2019. <span>„Indices of <span>Effect Existence</span> and <span>Significance</span> in the <span>Bayesian Framework</span>“</span>. <em>Frontiers in Psychology</em> 10. <a href="https://www.frontiersin.org/article/10.3389/fpsyg.2019.02767">https://www.frontiersin.org/article/10.3389/fpsyg.2019.02767</a>.
+Makowski, Dominique, Mattan S. Ben-Shachar, S. H. Annabel Chen, und Daniel Lüdecke. 2019. <span>„Indices of Effect Existence and Significance in the Bayesian Framework“</span>. <em>Frontiers in Psychology</em> 10: 2767. <a href="https://doi.org/10.3389/fpsyg.2019.02767">https://doi.org/10.3389/fpsyg.2019.02767</a>.
 </div>
 <div id="ref-peters_abschlussarbeiten_2015" class="csl-entry" role="listitem">
-Peters, Jan H., und Tobias Dörfler. 2015. <em>Abschlussarbeiten in der Psychologie und den Sozialwissenschaften - Schreiben und Gestalten</em>. PS - Psychologie. <span>Hallbergmoos/Germany</span>: <span>Pearson</span>. <a href="https://www.pearson-studium.de/schreiben-und-gestalten-von-abschlussarbeiten-in-der-psychologie-und-den-sozialwissenschaften.html">https://www.pearson-studium.de/schreiben-und-gestalten-von-abschlussarbeiten-in-der-psychologie-und-den-sozialwissenschaften.html</a>.
+Peters, Jan H., und Tobias Dörfler. 2015. <em>Abschlussarbeiten in der Psychologie und den Sozialwissenschaften - Schreiben und Gestalten</em>. <span>PS</span> - Psychologie. Hallbergmoos/Germany: Pearson. <a href="https://www.pearson-studium.de/schreiben-und-gestalten-von-abschlussarbeiten-in-der-psychologie-und-den-sozialwissenschaften.html">https://www.pearson-studium.de/schreiben-und-gestalten-von-abschlussarbeiten-in-der-psychologie-und-den-sozialwissenschaften.html</a>.
 </div>
 <div id="ref-peters_planen_2019" class="csl-entry" role="listitem">
-Peters, Jan Hendrik, und Tobias Dörfler. 2019. <em>Planen, Durchführen und Auswerten von Abschlussarbeiten in der Psychologie und den Sozialwissenschaften</em>. <span>Pearson</span>. <a href="https://www.pearson-studium.de/planen-durchfuehren-und-auswerten-von-abschlussarbeiten-in-der-psychologie-und-den-sozialwissenschaften.html">https://www.pearson-studium.de/planen-durchfuehren-und-auswerten-von-abschlussarbeiten-in-der-psychologie-und-den-sozialwissenschaften.html</a>.
+Peters, Jan Hendrik, und Tobias Dörfler. 2019. <em>Planen, Durchführen und Auswerten von Abschlussarbeiten in der Psychologie und den Sozialwissenschaften</em>. Pearson. <a href="https://www.pearson-studium.de/planen-durchfuehren-und-auswerten-von-abschlussarbeiten-in-der-psychologie-und-den-sozialwissenschaften.html">https://www.pearson-studium.de/planen-durchfuehren-und-auswerten-von-abschlussarbeiten-in-der-psychologie-und-den-sozialwissenschaften.html</a>.
 </div>
 </div>
 </section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><hr>
@@ -3418,6 +3428,121 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
   const icon = "";
   const anchorJS = new window.AnchorJS();
   anchorJS.options = {

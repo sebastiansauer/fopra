@@ -507,7 +507,7 @@ meine_cor_tab
 ```
 
 
-Möchten man eine *quadratische* Korrelationstabelle - was der üblichen Berichtsform entspricht - kann man das so bekommen:
+Möchten man eine *quadratische* Korrelationstabelle (was der üblicheren Berichtsform entspricht) kann man das so bekommen:
 
 ```{r}
 summary(meine_cor_tab) %>% 
@@ -516,6 +516,11 @@ summary(meine_cor_tab) %>%
 ```
 
 Vergessen Sie nicht, das Tabellen (genau wie Abbildungen) im Text zu referenzieren sind.
+
+### Diagramme exportieren
+
+Diagramme, die Sie mit `ggplot` erstellt haben, können Sie z.B. mit dem Befehl [`ggsave`](https://ggplot2.tidyverse.org/reference/ggsave.html) in eine Datei speichern (z.B. im Format PNG oder PDF).
+
 
 
 Interessant könnte für Sie auch das Paket `qwraps2` sein, 

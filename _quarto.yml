@@ -27,8 +27,14 @@ book:
     - 130-references.qmd
     # - test.qmd
 
+website:
+  favicon: img/Albert_Einstein_head.jpg
+  open-graph: true
+  image: img/Albert_Einstein_head.jpg
+  google-analytics: G-1K43PN7CP3
+  cookie-consent: true
 
-bibliography:  /Users/sebastiansaueruser/Google Drive/Literatur/refmgt/library-ses.bib
+bibliography: library-ses.bib
 
 
 editor: source
@@ -53,7 +59,9 @@ knitr:
 format:
   html:
     toc: true
-    theme: lumen
+    theme:
+      light: lumen
+      dark: dakrly
     css: styles.css
     number-sections: true
     df-print: paged
