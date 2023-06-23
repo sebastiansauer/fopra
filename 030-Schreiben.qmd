@@ -405,10 +405,10 @@ Folgende Unterkapitel bieten sich an:
 - Beschreibung der räumlichen und zeitlichen Untersuchungsbedingungen
 - Versuchsplan (Design): UV, AV, Designart (z. B. querschnittliche Beobachtungsstudie)
 
-
-Fügen Sie keine R-Syntax ein (schon gar nicht als Screenshot); nutzen Sie für Syntax den Anhang.
-
-
+#### Analyse
+- Verwendete Analyse-Software (idealerweise mit Versionsnummer) wie R 
+- Software, die zur Reproduzierbarkeit nicht von Relevaz ist, braucht nicht angegeben zu werden (z.B. Word oder RStudio)
+- Kurze Skizzierung des statistischen Vorgehens (wie z.B. Bayes-Methoden auf Basis von Stan)
 
 
 ### Ergebnisteil
@@ -420,6 +420,9 @@ Handlungen werden in der 1. Vergangenheit beschrieben („Es fand sich ein Unter
 Im Ergebnisteil soll man keine Interpretationen oder Bewertungen anführen, sondern lediglich so objektiv wie möglich Tatschen (Fakten) berichten.
 In quantitativen Arbeiten findet man naturgemäß oft viele Statistiken. Wer hätt’s gedacht.
 Berichtet man ein Ergebnis mit wenig Zahlenmaterial, so gibt man die Zahlen im Text wieder; größere Mengen sind übersichtlicher in Tabellen dargestellt. Sehr große Zahlenmengen sind besser im Anhang aufgehoben. Häufig kann man quantitative Daten gut in Diagrammen darstellen. Man beachte die Vorgaben der APA zur Darstellung von Statistiken.
+Fügen Sie keine R-Syntax ein (schon gar nicht als Screenshot); nutzen Sie für Syntax den Anhang.
+
+
 
 
 So können Sie Ihren Ergebnisteil gliedern:
@@ -435,11 +438,23 @@ Es gibt drei Formate, Statistiken zu berichten: im Text, in einer Tabelle, mit e
 
 #### Formatierung von Tabellen
 
+Eine kleine Menge an Zahlen (z.B. fünf) kann konziser im Text berichtet werden.
+Größere Mengen an Zahlen sollten in Tabellen berichtet werden.
+
 Ein Beispiel für eine Tabelle zur Untersuchung von Korrelation, die nach APA (V7) formatiert ist, zeigt @fig-corr1.
 
 
 ![Ein Beispiel für eine Korrelationstabelle, formatiert nach APA7](img/tab-corr.jpg){#fig-corr1 width="50%"}
 
+Wenn Sie nach der Bayes-Methode arbeiten, so sind "Sternchen" oder p-Werte nicht nötig. 
+Stattdessen sind Konfidenzintervalle ausreichen (die die Information des p-Werts im Übrigen abdecken).
+
+Die APA (v7) empfiehlt, die Einträge der Spalten i.d.R. zu zentrieren;
+eine Ausnahme ist die linke Spalte, deren Einträge linksbündig sein sollen.
+Außerdem sollten die Tabellen keine "Gitterstäbe" (vertikale Linien) aufweisen und 
+auch nur drei horizontale Linienn, s. #fig-corr1 als Beispiel.
+
+Zentral bei der Gestaltung von Tabellen sind drei Prinzipien: 1) Übersichtlichkeit, 2) Konsistenz und 3) Ehrlichkeit.
 
 Man kann solche Tabellen von "Hand" erstellen, oder man nutzt Hilfen wie z.B. das [R-Paket `apaTables`](https://dstanley4.github.io/apaTables/index.html), welche Tabellen im APA-Format erstellt und in Word exportiert.
 
@@ -466,7 +481,12 @@ in der Abbildung sind wesentliche Merkmale des APA-Formats hervorgehoben.
 
 ![Beispiel für eine APA-Tabelle](img/tab-apa.jpg){#fig-tab-apa width="50%"}
 
-Ein Beispiel für eine Tabelle mit Regressionsergebnissen finden Sie [hier](https://apastyle.apa.org/style-grammar-guidelines/tables-figures/sample-tables#correlation).
+Ein Beispiel für eine Tabelle mit Regressionsergebnissen finden Sie [hier](https://apastyle.apa.org/style-grammar-guidelines/tables-figures/sample-tables#regression).
+Übrigens: Die Ausgabe von `parameters` ist insgesamt APA konform, vgl. @tbl-m-bringtnixtin2-params.
+
+:::{.callout-tip}
+Zur Formatierung von Tabellen und Abbildungen laut APA finden sich online viele Beispiele.$\square$
+:::
 
 
 #### Formatierung von Abbildungen
@@ -510,12 +530,12 @@ Zu beachten ist, dass die Statistiken in @fig-ggstatsplot1 laut APA als Anmerkun
 
 #### Statistik im Text 
 
-Dazu später mehr, s. Kapitel zur Datenanalyse.
+Dazu später mehr, s. Kapitel zum Berichten von Ergebnissen, @sec-reportstats.
 
 
 ### Diskussion
 
-ie Diskussion beinhaltet den Kommentar des Autors (neutral formuliert) zu seinen Ergebnissen im Bezug zum in der Einleitung beschriebenen aktuellen theoretischem und empirischem Wissensstand.
+Die Diskussion beinhaltet den Kommentar des Autors (neutral formuliert) zu seinen Ergebnissen im Bezug zum in der Einleitung beschriebenen aktuellen theoretischem und empirischem Wissensstand.
 Der besondere wissenschaftliche Beitrag der durchgeführten Untersuchung wird dargestellt.
 Zu Beginn der Diskussion sollten eine kritische Zusammenfassung der hypothesenbezogenen Hauptergebnisse gegeben werde und diese Befunde mit anderen Untersuchungsergebnissen verglichen werden.
 Ein psychologisch (theoretisch) sinnvoller Erklärungsansatz für die Hauptbefunde sollte dargestellt werden und die Ergebnisse auch im Hinblick auf andere Erklärungsversuche diskutiert werden.
@@ -551,6 +571,7 @@ Im Anhang stehen Details zu Ihrer Studie.
 Die einzelnen Teile des Anhangs werden durchnummeriert.
 Alle Inhalte des Anhangs müssen im Haupttext referenziert werden („Der Interviewleitfaden findet sich im Anhang B“.).
 Typische Inhalte des Anhangs sind: Details zu Messinstrumenten, Interviewleitfäden oder Stimuli, weiterführende Statistiken, Syntax oder Probandeninformationen.
+Sofern verfügbar, können Sie anstelle z.B. Ihres Fragebogens die URL zu Ihrem Fragebogen einfügen.
 Die ehrenwörtliche Erklärung steht ebenfalls im Anhang.
 Eine Funktion des Anhangs ist es, die Informationen, die zur Reproduktion der Studie nötig sind, im Detail vorzuhalten.
 

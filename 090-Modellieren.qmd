@@ -405,6 +405,8 @@ Wir modellieren (in `m_bringtnixtin2`) jetzt die Veränderung `d = y2 - y1` als 
 m_bringtnixtin2 <- stan_glm(d ~ g, data = d_bringtnixtin, refresh = 0)
 parameters(m_bringtnixtin2)
 ```
+
+
 ```{r}
 #| echo: false
 #| label: tbl-m-bringtnixtin2-params
@@ -587,7 +589,7 @@ ggwithinstats(
 
 ### Inferenzanalyse
 
-Wir berechnen das Modell (`m_within`):
+Wir berechnen das Modell (`m_within`),s. @tbl-d2-params:
 
 ```{r}
 #| results: hide
@@ -597,6 +599,8 @@ parameters(m_within)
 
 ```{r}
 #| echo: false
+#| label: tbl-d2-params
+#| tbl-cap: Modellparameter von m_within
 parameters(m_within) %>% 
   print_md()
 ```
@@ -721,7 +725,7 @@ Aber wir müssen inferenzstatistisch prüfen, wie groß der Einfluss ist.
 ### Inferenzanalyse
 
 Berechnen wir `m_within2`, das nicht nur den Intercept prüft (wie `m_within1`), 
-sondern auch zusätzlich den Effekt der Reihenfolge (`g`).
+sondern auch zusätzlich den Effekt der Reihenfolge (`g`), vgl. @tbl-m_within2-params.
 
 ```{r m-within2}
 m_within2 <- stan_glm(d ~ g, data = d_within, refresh = 0)
@@ -729,6 +733,8 @@ m_within2 <- stan_glm(d ~ g, data = d_within, refresh = 0)
 
 ```{r}
 #| echo: false
+#| label: tbl-m_within2-params
+#| tbl-cap: Modellparameter von m_within2
 parameters(m_within2) %>% 
   print_md()
 ```
