@@ -444,7 +444,7 @@ div.csl-indent {
 <span class="header-section-number">12.6.1.2</span> ROPE</h4>
 <p>Kurz gesagt wird beim ROPE geprüft, welcher Anteil des Posteriori-Intervalls zu einem Bereich “vernachlässigbar kleiner” Parameterwerte bewegt. Die folgende Abbildung illustriert ein Rope für die Forschungsfrage “Wie stark ist der Effekt der Zylinderzahl auf den Spritverbrauch?”; genauer gesagt ist die Posteriori-Verteilung für den (Regressions-)Effekt, <span class="math inline">\(\beta\)</span>, des Parameters <code>cyl</code> gezeigt. Wie man sieht, ist die Posteriori-Verteilung (glockenförmige Verteilung) komplett außerhalb des Bereichs “sehr kleiner” Werte (ROPE; blaues Rechteck rechts). Wir resümieren: “Es ist auszuschließen, dass der Effekt der Variable Zylinder auf den Spritverbrauch praktisch Null (sehr klein) ist”.</p>
 <p>Wenn man die Null bzw. den Nullbereich (ROPE) eines Parameters ausschließt, nennt man das Ergebnis bzw. den Effekt auch “signifikant” (leider ein häufig missbrauchter und missverstandener Begriff). Unser Effekt in diesem Beispiel ist also signifikant (nach dieser Definition). Ist ein Effekt signifikant, so heißt das synonym, dass die Nullhypothese ausgeschlossen ist (falsifiziert), natürlich immer auf Basis des vorliegenden Modells bzw. der vorliegenden Daten.</p>
-<div class="cell" data-hash="100-Statistiken-berichten_cache/html/unnamed-chunk-3_6657ea7c1bb2ea02bad19c7ae69442c5">
+<div class="cell" data-hash="100-Statistiken-berichten_cache/html/unnamed-chunk-3_60ee255b8eb512eda83691f5c92cbea7">
 <div class="cell-output-display">
 <p><img src="100-Statistiken-berichten_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
 </div>
@@ -2110,10 +2110,10 @@ div.csl-indent {
 </section><section id="umsetzung-in-r" class="level4" data-number="12.7.3.2"><h4 data-number="12.7.3.2" class="anchored" data-anchor-id="umsetzung-in-r">
 <span class="header-section-number">12.7.3.2</span> Umsetzung in R</h4>
 <p>Sie können eine Posteriori-Verteilung z.B. für ihr Modell berechnen:</p>
-<div class="cell" data-hash="100-Statistiken-berichten_cache/html/unnamed-chunk-11_8d887e2a0e2398d950068d0aeeea8fd6">
+<div class="cell" data-hash="100-Statistiken-berichten_cache/html/unnamed-chunk-11_dfe50498ddf785fa7839285b0cc9b876">
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://mc-stan.org/rstanarm/">rstanarm</a></span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">m1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://mc-stan.org/rstanarm/reference/stan_glm.html">stan_glm</a></span><span class="op">(</span><span class="va">mpg</span> <span class="op">~</span> <span class="va">am</span>, data <span class="op">=</span> <span class="va">mtcars</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="va">m1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://mc-stan.org/rstanarm/reference/stan_glm.html">stan_glm</a></span><span class="op">(</span><span class="va">mpg</span> <span class="op">~</span> <span class="va">am</span>, data <span class="op">=</span> <span class="va">mtcars</span>, seed <span class="op">=</span> <span class="fl">42</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Hier sind die Ergebnisse; noch nicht ganz poliert für einen APA-Bericht, s. <a href="#tbl-m1-params">Tabelle&nbsp;<span>12.5</span></a>.</p>
 <div class="cell" data-hash="100-Statistiken-berichten_cache/html/tbl-m1-params_dabc9b2fd4801e87efa7647cda5f08ac">
@@ -3375,7 +3375,13 @@ div.csl-indent {
 <li>Reichen Sie die Messinstrumente und Stimuli ein (sofern nicht öffentlich einsehbar).</li>
 <li>Explizieren Sie Ihr Vorgehen prägnant.</li>
 <li>Erläutern Sie Ihre theoretischen Argumente nachvollziehbar und unter Bezug auf die Literatur.</li>
+<li>Fixieren Sie die Zufallszahlen in Analysen, die mit Zufallszahlen arbeiten (z.B. <code>stan_glm</code>).</li>
 </ul>
+<p>Die Zufallszahlen in <code>stan_glm</code> können Sie z.B. so fixieren:</p>
+<div class="cell" data-hash="100-Statistiken-berichten_cache/html/unnamed-chunk-27_ab853ce637cb24409e2856ea7177129f">
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">m1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://mc-stan.org/rstanarm/reference/stan_glm.html">stan_glm</a></span><span class="op">(</span><span class="va">av</span> <span class="op">~</span> <span class="va">uv</span>, data <span class="op">=</span> <span class="va">meine_daten</span>, seed <span class="op">=</span> <span class="fl">42</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Die genaue Wert bei <code>seed</code> ist nicht entscheidend; aber ein <em>bestimmter</em> Seed-Wert wird immer die gleichen Zufallszahlen zielen und damit immer die gleichen Parameterwerte im Modell nach sich ziehen.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="list" style="display: none">

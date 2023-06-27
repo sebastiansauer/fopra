@@ -11,29 +11,6 @@ Die Prüfungsleistung besteht aus:
 </br>
 
 
-```{r download-hinweise}
-#| echo: false
-#| cache: false
-
-
-# Hinweise-Pruefungsvorbereitung.qmd
-download.file(url = "https://raw.githubusercontent.com/sebastiansauer/Lehre/main/Hinweise/Hinweise-Pruefung-Seminararbeit.qmd",
-              destfile = "children/Hinweise-Pruefung-Seminararbeit.qmd",
-              quiet = TRUE)
-
-
-# Hiqnweise Prüfung allgemein
-download.file(url = "https://raw.githubusercontent.com/sebastiansauer/Lehre/main/Hinweise/Hinweise-Pruefung-allgemein.qmd",
-              destfile = "children/Hinweise-Pruefung-allgemein.qmd",
-              quiet = TRUE)
-
-
-# Hinweise-Pruefung-Gruppenarbeit.qmd
-download.file(url = "https://raw.githubusercontent.com/sebastiansauer/Lehre/main/Hinweise/Hinweise-Pruefung-Gruppenarbeit.qmd",
-              destfile = "children/Hinweise-Pruefung-Gruppenarbeit.qmd",
-              quiet = TRUE)
-```
-
 
 ## Allgemeine Prüfungshinweise
 
@@ -55,7 +32,9 @@ download.file(url = "https://raw.githubusercontent.com/sebastiansauer/Lehre/main
 
 Verwenden Sie Textgeneratoren wie Chat-GPT für den gemeinsam verfassten Einleitungsteil (Einführung). 
 Kennzeichnen Sie die Passagen aus dem Textgenerator wie eine normale Quellenangabe (Internetquelle). 
-    Diskutieren Sie die Ergebnisse des Textgenerators und geben Sie die verwendeten Prompts an (als Fußnote oder im Anhang).
+    Diskutieren Sie die Ergebnisse des Textgenerators und geben Sie die verwendeten Prompts an (im Text wenn es ein einzelner Prompt ist oder im Anhang, wenn es mehrere Prompts sind).
+
+
 Für die übrigen Teile der Arbeit darf kein Textgenerator verwendet werden.
 
 

@@ -22,20 +22,33 @@ download.file(url = "https://raw.githubusercontent.com/sebastiansauer/Lehre/main
 download.file(url = "https://raw.githubusercontent.com/sebastiansauer/Lehre/main/Hinweise/Hinweise-Didaktik.qmd",
               destfile = "children/Hinweise-Didaktik.qmd",
               quiet = TRUE)
-
-# 
-# # Hinweise-Pruefungsvorbereitung.qmd
-# download.file(url = "https://raw.githubusercontent.com/sebastiansauer/Lehre/main/Hinweise/Hinweise-Pruefungsvorbereitung.qmd",
-#               destfile = "children/Hinweise-Pruefungsvorbereitung.qmd",
-#               quiet = TRUE)
-# 
-# # Hinweise-Pruefung-Open-Book-Child.qmd
-# download.file(url = "https://raw.githubusercontent.com/sebastiansauer/Lehre/main/Hinweise/Hinweise-Pruefung-Open-Book-Child.qmd",
-#               destfile = "children/Hinweise-Pruefung-Open-Book-Child.qmd",
-#               quiet = TRUE)
+  
 ```
 
 
+
+```{r download-hinweise-pruefung}
+#| echo: false
+#| cache: false
+
+
+# Hinweise-Pruefung-Seminararbeit.qmd
+download.file(url = "https://raw.githubusercontent.com/sebastiansauer/Lehre/main/Hinweise/Hinweise-Pruefung-Seminararbeit.qmd",
+              destfile = "children/Hinweise-Pruefung-Seminararbeit.qmd",
+              quiet = TRUE)
+
+
+# Hiqnweise Prüfung allgemein
+download.file(url = "https://raw.githubusercontent.com/sebastiansauer/Lehre/main/Hinweise/Hinweise-Pruefung-allgemein.qmd",
+              destfile = "children/Hinweise-Pruefung-allgemein.qmd",
+              quiet = TRUE)
+
+
+# Hinweise-Pruefung-Gruppenarbeit.qmd
+download.file(url = "https://raw.githubusercontent.com/sebastiansauer/Lehre/main/Hinweise/Hinweise-Pruefung-Gruppenarbeit.qmd",
+              destfile = "children/Hinweise-Pruefung-Gruppenarbeit.qmd",
+              quiet = TRUE)
+```
 
 
 

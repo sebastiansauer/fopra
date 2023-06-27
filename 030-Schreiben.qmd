@@ -272,8 +272,8 @@ Wie man in @fig-glied-link sieht (links), sind die Kapitel (und offenbar Unterka
 
 ### Einleitung
 
-Die Einleitung stellt die Forschungsfrage vor und erläutert ihre Relevanz. Sonst  passiert in der Einleiutng nichts, s. @fig-einleitung. 
-Ausnahme: Es kann ein *Hintergrund* zur Forschungsfrage angefüht werden oder anders zur Forschungsfrage *hingeleitet* werden z. B. durch einen aktuellen Bezug oder persönliches Interesse. 
+Die Einleitung stellt die Forschungsfrage vor und erläutert ihre Relevanz. Sonst  passiert in der Einleitung nichts, s. @fig-einleitung. 
+Ausnahme: Es kann ein *Hintergrund* zur Forschungsfrage angeführt werden oder anders zur Forschungsfrage *hingeleitet* werden z. B. durch einen aktuellen Bezug oder persönliches Interesse. 
 Spielt Letzteres eine Rolle, so ist es die einzige Stelle in der Arbeit, in der ein persönlicher Bezug auftaucht.
 Die Forschungsfrage darf noch etwas vage und nicht wohldefiniert sein. Fachbegriffe etc. werden ja erst im Theorieteil eingeführt.
 
@@ -695,7 +695,9 @@ Wichtig ist, dass Sie dann konsequent bei einer gewählten Form bleiben.
 ## Formatierung
 
 
-### Richtlinien
+### Paginierte Formate
+
+#### Richtlinien 
 
 Solange Sie keine anders lautenden Vorgaben von Ihrer Betreuungsperson haben, 
 können Sie sich an diesen Richtlinien orientieren.
@@ -716,7 +718,19 @@ Gestalten Sie Ihre Seiten doppelseitig (d. h. linke vs. rechte Seite), auch im
 11. Nummerierung: Verwenden Sie nur arabische („normale“) Ziffern für die Seitenzahlen (auch bei Abstract etc.).
 12. Seitenränder: Da eine gute Lesbarkeit bei nicht mehr als ca. 65 Zeichen liegt, können Sie Ihre Seitenränder entsprechend einstellen.
 
-### Seitenränder und Satzspiegel
+#### Seitenränder und Satzspiegel
+
+Seitenränder, Satzspiegel und andere typografische Elemente sind zumeist nur für paginierte Dokumenten relevant,
+Dokumente also, die auf einem Blatt Papier gedruckt werden soll.
+Typische paginierte Dokumenttypen sind Word- oder PDF-Dokumente.
+Elektronische Dokumente sind dagegen in aller Regel nicht paginiert,
+also nicht auf physikalische (Papier-)Blätter eines festen Formats zugeschnitten.
+Das typische elektronische Format für Text sind Webseiten (HTML-Dokumente).
+Will man einen Text nicht primär in Papierform lesen, so bieten sich elektronische Dokumente an,
+da diese komfortabler auf Bildschirmen zu lesen sind.
+Z.B. kann man die Schriftgröße auf die Größe des Displays einstellen.
+Das ist praktisch, da Displaygrößen enorm schwanken.
+Mit paginierten Dokumenten kann man das Layout hingegen nicht auf ein Display anpassen.^[Es gibt ein paar Versuche, wie Adobes "Liquid Mode", paginierte Formate auf nicht-paginierte umzuwandeln.]
 
 :::{#def-typografie}
 ### Typografie
@@ -769,7 +783,7 @@ d <- tribble(
 kable(d)
 ```
 
-
+#### Die 10 Gebote der Textformatierung
 
 Die zehn Gebote der Textformatierung:
 
@@ -787,6 +801,12 @@ Die zehn Gebote der Textformatierung:
 
 [Hier](https://www.slideshare.net/zeichenschatz/11-tdliche-typosnden) findet sich mehr zum Thema Typographie.
 
+
+### Nicht-paginierte Formate
+
+Sofern Sie in einem nicht-paginierten Format schreiben,
+nutzen Sie die von der Lehrkraft bereitgestellte Vorlage.
+Alternative können Sie der Lehkraft Ihre eigene Vorlage vorstellen.
 
 
 ### Urheberrecht

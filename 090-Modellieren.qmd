@@ -200,7 +200,7 @@ Die Ergebnisse sind in @tbl-m1-params zu sehen.
 ```{r}
 #| label: tbl-m1-params
 #| tbl-cap: Parameter des Modells m_bringtnixtin
-m_bringtnixtin <- stan_glm(y2 ~ g, data = d_bringtnixtin, refresh = 0)
+m_bringtnixtin <- stan_glm(y2 ~ g, data = d_bringtnixtin, refresh = 0, seed = 42)
 parameters(m_bringtnixtin)
 ```
 
@@ -419,7 +419,7 @@ Wir modellieren (in `m_bringtnixtin2`) jetzt die Veränderung `d = y2 - y1` als 
 
 ```{r}
 #| results: hide
-m_bringtnixtin2 <- stan_glm(d ~ g, data = d_bringtnixtin, refresh = 0)
+m_bringtnixtin2 <- stan_glm(d ~ g, data = d_bringtnixtin, refresh = 0, seed = 42)
 parameters(m_bringtnixtin2)
 ```
 
@@ -610,7 +610,7 @@ Wir berechnen das Modell (`m_within`),s. @tbl-d2-params:
 
 ```{r}
 #| results: hide
-m_within <- stan_glm(d ~ 1, data = d_within, refresh = 0)
+m_within <- stan_glm(d ~ 1, data = d_within, refresh = 0, seed = 42)
 parameters(m_within)
 ```
 
@@ -755,7 +755,7 @@ Berechnen wir `m_within2`, das nicht nur den Intercept prüft (wie `m_within1`),
 sondern auch zusätzlich den Effekt der Reihenfolge (`g`), vgl. @tbl-m_within2-params.
 
 ```{r m-within2}
-m_within2 <- stan_glm(d ~ g, data = d_within, refresh = 0)
+m_within2 <- stan_glm(d ~ g, data = d_within, refresh = 0, seed = 42)
 ```
 
 ```{r}

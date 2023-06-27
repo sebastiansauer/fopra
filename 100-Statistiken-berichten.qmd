@@ -377,10 +377,12 @@ natürlich immer auf Basis des vorliegenden Modells bzw. der vorliegenden Daten.
 ```{r echo = FALSE}
 library(easystats)
 library(rstanarm)
-m1 <- stan_glm(mpg ~ cyl, data = mtcars, refresh = 0)
+m1 <- stan_glm(mpg ~ cyl, data = mtcars, refresh = 0, seed = 42)
 
 plot(rope(m1))
 ```
+
+
 
 
 
@@ -567,7 +569,7 @@ Sie können eine Posteriori-Verteilung z.B. für ihr Modell berechnen:
 ```{r results='hide'}
 library(rstanarm)
 
-m1 <- stan_glm(mpg ~ am, data = mtcars)
+m1 <- stan_glm(mpg ~ am, data = mtcars, seed = 42)
 ```
 
 Hier sind die Ergebnisse; noch nicht ganz poliert für einen APA-Bericht, s. @tbl-m1-params.
@@ -862,7 +864,18 @@ Also machen Sie ihre Arbeit nachprüfbar und legen Sie die zentralen Schritte of
 - Reichen Sie die Messinstrumente und Stimuli ein (sofern nicht öffentlich einsehbar).
 - Explizieren Sie Ihr Vorgehen prägnant.
 - Erläutern Sie Ihre theoretischen Argumente nachvollziehbar und unter Bezug auf die Literatur.
+- Fixieren Sie die Zufallszahlen in Analysen, die mit Zufallszahlen arbeiten (z.B. `stan_glm`).
 
+Die Zufallszahlen in `stan_glm` können Sie z.B. so fixieren:
+
+```{r}
+#| eval: false
+m1 <- stan_glm(av ~ uv, data = meine_daten, seed = 42)
+```
+
+
+Die genaue Wert bei `seed` ist nicht entscheidend;
+aber ein *bestimmter*  Seed-Wert wird immer die gleichen Zufallszahlen zielen und damit immer die gleichen Parameterwerte im Modell nach sich ziehen.
 
 
 
