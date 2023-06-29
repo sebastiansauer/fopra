@@ -36,7 +36,7 @@ library(rstanarm)
 
 
 
-## Warum das Berichten wichtig ist
+## Warum das Berichten (Ihrer Analyse) wichtig ist
 
 
 Statistische Analysen können komplex und schwierig zu verstehen sein.^[Das war Ihnen noch nicht aufgefallen? Ach so.]
@@ -47,6 +47,11 @@ dass die Analyse nicht nachvollziehbar ist.
 Am schönsten ist dieses Problem im [Cartoon mit den zwei Wissenschaftlern von einer Tafel (von Sidney Harris)](http://www.sciencecartoonsplus.com/pages/gallery.php) dargestellt.
 
 
+:::{.callout-important}
+Stellen Sie sicher, dass Ihre Analyse nachvollziehbar ist.
+Andere Personen sollten Ihre Analyse auch ausführen können.
+Daher ist es wichtig, dass Sie Ihre Analyse zu Ihrer Studie einreichen (außerdem auch die Daten und Ihr Data-Dictionary).$\square$
+:::
 
 ## Prinzipien der Berichtlegung (von Bayes-Statistik)
 
@@ -167,9 +172,23 @@ z.B. so, s. @fig-dagmodell1.
 
 
 ```{r out.width = "100%", fig.asp = .5}
-#| label: fig-dagmodell1
+  #| label: fig-dagmodell1
 #| fig-cap: Beispielhafter DAG
 library(dagitty)
+
+mein_dag <- 'dag {
+A [pos="-2.200,-1.520"]
+B [pos="1.400,-1.460"]
+D [outcome,pos="1.400,1.621"]
+E [exposure,pos="-2.200,1.597"]
+Z [pos="-0.300,-0.082"]
+A -> E
+A -> Z [pos="-0.791,-1.045"]
+B -> D
+B -> Z [pos="0.680,-0.496"]
+E -> D
+}'
+
 
 mein_modell <- "dag{
 lern -> erfolg
@@ -349,7 +368,7 @@ Die sollten sie anführen.
 
 2. Erklären, was eine Bayes-Analyse ist. (Man bekommt Wahrscheinlichkeiten für Hypothesen, was man beim Frequentismus nicht bekommt.)
 
-3. Führen Sie an, ob Sie an einer Parameterschätzung oder einer Hypothesentestung interessiert sind. Beides ist ok.
+3. Führen Sie an, ob Sie an einer Parameterschätzung oder einer Hypothesentestung interessiert sind. Die Parameterschätzung ist oft zu bevorzugen, da informationsreicher.
 
 Bayes-Statistiken sollten Sie im kurz erläutern,
 da sie vielen Lesis nicht so gut vertraut sein wird.
@@ -370,7 +389,9 @@ Wir resümieren: "Es ist auszuschließen, dass der Effekt der Variable Zylinder 
 Wenn man die Null bzw. den Nullbereich (ROPE) eines Parameters ausschließt,
 nennt man das Ergebnis bzw. den Effekt auch "signifikant" (leider ein häufig missbrauchter und missverstandener Begriff).
 Unser Effekt in diesem Beispiel ist also signifikant (nach dieser Definition).
-Ist ein Effekt signifikant, so heißt das synonym, dass die Nullhypothese ausgeschlossen ist (falsifiziert),
+Besser ist es aber, wenn Sie den Begriff vermeiden,
+und stattdessen davon sprechen, dass Sie einen Effekt gefunden haben (oder nicht oder dass eine unklare Ergebnislage vorliegt).
+Haben Sie einen Effekt gefunden, so heißt das synonym, dass die Nullhypothese ausgeschlossen ist (falsifiziert ist),
 natürlich immer auf Basis des vorliegenden Modells bzw. der vorliegenden Daten.
 
 
@@ -489,6 +510,7 @@ Diagramme, die Sie mit `ggplot` erstellt haben, können Sie z.B. mit dem Befehl 
 
 ### Inferenzstatistik
 
+Es empfiehlt sich, die Modellgleichung inkl. Prior-Spezifiaktion aufzuführen.
 
 #### Posteriori-Verteilung
 
@@ -778,11 +800,11 @@ um nur einige wichtige zu nennen.
 Der Geist der Wissenschaft heißt *Transparenz.*
 Also machen Sie ihre Arbeit nachprüfbar und legen Sie die zentralen Schritte offen:
 
-- Reichen Sie die Daten ein.
-- Reichen Sie die Syntax ein.
-- Reichen Sie die Messinstrumente und Stimuli ein (sofern nicht öffentlich einsehbar).
-- Explizieren Sie Ihr Vorgehen prägnant.
-- Erläutern Sie Ihre theoretischen Argumente nachvollziehbar und unter Bezug auf die Literatur.
+- Reichen Sie die *Daten* ein; legen Sie ein *Data-Dictionary* (Codebook) bei.
+- Reichen Sie die *Syntax* ein.
+- Reichen Sie die *Messinstrumente* und *Stimuli* ein (sofern nicht öffentlich einsehbar).
+- Explizieren Sie Ihr Vorgehen *prägnant.*
+- Erläutern Sie Ihre theoretischen *Argumente* nachvollziehbar und unter Bezug auf die Literatur.
 
 
 
