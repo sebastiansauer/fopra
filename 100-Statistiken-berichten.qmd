@@ -1,4 +1,4 @@
-# Auswerten: Berichten von Statistiken
+# Auswerten: Berichten von Statistiken {#sec-reportstats}
 
 
 
@@ -157,7 +157,7 @@ weswegen es eigentlich keinen Sinn macht, sie zu untersuchen.
 Aber dafür ist das Schwarz-Weiß-Denken schön einfach.
 
 Parameterschätzung fragt nicht *ob*, sondern *wieviel*. 
-Nicht viel komplizierter, aber viel nuancierter. Eigentlich besser.
+Nicht viel komplizierter, aber viel nuancierter; (eigentlich) besser.
 Außerdem enthält das Parameterschätzen auch das Hypothesentesten:
 Ist die Null im Schätz-Intervall nicht enthalten,
 so kann man die Null-Hypothese ausschließen.
@@ -398,10 +398,12 @@ natürlich immer auf Basis des vorliegenden Modells bzw. der vorliegenden Daten.
 ```{r echo = FALSE}
 library(easystats)
 library(rstanarm)
-m1 <- stan_glm(mpg ~ cyl, data = mtcars, refresh = 0)
+m1 <- stan_glm(mpg ~ cyl, data = mtcars, refresh = 0, seed = 42)
 
 plot(rope(m1))
 ```
+
+
 
 
 
@@ -423,24 +425,38 @@ ein dazu passendes Streuungsmaß berichten (z.B. SD) berichten.
 Evtl. kann man ein Maß zur Präzision des Mittelwerts angeben (SE).
 Bei schiefen Verteilungen greift man meist auf robuste Kennwerte zurück;
 bei normalverteilten Verteilungen ist Mittelwert und SD die Statistik der Wahl.
+Die Stichprobengröße sollte klar sein; 
+liegen fehlende Werte vor, so sollte pro Kennzahl jeweils die effektive Stichprobengröße berichtet sein.
+Ansonsten reicht es, die Stichprobengröße an einer Stelle (im Text) anzuführen.
 
+
+Gängige statistische Symbole sollen nicht definiert werden, z.B. *M*, *SD*, *F*, *t*, *df*, *N*, *n*, *OR*.  Andere statistischen Abkürzungen, die weniger gebräuchlich sind,
+sollten definiert bzw. auf die Definition verwiesen werden, z.B. *pd*, *ROPE*.
 
 
 *Formulierungsvorschlag*
 
 >   Der mittlere Achtsamkeits-Wert lag in der Stichprobe bei *M* = 12.23 (*SD* = 1.23).
 
+>   Die Reaktionszeit in der Experimentalbedingung war höher als in der Kontrollbedingung (Experimentalbedingung: *M* = 2.7, *SD* = 0.3; Kontrollbedingung: *M* = 0.1, *SD* = 0.4).
+
+>   Es fand sich eine starke Korrelation zwischen Achtsamkeit und Lebenszufriedenheit, r(134) = .42, 95% CI [.32, .52].
+
 Hat man eine größere Zahl an Statistiken,
 so bietet es sich an, die Ergebnisse nicht im Fließtext, sondern in einer Tabelle zu berichten.
+Berichtet man Ergebnisse in einer Tabelle, so doppelt man sie nicht im Text.
+
 
 Eine nützliche Ergänzung ist es,
 zusätzlich zu den univariaten Statistiken noch Zusammenhangskoeffizienten (Korrelationen) zu berichten.
 
 #### Umsetzung mit R
 
-Mit gängigen R-Methoden kann man sich deskriptive Statistiken ausgeben lassen:
+Mit gängigen R-Methoden kann man sich deskriptive Statistiken ausgeben lassen, s. @tbl-desk1.
 
 ```{r}
+#| label: tbl-desk1
+#| tbl-cap: Einfache Tabelle mit deskriptiven Statistiken
 mtcars %>% 
   summarise(mpg_avg = mean(mpg),
             mpg_sd = sd(mpg),
@@ -448,24 +464,31 @@ mtcars %>%
 ```
 
 
-Oder aber man nutzt "Statistik-Fast-Food" und lässt sich einen Haufen Zahlen auf einmal ausgeben.
-Die R-Pakete `r_statix`, `skimr` oder `easystats` helfen dabei.
+In dieser Tabelle wurden anstelle von "sprechenden" Variablennamen Abkürzungen verwendet.
+Das ist, wenn Sie einen Bericht schreiben, nicht sinnvoll.
+In einem Bericht sollten besser verständliche Variablennamen stehen (oder zur Not die Abkürzungen erklärt sein).
+
+Alternativ zu selbsterstellten Tabellen kann "Statistik-Fast-Food" konsumieren und lässt sich einen Haufen Zahlen auf einmal ausgeben.
+ R-Pakete wie `r_statix`, `skimr` oder `easystats` helfen dabei, s. als Beispiel @tbl-desk2.
 
 ```{r}
+#| label: tbl-desk2
+#| tbl-cap: Einfache Tabelle mit describe_distribution aus easystats
 library(easystats)
 
 describe_distribution(mtcars)
 ```
 
 
-Tabellen mit `flextable()` oder `gt()` kann man sich eine schicke Tabelle (im HTML-Format) ausgeben lassen,
-die man dann per Copy-Paste in Word, d.h. den eigene Forschungsbericht, übernehmen kann:
+Tabellen mit `flextable()`, [`gtsummary`](https://education.rstudio.com/blog/2020/07/gtsummary/) oder `gt()` kann man sich eine schicke Tabelle (im HTML-Format) ausgeben lassen,
+die man dann per Copy-Paste in Word, d.h. den eigene Forschungsbericht, übernehmen kann.
+s. @tbl-gt1.
 
 
 ```{r}
+#| label: tbl-gt1
+#| tbl-cap: Deskriptive Statistiken mit gt
 library(gt)  # gt wie "grammer of tables"
-library(flextable)
-
 
 meine_tab <- 
   describe_distribution(mtcars) %>% 
@@ -475,6 +498,21 @@ meine_tab <-
 meine_tab
 ```
 
+Aus APA-Sicht würde vermutlich MW und SD genüge tun (sofern man von normalverteilten Variablen) ausgeht.
+Allerdings schadet es auch nicht, zusätzliche Kennwerte anzugeben.
+Verzichten sollte man aber vermutlih - in diesem Fall - auf die Spalte `n_Missing`,
+da die Spalte keine Information birgt.
+
+So sieht eine Tabelle mit `gtsummary` aus, s. @tbl-gtsum1.
+
+```{r}
+#| label: tbl-gtsum1
+#| tbl-cap: Deskriptive Statistiken mit gtsummary
+library(gtsummary)
+mtcars %>% 
+  select(mpg, cyl) %>% 
+  tbl_summary()
+```
 
 
 
@@ -508,6 +546,21 @@ Diagramme, die Sie mit `ggplot` erstellt haben, können Sie z.B. mit dem Befehl 
 
 
 
+Interessant könnte für Sie auch das Paket `qwraps2` sein, 
+das u.a. einen Formulierungsvorschlag erstellt,
+wie man Statistiken im Fließtext anführt.
+Betrachten wir ein Beispiel mit `mtcars`.
+Sagen wir, wir möchten den mittleren Spritverbrauch berichten.
+
+```{r}
+library(qwraps2)
+
+mean_sd(mtcars$mpg)
+```
+
+Das Zeichen `$\\pm$` steht für "Plus-Minus" ± (im Formelmodus).
+
+
 ### Inferenzstatistik
 
 Es empfiehlt sich, die Modellgleichung inkl. Prior-Spezifiaktion aufzuführen.
@@ -538,12 +591,14 @@ Sie können eine Posteriori-Verteilung z.B. für ihr Modell berechnen:
 ```{r results='hide'}
 library(rstanarm)
 
-m1 <- stan_glm(mpg ~ am, data = mtcars)
+m1 <- stan_glm(mpg ~ am, data = mtcars, seed = 42)
 ```
 
-
+Hier sind die Ergebnisse; noch nicht ganz poliert für einen APA-Bericht, s. @tbl-m1-params.
 
 ```{r}
+#| label: tbl-m1-params
+#| tbl-cap: Parameter für das Modell m1
 parameters(m1, prob = .95)
 ```
 
@@ -551,30 +606,50 @@ parameters(m1, prob = .95)
 Wir bekommen ein 95%-Perzentilintervall (PI, kein HDI, ist aber auch ok, allerdings ist das HDI einen Tick besser).
 Es erlaubt uns zu sagen, dass der Unterschied im Spritverbrauch zwischen 3.6 und 11 Meilen (pro Gallone Sprit) liegt,
 laut dem Modell.
-Der Schalter `prob` erlaubt, andere CI-Größen, z.B. 97% zu wählen.
+Der Schalter `prob` erlaubt, andere CI-Breiten, z.B. 97% zu wählen.
 
-Ein HDI bekommen Sie so:
+Ein HDI bekommen Sie, wenn Sie bei `ci_method` den Wert `"hdi` wählen;
+oder wenn Sie gleich den Befehl `hdi(m1)` ausführen, s. @tbl-m1-params2.
 
 ```{r}
+#| label: tbl-m1-params2
+#| tbl-cap: Parameter für das Modell m1. Das Intervall ist ein HDI.
 parameters(m1, prob = .95, ci_method = "hdi")  # oder: hdi(m1)
 ```
 
-Die Tabelle können Sie natürlich auch gleich wieder aufhübschen, für Ihren Bericht:
+Die Tabelle können Sie natürlich auch gleich wieder aufhübschen, für Ihren Bericht, s. @tbl-m1-params3.
 
 ```{r}
+#| label: tbl-m1-params3
+#| tbl-cap: Parameter für das Modell m1. Das Intervall ist ein HDI.
 hdi(m1) %>% 
+  select(Parameter, CI_low, CI_high) %>% 
   gt() %>% 
   fmt_number(where(is.numeric), decimals = 2)
 ```
 
 
-Den Punktschätzer (`Meidan`) zum Unterschied für die Gruppen (Automatik vs. Schaltgetriebe) hat uns die Funktion `parameters()` auch geliefert. Der Unterschied zwischen den beiden Gruppen liegt laut Modell bei ca. 7.2 Meilen.
+Ein ähnliches Ergebnis erzielt man mit dem Paket `gtsummary`, s. @tbl-m1-params4.
+
+
+```{r}
+#| label: tbl-m1-params4
+#| tbl-cap: Parameter für das Modell m1.
+tbl_regression(m1)
+```
+
+
+Den Punktschätzer (`Median`) zum Unterschied für die Gruppen (Automatik vs. Schaltgetriebe) hat uns die Funktion `parameters()` auch geliefert. Der Unterschied zwischen den beiden Gruppen liegt laut Modell bei ca. 7.2 Meilen.
 
 Im Bericht könnte man z.B. schreiben:
 
 *Formulierungsvorschlag*
 
 >    Der Unterschied im Spritverbrauch zwischen den beiden Gruppen (Automatik vs. Schaltgetriebe) wurde auf 7.2 Meilen geschätzt, 95% PI [3.7, 11.0]. 
+
+
+
+
 
 Weiter macht es Sinn zu überlegen, ob Sie den Effekt für "klein" oder "groß" halten.
 Das ist eine subjektive Frage, die Sie am besten auf Basis theoretischer (nicht statistischer) Überlegungen
@@ -593,12 +668,12 @@ Das kann man z.B. so machen:
 parameters(m1) %>% plot(show_intercept = TRUE)
 ```
 
-Der Schalter `show_intercept` regelt, ob der Schätzwert für den Achsenabschnitt gezeigt werden soll oder nicht. 
+Der Schalter `show_intercept` regelt, ob der Schätzwert für den Achsenabschnitt gezeigt werden soll oder nicht.^[Hat man *nur* einen Intercept, so muss man den Schalter auf `TRUE` setzen, will man nicht mit einer Fehlermeldung abgestraft werden.]
 
 
 
 Möchte man verschiedenen Regressiongsgewichte vergleichen,
-bietet es u.U. an, diese vorab zu standardisieren mit der z-Transformation.
+bietet es an, diese vorab zu standardisieren mit der z-Transformation.
 
 
 Mehr zur Analyse mit `rstanarm` findet sich z.B. [hier](http://mc-stan.org/rstanarm/articles/rstanarm.html) oder bei @gelman_regression_2021.
@@ -608,20 +683,26 @@ Mehr zur Analyse mit `rstanarm` findet sich z.B. [hier](http://mc-stan.org/rstan
 wenn man möchte:
 
 ```{r}
+#| eval: false
 plot(hdi(m1))
 ```
 
 
 Sieht auch ganz schick aus; im Hintergrund wird `{easystats}` zum Plotten verwendet.
 Praktischerweise ist es ein ggplot-Diagramm, 
-man kann also mit bekannten Methoden nachpolieren, z.B.
+man kann also mit bekannten (ggplot-)Methoden nachpolieren, z.B s. @fig-m1-hdi.
 
 ```{r}
+#| label: fig-m1-hdi
+#| fig-cap: "Die Postverteilung als Berg visualisiert, nicht als Seil."
+
 plot(hdi(m1)) +
   labs(title ="Hier steht mein Titel",
        y = "",
+       y = "",
        x = "Parameterwert") +
-  theme_minimal()
+  theme_minimal() +
+  theme(axis.text.y = element_blank())  # keine Achsenlabels auf Y ("am" weg)
 ```
 
 
@@ -805,7 +886,18 @@ Also machen Sie ihre Arbeit nachprüfbar und legen Sie die zentralen Schritte of
 - Reichen Sie die *Messinstrumente* und *Stimuli* ein (sofern nicht öffentlich einsehbar).
 - Explizieren Sie Ihr Vorgehen *prägnant.*
 - Erläutern Sie Ihre theoretischen *Argumente* nachvollziehbar und unter Bezug auf die Literatur.
+- Fixieren Sie die *Zufallszahlen* in Analysen, die mit Zufallszahlen arbeiten (z.B. `stan_glm`).
 
+Die Zufallszahlen in `stan_glm` können Sie z.B. so fixieren:
+
+```{r}
+#| eval: false
+m1 <- stan_glm(av ~ uv, data = meine_daten, seed = 42)
+```
+
+
+Die genaue Wert bei `seed` ist nicht entscheidend;
+aber ein *bestimmter*  Seed-Wert wird immer die gleichen Zufallszahlen zielen und damit immer die gleichen Parameterwerte im Modell nach sich ziehen.
 
 
 

@@ -277,7 +277,7 @@ Um die Suppe abzuschmecken, reicht ein Löffelchen - eine kleine Stichprobe also
 | $\beta$      |  beta      |         b |      Regressionskoeffizent |
 | $\mu$        |  mü        |         m |                 Mittelwert |
 | $\sigma$     | sigma      |         s |             Standardabweichung       |
-| $\sigma^2$     | sigma      |         s |             Varianz       |
+| $\sigma^2$     | sigma-Quadrat      |         s |             Varianz       |
 | $\Sigma$     | Sigma      |         S | Summenzeichen   |
 | $\rho$       | rho        |         r | Korrelation (nach Pearson) |
 | $\sigma$     | sigma      |         s |             Streuung       |

@@ -513,14 +513,16 @@ Cronbachs Alpha ist ein gebräuchliches Maß der Reliabilität einer Skala,
 genauer der internen Konsistenz [@Buhner2011].
 Der Kennwert hat einen Wertebereich von 0 bis 1, wobei höhere Werte eine hörere Reliabilität anzeigen.
 Einfach ausgedrückt kann man den Kennwert als ein Maß der mittleren Korrelation der Items untereinander verstehen.
-Werte ab .7 werden mitunter als akzeptabel und ab .8 als gut eingeschätzt.$\square$
+Werte ab .7 werden mitunter als akzeptabel und ab .8 als gut eingeschätzt [@tavakol_making_2011].$\square$
 :::
 
-In der Regel macht es wenig Sinn, Cronbachs Alpha in der eigenen Stichprobe zu berechnen.
+In der Regel macht es *wenig* Sinn, Cronbachs Alpha in der eigenen Stichprobe zu berechnen.
 Der Grund liegt in der kleineren Stichprobe Ihrer Studie im Vergleich zur Validierungsstichprobe des Messintruments.
 Würde man diesen (oder jeden beliebigen anderen) Kennwert in einer kleineren anstelle einer größeren Stichprobe berechnen, so erhielte man einen ungenaueren ("verrauschten") Kennwert.
 
+Eine statistisch aussagekräftigere Variante zu Cronbachs alpha ($\alpha$) ist McDonals Omega ($\omega$) [@hayes_use_2020].
 
+In R bietet etwa das Paket [`psych`](https://rdrr.io/cran/psych/f/inst/doc/intro.pdf) Möglichkeiten, entsprechende Koeffizienten zu berechnen (mit dem Befehl `alpha`); s. [hier](https://sebastiansauer.github.io/umfragen-auswerten/itemanalyse.html).
 
 
 

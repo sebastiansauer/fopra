@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.269">
+<meta name="generator" content="quarto-1.3.247">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Forschungsprojekt - 11&nbsp; Auswerten: Modellieren</title>
 <style>
@@ -115,7 +115,7 @@ div.csl-indent {
 }</script><meta name="mermaid-theme" content="neutral">
 <script src="site_libs/quarto-diagram/mermaid.min.js"></script><script src="site_libs/quarto-diagram/mermaid-init.js"></script><link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
-<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><link rel="stylesheet" href="styles.css">
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><link rel="stylesheet" href="styles.css">
 </head>
 <body class="nav-sidebar floating">
 
@@ -378,7 +378,7 @@ div.csl-indent {
 <div class="cell" data-fig.asp="0.5" data-hash="090-Modellieren_cache/html/fig-bringtnixtin-dag_bdecbf26d2af20ce2c5557d6e41c7119">
 <div class="cell-output-display">
 <div id="fig-bringtnixtin-dag" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure"><p><img src="090-Modellieren_files/figure-html/fig-bringtnixtin-dag-1.png" class="quarto-discovered-preview-image img-fluid figure-img" style="width:100.0%"></p>
+<figure class="figure"><p><img src="090-Modellieren_files/figure-html/fig-bringtnixtin-dag-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
 <p></p><figcaption class="figure-caption">Abbildung&nbsp;11.2: DAG für der Bringtnixtin-Studie</figcaption><p></p>
 </figure>
 </div>
@@ -402,7 +402,7 @@ Hinweis
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">d_bringtnixtin_path</span> <span class="op">&lt;-</span> <span class="st">"https://raw.githubusercontent.com/sebastiansauer/fopra/main/data/d_bringtnixtin.csv"</span></span>
 <span><span class="va">d_bringtnixtin</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="va">d_bringtnixtin_path</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><a href="#dnldts51875" onclick="fetch('data:text/csv;base64,aWQsZyx5MSx5MixkCjEsMCwxLjM3MDk1ODQ0NzE0NjY2ODUsMS40MTIxNTgxNjcxODY3MTkyLDAuMDQxMTk5NzIwMDQwMDUwNjgKMiwwLC0wLjU2NDY5ODE3MTM5NjA4ODcsLTAuNjM2OTA5NjMxMTA1ODIyLC0wLjA3MjIxMTQ1OTcwOTczMzMKMywwLDAuMzYzMTI4NDExMzM3MzM5MiwwLjUxNDc2MTA1ODQ3NzI0MjYsMC4xNTE2MzI2NDcxMzk5MDM0Mwo0LDAsMC42MzI4NjI2MDQ5NjEwNDA0LDAuNDg3NTIxNjM5NTQ1NzI1MzYsLTAuMTQ1MzQwOTY1NDE1MzE1MDUKNSwwLDAuNDA0MjY4MzIzMTQwOTk5MDMsMC4xMzA2MTIxMTQyNTcxNDAxLC0wLjI3MzY1NjIwODg4Mzg1ODk0CjYsMCwtMC4xMDYxMjQ1MTYwOTE0ODQwMywtMC4wMTk1NjA5MTA5MTM3NDA1OTgsMC4wODY1NjM2MDUxNzc3NDM0Mwo3LDAsMS41MTE1MjE5OTc0Mzg5MzksMS4zNDkyNDMzNjIyMDE2MDQ3LC0wLjE2MjI3ODYzNTIzNzMzNDIKOCwwLC0wLjA5NDY1OTAzODQxMzA5NzU2LDAuMTk0MTYxMjEzOTMxMTUzMDEsMC4yODg4MjAyNTIzNDQyNTA1Nwo5LDAsMi4wMTg0MjM3MTM4NzcwNDIsMS45MzIxMzQ0NzMzNTQzNzI2LC0wLjA4NjI4OTI0MDUyMjY2OTE3NQoxMCwwLC0wLjA2MjcxNDA5OTA1MjQyMSwwLjA2ODQxNTQ3NzYyODAyMDM3LDAuMTMxMTI5NTc2NjgwNDQxMzcKMTEsMCwxLjMwNDg2OTY1NDIyMzQ4NTIsMS4zNjkyNTQ3MDcyNjQyNzQ1LDAuMDY0Mzg1MDUzMDQwNzg5MjMKMTIsMCwyLjI4NjY0NTM5MjcwMTEwNywyLjEyOTg3NzYwNDUyNTAzMiwtMC4xNTY3Njc3ODgxNzYwNzQ5NQoxMywwLC0xLjM4ODg2MDcwMTExMjMzOTMsLTEuMDczNzE1MTk3MTUzOTQzOCwwLjMxNTE0NTUwMzk1ODM5NTQ3CjE0LDAsLTAuMjc4Nzg4NzY2ODE3MzcxMzYsLTAuMTUwMjA4OTA1NjczOTA4MDcsMC4xMjg1Nzk4NjExNDM0NjMzCjE1LDAsLTAuMTMzMzIxMzM2MzkzNjU4MDQsLTAuMTE1MzY5MjA3MDczNzM2OSwwLjAxNzk1MjEyOTMxOTkyMTEzCjE2LDAsMC42MzU5NTAzOTgwNzAwNzQ0LDAuNjkxMjYwNTQ3NTI4MzY3LDAuMDU1MzEwMTQ5NDU4MjkyNgoxNywwLC0wLjI4NDI1MjkyMTQxNjA3MjQsLTAuMTQ4Mzk1MTU4MjA1MDE4MjIsMC4xMzU4NTc3NjMyMTEwNTQxNwoxOCwwLC0yLjY1NjQ1NTQyMDkwNDc3NTcsLTIuNjM4NDg4ODQzNTg4OTU5MywwLjAxNzk2NjU3NzMxNTgxNjQxMgoxOSwwLC0yLjQ0MDQ2NjkyODU3NTUxOTQsLTMuMDM5MDg0OTQ1MjA2MTA2LC0wLjU5ODYxODAxNjYzMDU4NjgKMjAsMCwxLjMyMDExMzM0NTczMDE5MjEsMS4zNzcwODk5MzY0MzYzMjQsMC4wNTY5NzY1OTA3MDYxMzE5MjQKMjEsMSwtMC4zMDY2Mzg1OTQwNzg0NzQ1NSwtMC43MTM0MTg4NTU5NjAwMDMsLTAuNDA2NzgwMjYxODgxNTI4NDQKMjIsMSwtMS43ODEzMDg0MzM5OCwtMi4wNzc1OTU2NTQzNDAyMTE0LC0wLjI5NjI4NzIyMDM2MDIxMTQKMjMsMSwtMC4xNzE5MTczNTU3NTk2MjEzNiwtMC4zODg4ODU5NDM2MTk4NTMzNSwtMC4yMTY5Njg1ODc4NjAyMzIKMjQsMSwxLjIxNDY3NDY5OTE3MjU5ODcsMS4xNjEyODg3MzEyOTc4MDEsLTAuMDUzMzg1OTY3ODc0Nzk3NjYKMjUsMSwxLjg5NTE5MzQ2MTI2NDk2NTIsMS40MTY0MDE3MTYwMzY3MzksLTAuNDc4NzkxNzQ1MjI4MjI2MgoyNiwxLC0wLjQzMDQ2OTEzMTYwNjE5OTY1LC0wLjUwMzI5MzkzODUzMDcwNDMsLTAuMDcyODI0ODA2OTI0NTA0NgoyNywxLC0wLjI1NzI2OTM4Mjc2ODkyOTYzLC0wLjUyMzQzMzA5MjE1MTg0ODEsLTAuMjY2MTYzNzA5MzgyOTE4NDUKMjgsMSwtMS43NjMxNjMwODUxOTQ3ODAyLC0xLjg4ODc5NTE5ODc4ODU4OTEsLTAuMTI1NjMyMTEzNTkzODA5CjI5LDEsMC40NjAwOTczNTQ4MzEyNzE0LDAuMzEwOTA5NzM1MTU2MDY3NCwtMC4xNDkxODc2MTk2NzUyMDQKMzAsMSwtMC42Mzk5OTQ4NzU5NjAxMTkyLC0wLjgyOTE1MjU3NjcyMDA4LC0wLjE4OTE1NzcwMDc1OTk2MDg2CjMxLDEsMC40NTU0NTAxMjMyNDEyMTkzNiwtMC4wODY1MDY5OTc4MDU2ODQ5NywtMC41NDE5NTcxMjEwNDY5MDQzCjMyLDEsMC43MDQ4MzczMzcyMjg4MTkxLDAuMzUzNDY2NzI2NTczMzQ0NSwtMC4zNTEzNzA2MTA2NTU0NzQ2NQozMywxLDEuMDM1MTAzNTIxOTY5OTIyMywwLjgyNjQ3MzgyMTAzNjQ5NzcsLTAuMjA4NjI5NzAwOTMzNDI0NgozNCwxLC0wLjYwODkyNjM3NTQwNzIxMTEsLTEuMTMyOTY0MzgwMjk1MDEzMSwtMC41MjQwMzgwMDQ4ODc4MDIxCjM1LDEsMC41MDQ5NTUxMjMyOTc5NzAzLDAuMDYzMDU2MDI3MDQ5ODY1NjgsLTAuNDQxODk5MDk2MjQ4MTA0NjQKMzYsMSwtMS43MTcwMDg2NzkwNzMzNDI1LC0xLjkzNDE0MjcxMjg3MDMzOTIsLTAuMjE3MTM0MDMzNzk2OTk2NwozNywxLC0wLjc4NDQ1OTAwODM3OTQ5NiwtMC45NjQxNTY1OTQxNDU5MTExNSwtMC4xNzk2OTc1ODU3NjY0MTUxNQozOCwxLC0wLjg1MDkwNzU5NDE3NjUxODMsLTEuMDkxNDg3NDA5ODAxODE4MSwtMC4yNDA1Nzk4MTU2MjUyOTk4NAozOSwxLC0yLjQxNDIwNzY0OTk0NjYzMiwtMi45MjQ2OTYyNDI3NjE5MDEsLTAuNTEwNDg4NTkyODE1MjY5NAo0MCwxLDAuMDM2MTIyNjA2ODkyMjU1NjMsLTAuNTE3MTY2OTA2MTcwNjQ4OSwtMC41NTMyODk1MTMwNjI5MDQ1Cg==').then(res => res.blob()).then(blob => {
+<p><a href="#dnldts39023" onclick="fetch('data:text/csv;base64,aWQsZyx5MSx5MixkCjEsMCwxLjM3MDk1ODQ0NzE0NjY2ODUsMS40MTIxNTgxNjcxODY3MTkyLDAuMDQxMTk5NzIwMDQwMDUwNjgKMiwwLC0wLjU2NDY5ODE3MTM5NjA4ODcsLTAuNjM2OTA5NjMxMTA1ODIyLC0wLjA3MjIxMTQ1OTcwOTczMzMKMywwLDAuMzYzMTI4NDExMzM3MzM5MiwwLjUxNDc2MTA1ODQ3NzI0MjYsMC4xNTE2MzI2NDcxMzk5MDM0Mwo0LDAsMC42MzI4NjI2MDQ5NjEwNDA0LDAuNDg3NTIxNjM5NTQ1NzI1MzYsLTAuMTQ1MzQwOTY1NDE1MzE1MDUKNSwwLDAuNDA0MjY4MzIzMTQwOTk5MDMsMC4xMzA2MTIxMTQyNTcxNDAxLC0wLjI3MzY1NjIwODg4Mzg1ODk0CjYsMCwtMC4xMDYxMjQ1MTYwOTE0ODQwMywtMC4wMTk1NjA5MTA5MTM3NDA1OTgsMC4wODY1NjM2MDUxNzc3NDM0Mwo3LDAsMS41MTE1MjE5OTc0Mzg5MzksMS4zNDkyNDMzNjIyMDE2MDQ3LC0wLjE2MjI3ODYzNTIzNzMzNDIKOCwwLC0wLjA5NDY1OTAzODQxMzA5NzU2LDAuMTk0MTYxMjEzOTMxMTUzMDEsMC4yODg4MjAyNTIzNDQyNTA1Nwo5LDAsMi4wMTg0MjM3MTM4NzcwNDIsMS45MzIxMzQ0NzMzNTQzNzI2LC0wLjA4NjI4OTI0MDUyMjY2OTE3NQoxMCwwLC0wLjA2MjcxNDA5OTA1MjQyMSwwLjA2ODQxNTQ3NzYyODAyMDM3LDAuMTMxMTI5NTc2NjgwNDQxMzcKMTEsMCwxLjMwNDg2OTY1NDIyMzQ4NTIsMS4zNjkyNTQ3MDcyNjQyNzQ1LDAuMDY0Mzg1MDUzMDQwNzg5MjMKMTIsMCwyLjI4NjY0NTM5MjcwMTEwNywyLjEyOTg3NzYwNDUyNTAzMiwtMC4xNTY3Njc3ODgxNzYwNzQ5NQoxMywwLC0xLjM4ODg2MDcwMTExMjMzOTMsLTEuMDczNzE1MTk3MTUzOTQzOCwwLjMxNTE0NTUwMzk1ODM5NTQ3CjE0LDAsLTAuMjc4Nzg4NzY2ODE3MzcxMzYsLTAuMTUwMjA4OTA1NjczOTA4MDcsMC4xMjg1Nzk4NjExNDM0NjMzCjE1LDAsLTAuMTMzMzIxMzM2MzkzNjU4MDQsLTAuMTE1MzY5MjA3MDczNzM2OSwwLjAxNzk1MjEyOTMxOTkyMTEzCjE2LDAsMC42MzU5NTAzOTgwNzAwNzQ0LDAuNjkxMjYwNTQ3NTI4MzY3LDAuMDU1MzEwMTQ5NDU4MjkyNgoxNywwLC0wLjI4NDI1MjkyMTQxNjA3MjQsLTAuMTQ4Mzk1MTU4MjA1MDE4MjIsMC4xMzU4NTc3NjMyMTEwNTQxNwoxOCwwLC0yLjY1NjQ1NTQyMDkwNDc3NTcsLTIuNjM4NDg4ODQzNTg4OTU5MywwLjAxNzk2NjU3NzMxNTgxNjQxMgoxOSwwLC0yLjQ0MDQ2NjkyODU3NTUxOTQsLTMuMDM5MDg0OTQ1MjA2MTA2LC0wLjU5ODYxODAxNjYzMDU4NjgKMjAsMCwxLjMyMDExMzM0NTczMDE5MjEsMS4zNzcwODk5MzY0MzYzMjQsMC4wNTY5NzY1OTA3MDYxMzE5MjQKMjEsMSwtMC4zMDY2Mzg1OTQwNzg0NzQ1NSwtMC43MTM0MTg4NTU5NjAwMDMsLTAuNDA2NzgwMjYxODgxNTI4NDQKMjIsMSwtMS43ODEzMDg0MzM5OCwtMi4wNzc1OTU2NTQzNDAyMTE0LC0wLjI5NjI4NzIyMDM2MDIxMTQKMjMsMSwtMC4xNzE5MTczNTU3NTk2MjEzNiwtMC4zODg4ODU5NDM2MTk4NTMzNSwtMC4yMTY5Njg1ODc4NjAyMzIKMjQsMSwxLjIxNDY3NDY5OTE3MjU5ODcsMS4xNjEyODg3MzEyOTc4MDEsLTAuMDUzMzg1OTY3ODc0Nzk3NjYKMjUsMSwxLjg5NTE5MzQ2MTI2NDk2NTIsMS40MTY0MDE3MTYwMzY3MzksLTAuNDc4NzkxNzQ1MjI4MjI2MgoyNiwxLC0wLjQzMDQ2OTEzMTYwNjE5OTY1LC0wLjUwMzI5MzkzODUzMDcwNDMsLTAuMDcyODI0ODA2OTI0NTA0NgoyNywxLC0wLjI1NzI2OTM4Mjc2ODkyOTYzLC0wLjUyMzQzMzA5MjE1MTg0ODEsLTAuMjY2MTYzNzA5MzgyOTE4NDUKMjgsMSwtMS43NjMxNjMwODUxOTQ3ODAyLC0xLjg4ODc5NTE5ODc4ODU4OTEsLTAuMTI1NjMyMTEzNTkzODA5CjI5LDEsMC40NjAwOTczNTQ4MzEyNzE0LDAuMzEwOTA5NzM1MTU2MDY3NCwtMC4xNDkxODc2MTk2NzUyMDQKMzAsMSwtMC42Mzk5OTQ4NzU5NjAxMTkyLC0wLjgyOTE1MjU3NjcyMDA4LC0wLjE4OTE1NzcwMDc1OTk2MDg2CjMxLDEsMC40NTU0NTAxMjMyNDEyMTkzNiwtMC4wODY1MDY5OTc4MDU2ODQ5NywtMC41NDE5NTcxMjEwNDY5MDQzCjMyLDEsMC43MDQ4MzczMzcyMjg4MTkxLDAuMzUzNDY2NzI2NTczMzQ0NSwtMC4zNTEzNzA2MTA2NTU0NzQ2NQozMywxLDEuMDM1MTAzNTIxOTY5OTIyMywwLjgyNjQ3MzgyMTAzNjQ5NzcsLTAuMjA4NjI5NzAwOTMzNDI0NgozNCwxLC0wLjYwODkyNjM3NTQwNzIxMTEsLTEuMTMyOTY0MzgwMjk1MDEzMSwtMC41MjQwMzgwMDQ4ODc4MDIxCjM1LDEsMC41MDQ5NTUxMjMyOTc5NzAzLDAuMDYzMDU2MDI3MDQ5ODY1NjgsLTAuNDQxODk5MDk2MjQ4MTA0NjQKMzYsMSwtMS43MTcwMDg2NzkwNzMzNDI1LC0xLjkzNDE0MjcxMjg3MDMzOTIsLTAuMjE3MTM0MDMzNzk2OTk2NwozNywxLC0wLjc4NDQ1OTAwODM3OTQ5NiwtMC45NjQxNTY1OTQxNDU5MTExNSwtMC4xNzk2OTc1ODU3NjY0MTUxNQozOCwxLC0wLjg1MDkwNzU5NDE3NjUxODMsLTEuMDkxNDg3NDA5ODAxODE4MSwtMC4yNDA1Nzk4MTU2MjUyOTk4NAozOSwxLC0yLjQxNDIwNzY0OTk0NjYzMiwtMi45MjQ2OTYyNDI3NjE5MDEsLTAuNTEwNDg4NTkyODE1MjY5NAo0MCwxLDAuMDM2MTIyNjA2ODkyMjU1NjMsLTAuNTE3MTY2OTA2MTcwNjQ4OSwtMC41NTMyODk1MTMwNjI5MDQ1Cg==').then(res => res.blob()).then(blob => {
       const downloadURL = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       document.body.appendChild(a);
@@ -410,7 +410,7 @@ Hinweis
       a.download = 'file.csv'; a.click();
       window.URL.revokeObjectURL(downloadURL);
       document.body.removeChild(a);
-        });"><button class="btn btn-default downloadthis  " id="dnldts51875"><i class="bi bi-download"></i> Download </button></a></p>
+        });"><button class="btn btn-default downloadthis  " id="dnldts39023"><i class="bi bi-download"></i> Download </button></a></p>
 <p>Die Autoren der Studie geben an, dass die Daten in z-Einheiten skaliert sind.</p>
 </section><section id="deskriptive-analyse" class="level3" data-number="11.2.2"><h3 data-number="11.2.2" class="anchored" data-anchor-id="deskriptive-analyse">
 <span class="header-section-number">11.2.2</span> Deskriptive Analyse</h3>
@@ -451,16 +451,16 @@ Abhängigkeit der Gruppe</p> </div>
 </div>
 </section><section id="modellierung" class="level3" data-number="11.2.3"><h3 data-number="11.2.3" class="anchored" data-anchor-id="modellierung">
 <span class="header-section-number">11.2.3</span> Modellierung</h3>
-<p>Wir berechnen ein lineares Modell mit der Modellformel <code>y2 ~ g</code>. Die Ergebnisse sind in <a href="#tbl-m1-params">Tabelle&nbsp;<span>11.2</span></a> zu sehen.</p>
-<div class="cell" data-hash="090-Modellieren_cache/html/tbl-m1-params_2b0cb4db8e6d3e2ab49d280e5040c725">
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">m_bringtnixtin</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://mc-stan.org/rstanarm/reference/stan_glm.html">stan_glm</a></span><span class="op">(</span><span class="va">y2</span> <span class="op">~</span> <span class="va">g</span>, data <span class="op">=</span> <span class="va">d_bringtnixtin</span>, refresh <span class="op">=</span> <span class="fl">0</span><span class="op">)</span></span>
+<p>Wir berechnen ein lineares Modell mit der Modellformel <code>y2 ~ g</code>. Die Ergebnisse sind in <a href="100-Statistiken-berichten.html#tbl-m1-params">Tabelle&nbsp;<span>12.5</span></a> zu sehen.</p>
+<div class="cell" data-hash="090-Modellieren_cache/html/tbl-m1-params_7a79a4cbacff5c22af2a6f2a84e1127f">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">m_bringtnixtin</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://mc-stan.org/rstanarm/reference/stan_glm.html">stan_glm</a></span><span class="op">(</span><span class="va">y2</span> <span class="op">~</span> <span class="va">g</span>, data <span class="op">=</span> <span class="va">d_bringtnixtin</span>, refresh <span class="op">=</span> <span class="fl">0</span>, seed <span class="op">=</span> <span class="fl">42</span><span class="op">)</span></span>
 <span><span class="fu">parameters</span><span class="op">(</span><span class="va">m_bringtnixtin</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="tbl-m1-params" class="anchored">
 
 <div data-pagedtable="false"> <div class="table-caption">Tabelle&nbsp;11.2:  <p>Parameter des Modells m_bringtnixtin</p> </div>
   <script data-pagedtable-source="" type="application/json">
-{"columns":[{"label":["Parameter"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Median"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["CI"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["CI_low"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["CI_high"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["pd"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["Rhat"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["ESS"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["Prior_Distribution"],"name":[9],"type":["chr"],"align":["left"]},{"label":["Prior_Location"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["Prior_Scale"],"name":[11],"type":["dbl"],"align":["right"]}],"data":[{"1":"(Intercept)","2":"0.1872474","3":"0.95","4":"-0.3734893","5":"0.7405634","6":"0.74825","7":"0.9994630","8":"3699.498","9":"normal","10":"-0.1902336","11":"3.183966"},{"1":"g","2":"-0.7621084","3":"0.95","4":"-1.5172969","5":"0.0207076","6":"0.97275","7":"0.9998109","8":"3497.294","9":"normal","10":"0.0000000","11":"6.287828"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["Parameter"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Median"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["CI"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["CI_low"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["CI_high"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["pd"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["Rhat"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["ESS"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["Prior_Distribution"],"name":[9],"type":["chr"],"align":["left"]},{"label":["Prior_Location"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["Prior_Scale"],"name":[11],"type":["dbl"],"align":["right"]}],"data":[{"1":"(Intercept)","2":"0.1867018","3":"0.95","4":"-0.3718685","5":"0.76016256","6":"0.75275","7":"0.9999175","8":"3259.147","9":"normal","10":"-0.1902336","11":"3.183966"},{"1":"g","2":"-0.7718971","3":"0.95","4":"-1.5582385","5":"0.02449839","6":"0.97075","7":"1.0003956","8":"3334.573","9":"normal","10":"0.0000000","11":"6.287828"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 </div>
@@ -477,7 +477,7 @@ Abhängigkeit der Gruppe</p> </div>
 </div>
 </div>
 </div>
-<p>Der Gruppenunterschied wird auf 0.19, -0.76 geschätzt; das ist der Punktschätzer der UV <code>g</code>. Die Grenzen eines 95%-CI für die UV liegen bei -1.55 bzw. -0.01. Dieser Bereich enthält die Null, vgl. <a href="#fig-m1-params">Abbildung&nbsp;<span>11.4</span></a>. Daher kann nicht ausgeschlossen werden, dass Bringtnixtin nix bringt.</p>
+<p>Der Gruppenunterschied wird auf 0.19, -0.77 geschätzt; das ist der Punktschätzer der UV <code>g</code>. Die Grenzen eines 95%-CI für die UV liegen bei -1.55 bzw. -0.01. Dieser Bereich enthält die Null, vgl. <a href="#fig-m1-params">Abbildung&nbsp;<span>11.4</span></a>. Daher kann nicht ausgeschlossen werden, dass Bringtnixtin nix bringt.</p>
 <blockquote class="blockquote">
 <p>👨‍🏫 Frau Professor Lustig, wie kann das sein, dass sich die Hypothese nicht bestätigt?</p>
 </blockquote>
@@ -488,7 +488,7 @@ Abhängigkeit der Gruppe</p> </div>
 <div class="cell" data-hash="090-Modellieren_cache/html/tbl-m1-rope_a37a57204929b3545993f32ff47a3d03">
 <div class="cell-output-display">
 <div id="tbl-m1-rope" class="anchored">
-<table class="table table-sm table-striped small">
+<table class="table table-sm table-striped">
 <caption>Tabelle&nbsp;11.3: ROPE für Modell m_bringtnixtin</caption>
 <colgroup>
 <col style="width: 16%">
@@ -543,7 +543,7 @@ Abhängigkeit der Gruppe</p> </div>
 </div>
 </div>
 <p>Da sich das 95%-CI mit dem ROPE überlappt, kann die Nullhypothese bzw. das ROPE (kein praktisch bedeutsamer Effekt) <em>nicht</em> ausgeschlossen werden.</p>
-<p>Eine vergleichbare Information bietet uns die Kennzahl <code>pd</code>, s. <a href="#tbl-m1-params">Tabelle&nbsp;<span>11.2</span></a>. Der Wert für <code>g</code> liegt bei ca. 0.97.</p>
+<p>Eine vergleichbare Information bietet uns die Kennzahl <code>pd</code>, s. <a href="100-Statistiken-berichten.html#tbl-m1-params">Tabelle&nbsp;<span>12.5</span></a>. Der Wert für <code>g</code> liegt bei ca. 0.97.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -627,7 +627,7 @@ Hinweis
 <p>Schauen wir uns die ersten paar d-Werte für jede der beiden Gruppen (<code>g=0</code> bzw. <code>g=1</code>) an:</p>
 <div class="cell" data-hash="090-Modellieren_cache/html/unnamed-chunk-19_29eb672b8df4195a7adf4fd6e1425fc7">
 <div class="cell-output-display">
-<table class="table table-sm table-striped small">
+<table class="table table-sm table-striped">
 <thead><tr class="header">
 <th style="text-align: left;">id</th>
 <th style="text-align: left;">g</th>
@@ -699,7 +699,7 @@ Hinweis
 </div>
 <div class="cell" data-hash="090-Modellieren_cache/html/d-bringtnixtin-mean_29063f6c21497852e0ddbd3c5d1c933a">
 <div class="cell-output-display">
-<table class="table table-sm table-striped small">
+<table class="table table-sm table-striped">
 <caption>Mittelwerte der Veränderung der Behaltensleistung nach Gruppe </caption>
 <thead><tr class="header">
 <th style="text-align: left;">g_text</th>
@@ -737,14 +737,14 @@ Hinweis
 </section><section id="modellierung-1" class="level3" data-number="11.3.3"><h3 data-number="11.3.3" class="anchored" data-anchor-id="modellierung-1">
 <span class="header-section-number">11.3.3</span> Modellierung</h3>
 <p>Wir modellieren (in <code>m_bringtnixtin2</code>) jetzt die Veränderung <code>d = y2 - y1</code> als AV; UV ist wieder <code>g</code>, s. <a href="#tbl-m-bringtnixtin2-params">Tabelle&nbsp;<span>11.4</span></a>.</p>
-<div class="cell" data-hash="090-Modellieren_cache/html/unnamed-chunk-24_d847a201ed762b4ecceaed1338f9ef1d">
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">m_bringtnixtin2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://mc-stan.org/rstanarm/reference/stan_glm.html">stan_glm</a></span><span class="op">(</span><span class="va">d</span> <span class="op">~</span> <span class="va">g</span>, data <span class="op">=</span> <span class="va">d_bringtnixtin</span>, refresh <span class="op">=</span> <span class="fl">0</span><span class="op">)</span></span>
+<div class="cell" data-hash="090-Modellieren_cache/html/unnamed-chunk-24_3b082659f4c3b71e2785412316dd37ba">
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">m_bringtnixtin2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://mc-stan.org/rstanarm/reference/stan_glm.html">stan_glm</a></span><span class="op">(</span><span class="va">d</span> <span class="op">~</span> <span class="va">g</span>, data <span class="op">=</span> <span class="va">d_bringtnixtin</span>, refresh <span class="op">=</span> <span class="fl">0</span>, seed <span class="op">=</span> <span class="fl">42</span><span class="op">)</span></span>
 <span><span class="fu">parameters</span><span class="op">(</span><span class="va">m_bringtnixtin2</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-hash="090-Modellieren_cache/html/tbl-m-bringtnixtin2-params_5b72a67a1bdf1c68307a79c7c7f4289d">
 <div class="cell-output-display">
 <div id="tbl-m-bringtnixtin2-params" class="anchored">
-<table class="table table-sm table-striped small">
+<table class="table table-sm table-striped">
 <caption>Tabelle&nbsp;11.4: Parameter von <code>m_bringtnixtin2</code>
 </caption>
 <colgroup>
@@ -860,7 +860,7 @@ Hinweis
 </div>
 </div>
 </div>
-<p><a href="#dnldts6794" onclick="fetch('data:text/csv;base64,aWQseTEseTIseTMsZwoxLDcsOCw5LEEKMiw3LDcsMTAsQQozLDQsOSw5LEEKNCw3LDQsOSxBCjUsNiw3LDgsQQo2LDUsNCw5LEEKNyw2LDUsMTAsQQo4LDMsNywxMCxBCjksNiw0LDEwLEEKMTAsNiw3LDEwLEEKMTEsNSw4LDksQQoxMiw2LDgsMTAsQQoxMyw3LDcsMTAsQQoxNCw0LDYsNyxBCjE1LDUsOSw4LEEKMTYsNyw2LDksQQoxNyw4LDYsMTAsQQoxOCwzLDgsOSxBCjE5LDUsOCw4LEEKMjAsNSw3LDksQQoyMSw3LDYsOSxCCjIyLDMsNCwxMCxCCjIzLDgsNiwxMCxCCjI0LDgsNyw5LEIKMjUsMyw2LDcsQgoyNiw1LDgsNyxCCjI3LDUsOCw4LEIKMjgsNyw2LDksQgoyOSw1LDYsOSxCCjMwLDcsOCwxMCxCCjMxLDYsOSw5LEIKMzIsNiw5LDgsQgozMyw1LDgsOCxCCjM0LDYsNyw5LEIKMzUsMSw4LDksQgozNiw3LDYsOSxCCjM3LDEsMTAsMTAsQgozOCw0LDgsOSxCCjM5LDcsNyw5LEIKNDAsNSwxMCw4LEIK').then(res => res.blob()).then(blob => {
+<p><a href="#dnldts27597" onclick="fetch('data:text/csv;base64,aWQseTEseTIseTMsZwoxLDcsOCw5LEEKMiw3LDcsMTAsQQozLDQsOSw5LEEKNCw3LDQsOSxBCjUsNiw3LDgsQQo2LDUsNCw5LEEKNyw2LDUsMTAsQQo4LDMsNywxMCxBCjksNiw0LDEwLEEKMTAsNiw3LDEwLEEKMTEsNSw4LDksQQoxMiw2LDgsMTAsQQoxMyw3LDcsMTAsQQoxNCw0LDYsNyxBCjE1LDUsOSw4LEEKMTYsNyw2LDksQQoxNyw4LDYsMTAsQQoxOCwzLDgsOSxBCjE5LDUsOCw4LEEKMjAsNSw3LDksQQoyMSw3LDYsOSxCCjIyLDMsNCwxMCxCCjIzLDgsNiwxMCxCCjI0LDgsNyw5LEIKMjUsMyw2LDcsQgoyNiw1LDgsNyxCCjI3LDUsOCw4LEIKMjgsNyw2LDksQgoyOSw1LDYsOSxCCjMwLDcsOCwxMCxCCjMxLDYsOSw5LEIKMzIsNiw5LDgsQgozMyw1LDgsOCxCCjM0LDYsNyw5LEIKMzUsMSw4LDksQgozNiw3LDYsOSxCCjM3LDEsMTAsMTAsQgozOCw0LDgsOSxCCjM5LDcsNyw5LEIKNDAsNSwxMCw4LEIK').then(res => res.blob()).then(blob => {
       const downloadURL = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       document.body.appendChild(a);
@@ -868,7 +868,7 @@ Hinweis
       a.download = 'file.csv'; a.click();
       window.URL.revokeObjectURL(downloadURL);
       document.body.removeChild(a);
-        });"><button class="btn btn-default downloadthis  " id="dnldts6794"><i class="bi bi-download"></i> Download </button></a></p>
+        });"><button class="btn btn-default downloadthis  " id="dnldts27597"><i class="bi bi-download"></i> Download </button></a></p>
 <p>Wir berechnen <code>d</code>, was die zentrale Variable der Forschungsfrage ist.</p>
 <div class="cell" data-hash="090-Modellieren_cache/html/unnamed-chunk-30_9ac3f8c1aef6f469a52746b97c1b0664">
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">d_within</span> <span class="op">&lt;-</span></span>
@@ -908,7 +908,7 @@ Hinweis
 <div class="cell" data-hash="090-Modellieren_cache/html/tbl-d1-desk_5d6161f0ef2dc4df9a16030a3b9d1a23">
 <div class="cell-output-display">
 <div id="tbl-d1-desk" class="anchored">
-<table class="table table-sm table-striped small">
+<table class="table table-sm table-striped">
 <caption>Tabelle&nbsp;11.5: Statistiken für <code>d</code>
 </caption>
 <colgroup>
@@ -984,14 +984,16 @@ Hinweis
 </div>
 </section><section id="inferenzanalyse" class="level3" data-number="11.5.3"><h3 data-number="11.5.3" class="anchored" data-anchor-id="inferenzanalyse">
 <span class="header-section-number">11.5.3</span> Inferenzanalyse</h3>
-<p>Wir berechnen das Modell (<code>m_within</code>):</p>
-<div class="cell" data-hash="090-Modellieren_cache/html/unnamed-chunk-37_5e6480d7c2913c78850e5b7bf2a54de0">
-<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">m_within</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://mc-stan.org/rstanarm/reference/stan_glm.html">stan_glm</a></span><span class="op">(</span><span class="va">d</span> <span class="op">~</span> <span class="fl">1</span>, data <span class="op">=</span> <span class="va">d_within</span>, refresh <span class="op">=</span> <span class="fl">0</span><span class="op">)</span></span>
+<p>Wir berechnen das Modell (<code>m_within</code>),s. <a href="#tbl-d2-params">Tabelle&nbsp;<span>11.6</span></a>:</p>
+<div class="cell" data-hash="090-Modellieren_cache/html/unnamed-chunk-37_9fea8b9702d7d45f5ae4115bb9754d79">
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">m_within</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://mc-stan.org/rstanarm/reference/stan_glm.html">stan_glm</a></span><span class="op">(</span><span class="va">d</span> <span class="op">~</span> <span class="fl">1</span>, data <span class="op">=</span> <span class="va">d_within</span>, refresh <span class="op">=</span> <span class="fl">0</span>, seed <span class="op">=</span> <span class="fl">42</span><span class="op">)</span></span>
 <span><span class="fu">parameters</span><span class="op">(</span><span class="va">m_within</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-hash="090-Modellieren_cache/html/unnamed-chunk-38_296de0b61ebdc9b1597588ef4569e591">
+<div class="cell" data-hash="090-Modellieren_cache/html/tbl-d2-params_908d22a828ac18eb743c0d7c69f5ecd3">
 <div class="cell-output-display">
-<table class="table table-sm table-striped small">
+<div id="tbl-d2-params" class="anchored">
+<table class="table table-sm table-striped">
+<caption>Tabelle&nbsp;11.6: Modellparameter von m_within</caption>
 <colgroup>
 <col style="width: 14%">
 <col style="width: 9%">
@@ -1020,6 +1022,7 @@ Hinweis
 <td style="text-align: center;">Normal (-1.60 +- 6.57)</td>
 </tr></tbody>
 </table>
+</div>
 </div>
 </div>
 <p>Hier ist eine Visualisierung des 95%-ETI des Unterschieds (<code>d</code>) zwischen den beiden Bedingungen (<a href="#fig-m-within-params">Abbildung&nbsp;<span>11.14</span></a>).</p>
@@ -1145,13 +1148,15 @@ Hinweis
 <p>Es gibt einen gewissen Unterschied zwischen den beiden Reihenfolgen (A und B) wie <a href="#fig-d-within2">Abbildung&nbsp;<span>11.17</span></a> zeigt; die Reihenfolge könnte also einen Einfluss auf <code>d</code> haben. Aber wir müssen inferenzstatistisch prüfen, wie groß der Einfluss ist.</p>
 </section><section id="inferenzanalyse-1" class="level3" data-number="11.6.3"><h3 data-number="11.6.3" class="anchored" data-anchor-id="inferenzanalyse-1">
 <span class="header-section-number">11.6.3</span> Inferenzanalyse</h3>
-<p>Berechnen wir <code>m_within2</code>, das nicht nur den Intercept prüft (wie <code>m_within1</code>), sondern auch zusätzlich den Effekt der Reihenfolge (<code>g</code>).</p>
-<div class="cell" data-hash="090-Modellieren_cache/html/m-within2_34ffcdb256d1b81e87771ac59a91fc6c">
-<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">m_within2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://mc-stan.org/rstanarm/reference/stan_glm.html">stan_glm</a></span><span class="op">(</span><span class="va">d</span> <span class="op">~</span> <span class="va">g</span>, data <span class="op">=</span> <span class="va">d_within</span>, refresh <span class="op">=</span> <span class="fl">0</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Berechnen wir <code>m_within2</code>, das nicht nur den Intercept prüft (wie <code>m_within1</code>), sondern auch zusätzlich den Effekt der Reihenfolge (<code>g</code>), vgl. <a href="#tbl-m_within2-params">Tabelle&nbsp;<span>11.7</span></a>.</p>
+<div class="cell" data-hash="090-Modellieren_cache/html/m-within2_846e357eef3ca0fcebc3393437cce70b">
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">m_within2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://mc-stan.org/rstanarm/reference/stan_glm.html">stan_glm</a></span><span class="op">(</span><span class="va">d</span> <span class="op">~</span> <span class="va">g</span>, data <span class="op">=</span> <span class="va">d_within</span>, refresh <span class="op">=</span> <span class="fl">0</span>, seed <span class="op">=</span> <span class="fl">42</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-hash="090-Modellieren_cache/html/unnamed-chunk-45_669f698ed0a21f183cf1c5349169078d">
+<div class="cell" data-hash="090-Modellieren_cache/html/tbl-m_within2-params_a3b18b3a9b8e7b8ab0e4a37899e75dd0">
 <div class="cell-output-display">
-<table class="table table-sm table-striped small">
+<div id="tbl-m_within2-params" class="anchored">
+<table class="table table-sm table-striped">
+<caption>Tabelle&nbsp;11.7: Modellparameter von m_within2</caption>
 <colgroup>
 <col style="width: 14%">
 <col style="width: 9%">
@@ -1191,6 +1196,7 @@ Hinweis
 </tr>
 </tbody>
 </table>
+</div>
 </div>
 </div>
 <p>Das CI für die Reihenfolge (Variable <code>gB</code>) beinhaltet die Null; Daher kann ein Nulleffekt der Reihenfolge - also kein Effekt der Reihenfolge - nicht ausgeschlossen werden, <code>g=0</code> ist also im Bereich der plausiblen Werte.</p>
@@ -1277,7 +1283,7 @@ Hinweis
 </figure>
 </div>
 </div>
-<p>Berechnen wir die Mittelwerte von <code>y</code> pro Messzeitpunkte sowie die Veränderung von t1 zu t2 bzw. von t2 zu t3, s. <a href="#tbl-d123">Tabelle&nbsp;<span>11.6</span></a>.</p>
+<p>Berechnen wir die Mittelwerte von <code>y</code> pro Messzeitpunkte sowie die Veränderung von t1 zu t2 bzw. von t2 zu t3, s. <a href="#tbl-d123">Tabelle&nbsp;<span>11.8</span></a>.</p>
 <div class="cell" data-hash="090-Modellieren_cache/html/unnamed-chunk-49_a1347a5f00f94e0319a168d828ec8847">
 <div class="sourceCode" id="cb30"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">d_long</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">time</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
@@ -1287,8 +1293,8 @@ Hinweis
 <div class="cell" data-hash="090-Modellieren_cache/html/tbl-d123_d954068f62a6457f9fe6ef0fb588d767">
 <div class="cell-output-display">
 <div id="tbl-d123" class="anchored">
-<table class="table table-sm table-striped small">
-<caption>Tabelle&nbsp;11.6: Mittelwerte von <code>y</code> pro Messzeitpunkte (<code>y_mean</code>) sowie die Veränderung von t1 zu t2 bzw. von t2 zu t3 (<code>d</code>)</caption>
+<table class="table table-sm table-striped">
+<caption>Tabelle&nbsp;11.8: Mittelwerte von <code>y</code> pro Messzeitpunkte (<code>y_mean</code>) sowie die Veränderung von t1 zu t2 bzw. von t2 zu t3 (<code>d</code>)</caption>
 <thead><tr class="header">
 <th style="text-align: left;">time</th>
 <th style="text-align: right;">y_mean</th>
@@ -1333,12 +1339,12 @@ Hinweis
 <span><span class="co">## </span></span>
 <span><span class="co">## Estimates:</span></span>
 <span><span class="co">##                                       mean   sd   10%   50%   90%</span></span>
-<span><span class="co">## (Intercept)                          7.1    1.2  5.7   7.1   8.6 </span></span>
-<span><span class="co">## b[(Intercept) time:y1]              -1.6    1.2 -3.1  -1.6  -0.2 </span></span>
-<span><span class="co">## b[(Intercept) time:y2]              -0.1    1.2 -1.5  -0.1   1.4 </span></span>
-<span><span class="co">## b[(Intercept) time:y3]               1.8    1.2  0.4   1.8   3.3 </span></span>
-<span><span class="co">## sigma                                1.5    0.1  1.3   1.4   1.6 </span></span>
-<span><span class="co">## Sigma[time:(Intercept),(Intercept)]  4.9    5.5  1.2   3.3  10.0 </span></span>
+<span><span class="co">## (Intercept)                          7.2    1.3  5.7   7.2   8.6 </span></span>
+<span><span class="co">## b[(Intercept) time:y1]              -1.7    1.3 -3.2  -1.7  -0.2 </span></span>
+<span><span class="co">## b[(Intercept) time:y2]              -0.1    1.3 -1.6  -0.1   1.4 </span></span>
+<span><span class="co">## b[(Intercept) time:y3]               1.8    1.3  0.3   1.8   3.3 </span></span>
+<span><span class="co">## sigma                                1.5    0.1  1.3   1.5   1.6 </span></span>
+<span><span class="co">## Sigma[time:(Intercept),(Intercept)]  5.0    5.9  1.2   3.2  10.9 </span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## Fit Diagnostics:</span></span>
 <span><span class="co">##            mean   sd   10%   50%   90%</span></span>
@@ -1348,14 +1354,14 @@ Hinweis
 <span><span class="co">## </span></span>
 <span><span class="co">## MCMC diagnostics</span></span>
 <span><span class="co">##                                     mcse Rhat n_eff</span></span>
-<span><span class="co">## (Intercept)                         0.0  1.0  1065 </span></span>
-<span><span class="co">## b[(Intercept) time:y1]              0.0  1.0  1098 </span></span>
-<span><span class="co">## b[(Intercept) time:y2]              0.0  1.0  1061 </span></span>
-<span><span class="co">## b[(Intercept) time:y3]              0.0  1.0  1066 </span></span>
-<span><span class="co">## sigma                               0.0  1.0  2903 </span></span>
-<span><span class="co">## Sigma[time:(Intercept),(Intercept)] 0.1  1.0  1619 </span></span>
-<span><span class="co">## mean_PPD                            0.0  1.0  4272 </span></span>
-<span><span class="co">## log-posterior                       0.1  1.0  1412 </span></span>
+<span><span class="co">## (Intercept)                         0.0  1.0   980 </span></span>
+<span><span class="co">## b[(Intercept) time:y1]              0.0  1.0   997 </span></span>
+<span><span class="co">## b[(Intercept) time:y2]              0.0  1.0   993 </span></span>
+<span><span class="co">## b[(Intercept) time:y3]              0.0  1.0  1017 </span></span>
+<span><span class="co">## sigma                               0.0  1.0  2706 </span></span>
+<span><span class="co">## Sigma[time:(Intercept),(Intercept)] 0.1  1.0  1538 </span></span>
+<span><span class="co">## mean_PPD                            0.0  1.0  4381 </span></span>
+<span><span class="co">## log-posterior                       0.1  1.0  1137 </span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## For each parameter, mcse is Monte Carlo standard error, n_eff is a crude measure of effective sample size, and Rhat is the potential scale reduction factor on split chains (at convergence Rhat=1).</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -1365,7 +1371,7 @@ Hinweis
 <div class="cell" data-hash="090-Modellieren_cache/html/unnamed-chunk-52_05a08f25ff11e15d97c11da62c5118fd">
 <div class="sourceCode" id="cb32"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/nlme/man/fixed.effects.html">fixef</a></span><span class="op">(</span><span class="va">m_within3</span><span class="op">)</span></span>
 <span><span class="co">## (Intercept) </span></span>
-<span><span class="co">##    7.118985</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">##    7.163938</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Im Durchschnitt werden ca. 7.1 Fragen richtig beantwortet (Gesamtmittel); das ist die Information die der Punktschätzer des Intercepts bietet.</p>
 <p>Nur die Random-Effekte kann man sich so ausgeben lassen:</p>
@@ -1373,9 +1379,9 @@ Hinweis
 <div class="sourceCode" id="cb33"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/nlme/man/random.effects.html">ranef</a></span><span class="op">(</span><span class="va">m_within3</span><span class="op">)</span></span>
 <span><span class="co">## $time</span></span>
 <span><span class="co">##    (Intercept)</span></span>
-<span><span class="co">## y1 -1.63580410</span></span>
-<span><span class="co">## y2 -0.07307133</span></span>
-<span><span class="co">## y3  1.79705935</span></span>
+<span><span class="co">## y1  -1.6757393</span></span>
+<span><span class="co">## y2  -0.1142049</span></span>
+<span><span class="co">## y3   1.7701076</span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## with conditional variances for "time"</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
