@@ -10,22 +10,30 @@ book:
   author: "Sebastian Sauer"
   date: now
   chapters:
-    - index.qmd
-    - 010-rahmen.qmd
-    - 020-themawahl.qmd
-    - 030-Schreiben.qmd
-    - 040-Populationsbeschreibung.qmd
-    - 050-Explikation.qmd
-    - 060-Messen.qmd
-    - 070-Erheben.qmd
-    - 075-kausal.qmd
-    - 080-Auswerten.qmd
-    - 090-Modellieren.qmd
-    - 100-Statistiken-berichten.qmd
-    - 110-pruefung.qmd
-    - 120-abschluss.qmd
-    - 130-references.qmd
-    # - test.qmd
+    - part: "Organisatorisches"
+      chapters:
+        - index.qmd
+        - 110-pruefung.qmd
+    - part: "Theorie"
+      chapters:
+        - 010-rahmen.qmd
+        - 020-themawahl.qmd
+        - 030-Schreiben.qmd
+    - part: "Empirie"
+      chapters:
+        - 040-Populationsbeschreibung.qmd
+        - 050-Explikation.qmd
+        - 060-Messen.qmd
+        - 070-Erheben.qmd
+        - 075-kausal.qmd
+        - 080-Auswerten.qmd
+        - 090-Modellieren.qmd
+    - part: "Fertigstellen"
+      chapters:
+        - 100-Statistiken-berichten.qmd
+        - 120-abschluss.qmd
+        - 130-references.qmd
+      # - test.qmd
 
 website:
   favicon: img/Albert_Einstein_head.jpg
@@ -33,6 +41,7 @@ website:
   image: img/Albert_Einstein_head.jpg
   google-analytics: G-1K43PN7CP3
   cookie-consent: true
+
 
 bibliography: library-ses.bib
 

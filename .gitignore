@@ -30,7 +30,8 @@ vignettes/*.pdf
 # knitr and R markdown default cache directories
 *_cache/
 /cache/
-#*_files/
+#*_files/  # die braucht es zur Online-Dratellung!
+_freeze/
 
 # Temporary files created by R markdown
 *.utf8.md
@@ -53,8 +54,7 @@ test*/
 *.log
 
 
-# rendered html
-*.html
+
 
 
 
