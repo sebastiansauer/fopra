@@ -389,39 +389,55 @@ In diesem Teil beschreiben Sie alle relevanten Verfahrensdetails – man sollte 
 Die von ihnen gemachten Angaben müssen ausreichen, um die beschriebene Untersuchung exakt zu wiederholen.
 Man sollte allgemein bekannte Verfahren (z.B. die Regressionsanalyse) nicht erläutern.
 
+Replizierbarkeit^[Man kann Ihre Analyse nachrechnen und kommt zum gleichen Ergebnis] Reproduzierbarkeit^[Man weiß, wie man Ihre Studie wiederholen könnte] sind wesentlich für die Wissenschaft. 
+Im Methodenteil legen Sie die wesentlichen Grundlagen dafür.
+Daher ist der Methodenteil wesentlich für Ihre Arbeit.
+
+
 Folgende Unterkapitel bieten sich an:
 
 #### Stichprobe 
 
-- Alter und Geschlecht der Versuchsteilnehmer (evtl. weitere Merkmale wie Beruf etc.)
-- Rekrutierungsweise & Teilnahmemotivation der Versuchsteilnehmer
+- Alter und Geschlecht der *Versuchsteilnehmer* (evtl. weitere Merkmale wie Beruf etc.)
+- *Rekrutierungsweise* und Teilnahmemotivation der Versuchsteilnehmer
+
 
 #### Versuchsmaterial 
-- Verwendete Fragebögen/ Messinstrumente (inkl. zentrale Maße der Güte)
-- Beschreibung des Versuchsaufbaus (Materialanordnung, Sitzanordnung im Labor; Nutzung von Abbildungen ist hierbei hilfreich)
+- Verwendete *Messinstrumente* (z.B. Fragebogen inkl. zentrale Maße der Güte)
+- Beschreibung des *Versuchsaufbaus* (Materialanordnung, Sitzanordnung im Labor; Nutzung von Abbildungen ist hierbei hilfreich)
+
 
 #### Versuchsaufbau
-- Erläuterung des Versuchsablaufs von der Instruktion bis zur abschließenden  Aufklärung der  Untersuchungsteilnehmer nach Abschluss der Datenerhebung
-- Beschreibung der räumlichen und zeitlichen Untersuchungsbedingungen
-- Versuchsplan (Design): UV, AV, Designart (z. B. querschnittliche Beobachtungsstudie)
+- Erläuterung des *Versuchsablaufs* von der Instruktion bis zur abschließenden  Aufklärung der  Untersuchungsteilnehmer nach Abschluss der Datenerhebung
+- Beschreibung der räumlichen und zeitlichen *Untersuchungsbedingungen*
+- *Versuchsplan* (Design): UV, AV, Designart (z. B. querschnittliche Beobachtungsstudie)
+
+
 
 #### Analyse
-- Verwendete Analyse-Software (idealerweise mit Versionsnummer) wie R 
-- Software, die zur Reproduzierbarkeit nicht von Relevaz ist, braucht nicht angegeben zu werden (z.B. Word oder RStudio)
-- Kurze Skizzierung des statistischen Vorgehens (wie z.B. Bayes-Methoden auf Basis von Stan)
+- Verwendete Analyse-*Software* (idealerweise mit Versionsnummer) wie R^[RStudio ist nur eine Benutzeroberfläche und daher irrelevant für die Ergebnisse)
+- Software, die zur Reproduzierbarkeit nicht von Relevanz ist, braucht nicht angegeben zu werden (z.B. Word oder RStudio)
+- Skizzierung der *Analyse* in Bezug auf das statistische Vorgehen (wie z.B. Bayes-Methoden auf Basis von Stan oder Hinweise auf das Signifikanzniveau bei einer frequentistischen Analyse)
 
 
 ### Ergebnisteil
 
-Im Ergebnisteil stehen die Fakten.
-Erst in der Diskussion wird erörtert, was die Ergebnisse bedeuten, wie stichhaltig sie sind etc. Anders gesagt: Im Ergebnisteil bespricht man die Ergebnisse. In der Diskussion spricht man *über* die (bzw. die Bedeutung der) Ergebnisse.
-In quantitativen Studien werden primär die Ergebnisse zu den Hypothesen bzw. den Forschungsfragen berichtet (sofern es keine explorative Arbeit ist). Hierbei bietet es sich an, zuerst einfache (deskriptive) Ergebnisse zu berichten und danach komplexere (z.B. von multiplen Regressionen). 
-Handlungen werden in der 1. Vergangenheit beschrieben („Es fand sich ein Unterschied …“); überdauernde Tatsachen hingegen in der Gegenwart („Dieser Wert ist statistisch signifikant“).
-Im Ergebnisteil soll man keine Interpretationen oder Bewertungen anführen, sondern lediglich so objektiv wie möglich Tatschen (Fakten) berichten.
-In quantitativen Arbeiten findet man naturgemäß oft viele Statistiken. Wer hätt’s gedacht.
-Berichtet man ein Ergebnis mit wenig Zahlenmaterial, so gibt man die Zahlen im Text wieder; größere Mengen sind übersichtlicher in Tabellen dargestellt. Sehr große Zahlenmengen sind besser im Anhang aufgehoben. Häufig kann man quantitative Daten gut in Diagrammen darstellen. Man beachte die Vorgaben der APA zur Darstellung von Statistiken.
-Fügen Sie keine R-Syntax ein (schon gar nicht als Screenshot); nutzen Sie für Syntax den Anhang.
+Im Ergebnisteil stehen die Fakten, keine Meinungen.
+Erst in der Diskussion wird erörtert, was die Ergebnisse bedeuten, wie stichhaltig sie sind etc. Anders gesagt: Im Ergebnisteil bespricht man die Ergebnisse. In der Diskussion spricht man *über* die (bzw. die Bedeutung der) Ergebnisse. 
+Insofern spricht man in der Diskussion über "Meinungen", besser gesagt, man interpretiert die Untersuchungsergebnisse, man ordnet sie in in die Literatur ein, überlegt ihre Implikationen und inwieweit sie die Forschungsfrage beantworten.
+In quantitativen Studien werden primär die Ergebnisse zu den Hypothesen bzw. den Forschungsfragen berichtet (sofern es keine explorative Arbeit ist). 
+Hierbei bietet es sich an, zuerst einfache (deskriptive) Ergebnisse zu berichten und danach komplexere (z.B. von multiplen Regressionen). 
 
+Handlungen werden in der 1. Vergangenheit beschrieben („Es fand sich ein Unterschied …“); überdauernde Tatsachen hingegen in der Gegenwart („Dieser Wert ist statistisch signifikant“).
+Im Ergebnisteil soll man keine Interpretationen oder Bewertungen anführen, 
+sondern lediglich so objektiv wie möglich Tatschen (Fakten) berichten.
+In quantitativen Arbeiten findet man naturgemäß oft viele Statistiken. 
+Wer hätt’s gedacht.
+Berichtet man ein Ergebnis mit wenig Zahlenmaterial, so gibt man die Zahlen im Text wieder; größere Mengen sind übersichtlicher in Tabellen dargestellt. 
+Sehr große Zahlenmengen sind besser im Anhang aufgehoben. 
+Häufig kann man quantitative Daten gut in Diagrammen darstellen. Man beachte die Vorgaben der APA zur Darstellung von Statistiken.
+Fügen Sie keine R-Syntax ein (schon gar nicht als Screenshot); nutzen Sie für Syntax den Anhang.
+Technische Details wie das Aufbereiten von Daten (z.B. Umbenennen von Variablen oder ihren Ausprägungen) sollen nicht im Ergebnisteil (en Detail) aufgeführt werden, höchstens kursorisch mit Verweis auf die Syntax (die an geeigneter Stelle dokumentiert ist).
 
 
 
@@ -703,20 +719,24 @@ Solange Sie keine anders lautenden Vorgaben von Ihrer Betreuungsperson haben,
 können Sie sich an diesen Richtlinien orientieren.
 
 
-1. Verwenden Sie die Format-Vorgaben der APA (aktuelle Version)^[V7], um Zitationen, Tabellen und Abbildungen zu formatieren.
-1. Fließtext (in längeren Print-Dokumenten wie einer Seminararbeit) ist mit Serifentext zu schreiben; Überschriften können serifenlos gesetzt sein.
-2. Fließtext soll in 11 Punkt Schriftgröße gesetzt sein.
-3. Der Text kann linksbündig oder im Blocksatz gesetzt sein. 
-4. Silbentrennung ist eingeschaltet.
-5. Zeilenabstand: 1 – 1,2 Zeilen
+1. Verwenden Sie die *Format-Vorgaben der APA* (aktuelle Version)^[V7], um Zitationen, Tabellen und Abbildungen zu formatieren.
+1. *Fließtext* (in längeren Print-Dokumenten wie einer Seminararbeit) ist *mit Serifentext* zu schreiben; Überschriften können serifenlos gesetzt sein.
+2. *Fließtext* soll in *11 Punkt Schriftgröße* gesetzt sein.
+3. Der Text kann linksbündig oder im *Blocksatz* gesetzt sein. 
+4. *Silbentrennung* ist eingeschaltet.
+5. *Zeilenabstand*: 1 – 1,2 Zeilen
 6. Seitenformat (für papierbezogenen Formate): Din-A4
-7. Einrücken: Die erste Zeile jedes Absatzes wird mit 1.3 cm eingerückt (Ausnahme: Abstract, Titel, Blockzitate und Verzeichnisse). Der erste Absatz nach einer Überschrift, nach einer Abbildung, einer Tabelle o.Ä.  wird *nicht* eingerückt. Alternativ können Sie vertikalen Raum verwenden, um Absätze zu trennen (besser ist aber Einrücken).
-8. Kursivschrift: Sie dürfen Kursivschrift verwenden, wenn Sie etwas hervorheben oder betonen möchten oder bei erstmaliger Einführung neugeprägter Begriffe, Fach- oder Schlüsselbegriffen, bei statistischen Symbolen und Variablen. Meiden Sie Fettdruck und Unterstreichungen.
-9. Abschnittswechsel: Vertikaler Abstand ist ein probates Mittel, um Sinnzusammenhänge kenntlich zu machen. Ein neuer Abschnitt wird mit vertikalem Abstand kenntlich gemacht.
-Gestalten Sie Ihre Seiten doppelseitig (d. h. linke vs. rechte Seite), auch im Druck.
-10. Kolumnentitel (Kapitelnummer und -name in Kopfzeile) sind empfehlenswert.
-11. Nummerierung: Verwenden Sie nur arabische („normale“) Ziffern für die Seitenzahlen (auch bei Abstract etc.).
-12. Seitenränder: Da eine gute Lesbarkeit bei nicht mehr als ca. 65 Zeichen liegt, können Sie Ihre Seitenränder entsprechend einstellen.
+7. *Einrücken*: Die *erste Zeile jedes Absatze*s wird mit 1.3 cm eingerückt (Ausnahme: Abstract, Titel, Blockzitate und Verzeichnisse). Aber: Der erste Absatz nach einer Überschrift, nach einer Abbildung, einer Tabelle o.Ä.  wird *nicht* eingerückt. Alternativ können Sie vertikalen Raum verwenden, um Absätze zu trennen (besser ist aber Einrücken). Verwenden Sie aber nicht sowohl Einrücken als auch vertikalen Abstand.
+8. *Kursivschrift*: Sie dürfen Kursivschrift verwenden, wenn Sie etwas hervorheben oder betonen möchten oder bei erstmaliger Einführung neugeprägter Begriffe, Fach- oder Schlüsselbegriffen, bei statistischen Symbolen und Variablen. Meiden Sie Fettdruck und Unterstreichungen.
+9. *Abschnittswechsel*: Vertikaler Abstand ist ein probates Mittel, um Sinnzusammenhänge kenntlich zu machen. Ein neuer Abschnitt wird mit vertikalem Abstand kenntlich gemacht.
+Gestalten Sie Ihre Seiten *doppelseitig* (d. h. linke vs. rechte Seite), auch im Druck (wenn Sie ein paginiertes Format verwenden).
+10. *Kolumnentitel* (Kapitelnummer und -name in Kopfzeile) sind empfehlenswert.
+11. Nummerierung: Verwenden Sie nur *arabische* („normale“) *Ziffern* für die Seitenzahlen (auch bei Abstract etc.).
+12. *Seitenränder*: Da eine gute Lesbarkeit bei nicht mehr als ca. 65 Zeichen liegt, können Sie Ihre Seitenränder entsprechend einstellen.
+
+Grundsätzlich sollten Sie in Ihren Entscheidungen konsistent sein: 
+Wenn Sie sich für ein bestimmtes Vorgehen entschieden haben, sollten Sie dieses konsequent anwenden.
+
 
 #### Seitenränder und Satzspiegel
 

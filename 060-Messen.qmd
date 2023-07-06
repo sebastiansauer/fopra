@@ -458,7 +458,7 @@ Für die Zwecke einer Seminararbeit ist es ausreichend, Items (z.B. aus dem Engl
 ### Einzelne Items einer Skala entnehmen
 
 Entnimmt man beispielsweise aus einem Extraversionstest ein einzelnen Item, etwa "Ich bin ein Team-Player", lässt man dabei wesentliche Facetten des Konstrukts außen vor.
-Denn die weiteren Facetten von Extraversion würden etwa mit den 10 Items wie "Ich kann schnell gute Stimmung verbreiten" oder " Wenn nichts los ist, langweile ich mich schnell" [@satow2011].^[Quelle: <https://www.testarchiv.eu/de/test/9006357>]
+Denn die weiteren Facetten von Extraversion würden etwa mit den 10 Items wie "Ich kann schnell gute Stimmung verbreiten" oder " Wenn nichts los ist, langweile ich mich schnell" [@satow_b5t_2011].^[Quelle: <https://www.testarchiv.eu/de/test/9006357>]
 Daher ist es problematisch, aus einer Skala nur einen Teil der Items zu entnehmen, um das Konstrukt, auf das die komplette Skala abzielt, zu messen.
 Entnimmt man nur einen Teil der Items,
 so ist die Messgüte dieser Adhoc- oder Teilskala unbekannt.
@@ -520,7 +520,7 @@ In der Regel macht es *wenig* Sinn, Cronbachs Alpha in der eigenen Stichprobe zu
 Der Grund liegt in der kleineren Stichprobe Ihrer Studie im Vergleich zur Validierungsstichprobe des Messintruments.
 Würde man diesen (oder jeden beliebigen anderen) Kennwert in einer kleineren anstelle einer größeren Stichprobe berechnen, so erhielte man einen ungenaueren ("verrauschten") Kennwert.
 
-Eine statistisch aussagekräftigere Variante zu Cronbachs alpha ($\alpha$) ist McDonals Omega ($\omega$) [@hayes_use_2020].
+Eine statistisch aussagekräftigere Variante zu Cronbachs alpha ($\alpha$) ist McDonalds Omega ($\omega$) [@hayes_use_2020].
 
 In R bietet etwa das Paket [`psych`](https://rdrr.io/cran/psych/f/inst/doc/intro.pdf) Möglichkeiten, entsprechende Koeffizienten zu berechnen (mit dem Befehl `alpha`); s. [hier](https://sebastiansauer.github.io/umfragen-auswerten/itemanalyse.html).
 
@@ -530,11 +530,16 @@ In R bietet etwa das Paket [`psych`](https://rdrr.io/cran/psych/f/inst/doc/intro
 ### Objektivität
 
 Für die Objektivität wird meist keine Kennzahl angegeben.
+Man geht davon aus, dass die Objektivität hinreichend gegeben ist.
+Die Beschreibung des Vorgehens während der Datenerhebung kann dazu weiter Aufschluss geben.
+
 
 
 ### Validität
 
-Für die Gültigkeit einer Skala wird oft die Korrelation zu anderen Konstrukten berichtet, die laut Theorie hoch oder gering oder gar nicht mit dem zu untersuchenden Konstrukt korreliert sein soll. Entspricht die beobachtete Korrelation der laut Theorie erwarteten,
+Für die Gültigkeit einer Skala wird oft die Korrelation zu anderen Konstrukten berichtet, 
+die laut Theorie hoch oder gering oder gar nicht mit dem zu untersuchenden Konstrukt korreliert sein soll. 
+Entspricht die beobachtete Korrelation der laut Theorie erwarteten,
 so ist dies als Beleg für die Validität des Verfahrens zu sehen.
 
 
@@ -545,7 +550,7 @@ so ist dies als Beleg für die Validität des Verfahrens zu sehen.
 Zur Messung von sozialpsychologischen oder persönlichkeitspsychologischen Konstrukten wird häufig auf eines von zwei Operationalisierungsarten zurückgegriffen:
 
 1. Selbsteinschätzung via (psychometrisch fundiertem) Fragebogen (explizite Messung)
-2. Leistungstests often in Form von reaktionszeitbasierten Tests (implizite Messung)
+2. Leistungstests oft in Form von reaktionszeitbasierten Tests (implizite Messung)
 
 :::{#def-implizit}
 ### Implizite Messung

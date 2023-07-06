@@ -429,7 +429,12 @@ Berichtet man Ergebnisse in einer Tabelle, so doppelt man sie nicht im Text.
 Eine nützliche Ergänzung ist es,
 zusätzlich zu den univariaten Statistiken noch Zusammenhangskoeffizienten (Korrelationen) zu berichten.
 
-#### Umsetzung mit R
+#### Tabellen mit R
+
+Im folgenden sind Möglichkeiten aufgezeigt, wie Sie Tabellen mit R für Ihren Bericht erstellen können.
+Bitte behalten Sie im Blick, dass in einem deutschsprachigen Bericht die Variablen- und Kennzahlennamen in deutscher Sprache erscheinen sollten.
+Auf "technisch" anmutenden Abkürzungen (z.B. `mpg_sd`) sollten man verzichten zugunsten "sprechenderer" Formulierengen (z.B. *SD Spritverbrauch*, oder *SD MPG*, wenn "MPG" in der Fußnote der Tabelle definiert ist).
+Tabellen sollten für sich selber verständlich sein, ohne Bezug zum Text.
 
 Mit gängigen R-Methoden kann man sich deskriptive Statistiken ausgeben lassen, s. @tbl-desk1.
 
@@ -439,23 +444,39 @@ Mit gängigen R-Methoden kann man sich deskriptive Statistiken ausgeben lassen, 
 mtcars %>% 
   summarise(mpg_avg = mean(mpg),
             mpg_sd = sd(mpg),
-            cor_mpg_hp = cor(mpg, hp))
+            cor_mpg_hp = cor(mpg, hp)) %>% 
+  rename(`MW Spritverbrauch` = mpg_avg,
+         `SD Spritverbrauch`= mpg_sd,
+         `Korrelation Spritverbrauch mit PS-Zahl` = cor_mpg_hp)
 ```
 
 
-In dieser Tabelle wurden anstelle von "sprechenden" Variablennamen Abkürzungen verwendet.
-Das ist, wenn Sie einen Bericht schreiben, nicht sinnvoll.
-In einem Bericht sollten besser verständliche Variablennamen stehen (oder zur Not die Abkürzungen erklärt sein).
 
 Alternativ zu selbsterstellten Tabellen kann "Statistik-Fast-Food" konsumieren und lässt sich einen Haufen Zahlen auf einmal ausgeben.
  R-Pakete wie `r_statix`, `skimr` oder `easystats` helfen dabei, s. als Beispiel @tbl-desk2.
 
+
+```{r}
+#| eval: false
+library(easystats)
+
+describe_distribution(mtcars) %>% 
+  select(-n, -n_Missing) %>% 
+  rename(MW = Mean, Schiefe = Skewness)
+```
+
+
+
 ```{r}
 #| label: tbl-desk2
+#| echo: false
 #| tbl-cap: Einfache Tabelle mit describe_distribution aus easystats
 library(easystats)
 
-describe_distribution(mtcars)
+describe_distribution(mtcars) %>% 
+  select(-n, -n_Missing) %>% 
+  rename(MW = Mean, Schiefe = Skewness) %>% 
+  print_md()
 ```
 
 
@@ -483,6 +504,7 @@ Verzichten sollte man aber vermutlih - in diesem Fall - auf die Spalte `n_Missin
 da die Spalte keine Information birgt.
 
 So sieht eine Tabelle mit `gtsummary` aus, s. @tbl-gtsum1.
+Hier wird die Häufigkeitsanalyse gezeigt.
 
 ```{r}
 #| label: tbl-gtsum1
@@ -505,11 +527,16 @@ meine_cor_tab <-
   select(mpg, hp, disp) %>% 
   correlation()
 
-meine_cor_tab
+meine_cor_tab %>% print_md()
 ```
 
 
-Möchten man eine *quadratische* Korrelationstabelle (was der üblicheren Berichtsform entspricht) kann man das so bekommen:
+:::{.callout-note}
+Mit `print_md` erreicht man, dass die Tabelle in schönerem Markdown-Format gedruckt wird.
+Da Markdown sich problemlos in HTML- oder Word-Format konvertieren lässt, kann man auf diese Art schöner formatierte Tabellen erhalten (als mit dem Standard von `describe_distribution` and friends). `gt` ist allerdings schon von Natur aus schön.$\square$
+:::
+
+Möchte man eine *quadratische* Korrelationstabelle (was der üblicheren Berichtsform entspricht) kann man das so bekommen:
 
 ```{r}
 summary(meine_cor_tab) %>% 
@@ -538,6 +565,7 @@ mean_sd(mtcars$mpg)
 ```
 
 Das Zeichen `$\\pm$` steht für "Plus-Minus" ± (im Formelmodus).
+In Word sollten Sie es händisch durch den Glyphen (das Zeichen) "±" ersetzen.^[In Markdown-Formaten mit Quarto etc. wird es automatisch ersetzt durch das Plus-Minus-Zeichen.]
 
 
 ### Inferenzstatistik
@@ -577,7 +605,8 @@ Hier sind die Ergebnisse; noch nicht ganz poliert für einen APA-Bericht, s. @tb
 ```{r}
 #| label: tbl-m1-params
 #| tbl-cap: Parameter für das Modell m1
-parameters(m1, prob = .95)
+parameters(m1, prob = .95) %>% 
+  print_md()
 ```
 
 
@@ -592,7 +621,7 @@ oder wenn Sie gleich den Befehl `hdi(m1)` ausführen, s. @tbl-m1-params2.
 ```{r}
 #| label: tbl-m1-params2
 #| tbl-cap: Parameter für das Modell m1. Das Intervall ist ein HDI.
-parameters(m1, prob = .95, ci_method = "hdi")  # oder: hdi(m1)
+parameters(m1, prob = .95, ci_method = "hdi") %>% print_md()  # oder: hdi(m1)
 ```
 
 Die Tabelle können Sie natürlich auch gleich wieder aufhübschen, für Ihren Bericht, s. @tbl-m1-params3.
@@ -768,6 +797,9 @@ Merkhilfe zur Entscheidung mit ROPE:
 
 Mit "Verwerfen" ist das Verwerfen der "Praktischnullhypothese" gemeint.
 
+Das ROPE ist eine nette Sache: Man kann eine "Praktischnullhypothese" testen. 
+*Besser* ist aber die Schätzung eines Konfidenzintervalls: Es beinhaltet
+die Informationen eines ROPE aber noch mehr.
 
 
 #### Standardisierte Effektstärke
@@ -781,7 +813,7 @@ Man kann es sich so ausgeben lassen:
 
 ```{r}
 library(easystats)
-cohens_d(mpg ~ am, data = mtcars)
+cohens_d(mpg ~ am, data = mtcars) %>% print_md()
 ```
 
 Man gibt also die Regressionsformel und die Daten an.
@@ -802,7 +834,7 @@ m1_R2 <-
   bayes_R2(m1) %>% 
   as_tibble()
 
-hdi(m1_R2)
+hdi(m1_R2) %>% print_md()
 ```
 
 
