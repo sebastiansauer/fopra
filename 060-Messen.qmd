@@ -355,7 +355,10 @@ Man kann Antwortformate dahingehend unterscheiden, ob sie uni- oder bipolar aufg
 
 - Die [University of Texas at Arlington UTA](https://libraries.uta.edu/tmdb/) stellt eine große Auswahl an Testverfahren bereit.
 
-- Oft hilft es, die Autoren anzuschreiben.
+- Mitunter hilft es, die Autoren anzuschreiben.
+
+- @sec-bsp-skalen stellt eine Zotero-Gruppe mit einer Auswahl an Skalen (v.a. aus dem Bereich Usability) bereit.
+
 
 
 Wer in den für die Forschungsfrage einschlägigen Papers stöbert, findet über kurz (oder lang) Ansatzpunkte bzw. Messinstrumente, die sich in anderen Studien bewährt haben.
@@ -802,9 +805,28 @@ robservable(
 
 
 
-## Beispiele für Messinstrumente
+## Beispiele für Messinstrumente {#sec-bsp-skalen}
 
 Wer in den für die Forschungsfrage einschlägigen Papers stöbert, findet über kurz (oder lang) Ansatzpunkte bzw. Messinstrumente, die sich in anderen Studien bewährt haben.
+
+
+Eine Auswahl an psychometrisch fundierten Skalen findet sich in dieser [Online-Zotero-Gruppe](https://www.zotero.org/groups/5127475/psychometric-scales).
+
+Eine statische Version dieser Quellen kann hier heruntergeladen werden.
+
+{{< downloadthis Material/Skalen.bib >}}
+
+
+:::{#exr-skalensammlung}
+### Kollaborative Skalensammlung
+Sehen Sie sich die [Online-Zotero-Gruppe für psychometrisch fundierte Skalen an](https://www.zotero.org/groups/5127475/psychometric-scales). 
+Prüfen Sie, ob Skalen für Sie nützlich sind (und nutzen Sie sie). 
+Diese Liste an Skalen ist ein *kollaboratives Projekt*: 
+Sie können Sie kostenlos nutzen, aber es funktioniert nur, wenn auch Skalen beigetragen  (hochgeladen) werden.
+Tragen Sie also Ihrerseits weitere psychmetrische Skalen in diese Zotero-Grupp ein.
+:::
+
+
 
 ### Konsumentenforschung
 
