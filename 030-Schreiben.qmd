@@ -274,7 +274,7 @@ Wie man in @fig-glied-link sieht (links), sind die Kapitel (und offenbar Unterka
 
 Die Einleitung stellt die Forschungsfrage vor und erläutert ihre Relevanz. Sonst  passiert in der Einleitung nichts, s. @fig-einleitung. 
 Ausnahme: Es kann ein *Hintergrund* zur Forschungsfrage angeführt werden oder anders zur Forschungsfrage *hingeleitet* werden z. B. durch einen aktuellen Bezug oder persönliches Interesse. 
-Spielt Letzteres eine Rolle, so ist es die einzige Stelle in der Arbeit, in der ein persönlicher Bezug auftaucht.
+Spielt Letzteres eine Rolle, so ist es die *einzige Stelle* in der Arbeit, in der ein persönlicher Bezug auftaucht.
 Die Forschungsfrage darf noch etwas vage und nicht wohldefiniert sein. Fachbegriffe etc. werden ja erst im Theorieteil eingeführt.
 
 :::{.callout-note}
@@ -307,7 +307,7 @@ Die (Sach-)Hypothesen können am Ende des Theorieteils platziert werden.
 :::{.callout-caution}
 Ein häufiger Fehler ist, dass der Theorieteil über alles mögliche berichtet, aber nicht über die Bestandteile der Forschungsfrage.
 Verzichten Sie auf Abschnitte wie "Die Geschichte des Konstrukts X in den letzten 300 Jahren".
-Merke: Im Theorieteil wird die Forschungsfrage erläutert, sonst nichts.$\square$
+Merke: Im Theorieteil wird die Forschungsfrage erläutert (detailliert), sonst nichts.$\square$
 :::
 
 Häufig sind Forschungsfragen in der Form "X führt zu Y" aufgebaut, s. @fig-fofra.
@@ -381,12 +381,15 @@ Eine Gliederung könnte so aussehen:
 $\square$
 :::
 
+Da den Hypothesen eine hohe Bedeutung zukommt, sollten Sie im Text gut auffindbar sein, z.B. in einem eigenen Abschnitt oder optisch vom übrigen Textfluss hervorgehoben.
 
 
 ### Methodenteil
 
-In diesem Teil beschreiben Sie alle relevanten Verfahrensdetails – man sollte Ihre Studie „nachkochen“ können. Ihre Studie sollte also reproduzierbar sein.
-Die von ihnen gemachten Angaben müssen ausreichen, um die beschriebene Untersuchung exakt zu wiederholen.
+In diesem Teil beschreiben Sie alle relevanten Verfahrensdetails – man sollte Ihre Studie „nachkochen“ können. 
+Ihre Studie sollte also reproduzierbar sein.
+Die von ihnen gemachten Angaben müssen ausreichen, 
+um die beschriebene Untersuchung exakt zu wiederholen.
 Man sollte allgemein bekannte Verfahren (z.B. die Regressionsanalyse) nicht erläutern.
 
 Replizierbarkeit^[Man kann Ihre Analyse nachrechnen und kommt zum gleichen Ergebnis] Reproduzierbarkeit^[Man weiß, wie man Ihre Studie wiederholen könnte] sind wesentlich für die Wissenschaft. 
@@ -398,24 +401,26 @@ Folgende Unterkapitel bieten sich an:
 
 #### Stichprobe 
 
-- Alter und Geschlecht der *Versuchsteilnehmer* (evtl. weitere Merkmale wie Beruf etc.)
-- *Rekrutierungsweise* und Teilnahmemotivation der Versuchsteilnehmer
+- Soziodemografische Beschreibung (z.B. Alter und Geschlecht) der *Versuchsteilnehmer* (evtl. weitere Merkmale wie Beruf etc.)
+- *Rekrutierungsweise* und Hinweise zur Teilnahmemotivation der Versuchsteilnehmer
 
 
 #### Versuchsmaterial 
-- Verwendete *Messinstrumente* (z.B. Fragebogen inkl. zentrale Maße der Güte)
-- Beschreibung des *Versuchsaufbaus* (Materialanordnung, Sitzanordnung im Labor; Nutzung von Abbildungen ist hierbei hilfreich)
+
+- Verwendete *Messinstrumente* (z.B. Fragebogen inkl. zentrale Maße der Güte wie interne Konsistenz der Skala)
+- Beschreibung des *Versuchsaufbaus* (Materialanordnung, Sitzanordnung im Labor; Nutzung von Abbildungen ist hierbei hilfreich), ein Flow-Chart zum Versuchsablauf aus Sicht der Versuchsteilnehmer kann hilfreich sein
 
 
 #### Versuchsaufbau
+
 - Erläuterung des *Versuchsablaufs* von der Instruktion bis zur abschließenden  Aufklärung der  Untersuchungsteilnehmer nach Abschluss der Datenerhebung
 - Beschreibung der räumlichen und zeitlichen *Untersuchungsbedingungen*
-- *Versuchsplan* (Design): UV, AV, Designart (z. B. querschnittliche Beobachtungsstudie)
+- *Versuchsplan* (Design): Benennen Sie explizit UV(s) und AV(s) sowie die Designart, z. B. *querschnittliche Beobachtungsstudie* oder *randomsiertes Between-Group-Experiment mit 2 UV und insgesamt 6 Gruppen*.
 
 
 
 #### Analyse
-- Verwendete Analyse-*Software* (idealerweise mit Versionsnummer) wie R^[RStudio ist nur eine Benutzeroberfläche und daher irrelevant für die Ergebnisse)
+- Verwendete Analyse-*Software* (idealerweise mit Versionsnummer) wie R^[RStudio ist nur eine Benutzeroberfläche und daher irrelevant für die Ergebnisse) und (idealerweise) die R-Pakete
 - Software, die zur Reproduzierbarkeit nicht von Relevanz ist, braucht nicht angegeben zu werden (z.B. Word oder RStudio)
 - Skizzierung der *Analyse* in Bezug auf das statistische Vorgehen (wie z.B. Bayes-Methoden auf Basis von Stan oder Hinweise auf das Signifikanzniveau bei einer frequentistischen Analyse)
 
@@ -585,11 +590,14 @@ Nutzen Sie sie reichlich.$\square$
 
 Im Anhang stehen Details zu Ihrer Studie.
 Die einzelnen Teile des Anhangs werden durchnummeriert.
-Alle Inhalte des Anhangs müssen im Haupttext referenziert werden („Der Interviewleitfaden findet sich im Anhang B“.).
+Alle Inhalte des Anhangs müssen im Haupttext referenziert werden („Der Interviewleitfaden findet sich im Anhang B“.) und vice versa.
 Typische Inhalte des Anhangs sind: Details zu Messinstrumenten, Interviewleitfäden oder Stimuli, weiterführende Statistiken, Syntax oder Probandeninformationen.
 Sofern verfügbar, können Sie anstelle z.B. Ihres Fragebogens die URL zu Ihrem Fragebogen einfügen.
+In ähnlicher Manier sollten Sie Ihre Daten keinesfalls (schon gar nicht per Screenshot) in den Anhang einfügen.
+Verweisen Sie stattdessen im Anhang auf die entsprechende Datei (achten Sie auf prägnante Dateinamen und zugängliche Formate wie CSV).
 Die ehrenwörtliche Erklärung steht ebenfalls im Anhang.
 Eine Funktion des Anhangs ist es, die Informationen, die zur Reproduktion der Studie nötig sind, im Detail vorzuhalten.
+Auch wenn Sie im Anhang "nur" auf Dateien verweisen, sollte im Anhang aufgeführt sein, welche weiterführenden Informationen dem Haupttext beigefügt sind.
 
 
 
