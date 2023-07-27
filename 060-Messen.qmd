@@ -368,7 +368,7 @@ So ist ein Beispiel für Messinstrumente um emotionale Reaktionen von Versuchspe
 
 ### Fallbeispiel Psyndex
 
->   PSYNDEX - die Datenbank des ZPID für Publikationsnachweise (...) inklusive redaktionell beschriebener Testinstrumente und Interventionsprogramme.^[https://psyndex.de/, 2023-05-14]
+>   PSYNDEX - die Datenbank des ZPID für Publikationsnachweise (...) inklusive redaktionell beschriebener Testinstrumente und Interventionsprogramme.^[<https://psyndex.de/> , 2023-05-14]
 
 
 So lieferte ein Suche bei Psyndex mit dem Suchterm *Usability* zu 683 Treffern.[Datum: 2023-05-14]
@@ -557,7 +557,7 @@ Zur Messung von sozialpsychologischen oder persönlichkeitspsychologischen Konst
 
 :::{#def-implizit}
 ### Implizite Messung
-Eine Messung eines psychologischen Konstrukts, die erhalten wird, während die zu bewertende Person nicht weiß, dass die Messung stattfindet, die häufig zur Bewertung von Einstellungen, Stereotypen und Emotionen in der sozialen Kognitionsforschung verwendet wird. Typischerweise wird ein implizites Maß als Antwortergebnis eines experimentellen Verfahrens bewertet, bei dem der Teilnehmer mit einer kognitiven Aufgabe beschäftigt ist. Beispielsweise könnte eine Wortstamm-Vervollständigungsaufgabe verwendet werden, um Emotionen implizit zu bewerten, so dass "jo_" vervollständigt werden könnte, um ein positives emotionales Wort (z. B. Joy) oder ein neutrales Wort (z. B. Joggen) zu bilden.^[Quelle: https://dictionary.apa.org/implicit-measure, 2023-05-04]$\square$
+Eine Messung eines psychologischen Konstrukts, die erhalten wird, während die zu bewertende Person nicht weiß, dass die Messung stattfindet, die häufig zur Bewertung von Einstellungen, Stereotypen und Emotionen in der sozialen Kognitionsforschung verwendet wird. Typischerweise wird ein implizites Maß als Antwortergebnis eines experimentellen Verfahrens bewertet, bei dem der Teilnehmer mit einer kognitiven Aufgabe beschäftigt ist. Beispielsweise könnte eine Wortstamm-Vervollständigungsaufgabe verwendet werden, um Emotionen implizit zu bewerten, so dass "jo_" vervollständigt werden könnte, um ein positives emotionales Wort (z. B. Joy) oder ein neutrales Wort (z. B. Joggen) zu bilden.^[Quelle: <https://dictionary.apa.org/implicit-measure>, 2023-05-04]$\square$
 :::
 
 ### Der Implizite Assoziationstest
@@ -947,7 +947,7 @@ Im Anhang des Papers listen Sie die Items, geordnet nach Subskalen, auf.
 
 
 Eine weitere Möglichkeit stellt der *Computer Attitude Questionnaire (CAQ)* dar, 
-die die Einstellung von Schülern zu Computern, inkl. Computerängstlichkeit, misst.^[https://iittl.unt.edu/content/computer-attitude-questionnaire-caq]
+die die Einstellung von Schülern zu Computern, inkl. Computerängstlichkeit, misst.^[<https://iittl.unt.edu/content/computer-attitude-questionnaire-caq>]
 
 ### Persönlichkeitstests
 
@@ -1003,7 +1003,7 @@ Beispiele für solche Tests sind:
 ## Weiterführende Literatur
 
 
-moosbrugger_testtheorie_2012 bieten einen für Einsteiger geeigneten, dennoch breiten Überblick in die Testtheorie und Fragebogenkonstruktion; ähnliches gilt für Amelang2012.
+@moosbrugger_testtheorie_2012 bieten einen für Einsteiger geeigneten, dennoch breiten Überblick in die Testtheorie und Fragebogenkonstruktion; ähnliches gilt für @Amelang2012.
 
 
 
