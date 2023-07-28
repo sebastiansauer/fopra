@@ -643,7 +643,7 @@ Die Reaktionszeitsmessungen müssen mit einer Skriptsprache geschrieben werden, 
 Ein Stimulus (Plural: Stimuli) ist ein Objekt oder ein Ereignis für das die Reaktion (einer Versuchsperson) gemessen wird.$\square$
 :::
 
-Stimuli werden nicht gemessen, sind aber (u.U.) auch  *Operationalisierungen* eines Konstrukts.
+Stimuli werden nicht gemessen, sind aber (u.U.) auch  *Operationalisierungen* eines Konstrukts (das ist die Verbindung zu Messungen).
 
 :::{#exm-stimulus}
 Im Rahmen einer Studis soll positive Stimmung (in den Versuchspersonen) induziert werden. Dazu werden die Versuchspersonen instruiert, 6 Erlebnisse aufzuschreiben, in denen ihnen etwas gut gelungen ist.$\square$
@@ -663,10 +663,54 @@ Für Töne gibt es ähnliche Sammlungen [@redondo_affective_2008, @yang_affectiv
 eine breite Sammlung an Audio-Daten nützlich für psychologische Studien, u.a. mit emotionalem Gehalt, findet sich z.B. [hier](https://towardsdatascience.com/40-open-source-audio-datasets-for-ml-59dc39d48f06).
 
 
+### Videos
+
+Videos können eine komfortable Möglichkeit darstellen, 
+um Versuchspersonen zu einem Stimulus zu exponieren.
+
+
+:::{#exr-furhat}
+### Empathischer Furhat
+
+
+Der soziale Roboter [Furhat](https://furhatrobotics.com/) ist gut geeignet, um die Reaktionen von Menschen gegenüber sozialen Robotern zu untersuchen.
+In einer studentischen Studie haben die Autorinnen, Jana Kahr und Tanja Beck, dies untersucht:
+
+>   Diese Studie befasst sich mit der Frage, ob ein virtueller sozialer Roboter durch verbal empathisches Verhalten das Erinnerungsvermögen und somit das Lernergebnis der Probanden positiv beeinflussen kann und ob diesen den sozialen Roboter auch als empathisch wahrnehmen.
+
+Leider fand sich kein klarer Effekt:
+
+
+>   Die Studie umfasst n=56 Probanden. Diesen wurde in zwei Gruppen ein Video, eines empathischen oder neutralen sozialen Roboters, welcher Informationen über künstliche Intelligenz vortrug, gezeigt. Die Abhängigen Variablen wurden durch einen Wissenstest und Items zur empfundenen Empathie gemessen. Entgegen der Erwartungen konnten die Ergebnisse jedoch keinen aussagekräftigen Effekt, weder auf das Erinnerungsvermögen noch auf die empfundene Empathie, aufweisen.
+
+:::
+
+
+:::: {.columns}
+
+::: {.column}
+
+{{< video img/Furhat_neutral.mp4 >}}
+
+Quelle: Jana Kahr und Tanja Beck
+
+:::
+
+
+
+::: {.column}
+
+{{< video img/Furhat_empatisch.mp4 >}}
+
+Quelle: Jana Kahr und Tanja Beck
+
+:::
+
+::::
 ### Animationen
 
 Für einige Forschungszwecke eignen sich Anminationen, etwa von Datenvisualisierung.
-Online finden sich viele Beispiele für animierte Diagramme, sowohl in Form von GIF-Bildern oder Web-Diagrammen^[zumeist auf Basis von JavaScript], die im Browser dynamisch bzw. animiert laufen.
+Online finden sich viele Beispiele für animierte Diagramme, sowohl in Form von GIF-Bildern oder Web-Diagrammen^[zumeist auf Basis von JavaScript], die im Browser dynamisch bzw. animiert laufen.^[Das ist praktisch, weil es keine zusätzliche Software erfordert.] 
 
 Zeitverläufe eignen sich vergleichsweise gut für Animationen.
 

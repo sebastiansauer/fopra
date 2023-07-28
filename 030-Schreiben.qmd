@@ -470,7 +470,7 @@ Ein Beispiel für eine Tabelle zur Untersuchung von Korrelation, die nach APA (V
 ![Ein Beispiel für eine Korrelationstabelle, formatiert nach APA7](img/tab-corr.jpg){#fig-corr1 width="50%"}
 
 Wenn Sie nach der Bayes-Methode arbeiten, so sind "Sternchen" oder p-Werte nicht nötig. 
-Stattdessen sind Konfidenzintervalle ausreichen (die die Information des p-Werts im Übrigen abdecken).
+Stattdessen sind Konfidenzintervalle ausreichend (die die Information des p-Werts im Übrigen abdecken).
 
 Die APA (v7) empfiehlt, die Einträge der Spalten i.d.R. zu zentrieren;
 eine Ausnahme ist die linke Spalte, deren Einträge linksbündig sein sollen.
@@ -505,11 +505,18 @@ in der Abbildung sind wesentliche Merkmale des APA-Formats hervorgehoben.
 ![Beispiel für eine APA-Tabelle](img/tab-apa.jpg){#fig-tab-apa width="50%"}
 
 Ein Beispiel für eine Tabelle mit Regressionsergebnissen finden Sie [hier](https://apastyle.apa.org/style-grammar-guidelines/tables-figures/sample-tables#regression).
-Übrigens: Die Ausgabe von `parameters` ist insgesamt APA konform, vgl. @tbl-m-bringtnixtin2-params.
+Übrigens: Die Ausgabe von `parameters` ist insgesamt APA-konform, vgl. @tbl-m-bringtnixtin2-params.
 
 :::{.callout-tip}
 Zur Formatierung von Tabellen und Abbildungen laut APA finden sich online viele Beispiele.$\square$
 :::
+
+
+:::{.callout-caution}
+### Häufiger Fehler
+Tabellen sollten nie als Screenshot in einen Bericht eingefügt werden.
+Häufig leider die optische Qualität (pixelig) und es ist nicht möglich, Werte aus der Tabelle zu kopieren.$\square$
+::::
 
 
 #### Abbildungen
