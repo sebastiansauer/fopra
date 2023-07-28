@@ -10,7 +10,7 @@
 ### Standort im Lernpfad
 
 @fig-ueberblick zeigt den Standort dieses Kapitels im Lernpfad und gibt damit einen Überblick über das Thema dieses Kapitels im Kontext aller Kapitel.
-
+Behalten Sie Ihren Fortschritt im Projektplan im Blick, s. @fig-projektplan.
 
 
 
@@ -161,7 +161,7 @@ diese Streuung nennt man Rauschen oder Fehlerstreuung.$\square$
 ```{r}
 #| echo: false
 #| label: fig-signal-noise
-#| fig-cap: Signal (Mittelwertsdifferenz) und Rauschen (Streuung innerhalb der Geschlechter)
+#| fig-cap: Signal (Mittelwertsdifferenz, Dreieck) und Rauschen (Streuung innerhalb der Geschlechter, Streuung der Punkte)
 
 library(pradadata)
 data("wo_men")

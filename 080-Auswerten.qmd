@@ -27,7 +27,7 @@ theme_set(theme_minimal())
 ### Position im Lernpfad
 
 Sie befinden sich im Abschnitt "Auswertung" in @fig-ueberblick.
-
+Behalten Sie Ihren Fortschritt im Projektplan im Blick, s. @fig-projektplan.
 
 
 

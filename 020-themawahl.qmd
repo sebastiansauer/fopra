@@ -29,6 +29,7 @@ theme_set(theme_minimal())
 ### Position im Lernpfad
 
 Sie befinden sich im Abschnitt "Themawahl" in @fig-ueberblick.
+Behalten Sie Ihren Fortschritt im Projektplan im Blick, s. @fig-projektplan.
 
 
 ## Vom Thema zur Forschungsfrage
@@ -217,38 +218,7 @@ Wenn Sie dranbleiben und sich weiter einarbeiten steigt Ihr Verständnis spiralf
 
 
 
-### Projektplanung
 
-Wie lange dauert es von "Start" bis "Ziel"? 
-@tbl-zeitplan überschlägt den Zeitbedarf grob und bricht in die wesentliche Arbeitsschritte herunter.
-
-
-```{r}
-#| echo: false
-#| tbl-cap: "Grober Zeitplan für Ihre empirische Seminararbeit"
-#| label: tbl-zeitplan
-
-d <- tribble(
-  ~Nr, ~Arbeitsschritt, ~Zeitbedarf, ~Kommentar,
-  "1", "Themenfindung und Literaturarbeit", "4 Wochen", "Integratives Sichten und Einarbeiten in Ihr Thema",
-  "2", "Versuchsplanung", "3 Wochen", "Planen des Forschungsdesigns inkl. der Messinstrumente",
-  "3", "Versuchsdurchführung", "2 Wochen", "Erheben der Daten",
-  "4", "Datenauswertung", "2 Wochen", "Statistik",
-  "5", "Berichtlegung", "3", "Zusammenschreiben und Finalisieren des Berichts"
-)
-knitr::kable(d)
-```
-
-
-Beachten Sie, dass die einzelnen Arbeitsschritte sich teilweise überlappen.
-
-Es können nur grobe Richtwerte angegeben werden, da die Zeiten je nach Thema, Person und Rahmenbedingungen variieren. Es bietet sich an, die Ergebnisse jedes Arbeitsschrittes in Rohform zu strukturieren und zu dokumentieren, so dass während der Berichtlegung nur noch ein Zusammenschreiben stattfindet.
-
-Tatsächlich ist ein großer Teil der Arbeit lesen und sich Gedanken machen - nicht schreiben. Denn sobald man weiß, was man schreiben soll, schreibt's sich auch schnell. Andernfalls ist es eine Qual. 🙅‍♀️ Don't do it.
-
-@fig-projektplan gibt Ihnen eine grobe Orientierung, welchen Zeitanteil Sie für die einzelnen, wesentlichen Arbeitsschritte bei der Durchführung Ihrer Studie (bzw. der Dokumentation dazu) Sie einplanen sollten.
-
-![Grober Zeitplan für die einzelnen Schritte Ihrer Arbeit](img/projektplan.jpg){#fig-projektplan width="75%"}
 
 
 ## Lesen
@@ -786,7 +756,7 @@ flowchart LR
 #| echo: false
 d <- tribble(
   ~"Sach-Hypothese", ~"O-Hypothese", ~"Statistische Hypothesen",
-  "Lernen und Note hängen zusammen", "Absolvieren der Lernaufgabe X und der Punktwert im Lerntest Y hängen zusammen", "r(X,Y) > 0",
+  "Lernen und Note hängen positiv zusammen", "Absolvieren der Lernaufgabe X und der Punktwert im Lerntest Y hängen gleichsinnig zusammen", "r(X,Y) > 0",
   "Wer viel joggt, hat wenig Körperfett", "In Bedingung 'Joggen' hatten die Teilnehmer einen geringen Körperfettanteil als in der Bedingung 'Sofa'", "MW (Joggen) < MW (Sofa)"
 )
 
@@ -798,7 +768,38 @@ kable(d)
 
 #### Sachhypothese
 
-Eine Sachhypothese kommt dem Alltagsverstädnis von Hypothese am nächsten. Man formuliert eine Behauptung in den Fachbegriffen des Themenfelds oder einer Theorie, z.B. "Tägliches Musizieren erhöht die Konzentrationsfähigkeit" "Ambiguitätstoleranz A und Frustrationsschwelle F hängen (positiv) zusammen"^[Wenn man behauptet, dass zwei Dinge zusammenhängen, so meint man oft implizit, dass sie gleichsinnig, also positiv zusammenhängen.] oder "Der Zusammenhang von Trait-Achtsamkeit und Stresslevel wird über die affektiven Reaktivität teilvermittelt". Beachten Sie, dass sich Sachhypothesen je nachdem wie sie formuliert sind, in ihrer Exaktheit unterscheiden können.
+Eine Sachhypothese kommt dem Alltagsverstädnis von Hypothese am nächsten. 
+Man formuliert eine Behauptung in den Fachbegriffen des Themenfelds oder einer Theorie, z.B. "Tägliches Musizieren erhöht die Konzentrationsfähigkeit",
+"Ambiguitätstoleranz A und Frustrationsschwelle F hängen (positiv) zusammen"^[Wenn man behauptet, dass zwei Dinge zusammenhängen, so meint man oft implizit, dass sie gleichsinnig, also positiv zusammenhängen.] 
+oder "Der Zusammenhang von Trait-Achtsamkeit und Stresslevel wird über die affektiven Reaktivität teilvermittelt". 
+Beachten Sie, dass sich Sachhypothesen je nachdem wie sie formuliert sind, in ihrer Exaktheit unterscheiden können.
+
+:::{.callout-important}
+Je präziser eine Hypothese formuliert ist (unter sonst gleichen Bedingungen^[das nennt man auch "[ceteris paribus](https://de.wikipedia.org/wiki/Ceteris_paribus)"]), desto besser ist die Hypothese.$\square$
+:::
+
+:::: {.columns}
+
+:::{.column width="40%"}
+**Gering** präzise
+
+Menschen vertrauen KI im generellen weniger, wenn sie in der Vergangenheit schon schlechte Erfahrungen gemacht haben, bzw. wenn sie in der Vergangenheit schon mal falsche Antworten erhalten haben
+:::
+
+::: {.column width="10%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="40%"}
+**Präziser**
+
+Je schlechter die Erfahrungen mit KI, desto geringer das Vertrauen in KI.
+
+:::
+
+
+::::
+
 
 #### Operationalisierte Hypothese
 
@@ -810,13 +811,17 @@ Eine statistische Hypothese gibt die "Zahlenbasis" an, anhand derer die Bestäti
 
 
 
-Beispiele für statistische Hypothesen:
+
+:::{#exm-stat-hyp}
+### Statistische Hypothesen
 
 - $\mu_1 > \mu_2$: "Der Mittelwert 1 ist größer als der Mittelwert 2". Welche Variable und welche sonstigen Randbedingungen (Annahmen) sich hinter $\mu$ verbergen, muss anderer Stelle erläutert sein.
 - $\mu > 42$: "Der Mittelwert ist größer als 42".
 - $R^2 > 0.23$: "Die erklärte Varianz laut $R^2$ ist größer als 23%".
 - $\rho > 0$: "Es gibt einen positiven Zusammenhang (gemessen mit der Pearson-Korrelation)."
-- $\beta_1 > 0$: "Der Regressionskoeffizient 1 ist positiv". Das zugrundeliegende Regressionsmodell muss an anderer Stelle definiert seinh.
+- $\beta_1 > 0$: "Der Regressionskoeffizient 1 ist positiv". Das zugrundeliegende Regressionsmodell muss an anderer Stelle definiert sein.
+- $r(E, V) > 0$: "Es gibt eine positive Korrelation von negativer Erfahrung mit KI und Vertrauen in KI"
+:::
 
 
 Mit einer Formel kann man einen komplexen Sachverhalt oft prägnanter und präziser formulieren als mit Worten.
@@ -830,19 +835,30 @@ Häufig werden folgende Koeffizienten in Hypothesen untersucht:  Mittelwerte bzw
 :::
 
 
+
+
+
 ### Nullhypothesen (H0 ) testen
 
 
 Leider sind viele Theorien in den Sozialwissenschaften (aber nicht in der Physik) zu schwach (unpräzise), um genaue Vorhersagen zu machen.
-Eine totale Sonnenfinsternis für einen bestimmten Tag und einem bestimmten Ort vorherzusagen, ist eine unpräzise Hypothese. Man spricht auch von einem geringem empirisichen Gehalt.
+Eine totale Sonnenfinsternis für einen bestimmten Tag und einem bestimmten Ort vorherzusagen, ist eine unpräzise Hypothese. 
+Man spricht auch von einem geringem empirischen Gehalt.
 Vorherzusagen, dass Männer in einem von vielen Kriterien einen höheren Mittelwert aufweisen als Frauen, hat ebenfalls einen geringen empirischen Gehalt.
-Je höher der empirische Gehalt, desto falsifizierbarer die Hypothese (und desto wertvoller).
-Je gewagter die Hypothese, desto leichter wäre sie zu falsifizieren, wenn sie falsch wäre.
-Eine häufige Form von Hypothesen ist (in geringer entwickelten Wissenschaftszweigen) ist daher die Nullhypothese: Der Unterschied zwischen Gruppe 1 und 2 ist größer als Null. Synonym: Gruppe 1 hat einen höheren Mittelwert als Gruppe 2. In mathematischer Notation: X1 > X2.
+Je höher der empirische Gehalt, desto falsifizierbarer die Hypothese (und desto wertvoller die Hypothese^[ceteris paribus, wie so oft]).
+Je gewagter die Hypothese, desto leichter wäre sie zu falsifizieren, wenn sie falsch sein sollte.
+Eine häufige Form von Hypothesen ist (in geringer entwickelten Wissenschaftszweigen) ist daher die Nullhypothese: Der Unterschied zwischen Gruppe 1 und 2 ist größer als Null. 
+Synonym: Gruppe 1 hat einen höheren Mittelwert als Gruppe 2. In mathematischer Notation: X1 > X2.
 
 Die *Forschungshypothese* - Ihre Hypothese! -  ist fast immer das *Gegenteil* der Nullhypothese: Meist glaubt man, dass es einen Effekt gibt, dass ein Effekt eben nicht Null ist.
 Man prüft also, ob die Evidenz gegen die Nullhypothese bzw. zugunsten der Forschungshypothese spricht.
 Eine (sinnvolle) Variante des Nullhypothesentestens ist das ROPE-Verfahren: Rope: Region of practical equivalence, ein Bereich von „praktisch Null“, also ein vernachlässigbarer Unterschied, eine Differenz, so klein, dass sie als nicht praktisch relevant betracht wird [@kruschke_rejecting_2018].
+
+:::{.callou-note}
+Insgesamt ist das Testen von Nullhypothesen informationsärmer als das Schätzen von Parametern.
+Außerdem ist beim Parameterschätzen die Information, die ein (Null-)Hypothesentest birgt, schon enthalten. 
+Daher ist das Parameterschätzen (oft) dem reinen Hypothesentesten vorzuziehen.$\square$
+:::
 
 
 

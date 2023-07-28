@@ -200,7 +200,82 @@ gt::gt(timetable) |>
 
 
 
+### Projektplanung
 
+Wie lange dauert es von "Start" bis "Ziel"? 
+@tbl-zeitplan überschlägt den Zeitbedarf grob und bricht in die wesentliche Arbeitsschritte herunter.
+
+
+```{r}
+#| echo: false
+#| tbl-cap: "Grober Zeitplan für Ihre empirische Projektrarbeit"
+#| label: tbl-zeitplan
+
+d <- tibble::tribble(
+  ~Nr, ~Arbeitsschritt, ~Zeitbedarf, ~Kommentar,
+  "1", "Themawahl und Literaturarbeit", "5 Wochen", "Integratives Sichten und Einarbeiten in Ihr Thema",
+  "2", "Versuchsplanung", "4 Wochen", "Planen des Forschungsdesigns inkl. der Messinstrumente",
+  "3", "Versuchsdurchführung", "2 Wochen", "Erheben der Daten",
+  "4", "Datenauswertung", "3 Wochen", "Statistik",
+  "5", "Berichtlegung", "3 Wochen", "Zusammenschreiben und Finalisieren des Berichts"
+)
+knitr::kable(d)
+```
+
+
+Beachten Sie, dass die einzelnen Arbeitsschritte sich teilweise überlappen.
+
+Es können nur grobe Richtwerte angegeben werden, da die Zeiten je nach Thema, Person und Rahmenbedingungen variieren. 
+Es bietet sich an, die Ergebnisse jedes Arbeitsschrittes in Rohform zu strukturieren und zu dokumentieren, 
+so dass während der Berichtlegung nur noch ein Zusammenschreiben stattfindet.
+
+Tatsächlich ist ein großer Teil der Arbeit lesen und sich Gedanken machen - nicht schreiben. Denn sobald man weiß, was man schreiben soll, schreibt's sich auch schnell. Andernfalls ist es eine Qual. 🙅‍♀️ Don't do it.
+
+@fig-projektplan gibt Ihnen eine  Orientierung, welchen Zeitanteil Sie für die einzelnen, wesentlichen Arbeitsschritte bei der Durchführung Ihrer Studie (bzw. der Dokumentation dazu) Sie einplanen sollten.
+
+
+
+```{r}
+#| echo: false
+#| fig-cap: "Projektplan"
+#| label: fig-projektplan
+library(DiagrammeR)
+
+mermaid("
+gantt
+dateFormat  YYYY-MM-DD
+title Projektplan Forschungsprojekt
+
+section Theorie
+Themenwahl                    :               first_1,    2024-03-13, 21d
+Einlesen                      :               first_2,    2024-03-20, 28d
+Theorie schreiben             :               first_3,    2024-03-27, 21d
+
+section Empirie
+Studiendesign                 :               import_1,   after first_3, 14d
+Messinstrumente               :               import_2,   after import_1, 7d
+Stichprobe                    :               import_3,   after import_2, 7d
+Methode schreiben             :               import_4,   2024-05-01, 14d
+Erheben                       :               import_5,   after import_4, 14d
+Auswerten                     :               import_6,   2024-05-22, 14d
+
+section Abschluss
+Schreiben                     :               extras_1,   2024-05-29, 14d
+Finalisieren                  :               extras_2,   after extras_1, 7d
+
+")
+
+```
+
+
+Dieser Plan geht von ca. 15 Wochen Laufzeit (in tutto) aus mit Beginn in KW 11 (`w.11`) und Ende in KW 24 (`w.24`); 
+passen Sie den Plan ggf. auf Ihre Projektlaufzeit an.
+
+:::{.callout-caution}
+### Vorsicht vor Aufschieberitis
+Der häufigste Fehler (mit potenziell schwerwiegenden Folgen) in Projektarbeiten wie dieser ist, die Arbeit zu lange aufzuschieben.
+Das führt zu Stress gegen Ende der Projektlaufzeit - und mitunter zu (erheblichen) Qualitätseinbußen.$\square$
+:::
 
 
 
@@ -257,7 +332,7 @@ gt::gt(timetable) |>
 
 ## Quelltext
 
-Der Quelltext ist [hier](https://fopro.netlify.app/) zugänglich.
+Der Quelltext dieses Buchs ist [hier](https://fopro.netlify.app/) zugänglich.
 
 
 ## Technische Details
@@ -277,8 +352,5 @@ sessioninfo::session_info()
 ## Danke
 
 Dieses Dokument entstand mit Unterstützung vieler Kolleginnen und Kollegen aus der FOM Hochschule. Vielen Dank!
-
-## Literatur
-
 
 

@@ -29,7 +29,7 @@ theme_set(theme_minimal())
 ### Position im Lernpfad
 
 Sie befinden sich im Abschnitt "Messinstrumente" in @fig-ueberblick.
-
+Behalten Sie Ihren Fortschritt im Projektplan im Blick, s. @fig-projektplan.
 
 
 ### Benötigte R-Pakete und Daten

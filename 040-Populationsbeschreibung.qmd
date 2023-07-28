@@ -20,7 +20,7 @@ Ein Beispielstudie könnte das mittlere zur Verfügung stehende Finanzbudget von
 ### Standort im Lernpfad
 
 @fig-ueberblick zeigt den Standort dieses Kapitels im Lernpfad und gibt damit einen Überblick über das Thema dieses Kapitels im Kontext aller Kapitel.
-
+Behalten Sie Ihren Fortschritt im Projektplan im Blick, s. @fig-projektplan.
 
 
 
@@ -330,8 +330,8 @@ Wir befragen dazu die nächstbesten 100 Menschen am Hauptbahnhof, Samstagabend, 
 Ob wir mit einer Adhoc-Stichprobe (am Hauptbahnhof) die Population für X repräsentativ erfassen? 
 Vermutlich nicht, denn
 
-- Berufstätige sind womöglich überrepräsentiert, und ihr Handykonsum unterscheidet sich vielleicht von den Nicht-Berufstätigen 
-- Hiesige Menschen sind vermutlich am hiesigen Hauptbahnhof überrepräsentiert, und ihr Handykonsum unterscheidet sich vielleicht von den Nicht-Berufstätigen
+- Junge Menschen oder Nicht-Berufstätige sind womöglich überrepräsentiert in dieser Stichprobe, und ihr Handykonsum unterscheidet sich vielleicht deutlich von der Gesamtbevölkerung 
+- Hiesige Menschen sind vermutlich am hiesigen Hauptbahnhof überrepräsentiert, und ihr Handykonsum unterscheidet sich vielleicht von den Auswärtigen
 - ...
 
 -  Vermutlich gibt es weitere Verzerrungen (Konfundierungen, Kollisionsvariablen) die uns nicht bekannt sind, aber eine Rolle spielen$\square$

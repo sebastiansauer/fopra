@@ -26,10 +26,20 @@ This image and their code are taken from the [phantastic Spiro R package](https:
 
 
 
-### Blick zum Fahrplan
+### Blick zum Fahrplan und Projektplan
 
 Sie stehen am Anfang Ihrer Reise 😄.
-Wenn Sie es mir nicht glauben, werfen Sie einen Blick auf @fig-ueberblick.
+Wenn Sie es mir nicht glauben, werfen Sie einen Blick auf @fig-ueberblick und @fig-projektplan.
+
+
+
+>   😈 Welcher Rat führt am sichersten zu einer schlechten Note?
+
+>    👹 Ok, hier ist der Monster-Rat: "Lass dir Zeit, ach, dass kannst du nächste oder übernächste Woche auch noch erledigen, oder irgendwann halt!"^
+
+
+
+
 
 
 ## Zum Einstieg
@@ -553,4 +563,3 @@ Wer Lust hat auf einen Klassiker der Wissenschaftstheorie, der kommt an @popper_
 
 
 
-## Literatur

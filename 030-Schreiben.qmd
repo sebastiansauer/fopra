@@ -33,7 +33,7 @@ theme_set(theme_minimal())
 ### Position im Lernpfad
 
 Sie befinden sich im Abschnitt "Schreiben" in @fig-ueberblick.
-
+Behalten Sie Ihren Fortschritt im Projektplan im Blick, s. @fig-projektplan.
 
 ### Überblick
 
@@ -332,6 +332,7 @@ flowchart LR
 
 
 
+
 :::{#exm-theorie}
 ### Beispiel für den Aufbau eines Theorieteils: Statussymbole und Online-Dating
 
@@ -416,10 +417,11 @@ Folgende Unterkapitel bieten sich an:
 - Erläuterung des *Versuchsablaufs* von der Instruktion bis zur abschließenden  Aufklärung der  Untersuchungsteilnehmer nach Abschluss der Datenerhebung
 - Beschreibung der räumlichen und zeitlichen *Untersuchungsbedingungen*
 - *Versuchsplan* (Design): Benennen Sie explizit UV(s) und AV(s) sowie die Designart, z. B. *querschnittliche Beobachtungsstudie* oder *randomsiertes Between-Group-Experiment mit 2 UV und insgesamt 6 Gruppen*.
-
+- Abbildungen, die den Versuchsaufbau erläutern, können diesen Abschnitt bereichern.
 
 
 #### Analyse
+
 - Verwendete Analyse-*Software* (idealerweise mit Versionsnummer) wie R^[RStudio ist nur eine Benutzeroberfläche und daher irrelevant für die Ergebnisse) und (idealerweise) die R-Pakete
 - Software, die zur Reproduzierbarkeit nicht von Relevanz ist, braucht nicht angegeben zu werden (z.B. Word oder RStudio)
 - Skizzierung der *Analyse* in Bezug auf das statistische Vorgehen (wie z.B. Bayes-Methoden auf Basis von Stan oder Hinweise auf das Signifikanzniveau bei einer frequentistischen Analyse)
@@ -449,9 +451,9 @@ Technische Details wie das Aufbereiten von Daten (z.B. Umbenennen von Variablen 
 So können Sie Ihren Ergebnisteil gliedern:
 
 
-1. Allgemeine deskriptive Ergebnisse (noch nicht auf Hypothesen bezogen): Hier könnten Sie z.B. die Mittelwerte und Streuungen pro Gruppe berichten oder die Korrelationen der Variablen untereinander.
-2. Zentrale Ergebnisse pro Hypothese/für das Modell: Berichten der verwendeten Verfahren und der Statistiken zu den zentralen Ergebnissen.
-3. Ggf. sonstige explorative Ergebnisse: Ergebnisse also, die Sie nicht erwartet haben (d.h. nicht in den Hypothesen formuliert waren)
+1. Allgemeine *deskriptive* Ergebnisse (noch nicht auf Hypothesen bezogen): Hier könnten Sie z.B. die Mittelwerte und Streuungen pro Gruppe berichten oder die Korrelationen der Variablen untereinander.
+2. Zentrale Ergebnisse pro *Hypothese*/für das Modell: Berichten der verwendeten Verfahren und der Statistiken zu den zentralen Ergebnissen.
+3. Ggf. sonstige *explorative* Ergebnisse: Ergebnisse also, die Sie nicht erwartet haben (d.h. nicht in den Hypothesen formuliert waren)
 
 
 Im Ergebnisteil berichten Sie die Ergebnisse Ihrer empirischer Studie, statistische Kennzahlen in den meisten Fällen.
@@ -510,9 +512,9 @@ Zur Formatierung von Tabellen und Abbildungen laut APA finden sich online viele 
 :::
 
 
-#### Formatierung von Abbildungen
+#### Abbildungen
 
-Abbildungen sollten nur verwendet werden, wenn sie einen Mehrwert bieten.
+Abbildungen sollten nur verwendet werden, wenn sie einen Mehrwert bieten.^[Bilder von lachenden Modells, die sich die Hände schütteln, haben in der Regel keinen Platz in wissenschaftlichen Berichten. Falls aber doch Photos ergänzt werden sollten, so sind (u.a.) unbedingt die Urheberrechte zu beachten. Hier sind einige Quellen für Bilder/Photos mit (teilweise) permissiven Nutzungsbedinungen: [Pixabay](https://pixabay.com/service/license-summary/), [Unsplash](https://unsplash.com/plus/license), [Flickr](https://www.flickr.com/creativecommons/) oder [Wikimedia](https://commons.wikimedia.org/wiki/Category:Images)]
 Für eine einzelne Zahl oder für wenige Zahlen lohnt sich meist eine Abbildung nicht; es reicht, die Zahlen im Text anzuführen.
 
 Nach APA7 steht die Nummer der Abbildung über der Abbildung, z.B. "Abbildung 1"; es folgt kein Punkt.
@@ -546,6 +548,8 @@ R-Pakete zur Erstellung hochwertiger Diagramme
 
 Die Nummer der Abbildung fügen Sie von "Hand" hinzu (z.B. in Word).
 Zu beachten ist, dass die Statistiken in @fig-ggstatsplot1 laut APA als Anmerkung unter der Abbildung gestellt werden müssen, vgl. @fig-apa-format. Weitere Hinweise finden Sie [hier](https://apastyle.apa.org/style-grammar-guidelines/tables-figures/figures).
+
+
 
 
 

@@ -3,7 +3,7 @@
 
 
 Sie haben dieses Modul abgeschlossen. 
-
+Sie müssen Ihren Fortschritt im Projektplan nicht mehr im Blick behalten. 😄 
  
 {{< fa award >}}                      
  
