@@ -113,7 +113,7 @@ Zu solchen Daten gehören u.a. Name, Adresse, E-Mail-Adressen, Fingerabdruck, Ge
 >    🧑‍🎓 Warum ist "open data" eigentlich so wichtig?
 
 
->   Nullius in verba^[Motto der Royal Society, der ältesten Wissenschaftsgesellschaft] 
+>   👩‍🎤 Nullius in verba^[Motto der Royal Society, der ältesten Wissenschaftsgesellschaft] 
 
 -- Glaube etwas nicht bloß deshalb, weil jemand es behauptet.
 Stattdessen: Wissenschaft ist auf Nachprüfbarkeit gebaut, nicht auf blindem Glauben.

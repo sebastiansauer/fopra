@@ -61,7 +61,9 @@ Vergessen Sie nicht, dass Sie ggf. die Pakete zuerst (einmalig) installieren mü
 
 :::{#def-operat}
 ### Operationalisierung
-Operationalisierung ist der Vorgang des genauen Beschreibens, anhand welcher Operationen ein Konstrukt beobachtbar (im weiteren Sinne) und damit messbar gemacht wird. Da in der Pschologie die Variablen zumeist (per Definition) nicht direkt der Beobachtung zugänglich sind, kommt der Operationalisierung eine wichtige Rolle im Forschungsprozess zu.$\square$
+Operationalisierung ist der Vorgang des genauen Beschreibens, anhand welcher Operationen ein Konstrukt beobachtbar (im weiteren Sinne) und damit messbar gemacht wird. 
+Da in der Pschologie die Variablen zumeist (per Definition) nicht direkt der Beobachtung 
+zugänglich sind, kommt der Operationalisierung eine wichtige Rolle im Forschungsprozess zu.$\square$
 :::
 
 
@@ -121,7 +123,8 @@ dass die latente Variable die (einzige) Ursache der Werte (Streuung) in den Item
 :::{#exm-messmodell}
 ### Deutschsprachige Drive for Muscularity Scale (DMS)
 Die DMS [@waldorf_deutschsprachige_2016] sich als Maß für Muskulösitätsstreben etabliert.
-Das Instrument besteht aus zwei (korrelierten) Skalen: Muskulatur-bezogene Kognition und Muskulatur-bezogenes Verhalten; der Volltext und weitere Informationen findet sich [hier](https://zis.gesis.org/skala/Waldorf-Cordes-Vocks-McCreary-Deutschsprachige-Drive-for-Muscularity-Scale-(DMS)).
+Das Instrument besteht aus zwei (korrelierten) Skalen: 
+Muskulatur-bezogene Kognition und Muskulatur-bezogenes Verhalten; der Volltext und weitere Informationen findet sich [hier](https://zis.gesis.org/skala/Waldorf-Cordes-Vocks-McCreary-Deutschsprachige-Drive-for-Muscularity-Scale-(DMS)).
 Jedem der beiden Sckalen sind mehrere Items zugeordnet, s. @fig-dms.
 Die Zuordnung der Items zur jeweiligen Skala und ihre psychometrischen (statistischen) Eigenschaften definieren das jeweilige Messmodell.$\square$
 :::
@@ -217,6 +220,12 @@ Wie "gut" eine Operationalisierung ist, kann man empirisch prüfen.
 Dafür gibt es einige Kennzahlen, s. @sec-messguete.
 
 
+### Metrisches Niveau psychologischer Variablen
+
+Ob psychologische Variablen überhaupt metrisches Nivea aufweisen, insbesondere die Additivität der Ausprägungen, war (und ist) Gegenstand (angeregter) Debatte [@Michell1997, @Michell2003, Michell2005d].
+Ein Lichtblick ist vielleicht @Labovitz1970, der zeigte, dass eine ordinale Skala mit einer metrischen sehr hoch, $r>.95$ korreliert ist unter einem breiten Feld von Ausgangsbedingungen.
+Es scheint also, dass man optimistisch sein darf, dass psychologische Variablen sich (oft) so verhalten *als ob* sie metrisch wären.
+
 
 
 ## Fragebogen
@@ -286,7 +295,7 @@ Es gibt viele verschiedene Antwortformate [vgl. @Buhner2011]; eine gängige Vari
 Eine Rating- oder Beurteilungsskala präsentiert der Versuchsperson  Items mit einem Antwortformat,
 bei dem derjenige Punkte bzw. diejenige Antwortoption gewählt werden soll, die der Beurteilung der Versuchsperson am besten entspricht, vgl. @fig-likert.
 Eine gängige Variante von Ratingskalen sind Likert-Skalen.
-Items von Likert-Skalen sind Aussagen bei denen die Versuchspersonen den Grad Ihr Zustimmung bzw. Ablehnung ausdrücken^[in diskreten Stufen; bei stufenlos wählbaren Stufen spricht man von einer *visuellen Analogskala*. Visuelle Analogskalen sind entweder gleichwertig zu Likert-Skalen oder denen überlegen, wie einige Forschung konstatiert [@grant_comparison_1999]]. Generell gilt, dass höhere Zustimmung zu einem Item der Likert-Skala auf einen höheren Wert im zugrundliegenden Konstrukt geschlossen werden kann.$\square$
+Items von Likert-Skalen sind Aussagen bei denen die Versuchspersonen den Grad Ihrer Zustimmung bzw. Ablehnung ausdrücken, in einem bipolarem Format also^[in diskreten Stufen; bei stufenlos wählbaren Stufen spricht man von einer *visuellen Analogskala*. Visuelle Analogskalen sind entweder gleichwertig zu Likert-Skalen oder denen überlegen, wie einige Forschung konstatiert [@grant_comparison_1999]]. Generell gilt, dass höhere Zustimmung zu einem Item der Likert-Skala auf einen höheren Wert im zugrundliegenden Konstrukt geschlossen werden kann.$\square$
 :::
 
 
@@ -302,7 +311,7 @@ Gängige Antwortformate in Ratingskalen sind:
 3. Bewertung z.B. trifft gar nicht zu -- trifft eher nicht zu -- trifft eher zu -- trifft völlig zu 
 
 
-Man kann Antwortformate dahingehend unterscheiden, ob sie uni- oder bipolar aufgebaut sind:
+Man kann Antwortformate dahingehend unterscheiden, ob sie *uni- oder bipolar* aufgebaut sind:
 
 1. unipolar: z.B. nie -- selten -- gelegentlich -- oft -- immer
 2. bipolar: z.B. trifft überhaupt nicht zu (-2) -- (-1) -- (0) -- (+1) -- (+2) trifft voll und ganz zu
@@ -409,7 +418,7 @@ Selbst gestrickte (psychologische) Fragebögen sind meist problematisch, man sol
 :::
 
 
-Verwenden Sie möglichst keine selbst gestrickten Fragebögen/Items für psychologische Konstrukte: Gütekriterien eines Tests aus selbst gestrickten Items sind unbekannt oder oft fragwürdig.
+Verwenden Sie möglichst keine selbst gestrickten Fragebögen/Items für psychologische Persönlichkeitskonstrukte: Gütekriterien eines Tests aus selbst gestrickten Items sind unbekannt oder fragwürdig.
 Verwendet man eigene Messinstrumente (z. B. Fragebögen) so ist man für den Nachweise der Güte selber verantwortlich. Bei publizierten Verfahren kann man sich einfacher auf die Ergebnisse des publizierten Berichts berufen.
 Es ist z. B. fraglich, ob es sinnvoll/„erlaubt“ ist, einen Mittelwert von selbst gestrickten Items zu bilden: Item 1: „Meine Füße fühlen sich groß an“; Item 2: „Die letzten 10 Filme waren echt cool und die nächsten 10 Songs werden halb-cool sein oder spitze“. Was sagt der Mittelwert dieser beiden Items aus? Schwer zu sagen (nichts?!).
 
@@ -424,6 +433,18 @@ Nicht-psychologische Variablen bzw. beobachtbare Dinge sind viel einfacher zu ve
 
 Hier sind Beispiele für Variablen, die *einfach zu messen* sind, und daher für die Messung keiner besonderen Entwicklung oder Überprüfung bedürfen: Manifeste Variablen wie Körpergröße, Gewicht, Alter, Geschlecht, Herkunftsland.
 
+Wissenstests sind ebenfalls häufig gut selber entwickelbar.
+
+
+Die Qualität eines neuen, selbstentwickelten Messinstrument ist zu prüfen.
+Beispielhaft für einen Wissenstest seien folgende naheliegende Fragen genannt,
+die die Qualität eines Messverfahrens betreffen:
+
+- “Waren die Fragen auch nicht zu schwer? Vielleicht konnte ja niemand, in keiner Gruppe, die Fragen beantworten?"
+-  “Waren die Fragen auch nicht zu leicht? Vielleicht haben ja alle Versuchspersonen alle Fragen korrekt beantwortet?”
+- “Wenn alle Fragen auf ein und dasselbe Wissensgebiet abzielen, so sollten die Fragenantworten korrelieren. Tun sie das? Alle? Wie sehr?”
+
+Letztlich sind an Wissenstest die gleichen Qualitätsanforderungen zu stellen wie an andere Messinstrumentwe auch, s. @sec-messguete.
 
 
 
@@ -523,9 +544,12 @@ In der Regel macht es *wenig* Sinn, Cronbachs Alpha in der eigenen Stichprobe zu
 Der Grund liegt in der kleineren Stichprobe Ihrer Studie im Vergleich zur Validierungsstichprobe des Messintruments.
 Würde man diesen (oder jeden beliebigen anderen) Kennwert in einer kleineren anstelle einer größeren Stichprobe berechnen, so erhielte man einen ungenaueren ("verrauschten") Kennwert.
 
+Eine Ausnahme von dieser Regel ist, wenn Ihre Stichprobe groß ist oder wenn Sie ein bisher ungeprüftes Instrument verwenden.
+
 Eine statistisch aussagekräftigere Variante zu Cronbachs alpha ($\alpha$) ist McDonalds Omega ($\omega$) [@hayes_use_2020].
 
-In R bietet etwa das Paket [`psych`](https://rdrr.io/cran/psych/f/inst/doc/intro.pdf) Möglichkeiten, entsprechende Koeffizienten zu berechnen (mit dem Befehl `alpha`); s. [hier](https://sebastiansauer.github.io/umfragen-auswerten/itemanalyse.html).
+In R bietet etwa das Paket [`psych`](https://rdrr.io/cran/psych/f/inst/doc/intro.pdf) Möglichkeiten, 
+entsprechende Koeffizienten zu berechnen (mit dem Befehl `alpha`); s. [hier](https://sebastiansauer.github.io/umfragen-auswerten/itemanalyse.html).
 
 
 
@@ -546,9 +570,16 @@ Entspricht die beobachtete Korrelation der laut Theorie erwarteten,
 so ist dies als Beleg für die Validität des Verfahrens zu sehen.
 
 
+## Weitere Messverfahren
+
+Neben psychometrisch fundierten Messverfahren, die in der Psychologie häufig verwendet werden, gibt es noch eine Fülle weiterer Arten von Messverfahren.
+
+### Wissenstest
+
+Bei einem Wissenstest wird - wie in einer Klausur in der Schule - die Richtigkeit einer Antwort geprüft.
 
 
-## Implizites Messen
+### Implizites Messen
 
 Zur Messung von sozialpsychologischen oder persönlichkeitspsychologischen Konstrukten wird häufig auf eines von zwei Operationalisierungsarten zurückgegriffen:
 
@@ -560,7 +591,7 @@ Zur Messung von sozialpsychologischen oder persönlichkeitspsychologischen Konst
 Eine Messung eines psychologischen Konstrukts, die erhalten wird, während die zu bewertende Person nicht weiß, dass die Messung stattfindet, die häufig zur Bewertung von Einstellungen, Stereotypen und Emotionen in der sozialen Kognitionsforschung verwendet wird. Typischerweise wird ein implizites Maß als Antwortergebnis eines experimentellen Verfahrens bewertet, bei dem der Teilnehmer mit einer kognitiven Aufgabe beschäftigt ist. Beispielsweise könnte eine Wortstamm-Vervollständigungsaufgabe verwendet werden, um Emotionen implizit zu bewerten, so dass "jo_" vervollständigt werden könnte, um ein positives emotionales Wort (z. B. Joy) oder ein neutrales Wort (z. B. Joggen) zu bilden.^[Quelle: <https://dictionary.apa.org/implicit-measure>, 2023-05-04]$\square$
 :::
 
-### Der Implizite Assoziationstest
+#### Der Implizite Assoziationstest
 
 Der *Implizite Assoziationstest* (IAT) [@Greenwald1995] ist ein Verfahren zur Messung unbewusster Assoziation zwischen mentalen Repräsentationen von Objekten.
 Typische Anwendung ist die Messung von Vorurteilen.
@@ -569,7 +600,7 @@ Typische Anwendung ist die Messung von Vorurteilen.
 [IAT ausprobieren](https://implicit.harvard.edu/implicit/takeatest.html)
 
 
-### Fundort für implizite Verfahren 
+#### Fundort für implizite Verfahren 
 
 
 [Psytoolkit](https://www.psytoolkit.org/) erlaubt es, psychologische Experimente inkl. Reaktionszeit-Messungen zu entwickeln, kostenlos. Die Studien können direkt über die Plattform online gestellt werden.

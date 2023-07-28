@@ -74,8 +74,10 @@ Häufig verfolgt so eine Studie das Ziel, die Wirkung der Einwirkung auf die Ver
 :::
 
 
-
 Interventionelle Studien werden in der Regel mit dem Ziel der *Explikation*,^[auch als *Explanation* bezeichnet] zumeist im kausalen Sinne, eingesetzt.
+
+
+
 
 :::{#def-beob}
 ### Beobachtungsstudie
@@ -508,22 +510,30 @@ Wenn möglich sollte ein Within-Subject-Design - in der Variante mit Kontrolle d
 
 
 
-### Experiment als Königsweg
+### Experiment als Königsweg {#sec-exp}
 
 
 
-Das Experiment ist eine Sonderform einer Interventionsstudie, die folgende Kriterien erfüllt:
+
+:::{#def-exp}
+### Experiment
+Ein Experiment (im engen Sinne des Wortes) ist ein Spezialfall einer interventionellen Studie. Es hat Explikation als epistemologisches Ziel, zumeist in Form einer Kausalaussage.
+Methodisch zeichnet es sich durch folgende Merkmale aus:
 
 - *Kausalmodell*: Trennung mindestens einer unabhängigen Variablen (UV) von einer abhängigen Variablen (AV), wobei die AV gemäß der zu prüfenden Hypothese von der UV (kausal) beeinflusst wird.
-- *Intervention*: Systematische Variation bzw. Manipulation der UV, um ihre Auswirkung auf die AV zu beobachten
-- *Kontrolle*: Kontrolle anderer Einflussfaktoren („Störvariablen“) auf die AV
+- *Intervention*: Systematische Variation bzw. Manipulation der Einflussgrößen (UV), um ihre Auswirkung auf die AV zu beobachten (Experimental- vs. Kontrollgruppe)
+- *Kontrolle und Standardisierung*: Kontrolle anderer Einflussfaktoren („Störvariablen“) auf die AV
 - *Randomisierung*: Zufällige Zuordnung von Versuchspersonen zu Versuchsbedingungen oder der Reihenfolge von Versuchsbedingungen
-
+:::
 
 
 :::{.callout-important}
-Wann immer Experimente ethisch unbedenklich bzw. vertretbar und praktisch durchführbar sind, stellen sie das Mittel der Wahl dar, um Kausalzusammenhänge zu prüfen.$\square$
+Wann immer Experimente ethisch unbedenklich bzw. vertretbar und praktisch durchführbar sind, stellen sie das Mittel der Wahl dar, um Kausalzusammenhänge zu prüfen. Experimente gelten als der "Königsweg" der Forschung.$\square$
 :::
+
+
+:::{#exm-Experimente}
+Zu den berühmtesten Experimente in der Psychologie zählen (u.a.) [Milgrams Experiment zum Autoritäteneinfluss](https://de.wikipedia.org/wiki/Stanley_Milgram), [Pavlovs Experimente zur klassischen Konditionierung](https://en.wikipedia.org/wiki/Ivan_Pavlov), [Aschs Konformitätsstudien](https://en.wikipedia.org/wiki/Asch_conformity_experiments) oder [Libets Experiment zum freien Willen](https://de.wikipedia.org/wiki/Benjamin_Libet).^[Bei [Wikipedia](https://en.wikipedia.org/wiki/Category:Psychology_experiments) findet sich eine Liste bekannter psychologischer Experimente.]
 
 
 
