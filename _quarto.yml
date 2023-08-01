@@ -27,6 +27,7 @@ book:
         - 070-Erheben.qmd
         - 075-kausal.qmd
         - 080-Auswerten.qmd
+        - 085-aufbereiten.qmd
         - 090-Modellieren.qmd
     - part: "Fertigstellen"
       chapters:
@@ -70,7 +71,7 @@ format:
     toc: true
     theme:
       light: lumen
-      dark: dakrly
+      dark: darkly
     css: styles.css
     number-sections: true
     df-print: paged

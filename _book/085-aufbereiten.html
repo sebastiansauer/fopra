@@ -1,0 +1,1587 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.433">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Forschungsprojekt - 12&nbsp; Auswerten: Grundlegende Datenanalyse</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./090-Modellieren.html" rel="next">
+<link href="./080-Auswerten.html" rel="prev">
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "Keine Treffer",
+    "search-matching-documents-text": "Treffer",
+    "search-copy-link-title": "Link in die Suche kopieren",
+    "search-hide-matches-text": "Zusätzliche Treffer verbergen",
+    "search-more-match-text": "weitere Treffer in diesem Dokument",
+    "search-more-matches-text": "weitere Treffer in diesem Dokument",
+    "search-clear-button-title": "Zurücksetzen",
+    "search-detached-cancel-button-title": "Abbrechen",
+    "search-submit-button-title": "Abschicken",
+    "search-label": "Suchen"
+  }
+}</script><link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><link rel="stylesheet" href="styles.css">
+</head>
+<body class="nav-sidebar floating">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./040-Populationsbeschreibung.html">Empirie</a></li><li class="breadcrumb-item"><a href="./085-aufbereiten.html"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Auswerten: Grundlegende Datenanalyse</span></a></li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="./">Forschungsprojekt</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Dunkelmodus umschalten"><i class="bi"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Suchen"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+<li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
+ <span class="menu-text">Organisatorisches</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Hinweise</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./110-pruefung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Prüfung</span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
+ <span class="menu-text">Theorie</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./010-rahmen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Rahmen: Hallo Forschung!</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./020-themawahl.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Thema wählen</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./030-Schreiben.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Schreiben</span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
+ <span class="menu-text">Empirie</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./040-Populationsbeschreibung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Beschreiben</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./050-Explikation.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Erklären</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./060-Messen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Messen</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./070-Erheben.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Erheben</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./075-kausal.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Kausalinferenz</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./080-Auswerten.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Auswerten: Überblick</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./085-aufbereiten.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Auswerten: Grundlegende Datenanalyse</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./090-Modellieren.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Auswerten: Modellieren</span></span></a>
+  </div>
+</li>
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">Fertigstellen</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./100-Statistiken-berichten.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Auswerten: Berichten von Statistiken</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./120-abschluss.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Abschluss</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./130-references.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">References</span></a>
+  </div>
+</li>
+      </ul>
+</li>
+    </ul>
+</div>
+</nav><div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Inhaltsverzeichnis</h2>
+   
+  <ul>
+<li>
+<a href="#lernsteuerung" id="toc-lernsteuerung" class="nav-link active" data-scroll-target="#lernsteuerung"><span class="header-section-number">12.1</span> Lernsteuerung</a>
+  <ul class="collapse">
+<li><a href="#lernziele" id="toc-lernziele" class="nav-link" data-scroll-target="#lernziele"><span class="header-section-number">12.1.1</span> Lernziele</a></li>
+  <li><a href="#position-im-lernpfad" id="toc-position-im-lernpfad" class="nav-link" data-scroll-target="#position-im-lernpfad"><span class="header-section-number">12.1.2</span> Position im Lernpfad</a></li>
+  <li><a href="#ben%C3%B6tigte-r-pakete-und-daten" id="toc-benötigte-r-pakete-und-daten" class="nav-link" data-scroll-target="#ben%C3%B6tigte-r-pakete-und-daten"><span class="header-section-number">12.1.3</span> Benötigte R-Pakete und Daten</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#daten-aufbereiten" id="toc-daten-aufbereiten" class="nav-link" data-scroll-target="#daten-aufbereiten"><span class="header-section-number">12.2</span> Daten aufbereiten</a>
+  <ul class="collapse">
+<li><a href="#brave-daten" id="toc-brave-daten" class="nav-link" data-scroll-target="#brave-daten"><span class="header-section-number">12.2.1</span> Brave Daten</a></li>
+  <li><a href="#eine-gesamttabelle" id="toc-eine-gesamttabelle" class="nav-link" data-scroll-target="#eine-gesamttabelle"><span class="header-section-number">12.2.2</span> Eine Gesamttabelle</a></li>
+  <li><a href="#zeilenweises-zusammenf%C3%BChren" id="toc-zeilenweises-zusammenführen" class="nav-link" data-scroll-target="#zeilenweises-zusammenf%C3%BChren"><span class="header-section-number">12.2.3</span> Zeilenweises zusammenführen</a></li>
+  <li><a href="#spaltenweises-zusammenf%C3%BChren" id="toc-spaltenweises-zusammenführen" class="nav-link" data-scroll-target="#spaltenweises-zusammenf%C3%BChren"><span class="header-section-number">12.2.4</span> Spaltenweises Zusammenführen</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#text-in-zahlen-umwandeln" id="toc-text-in-zahlen-umwandeln" class="nav-link" data-scroll-target="#text-in-zahlen-umwandeln"><span class="header-section-number">12.3</span> Text in Zahlen umwandeln</a>
+  <ul class="collapse">
+<li><a href="#hilfe-ich-habe-keine-zahlen" id="toc-hilfe-ich-habe-keine-zahlen" class="nav-link" data-scroll-target="#hilfe-ich-habe-keine-zahlen"><span class="header-section-number">12.3.1</span> Hilfe, ich habe keine Zahlen</a></li>
+  <li><a href="#introducing-parse_number" id="toc-introducing-parse_number" class="nav-link" data-scroll-target="#introducing-parse_number"><span class="header-section-number">12.3.2</span> Introducing <code>parse_number()</code></a></li>
+  <li><a href="#schleifen-befehl-auf-mehrere-spalten-anwenden" id="toc-schleifen-befehl-auf-mehrere-spalten-anwenden" class="nav-link" data-scroll-target="#schleifen-befehl-auf-mehrere-spalten-anwenden"><span class="header-section-number">12.3.3</span> Schleifen: Befehl auf mehrere Spalten anwenden</a></li>
+  </ul>
+</li>
+  <li><a href="#items-umkodieren" id="toc-items-umkodieren" class="nav-link" data-scroll-target="#items-umkodieren"><span class="header-section-number">12.4</span> Items umkodieren</a></li>
+  <li><a href="#item-labels-in-zahlen-umwandeln" id="toc-item-labels-in-zahlen-umwandeln" class="nav-link" data-scroll-target="#item-labels-in-zahlen-umwandeln"><span class="header-section-number">12.5</span> Item-Labels in Zahlen umwandeln</a></li>
+  <li><a href="#zeilen-f%C3%A4lle-l%C3%B6schen" id="toc-zeilen-fälle-löschen" class="nav-link" data-scroll-target="#zeilen-f%C3%A4lle-l%C3%B6schen"><span class="header-section-number">12.6</span> Zeilen (Fälle) löschen</a></li>
+  <li>
+<a href="#datenqualit%C3%A4t-pr%C3%BCfen" id="toc-datenqualität-prüfen" class="nav-link" data-scroll-target="#datenqualit%C3%A4t-pr%C3%BCfen"><span class="header-section-number">12.7</span> Datenqualität prüfen</a>
+  <ul class="collapse">
+<li><a href="#auf-dubletten-pr%C3%BCfen" id="toc-auf-dubletten-prüfen" class="nav-link" data-scroll-target="#auf-dubletten-pr%C3%BCfen"><span class="header-section-number">12.7.1</span> Auf Dubletten prüfen</a></li>
+  <li><a href="#auf-eingabefehler-pr%C3%BCfen" id="toc-auf-eingabefehler-prüfen" class="nav-link" data-scroll-target="#auf-eingabefehler-pr%C3%BCfen"><span class="header-section-number">12.7.2</span> Auf Eingabefehler prüfen</a></li>
+  <li><a href="#geringe-eingabequalit%C3%A4t" id="toc-geringe-eingabequalität" class="nav-link" data-scroll-target="#geringe-eingabequalit%C3%A4t"><span class="header-section-number">12.7.3</span> Geringe Eingabequalität</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#scores-berechnen" id="toc-scores-berechnen" class="nav-link" data-scroll-target="#scores-berechnen"><span class="header-section-number">12.8</span> Scores berechnen</a>
+  <ul class="collapse">
+<li><a href="#summen--und-mittelwerte" id="toc-summen--und-mittelwerte" class="nav-link" data-scroll-target="#summen--und-mittelwerte"><span class="header-section-number">12.8.1</span> Summen- und Mittelwerte</a></li>
+  <li><a href="#vertiefung-summen--vs.-mittelwertscores" id="toc-vertiefung-summen--vs.-mittelwertscores" class="nav-link" data-scroll-target="#vertiefung-summen--vs.-mittelwertscores"><span class="header-section-number">12.8.2</span> Vertiefung: Summen- vs.&nbsp;Mittelwertscores</a></li>
+  <li><a href="#berechnung-mit-r" id="toc-berechnung-mit-r" class="nav-link" data-scroll-target="#berechnung-mit-r"><span class="header-section-number">12.8.3</span> Berechnung mit R</a></li>
+  </ul>
+</li>
+  <li><a href="#standardisieren-mit-z-werten" id="toc-standardisieren-mit-z-werten" class="nav-link" data-scroll-target="#standardisieren-mit-z-werten"><span class="header-section-number">12.9</span> Standardisieren mit z-Werten</a></li>
+  <li>
+<a href="#daten-zusammenfassen-deskriptive-analyse" id="toc-daten-zusammenfassen-deskriptive-analyse" class="nav-link" data-scroll-target="#daten-zusammenfassen-deskriptive-analyse"><span class="header-section-number">12.10</span> Daten zusammenfassen (deskriptive Analyse)</a>
+  <ul class="collapse">
+<li><a href="#deskriptive-ergebnisse-darstellen" id="toc-deskriptive-ergebnisse-darstellen" class="nav-link" data-scroll-target="#deskriptive-ergebnisse-darstellen"><span class="header-section-number">12.10.1</span> Deskriptive Ergebnisse darstellen</a></li>
+  <li><a href="#korrelationen-darstellen" id="toc-korrelationen-darstellen" class="nav-link" data-scroll-target="#korrelationen-darstellen"><span class="header-section-number">12.10.2</span> Korrelationen darstellen</a></li>
+  </ul>
+</li>
+  </ul></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title">
+<span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Auswerten: Grundlegende Datenanalyse</span>
+</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header><section id="lernsteuerung" class="level2" data-number="12.1"><h2 data-number="12.1" class="anchored" data-anchor-id="lernsteuerung">
+<span class="header-section-number">12.1</span> Lernsteuerung</h2>
+<section id="lernziele" class="level3" data-number="12.1.1"><h3 data-number="12.1.1" class="anchored" data-anchor-id="lernziele">
+<span class="header-section-number">12.1.1</span> Lernziele</h3>
+<ul>
+<li>Sie können grundlegende Schritte der Datenaufbereitung in R durchführen.</li>
+<li>Sie können die typischen Schritte einer deskriptiven Datenanalyse durchführen in R.</li>
+<li>Sie können Grenzen Ihrer Auswertungsmethodik nennen.</li>
+</ul></section><section id="position-im-lernpfad" class="level3" data-number="12.1.2"><h3 data-number="12.1.2" class="anchored" data-anchor-id="position-im-lernpfad">
+<span class="header-section-number">12.1.2</span> Position im Lernpfad</h3>
+<p>Sie befinden sich im Abschnitt “Auswertung” in <a href="index.html#fig-ueberblick">Abbildung&nbsp;<span>1.2</span></a>. Behalten Sie Ihren Fortschritt im Projektplan im Blick, s. <a href="index.html#fig-projektplan">Abbildung&nbsp;<span>1.3</span></a>.</p>
+</section><section id="benötigte-r-pakete-und-daten" class="level3" data-number="12.1.3"><h3 data-number="12.1.3" class="anchored" data-anchor-id="benötigte-r-pakete-und-daten">
+<span class="header-section-number">12.1.3</span> Benötigte R-Pakete und Daten<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>
+</h3>
+<div class="cell" data-messagen="false" data-hash="085-aufbereiten_cache/html/unnamed-chunk-2_fa72599be5956ff031ba6e26dd50c040">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://easystats.github.io/easystats/">easystats</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://strengejacke.github.io/sjmisc/">sjmisc</a></span><span class="op">)</span>  <span class="co"># für row_means</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-hash="085-aufbereiten_cache/html/load-extra-web_5ed3f04fe1ad5bc8cba1f8f19aec4f92">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">data_url</span> <span class="op">&lt;-</span> <span class="st">"https://raw.githubusercontent.com/sebastiansauer/modar/master/datasets/extra.csv"</span></span>
+<span><span class="va">extra</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="va">data_url</span><span class="op">)</span>  <span class="co"># aus `{easystats}`</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section></section><section id="daten-aufbereiten" class="level2" data-number="12.2"><h2 data-number="12.2" class="anchored" data-anchor-id="daten-aufbereiten">
+<span class="header-section-number">12.2</span> Daten aufbereiten</h2>
+<p>Häufig sind Daten noch nicht “aufbereitet” und müssen noch “geputzt” oder “aufgeräumt” werden. Dazu gehören Schritte wie</p>
+<ul>
+<li>Daten umkodieren</li>
+<li>Daten aggregieren</li>
+<li>Daten gruppieren</li>
+<li>Fehlende Werte ersetzen</li>
+<li>Datenqualität prüfen</li>
+<li>Verteilungsformen prüfen</li>
+<li>Ausreißer behandeln</li>
+</ul>
+<p>Betrachten wir einige zentrale Aspekte dieser Schritte.</p>
+<section id="brave-daten" class="level3" data-number="12.2.1"><h3 data-number="12.2.1" class="anchored" data-anchor-id="brave-daten">
+<span class="header-section-number">12.2.1</span> Brave Daten</h3>
+<p>Wie muss eine Tabelle gestaltet sein, damit man sie gut in R importieren kann, bzw. gut damit weiterarbeiten kann?</p>
+<p><a href="https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989">Das ist eine gute Quelle</a> zu diesem Thema.</p>
+<p>Im Überblick sollten Sie auf Folgendes achten:</p>
+<ul>
+<li>Wenn Sie händisch Daten eintragen, hacken Sie das einfach in Excel sein.</li>
+<li>CSV-Dateien bieten sich als Datenformat an.</li>
+<li>Alternativ kann man auch Excel-Dateien in R importieren.</li>
+<li>Es muss genau eine Kopfzeile geben.</li>
+<li>Es darf keine Lücken geben (leere Zeilen oder Spalten oder Zellen).</li>
+<li>Vermeiden Sie Umlaute und Leerzeichen in den Variablennamen.</li>
+</ul>
+<p>Beachten Sie das Prinzip von “tidy data”:</p>
+<ul>
+<li>In jeder Zeile steht <em>eine Beobachtung</em>.</li>
+<li>In jeder Spalte steht <em>eine Variable</em>.</li>
+<li>In jeder Zelle steht <em>eine Wert</em>.</li>
+</ul></section><section id="eine-gesamttabelle" class="level3" data-number="12.2.2"><h3 data-number="12.2.2" class="anchored" data-anchor-id="eine-gesamttabelle">
+<span class="header-section-number">12.2.2</span> Eine Gesamttabelle</h3>
+<p>Sie haben die Daten anhand mehrerer Fragebogen erhoben? Oder Sie haben mehrere Gruppen untersucht? Jetzt haben Sie <em>mehrere</em> Datentabellen, die auf eine Analyse harren?</p>
+<p><em>Verheiraten</em> ist angesagt. Sie müssen <em>alle</em> Ihre Daten in <em>eine</em> Tabelle (Datensatz) bringen.</p>
+<p>Dazu kann man zwei Fälle unterscheiden:</p>
+</section><section id="zeilenweises-zusammenführen" class="level3" data-number="12.2.3"><h3 data-number="12.2.3" class="anchored" data-anchor-id="zeilenweises-zusammenführen">
+<span class="header-section-number">12.2.3</span> Zeilenweises zusammenführen</h3>
+<ol type="1">
+<li>
+<em>Jede Person</em> hat zwei (oder mehrere) Fragebögen ausgefüllt. In Datensatz A finden sich die ersten paar Variablen und in Datensatz B die restlichen Variablen. Aber in beiden Datensätzen kommen alle Personen vor.</li>
+</ol>
+<p>Etwas ausführlicher ist es im Folgenden dargestellt.</p>
+<p>Sagen wir, wir haben zwei Tabellen, die wir “untereinander” (also zeilenweise) “zusammenkleben” möchten:</p>
+<div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-3_b999148b11af7c01dc8986c1d4bbeb90">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">tab1</span> <span class="op">&lt;-</span> <span class="va">mtcars</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html">slice</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">16</span><span class="op">)</span></span>
+<span><span class="va">tab2</span> <span class="op">&lt;-</span> <span class="va">mtcars</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html">slice</a></span><span class="op">(</span><span class="fl">17</span><span class="op">:</span><span class="fl">32</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">mtcars_gesamt</span> <span class="op">&lt;-</span></span>
+<span>  <span class="va">tab1</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind_rows.html">bind_rows</a></span><span class="op">(</span><span class="va">tab2</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section><section id="spaltenweises-zusammenführen" class="level3" data-number="12.2.4"><h3 data-number="12.2.4" class="anchored" data-anchor-id="spaltenweises-zusammenführen">
+<span class="header-section-number">12.2.4</span> Spaltenweises Zusammenführen</h3>
+<ol start="2" type="1">
+<li>
+<em>In jeder Gruppe</em> wurde ein anderer Fragebogen ausgefüllt (z.B. weil Sie unterschiedliche experimentelle Gruppen untersucht haben). Sie haben also zwei Datensätze mit unterschiedlichen Personen (nämlich in Datensatz A die Personen der Gruppe A und in Datensatz B die Personen der Gruppe B). Aber in jedem Datensatz finden sich die gleichen Variablen.</li>
+</ol>
+<p>Sagen wir, wir haben zwei Tabellen, die wir “hintereinander kleben” möchten, also spaltenweise zusammenführen möchten:</p>
+<div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-4_9f2198932afbedaecea703b29a900ee9">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">tab1</span> <span class="op">&lt;-</span> <span class="va">mtcars</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">)</span></span>
+<span><span class="va">tab2</span> <span class="op">&lt;-</span> <span class="va">mtcars</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="fl">6</span><span class="op">:</span><span class="fl">11</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">mtcars_gesamt</span> <span class="op">&lt;-</span></span>
+<span>  <span class="va">tab1</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind_cols.html">bind_cols</a></span><span class="op">(</span><span class="va">tab2</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><a href="https://dplyr.tidyverse.org/reference/bind.html">Hier</a> findet sich auch ein nützliches Beispiel.</p>
+<p><em>Achtung</em> Diese Art des Zusammenfügens prüft <em>nicht</em>, ob die Sortierung der Tabellen identisch ist: Ob also die Zeile für “Schorsch” aus Tabelle 1 auch mit Schorschs Zeile aus Tabelle 2 zusammengefügt werden (und nicht etwas mit denen von Alois). Sie müssen also selber dafür sorgen, dass die Sortierung richtig ist. Alternativ könnten Sie mit einem <code>join</code> arbeiten, der die korrekte Sortierung für Sie übernimmt.</p>
+</section></section><section id="text-in-zahlen-umwandeln" class="level2" data-number="12.3"><h2 data-number="12.3" class="anchored" data-anchor-id="text-in-zahlen-umwandeln">
+<span class="header-section-number">12.3</span> Text in Zahlen umwandeln</h2>
+<section id="hilfe-ich-habe-keine-zahlen" class="level3" data-number="12.3.1"><h3 data-number="12.3.1" class="anchored" data-anchor-id="hilfe-ich-habe-keine-zahlen">
+<span class="header-section-number">12.3.1</span> Hilfe, ich habe keine Zahlen</h3>
+<p>Kennen Sie das? Sie haben eine Umfrage durchgeführt, Daten sind erhoben, puh, bald können Sie das Projekt abschließen.</p>
+<p>Jetzt haben Sie die Daten in R importiert, aber müssen zu Ihrem Schrecken feststellen, dass die Spalten (Variablen) die eigentlich Zahlen sein sollten, als <code>character</code>, Text also, formatiert sind in R.</p>
+<p>Anstelle der Zahl <code>5</code> steht in der Spalte also <code>"5"</code> (man beachte die Anführungszeichen, die anzeigen, dass es sich um einen Text handelt).</p>
+<p>Na toll.</p>
+<p>Mit Wörtern (Text) kann man nicht rechnen, und Sie rechnen doch so gern…</p>
+<p>R weigert sich standhaft, mit Text zu rechnen:</p>
+<div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-5_9e1983cd2b46fbe9a43e6a306a308044">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="st">"5"</span> <span class="op">+</span> <span class="st">"5"</span></span>
+<span><span class="co">## Error in "5" + "5": non-numeric argument to binary operator</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Hätten wir brave Zahlen, wäre alles paletti:</p>
+<div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-6_aa747d0d349246ac176176e3d70c4069">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fl">5</span><span class="op">+</span><span class="fl">5</span></span>
+<span><span class="co">## [1] 10</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Der Einfachheit halber erzeugen wir uns eine einfache Tabelle, mit ein paar Spalten, die <em>als Text</em> formatierte Zahlen enthalten:</p>
+<div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-7_05bb48f65ecc1c86c5e419191138053f">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">d</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>i01 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"1"</span>, <span class="st">"3"</span>, <span class="st">"4"</span><span class="op">)</span>,  <span class="co"># von 1 bis 4</span></span>
+<span>            i02 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"-2"</span>, <span class="st">"+3"</span>, <span class="st">"-1"</span><span class="op">)</span>,  <span class="co"># von -3 bis -3</span></span>
+<span>            i03 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"-2"</span>, <span class="st">"+2"</span>, <span class="st">"-1"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>  <span class="co"># als Faktorvariable formatiert</span></span>
+<span><span class="va">d</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["i01"],"name":[1],"type":["chr"],"align":["left"]},{"label":["i02"],"name":[2],"type":["chr"],"align":["left"]},{"label":["i03"],"name":[3],"type":["fct"],"align":["left"]}],"data":[{"1":"1","2":"-2","3":"-2"},{"1":"3","2":"+3","3":"+2"},{"1":"4","2":"-1","3":"-1"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+<p>Für diejenigen, die kompliziert mögen, ist hier noch eine <code>factor</code>-Spalte hinzugefügt. Erstmal ignorieren.</p>
+<p>Stellen Sie sich vor, die Tabelle ist ein Auszug aus Ihrer Umfrage, wobei <code>i01</code> das erste Item (Frage) Ihres Fragebogens darstellt etc.</p>
+<p>Wie kann man R beibringen, dass die fraglichen Spalte <code>i01</code> doch “in Wirklichkeit” Zahlen sind und kein Text?</p>
+<p>Welcher R-Befehl hilft hier?</p>
+</section><section id="introducing-parse_number" class="level3" data-number="12.3.2"><h3 data-number="12.3.2" class="anchored" data-anchor-id="introducing-parse_number">
+<span class="header-section-number">12.3.2</span> Introducing <code>parse_number()</code>
+</h3>
+<p><code><a href="https://readr.tidyverse.org/reference/parse_number.html">parse_number()</a></code> (aus <a href="https://tidyverse.tidyverse.org">tidyverse</a>) löst das Problem für Sie:</p>
+<div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-8_6c31fbdda8469e41b5568a13d373e560">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">d2</span> <span class="op">&lt;-</span> </span>
+<span>  <span class="va">d</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>i01 <span class="op">=</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/parse_number.html">parse_number</a></span><span class="op">(</span><span class="va">i01</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">d</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["i01"],"name":[1],"type":["chr"],"align":["left"]},{"label":["i02"],"name":[2],"type":["chr"],"align":["left"]},{"label":["i03"],"name":[3],"type":["fct"],"align":["left"]}],"data":[{"1":"1","2":"-2","3":"-2"},{"1":"3","2":"+3","3":"+2"},{"1":"4","2":"-1","3":"-1"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+<p>So würde es <em>in einigen Fällen</em> auch gehen:</p>
+<div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-9_5d3c88b02aea28f47a63ff928ef901fb">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">d</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>i01_r <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="va">i01</span><span class="op">)</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["i01"],"name":[1],"type":["chr"],"align":["left"]},{"label":["i02"],"name":[2],"type":["chr"],"align":["left"]},{"label":["i03"],"name":[3],"type":["fct"],"align":["left"]},{"label":["i01_r"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"-2","3":"-2","4":"1"},{"1":"3","2":"+3","3":"+2","4":"3"},{"1":"4","2":"-1","3":"-1","4":"4"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+<p>Aber wenn <code>i01</code> als <code><a href="https://rdrr.io/r/base/factor.html">factor()</a></code> formatiert ist, dann geht es nicht unbedingt.</p>
+<div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-10_2516dc99c022ca90a5e0968031f92d1c">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">d</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>i02_r <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">i02</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["i01"],"name":[1],"type":["chr"],"align":["left"]},{"label":["i02"],"name":[2],"type":["chr"],"align":["left"]},{"label":["i03"],"name":[3],"type":["fct"],"align":["left"]},{"label":["i02_r"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"-2","3":"-2","4":"2"},{"1":"3","2":"+3","3":"+2","4":"3"},{"1":"4","2":"-1","3":"-1","4":"1"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+<p>Hoppla! Die Zahlen passen nicht!</p>
+<p><code><a href="https://readr.tidyverse.org/reference/parse_number.html">parse_number()</a></code> verlangt als Input <code>character</code>, so dass Sie ggf. noch von <code>factor</code> auf <code>character</code> umformatieren müssen.</p>
+<div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-11_f28a66e0bf9dac7cb2200037db4d1b98">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">d</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>i03_r <span class="op">=</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/parse_number.html">parse_number</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/character.html">as.character</a></span><span class="op">(</span><span class="va">i03</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["i01"],"name":[1],"type":["chr"],"align":["left"]},{"label":["i02"],"name":[2],"type":["chr"],"align":["left"]},{"label":["i03"],"name":[3],"type":["fct"],"align":["left"]},{"label":["i03_r"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"-2","3":"-2","4":"-2"},{"1":"3","2":"+3","3":"+2","4":"2"},{"1":"4","2":"-1","3":"-1","4":"-1"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+<!-- ## Daten umkodieren  -->
+<!-- In einer Fragebogenstudie (oder vergleichbarer Studie) liegen in der Regel pro Respondent (allgemeiner: pro Beobachtung) eine Reihe von Antworten auf Fragebogen-Items vor.  -->
+<!-- Manchmal liegen die Antworten noch nicht als Zahl vor, sondern als Text, etwa "stimme eher zu".  -->
+<!-- Diese Antwort könnte auf einer vierstufigen Skala einer 3 entsprechen. Eine einfache Möglichkeit zum Umkodieren eröffnet das Paket `sjmisc`.  -->
+<!-- Als Beispielaufgabe soll der Wert "Frau" in 1 umkodiert werden und "Mann" in 0; übrige Werte sollen in `NA` kodiert werden. -->
+<!-- ```{r} -->
+<!-- data_rec <- extra %>%  -->
+<!--   rec(sex, rec = "Frau = 1; Mann = 0; else = NA") -->
+<!-- ``` -->
+<!-- Dabei wird eine neue Variable (Spalte) erzeugt, deren Namen der alten Variable entspricht, plus dem Suffix `_r`, in diesem Fall also `sex_r`. Man beachte, dass Textwerte (Strings) *nicht* in Anführungsstriche gesetzt werden müssen, nur der ganze "Rekodierungsterm" muss einmal in Anführungsstriche gesetzt werden. -->
+<!-- Prüfen wir das Ergebnis: -->
+<!-- ```{r} -->
+<!-- data_rec %>%  -->
+<!--   count(sex_r) -->
+<!-- ``` -->
+</section><section id="schleifen-befehl-auf-mehrere-spalten-anwenden" class="level3" data-number="12.3.3"><h3 data-number="12.3.3" class="anchored" data-anchor-id="schleifen-befehl-auf-mehrere-spalten-anwenden">
+<span class="header-section-number">12.3.3</span> Schleifen: Befehl auf mehrere Spalten anwenden</h3>
+<p>Wir können einen Befehl auf mehrere Spalten einer Tabelle anwenden, und zwar mit <code>across</code> (aus <code>tidyverse</code>):</p>
+<div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-12_60feb229a7acdcb0a8bfaa73e3893ade">
+<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">d</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/across.html">across</a></span><span class="op">(</span><span class="va">i01</span><span class="op">:</span><span class="va">i03</span>, <span class="va">as.character</span><span class="op">)</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["i01"],"name":[1],"type":["chr"],"align":["left"]},{"label":["i02"],"name":[2],"type":["chr"],"align":["left"]},{"label":["i03"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"1","2":"-2","3":"-2"},{"1":"3","2":"+3","3":"+2"},{"1":"4","2":"-1","3":"-1"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+<p>Neben <code>as.character</code> könnte <code>parse_number</code> ein Befehl sein, den man auf mehrere Spalten gleichzeitig anwenden will:</p>
+<div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-13_8461a422bf6de45e6bf2cdecdefe401a">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">d</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/across.html">across</a></span><span class="op">(</span><span class="va">i01</span><span class="op">:</span><span class="va">i03</span>, <span class="va">as.character</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/across.html">across</a></span><span class="op">(</span><span class="va">i01</span><span class="op">:</span><span class="va">i03</span>, <span class="va">parse_number</span><span class="op">)</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["i01"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["i02"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["i03"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"-2","3":"-2"},{"1":"3","2":"3","3":"2"},{"1":"4","2":"-1","3":"-1"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+<p>Natürlich müssen Sie <code>across</code> nicht verwenden; Sie können auch “von Hand” die Spalten einzeln beatmen und jeweils (pro Spalte) <code>as.character</code> und <code>parse_number</code> anwenden.</p>
+</section></section><section id="items-umkodieren" class="level2" data-number="12.4"><h2 data-number="12.4" class="anchored" data-anchor-id="items-umkodieren">
+<span class="header-section-number">12.4</span> Items umkodieren</h2>
+<p>In Fragebogen werden immer wieder Items <em>negativ</em> kodiert. Das bedeutet, dass sie gegenteilig zum messenden Konstrukt formuliert sind. Ist das Konstrukt Extraversion, so würde ein negatives Item im Sinne von Introversion kodiert sein. Ein Beispiel-Item für negative Kodierung wäre: “Ich bin ein Couch-Potato” oder “Ich bleibe am liebsten alleine zuhause.”</p>
+<p>Zuerst müssen wir die Anzahl der Antwortstufen wissen; diese Information findet sich in der Dokumentation der Skala (im “Manual” auch “Testdokumentation” oder “Benutzerhandbuch” genannt). Natürlich kann man prüfen, welche Antwortstufen die Respondenten gefunden haben, aber man wäre nicht sicher, ob auch alle möglichen Antworten ausgeschöpft wurden.</p>
+<p>Im vorliegenden Fall ist der Dokumentation des Instruments zu entnehmen, dass jedes Item vier Antwortstufen (Likertformat) aufweist. Likert-skalierte Items zeichnen sich dadurch aus, dass sie so formuliert sind, dass höhere Werte in der Antwortstufe mit höherer Ausprägung des zu messenden Konstrukts einher gehen.</p>
+<p>Beim Umkodieren wird das Item “auf den Kopf gestellt”: Der höchste Wert wird der kleinste, der zwei kleinste wird der zweitgrößte und so weiter. Im Schema sieht dies so aus:</p>
+<pre><code>1 --&gt; 4
+2 --&gt; 3
+3 --&gt; 2
+4 --&gt; 1</code></pre>
+<p>Zum Umkodieren der Werte negativ kodierter Items bietet sich die Funktion <code>recode_values</code> aus <code>easystats</code> an.</p>
+<div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-14_e7c8dfd3d702cb83a21c6692bf2cebe7">
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu">recode_values</span><span class="op">(</span>select <span class="op">=</span> <span class="va">i02r</span>, </span>
+<span>                recode <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>`1`<span class="op">=</span><span class="fl">4</span>, `2`<span class="op">=</span><span class="fl">3</span>, `3`<span class="op">=</span><span class="fl">2</span>, `4`<span class="op">=</span><span class="fl">1</span><span class="op">)</span>, </span>
+<span>                append <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/starts_with.html">starts_with</a></span><span class="op">(</span><span class="st">"i02"</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>In diesem Fall ist das Item <code>i02r</code> bereits umkodiert - genau wie alle Items im Datensatz die mit dem Suffix <code>r</code> gekennzeichnet sind. Daher war das Umkodieren hier nicht nötig - sogar falsch, um genau zu sein. Das diente nur zu Übungszwekcen. In anderen Situationen kann es aber nötig sein, Items umzukodieren. Vergessen Sie dann nicht, das Ergebnis als (neuen) Datensatz zu speichern.</p>
+</section><section id="item-labels-in-zahlen-umwandeln" class="level2" data-number="12.5"><h2 data-number="12.5" class="anchored" data-anchor-id="item-labels-in-zahlen-umwandeln">
+<span class="header-section-number">12.5</span> Item-Labels in Zahlen umwandeln</h2>
+<p>Eine ähnliche Sache wie das Umpolen von Items ist folgende Situation: Ihre Umfrage-Software spuckt als Item-Antworten die “Ankertexte” oder “Itemlabels” aus wie <em>stimme überhaupt nicht zu</em> oder <em>stimme voll und ganz zu</em>. Da man bekanntlich (höchstens) mit Zahlen aber nicht mit Texten rechnen kann, möchten Sie diese Itemlabels in Zahlen umwandeln. Das sieht dann ähnlich zu folgendem Wenn-Dann-Regel-Schema aus:</p>
+<pre><code>stimme voll und ganz zu --&gt; 4
+stimme eher zu --&gt; 3
+stimme eher nicht zu--&gt; 2
+stimme überhaupt nicht zu --&gt; 1</code></pre>
+<p>Dieses Umwandeln können Sie mit <code><a href="https://dplyr.tidyverse.org/reference/case_when.html">case_when()</a></code> vornehmen. <code><a href="https://dplyr.tidyverse.org/reference/case_when.html">case_when()</a></code> listet einfach Wenn-Dann-Regeln auf.</p>
+<p>Erzeugen wir uns mal ein paar Daten, um die Sache zu illustrieren:</p>
+<div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-15_b5d853be16579bd443a0452390ed5413">
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">d</span> <span class="op">&lt;-</span></span>
+<span>  <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>person_nr <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">3</span>,</span>
+<span>         i01 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"stimme überhaupt nicht zu"</span>, <span class="st">"stimmer eher zu"</span>, <span class="st">"stimme voll und ganz zu"</span><span class="op">)</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>So ähnlich würden also Ihre Daten aussehen.</p>
+<p>Jetzt zum Umwandeln:</p>
+<div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-16_00a52fcc1794be37b1a02d31497f9823">
+<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">d</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>i01_r <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/case_when.html">case_when</a></span><span class="op">(</span></span>
+<span>    <span class="va">i01</span> <span class="op">==</span> <span class="st">"stimme überhaupt nicht zu"</span> <span class="op">~</span> <span class="fl">1</span>,</span>
+<span>    <span class="va">i01</span> <span class="op">==</span> <span class="st">"stimmer eher nicht zu"</span> <span class="op">~</span> <span class="fl">2</span>,</span>
+<span>    <span class="va">i01</span> <span class="op">==</span> <span class="st">"stimme eher zu"</span> <span class="op">~</span><span class="fl">3</span>,</span>
+<span>    <span class="va">i01</span> <span class="op">==</span> <span class="st">"stimme voll und ganz zu"</span> <span class="op">~</span> <span class="fl">4</span></span>
+<span>  <span class="op">)</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["person_nr"],"name":[1],"type":["int"],"align":["right"]},{"label":["i01"],"name":[2],"type":["chr"],"align":["left"]},{"label":["i01_r"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"stimme überhaupt nicht zu","3":"1"},{"1":"2","2":"stimmer eher zu","3":"NA"},{"1":"3","2":"stimme voll und ganz zu","3":"4"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+<p>Die Syntax von <code><a href="https://dplyr.tidyverse.org/reference/case_when.html">case_when()</a></code> lautet:</p>
+<pre><code>case_when(Prüfung ~ Konsequenz,
+          Prüfung2 ~ Konsequenz)</code></pre>
+<p>Nur wenn <code>Prüfung</code> erfüllt ist (den Wert <code>TRUE</code> hat), dann wird <code>Konsequenz</code> ausgeführt. Ansonsten wird auf <code>Prüfung2</code> getestet, etc.</p>
+<p>Eine alternative Funktion des Umkodierens ist <code>recode_value()</code> aus <code>easystats</code> nutzen.</p>
+</section><section id="zeilen-fälle-löschen" class="level2" data-number="12.6"><h2 data-number="12.6" class="anchored" data-anchor-id="zeilen-fälle-löschen">
+<span class="header-section-number">12.6</span> Zeilen (Fälle) löschen</h2>
+<p>In jeder braven Tabelle steht pro Zeile (genau) ein Fall; mit “Fall”, auch als “Beobachtung” bezeichnet, ist ein Untersuchungsobjekt gemeint. Häufig sind das in der Psychologie Personen, es könnten aber auch z.B. Versuchsdurchgänge, Teams oder Firmen sein. Sagen wir, Sie möchten einen bestimmten Fall löschen. Der Einfachheit halber nehmen wir den ersten Fall der Tabelle <code>extra</code>. Hier hat jeder Fall schon eine “ID”, eine unique, also eineindeutige Zuordnung, das ist die Spalte <code>code</code>. Auch die Spalte <code>timestamp</code> taugt vermutlich für eine Zuordnung.</p>
+<p>In R könnten Sie die erste Zeile also anhand dieser ID-Spalte ansprechen und entsprechend filtern:</p>
+<div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-17_f78e5317678f15fc53c9d9e95d98a345">
+<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra_kurz</span> <span class="op">&lt;-</span></span>
+<span>  <span class="va">extra</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">ungroup</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">code</span> <span class="op">!=</span> <span class="st">"HSC"</span> <span class="op">|</span> <span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">code</span><span class="op">)</span><span class="op">)</span>  <span class="co"># ! ist die logische Verneinung</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Prüfen wir die Anzahl der Zeilen:</p>
+<div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-18_6fe59aa234ebdaaa05969c4d6029bf89">
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">extra_kurz</span><span class="op">)</span></span>
+<span><span class="co">## [1] 825</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">extra</span><span class="op">)</span></span>
+<span><span class="co">## [1] 826</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Falls Sie sich wundern: <code>filter(code != "HSC")</code> hätte zwar die Zeile, in der bei <code>code</code> der Wert <code>HSC</code> steht entfernt, aber auch <em>alle</em> Zeilen, in denen bei <code>code</code> <code>NA</code> steht. Darum haben wir die fehlenden Werte explizit drinnen gelassen. Die technischen Details für dieses vorsichitge Verhaltne von <code><a href="https://dplyr.tidyverse.org/reference/filter.html">filter()</a></code> finden sich <a href="https://stackoverflow.com/questions/28857653/removing-na-observations-with-dplyrfilter">hier</a>.</p>
+<p>Alternativ könnte man eine ID-Spalte ergänzen (oder auch falls man keine hat):</p>
+<div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-19_8fee7ae0a9900b6e63f122c61baa93f5">
+<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra2</span> <span class="op">&lt;-</span></span>
+<span>  <span class="va">extra</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">extra</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/relocate.html">relocate</a></span><span class="op">(</span><span class="va">id</span>, .before <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="co"># wir ziehen die ID-Variable an die erste Spalte</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Und jetzt können wir entspannt filtern:</p>
+<div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-20_8f479fb1153a467ea9094b39b95ba006">
+<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra_kurz</span> <span class="op">&lt;-</span></span>
+<span>  <span class="va">extra2</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">id</span> <span class="op">!=</span> <span class="fl">1</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<!-- ### Vertiefung: Duplikate entfernen -->
+</section><section id="datenqualität-prüfen" class="level2" data-number="12.7"><h2 data-number="12.7" class="anchored" data-anchor-id="datenqualität-prüfen">
+<span class="header-section-number">12.7</span> Datenqualität prüfen</h2>
+<p>Bevor wir die Daten interpretieren, müssen wir sie auf Herz und Nieren prüfen, ein Daten-Gesundheitscheck<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
+<p>Ein paar typische Probleme, die man immer wieder findet, und die wir gelöst haben wollen, sind:</p>
+<ul>
+<li>
+<em>Dubletten</em> (doppelte Zeilen/Fälle) in den Daten</li>
+<li>Eingabefehler (unplausible oder unmögliche Werte)</li>
+<li>
+<em>Geringe Eingabqualität</em>: Versuchspersonen haben “Blümchen gekreuzt”, also keine ernsthaften Antworten gegeben</li>
+<li>…</li>
+</ul>
+<section id="auf-dubletten-prüfen" class="level3" data-number="12.7.1"><h3 data-number="12.7.1" class="anchored" data-anchor-id="auf-dubletten-prüfen">
+<span class="header-section-number">12.7.1</span> Auf Dubletten prüfen</h3>
+<p>Betrachten wir der Einfachheit halber folgenden Datensatz, in dem die erste und zweite Zeile identisch sind; die zweite Zeile ist also eine Dublette. Die dritte Zeile ist unique.</p>
+<div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-21_28ad73cde08ffd057e8347bf9c2183d2">
+<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span></span>
+<span>  <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>id <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>,</span>
+<span>         x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"a"</span>, <span class="st">"a"</span>, <span class="st">"caskjld"</span><span class="op">)</span>,</span>
+<span>         y <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">5</span>, <span class="fl">5</span>, <span class="fl">3000</span><span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">df</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["id"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["x"],"name":[2],"type":["chr"],"align":["left"]},{"label":["y"],"name":[3],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"a","3":"5"},{"1":"2","2":"a","3":"5"},{"1":"3","2":"caskjld","3":"3000"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+</section><section id="auf-eingabefehler-prüfen" class="level3" data-number="12.7.2"><h3 data-number="12.7.2" class="anchored" data-anchor-id="auf-eingabefehler-prüfen">
+<span class="header-section-number">12.7.2</span> Auf Eingabefehler prüfen</h3>
+<p>Sagen wir, für Variable <code>x</code> ist nur ein einzelner Buchstabe erlaubt; alles andere ist ein Eingabe- oder sonstiger Fehler. Eine Variable vom Typ “Text” heißt in R <code>Character</code> oder <code>String</code>. Mit <code>str_length(x)</code> bekommt man entsprechend die Länge eines Strings. Hier prüfen wir, ob die String-Länge 1 ist, dann alles okay. Wenn die String-Länge von <code>x</code> (für eine bestimmte Zeile) ungleich 1 ist, dann nicht-okay:</p>
+<div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-22_48846c3a108e1fda3bce0f0c63f82684">
+<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df_check</span> <span class="op">&lt;-</span> </span>
+<span>  <span class="va">df</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>x_check_okay <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/case_when.html">case_when</a></span><span class="op">(</span></span>
+<span>    <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_length.html">str_length</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">==</span> <span class="fl">1</span> <span class="op">~</span> <span class="cn">TRUE</span>,</span>
+<span>    <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_length.html">str_length</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">!=</span> <span class="fl">1</span> <span class="op">~</span> <span class="cn">FALSE</span></span>
+<span>  <span class="op">)</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">df_check</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["id"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["x"],"name":[2],"type":["chr"],"align":["left"]},{"label":["y"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["x_check_okay"],"name":[4],"type":["lgl"],"align":["right"]}],"data":[{"1":"1","2":"a","3":"5","4":"TRUE"},{"1":"2","2":"a","3":"5","4":"TRUE"},{"1":"3","2":"caskjld","3":"3000","4":"FALSE"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+<p>Jetzt könnten wir alle “bösen” Zeilen rausschmeißen:</p>
+<div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-23_8e6c5318e503ddada4eac343bb195fd7">
+<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df2</span> <span class="op">&lt;-</span></span>
+<span>  <span class="va">df_check</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">x_check_okay</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">df2</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["id"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["x"],"name":[2],"type":["chr"],"align":["left"]},{"label":["y"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["x_check_okay"],"name":[4],"type":["lgl"],"align":["right"]}],"data":[{"1":"1","2":"a","3":"5","4":"TRUE"},{"1":"2","2":"a","3":"5","4":"TRUE"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+<p>Als Nächstes prüfen wir, ob <code>y</code>, eine metrische (numerische) Variable den richtigen Wertebereich hat. Sagen wir, Es sind nur positive Werte nicht größer als 5 erlaubt, also <code>0&lt;x&lt;=5</code>.</p>
+<div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-24_ee57835ace526611e3ef662ddb52203c">
+<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>y_check_okay <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/case_when.html">case_when</a></span><span class="op">(</span></span>
+<span>    <span class="fl">0</span><span class="op">&lt;</span><span class="va">y</span> <span class="op">&amp;</span> <span class="va">y</span><span class="op">&lt;=</span><span class="fl">5</span> <span class="op">~</span> <span class="cn">TRUE</span>,  <span class="co"># wenn y im erlaubten Wertebereich, dann okay</span></span>
+<span>    <span class="cn">TRUE</span> <span class="op">~</span> <span class="cn">FALSE</span>  <span class="co"># ansonsten: nicht-okay</span></span>
+<span>  <span class="op">)</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["id"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["x"],"name":[2],"type":["chr"],"align":["left"]},{"label":["y"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["y_check_okay"],"name":[4],"type":["lgl"],"align":["right"]}],"data":[{"1":"1","2":"a","3":"5","4":"TRUE"},{"1":"2","2":"a","3":"5","4":"TRUE"},{"1":"3","2":"caskjld","3":"3000","4":"FALSE"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+<p><code>case_when</code> arbeitet die Prüfbedingungen <em>zeilenweise</em> ab. Ist die erste Zeile (<code>0&lt;y &amp; y&lt;=5</code>) nicht erfüllt, dann können wir R sagen: “Immer nicht okay”, das erreichen wir mit <code>TRUE</code> (<code>TRUE</code> ist immer wahr) <code>~ FALSE</code> (<code>y_check_okay</code> wird auf <code>FALSE</code>) gesetzt.</p>
+<p>Im Anschluss könnten wir wieder die “bösen Zeilen” herausfiltern.</p>
+</section><section id="geringe-eingabequalität" class="level3" data-number="12.7.3"><h3 data-number="12.7.3" class="anchored" data-anchor-id="geringe-eingabequalität">
+<span class="header-section-number">12.7.3</span> Geringe Eingabequalität</h3>
+<p>Vielleicht hätte ihr Fragebogen nicht so lang sein sollen, 60 Minuten Befragung war dann wohl doch etwas viel.</p>
+<p>Erfahrungsgemäß verliert man pro Seite Fragebogen substanziell Versuchspersonen. Zehn Minuten sind für viele Menschen schon eine lange Befragung. Also: Beim nächsten Mal kürzer halten.</p>
+<p>Schlimmer noch als keine Antworten sind allerdings schlechte Antworten, wenn Versuchspersonen (aus Demotivation heraus) “Blümchen” kreuzen. Häufig bedeutet das, dass einfach immer die erste Antwortoption angekreuzt wird; das ist am einfachsten für die Versuchsperson.</p>
+<p>Wir stellen uns dabei Fragen wie:</p>
+<ul>
+<li>Hat eine Versuchsperson wenig (keine) Varianz in ihrem Antwortverhalten?</li>
+<li>Hat eine Versuchsperson viel mehr Varianz als die (allermeisten) anderen?</li>
+</ul>
+<p>Technisch gesprochen prüfen wir pro Person mehrere Spalten eines Datensatzes, etwa indem wir die Varianz berechnen. Eine Komplikation ist, dass Datensätze in R <em>spaltenweise</em> aufgebaut sind, wir aber das Ergebnis <em>pro Zeile</em> (Versuchsperson) haben möchten.</p>
+<div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-25_fbe92ef80bf1e9ff6d09f99c45c8f6e9">
+<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra2</span> <span class="op">&lt;-</span> </span>
+<span><span class="va">extra</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rowwise.html">rowwise</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>extra_var <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/cor.html">var</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/c_across.html">c_across</a></span><span class="op">(</span><span class="va">i01</span><span class="op">:</span><span class="va">i10</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> </span>
+<span></span>
+<span><span class="va">extra2</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">extra_var</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="va">extra_var</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["extra_var"],"name":[1],"type":["dbl"],"align":["right"]}],"data":[{"1":"0.0"},{"1":"0.1"},{"1":"0.1"},{"1":"0.1"},{"1":"0.1"},{"1":"0.1"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+<p>Aber was ist viel und was ist weniger Varianz in diesem Zusammenhang?</p>
+<p>Am besten schauen wir uns mal die typische Varianz der Itemantworten für diesen Datensatz an.</p>
+<div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-26_f03cd2f1f9022475f70ef5a275b5140a">
+<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://boxuancui.github.io/DataExplorer/">DataExplorer</a></span><span class="op">)</span></span>
+<span><span class="va">extra2</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">extra_var</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="http://boxuancui.github.io/DataExplorer/reference/plot_histogram.html">plot_histogram</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="085-aufbereiten_files/figure-html/unnamed-chunk-26-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>Auf dieser Basis könnte man Fälle (Versuchspersonen, d.h. Zeilen) entfernen, die keine Varianz oder eine Varianz höher als 1.75 aufweisen.</p>
+<div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-27_7613a05a47f5b95fa09850ec29ed0af5">
+<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra3</span> <span class="op">&lt;-</span></span>
+<span>  <span class="va">extra2</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">extra_var</span> <span class="op">&gt;</span> <span class="fl">0</span> <span class="op">&amp;</span> <span class="va">extra_var</span> <span class="op">&lt;</span> <span class="fl">1.76</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section></section><section id="scores-berechnen" class="level2" data-number="12.8"><h2 data-number="12.8" class="anchored" data-anchor-id="scores-berechnen">
+<span class="header-section-number">12.8</span> Scores berechnen</h2>
+<section id="summen--und-mittelwerte" class="level3" data-number="12.8.1"><h3 data-number="12.8.1" class="anchored" data-anchor-id="summen--und-mittelwerte">
+<span class="header-section-number">12.8.1</span> Summen- und Mittelwerte</h3>
+<p>In der Psychometrie werden komplexe Konstrukte wie etwa das Persönlichkeitsmerkmal Extraversion anhand mehrerer Indikatoren (meistens Items eines Fragebogens) gemessen. Um zu einem Personenwert für Extraversion zu gelangen, werden die Itemwerte im einfachsten Fall summiert. Alternativ kann man auch einen Mittelwert bilden. Dieses Aggregieren bietet den Vorteil, dass sich Messfehler (möglicherweise) herausmitteln. Außerdem versucht man so abzubilden, dass Extraversion aus mehreren unterschiedlichen Facetten besteht, die nicht mit einem einzelnen Item, sondern über mehrere unterschiedliche Items, erfasst werden. Viele Psychometriker sind skeptisch, wenn man versuchen würde, Extraversion mit der Frage “Wie extrovertiert sind Sie?” zu erfassen. Ihre Bedenken sind, dass Menschen die vielen Facetten von Extraversion nicht im Arbeitsgedächtnis vorhalten können. Fragt man hingegen nur einen kleinen Aspekt von Extraversion ab, trägt man der Breite des Konstrukts nicht Rechnung.</p>
+<p>Die Zusammenfassung der Itemwerte eines Konstrukts zu einem Mittelwert oder einem Summenwert bezeichnet man als <em>Score</em>.</p>
+<p>Ein einfaches Beispiel zur Berechnung des Extraversion-Summenscore:</p>
+<div class="cell" data-hash="085-aufbereiten_cache/html/extra-bsp1_4685dc89291c1a51d3f85d7ec43ddbec">
+<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra_bsp</span> <span class="op">&lt;-</span> <span class="va">extra</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">i01</span><span class="op">:</span><span class="va">i03</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html">slice_head</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">3</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>extra_sum <span class="op">=</span> <span class="va">i01</span> <span class="op">+</span> <span class="va">i02r</span> <span class="op">+</span> <span class="va">i03</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">extra_bsp</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["i01"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["i02r"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["i03"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["extra_sum"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"3","2":"3","3":"3","4":"9"},{"1":"2","2":"2","3":"1","4":"5"},{"1":"3","2":"4","3":"1","4":"8"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+<p>Der Wert von <code>extra_sum</code> berechnet sich jeweils als Summe der drei Itemwerte. Mit dem Mittelwert verhält es sich analog (s. <span class="quarto-unresolved-ref">?tbl-extra-score-mean</span>).</p>
+<div class="cell" data-hash="085-aufbereiten_cache/html/extra-bsp2_6a416744d47db6442df829e6f83b5f32">
+<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra_bsp</span> <span class="op">&lt;-</span> <span class="va">extra_bsp</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>extra_mean <span class="op">=</span> <span class="va">extra_sum</span> <span class="op">/</span> <span class="fl">3</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-hash="085-aufbereiten_cache/html/Extraversion-Score berechen_128247ca045257741b1a33b8353cf69f">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<caption>tbl-extra-score-mean </caption>
+<thead><tr class="header">
+<th style="text-align: right;">i01</th>
+<th style="text-align: right;">i02r</th>
+<th style="text-align: right;">i03</th>
+<th style="text-align: right;">extra_sum</th>
+<th style="text-align: right;">extra_mean</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">3.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1.67</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">2.67</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Praktischerweise gibt es Funktionen, die die Berechnung eines Scores noch weiter vereinfachen, zum Beispiel im Paket <code>sjmisc</code>: <code><a href="https://strengejacke.github.io/sjmisc/reference/row_sums.html">row_sums()</a></code> (Summenscore pro Person) und <code><a href="https://strengejacke.github.io/sjmisc/reference/row_sums.html">row_means()</a></code> (Mittelwert pro Person). Da Respondenten (meist Personen) in <em>Zeilen</em> stehen heißen die Befehle <code>row_XXX()</code>. Fragt sich noch, ob es mehr Sinn macht, einen Summenscore oder einen Mittelwert zu berechnen. Kurz gesagt macht es keinen großen Unterschied, solange es keine fehlenden Werte gibt. Gibt es aber fehlende Werte, sollte man Mittelwerte statt Summenwerte vorziehen.</p>
+</section><section id="vertiefung-summen--vs.-mittelwertscores" class="level3" data-number="12.8.2"><h3 data-number="12.8.2" class="anchored" data-anchor-id="vertiefung-summen--vs.-mittelwertscores">
+<span class="header-section-number">12.8.2</span> Vertiefung: Summen- vs.&nbsp;Mittelwertscores</h3>
+<p>Dazu ein erläuterndes Beispiel. Alois habe in einem Persönlichkeitstest mit 3 Items nur Item 1 beantwortet und zwar mit “3”, wobei Antwortstufen von 1 bis 4 vorgegeben waren. Vermutlich ist der Gesamtwert im Form des Summenscores von 3 zu klein, unterschätzt als Alois’ Wert. Schließlich hat er beim ersten Item die Antwort “3” gewählt, insofern ist es plausibel, dass er bei den anderen auch diese Option gewählt hätte. Somit hätte er insgesamt 9 Punkte (nicht 3) erzielt. Würden wir 3 als Gesamtwert (Summenscore) annehmen, so bedeutet das, das wir davon ausgehen, dass er im Schnitt “1” gewählt hat - Eine Annahme, die nicht sehr plausibel erscheint.</p>
+<p>Vergleichen wir das mit dem Mittelwert-Score. Jetzt lassen wir R die Rechenarbeit machen:</p>
+<div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-29_db1bef0e1fe37b295c56b8f2db96147b">
+<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">Alois</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">3</span>, <span class="cn">NA</span>, <span class="cn">NA</span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">Alois</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
+<span><span class="co">## [1] 3</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Der Mittelwert von Alois beträgt 3 – das passt genau zu unserer Argumentation von gerade (s. oben), dass 3 eine bessere Schätzung der Ausprägung der latenten Variable von Alois ist. Daher ist der Mittelwert dem Summenscore vorzuziehen.</p>
+<p>Ein anderer Vorteil des Mittelwerts ist, dass er etwas anschaulicher ist als der Summenscore: Ein Mittelwert von 3 (auf einer Skala von 1 bis 4) ist anschaulicher als eine Summe von 9 (bei drei Items). Wir werden daher den Mittelwert vorziehen.</p>
+</section><section id="berechnung-mit-r" class="level3" data-number="12.8.3"><h3 data-number="12.8.3" class="anchored" data-anchor-id="berechnung-mit-r">
+<span class="header-section-number">12.8.3</span> Berechnung mit R</h3>
+<div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-30_f836b98bd77ce245434717e410ee1ff0">
+<div class="sourceCode" id="cb34"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://strengejacke.github.io/sjmisc/reference/row_sums.html">row_means</a></span><span class="op">(</span><span class="va">i01</span><span class="op">:</span><span class="va">i10</span>, n <span class="op">=</span> <span class="fl">.90</span>, var <span class="op">=</span> <span class="st">"extra_avg"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">extra_avg</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html">slice_head</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["extra_avg"],"name":[1],"type":["dbl"],"align":["right"]}],"data":[{"1":"2.9"},{"1":"2.1"},{"1":"2.6"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+<p>Der Parameter <code>n</code> bei <code><a href="https://strengejacke.github.io/sjmisc/reference/row_sums.html">row_means()</a></code> gibt den Anteil der <em>nicht</em> fehlenden Werte (pro Zeile) wieder, damit ein Wert berechnet wird: Bei zu vielen fehlenden Werten (zu wenig Daten) pro Person wird sonst <code>NA</code> zurückgeliefert. Das ist sinnvoll, denn hat eine Person von 10 Items nur 1 Item beantwortet, so kann man wohl nicht zuverlässig sagen, dass Extraversion in seiner Breite zuverlässig geschätzt wird. Die Funktion fügt dem Datensatz eine Spalte hinzu, deren Name mit <code>var</code> angegeben wird.</p>
+</section></section><section id="standardisieren-mit-z-werten" class="level2" data-number="12.9"><h2 data-number="12.9" class="anchored" data-anchor-id="standardisieren-mit-z-werten">
+<span class="header-section-number">12.9</span> Standardisieren mit z-Werten</h2>
+<p>Man kann die Aussagekraft eines Mittelwerts noch erhöhen, in dem man ihn standardisiert, z.B. mit der z-Transformation. Das geht zum Beispiel so:</p>
+<div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-31_42d8efd3f61dd639c6b56934354a1b0a">
+<div class="sourceCode" id="cb35"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra_std</span> <span class="op">&lt;-</span> <span class="va">extra</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu">standardize</span><span class="op">(</span>select <span class="op">=</span> <span class="va">extra_mean</span>, append <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Die Funktion <code>standardize()</code> z-standardisiert eine oder mehrere angegebene Spalten. Setzt man den Schatler <code>append</code> auf <code>TRUE</code>, werden neue Spalten erzeugt, deren Namen gleich dem alten Namen plus dem Suffix <code>_z</code> entspricht. Betrachten wir die ersten drei Zeilen:</p>
+<div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-32_2d4922573fe980639edb8017bd0affb7">
+<div class="sourceCode" id="cb36"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra_std</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">extra_mean</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html">slice_head</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":["extra_mean"],"name":[1],"type":["dbl"],"align":["right"]}],"data":[{"1":"2.9"},{"1":"2.1"},{"1":"2.6"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+<p>Zu beachten ist, dass der Mittelwert der Stichprobe und deren Standardabweichung als Referenzwerte herangezogen wurden, nicht die entsprechenden Größen der Normierungsstichprobe.</p>
+</section><section id="daten-zusammenfassen-deskriptive-analyse" class="level2" data-number="12.10"><h2 data-number="12.10" class="anchored" data-anchor-id="daten-zusammenfassen-deskriptive-analyse">
+<span class="header-section-number">12.10</span> Daten zusammenfassen (deskriptive Analyse)</h2>
+<p>Damit es einfach bleibt, begrenzen wir uns auf ein paar Variablen.</p>
+<p>Sagen wir, das sind die Variablen, die uns interessieren:</p>
+<div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-33_da257d868fe6262171f86fe9bcd308fb">
+<div class="sourceCode" id="cb37"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra_corr_names</span> <span class="op">&lt;-</span> </span>
+<span><span class="va">extra</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">n_facebook_friends</span>, <span class="va">n_hangover</span>, <span class="va">age</span>, <span class="va">extra_single_item</span>, <span class="va">n_party</span>, <span class="va">extra_mean</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">extra_corr_names</span></span>
+<span><span class="co">## [1] "n_facebook_friends" "n_hangover"         "age"               </span></span>
+<span><span class="co">## [4] "extra_single_item"  "n_party"            "extra_mean"</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="deskriptive-ergebnisse-darstellen" class="level3" data-number="12.10.1"><h3 data-number="12.10.1" class="anchored" data-anchor-id="deskriptive-ergebnisse-darstellen">
+<span class="header-section-number">12.10.1</span> Deskriptive Ergebnisse darstellen</h3>
+<p>Sie können deskriptive Ergebnisse (Ihrer relevanten Variablen) z.B. so darstellen.</p>
+<div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-34_c6a31662ad77d30ec0425fca1ac64a6f">
+<div class="sourceCode" id="cb38"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/all_of.html">any_of</a></span><span class="op">(</span><span class="va">extra_corr_names</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu">describe_distribution</span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu">kable</span><span class="op">(</span>digits <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 22%">
+<col style="width: 8%">
+<col style="width: 9%">
+<col style="width: 7%">
+<col style="width: 6%">
+<col style="width: 7%">
+<col style="width: 10%">
+<col style="width: 10%">
+<col style="width: 4%">
+<col style="width: 12%">
+</colgroup>
+<thead><tr class="header">
+<th style="text-align: left;">Variable</th>
+<th style="text-align: right;">Mean</th>
+<th style="text-align: right;">SD</th>
+<th style="text-align: right;">IQR</th>
+<th style="text-align: right;">Min</th>
+<th style="text-align: right;">Max</th>
+<th style="text-align: right;">Skewness</th>
+<th style="text-align: right;">Kurtosis</th>
+<th style="text-align: right;">n</th>
+<th style="text-align: right;">n_Missing</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">n_facebook_friends</td>
+<td style="text-align: right;">532.61</td>
+<td style="text-align: right;">3704.48</td>
+<td style="text-align: right;">300.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">96055</td>
+<td style="text-align: right;">25.67</td>
+<td style="text-align: right;">662.76</td>
+<td style="text-align: right;">671</td>
+<td style="text-align: right;">155</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">n_hangover</td>
+<td style="text-align: right;">9.47</td>
+<td style="text-align: right;">30.72</td>
+<td style="text-align: right;">9.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">738</td>
+<td style="text-align: right;">17.54</td>
+<td style="text-align: right;">399.53</td>
+<td style="text-align: right;">800</td>
+<td style="text-align: right;">26</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">age</td>
+<td style="text-align: right;">25.50</td>
+<td style="text-align: right;">5.75</td>
+<td style="text-align: right;">6.0</td>
+<td style="text-align: right;">18.0</td>
+<td style="text-align: right;">54</td>
+<td style="text-align: right;">1.81</td>
+<td style="text-align: right;">4.39</td>
+<td style="text-align: right;">813</td>
+<td style="text-align: right;">13</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">extra_single_item</td>
+<td style="text-align: right;">2.79</td>
+<td style="text-align: right;">0.86</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">1.0</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">-0.27</td>
+<td style="text-align: right;">-0.60</td>
+<td style="text-align: right;">816</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">n_party</td>
+<td style="text-align: right;">17.38</td>
+<td style="text-align: right;">19.32</td>
+<td style="text-align: right;">19.0</td>
+<td style="text-align: right;">0.0</td>
+<td style="text-align: right;">150</td>
+<td style="text-align: right;">3.27</td>
+<td style="text-align: right;">16.10</td>
+<td style="text-align: right;">793</td>
+<td style="text-align: right;">33</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">extra_mean</td>
+<td style="text-align: right;">2.89</td>
+<td style="text-align: right;">0.45</td>
+<td style="text-align: right;">0.6</td>
+<td style="text-align: right;">1.2</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">-0.43</td>
+<td style="text-align: right;">-0.11</td>
+<td style="text-align: right;">822</td>
+<td style="text-align: right;">4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section id="korrelationen-darstellen" class="level3" data-number="12.10.2"><h3 data-number="12.10.2" class="anchored" data-anchor-id="korrelationen-darstellen">
+<span class="header-section-number">12.10.2</span> Korrelationen darstellen</h3>
+<p>In einer Umfrage erhebt man häufig mehrere Variablen, ein Teil davon oft <em>Konstrukte</em>. Es bietet sich in einem ersten Schritt an, die Korrelationen dieser Variablen untereinander darzustellen.</p>
+<section id="korrelationsmatrix" class="level4" data-number="12.10.2.1"><h4 data-number="12.10.2.1" class="anchored" data-anchor-id="korrelationsmatrix">
+<span class="header-section-number">12.10.2.1</span> Korrelationsmatrix</h4>
+<div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-35_96b267d53b11d20105990465f9093bab">
+<div class="sourceCode" id="cb39"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/all_of.html">any_of</a></span><span class="op">(</span><span class="va">extra_corr_names</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>  </span>
+<span>  <span class="fu">correlation</span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu">kable</span><span class="op">(</span>digits <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 15%">
+<col style="width: 10%">
+<col style="width: 24%">
+<col style="width: 8%">
+<col style="width: 15%">
+</colgroup>
+<thead><tr class="header">
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: right;">extra_mean</th>
+<th style="text-align: right;">n_party</th>
+<th style="text-align: right;">extra_single_item</th>
+<th style="text-align: right;">age</th>
+<th style="text-align: right;">n_hangover</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">n_facebook_friends</td>
+<td style="text-align: right;">0.05</td>
+<td style="text-align: right;">0.08</td>
+<td style="text-align: right;">0.07</td>
+<td style="text-align: right;">-0.03</td>
+<td style="text-align: right;">0.13</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">n_hangover</td>
+<td style="text-align: right;">0.06</td>
+<td style="text-align: right;">0.34</td>
+<td style="text-align: right;">-0.02</td>
+<td style="text-align: right;">-0.06</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">age</td>
+<td style="text-align: right;">-0.14</td>
+<td style="text-align: right;">-0.21</td>
+<td style="text-align: right;">-0.03</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">extra_single_item</td>
+<td style="text-align: right;">0.57</td>
+<td style="text-align: right;">0.06</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">n_party</td>
+<td style="text-align: right;">0.25</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<p>Sie möchten das Ergebnis als normalen R-Dataframe? Sie haben keine Lust auf dieses Rumgetue, sondern wollen das lieber als selber gerade ziehen. Also gut:</p>
+<div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-36_108c26f80660885c242d9fdad1115271">
+<div class="sourceCode" id="cb40"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cor_results</span> <span class="op">&lt;-</span> </span>
+<span><span class="va">extra</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/all_of.html">any_of</a></span><span class="op">(</span><span class="va">extra_corr_names</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>  </span>
+<span>  <span class="fu">correlation</span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">cor_results</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["Parameter"],"name":[1],"type":["chr"],"align":["left"]},{"label":["extra_mean"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["n_party"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["extra_single_item"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["age"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["n_hangover"],"name":[6],"type":["dbl"],"align":["right"]}],"data":[{"1":"n_facebook_friends","2":"0.04548507","3":"0.07809922","4":"0.06854083","5":"-0.03483500","6":"0.1273312","_rn_":"1"},{"1":"n_hangover","2":"0.05547249","3":"0.33639095","4":"-0.02383673","5":"-0.06301264","6":"NA","_rn_":"2"},{"1":"age","2":"-0.13775429","3":"-0.21080773","4":"-0.03009269","5":"NA","6":"NA","_rn_":"3"},{"1":"extra_single_item","2":"0.56806090","3":"0.05989951","4":"NA","5":"NA","6":"NA","_rn_":"4"},{"1":"n_party","2":"0.25486061","3":"NA","4":"NA","5":"NA","6":"NA","_rn_":"5"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+<p>Man kann sich die Korrelationsmatrix auch in der <em>Bayes-Geschmacksrichtung</em> ausgeben lassen:</p>
+<div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-37_fe24655945742ccdfaf02a80eab4c2d4">
+<div class="sourceCode" id="cb41"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/all_of.html">any_of</a></span><span class="op">(</span><span class="va">extra_corr_names</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>  </span>
+<span>  <span class="fu">correlation</span><span class="op">(</span>bayesian <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu">kable</span><span class="op">(</span>digits <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<colgroup>
+<col style="width: 26%">
+<col style="width: 15%">
+<col style="width: 10%">
+<col style="width: 24%">
+<col style="width: 8%">
+<col style="width: 15%">
+</colgroup>
+<thead><tr class="header">
+<th style="text-align: left;">Parameter</th>
+<th style="text-align: right;">extra_mean</th>
+<th style="text-align: right;">n_party</th>
+<th style="text-align: right;">extra_single_item</th>
+<th style="text-align: right;">age</th>
+<th style="text-align: right;">n_hangover</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">n_facebook_friends</td>
+<td style="text-align: right;">0.05</td>
+<td style="text-align: right;">0.08</td>
+<td style="text-align: right;">0.07</td>
+<td style="text-align: right;">-0.03</td>
+<td style="text-align: right;">0.12</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">n_hangover</td>
+<td style="text-align: right;">0.06</td>
+<td style="text-align: right;">0.33</td>
+<td style="text-align: right;">-0.02</td>
+<td style="text-align: right;">-0.06</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">age</td>
+<td style="text-align: right;">-0.14</td>
+<td style="text-align: right;">-0.21</td>
+<td style="text-align: right;">-0.03</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">extra_single_item</td>
+<td style="text-align: right;">0.57</td>
+<td style="text-align: right;">0.06</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">n_party</td>
+<td style="text-align: right;">0.25</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section><section id="korrelationsmatrizen-visualisieren" class="level4" data-number="12.10.2.2"><h4 data-number="12.10.2.2" class="anchored" data-anchor-id="korrelationsmatrizen-visualisieren">
+<span class="header-section-number">12.10.2.2</span> Korrelationsmatrizen visualisieren</h4>
+<p>Viele R-Pakete bieten sich an. Nehmen wir <a href="https://easystats.github.io/easystats/">easystats</a>.</p>
+<div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-38_4b5c9ba7d3b64e0ccfe0d77f869b559e">
+<div class="sourceCode" id="cb42"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/all_of.html">any_of</a></span><span class="op">(</span><span class="va">extra_corr_names</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>  </span>
+<span>  <span class="fu">correlation</span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Korrelationsmatrix, boa"</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="085-aufbereiten_files/figure-html/unnamed-chunk-38-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+
+
+</section></section></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><hr>
+<ol>
+<li id="fn1"><p>Haben ich eigentlich schon einmal erwähnt, dass Sie ggf. die Pakete zuerst (einmalig) installieren müssen, bevor Sie sie verwenden können?<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Sanity Check, hört sich cooler an<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Kopiert");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Kopiert");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="./080-Auswerten.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Auswerten: Überblick</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="./090-Modellieren.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Auswerten: Modellieren</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+</body></html>

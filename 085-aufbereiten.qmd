@@ -1,0 +1,818 @@
+# Auswerten: Grundlegende Datenanalyse
+
+
+
+```{r}
+#| echo: false
+library(ggplot2)
+theme_set(theme_minimal())
+```
+
+## Lernsteuerung
+
+
+### Lernziele
+
+- Sie können grundlegende Schritte  der Datenaufbereitung in R durchführen.
+- Sie können die typischen Schritte einer deskriptiven Datenanalyse durchführen in R.
+- Sie können Grenzen Ihrer Auswertungsmethodik nennen.
+
+
+
+### Position im Lernpfad
+
+Sie befinden sich im Abschnitt "Auswertung" in @fig-ueberblick.
+Behalten Sie Ihren Fortschritt im Projektplan im Blick, s. @fig-projektplan.
+
+
+
+### Benötigte R-Pakete und Daten^[Haben ich eigentlich schon einmal erwähnt, dass Sie ggf. die Pakete zuerst (einmalig) installieren müssen, bevor Sie sie verwenden können?]
+
+```{r}
+#| messagen: false
+library(tidyverse)
+library(easystats)
+library(sjmisc)  # für row_means
+```
+
+
+
+ 
+```{r load-extra-web, eval = TRUE}
+data_url <- "https://raw.githubusercontent.com/sebastiansauer/modar/master/datasets/extra.csv"
+extra <- read_csv(data_url)  # aus `{easystats}`
+```
+
+
+## Daten aufbereiten
+
+
+
+Häufig sind Daten noch nicht "aufbereitet" und müssen noch "geputzt" oder "aufgeräumt" werden. Dazu gehören Schritte wie
+
+- Daten umkodieren
+- Daten aggregieren
+- Daten gruppieren
+- Fehlende Werte ersetzen
+- Datenqualität prüfen
+- Verteilungsformen prüfen
+- Ausreißer behandeln
+
+Betrachten wir einige zentrale Aspekte dieser Schritte.
+
+
+### Brave Daten
+
+Wie muss eine Tabelle gestaltet sein,
+damit man sie gut in R importieren kann, bzw. gut damit weiterarbeiten kann?
+
+[Das ist eine gute Quelle](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989) zu diesem Thema.
+
+Im Überblick sollten Sie auf Folgendes achten:
+
+- Wenn Sie händisch Daten eintragen, hacken Sie das einfach in Excel sein.
+- CSV-Dateien bieten sich als Datenformat an.
+- Alternativ kann man auch Excel-Dateien in R importieren.
+- Es muss genau eine Kopfzeile geben.
+- Es darf keine Lücken geben (leere Zeilen oder Spalten oder Zellen).
+- Vermeiden Sie Umlaute und Leerzeichen in den Variablennamen.
+
+
+
+Beachten Sie das Prinzip von "tidy data":
+
+- In jeder Zeile steht *eine Beobachtung*.
+- In jeder Spalte steht *eine Variable*.
+- In jeder Zelle steht *eine Wert*.
+
+
+
+### Eine Gesamttabelle
+
+
+Sie haben die Daten anhand mehrerer Fragebogen erhoben?
+Oder Sie haben mehrere Gruppen untersucht?
+Jetzt haben Sie *mehrere* Datentabellen, die 
+auf eine Analyse harren?
+
+*Verheiraten* ist angesagt.
+Sie müssen *alle* Ihre Daten in *eine* Tabelle (Datensatz) bringen.
+
+Dazu kann man zwei Fälle unterscheiden:
+
+
+### Zeilenweises zusammenführen
+
+1. *Jede Person* hat zwei (oder mehrere) Fragebögen ausgefüllt. In Datensatz A finden sich die ersten paar Variablen und in Datensatz B die restlichen Variablen. Aber in beiden Datensätzen kommen alle Personen vor.
+
+
+
+
+
+Etwas ausführlicher ist es im Folgenden dargestellt.
+
+Sagen wir, wir haben zwei Tabellen, die wir "untereinander" (also zeilenweise) "zusammenkleben" möchten:
+
+
+```{r}
+tab1 <- mtcars %>% slice(1:16)
+tab2 <- mtcars %>% slice(17:32)
+
+mtcars_gesamt <-
+  tab1 %>% 
+  bind_rows(tab2)
+```
+
+
+
+
+### Spaltenweises Zusammenführen
+
+
+2. *In jeder Gruppe* wurde ein anderer Fragebogen ausgefüllt (z.B. weil Sie unterschiedliche experimentelle Gruppen untersucht haben). Sie haben also zwei Datensätze mit unterschiedlichen Personen (nämlich in Datensatz A die Personen der Gruppe A und in Datensatz B die Personen der Gruppe B). Aber in jedem Datensatz finden sich die gleichen Variablen.
+
+
+Sagen wir, wir haben zwei Tabellen, die wir "hintereinander kleben" möchten, also spaltenweise zusammenführen möchten:
+
+
+```{r}
+tab1 <- mtcars %>% select(1:5)
+tab2 <- mtcars %>% select(6:11)
+
+mtcars_gesamt <-
+  tab1 %>% 
+  bind_cols(tab2)
+```
+
+
+[Hier](https://dplyr.tidyverse.org/reference/bind.html) findet sich auch ein nützliches Beispiel.
+
+*Achtung* Diese Art des Zusammenfügens prüft *nicht*, 
+ob die Sortierung der Tabellen identisch ist:
+Ob also die Zeile für "Schorsch" aus Tabelle 1 auch mit Schorschs Zeile aus Tabelle 2 zusammengefügt werden (und nicht etwas mit denen von Alois).
+Sie müssen also selber dafür sorgen,
+dass die Sortierung richtig ist.
+Alternativ könnten Sie mit einem `join` arbeiten,
+der die korrekte Sortierung für Sie übernimmt.
+
+
+
+
+## Text in Zahlen umwandeln
+
+
+### Hilfe, ich habe keine Zahlen
+
+Kennen Sie das? Sie haben eine Umfrage durchgeführt, Daten sind erhoben, puh, bald können Sie das Projekt abschließen.
+
+Jetzt haben Sie die Daten in R importiert,
+aber müssen zu Ihrem Schrecken feststellen,
+dass die Spalten (Variablen) die eigentlich Zahlen sein sollten, 
+als `character`, Text also, formatiert sind in R.
+
+Anstelle der Zahl `5` steht in der Spalte also `"5"` (man beachte die Anführungszeichen, die anzeigen, dass es sich um einen Text handelt).
+
+Na toll.
+
+Mit Wörtern (Text) kann man nicht rechnen, und Sie rechnen doch so gern...
+
+R weigert sich standhaft, mit Text zu rechnen:
+
+```{r error = TRUE}
+"5" + "5"
+```
+
+Hätten wir brave Zahlen, wäre alles paletti:
+
+```{r}
+5+5
+```
+
+Der Einfachheit halber erzeugen wir uns eine einfache Tabelle, mit ein paar Spalten,
+die *als Text* formatierte Zahlen enthalten:
+
+```{r}
+library(tidyverse)
+
+d <- tibble(i01 = c("1", "3", "4"),  # von 1 bis 4
+            i02 = c("-2", "+3", "-1"),  # von -3 bis -3
+            i03 = factor(c("-2", "+2", "-1")))  # als Faktorvariable formatiert
+d
+```
+
+Für diejenigen, die kompliziert mögen, ist hier noch eine `factor`-Spalte hinzugefügt. Erstmal ignorieren.
+
+Stellen Sie sich vor, die Tabelle ist ein Auszug aus Ihrer Umfrage,
+wobei `i01` das erste Item (Frage) Ihres Fragebogens darstellt etc.
+
+
+Wie kann man R beibringen, 
+dass die fraglichen Spalte `i01` doch "in Wirklichkeit" Zahlen sind und kein Text?
+
+Welcher R-Befehl hilft hier? 
+
+### Introducing `parse_number()`
+
+`parse_number()` (aus `{tidyverse}`) löst das Problem für Sie:
+
+
+```{r}
+d2 <- 
+  d %>% 
+  mutate(i01 = parse_number(i01))
+d
+```
+
+So würde es *in einigen Fällen* auch gehen:
+
+```{r}
+d %>% mutate(i01_r = as.numeric(i01))
+```
+
+Aber wenn `i01` als `factor()` formatiert ist, dann geht es nicht unbedingt.
+
+```{r}
+d %>% mutate(i02_r = as.numeric(factor(i02)))
+```
+Hoppla! Die Zahlen passen nicht!
+
+`parse_number()` verlangt als Input `character`,
+so dass Sie ggf. noch von `factor` auf `character` umformatieren müssen.
+
+```{r}
+d %>% mutate(i03_r = parse_number(as.character(i03)))
+```
+
+
+
+<!-- ## Daten umkodieren  -->
+
+<!-- In einer Fragebogenstudie (oder vergleichbarer Studie) liegen in der Regel pro Respondent (allgemeiner: pro Beobachtung) eine Reihe von Antworten auf Fragebogen-Items vor.  -->
+<!-- Manchmal liegen die Antworten noch nicht als Zahl vor, sondern als Text, etwa "stimme eher zu".  -->
+<!-- Diese Antwort könnte auf einer vierstufigen Skala einer 3 entsprechen. Eine einfache Möglichkeit zum Umkodieren eröffnet das Paket `sjmisc`.  -->
+<!-- Als Beispielaufgabe soll der Wert "Frau" in 1 umkodiert werden und "Mann" in 0; übrige Werte sollen in `NA` kodiert werden. -->
+
+<!-- ```{r} -->
+<!-- data_rec <- extra %>%  -->
+<!--   rec(sex, rec = "Frau = 1; Mann = 0; else = NA") -->
+<!-- ``` -->
+
+<!-- Dabei wird eine neue Variable (Spalte) erzeugt, deren Namen der alten Variable entspricht, plus dem Suffix `_r`, in diesem Fall also `sex_r`. Man beachte, dass Textwerte (Strings) *nicht* in Anführungsstriche gesetzt werden müssen, nur der ganze "Rekodierungsterm" muss einmal in Anführungsstriche gesetzt werden. -->
+
+<!-- Prüfen wir das Ergebnis: -->
+
+<!-- ```{r} -->
+<!-- data_rec %>%  -->
+<!--   count(sex_r) -->
+<!-- ``` -->
+
+### Schleifen: Befehl auf mehrere Spalten anwenden
+
+Wir können einen Befehl auf mehrere Spalten einer Tabelle anwenden,
+und zwar mit `across` (aus `tidyverse`):
+
+```{r}
+d %>% 
+  mutate(across(i01:i03, as.character))
+```
+
+Neben `as.character` könnte `parse_number` ein Befehl sein,
+den man auf mehrere Spalten gleichzeitig anwenden will:
+
+```{r}
+d %>% 
+  mutate(across(i01:i03, as.character)) %>% 
+  mutate(across(i01:i03, parse_number))
+```
+
+
+Natürlich müssen Sie `across` nicht verwenden; Sie können auch "von Hand" die Spalten einzeln beatmen und jeweils (pro Spalte) `as.character` und `parse_number` anwenden.
+
+
+
+
+## Items umkodieren
+
+In Fragebogen werden immer wieder Items *negativ* kodiert. Das bedeutet, dass sie gegenteilig zum messenden Konstrukt formuliert sind. Ist das Konstrukt Extraversion, so würde ein negatives Item im Sinne von Introversion kodiert sein. Ein Beispiel-Item für negative Kodierung wäre: "Ich bin ein Couch-Potato" oder "Ich bleibe am liebsten alleine zuhause."
+
+Zuerst müssen wir die Anzahl der Antwortstufen wissen; diese Information findet sich in der Dokumentation der Skala (im "Manual" auch "Testdokumentation" oder "Benutzerhandbuch" genannt). Natürlich kann man prüfen, welche Antwortstufen die Respondenten gefunden haben, aber man wäre nicht sicher, ob auch alle möglichen Antworten ausgeschöpft wurden.
+
+Im vorliegenden Fall ist der Dokumentation des Instruments zu entnehmen, dass jedes Item vier Antwortstufen (Likertformat) aufweist. Likert-skalierte Items zeichnen sich dadurch aus, dass sie so formuliert sind, dass höhere Werte in der Antwortstufe mit höherer Ausprägung des zu messenden Konstrukts einher gehen.  
+
+Beim Umkodieren wird das Item "auf den Kopf gestellt": Der höchste Wert wird der kleinste, der zwei kleinste wird der zweitgrößte und so weiter. Im Schema sieht dies so aus:
+  
+  
+```
+1 --> 4
+2 --> 3
+3 --> 2
+4 --> 1
+```
+
+
+Zum Umkodieren der Werte negativ kodierter Items bietet sich die Funktion `recode_values` aus `easystats` an.
+
+
+```{r eval = FALSE}
+extra %>% 
+  recode_values(select = i02r, 
+                recode = list(`1`=4, `2`=3, `3`=2, `4`=1), 
+                append = TRUE) %>% 
+  select(starts_with("i02")) %>% 
+  head()
+```
+
+In diesem Fall ist das Item `i02r` bereits umkodiert - genau wie alle Items im Datensatz die mit dem Suffix `r` gekennzeichnet sind. 
+Daher war das Umkodieren hier nicht nötig - sogar falsch, um genau zu sein. 
+Das diente nur zu Übungszwekcen.
+In anderen Situationen kann es aber nötig sein, Items umzukodieren. 
+Vergessen Sie dann nicht, das Ergebnis als (neuen) Datensatz zu speichern.
+
+
+## Item-Labels in Zahlen umwandeln
+
+
+Eine ähnliche Sache wie das Umpolen von Items ist folgende Situation: Ihre Umfrage-Software spuckt als Item-Antworten die "Ankertexte" oder "Itemlabels" aus wie *stimme überhaupt nicht zu* oder *stimme voll und ganz zu*.
+Da man bekanntlich (höchstens) mit Zahlen aber nicht mit Texten rechnen kann,
+möchten Sie diese Itemlabels in Zahlen umwandeln.
+Das sieht dann ähnlich zu folgendem Wenn-Dann-Regel-Schema aus:
+
+  
+```
+stimme voll und ganz zu --> 4
+stimme eher zu --> 3
+stimme eher nicht zu--> 2
+stimme überhaupt nicht zu --> 1
+```
+
+Dieses Umwandeln können Sie  mit `case_when()` vornehmen.
+`case_when()` listet einfach Wenn-Dann-Regeln auf.
+
+Erzeugen wir uns mal ein paar Daten, 
+um die Sache zu illustrieren:
+
+
+
+```{r}
+d <-
+  tibble(person_nr = 1:3,
+         i01 = c("stimme überhaupt nicht zu", "stimmer eher zu", "stimme voll und ganz zu"))
+```
+
+So ähnlich würden also Ihre Daten aussehen.
+
+Jetzt zum Umwandeln:
+
+```{r}
+d %>% 
+  mutate(i01_r = case_when(
+    i01 == "stimme überhaupt nicht zu" ~ 1,
+    i01 == "stimmer eher nicht zu" ~ 2,
+    i01 == "stimme eher zu" ~3,
+    i01 == "stimme voll und ganz zu" ~ 4
+  ))
+```
+
+Die Syntax von `case_when()` lautet:
+
+```
+case_when(Prüfung ~ Konsequenz,
+          Prüfung2 ~ Konsequenz)
+```
+
+Nur wenn `Prüfung` erfüllt ist (den Wert `TRUE` hat), dann wird `Konsequenz` ausgeführt.
+Ansonsten wird auf `Prüfung2` getestet, etc.
+
+
+
+Eine alternative Funktion des Umkodierens ist `recode_value()` aus `easystats` nutzen.
+
+
+## Zeilen (Fälle) löschen
+
+In jeder braven Tabelle steht pro Zeile (genau) ein Fall;
+mit "Fall", auch als "Beobachtung" bezeichnet, ist ein Untersuchungsobjekt gemeint.
+Häufig sind das in der Psychologie Personen, es könnten aber auch z.B. Versuchsdurchgänge, Teams oder Firmen sein.
+Sagen wir, Sie möchten einen bestimmten Fall löschen.
+Der Einfachheit halber nehmen wir den ersten Fall der Tabelle `extra`.
+Hier hat jeder Fall schon eine "ID", eine unique, also eineindeutige Zuordnung,
+das ist die Spalte `code`. Auch die Spalte `timestamp` taugt vermutlich für eine Zuordnung.
+
+In R könnten Sie die erste Zeile also anhand dieser ID-Spalte ansprechen und entsprechend filtern:
+
+```{r}
+extra_kurz <-
+  extra %>% 
+  ungroup() %>% 
+  filter(code != "HSC" | is.na(code))  # ! ist die logische Verneinung
+```
+
+
+Prüfen wir die Anzahl der Zeilen:
+```{r}
+nrow(extra_kurz)
+nrow(extra)
+```
+
+
+Falls Sie sich wundern: `filter(code != "HSC")` hätte zwar die Zeile, in der bei `code` der Wert `HSC` steht entfernt, aber auch *alle* Zeilen, in denen bei `code` `NA` steht. 
+Darum haben wir die fehlenden Werte explizit drinnen gelassen. 
+Die technischen Details für dieses vorsichitge Verhaltne von `filter()` finden sich [hier](https://stackoverflow.com/questions/28857653/removing-na-observations-with-dplyrfilter).
+
+Alternativ könnte man eine ID-Spalte ergänzen (oder auch falls man keine hat):
+
+```{r}
+extra2 <-
+  extra %>% 
+  mutate(id = 1:nrow(extra)) %>% 
+  relocate(id, .before = 1) # wir ziehen die ID-Variable an die erste Spalte
+```
+
+Und jetzt können wir entspannt filtern:
+
+```{r}
+extra_kurz <-
+  extra2 %>% 
+  filter(id != 1)
+```
+
+
+
+
+<!-- ### Vertiefung: Duplikate entfernen -->
+
+
+## Datenqualität prüfen
+
+Bevor wir die Daten interpretieren, müssen wir sie auf Herz und Nieren prüfen,
+ein Daten-Gesundheitscheck^[Sanity Check, hört sich cooler an].
+
+Ein paar typische Probleme, die man immer wieder findet, und die wir gelöst haben wollen, sind:
+
+- *Dubletten* (doppelte Zeilen/Fälle) in den Daten
+- Eingabefehler (unplausible oder unmögliche Werte)
+- *Geringe Eingabqualität*: Versuchspersonen haben "Blümchen gekreuzt", also keine ernsthaften Antworten gegeben
+- ...
+
+
+
+### Auf Dubletten prüfen
+
+Betrachten wir der Einfachheit halber folgenden Datensatz, in dem die erste und zweite Zeile identisch sind; die zweite Zeile ist also eine Dublette.
+Die dritte Zeile ist unique.
+
+
+```{r}
+df <-
+  tibble(id = c(1, 2, 3),
+         x = c("a", "a", "caskjld"),
+         y = c(5, 5, 3000))
+
+df
+```
+
+
+
+### Auf Eingabefehler prüfen
+
+
+Sagen wir, für Variable `x` ist nur ein einzelner Buchstabe erlaubt; 
+alles andere ist ein Eingabe- oder sonstiger Fehler.
+Eine Variable vom Typ "Text" heißt in R `Character` oder `String`.
+Mit `str_length(x)` bekommt man entsprechend die Länge eines Strings.
+Hier prüfen wir, ob die String-Länge 1 ist, dann alles okay.
+Wenn die String-Länge von `x` (für eine bestimmte Zeile) ungleich 1 ist,
+dann nicht-okay:
+
+
+```{r}
+df_check <- 
+  df %>% 
+  mutate(x_check_okay = case_when(
+    str_length(x) == 1 ~ TRUE,
+    str_length(x) != 1 ~ FALSE
+  ))
+
+df_check
+```
+
+Jetzt könnten wir alle "bösen" Zeilen rausschmeißen:
+
+```{r}
+df2 <-
+  df_check %>% 
+  filter(x_check_okay)
+
+df2
+```
+
+
+
+Als Nächstes prüfen wir, ob `y`, eine metrische (numerische) Variable den richtigen Wertebereich hat.
+Sagen wir, Es sind nur positive Werte nicht größer als 5 erlaubt, also `0<x<=5`.
+
+
+```{r}
+df %>% 
+  mutate(y_check_okay = case_when(
+    0<y & y<=5 ~ TRUE,  # wenn y im erlaubten Wertebereich, dann okay
+    TRUE ~ FALSE  # ansonsten: nicht-okay
+  ))
+```
+
+`case_when` arbeitet die Prüfbedingungen *zeilenweise* ab.
+Ist die erste Zeile (`0<y & y<=5`) nicht erfüllt, dann können wir R sagen: "Immer nicht okay", 
+das erreichen wir mit `TRUE` (`TRUE` ist immer wahr) `~ FALSE` (`y_check_okay` wird auf `FALSE`) gesetzt.
+
+Im Anschluss könnten wir wieder die "bösen Zeilen" herausfiltern.
+
+
+### Geringe Eingabequalität
+
+Vielleicht hätte ihr Fragebogen nicht so lang sein sollen, 60 Minuten Befragung war dann wohl doch etwas viel.
+
+Erfahrungsgemäß verliert man pro Seite Fragebogen substanziell Versuchspersonen.
+Zehn Minuten sind für viele Menschen schon eine lange Befragung.
+Also: Beim nächsten Mal kürzer halten.
+
+Schlimmer noch als keine Antworten sind allerdings schlechte Antworten,
+wenn Versuchspersonen (aus Demotivation heraus) "Blümchen" kreuzen.
+Häufig bedeutet das, dass einfach immer die erste Antwortoption angekreuzt wird;
+das ist am einfachsten für die Versuchsperson.
+
+Wir stellen uns dabei Fragen wie: 
+
+- Hat eine Versuchsperson wenig (keine) Varianz in ihrem Antwortverhalten?
+- Hat eine Versuchsperson viel mehr Varianz als die (allermeisten) anderen?
+
+Technisch gesprochen prüfen wir pro Person mehrere Spalten eines Datensatzes,
+etwa indem wir die Varianz berechnen.
+Eine Komplikation ist, dass Datensätze in R *spaltenweise* aufgebaut sind,
+wir aber das Ergebnis *pro Zeile* (Versuchsperson) haben möchten.
+
+
+```{r}
+extra2 <- 
+extra %>% 
+  rowwise() %>% 
+  mutate(extra_var = var(c_across(i01:i10))) 
+
+extra2 %>% 
+  select(extra_var) %>% 
+  arrange(extra_var) %>% 
+  head()
+```
+
+
+Aber was ist viel und was ist weniger Varianz in diesem Zusammenhang?
+
+Am besten schauen wir uns mal die typische Varianz der Itemantworten für diesen Datensatz an.
+
+```{r}
+library(DataExplorer)
+extra2 %>% 
+  select(extra_var) %>% 
+  plot_histogram()
+```
+
+
+
+Auf dieser Basis könnte man Fälle (Versuchspersonen, d.h. Zeilen) entfernen,
+die keine Varianz oder eine Varianz höher als 1.75 aufweisen.
+
+```{r}
+extra3 <-
+  extra2 %>% 
+  filter(extra_var > 0 & extra_var < 1.76)
+```
+
+
+
+## Scores berechnen
+
+
+### Summen- und Mittelwerte
+
+In der Psychometrie werden komplexe Konstrukte wie etwa das Persönlichkeitsmerkmal Extraversion anhand mehrerer Indikatoren (meistens Items eines Fragebogens) gemessen. 
+Um zu einem Personenwert für Extraversion zu gelangen, werden die Itemwerte im einfachsten Fall summiert. Alternativ kann man auch einen Mittelwert bilden. 
+Dieses Aggregieren bietet den Vorteil, dass sich Messfehler (möglicherweise) herausmitteln. 
+Außerdem versucht man so abzubilden, dass Extraversion aus mehreren unterschiedlichen Facetten besteht, die nicht mit einem einzelnen Item, sondern über mehrere unterschiedliche Items, 
+erfasst werden. Viele Psychometriker sind skeptisch, wenn man versuchen würde, 
+Extraversion mit der Frage "Wie extrovertiert sind Sie?" zu erfassen. 
+Ihre Bedenken sind, dass Menschen die vielen Facetten von Extraversion nicht im Arbeitsgedächtnis vorhalten können. 
+Fragt man hingegen nur einen kleinen Aspekt von Extraversion ab, trägt man der Breite des Konstrukts nicht Rechnung.
+
+Die Zusammenfassung der Itemwerte eines Konstrukts zu einem Mittelwert oder einem Summenwert bezeichnet man als *Score*.
+
+
+
+Ein einfaches Beispiel zur Berechnung des Extraversion-Summenscore:
+  
+```{r extra-bsp1, echo = TRUE}
+extra_bsp <- extra %>%
+  select(i01:i03) %>%
+  slice_head(n = 3) %>%
+  mutate(extra_sum = i01 + i02r + i03)
+
+extra_bsp
+```
+
+
+Der Wert von `extra_sum` berechnet sich jeweils als Summe der drei Itemwerte. Mit dem Mittelwert verhält es sich analog (s. @tbl-extra-score-mean).
+
+```{r extra-bsp2}
+extra_bsp <- extra_bsp %>%
+  mutate(extra_mean = extra_sum / 3)
+```
+
+
+```{r}
+#| label: Extraversion-Score berechen
+#| echo: false
+#| tbl-cap: tbl-extra-score-mean
+extra_bsp %>% kable(booktabs = TRUE, 
+                  #  caption = "Extraversion-Score berechnen",
+                    digits = 2)
+```
+
+ Praktischerweise gibt es Funktionen, die die Berechnung eines Scores noch weiter vereinfachen, 
+ zum Beispiel im Paket `sjmisc`: `row_sums()` (Summenscore pro Person) und `row_means()` (Mittelwert pro Person). 
+ Da Respondenten (meist Personen) in *Zeilen* stehen heißen die Befehle `row_XXX()`.
+ Fragt sich noch, ob es mehr Sinn macht, einen Summenscore oder einen Mittelwert zu berechnen. 
+ Kurz gesagt macht es keinen großen Unterschied, solange es keine fehlenden Werte gibt. 
+ Gibt es aber fehlende Werte, sollte man Mittelwerte statt Summenwerte vorziehen.
+
+
+### Vertiefung: Summen- vs. Mittelwertscores
+  Dazu ein erläuterndes Beispiel. 
+  Alois habe in einem Persönlichkeitstest mit 3 Items nur Item 1 beantwortet und zwar mit "3", wobei Antwortstufen von 1 bis 4 vorgegeben waren. Vermutlich ist der Gesamtwert im Form des Summenscores von 3 zu klein, unterschätzt als Alois' Wert. 
+  Schließlich hat er beim ersten Item die Antwort "3" gewählt, insofern ist es plausibel, dass er bei den anderen auch diese Option gewählt hätte. 
+  Somit hätte er insgesamt 9 Punkte (nicht 3) erzielt. Würden wir 3 als Gesamtwert (Summenscore) annehmen, so bedeutet das, das wir davon ausgehen, dass er im Schnitt "1" gewählt hat - 
+  Eine Annahme, die nicht sehr plausibel erscheint.
+
+
+Vergleichen wir das mit dem Mittelwert-Score. Jetzt lassen wir R die Rechenarbeit machen:
+
+
+```{r}
+Alois <- c(3, NA, NA)
+mean(Alois, na.rm = TRUE)
+```
+
+Der Mittelwert von Alois beträgt 3 -- das passt genau zu unserer Argumentation von gerade (s. oben), dass 3 eine bessere Schätzung der Ausprägung der latenten Variable von Alois ist. 
+Daher ist der Mittelwert dem Summenscore vorzuziehen.
+
+Ein anderer Vorteil des Mittelwerts ist, dass er etwas anschaulicher ist als der Summenscore: Ein Mittelwert von 3 (auf einer Skala von 1 bis 4) ist anschaulicher als eine Summe von 9 (bei drei Items). Wir werden daher den Mittelwert vorziehen.
+
+Noch anschaulicher wäre es, die Mittelwerte auf den Bereich von 0 bis 1 zu normalisieren.
+Das kann man mit `normalize` aus dem Paket easystats erledigen.
+
+```{r}
+extra %>% 
+  mutate(extra_mean_01 = normalize(extra_mean)) %>% 
+  select(extra_mean, extra_mean_01) %>% 
+  describe_distribution()
+```
+ 
+
+### Berechnung mit R
+
+```{r}
+extra %>% 
+  row_means(i01:i10, n = .90, var = "extra_avg") %>% 
+  select(extra_avg) %>% 
+  slice_head(n = 3)
+```
+
+Der Parameter `n` bei `row_means()` gibt den Anteil der *nicht* fehlenden Werte (pro Zeile) wieder, damit ein Wert berechnet wird: Bei zu vielen fehlenden Werten (zu wenig Daten) pro Person wird sonst `NA` zurückgeliefert. Das ist sinnvoll, denn hat eine Person von 10 Items nur 1 Item beantwortet, so kann man wohl nicht zuverlässig sagen, dass Extraversion in seiner Breite zuverlässig geschätzt wird. Die Funktion fügt dem Datensatz eine Spalte hinzu, deren Name mit `var` angegeben wird.
+
+
+## Standardisieren mit z-Werten
+
+
+
+Man kann die Aussagekraft eines Mittelwerts noch erhöhen, in dem man ihn standardisiert, z.B. mit der z-Transformation. Das geht zum Beispiel so:
+
+```{r}
+extra_std <- extra %>% 
+  standardize(select = extra_mean, append = TRUE)
+```
+
+Die Funktion `standardize()` z-standardisiert eine oder mehrere angegebene Spalten. Setzt man den Schatler `append` auf `TRUE`,  werden neue Spalten erzeugt, deren Namen gleich dem alten Namen plus dem Suffix `_z` entspricht. Betrachten wir die ersten drei Zeilen:
+
+
+```{r}
+extra_std %>% 
+  select(extra_mean) %>% 
+  slice_head(n = 3)
+```
+
+
+Zu beachten ist, dass der Mittelwert der Stichprobe und deren Standardabweichung als Referenzwerte herangezogen wurden, nicht die entsprechenden Größen der Normierungsstichprobe.
+
+
+
+
+## Daten zusammenfassen (deskriptive Analyse)
+
+Damit es einfach bleibt, begrenzen wir uns auf ein paar Variablen.
+
+Sagen wir, 
+das sind die Variablen, die uns interessieren:
+
+```{r}
+extra_corr_names <- 
+extra %>% 
+  select(n_facebook_friends, n_hangover, age, extra_single_item, n_party, extra_mean) %>% 
+  names()
+
+extra_corr_names
+```
+
+
+
+### Deskriptive Ergebnisse darstellen
+
+Sie können deskriptive Ergebnisse (Ihrer relevanten Variablen) z.B. so darstellen.
+
+
+```{r}
+extra %>% 
+  select(any_of(extra_corr_names)) %>% 
+  describe_distribution() %>% 
+  kable(digits = 2)
+```
+
+
+### Korrelationen darstellen
+
+In einer Umfrage erhebt man häufig mehrere Variablen, ein Teil davon oft *Konstrukte*.
+Es bietet sich in einem ersten Schritt an, die Korrelationen dieser Variablen untereinander
+darzustellen.
+
+
+
+#### Korrelationsmatrix
+
+
+
+```{r}
+extra %>% 
+  select(any_of(extra_corr_names)) %>%  
+  correlation() %>% 
+  summary() %>% 
+  kable(digits = 2)
+```
+
+
+Sie möchten das Ergebnis als normalen R-Dataframe? 
+Sie haben keine Lust auf dieses Rumgetue, sondern wollen das lieber als selber gerade ziehen.
+Also gut:
+
+
+```{r}
+cor_results <- 
+extra %>% 
+  select(any_of(extra_corr_names)) %>%  
+  correlation() %>% 
+  summary()
+
+cor_results
+```
+
+
+
+
+Man kann sich die Korrelationsmatrix auch in der *Bayes-Geschmacksrichtung* ausgeben lassen:
+
+
+```{r}
+extra %>% 
+  select(any_of(extra_corr_names)) %>%  
+  correlation(bayesian = TRUE) %>% 
+  summary() %>% 
+  kable(digits = 2)
+```
+
+
+#### Korrelationsmatrizen visualisieren
+
+Viele R-Pakete bieten sich an. Nehmen wir `{easystats}`.
+
+
+```{r}
+extra %>% 
+  select(any_of(extra_corr_names)) %>%  
+  correlation() %>% 
+  summary() %>% 
+  plot() +
+  labs(title = "Korrelationsmatrix, boa")
+```
+
+
+
+
+
+
+
+

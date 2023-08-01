@@ -26,7 +26,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./090-Modellieren.html" rel="next">
+<link href="./085-aufbereiten.html" rel="next">
 <link href="./075-kausal.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -38,7 +38,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -192,8 +192,14 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./085-aufbereiten.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Auswerten: Grundlegende Datenanalyse</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./090-Modellieren.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Auswerten: Modellieren</span></span></a>
+ <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Auswerten: Modellieren</span></span></a>
   </div>
 </li>
       </ul>
@@ -210,13 +216,13 @@ ul.task-list li input[type="checkbox"] {
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./100-Statistiken-berichten.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Auswerten: Berichten von Statistiken</span></span></a>
+ <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Auswerten: Berichten von Statistiken</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./120-abschluss.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Abschluss</span></span></a>
+ <span class="menu-text"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Abschluss</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -291,10 +297,11 @@ ul.task-list li input[type="checkbox"] {
 <p>Sie befinden sich im Abschnitt “Auswertung” in <a href="index.html#fig-ueberblick">Abbildung&nbsp;<span>1.2</span></a>. Behalten Sie Ihren Fortschritt im Projektplan im Blick, s. <a href="index.html#fig-projektplan">Abbildung&nbsp;<span>1.3</span></a>.</p>
 </section></section><section id="überblick-zur-datenanalyse" class="level2" data-number="11.2"><h2 data-number="11.2" class="anchored" data-anchor-id="überblick-zur-datenanalyse">
 <span class="header-section-number">11.2</span> Überblick zur Datenanalyse</h2>
-<p>Mühsam haben Sie Ihre Studie geplant, minütiös den Versuchsplan ausgeheckt, pedantisch die Messinstrumente bestimmt. Dann! Die Datenerhebung! Versuchspersonen, manche nervig, manche freundlich. Ist Forschung denn so anstrengend? Endlich! Geschafft - die Daten sind im Sack, sozusagen. Die Datenerhebung ist abgeschlossen. Was jetzt?</p>
+<p>Mühsam haben Sie Ihre Studie geplant, minutiös den Versuchsplan ausgeheckt, pedantisch die Messinstrumente bestimmt. Dann! Die Datenerhebung! Versuchspersonen, manche nervig, manche freundlich. Ist Forschung denn so anstrengend? Endlich! Geschafft - die Daten sind im Sack, sozusagen. Die Datenerhebung ist abgeschlossen. Was jetzt?</p>
 <section id="wozu-ist-das-gut" class="level3" data-number="11.2.1"><h3 data-number="11.2.1" class="anchored" data-anchor-id="wozu-ist-das-gut">
 <span class="header-section-number">11.2.1</span> Wozu ist das gut?</h3>
-<p>Würden Sie einem Medikament trauen, von dem es heißt, die Forscher hatten keinen Bock, Statistik ist zu stressig, aber sie hätten da so ein Gefühl, könnte schon was bringen, die Pille, immer rein damit. Was?! Sie zögern sich das Medikament einzuwerfen? Sie hätten es lieber genauer, sicherer, belastbarer? Also gut, Sie haben es so gewollt: Gehen Sie geradeaus weiter zur Statistik.</p>
+<p>Würden Sie einem Medikament trauen, von dem es heißt, das Forschungsteam hatten keinen Bock, Statistik ist zu stressig, aber sie hätten da so ein Gefühl, könnte schon was bringen, die Pille, immer rein damit. Was?! Sie zögern sich das Medikament einzuwerfen? Sie hätten es lieber genauer, sicherer, belastbarer? Es ginge schließlich um ihre Gesundheit?</p>
+<p>Also gut, Sie haben es so gewollt: Gehen Sie geradeaus weiter zur Statistik.</p>
 </section><section id="über-7-brücken-musst-du-gehen-die-schritte-der-datenanalyse" class="level3" data-number="11.2.2"><h3 data-number="11.2.2" class="anchored" data-anchor-id="über-7-brücken-musst-du-gehen-die-schritte-der-datenanalyse">
 <span class="header-section-number">11.2.2</span> Über 7 Brücken musst du gehen: Die Schritte der Datenanalyse</h3>
 <div class="cell">
@@ -325,17 +332,17 @@ ul.task-list li input[type="checkbox"] {
 <li><p><em>Amüsieren</em>: So, irgendwann ist auch gut. Jetzt belohnen Sie sich mal für die ganze harte Arbeit des Studierens.</p></li>
 </ol></section></section><section id="reproduzierbarkeit" class="level2" data-number="11.3"><h2 data-number="11.3" class="anchored" data-anchor-id="reproduzierbarkeit">
 <span class="header-section-number">11.3</span> Reproduzierbarkeit</h2>
-<p>Transparenz ist das zentrale Gütemaße der Wissenschaft. Darum sollten Sie alles dran setzen, dass Ihre Studie bzw. die Analyse Ihrer Daten nachvollziehbar ist. Wesentliche Faktoren dafür sind:</p>
+<p>Transparenz ist ein zentrals oder das zentrale Gütemaße der Wissenschaft. Darum sollten Sie alles dran setzen, dass Ihre Studie bzw. die Analyse Ihrer Daten nachvollziehbar ist. Wesentliche Faktoren dafür sind:</p>
 <ul>
-<li>Sie reichen Ihre Rohdaten ein</li>
-<li>Sie reichen Ihr Analyseskript ein</li>
-<li>Sie reichen Ihre Stimuli ein (sofern nicht öffentlich verfügbar)</li>
-<li>Sie reichen Ihre Messinstrumente ein (sofern nicht öffentlich verfügbar)</li>
-<li>Sie dokumentieren Ihr Vorgehen und reichen es ein</li>
+<li>Sie reichen Ihre <em>Rohdaten</em> ein (inkl. Codebook)</li>
+<li>Sie reichen Ihr <em>Analyseskript</em> ein</li>
+<li>Sie reichen Ihre <em>Stimuli</em> ein (sofern nicht öffentlich verfügbar)</li>
+<li>Sie reichen Ihre <em>Messinstrumente</em> ein (sofern nicht öffentlich verfügbar)</li>
+<li>Sie dokumentieren Ihr <em>Vorgehen</em> und reichen es ein</li>
 </ul>
 <section id="codebook" class="level3" data-number="11.3.1"><h3 data-number="11.3.1" class="anchored" data-anchor-id="codebook">
 <span class="header-section-number">11.3.1</span> Codebook</h3>
-<p>Ein Teil der Dokumentation ist ein Codebook. Ein Codebook erläutert die Namen der Variablen in Ihrer (Roh-)Datentabelle, s. <a href="#fig-codebook">Abbildung&nbsp;<span>11.1</span></a>.</p>
+<p>Ein Teil der Dokumentation ist ein Codebook (auch Data-Dictionary genannt). Ein Codebook erläutert die Namen der Variablen in Ihrer (Roh-)Datentabelle, s. <a href="#fig-codebook">Abbildung&nbsp;<span>11.1</span></a>.</p>
 <div id="fig-codebook" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><p><img src="img/codebook.jpg" class="img-fluid figure-img"></p>
 <figcaption class="figure-caption">Abbildung&nbsp;11.1: Beispiel für ein Codebook</figcaption></figure>
@@ -343,7 +350,7 @@ ul.task-list li input[type="checkbox"] {
 <p><a href="https://www.psycharchives.org/en/item/8b13c82b-1c31-481a-b4be-0d5779d87033">Quelle</a></p>
 </section></section><section id="grundlagen-der-datenanalyse" class="level2" data-number="11.4"><h2 data-number="11.4" class="anchored" data-anchor-id="grundlagen-der-datenanalyse">
 <span class="header-section-number">11.4</span> Grundlagen der Datenanalyse</h2>
-<p><a href="https://statistik1.netlify.app/">Hier</a> finden Sie einen Überblick zu den Grundlagen der Datenanalyse mit einem Fokus auf die Regressionsanalyse.</p>
+<p><a href="https://statistik1.netlify.app/">Hier</a> finden Sie einen Überblick zu den Grundlagen der Datenanalyse mit einem Fokus auf die Regressionsanalyse. Das Zeug sollten Sie drauf haben.</p>
 </section><section id="wie-man-umfragedaten-auswertet" class="level2" data-number="11.5"><h2 data-number="11.5" class="anchored" data-anchor-id="wie-man-umfragedaten-auswertet">
 <span class="header-section-number">11.5</span> Wie man Umfragedaten auswertet</h2>
 <p><a href="https://sebastiansauer.github.io/umfragen-auswerten/index.html">Hier</a> finden Sie (m)eine Anleitung zur Auswertung von Umfragedaten.</p>
@@ -730,8 +737,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./090-Modellieren.html" class="pagination-link">
-        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Auswerten: Modellieren</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./085-aufbereiten.html" class="pagination-link">
+        <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Auswerten: Grundlegende Datenanalyse</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

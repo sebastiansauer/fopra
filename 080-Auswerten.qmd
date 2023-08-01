@@ -34,7 +34,7 @@ Behalten Sie Ihren Fortschritt im Projektplan im Blick, s. @fig-projektplan.
 ## Überblick zur Datenanalyse
 
 
-Mühsam haben Sie Ihre Studie geplant, minütiös den Versuchsplan ausgeheckt, pedantisch die Messinstrumente bestimmt.
+Mühsam haben Sie Ihre Studie geplant, minutiös den Versuchsplan ausgeheckt, pedantisch die Messinstrumente bestimmt.
 Dann! Die Datenerhebung! Versuchspersonen, manche nervig, manche freundlich.
 Ist Forschung denn so anstrengend?
 Endlich! Geschafft - die Daten sind im Sack, sozusagen.
@@ -44,9 +44,10 @@ Was jetzt?
 
 ### Wozu ist das gut?
 
-Würden Sie einem Medikament trauen, von dem es heißt, die Forscher hatten keinen Bock, Statistik ist zu stressig, aber sie hätten da so ein Gefühl, könnte schon was bringen, die Pille, immer rein damit.
+Würden Sie einem Medikament trauen, von dem es heißt, das Forschungsteam hatten keinen Bock, Statistik ist zu stressig, aber sie hätten da so ein Gefühl, könnte schon was bringen, die Pille, immer rein damit.
 Was?! Sie zögern sich das Medikament einzuwerfen?
-Sie hätten es lieber genauer, sicherer, belastbarer?
+Sie hätten es lieber genauer, sicherer, belastbarer? Es ginge schließlich um ihre Gesundheit?
+
 Also gut, Sie haben es so gewollt: Gehen Sie geradeaus weiter zur Statistik.
 
 
@@ -90,22 +91,22 @@ In etwas mehr Detail sieht der Fortgang Ihrer Datenanalyse so aus:
 
 ## Reproduzierbarkeit
 
-Transparenz ist das zentrale Gütemaße der Wissenschaft.
+Transparenz ist ein zentrals oder das zentrale Gütemaße der Wissenschaft.
 Darum sollten Sie alles dran setzen, dass Ihre Studie bzw. die Analyse Ihrer Daten nachvollziehbar ist.
 Wesentliche Faktoren dafür sind:
 
-- Sie reichen Ihre Rohdaten ein
-- Sie reichen Ihr Analyseskript ein
-- Sie reichen Ihre Stimuli ein (sofern nicht öffentlich verfügbar)
-- Sie reichen Ihre Messinstrumente ein (sofern nicht öffentlich verfügbar)
-- Sie dokumentieren Ihr Vorgehen und reichen es ein
+- Sie reichen Ihre *Rohdaten* ein (inkl. Codebook)
+- Sie reichen Ihr *Analyseskript* ein
+- Sie reichen Ihre *Stimuli* ein (sofern nicht öffentlich verfügbar)
+- Sie reichen Ihre *Messinstrumente* ein (sofern nicht öffentlich verfügbar)
+- Sie dokumentieren Ihr *Vorgehen* und reichen es ein
 
 
 
 
 ### Codebook
 
-Ein Teil der Dokumentation ist ein Codebook. Ein Codebook erläutert die Namen der Variablen in Ihrer (Roh-)Datentabelle, s. @fig-codebook.
+Ein Teil der Dokumentation ist ein Codebook (auch Data-Dictionary genannt). Ein Codebook erläutert die Namen der Variablen in Ihrer (Roh-)Datentabelle, s. @fig-codebook.
 
 ![Beispiel für ein Codebook](img/codebook.jpg){#fig-codebook}
 
@@ -115,6 +116,7 @@ Ein Teil der Dokumentation ist ein Codebook. Ein Codebook erläutert die Namen d
 ## Grundlagen der Datenanalyse
 
 [Hier](https://statistik1.netlify.app/) finden Sie einen Überblick zu den Grundlagen der Datenanalyse mit einem Fokus auf die Regressionsanalyse.
+Das Zeug sollten Sie drauf haben.
 
 
 ## Wie man Umfragedaten auswertet

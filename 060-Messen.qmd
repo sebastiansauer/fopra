@@ -688,7 +688,9 @@ Leider fand sich kein klarer Effekt:
 
 :::: {.columns}
 
-::: {.column}
+::: {.column  width="40%"}
+
+[*Neutraler Furhat*](img/Furhat_neutral.mp4)
 
 {{< video img/Furhat_neutral.mp4 >}}
 
@@ -696,9 +698,16 @@ Quelle: Jana Kahr und Tanja Beck
 
 :::
 
+::: {.column width="10%"}
 
 
-::: {.column}
+:::
+
+
+
+::: {.column  width="40%"}
+
+[*Empathischer Furhat*](img/Furhat_empatisch.mp4)
 
 {{< video img/Furhat_empatisch.mp4 >}}
 
