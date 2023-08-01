@@ -456,10 +456,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span><span class="co">## [1] 10</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Der Einfachheit halber erzeugen wir uns eine einfache Tabelle, mit ein paar Spalten, die <em>als Text</em> formatierte Zahlen enthalten:</p>
-<div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-7_05bb48f65ecc1c86c5e419191138053f">
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">d</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>i01 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"1"</span>, <span class="st">"3"</span>, <span class="st">"4"</span><span class="op">)</span>,  <span class="co"># von 1 bis 4</span></span>
+<div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-7_ef35766c00d8488c1b10dcbafd572e90">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">d</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>i01 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"1"</span>, <span class="st">"3"</span>, <span class="st">"4"</span><span class="op">)</span>,  <span class="co"># von 1 bis 4</span></span>
 <span>            i02 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"-2"</span>, <span class="st">"+3"</span>, <span class="st">"-1"</span><span class="op">)</span>,  <span class="co"># von -3 bis -3</span></span>
 <span>            i03 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"-2"</span>, <span class="st">"+2"</span>, <span class="st">"-1"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>  <span class="co"># als Faktorvariable formatiert</span></span>
 <span><span class="va">d</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -480,16 +478,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="header-section-number">12.3.2</span> Introducing <code>parse_number()</code>
 </h3>
 <p><code><a href="https://readr.tidyverse.org/reference/parse_number.html">parse_number()</a></code> (aus <a href="https://tidyverse.tidyverse.org">tidyverse</a>) löst das Problem für Sie:</p>
-<div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-8_6c31fbdda8469e41b5568a13d373e560">
+<div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-8_07b7c9a24be965097ea3ff17b5eafba0">
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">d2</span> <span class="op">&lt;-</span> </span>
 <span>  <span class="va">d</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>i01 <span class="op">=</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/parse_number.html">parse_number</a></span><span class="op">(</span><span class="va">i01</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="va">d</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>i01_num <span class="op">=</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/parse_number.html">parse_number</a></span><span class="op">(</span><span class="va">i01</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="va">d2</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
-{"columns":[{"label":["i01"],"name":[1],"type":["chr"],"align":["left"]},{"label":["i02"],"name":[2],"type":["chr"],"align":["left"]},{"label":["i03"],"name":[3],"type":["fct"],"align":["left"]}],"data":[{"1":"1","2":"-2","3":"-2"},{"1":"3","2":"+3","3":"+2"},{"1":"4","2":"-1","3":"-1"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["i01"],"name":[1],"type":["chr"],"align":["left"]},{"label":["i02"],"name":[2],"type":["chr"],"align":["left"]},{"label":["i03"],"name":[3],"type":["fct"],"align":["left"]},{"label":["i01_num"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"1","2":"-2","3":"-2","4":"1"},{"1":"3","2":"+3","3":"+2","4":"3"},{"1":"4","2":"-1","3":"-1","4":"4"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 </div>
@@ -827,12 +825,12 @@ stimme überhaupt nicht zu --&gt; 1</code></pre>
 <div class="sourceCode" id="cb32"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra_bsp</span> <span class="op">&lt;-</span> <span class="va">extra_bsp</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>extra_mean <span class="op">=</span> <span class="va">extra_sum</span> <span class="op">/</span> <span class="fl">3</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-hash="085-aufbereiten_cache/html/Extraversion-Score berechen_128247ca045257741b1a33b8353cf69f">
+<div class="cell" data-hash="085-aufbereiten_cache/html/Extraversion-Score berechen_34d02f73ffa5410d65239c8a71385a53">
 <div class="cell-output-display">
 <table class="table table-sm table-striped small">
 <caption>tbl-extra-score-mean </caption>
 <thead><tr class="header">
-<th style="text-align: right;">i01</th>
+<th style="text-align: left;">i01</th>
 <th style="text-align: right;">i02r</th>
 <th style="text-align: right;">i03</th>
 <th style="text-align: right;">extra_sum</th>
@@ -840,21 +838,21 @@ stimme überhaupt nicht zu --&gt; 1</code></pre>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: right;">3</td>
+<td style="text-align: left;">3</td>
 <td style="text-align: right;">3</td>
 <td style="text-align: right;">3</td>
 <td style="text-align: right;">9</td>
 <td style="text-align: right;">3.00</td>
 </tr>
 <tr class="even">
-<td style="text-align: right;">2</td>
+<td style="text-align: left;">2</td>
 <td style="text-align: right;">2</td>
 <td style="text-align: right;">1</td>
 <td style="text-align: right;">5</td>
 <td style="text-align: right;">1.67</td>
 </tr>
 <tr class="odd">
-<td style="text-align: right;">3</td>
+<td style="text-align: left;">3</td>
 <td style="text-align: right;">4</td>
 <td style="text-align: right;">1</td>
 <td style="text-align: right;">8</td>
@@ -876,6 +874,7 @@ stimme überhaupt nicht zu --&gt; 1</code></pre>
 </div>
 <p>Der Mittelwert von Alois beträgt 3 – das passt genau zu unserer Argumentation von gerade (s. oben), dass 3 eine bessere Schätzung der Ausprägung der latenten Variable von Alois ist. Daher ist der Mittelwert dem Summenscore vorzuziehen.</p>
 <p>Ein anderer Vorteil des Mittelwerts ist, dass er etwas anschaulicher ist als der Summenscore: Ein Mittelwert von 3 (auf einer Skala von 1 bis 4) ist anschaulicher als eine Summe von 9 (bei drei Items). Wir werden daher den Mittelwert vorziehen.</p>
+<p>Noch anschaulicher wäre es, die Mittelwerte auf den Bereich von 0 bis 1 zu normalisieren.</p>
 </section><section id="berechnung-mit-r" class="level3" data-number="12.8.3"><h3 data-number="12.8.3" class="anchored" data-anchor-id="berechnung-mit-r">
 <span class="header-section-number">12.8.3</span> Berechnung mit R</h3>
 <div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-30_f836b98bd77ce245434717e410ee1ff0">
