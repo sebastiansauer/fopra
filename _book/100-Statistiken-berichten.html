@@ -407,11 +407,9 @@ Wichtig
 <p>Parameterschätzung fragt nicht <em>ob</em>, sondern <em>wieviel</em>. Nicht viel komplizierter, aber viel nuancierter; (eigentlich) besser. Außerdem enthält das Parameterschätzen auch das Hypothesentesten: Ist die Null im Schätz-Intervall nicht enthalten, so kann man die Null-Hypothese ausschließen.</p>
 </section><section id="modell-definieren" class="level3" data-number="14.5.2"><h3 data-number="14.5.2" class="anchored" data-anchor-id="modell-definieren">
 <span class="header-section-number">14.5.2</span> Modell definieren</h3>
-<p>Es bietet sich auch an, ein Modell mit einem Pfaddiagramm bzw. DAG zu visualisieren, z.B. so, s. <span class="quarto-unresolved-ref">?fig-dagmodell1</span>.</p>
-<div class="cell" data-fig.asp="0.5" data-hash="100-Statistiken-berichten_cache/html/unnamed-chunk-2_482af5cbaf7aa81a8b1cd2c5dee595af">
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span>  <span class="co">#| label: fig-dagmodell1</span></span>
-<span><span class="co">#| fig-cap: Beispielhafter DAG</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://www.dagitty.net">dagitty</a></span><span class="op">)</span></span>
+<p>Es bietet sich auch an, ein Modell mit einem Pfaddiagramm bzw. DAG zu visualisieren, z.B. so, s. <a href="#fig-dagmodell1">Abbildung&nbsp;<span>14.1</span></a>.</p>
+<div class="cell" data-fig.asp="0.5" data-hash="100-Statistiken-berichten_cache/html/fig-dagmodell1_47cdb9720cdb4fdfd4e63140d5b47ed3">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://www.dagitty.net">dagitty</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">mein_dag</span> <span class="op">&lt;-</span> <span class="st">'dag {</span></span>
 <span><span class="st">A [pos="-2.200,-1.520"]</span></span>
@@ -435,7 +433,10 @@ Wichtig
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/dagitty/man/graphLayout.html">graphLayout</a></span><span class="op">(</span><span class="va">mein_modell</span><span class="op">)</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="100-Statistiken-berichten_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" style="width:100.0%"></p>
+<div id="fig-dagmodell1" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure"><p><img src="100-Statistiken-berichten_files/figure-html/fig-dagmodell1-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figcaption class="figure-caption">Abbildung&nbsp;14.1: Beispielhafter DAG</figcaption></figure>
+</div>
 </div>
 </div>
 <p>Dabei steht <code>lern</code> für “Lernzeit in Stunden”, <code>mot</code> für “Motivation” und <code>lern</code> für “Lernerfolg”. Die Operationalisierung der Variablen sollten im Methodenteil genauer beschrieben sein.</p>
@@ -3423,7 +3424,7 @@ Hinweis
 <div class="cell" data-hash="100-Statistiken-berichten_cache/html/unnamed-chunk-18_2470b6849dee3692859dc1f42b41da01">
 <div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="fu">hdi</span><span class="op">(</span><span class="va">m1</span><span class="op">)</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Sieht auch ganz schick aus; im Hintergrund wird <a href="https://easystats.github.io/easystats/">easystats</a> zum Plotten verwendet. Praktischerweise ist es ein ggplot-Diagramm, man kann also mit bekannten (ggplot-)Methoden nachpolieren, z.B s. <a href="#fig-m1-hdi">Abbildung&nbsp;<span>14.1</span></a>.</p>
+<p>Sieht auch ganz schick aus; im Hintergrund wird <a href="https://easystats.github.io/easystats/">easystats</a> zum Plotten verwendet. Praktischerweise ist es ein ggplot-Diagramm, man kann also mit bekannten (ggplot-)Methoden nachpolieren, z.B s. <a href="#fig-m1-hdi">Abbildung&nbsp;<span>14.2</span></a>.</p>
 <div class="cell" data-hash="100-Statistiken-berichten_cache/html/fig-m1-hdi_5e77c93befd4d7907a6f6c6b268a0036">
 <div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="fu">hdi</span><span class="op">(</span><span class="va">m1</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span><span class="st">"Hier steht mein Titel"</span>,</span>
@@ -3435,7 +3436,7 @@ Hinweis
 <div class="cell-output-display">
 <div id="fig-m1-hdi" class="quarto-figure quarto-figure-center anchored">
 <figure class="figure"><p><img src="100-Statistiken-berichten_files/figure-html/fig-m1-hdi-1.png" class="img-fluid figure-img" width="672"></p>
-<figcaption class="figure-caption">Abbildung&nbsp;14.1: Die Postverteilung als Berg visualisiert, nicht als Seil.</figcaption></figure>
+<figcaption class="figure-caption">Abbildung&nbsp;14.2: Die Postverteilung als Berg visualisiert, nicht als Seil.</figcaption></figure>
 </div>
 </div>
 </div>

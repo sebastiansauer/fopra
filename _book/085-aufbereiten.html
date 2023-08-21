@@ -820,15 +820,16 @@ stimme überhaupt nicht zu --&gt; 1</code></pre>
 </div>
 </div>
 </div>
-<p>Der Wert von <code>extra_sum</code> berechnet sich jeweils als Summe der drei Itemwerte. Mit dem Mittelwert verhält es sich analog (s. <span class="quarto-unresolved-ref">?tbl-extra-score-mean</span>).</p>
+<p>Der Wert von <code>extra_sum</code> berechnet sich jeweils als Summe der drei Itemwerte. Mit dem Mittelwert verhält es sich analog (s. <a href="#tbl-extra-score-mean">Tabelle&nbsp;<span>12.1</span></a>).</p>
 <div class="cell" data-hash="085-aufbereiten_cache/html/extra-bsp2_6a416744d47db6442df829e6f83b5f32">
 <div class="sourceCode" id="cb32"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra_bsp</span> <span class="op">&lt;-</span> <span class="va">extra_bsp</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>extra_mean <span class="op">=</span> <span class="va">extra_sum</span> <span class="op">/</span> <span class="fl">3</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-hash="085-aufbereiten_cache/html/Extraversion-Score berechen_34d02f73ffa5410d65239c8a71385a53">
+<div class="cell" data-hash="085-aufbereiten_cache/html/tbl-extra-score-mean_e8dcfc068ec52fe804eadfb917d2e024">
 <div class="cell-output-display">
+<div id="tbl-extra-score-mean" class="anchored">
 <table class="table table-sm table-striped small">
-<caption>tbl-extra-score-mean </caption>
+<caption>Tabelle&nbsp;12.1: Extraversion-Score berechen</caption>
 <thead><tr class="header">
 <th style="text-align: left;">i01</th>
 <th style="text-align: right;">i02r</th>
@@ -860,6 +861,7 @@ stimme überhaupt nicht zu --&gt; 1</code></pre>
 </tr>
 </tbody>
 </table>
+</div>
 </div>
 </div>
 <p>Praktischerweise gibt es Funktionen, die die Berechnung eines Scores noch weiter vereinfachen, zum Beispiel im Paket <code>sjmisc</code>: <code><a href="https://strengejacke.github.io/sjmisc/reference/row_sums.html">row_sums()</a></code> (Summenscore pro Person) und <code><a href="https://strengejacke.github.io/sjmisc/reference/row_sums.html">row_means()</a></code> (Mittelwert pro Person). Da Respondenten (meist Personen) in <em>Zeilen</em> stehen heißen die Befehle <code>row_XXX()</code>. Fragt sich noch, ob es mehr Sinn macht, einen Summenscore oder einen Mittelwert zu berechnen. Kurz gesagt macht es keinen großen Unterschied, solange es keine fehlenden Werte gibt. Gibt es aber fehlende Werte, sollte man Mittelwerte statt Summenwerte vorziehen.</p>

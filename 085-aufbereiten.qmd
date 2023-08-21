@@ -627,9 +627,9 @@ extra_bsp <- extra_bsp %>%
 
 
 ```{r}
-#| label: Extraversion-Score berechen
+#| tbl-cap: Extraversion-Score berechen
 #| echo: false
-#| tbl-cap: tbl-extra-score-mean
+#| label: tbl-extra-score-mean
 extra_bsp %>% 
   print_md()
 ```

@@ -172,7 +172,7 @@ z.B. so, s. @fig-dagmodell1.
 
 
 ```{r out.width = "100%", fig.asp = .5}
-  #| label: fig-dagmodell1
+#| label: fig-dagmodell1
 #| fig-cap: Beispielhafter DAG
 library(dagitty)
 
