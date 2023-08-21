@@ -103,7 +103,7 @@ sondern das Unterstützen beim Denken.
 
 
 
-## Gliederung einer Forschungsarbeit
+### Gliederung einer Forschungsarbeit
 
 Wie bei vielen Dingen des wirklichen Lebens, so gibt es auch für eine Gliederung einer wissenschaftlichen Arbeit nicht nur eine Lösung.
 Das bedeutet aber nicht, dass jede Lösung gleich gut wäre (wie im wirklichen Leben auch).
@@ -614,6 +614,65 @@ Auch wenn Sie im Anhang "nur" auf Dateien verweisen, sollte im Anhang aufgeführ
 
 ## Schreibstil
 
+### Wissenschaftlicher Schreibstil
+
+Zwei Hauptarten von wissenschaftlichen Aussagen lassen sich unterscheiden: *Behauptungen* und *Bewertungen.*
+
+:::{#exm-behauptung}
+### Behauptungen
+
+- Deutschland hat ca. 80 Millionen Einwohner.
+- Die Hauptstadt der Schweiz ist Bern.
+- Die Stichprobe der Studie von Müller (2023) ist klein.
+:::
+
+Eine *Behauptung* ist ein Satz, der eine (vermeintliche) Tatsache angibt.
+
+
+:::{#exm-bewertung}
+### Bewertung
+
+- Deutschland ist übervölkert.
+- Die Qualität der Studie von Müller (2023) ist fragwürdig.
+- Die Qualität der Quellen im Literaturverzeichnis von Müller (2023) ist gering.
+:::
+
+Eine *Bewertung* stellt eine Behauptung in eine Kontiuum eines Erstrebenswert.
+Anders gesagt: Eine Bewertung verortet eine Behauptung zwischen den Polen "gut" und "schlecht".
+
+
+Bewertungen sollten aus belegten Behauptungen resultieren.
+
+Wissenschaftlicher Schreibstil verlangt dreierlei:
+
+1. Sie sind sich wohl bewusst, ob Sie behaupten oder bewerten.
+2. Sie belegen Ihre Behauptungen.
+3. Ihre Aussagen (sowohl Behauptungen und Bewertungen) sind fundiert und präzise.
+
+Ein *Beleg* liefert Gründe für eine Behauptung.
+
+
+
+:::{#exm-beleg}
+### Beleg
+
+- Die Entwicklung der Bevölkerungszahlen von Deutschland sind bei Schmidt (2023)  nachzulesen.
+- Wie in Tabelle 1 zu sehen ist, sind die von Meier (2022) aufgestellten Qualitätskriterien mehrheitlich nicht erfüllt in der Studie von Müller (2023).
+- Die Qualität der Quellen ist gering; es wurden nur nur nichtwissenschaftliche Quellen zitiert.
+:::
+
+Eine gängige Art, einen Beleg zu präsentieren ist der Verweis auf eine geeignete Literaturquelle, die den Beleg untermauert.
+Alternativ liefert man ein Argument, das die eigene Behauptung stützt.
+
+
+*Fundiert*: Man sollte sich stets bemühen, einen Sachstand korrekt, also nicht verzerrt, darzustellen.
+
+*Präzise*: Auf der anderen Seite ist die Zeit der Leser begrenzt; Kürze in Form von präzisen Aussagen ist geboten.
+
+:::{.callout-note}
+Wissenschaftlicher Schreibstil ist essenziell für einen wissenschaftlichen Bericht: wohl belegte Behauptungen, präzise Sprache und gut überlegte Bewertungen.
+Behauptungen sollten nie eines Beleges entbehren.
+:::
 
 
 ### Titel
