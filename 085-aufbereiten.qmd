@@ -198,7 +198,8 @@ d <- tibble(i01 = c("1", "3", "4"),  # von 1 bis 4
 d
 ```
 
-Für diejenigen, die kompliziert mögen, ist hier noch eine `factor`-Spalte hinzugefügt. Erstmal ignorieren.
+Für diejenigen, die kompliziert mögen, ist hier noch eine `factor`-Spalte hinzugefügt. 
+Erstmal ignorieren.
 
 Stellen Sie sich vor, die Tabelle ist ein Auszug aus Ihrer Umfrage,
 wobei `i01` das erste Item (Frage) Ihres Fragebogens darstellt etc.
@@ -616,7 +617,8 @@ extra_bsp
 ```
 
 
-Der Wert von `extra_sum` berechnet sich jeweils als Summe der drei Itemwerte. Mit dem Mittelwert verhält es sich analog (s. @tbl-extra-score-mean).
+Der Wert von `extra_sum` berechnet sich jeweils als Summe der drei Itemwerte. 
+Mit dem Mittelwert verhält es sich analog (s. @tbl-extra-score-mean).
 
 ```{r extra-bsp2}
 extra_bsp <- extra_bsp %>%
