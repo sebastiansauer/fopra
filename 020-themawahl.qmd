@@ -219,7 +219,130 @@ Wenn Sie dranbleiben und sich weiter einarbeiten steigt Ihr Verständnis spiralf
 
 
 
+## Literaturrecherche
 
+
+### Ablauf
+
+Sogenannte "Abläufe" wie die Wahl des Themas einer Forschungsarbeit, die Literaturrecherche oder das Schreiben sind in Wahrheit gar keine Abläufe. Es sind eher Kreise, da man die gleichen Tätigkeiten öfters wiederholt.
+Optimistischer ausgedrückt, sind es weder Abläufe noch Kreise, sondern Spiralen, s. @fig-spirale, da sich die Tätigkeiten zwar wiederholen, aber auf höherem oder verfeinertem Niveau.
+
+
+@fig-litsearch stellt die einzelnen Schritte der Literaturrechere im Überblick dar.
+
+```{mermaid}
+%%| fig-cap: Der Ablauf der Literaturrecherche
+%%| label: fig-litsearch
+flowchart LR
+Suchen-->Screenen-->Sammeln-->Lesen-->Extrahieren
+```
+
+
+
+:::{#def-litsearch}
+### Literaturrecherche
+Die Literaturrecherche ist ein Ablauf, also eine zusammenhänge Folge mehrere Tätigkeitsschitte, mit dem Ziel ein Literaturwerk (kurz: Werk) oder mehrere für die Forschungsfrage geeignete Werke zu finden. $\square$
+:::
+
+1. *Suchen* ist das Ausfindigmachen geeigneter Literatur. Dazu sucht man meist in einschlägigen wissenschaftlichen Literatur-Datenbanken wie z.B. Google Scholar.
+Beim Suchen von muss man unterscheiden zwischen dem Finden von 
+
+  a. *Zitierinformationen* wie Autor, Titel, Datum der Veröffentlichung oder ID-Nummer (wie DOI oder ISBN)
+  b. *(Always-)Open-Access-Elemente* wie Titel, Abstract und Literaturverzeichnis
+  c. *Volltexten*, d.h. dem kompletten Text eines Werks
+
+2. Im nächsten Schritt, *Screenen*, sind zumeist die Open-Access-Elemente am wichtigsten, damit man einschätzen kann, ob das Werk geeignet ist. Der Volltext ist an dieser Stelle nicht (unbedingt) nötig.
+
+3. Geeignete Werke *sammelt* man in einer Liste, z.b. via dem Literaturprogramm Zotero. Dabei werden pro Werk die Zitierinformationen festgehalten.
+
+4. Jetzt folgt das *Lesen*^[Ein eigener Ablauf mit mehereren Schritten] eines geeigneten Werks. 
+
+5. Zentrale Inhalte *extrahiert* man aus dem Werk und hält sie an geeigneter Stelle fest, z.B. als Tag oder Notiz in Zotero.
+
+
+:::{#def-werk}
+### Was ist "Werk"?
+Unter einem wissenschaftlichen Werk versteht man meist 
+
+- einen Aufsatz 
+- es kann aber auch manchmal ein Buch oder eine andere Art von Werk sein
+- der wissenschaftlichen Qualitätsmaßstäben standhält
+- oft  ein (anonymes) Begutachtachtungsverfahren durch andere Wissenschaftler ("Peer Review") erfolgreich durchlaufen hat
+- in den Sozialwissenschaften oft empirischer Natur ist (also Daten untersucht) $\square$
+:::
+
+### Werkzeuge
+
+Geeignete (IT-)Werkzeuge für diese Schritte sind in @fig-litsearch-tools dargestellt.
+
+
+
+
+```{mermaid}
+%%| fig-cap: Der Ablauf der Literaturrecherche
+%%| label: fig-litsearch-tools
+flowchart LR
+  subgraph S[Suchen]
+    Suchen --- litdb[Literatur-Datenbank]
+  end
+  subgraph Sc[Screenen]
+    Screenen --- lt1[Lesetechnik]
+  end
+  subgraph Sa[Sammeln]
+    Sammeln --- z1[Literatur-Software]
+  end
+  subgraph Le[Lesen]
+    Lesen --- lt2[Lesetechnik]
+  end
+  subgraph E[Extrahieren]
+    Extrahieren --- Notizen
+  end
+    
+S-->Sc-->Sa-->Le-->E
+```
+
+
+Die Anzahl der Suchmaschinen bzw. Datenbanken bzw. (AI-)Suchdienste wächst und schwankt, so dass es schwierig ist, einen umfassenden Überblick zu geben. @tbl-suchdienste versucht einen Überblick zu geben.
+
+
+
+| Nr. 	| Name                                                                    	| offen 	| Anbieter                        	| Umfang 	|
+|-----	|-------------------------------------------------------------------------	|-------	|---------------------------------	|--------	|
+| 1   	| [Google Scholar](https://scholar.google.com)                            	| ja    	| Google                          	| 200M   	|
+| 2   	| [Web of Science](https://access.clarivate.com)                          	| nein  	| Clarivate                       	| 136M   	|
+| 3   	| [Scopus](https://www.scopus.com/)                                       	| nein  	| Elsevier                        	| 82M    	|
+| 4   	| [Base](https://www.base-search.net/)                                    	| ja    	| Bielefeld University            	| 227M   	|
+| 5   	| [Core](https://core.ac.uk/)                                             	| ja    	| CORE (non-profit)               	| 136M   	|
+| 6   	| [Semantic Scholar](https://core.ac.uk/https://www.semanticscholar.org/) 	| ja    	| Allen Institute for AI          	| 200M   	|
+| 7   	| [Refseek](https://www.refseek.com/)                                     	| ja    	| refseek?                        	| 1000M  	|
+| 8   	| [elicit](https://elicit.com/)                                           	| ja    	| Ought/Elicit (non-profit?)      	| 200M   	|
+| 9   	| [Research Gate](https://www.researchgate.net/)                          	| ja    	| Research Gate (?)               	| 160M?  	|
+| 10  	| [Perplexity](https://www.perplexity.ai/)                                	| ja    	| Perplexity AI (Google Spin-Off) 	| 200M   	|
+
+: Suchdienste für wissenschaftliche Werke {#tbl-suchdienste}
+
+
+
+Ein "Treffer" in einer Literaturdatenbank bedeutet: man hat ein passendes Werk gefunden.
+Das wiederum heißt:
+
+1. ✅ Die Zitierinformationen  sind  zugänglich
+2.  ✅ Die Always-Open-Acces-Elemente sind zugänglich
+3. 🙅‍♀️   Der Volltext ist nicht notwendig zugänglich
+
+
+
+### Volltext-Zugriff
+
+Um an Volltexte zu gelangen, gibt es verschiedene Wege:
+
+- *Googeln* nach dem Titel (in Anführungszeichen, damit eine Exakt-Suche ausgeführt wird) plus dem Suchterm "PDF"
+- *Google Scholar* zeigt an, ob ein Volltext zu einem Werk frei zugänglich im Internet ist
+- Melden Sie sich bei Ihrer *Bibliothek* an und prüfen Sie, welche Quellen dort zugänglich sind
+- Suchen Sie nach einem *Preprint* auf Preprint-Diensten wie Researchgate
+- Schreiben Sie die *Autoren* an.
+- Verzichten Sie auf diesen Artikel und wählen Sie stattdessen einen *ähnlichen*, auf den Sie einfacher zugreifen können 🤷‍♂️
+- Volltextdienste wie "S c i h u b" werden nicht als legale Quellen angesehen.
 
 ## Lesen
 
