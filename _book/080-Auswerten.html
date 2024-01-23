@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.478">
+<meta name="generator" content="quarto-1.4.544">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Forschungsprojekt - 11&nbsp; Auswerten: Überblick</title>
 <style>
@@ -59,6 +59,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "weitere Treffer in diesem Dokument",
     "search-more-matches-text": "weitere Treffer in diesem Dokument",
     "search-clear-button-title": "Zurücksetzen",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Abbrechen",
     "search-submit-button-title": "Abschicken",
     "search-label": "Suchen"
@@ -88,6 +89,7 @@ ul.task-list li input[type="checkbox"] {
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Forschungsprojekt</a> 
         <div class="sidebar-tools-main">
+    <a href="https://github.com/sebastiansauer/fopra" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Dunkelmodus umschalten"><i class="bi"></i></a>
 </div>
     </div>
@@ -271,7 +273,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#wie-man-umfragedaten-auswertet" id="toc-wie-man-umfragedaten-auswertet" class="nav-link" data-scroll-target="#wie-man-umfragedaten-auswertet"><span class="header-section-number">11.5</span> Wie man Umfragedaten auswertet</a></li>
   <li><a href="#checkliste-zur-datenanalyse" id="toc-checkliste-zur-datenanalyse" class="nav-link" data-scroll-target="#checkliste-zur-datenanalyse"><span class="header-section-number">11.6</span> Checkliste zur Datenanalyse</a></li>
   <li><a href="#aufgaben" id="toc-aufgaben" class="nav-link" data-scroll-target="#aufgaben"><span class="header-section-number">11.7</span> Aufgaben</a></li>
-  </ul></nav>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/sebastiansauer/fopra/blob/main/080-Auswerten.qmd" class="toc-action"><i class="bi bi-github"></i>Quellcode anzeigen</a></li><li><a href="https://github.com/sebastiansauer/fopra/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./040-Populationsbeschreibung.html">Empirie</a></li><li class="breadcrumb-item"><a href="./080-Auswerten.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Auswerten: Überblick</span></a></li></ol></nav><div class="quarto-title">
@@ -311,9 +313,10 @@ ul.task-list li input[type="checkbox"] {
 <p>Also gut, Sie haben es so gewollt: Gehen Sie geradeaus weiter zur Statistik.</p>
 </section><section id="über-7-brücken-musst-du-gehen-die-schritte-der-datenanalyse" class="level3" data-number="11.2.2"><h3 data-number="11.2.2" class="anchored" data-anchor-id="über-7-brücken-musst-du-gehen-die-schritte-der-datenanalyse">
 <span class="header-section-number">11.2.2</span> Über 7 Brücken musst du gehen: Die Schritte der Datenanalyse</h3>
-<div class="cell">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div>
+<p></p><figure class="figure"></figure><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart TD
   A[Einlesen und Aufbereiten] --&gt; Z[Zusammenfassen]
@@ -325,6 +328,7 @@ ul.task-list li input[type="checkbox"] {
   Ü --&gt; A
 </pre>
 </div>
+<p></p>
 </div>
 </div>
 </div>
@@ -350,11 +354,11 @@ ul.task-list li input[type="checkbox"] {
 <section id="codebook" class="level3" data-number="11.3.1"><h3 data-number="11.3.1" class="anchored" data-anchor-id="codebook">
 <span class="header-section-number">11.3.1</span> Codebook</h3>
 <p>Ein Teil der Dokumentation ist ein Codebook (auch Data-Dictionary genannt). Ein Codebook erläutert die Namen der Variablen in Ihrer (Roh-)Datentabelle, s. <a href="#fig-codebook" class="quarto-xref">Abbildung&nbsp;<span>11.1</span></a>.</p>
-<div id="fig-codebook" class="quarto-figure quarto-figure-center anchored">
+<div id="fig-codebook" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-codebook-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="img/codebook.jpg" class="img-fluid figure-img">
 </div>
-<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-codebook-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-codebook-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;11.1: Beispiel für ein Codebook
 </figcaption></figure>
 </div>
@@ -667,38 +671,28 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    const typesetMath = (el) => {
-      if (window.MathJax) {
-        // MathJax Typeset
-        window.MathJax.typeset([el]);
-      } else if (window.katex) {
-        // KaTeX Render
-        var mathElements = el.getElementsByClassName("math");
-        var macros = [];
-        for (var i = 0; i < mathElements.length; i++) {
-          var texText = mathElements[i].firstChild;
-          if (mathElements[i].tagName == "SPAN") {
-            window.katex.render(texText.data, mathElements[i], {
-              displayMode: mathElements[i].classList.contains('display'),
-              throwOnError: false,
-              macros: macros,
-              fleqn: false
-            });
-          }
-        }
-      }
-    }
     if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
       if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
         }
-        typesetMath(container);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
         return container.innerHTML
       } else {
-        typesetMath(note);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
@@ -707,8 +701,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      typesetMath(note);
-      return note.innerHTML;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -943,4 +944,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sebastiansauer/fopra/blob/main/080-Auswerten.qmd" class="toc-action"><i class="bi bi-github"></i>Quellcode anzeigen</a></li><li><a href="https://github.com/sebastiansauer/fopra/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div></div></footer></body></html>

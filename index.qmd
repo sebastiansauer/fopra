@@ -2,54 +2,6 @@
 
 
 
-```{r download-hinweise}
-#| echo: false
-#| cache: false
-
-# Hinweise-Lernhilfen.qmd
-download.file(url = "https://raw.githubusercontent.com/sebastiansauer/Lehre/main/Hinweise/Hinweise-Lernhilfen.qmd",
-              destfile = "children/Hinweise-Lernhilfen.qmd",
-              quiet = TRUE)
-
-
-# Hinweise-Unterricht.qmd
-download.file(url = "https://raw.githubusercontent.com/sebastiansauer/Lehre/main/Hinweise/Hinweise-Unterricht.qmd",
-              destfile = "children/Hinweise-Unterricht.qmd",
-              quiet = TRUE)
-
-
-# Hinweise-Didaktik.qmd 
-download.file(url = "https://raw.githubusercontent.com/sebastiansauer/Lehre/main/Hinweise/Hinweise-Didaktik.qmd",
-              destfile = "children/Hinweise-Didaktik.qmd",
-              quiet = TRUE)
-  
-```
-
-
-
-```{r download-hinweise-pruefung}
-#| echo: false
-#| cache: false
-
-
-# Hinweise-Pruefung-Seminararbeit.qmd
-download.file(url = "https://raw.githubusercontent.com/sebastiansauer/Lehre/main/Hinweise/Hinweise-Pruefung-Seminararbeit.qmd",
-              destfile = "children/Hinweise-Pruefung-Seminararbeit.qmd",
-              quiet = TRUE)
-
-
-# Hiqnweise Prüfung allgemein
-download.file(url = "https://raw.githubusercontent.com/sebastiansauer/Lehre/main/Hinweise/Hinweise-Pruefung-allgemein.qmd",
-              destfile = "children/Hinweise-Pruefung-allgemein.qmd",
-              quiet = TRUE)
-
-
-# Hinweise-Pruefung-Gruppenarbeit.qmd
-download.file(url = "https://raw.githubusercontent.com/sebastiansauer/Lehre/main/Hinweise/Hinweise-Pruefung-Gruppenarbeit.qmd",
-              destfile = "children/Hinweise-Pruefung-Gruppenarbeit.qmd",
-              quiet = TRUE)
-```
-
 
 
 
@@ -170,28 +122,6 @@ Natürlich kann man sich auch andere sinnvolle Darstellungen dieses Ablaufs vors
 
 
 
-### Modulzeitplan
-
-
-
-
-
-```{r source-timetable, echo = FALSE, cache=FALSE}
-# zeitplan
-timetable_file <- "children/Modulverlauf.xlsx"
-stopifnot(file.exists(timetable_file))
-timetable <- readxl::read_xlsx(timetable_file)
-
-gt::gt(timetable) |> 
-  gt::cols_width(
-    1 ~ gt::pct(5),
-    2 ~ gt::pct(20),
-    3 ~ gt::pct(20),
-    4 ~ gt::pct(45)
-  )
-```
-
-
 
 
 ## Lernhilfen
@@ -278,26 +208,24 @@ Das führt zu Stress gegen Ende der Projektlaufzeit - und mitunter zu (erheblich
 :::
 
 
+### Weitere Lernhilfen
 
 
-{{< include children/Hinweise-Lernhilfen.qmd >}}
-
-
-
+[Hier](https://hinweisbuch.netlify.app/hinweise-lernhilfen-frame) finden Sie einen Überblick über weitere Lernhilfen.
 
 
 
 
 
 
-## Didaktik
+## Hinweise zum Unterricht
+
+
+### Didaktik
 
 
 
-
-
-{{< include children/Hinweise-Didaktik.qmd >}}
-
+[Hier](https://hinweisbuch.netlify.app/hinweise-didaktik-frame) finden Sie didaktische Hinweise zu diesem Modul.
 
 
 
@@ -319,26 +247,64 @@ Das führt zu Stress gegen Ende der Projektlaufzeit - und mitunter zu (erheblich
 
 
 
-## Organisatorische Hinweise
+### Organisatorische Hinweise
 
 
 
-{{< include children/Hinweise-Unterricht.qmd >}}
+[Hier](https://hinweisbuch.netlify.app/hinweise-unterricht-frame) finden Sie organisatorische Hinweise zum Unterricht in diesem Modul.
+
+
+
+
+
+## Prüfung
+
+Das Prüfungsformat ist: *Projektarbeit*.
+
+- [Allgemeine Prüfungshinweise](https://hinweisbuch.netlify.app/hinweise-pruefung-allgemein-frame)
+
+
+- [Hinweise zu Projekt- und Seminararbeiten](https://hinweisbuch.netlify.app/hinweise-pruefung-projektarbeit-frame)
+
+
+- [Prüfungsvorbereitung](https://hinweisbuch.netlify.app/hinweise-pruefungsvorbereitung-frame)
 
 
 
 
 
 
-## Quelltext
+## Zum Autor
 
-Der Quelltext dieses Buchs ist [hier](https://fopro.netlify.app/) zugänglich.
+
+Nähere Hinweise zum Autor, Sebastian Sauer, finden Sie [hier](https://sebastiansauer-academic.netlify.app/).
+
+
+
+
+
+
+## Danke
+
+Dieses Dokument entstand mit Unterstützung vieler Kolleginnen und Kollegen, vor allem aus der FOM Hochschule. Vielen Dank!
+
 
 
 ## Technische Details
 
-Dieses Dokument wurde erzeugt am/um `r Sys.time()`.
 
+### Quelltext
+
+Der Quelltext dieses Buchs ist [hier](https://fopro.netlify.app/) zugänglich.
+
+
+
+
+## Reproduzierbarkeit
+
+Hier sind einige technische Details zur Reproduzierbarkeit des Buchs. 
+
+Dieses Dokument wurde erzeugt am/um `r Sys.time()`.
 
 
 ```{r}
@@ -346,11 +312,4 @@ Dieses Dokument wurde erzeugt am/um `r Sys.time()`.
 #| eval: !expr knitr:::is_html_output()
 sessioninfo::session_info()
 ```
-
-
-
-## Danke
-
-Dieses Dokument entstand mit Unterstützung vieler Kolleginnen und Kollegen aus der FOM Hochschule. Vielen Dank!
-
 

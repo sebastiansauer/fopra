@@ -9,6 +9,9 @@ book:
   title: "Forschungsprojekt"
   author: "Sebastian Sauer"
   date: now
+  repo-url: https://github.com/sebastiansauer/fopra
+  repo-actions: [source, issue]
+
   chapters:
     - part: "Organisatorisches"
       chapters:

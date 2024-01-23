@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.478">
+<meta name="generator" content="quarto-1.4.544">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Forschungsprojekt - 13&nbsp; Auswerten: Modellieren</title>
 <style>
@@ -116,6 +116,7 @@ div.csl-indent {
     "search-more-match-text": "weitere Treffer in diesem Dokument",
     "search-more-matches-text": "weitere Treffer in diesem Dokument",
     "search-clear-button-title": "Zurücksetzen",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Abbrechen",
     "search-submit-button-title": "Abschicken",
     "search-label": "Suchen"
@@ -123,7 +124,32 @@ div.csl-indent {
 }</script><meta name="mermaid-theme" content="neutral">
 <script src="site_libs/quarto-diagram/mermaid.min.js"></script><script src="site_libs/quarto-diagram/mermaid-init.js"></script><link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
-<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><link rel="stylesheet" href="styles.css">
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script><link rel="stylesheet" href="styles.css">
 </head>
 <body class="nav-sidebar floating">
 
@@ -145,6 +171,7 @@ div.csl-indent {
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Forschungsprojekt</a> 
         <div class="sidebar-tools-main">
+    <a href="https://github.com/sebastiansauer/fopra" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Dunkelmodus umschalten"><i class="bi"></i></a>
 </div>
     </div>
@@ -360,7 +387,7 @@ div.csl-indent {
 </li>
   <li><a href="#fazit" id="toc-fazit" class="nav-link" data-scroll-target="#fazit"><span class="header-section-number">13.8</span> Fazit</a></li>
   <li><a href="#aufgaben" id="toc-aufgaben" class="nav-link" data-scroll-target="#aufgaben"><span class="header-section-number">13.9</span> Aufgaben</a></li>
-  </ul></nav>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/sebastiansauer/fopra/blob/main/090-Modellieren.qmd" class="toc-action"><i class="bi bi-github"></i>Quellcode anzeigen</a></li><li><a href="https://github.com/sebastiansauer/fopra/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./040-Populationsbeschreibung.html">Empirie</a></li><li class="breadcrumb-item"><a href="./090-Modellieren.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Auswerten: Modellieren</span></a></li></ol></nav><div class="quarto-title">
@@ -417,9 +444,9 @@ div.csl-indent {
 <blockquote class="blockquote">
 <p>Wir erwarten, dass der Mittelwert der Experimentalgruppe höher ist als der Mittelwert der Kontrollgruppe.</p>
 </blockquote>
-<div class="cell">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-bringtnixtin-flow" class="quarto-figure quarto-figure-center anchored">
+<div id="fig-bringtnixtin-flow" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-bringtnixtin-flow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
 <pre class="mermaid mermaid-js" data-label="fig-bringtnixtin-flow">flowchart LR
@@ -431,7 +458,7 @@ div.csl-indent {
 </pre>
 </div>
 </div>
-<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-bringtnixtin-flow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bringtnixtin-flow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;13.1: Ablaufdiagramm der Bringtnixtin-Studie
 </figcaption></figure>
 </div>
@@ -440,11 +467,11 @@ Abbildung&nbsp;13.1: Ablaufdiagramm der Bringtnixtin-Studie
 <p>Der DAG des Experiments ist in <a href="#fig-bringtnixtin-dag" class="quarto-xref">Abbildung&nbsp;<span>13.2</span></a> dargestellt.</p>
 <div class="cell" data-fig.asp="0.5" data-hash="090-Modellieren_cache/html/fig-bringtnixtin-dag_bdecbf26d2af20ce2c5557d6e41c7119">
 <div class="cell-output-display">
-<div id="fig-bringtnixtin-dag" class="quarto-figure quarto-figure-center anchored" width="100%">
+<div id="fig-bringtnixtin-dag" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-bringtnixtin-dag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="090-Modellieren_files/figure-html/fig-bringtnixtin-dag-1.png" class="img-fluid figure-img" style="width:100.0%">
 </div>
-<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-bringtnixtin-dag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bringtnixtin-dag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;13.2: DAG für der Bringtnixtin-Studie
 </figcaption></figure>
 </div>
@@ -468,7 +495,7 @@ Hinweis
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">d_bringtnixtin_path</span> <span class="op">&lt;-</span> <span class="st">"https://raw.githubusercontent.com/sebastiansauer/fopra/main/data/d_bringtnixtin.csv"</span></span>
 <span><span class="va">d_bringtnixtin</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="va">d_bringtnixtin_path</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><a href="#dnldts59368" onclick="fetch('data:text/csv;base64,aWQsZyx5MSx5MixkCjEsMCwxLjM3MDk1ODQ0NzE0NjY2ODUsMS40MTIxNTgxNjcxODY3MTkyLDAuMDQxMTk5NzIwMDQwMDUwNjgKMiwwLC0wLjU2NDY5ODE3MTM5NjA4ODcsLTAuNjM2OTA5NjMxMTA1ODIyLC0wLjA3MjIxMTQ1OTcwOTczMzMKMywwLDAuMzYzMTI4NDExMzM3MzM5MiwwLjUxNDc2MTA1ODQ3NzI0MjYsMC4xNTE2MzI2NDcxMzk5MDM0Mwo0LDAsMC42MzI4NjI2MDQ5NjEwNDA0LDAuNDg3NTIxNjM5NTQ1NzI1MzYsLTAuMTQ1MzQwOTY1NDE1MzE1MDUKNSwwLDAuNDA0MjY4MzIzMTQwOTk5MDMsMC4xMzA2MTIxMTQyNTcxNDAxLC0wLjI3MzY1NjIwODg4Mzg1ODk0CjYsMCwtMC4xMDYxMjQ1MTYwOTE0ODQwMywtMC4wMTk1NjA5MTA5MTM3NDA1OTgsMC4wODY1NjM2MDUxNzc3NDM0Mwo3LDAsMS41MTE1MjE5OTc0Mzg5MzksMS4zNDkyNDMzNjIyMDE2MDQ3LC0wLjE2MjI3ODYzNTIzNzMzNDIKOCwwLC0wLjA5NDY1OTAzODQxMzA5NzU2LDAuMTk0MTYxMjEzOTMxMTUzMDEsMC4yODg4MjAyNTIzNDQyNTA1Nwo5LDAsMi4wMTg0MjM3MTM4NzcwNDIsMS45MzIxMzQ0NzMzNTQzNzI2LC0wLjA4NjI4OTI0MDUyMjY2OTE3NQoxMCwwLC0wLjA2MjcxNDA5OTA1MjQyMSwwLjA2ODQxNTQ3NzYyODAyMDM3LDAuMTMxMTI5NTc2NjgwNDQxMzcKMTEsMCwxLjMwNDg2OTY1NDIyMzQ4NTIsMS4zNjkyNTQ3MDcyNjQyNzQ1LDAuMDY0Mzg1MDUzMDQwNzg5MjMKMTIsMCwyLjI4NjY0NTM5MjcwMTEwNywyLjEyOTg3NzYwNDUyNTAzMiwtMC4xNTY3Njc3ODgxNzYwNzQ5NQoxMywwLC0xLjM4ODg2MDcwMTExMjMzOTMsLTEuMDczNzE1MTk3MTUzOTQzOCwwLjMxNTE0NTUwMzk1ODM5NTQ3CjE0LDAsLTAuMjc4Nzg4NzY2ODE3MzcxMzYsLTAuMTUwMjA4OTA1NjczOTA4MDcsMC4xMjg1Nzk4NjExNDM0NjMzCjE1LDAsLTAuMTMzMzIxMzM2MzkzNjU4MDQsLTAuMTE1MzY5MjA3MDczNzM2OSwwLjAxNzk1MjEyOTMxOTkyMTEzCjE2LDAsMC42MzU5NTAzOTgwNzAwNzQ0LDAuNjkxMjYwNTQ3NTI4MzY3LDAuMDU1MzEwMTQ5NDU4MjkyNgoxNywwLC0wLjI4NDI1MjkyMTQxNjA3MjQsLTAuMTQ4Mzk1MTU4MjA1MDE4MjIsMC4xMzU4NTc3NjMyMTEwNTQxNwoxOCwwLC0yLjY1NjQ1NTQyMDkwNDc3NTcsLTIuNjM4NDg4ODQzNTg4OTU5MywwLjAxNzk2NjU3NzMxNTgxNjQxMgoxOSwwLC0yLjQ0MDQ2NjkyODU3NTUxOTQsLTMuMDM5MDg0OTQ1MjA2MTA2LC0wLjU5ODYxODAxNjYzMDU4NjgKMjAsMCwxLjMyMDExMzM0NTczMDE5MjEsMS4zNzcwODk5MzY0MzYzMjQsMC4wNTY5NzY1OTA3MDYxMzE5MjQKMjEsMSwtMC4zMDY2Mzg1OTQwNzg0NzQ1NSwtMC43MTM0MTg4NTU5NjAwMDMsLTAuNDA2NzgwMjYxODgxNTI4NDQKMjIsMSwtMS43ODEzMDg0MzM5OCwtMi4wNzc1OTU2NTQzNDAyMTE0LC0wLjI5NjI4NzIyMDM2MDIxMTQKMjMsMSwtMC4xNzE5MTczNTU3NTk2MjEzNiwtMC4zODg4ODU5NDM2MTk4NTMzNSwtMC4yMTY5Njg1ODc4NjAyMzIKMjQsMSwxLjIxNDY3NDY5OTE3MjU5ODcsMS4xNjEyODg3MzEyOTc4MDEsLTAuMDUzMzg1OTY3ODc0Nzk3NjYKMjUsMSwxLjg5NTE5MzQ2MTI2NDk2NTIsMS40MTY0MDE3MTYwMzY3MzksLTAuNDc4NzkxNzQ1MjI4MjI2MgoyNiwxLC0wLjQzMDQ2OTEzMTYwNjE5OTY1LC0wLjUwMzI5MzkzODUzMDcwNDMsLTAuMDcyODI0ODA2OTI0NTA0NgoyNywxLC0wLjI1NzI2OTM4Mjc2ODkyOTYzLC0wLjUyMzQzMzA5MjE1MTg0ODEsLTAuMjY2MTYzNzA5MzgyOTE4NDUKMjgsMSwtMS43NjMxNjMwODUxOTQ3ODAyLC0xLjg4ODc5NTE5ODc4ODU4OTEsLTAuMTI1NjMyMTEzNTkzODA5CjI5LDEsMC40NjAwOTczNTQ4MzEyNzE0LDAuMzEwOTA5NzM1MTU2MDY3NCwtMC4xNDkxODc2MTk2NzUyMDQKMzAsMSwtMC42Mzk5OTQ4NzU5NjAxMTkyLC0wLjgyOTE1MjU3NjcyMDA4LC0wLjE4OTE1NzcwMDc1OTk2MDg2CjMxLDEsMC40NTU0NTAxMjMyNDEyMTkzNiwtMC4wODY1MDY5OTc4MDU2ODQ5NywtMC41NDE5NTcxMjEwNDY5MDQzCjMyLDEsMC43MDQ4MzczMzcyMjg4MTkxLDAuMzUzNDY2NzI2NTczMzQ0NSwtMC4zNTEzNzA2MTA2NTU0NzQ2NQozMywxLDEuMDM1MTAzNTIxOTY5OTIyMywwLjgyNjQ3MzgyMTAzNjQ5NzcsLTAuMjA4NjI5NzAwOTMzNDI0NgozNCwxLC0wLjYwODkyNjM3NTQwNzIxMTEsLTEuMTMyOTY0MzgwMjk1MDEzMSwtMC41MjQwMzgwMDQ4ODc4MDIxCjM1LDEsMC41MDQ5NTUxMjMyOTc5NzAzLDAuMDYzMDU2MDI3MDQ5ODY1NjgsLTAuNDQxODk5MDk2MjQ4MTA0NjQKMzYsMSwtMS43MTcwMDg2NzkwNzMzNDI1LC0xLjkzNDE0MjcxMjg3MDMzOTIsLTAuMjE3MTM0MDMzNzk2OTk2NwozNywxLC0wLjc4NDQ1OTAwODM3OTQ5NiwtMC45NjQxNTY1OTQxNDU5MTExNSwtMC4xNzk2OTc1ODU3NjY0MTUxNQozOCwxLC0wLjg1MDkwNzU5NDE3NjUxODMsLTEuMDkxNDg3NDA5ODAxODE4MSwtMC4yNDA1Nzk4MTU2MjUyOTk4NAozOSwxLC0yLjQxNDIwNzY0OTk0NjYzMiwtMi45MjQ2OTYyNDI3NjE5MDEsLTAuNTEwNDg4NTkyODE1MjY5NAo0MCwxLDAuMDM2MTIyNjA2ODkyMjU1NjMsLTAuNTE3MTY2OTA2MTcwNjQ4OSwtMC41NTMyODk1MTMwNjI5MDQ1Cg==').then(res => res.blob()).then(blob => {
+<p><a href="#dnldts38900" onclick="fetch('data:text/csv;base64,aWQsZyx5MSx5MixkCjEsMCwxLjM3MDk1ODQ0NzE0NjY2ODUsMS40MTIxNTgxNjcxODY3MTkyLDAuMDQxMTk5NzIwMDQwMDUwNjgKMiwwLC0wLjU2NDY5ODE3MTM5NjA4ODcsLTAuNjM2OTA5NjMxMTA1ODIyLC0wLjA3MjIxMTQ1OTcwOTczMzMKMywwLDAuMzYzMTI4NDExMzM3MzM5MiwwLjUxNDc2MTA1ODQ3NzI0MjYsMC4xNTE2MzI2NDcxMzk5MDM0Mwo0LDAsMC42MzI4NjI2MDQ5NjEwNDA0LDAuNDg3NTIxNjM5NTQ1NzI1MzYsLTAuMTQ1MzQwOTY1NDE1MzE1MDUKNSwwLDAuNDA0MjY4MzIzMTQwOTk5MDMsMC4xMzA2MTIxMTQyNTcxNDAxLC0wLjI3MzY1NjIwODg4Mzg1ODk0CjYsMCwtMC4xMDYxMjQ1MTYwOTE0ODQwMywtMC4wMTk1NjA5MTA5MTM3NDA1OTgsMC4wODY1NjM2MDUxNzc3NDM0Mwo3LDAsMS41MTE1MjE5OTc0Mzg5MzksMS4zNDkyNDMzNjIyMDE2MDQ3LC0wLjE2MjI3ODYzNTIzNzMzNDIKOCwwLC0wLjA5NDY1OTAzODQxMzA5NzU2LDAuMTk0MTYxMjEzOTMxMTUzMDEsMC4yODg4MjAyNTIzNDQyNTA1Nwo5LDAsMi4wMTg0MjM3MTM4NzcwNDIsMS45MzIxMzQ0NzMzNTQzNzI2LC0wLjA4NjI4OTI0MDUyMjY2OTE3NQoxMCwwLC0wLjA2MjcxNDA5OTA1MjQyMSwwLjA2ODQxNTQ3NzYyODAyMDM3LDAuMTMxMTI5NTc2NjgwNDQxMzcKMTEsMCwxLjMwNDg2OTY1NDIyMzQ4NTIsMS4zNjkyNTQ3MDcyNjQyNzQ1LDAuMDY0Mzg1MDUzMDQwNzg5MjMKMTIsMCwyLjI4NjY0NTM5MjcwMTEwNywyLjEyOTg3NzYwNDUyNTAzMiwtMC4xNTY3Njc3ODgxNzYwNzQ5NQoxMywwLC0xLjM4ODg2MDcwMTExMjMzOTMsLTEuMDczNzE1MTk3MTUzOTQzOCwwLjMxNTE0NTUwMzk1ODM5NTQ3CjE0LDAsLTAuMjc4Nzg4NzY2ODE3MzcxMzYsLTAuMTUwMjA4OTA1NjczOTA4MDcsMC4xMjg1Nzk4NjExNDM0NjMzCjE1LDAsLTAuMTMzMzIxMzM2MzkzNjU4MDQsLTAuMTE1MzY5MjA3MDczNzM2OSwwLjAxNzk1MjEyOTMxOTkyMTEzCjE2LDAsMC42MzU5NTAzOTgwNzAwNzQ0LDAuNjkxMjYwNTQ3NTI4MzY3LDAuMDU1MzEwMTQ5NDU4MjkyNgoxNywwLC0wLjI4NDI1MjkyMTQxNjA3MjQsLTAuMTQ4Mzk1MTU4MjA1MDE4MjIsMC4xMzU4NTc3NjMyMTEwNTQxNwoxOCwwLC0yLjY1NjQ1NTQyMDkwNDc3NTcsLTIuNjM4NDg4ODQzNTg4OTU5MywwLjAxNzk2NjU3NzMxNTgxNjQxMgoxOSwwLC0yLjQ0MDQ2NjkyODU3NTUxOTQsLTMuMDM5MDg0OTQ1MjA2MTA2LC0wLjU5ODYxODAxNjYzMDU4NjgKMjAsMCwxLjMyMDExMzM0NTczMDE5MjEsMS4zNzcwODk5MzY0MzYzMjQsMC4wNTY5NzY1OTA3MDYxMzE5MjQKMjEsMSwtMC4zMDY2Mzg1OTQwNzg0NzQ1NSwtMC43MTM0MTg4NTU5NjAwMDMsLTAuNDA2NzgwMjYxODgxNTI4NDQKMjIsMSwtMS43ODEzMDg0MzM5OCwtMi4wNzc1OTU2NTQzNDAyMTE0LC0wLjI5NjI4NzIyMDM2MDIxMTQKMjMsMSwtMC4xNzE5MTczNTU3NTk2MjEzNiwtMC4zODg4ODU5NDM2MTk4NTMzNSwtMC4yMTY5Njg1ODc4NjAyMzIKMjQsMSwxLjIxNDY3NDY5OTE3MjU5ODcsMS4xNjEyODg3MzEyOTc4MDEsLTAuMDUzMzg1OTY3ODc0Nzk3NjYKMjUsMSwxLjg5NTE5MzQ2MTI2NDk2NTIsMS40MTY0MDE3MTYwMzY3MzksLTAuNDc4NzkxNzQ1MjI4MjI2MgoyNiwxLC0wLjQzMDQ2OTEzMTYwNjE5OTY1LC0wLjUwMzI5MzkzODUzMDcwNDMsLTAuMDcyODI0ODA2OTI0NTA0NgoyNywxLC0wLjI1NzI2OTM4Mjc2ODkyOTYzLC0wLjUyMzQzMzA5MjE1MTg0ODEsLTAuMjY2MTYzNzA5MzgyOTE4NDUKMjgsMSwtMS43NjMxNjMwODUxOTQ3ODAyLC0xLjg4ODc5NTE5ODc4ODU4OTEsLTAuMTI1NjMyMTEzNTkzODA5CjI5LDEsMC40NjAwOTczNTQ4MzEyNzE0LDAuMzEwOTA5NzM1MTU2MDY3NCwtMC4xNDkxODc2MTk2NzUyMDQKMzAsMSwtMC42Mzk5OTQ4NzU5NjAxMTkyLC0wLjgyOTE1MjU3NjcyMDA4LC0wLjE4OTE1NzcwMDc1OTk2MDg2CjMxLDEsMC40NTU0NTAxMjMyNDEyMTkzNiwtMC4wODY1MDY5OTc4MDU2ODQ5NywtMC41NDE5NTcxMjEwNDY5MDQzCjMyLDEsMC43MDQ4MzczMzcyMjg4MTkxLDAuMzUzNDY2NzI2NTczMzQ0NSwtMC4zNTEzNzA2MTA2NTU0NzQ2NQozMywxLDEuMDM1MTAzNTIxOTY5OTIyMywwLjgyNjQ3MzgyMTAzNjQ5NzcsLTAuMjA4NjI5NzAwOTMzNDI0NgozNCwxLC0wLjYwODkyNjM3NTQwNzIxMTEsLTEuMTMyOTY0MzgwMjk1MDEzMSwtMC41MjQwMzgwMDQ4ODc4MDIxCjM1LDEsMC41MDQ5NTUxMjMyOTc5NzAzLDAuMDYzMDU2MDI3MDQ5ODY1NjgsLTAuNDQxODk5MDk2MjQ4MTA0NjQKMzYsMSwtMS43MTcwMDg2NzkwNzMzNDI1LC0xLjkzNDE0MjcxMjg3MDMzOTIsLTAuMjE3MTM0MDMzNzk2OTk2NwozNywxLC0wLjc4NDQ1OTAwODM3OTQ5NiwtMC45NjQxNTY1OTQxNDU5MTExNSwtMC4xNzk2OTc1ODU3NjY0MTUxNQozOCwxLC0wLjg1MDkwNzU5NDE3NjUxODMsLTEuMDkxNDg3NDA5ODAxODE4MSwtMC4yNDA1Nzk4MTU2MjUyOTk4NAozOSwxLC0yLjQxNDIwNzY0OTk0NjYzMiwtMi45MjQ2OTYyNDI3NjE5MDEsLTAuNTEwNDg4NTkyODE1MjY5NAo0MCwxLDAuMDM2MTIyNjA2ODkyMjU1NjMsLTAuNTE3MTY2OTA2MTcwNjQ4OSwtMC41NTMyODk1MTMwNjI5MDQ1Cg==').then(res => res.blob()).then(blob => {
       const downloadURL = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       document.body.appendChild(a);
@@ -476,7 +503,7 @@ Hinweis
       a.download = 'file.csv'; a.click();
       window.URL.revokeObjectURL(downloadURL);
       document.body.removeChild(a);
-        });"><button class="btn btn-default downloadthis  " id="dnldts59368"><i class="bi bi-download"></i> Download </button></a></p>
+        });"><button class="btn btn-default downloadthis  " id="dnldts38900"><i class="bi bi-download"></i> Download </button></a></p>
 <p>Die Autoren der Studie geben an, dass die Daten in z-Einheiten skaliert sind.</p>
 </section><section id="deskriptive-analyse" class="level3" data-number="13.2.2"><h3 data-number="13.2.2" class="anchored" data-anchor-id="deskriptive-analyse">
 <span class="header-section-number">13.2.2</span> Deskriptive Analyse</h3>
@@ -487,8 +514,8 @@ Hinweis
 <span>            iq_sd <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/sd.html">sd</a></span><span class="op">(</span><span class="va">y2</span><span class="op">)</span><span class="op">)</span> </span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-hash="090-Modellieren_cache/html/tbl-bringtnixtin-desk_eccf3956098df77e4e10104b82b4b961">
-<div id="tbl-bringtnixtin-desk" class="cell anchored" data-hash="090-Modellieren_cache/html/tbl-bringtnixtin-desk_eccf3956098df77e4e10104b82b4b961">
-<figure class="quarto-float quarto-float-tbl figure"><figcaption class="table quarto-float-caption quarto-float-tbl" id="tbl-bringtnixtin-desk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="tbl-bringtnixtin-desk" class="cell quarto-float anchored" data-hash="090-Modellieren_cache/html/tbl-bringtnixtin-desk_eccf3956098df77e4e10104b82b4b961">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-bringtnixtin-desk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Tabelle&nbsp;13.1: Mittlere fluide Intelligenz nach der Bringtnixtin-Intervention in Abhängigkeit der Gruppe
 </figcaption><div aria-describedby="tbl-bringtnixtin-desk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
@@ -511,11 +538,11 @@ Tabelle&nbsp;13.1: Mittlere fluide Intelligenz nach der Bringtnixtin-Interventio
 <span>  results.subtitle <span class="op">=</span> <span class="cn">FALSE</span>  <span class="co"># keine Statistiken zeigen</span></span>
 <span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-bringtnixtin-desk" class="quarto-figure quarto-figure-center anchored" width="672">
+<div id="fig-bringtnixtin-desk" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-bringtnixtin-desk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="090-Modellieren_files/figure-html/fig-bringtnixtin-desk-1.png" class="img-fluid figure-img" width="672">
 </div>
-<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-bringtnixtin-desk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bringtnixtin-desk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;13.3: Fluide Intelligenz (y2) nach der Bringtnixtin-Intervention. g=0: Kontrollgruppe (Placebo), g=1: Experimentalgruppe (hohe Dosis)
 </figcaption></figure>
 </div>
@@ -527,8 +554,8 @@ Abbildung&nbsp;13.3: Fluide Intelligenz (y2) nach der Bringtnixtin-Intervention.
 <div class="cell" data-hash="090-Modellieren_cache/html/tbl-m1-params_7a79a4cbacff5c22af2a6f2a84e1127f">
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">m_bringtnixtin</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://mc-stan.org/rstanarm/reference/stan_glm.html">stan_glm</a></span><span class="op">(</span><span class="va">y2</span> <span class="op">~</span> <span class="va">g</span>, data <span class="op">=</span> <span class="va">d_bringtnixtin</span>, refresh <span class="op">=</span> <span class="fl">0</span>, seed <span class="op">=</span> <span class="fl">42</span><span class="op">)</span></span>
 <span><span class="fu">parameters</span><span class="op">(</span><span class="va">m_bringtnixtin</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="tbl-m1-params" class="cell anchored" data-hash="090-Modellieren_cache/html/tbl-m1-params_7a79a4cbacff5c22af2a6f2a84e1127f">
-<figure class="quarto-float quarto-float-tbl figure"><figcaption class="table quarto-float-caption quarto-float-tbl" id="tbl-m1-params-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="tbl-m1-params" class="cell quarto-float anchored" data-hash="090-Modellieren_cache/html/tbl-m1-params_7a79a4cbacff5c22af2a6f2a84e1127f">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-m1-params-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Tabelle&nbsp;13.2: Parameter des Modells m_bringtnixtin
 </figcaption><div aria-describedby="tbl-m1-params-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
@@ -546,11 +573,11 @@ Tabelle&nbsp;13.2: Parameter des Modells m_bringtnixtin
 <div class="cell" data-hash="090-Modellieren_cache/html/fig-m1-params_aed519740707887e7501a7d308f78776">
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">parameters</span><span class="op">(</span><span class="va">m_bringtnixtin</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span>show_intercept <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-m1-params" class="quarto-figure quarto-figure-center anchored" width="672">
+<div id="fig-m1-params" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-m1-params-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="090-Modellieren_files/figure-html/fig-m1-params-1.png" class="img-fluid figure-img" width="672">
 </div>
-<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-m1-params-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-m1-params-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;13.4: Parameter des Modells <code>m_bringtnixtin (95%-ETI)</code>
 </figcaption></figure>
 </div>
@@ -565,12 +592,12 @@ Abbildung&nbsp;13.4: Parameter des Modells <code>m_bringtnixtin (95%-ETI)</code>
 </blockquote>
 <p>Testen wir eine Nullhypothese mit dem ROPE-Verfahren: <code>rope(m_bringtnixtin)</code>, s. <a href="#tbl-m1-rope" class="quarto-xref">Tabelle&nbsp;<span>13.3</span></a> und <a href="#fig-m1-rope" class="quarto-xref">Abbildung&nbsp;<span>13.5</span></a>.</p>
 <div class="cell" data-hash="090-Modellieren_cache/html/tbl-m1-rope_a37a57204929b3545993f32ff47a3d03">
-<div id="tbl-m1-rope" class="cell anchored" data-hash="090-Modellieren_cache/html/tbl-m1-rope_a37a57204929b3545993f32ff47a3d03">
-<figure class="quarto-float quarto-float-tbl figure"><figcaption class="table quarto-float-caption quarto-float-tbl" id="tbl-m1-rope-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="tbl-m1-rope" class="cell quarto-float anchored" data-hash="090-Modellieren_cache/html/tbl-m1-rope_a37a57204929b3545993f32ff47a3d03">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-m1-rope-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Tabelle&nbsp;13.3: ROPE für Modell m_bringtnixtin
 </figcaption><div aria-describedby="tbl-m1-rope-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<table class="cell table table-sm table-striped small">
+<table class="do-not-create-environment cell table table-sm table-striped small">
 <colgroup>
 <col style="width: 16%">
 <col style="width: 6%">
@@ -618,11 +645,11 @@ Tabelle&nbsp;13.3: ROPE für Modell m_bringtnixtin
 <div class="cell" data-hash="090-Modellieren_cache/html/fig-m1-rope_e44bb2e2cf0776f3ae09025fe0afd99f">
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="fu">rope</span><span class="op">(</span><span class="va">m_bringtnixtin</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> <span class="fu">scale_fill_okabeito</span><span class="op">(</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-m1-rope" class="quarto-figure quarto-figure-center anchored" width="672">
+<div id="fig-m1-rope" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-m1-rope-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="090-Modellieren_files/figure-html/fig-m1-rope-1.png" class="img-fluid figure-img" width="672">
 </div>
-<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-m1-rope-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-m1-rope-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;13.5: ROPE für Modell <code>m_bringtnixtin</code>
 </figcaption></figure>
 </div>
@@ -675,9 +702,9 @@ Hinweis
 <p>Vergleicht man die Delta-Werte zwischen zwei Gruppen, berechnet man die Differenz zwischen den Gruppen der Delta-Werte. Man spricht daher von einer <em>Difference-in-Difference-Analyse</em>.<span class="math inline">\(\square\)</span></p>
 </div>
 <p><a href="#fig-bringtnixtin-flow2" class="quarto-xref">Abbildung&nbsp;<span>13.6</span></a> zeigt den Ablaufplan dieses Experiments.</p>
-<div class="cell">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-bringtnixtin-flow2" class="quarto-figure quarto-figure-center anchored">
+<div id="fig-bringtnixtin-flow2" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-bringtnixtin-flow2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
 <pre class="mermaid mermaid-js" data-label="fig-bringtnixtin-flow2">flowchart LR
@@ -690,7 +717,7 @@ Hinweis
 </pre>
 </div>
 </div>
-<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-bringtnixtin-flow2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bringtnixtin-flow2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;13.6: Ablaufdiagramm der Bringtnixtin-Studie
 </figcaption></figure>
 </div>
@@ -699,11 +726,11 @@ Abbildung&nbsp;13.6: Ablaufdiagramm der Bringtnixtin-Studie
 <p>DAG des Experiments ist in <a href="#fig-bringtnixtin-dag2" class="quarto-xref">Abbildung&nbsp;<span>13.7</span></a> dargestellt.</p>
 <div class="cell" data-fig.asp="0.5" data-hash="090-Modellieren_cache/html/fig-bringtnixtin-dag2_17214bbc9e3c412c4cae63da7b261809">
 <div class="cell-output-display">
-<div id="fig-bringtnixtin-dag2" class="quarto-figure quarto-figure-center anchored" width="100%">
+<div id="fig-bringtnixtin-dag2" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-bringtnixtin-dag2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="090-Modellieren_files/figure-html/fig-bringtnixtin-dag2-1.png" class="img-fluid figure-img" style="width:100.0%">
 </div>
-<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-bringtnixtin-dag2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bringtnixtin-dag2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;13.7: DAG für der Bringtnixtin-Studie
 </figcaption></figure>
 </div>
@@ -820,11 +847,11 @@ Abbildung&nbsp;13.7: DAG für der Bringtnixtin-Studie
 <span>  results.subtitle <span class="op">=</span> <span class="cn">FALSE</span>  <span class="co"># keine Statistiken zeigen</span></span>
 <span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-bringtnixtin-desk2" class="quarto-figure quarto-figure-center anchored" width="672">
+<div id="fig-bringtnixtin-desk2" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-bringtnixtin-desk2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="090-Modellieren_files/figure-html/fig-bringtnixtin-desk2-1.png" class="img-fluid figure-img" width="672">
 </div>
-<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-bringtnixtin-desk2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bringtnixtin-desk2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;13.8: Veränderung der fluiden Intelligenz (d) in Abhängigkeit der Gruppe; g=0: Kontrollgruppe (Placebo), g=1: Experimentalgruppe (hohe Dosis)
 </figcaption></figure>
 </div>
@@ -838,12 +865,12 @@ Abbildung&nbsp;13.8: Veränderung der fluiden Intelligenz (d) in Abhängigkeit d
 <span><span class="fu">parameters</span><span class="op">(</span><span class="va">m_bringtnixtin2</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-hash="090-Modellieren_cache/html/tbl-m-bringtnixtin2-params_5b72a67a1bdf1c68307a79c7c7f4289d">
-<div id="tbl-m-bringtnixtin2-params" class="cell anchored" data-hash="090-Modellieren_cache/html/tbl-m-bringtnixtin2-params_5b72a67a1bdf1c68307a79c7c7f4289d">
-<figure class="quarto-float quarto-float-tbl figure"><figcaption class="table quarto-float-caption quarto-float-tbl" id="tbl-m-bringtnixtin2-params-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="tbl-m-bringtnixtin2-params" class="cell quarto-float anchored" data-hash="090-Modellieren_cache/html/tbl-m-bringtnixtin2-params_5b72a67a1bdf1c68307a79c7c7f4289d">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-m-bringtnixtin2-params-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Tabelle&nbsp;13.4: Parameter von <code>m_bringtnixtin2</code>
 </figcaption><div aria-describedby="tbl-m-bringtnixtin2-params-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<table class="cell table table-sm table-striped small">
+<table class="do-not-create-environment cell table table-sm table-striped small">
 <colgroup>
 <col style="width: 13%">
 <col style="width: 12%">
@@ -892,11 +919,11 @@ Tabelle&nbsp;13.4: Parameter von <code>m_bringtnixtin2</code>
 <div class="cell" data-hash="090-Modellieren_cache/html/fig-bringtnixtin2-params_ab1453b1aca6844df9add80ca225b5d3">
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="fu">parameters</span><span class="op">(</span><span class="va">m_bringtnixtin2</span><span class="op">)</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-bringtnixtin2-params" class="quarto-figure quarto-figure-center anchored" width="672">
+<div id="fig-bringtnixtin2-params" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-bringtnixtin2-params-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="090-Modellieren_files/figure-html/fig-bringtnixtin2-params-1.png" class="img-fluid figure-img" width="672">
 </div>
-<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-bringtnixtin2-params-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bringtnixtin2-params-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;13.9: Parameterwerte von m_bringtnixtin2 (Intercept ist nicht dargestellt), 95%-ETI; die Null ist nicht enthalten, der Mittelwert ist negativ.
 </figcaption></figure>
 </div>
@@ -910,7 +937,7 @@ Abbildung&nbsp;13.9: Parameterwerte von m_bringtnixtin2 (Intercept ist nicht dar
 <span class="header-section-number">13.5</span> 1 within-Variable</h2>
 <p>Eine Studie mit Vorher-Nachher-Messung setzt ein Within-Design um.</p>
 <div id="exm-within1" class="theorem example">
-<p><span class="theorem-title"><strong>Beispiel 13.1 (Statisches Diagramm vs.&nbsp;animiertes Diagramm) </strong></span>Ein Forschungsteam untersuch den Effekt der UV <em>Visualisierungsart</em> <code>V</code> (mit den zwei Stufen <code>V.1</code> <em>animiert</em> und <code>V.2</code> <em>statisch</em>) auf die Behaltensleistung (<code>y</code>) von Probanden. Nach jeder Bedingung wird die Behaltensleistung gemessen (anhand von 10 Wissensfragen, die jeweils als “richtig” oder “falsch” bewertet wurden), mit <code>y1</code> nach <code>V.1</code> und <code>y2</code> für <code>V.2</code>.<span class="math inline">\(\square\)</span></p>
+<p><span class="theorem-title"><strong>Beispiel 13.1 (Statisches Diagramm vs.&nbsp;animiertes Diagramm)</strong></span> Ein Forschungsteam untersuch den Effekt der UV <em>Visualisierungsart</em> <code>V</code> (mit den zwei Stufen <code>V.1</code> <em>animiert</em> und <code>V.2</code> <em>statisch</em>) auf die Behaltensleistung (<code>y</code>) von Probanden. Nach jeder Bedingung wird die Behaltensleistung gemessen (anhand von 10 Wissensfragen, die jeweils als “richtig” oder “falsch” bewertet wurden), mit <code>y1</code> nach <code>V.1</code> und <code>y2</code> für <code>V.2</code>.<span class="math inline">\(\square\)</span></p>
 </div>
 <section id="design-2" class="level3" data-number="13.5.1"><h3 data-number="13.5.1" class="anchored" data-anchor-id="design-2">
 <span class="header-section-number">13.5.1</span> Design</h3>
@@ -921,9 +948,9 @@ Abbildung&nbsp;13.9: Parameterwerte von m_bringtnixtin2 (Intercept ist nicht dar
 <p>Die zugehörige statistische Hypothese kann man so formulieren: <span class="math inline">\(\bar{d} \ne 0\)</span>, wobei <span class="math inline">\(d = y_1 - y_2\)</span>. <span class="math inline">\(d\)</span> misst also den Unterschied der Behaltensleistung von animierten und statischen Diagrammen, wobei positive Werte zugunsten von statischen Diagrammen sprechen.</p>
 <p>Die Modellformel lautet: <code>d ~ 1</code>, das ist ein <em>Intercept-Modell</em>, also ein Modell ohne Prädiktor. Uns interessiert, ob die Variable <code>d</code> im Mittelwert ungleich Null ist oder positiv (zugunsten statischer Diagramme) oder negativ (Behaltensleistung höher bei animierten Diagrammen).</p>
 <p>Der Ablauf der Studie (aus Sicht der Probandis) ist in <a href="#fig-diagrammart-flow" class="quarto-xref">Abbildung&nbsp;<span>13.10</span></a> dargestellt.</p>
-<div class="cell">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-diagrammart-flow" class="quarto-figure quarto-figure-center anchored">
+<div id="fig-diagrammart-flow" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-diagrammart-flow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
 <pre class="mermaid mermaid-js" data-label="fig-diagrammart-flow">flowchart LR
@@ -931,7 +958,7 @@ Abbildung&nbsp;13.9: Parameterwerte von m_bringtnixtin2 (Intercept ist nicht dar
 </pre>
 </div>
 </div>
-<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-diagrammart-flow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-diagrammart-flow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;13.10: Ablauf der Studie zur Behaltensleistung y2 in Abhängigkeit der Visualisierungsart V (Within-Variable)
 </figcaption></figure>
 </div>
@@ -940,11 +967,11 @@ Abbildung&nbsp;13.10: Ablauf der Studie zur Behaltensleistung y2 in Abhängigkei
 <p>Der DAG des Experiments ist in <a href="#fig-diagrammarten-dag" class="quarto-xref">Abbildung&nbsp;<span>13.11</span></a> dargestellt.</p>
 <div class="cell" data-fig.asp="0.5" data-hash="090-Modellieren_cache/html/fig-diagrammarten-dag_48d88be7f91ca8410565a37cf18113ad">
 <div class="cell-output-display">
-<div id="fig-diagrammarten-dag" class="quarto-figure quarto-figure-center anchored" width="100%">
+<div id="fig-diagrammarten-dag" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-diagrammarten-dag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="090-Modellieren_files/figure-html/fig-diagrammarten-dag-1.png" class="img-fluid figure-img" style="width:100.0%">
 </div>
-<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-diagrammarten-dag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-diagrammarten-dag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;13.11: DAG für die Studie zur Behaltensleistung y2 in Abhängigkeit des Visualiserungstyp V
 </figcaption></figure>
 </div>
@@ -967,7 +994,7 @@ Abbildung&nbsp;13.11: DAG für die Studie zur Behaltensleistung y2 in Abhängigk
 </div>
 </div>
 </div>
-<p><a href="#dnldts30140" onclick="fetch('data:text/csv;base64,aWQseTEseTIseTMsZwoxLDcsOCw5LEEKMiw3LDcsMTAsQQozLDQsOSw5LEEKNCw3LDQsOSxBCjUsNiw3LDgsQQo2LDUsNCw5LEEKNyw2LDUsMTAsQQo4LDMsNywxMCxBCjksNiw0LDEwLEEKMTAsNiw3LDEwLEEKMTEsNSw4LDksQQoxMiw2LDgsMTAsQQoxMyw3LDcsMTAsQQoxNCw0LDYsNyxBCjE1LDUsOSw4LEEKMTYsNyw2LDksQQoxNyw4LDYsMTAsQQoxOCwzLDgsOSxBCjE5LDUsOCw4LEEKMjAsNSw3LDksQQoyMSw3LDYsOSxCCjIyLDMsNCwxMCxCCjIzLDgsNiwxMCxCCjI0LDgsNyw5LEIKMjUsMyw2LDcsQgoyNiw1LDgsNyxCCjI3LDUsOCw4LEIKMjgsNyw2LDksQgoyOSw1LDYsOSxCCjMwLDcsOCwxMCxCCjMxLDYsOSw5LEIKMzIsNiw5LDgsQgozMyw1LDgsOCxCCjM0LDYsNyw5LEIKMzUsMSw4LDksQgozNiw3LDYsOSxCCjM3LDEsMTAsMTAsQgozOCw0LDgsOSxCCjM5LDcsNyw5LEIKNDAsNSwxMCw4LEIK').then(res => res.blob()).then(blob => {
+<p><a href="#dnldts21945" onclick="fetch('data:text/csv;base64,aWQseTEseTIseTMsZwoxLDcsOCw5LEEKMiw3LDcsMTAsQQozLDQsOSw5LEEKNCw3LDQsOSxBCjUsNiw3LDgsQQo2LDUsNCw5LEEKNyw2LDUsMTAsQQo4LDMsNywxMCxBCjksNiw0LDEwLEEKMTAsNiw3LDEwLEEKMTEsNSw4LDksQQoxMiw2LDgsMTAsQQoxMyw3LDcsMTAsQQoxNCw0LDYsNyxBCjE1LDUsOSw4LEEKMTYsNyw2LDksQQoxNyw4LDYsMTAsQQoxOCwzLDgsOSxBCjE5LDUsOCw4LEEKMjAsNSw3LDksQQoyMSw3LDYsOSxCCjIyLDMsNCwxMCxCCjIzLDgsNiwxMCxCCjI0LDgsNyw5LEIKMjUsMyw2LDcsQgoyNiw1LDgsNyxCCjI3LDUsOCw4LEIKMjgsNyw2LDksQgoyOSw1LDYsOSxCCjMwLDcsOCwxMCxCCjMxLDYsOSw5LEIKMzIsNiw5LDgsQgozMyw1LDgsOCxCCjM0LDYsNyw5LEIKMzUsMSw4LDksQgozNiw3LDYsOSxCCjM3LDEsMTAsMTAsQgozOCw0LDgsOSxCCjM5LDcsNyw5LEIKNDAsNSwxMCw4LEIK').then(res => res.blob()).then(blob => {
       const downloadURL = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       document.body.appendChild(a);
@@ -975,7 +1002,7 @@ Abbildung&nbsp;13.11: DAG für die Studie zur Behaltensleistung y2 in Abhängigk
       a.download = 'file.csv'; a.click();
       window.URL.revokeObjectURL(downloadURL);
       document.body.removeChild(a);
-        });"><button class="btn btn-default downloadthis  " id="dnldts30140"><i class="bi bi-download"></i> Download </button></a></p>
+        });"><button class="btn btn-default downloadthis  " id="dnldts21945"><i class="bi bi-download"></i> Download </button></a></p>
 <p>Wir berechnen <code>d</code>, was die zentrale Variable der Forschungsfrage ist.</p>
 <div class="cell" data-hash="090-Modellieren_cache/html/unnamed-chunk-30_9ac3f8c1aef6f469a52746b97c1b0664">
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">d_within</span> <span class="op">&lt;-</span></span>
@@ -998,11 +1025,11 @@ Abbildung&nbsp;13.11: DAG für die Studie zur Behaltensleistung y2 in Abhängigk
 <span>             results.subtitle <span class="op">=</span> <span class="cn">FALSE</span>  <span class="co"># verzichte auf zusätzliche Statistiken</span></span>
 <span>             <span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-d1" class="quarto-figure quarto-figure-center anchored" width="672">
+<div id="fig-d1" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-d1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="090-Modellieren_files/figure-html/fig-d1-1.png" class="img-fluid figure-img" width="672">
 </div>
-<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-d1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-d1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;13.12: Die Verteilung von d: Die Behaltensleistung ist im Mittel besser für animierte Diagramme (in diesen Daten)
 </figcaption></figure>
 </div>
@@ -1015,12 +1042,12 @@ Abbildung&nbsp;13.12: Die Verteilung von d: Die Behaltensleistung ist im Mittel 
 <span>  <span class="fu">describe_distribution</span><span class="op">(</span><span class="va">d</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-hash="090-Modellieren_cache/html/tbl-d1-desk_5d6161f0ef2dc4df9a16030a3b9d1a23">
-<div id="tbl-d1-desk" class="cell anchored" data-hash="090-Modellieren_cache/html/tbl-d1-desk_5d6161f0ef2dc4df9a16030a3b9d1a23">
-<figure class="quarto-float quarto-float-tbl figure"><figcaption class="table quarto-float-caption quarto-float-tbl" id="tbl-d1-desk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="tbl-d1-desk" class="cell quarto-float anchored" data-hash="090-Modellieren_cache/html/tbl-d1-desk_5d6161f0ef2dc4df9a16030a3b9d1a23">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-d1-desk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Tabelle&nbsp;13.5: Statistiken für <code>d</code>
 </figcaption><div aria-describedby="tbl-d1-desk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<table class="cell table table-sm table-striped small">
+<table class="do-not-create-environment cell table table-sm table-striped small">
 <colgroup>
 <col style="width: 11%">
 <col style="width: 9%">
@@ -1086,11 +1113,11 @@ Tabelle&nbsp;13.5: Statistiken für <code>d</code>
 <span>  results.subtitle <span class="op">=</span> <span class="cn">FALSE</span>  <span class="co"># verzichte auf zusätzliche Statistiken</span></span>
 <span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-d2" class="quarto-figure quarto-figure-center anchored" width="672">
+<div id="fig-d2" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-d2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="090-Modellieren_files/figure-html/fig-d2-1.png" class="img-fluid figure-img" width="672">
 </div>
-<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-d2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-d2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;13.13: Der Unterschied in der Behaltensleistung pro Versuchsperson; im Durchschnitt ist der Wert bei y2 höher als bei y1
 </figcaption></figure>
 </div>
@@ -1104,12 +1131,12 @@ Abbildung&nbsp;13.13: Der Unterschied in der Behaltensleistung pro Versuchsperso
 <span><span class="fu">parameters</span><span class="op">(</span><span class="va">m_within</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-hash="090-Modellieren_cache/html/tbl-d2-params_908d22a828ac18eb743c0d7c69f5ecd3">
-<div id="tbl-d2-params" class="cell anchored" data-hash="090-Modellieren_cache/html/tbl-d2-params_908d22a828ac18eb743c0d7c69f5ecd3">
-<figure class="quarto-float quarto-float-tbl figure"><figcaption class="table quarto-float-caption quarto-float-tbl" id="tbl-d2-params-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="tbl-d2-params" class="cell quarto-float anchored" data-hash="090-Modellieren_cache/html/tbl-d2-params_908d22a828ac18eb743c0d7c69f5ecd3">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-d2-params-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Tabelle&nbsp;13.6: Modellparameter von m_within
 </figcaption><div aria-describedby="tbl-d2-params-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<table class="cell table table-sm table-striped small">
+<table class="do-not-create-environment cell table table-sm table-striped small">
 <colgroup>
 <col style="width: 14%">
 <col style="width: 9%">
@@ -1147,11 +1174,11 @@ Tabelle&nbsp;13.6: Modellparameter von m_within
 <div class="cell" data-hash="090-Modellieren_cache/html/fig-m-within-params_57af27339639e9191044570dcce9bccc">
 <div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">parameters</span><span class="op">(</span><span class="va">m_within</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span>show_intercept <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-m-within-params" class="quarto-figure quarto-figure-center anchored" width="672">
+<div id="fig-m-within-params" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-m-within-params-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="090-Modellieren_files/figure-html/fig-m-within-params-1.png" class="img-fluid figure-img" width="672">
 </div>
-<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-m-within-params-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-m-within-params-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;13.14: 95%-CI für d (Achsenabschnitt mit Modell m_within)
 </figcaption></figure>
 </div>
@@ -1183,9 +1210,9 @@ Hinweis
 <p>Hat die Diagrammart einen Einfluss auf die Behaltensleistung? Anders gesagt: Unterscheiden sich die Diagrammarten in ihrem Einfluss auf die Behaltensleistung? Dabei kontrollieren wir die Reihenfolge.</p>
 </blockquote>
 <p>Forschungspraktisch bedeutet das, dass es zwei Gruppen, <code>g1</code> und <code>g2</code> in diesem Experiment gibt. Diese beiden Gruppen definieren eine between-Variable, <code>g</code>, die die Reihenfolge der Darbietung kontrolliert, s. <a href="#fig-within2-flow" class="quarto-xref">Abbildung&nbsp;<span>13.15</span></a>. Die Diagrammart <code>D</code> ist auch eine UV, aber als Within-Variable konzipiert.</p>
-<div class="cell">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-within2-flow" class="quarto-figure quarto-figure-center anchored">
+<div id="fig-within2-flow" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-within2-flow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
 <pre class="mermaid mermaid-js" data-label="fig-within2-flow">flowchart LR
@@ -1200,7 +1227,7 @@ Hinweis
 </pre>
 </div>
 </div>
-<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-within2-flow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-within2-flow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;13.15: Ablaufdiagramm für die Studie mit der Modellgleichung mit einem Within- und einem Between-Faktor
 </figcaption></figure>
 </div>
@@ -1215,11 +1242,11 @@ Abbildung&nbsp;13.15: Ablaufdiagramm für die Studie mit der Modellgleichung mit
 <p>Der DAG des Experiments ist in <a href="#fig-within2-dag" class="quarto-xref">Abbildung&nbsp;<span>13.16</span></a> dargestellt.</p>
 <div class="cell" data-fig.asp="0.5" data-hash="090-Modellieren_cache/html/fig-within2-dag_8fe40693373f4ec7f0acb9e1616093bb">
 <div class="cell-output-display">
-<div id="fig-within2-dag" class="quarto-figure quarto-figure-center anchored" width="100%">
+<div id="fig-within2-dag" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-within2-dag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="090-Modellieren_files/figure-html/fig-within2-dag-1.png" class="img-fluid figure-img" style="width:100.0%">
 </div>
-<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-within2-dag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-within2-dag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;13.16: DAG für die Studie mit der Modellgleichung mit einem Within- und einem Between-Faktor. Es wird kein Effekt für g erwartet (daher kein Pfeil von g auf y), wohl aber ein Effekt für V
 </figcaption></figure>
 </div>
@@ -1266,11 +1293,11 @@ Abbildung&nbsp;13.16: DAG für die Studie mit der Modellgleichung mit einem With
 <span>  results.subtitle <span class="op">=</span> <span class="cn">FALSE</span></span>
 <span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-d-within2" class="quarto-figure quarto-figure-center anchored" width="672">
+<div id="fig-d-within2" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-d-within2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="090-Modellieren_files/figure-html/fig-d-within2-1.png" class="img-fluid figure-img" width="672">
 </div>
-<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-d-within2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-d-within2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;13.17: Der Unterschied der Behaltensleistung (d) in Abhängigkeit von der Reihenfolge der Darbietung
 </figcaption></figure>
 </div>
@@ -1284,12 +1311,12 @@ Abbildung&nbsp;13.17: Der Unterschied der Behaltensleistung (d) in Abhängigkeit
 <div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">m_within2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://mc-stan.org/rstanarm/reference/stan_glm.html">stan_glm</a></span><span class="op">(</span><span class="va">d</span> <span class="op">~</span> <span class="va">g</span>, data <span class="op">=</span> <span class="va">d_within</span>, refresh <span class="op">=</span> <span class="fl">0</span>, seed <span class="op">=</span> <span class="fl">42</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-hash="090-Modellieren_cache/html/tbl-m_within2-params_a3b18b3a9b8e7b8ab0e4a37899e75dd0">
-<div id="tbl-m_within2-params" class="cell anchored" data-hash="090-Modellieren_cache/html/tbl-m_within2-params_a3b18b3a9b8e7b8ab0e4a37899e75dd0">
-<figure class="quarto-float quarto-float-tbl figure"><figcaption class="table quarto-float-caption quarto-float-tbl" id="tbl-m_within2-params-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="tbl-m_within2-params" class="cell quarto-float anchored" data-hash="090-Modellieren_cache/html/tbl-m_within2-params_a3b18b3a9b8e7b8ab0e4a37899e75dd0">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-m_within2-params-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Tabelle&nbsp;13.7: Modellparameter von m_within2
 </figcaption><div aria-describedby="tbl-m_within2-params-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<table class="cell table table-sm table-striped small">
+<table class="do-not-create-environment cell table table-sm table-striped small">
 <colgroup>
 <col style="width: 14%">
 <col style="width: 9%">
@@ -1396,30 +1423,30 @@ Tabelle&nbsp;13.7: Modellparameter von m_within2
 <span><span class="va">p_y123_b</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div id="fig-within-y3" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-within-y3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-within-y3" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-within-y3-1" class="quarto-figure quarto-figure-center anchored" width="672">
+<div class="quarto-layout-row">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-within-y3" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-within-y3-1" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-subfloat-fig figure"><div aria-describedby="fig-within-y3-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="090-Modellieren_files/figure-html/fig-within-y3-1.png" class="img-fluid figure-img" data-ref-parent="fig-within-y3" width="672">
 </div>
-<figcaption class="figure quarto-subfloat-caption quarto-subfloat-fig" id="fig-within-y3-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-within-y3-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (a) Einfaches Punktediagramm
 </figcaption></figure>
 </div>
 </div>
-<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-within-y3" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-within-y3-2" class="quarto-figure quarto-figure-center anchored" width="672">
+<div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-within-y3" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-within-y3-2" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-subfloat-fig figure"><div aria-describedby="fig-within-y3-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="090-Modellieren_files/figure-html/fig-within-y3-2.png" class="img-fluid figure-img" data-ref-parent="fig-within-y3" width="672">
 </div>
-<figcaption class="figure quarto-subfloat-caption quarto-subfloat-fig" id="fig-within-y3-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-within-y3-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (b) Informationsreiches Punkte-, Boxplot- und Violinendiagramm mit Statistiken der Veränderung angereichert
 </figcaption></figure>
 </div>
 </div>
 </div>
 </div>
-<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-within-y3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-within-y3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;13.18: Messwerte (y) in Abhängigkeit vom Messzeitpunkt (t1, t2, t3)
 </figcaption></figure>
 </div>
@@ -1431,12 +1458,12 @@ Abbildung&nbsp;13.18: Messwerte (y) in Abhängigkeit vom Messzeitpunkt (t1, t2, 
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>d <span class="op">=</span> <span class="va">y_mean</span> <span class="op">-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/lead-lag.html">lag</a></span><span class="op">(</span><span class="va">y_mean</span><span class="op">)</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-hash="090-Modellieren_cache/html/tbl-d123_d954068f62a6457f9fe6ef0fb588d767">
-<div id="tbl-d123" class="cell anchored" data-hash="090-Modellieren_cache/html/tbl-d123_d954068f62a6457f9fe6ef0fb588d767">
-<figure class="quarto-float quarto-float-tbl figure"><figcaption class="table quarto-float-caption quarto-float-tbl" id="tbl-d123-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="tbl-d123" class="cell quarto-float anchored" data-hash="090-Modellieren_cache/html/tbl-d123_d954068f62a6457f9fe6ef0fb588d767">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-d123-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Tabelle&nbsp;13.8: Mittelwerte von <code>y</code> pro Messzeitpunkte (<code>y_mean</code>) sowie die Veränderung von t1 zu t2 bzw. von t2 zu t3 (<code>d</code>)
 </figcaption><div aria-describedby="tbl-d123-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<table class="cell table table-sm table-striped small">
+<table class="do-not-create-environment cell table table-sm table-striped small">
 <thead><tr class="header">
 <th style="text-align: left;">time</th>
 <th style="text-align: right;">y_mean</th>
@@ -1533,11 +1560,11 @@ Tabelle&nbsp;13.8: Mittelwerte von <code>y</code> pro Messzeitpunkte (<code>y_me
 <div class="cell" data-hash="090-Modellieren_cache/html/fig-randef-m3_95cb4b5e14849ef2b253dd050437fa30">
 <div class="sourceCode" id="cb34"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">m_within3</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-randef-m3" class="quarto-figure quarto-figure-center anchored" width="672">
+<div id="fig-randef-m3" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-randef-m3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="090-Modellieren_files/figure-html/fig-randef-m3-1.png" class="img-fluid figure-img" width="672">
 </div>
-<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-randef-m3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-randef-m3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;13.19: 95%-CI der Random-Effekte von <code>m_within3</code>
 </figcaption></figure>
 </div>
@@ -1562,12 +1589,12 @@ Abbildung&nbsp;13.19: 95%-CI der Random-Effekte von <code>m_within3</code>
 Sauer, Sebastian, und Ludwilla Lustig. 2023. <span>„The Effect of <span>Bringtnixtin</span> on Fluid Intelligence: <span>A</span> Randomized, Controlled Trial“</span>. <em>Journal for Fake Data</em> 42 (1): 271–314.
 </div>
 </div>
-</section><aside id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><hr>
+</section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><hr>
 <ol>
 <li id="fn1"><p>Die Mittelwerte der beiden Gruppen sind praktisch identisch.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>Genauer gesagt aus dem Paket <a href="https://easystats.github.io/see/">see</a>, das ein Teil des Metapakets <code>{easystasts}</code> ist.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p>auch Delta-Veriable genannt<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol></aside></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</ol></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -1839,38 +1866,28 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    const typesetMath = (el) => {
-      if (window.MathJax) {
-        // MathJax Typeset
-        window.MathJax.typeset([el]);
-      } else if (window.katex) {
-        // KaTeX Render
-        var mathElements = el.getElementsByClassName("math");
-        var macros = [];
-        for (var i = 0; i < mathElements.length; i++) {
-          var texText = mathElements[i].firstChild;
-          if (mathElements[i].tagName == "SPAN") {
-            window.katex.render(texText.data, mathElements[i], {
-              displayMode: mathElements[i].classList.contains('display'),
-              throwOnError: false,
-              macros: macros,
-              fleqn: false
-            });
-          }
-        }
-      }
-    }
     if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
       if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
         }
-        typesetMath(container);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
         return container.innerHTML
       } else {
-        typesetMath(note);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
@@ -1879,8 +1896,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      typesetMath(note);
-      return note.innerHTML;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -2115,4 +2139,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sebastiansauer/fopra/blob/main/090-Modellieren.qmd" class="toc-action"><i class="bi bi-github"></i>Quellcode anzeigen</a></li><li><a href="https://github.com/sebastiansauer/fopra/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div></div></footer></body></html>

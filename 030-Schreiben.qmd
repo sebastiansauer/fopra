@@ -967,6 +967,8 @@ Erläutern und demonstrieren Sie folgende Word-Formatierungsfunktionen:
 :::
 
 
+## IT-Tools
 
+Neben MS Word oder Libe Office kann Google Docs eine sinnvolle Alternative sein, um ihre Arbeit zu verschriftlichen.
 
 ## Literatur

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.478">
+<meta name="generator" content="quarto-1.4.544">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Forschungsprojekt - 14&nbsp; Auswerten: Berichten von Statistiken</title>
 <style>
@@ -113,12 +113,38 @@ div.csl-indent {
     "search-more-match-text": "weitere Treffer in diesem Dokument",
     "search-more-matches-text": "weitere Treffer in diesem Dokument",
     "search-clear-button-title": "Zurücksetzen",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Abbrechen",
     "search-submit-button-title": "Abschicken",
     "search-label": "Suchen"
   }
 }</script><link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
-<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><link rel="stylesheet" href="styles.css">
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script><link rel="stylesheet" href="styles.css">
 </head>
 <body class="nav-sidebar floating">
 
@@ -140,6 +166,7 @@ div.csl-indent {
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Forschungsprojekt</a> 
         <div class="sidebar-tools-main">
+    <a href="https://github.com/sebastiansauer/fopra" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Dunkelmodus umschalten"><i class="bi"></i></a>
 </div>
     </div>
@@ -335,7 +362,7 @@ div.csl-indent {
 </li>
   <li><a href="#diskussion" id="toc-diskussion" class="nav-link" data-scroll-target="#diskussion"><span class="header-section-number">14.8</span> Diskussion</a></li>
   <li><a href="#reproduzierbarkeit" id="toc-reproduzierbarkeit" class="nav-link" data-scroll-target="#reproduzierbarkeit"><span class="header-section-number">14.9</span> Reproduzierbarkeit</a></li>
-  </ul></nav>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/sebastiansauer/fopra/blob/main/100-Statistiken-berichten.qmd" class="toc-action"><i class="bi bi-github"></i>Quellcode anzeigen</a></li><li><a href="https://github.com/sebastiansauer/fopra/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./100-Statistiken-berichten.html">Fertigstellen</a></li><li class="breadcrumb-item"><a href="./100-Statistiken-berichten.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Auswerten: Berichten von Statistiken</span></a></li></ol></nav><div class="quarto-title">
@@ -441,11 +468,11 @@ Wichtig
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/pkg/dagitty/man/graphLayout.html">graphLayout</a></span><span class="op">(</span><span class="va">mein_modell</span><span class="op">)</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-dagmodell1" class="quarto-figure quarto-figure-center anchored" width="100%">
+<div id="fig-dagmodell1" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-dagmodell1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="100-Statistiken-berichten_files/figure-html/fig-dagmodell1-1.png" class="img-fluid figure-img" style="width:100.0%">
 </div>
-<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-dagmodell1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dagmodell1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;14.1: Beispielhafter DAG
 </figcaption></figure>
 </div>
@@ -535,7 +562,10 @@ Abbildung&nbsp;14.1: Beispielhafter DAG
 <p>Wenn man die Null bzw. den Nullbereich (ROPE) eines Parameters ausschließt, nennt man das Ergebnis bzw. den Effekt auch “signifikant” (leider ein häufig missbrauchter und missverstandener Begriff). Unser Effekt in diesem Beispiel ist also signifikant (nach dieser Definition). Besser ist es aber, wenn Sie den Begriff vermeiden, und stattdessen davon sprechen, dass Sie einen Effekt gefunden haben (oder nicht oder dass eine unklare Ergebnislage vorliegt). Haben Sie einen Effekt gefunden, so heißt das synonym, dass die Nullhypothese ausgeschlossen ist (falsifiziert ist), natürlich immer auf Basis des vorliegenden Modells bzw. der vorliegenden Daten.</p>
 <div class="cell" data-hash="100-Statistiken-berichten_cache/html/unnamed-chunk-3_60ee255b8eb512eda83691f5c92cbea7">
 <div class="cell-output-display">
-<p><img src="100-Statistiken-berichten_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
+<div>
+<figure class="figure"><p><img src="100-Statistiken-berichten_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
 </div>
 </div>
 </section></section></section><section id="ergebnisteil" class="level2" data-number="14.7"><h2 data-number="14.7" class="anchored" data-anchor-id="ergebnisteil">
@@ -571,8 +601,8 @@ Abbildung&nbsp;14.1: Beispielhafter DAG
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename</a></span><span class="op">(</span>`MW Spritverbrauch` <span class="op">=</span> <span class="va">mpg_avg</span>,</span>
 <span>         `SD Spritverbrauch`<span class="op">=</span> <span class="va">mpg_sd</span>,</span>
 <span>         `Korrelation Spritverbrauch mit PS-Zahl` <span class="op">=</span> <span class="va">cor_mpg_hp</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="tbl-desk1" class="cell anchored" data-hash="100-Statistiken-berichten_cache/html/tbl-desk1_bb562f6a587248d177d586aa9504fb0e">
-<figure class="quarto-float quarto-float-tbl figure"><figcaption class="table quarto-float-caption quarto-float-tbl" id="tbl-desk1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="tbl-desk1" class="cell quarto-float anchored" data-hash="100-Statistiken-berichten_cache/html/tbl-desk1_bb562f6a587248d177d586aa9504fb0e">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-desk1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Tabelle&nbsp;14.1: Einfache Tabelle mit deskriptiven Statistiken
 </figcaption><div aria-describedby="tbl-desk1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
@@ -595,12 +625,12 @@ Tabelle&nbsp;14.1: Einfache Tabelle mit deskriptiven Statistiken
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename</a></span><span class="op">(</span>MW <span class="op">=</span> <span class="va">Mean</span>, Schiefe <span class="op">=</span> <span class="va">Skewness</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-hash="100-Statistiken-berichten_cache/html/tbl-desk2_037d02a0c498646525497f6555f490df">
-<div id="tbl-desk2" class="cell anchored" data-hash="100-Statistiken-berichten_cache/html/tbl-desk2_037d02a0c498646525497f6555f490df">
-<figure class="quarto-float quarto-float-tbl figure"><figcaption class="table quarto-float-caption quarto-float-tbl" id="tbl-desk2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="tbl-desk2" class="cell quarto-float anchored" data-hash="100-Statistiken-berichten_cache/html/tbl-desk2_037d02a0c498646525497f6555f490df">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-desk2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Tabelle&nbsp;14.2: Einfache Tabelle mit describe_distribution aus easystats
 </figcaption><div aria-describedby="tbl-desk2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<table class="cell table table-sm table-striped small">
+<table class="do-not-create-environment cell table table-sm table-striped small">
 <colgroup>
 <col style="width: 13%">
 <col style="width: 11%">
@@ -736,8 +766,8 @@ Tabelle&nbsp;14.2: Einfache Tabelle mit describe_distribution aus easystats
 <span>  <span class="fu"><a href="https://gt.rstudio.com/reference/fmt_number.html">fmt_number</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/where.html">where</a></span><span class="op">(</span><span class="va">is.numeric</span><span class="op">)</span>, decimals <span class="op">=</span> <span class="fl">2</span><span class="op">)</span> <span class="co"># Anzahl der Dezimalstellen</span></span>
 <span></span>
 <span><span class="va">meine_tab</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="tbl-gt1" class="cell anchored" data-hash="100-Statistiken-berichten_cache/html/tbl-gt1_1f5d99adc7451a72111d6102b43d47ef">
-<figure class="quarto-float quarto-float-tbl figure"><figcaption class="table quarto-float-caption quarto-float-tbl" id="tbl-gt1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="tbl-gt1" class="cell quarto-float anchored" data-hash="100-Statistiken-berichten_cache/html/tbl-gt1_1f5d99adc7451a72111d6102b43d47ef">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-gt1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Tabelle&nbsp;14.3: Deskriptive Statistiken mit gt
 </figcaption><div aria-describedby="tbl-gt1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
@@ -1181,7 +1211,7 @@ Tabelle&nbsp;14.3: Deskriptive Statistiken mit gt
   text-indent: 25px;
 }
 </style>
-<table class="gt_table cell table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<table class="gt_table do-not-create-environment cell table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead><tr class="header gt_col_headings">
 <th id="Variable" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Variable</th>
 <th id="Mean" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Mean</th>
@@ -1342,8 +1372,8 @@ Tabelle&nbsp;14.3: Deskriptive Statistiken mit gt
 <span><span class="va">mtcars</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">mpg</span>, <span class="va">cyl</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="https://www.danieldsjoberg.com/gtsummary/reference/tbl_summary.html">tbl_summary</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="tbl-gtsum1" class="cell anchored" data-hash="100-Statistiken-berichten_cache/html/tbl-gtsum1_64b2bedbf16c45ac3684327da8edeb7a">
-<figure class="quarto-float quarto-float-tbl figure"><figcaption class="table quarto-float-caption quarto-float-tbl" id="tbl-gtsum1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="tbl-gtsum1" class="cell quarto-float anchored" data-hash="100-Statistiken-berichten_cache/html/tbl-gtsum1_64b2bedbf16c45ac3684327da8edeb7a">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-gtsum1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Tabelle&nbsp;14.4: Deskriptive Statistiken mit gtsummary
 </figcaption><div aria-describedby="tbl-gtsum1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
@@ -1787,7 +1817,7 @@ Tabelle&nbsp;14.4: Deskriptive Statistiken mit gtsummary
   text-indent: 25px;
 }
 </style>
-<table class="gt_table cell table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<table class="gt_table do-not-create-environment cell table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead><tr class="header gt_col_headings">
 <th id="<strong>Characteristic</strong>" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"><strong>Characteristic</strong></th>
 <th id="<strong>N = 32</strong><span class=&quot;gt_footnote_marks&quot; style=&quot;white-space:nowrap;font-style:italic;font-weight:normal;&quot;><sup>1</sup></span>" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">
@@ -2390,12 +2420,12 @@ Hinweis
 <div class="cell" data-hash="100-Statistiken-berichten_cache/html/tbl-m1-params_f178c030d40221375ee31f20aaea495d">
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">parameters</span><span class="op">(</span><span class="va">m1</span>, prob <span class="op">=</span> <span class="fl">.95</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="fu">print_md</span><span class="op">(</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="tbl-m1-params" class="cell anchored" data-hash="100-Statistiken-berichten_cache/html/tbl-m1-params_f178c030d40221375ee31f20aaea495d">
-<figure class="quarto-float quarto-float-tbl figure"><figcaption class="table quarto-float-caption quarto-float-tbl" id="tbl-m1-params-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="tbl-m1-params" class="cell quarto-float anchored" data-hash="100-Statistiken-berichten_cache/html/tbl-m1-params_f178c030d40221375ee31f20aaea495d">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-m1-params-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Tabelle&nbsp;14.5: Parameter für das Modell m1
 </figcaption><div aria-describedby="tbl-m1-params-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<table class="cell table table-sm table-striped small">
+<table class="do-not-create-environment cell table table-sm table-striped small">
 <colgroup>
 <col style="width: 14%">
 <col style="width: 9%">
@@ -2444,12 +2474,12 @@ Tabelle&nbsp;14.5: Parameter für das Modell m1
 <p>Ein HDI bekommen Sie, wenn Sie bei <code>ci_method</code> den Wert <code>"hdi</code> wählen; oder wenn Sie gleich den Befehl <code>hdi(m1)</code> ausführen, s. <a href="#tbl-m1-params2" class="quarto-xref">Tabelle&nbsp;<span>14.6</span></a>.</p>
 <div class="cell" data-hash="100-Statistiken-berichten_cache/html/tbl-m1-params2_d625baa7dcf4173c8fe1298ed13d6816">
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">parameters</span><span class="op">(</span><span class="va">m1</span>, prob <span class="op">=</span> <span class="fl">.95</span>, ci_method <span class="op">=</span> <span class="st">"hdi"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu">print_md</span><span class="op">(</span><span class="op">)</span>  <span class="co"># oder: hdi(m1)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="tbl-m1-params2" class="cell anchored" data-hash="100-Statistiken-berichten_cache/html/tbl-m1-params2_d625baa7dcf4173c8fe1298ed13d6816">
-<figure class="quarto-float quarto-float-tbl figure"><figcaption class="table quarto-float-caption quarto-float-tbl" id="tbl-m1-params2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="tbl-m1-params2" class="cell quarto-float anchored" data-hash="100-Statistiken-berichten_cache/html/tbl-m1-params2_d625baa7dcf4173c8fe1298ed13d6816">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-m1-params2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Tabelle&nbsp;14.6: Parameter für das Modell m1. Das Intervall ist ein HDI.
 </figcaption><div aria-describedby="tbl-m1-params2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<table class="cell table table-sm table-striped small">
+<table class="do-not-create-environment cell table table-sm table-striped small">
 <colgroup>
 <col style="width: 14%">
 <col style="width: 9%">
@@ -2500,8 +2530,8 @@ Tabelle&nbsp;14.6: Parameter für das Modell m1. Das Intervall ist ein HDI.
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">Parameter</span>, <span class="va">CI_low</span>, <span class="va">CI_high</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="https://gt.rstudio.com/reference/gt.html">gt</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="https://gt.rstudio.com/reference/fmt_number.html">fmt_number</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/where.html">where</a></span><span class="op">(</span><span class="va">is.numeric</span><span class="op">)</span>, decimals <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="tbl-m1-params3" class="cell anchored" data-hash="100-Statistiken-berichten_cache/html/tbl-m1-params3_e48c666f05b65952e828e15eed15c51c">
-<figure class="quarto-float quarto-float-tbl figure"><figcaption class="table quarto-float-caption quarto-float-tbl" id="tbl-m1-params3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="tbl-m1-params3" class="cell quarto-float anchored" data-hash="100-Statistiken-berichten_cache/html/tbl-m1-params3_e48c666f05b65952e828e15eed15c51c">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-m1-params3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Tabelle&nbsp;14.7: Parameter für das Modell m1. Das Intervall ist ein HDI.
 </figcaption><div aria-describedby="tbl-m1-params3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
@@ -2945,7 +2975,7 @@ Tabelle&nbsp;14.7: Parameter für das Modell m1. Das Intervall ist ein HDI.
   text-indent: 25px;
 }
 </style>
-<table class="gt_table cell table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<table class="gt_table do-not-create-environment cell table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead><tr class="header gt_col_headings">
 <th id="Parameter" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Parameter</th>
 <th id="CI_low" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">CI_low</th>
@@ -2973,8 +3003,8 @@ Tabelle&nbsp;14.7: Parameter für das Modell m1. Das Intervall ist ein HDI.
 <p>Ein ähnliches Ergebnis erzielt man mit dem Paket <code>gtsummary</code>, s. <a href="#tbl-m1-params4" class="quarto-xref">Tabelle&nbsp;<span>14.8</span></a>.</p>
 <div class="cell" data-hash="100-Statistiken-berichten_cache/html/tbl-m1-params4_3e41b8ea2eeb382b2db675b82f592086">
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://www.danieldsjoberg.com/gtsummary/reference/tbl_regression.html">tbl_regression</a></span><span class="op">(</span><span class="va">m1</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div id="tbl-m1-params4" class="cell anchored" data-hash="100-Statistiken-berichten_cache/html/tbl-m1-params4_3e41b8ea2eeb382b2db675b82f592086">
-<figure class="quarto-float quarto-float-tbl figure"><figcaption class="table quarto-float-caption quarto-float-tbl" id="tbl-m1-params4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="tbl-m1-params4" class="cell quarto-float anchored" data-hash="100-Statistiken-berichten_cache/html/tbl-m1-params4_3e41b8ea2eeb382b2db675b82f592086">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-m1-params4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Tabelle&nbsp;14.8: Parameter für das Modell m1.
 </figcaption><div aria-describedby="tbl-m1-params4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
@@ -3418,7 +3448,7 @@ Tabelle&nbsp;14.8: Parameter für das Modell m1.
   text-indent: 25px;
 }
 </style>
-<table class="gt_table cell table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<table class="gt_table do-not-create-environment cell table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
 <thead><tr class="header gt_col_headings">
 <th id="<strong>Characteristic</strong>" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"><strong>Characteristic</strong></th>
 <th id="<strong>Beta</strong>" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Beta</strong></th>
@@ -3453,7 +3483,10 @@ Tabelle&nbsp;14.8: Parameter für das Modell m1.
 <div class="cell" data-fig.asp="0.3" data-hash="100-Statistiken-berichten_cache/html/unnamed-chunk-17_50988e2ca59719a030d2ce879a4ff17d">
 <div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">parameters</span><span class="op">(</span><span class="va">m1</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span>show_intercept <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="100-Statistiken-berichten_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid" style="width:100.0%"></p>
+<div>
+<figure class="figure"><p><img src="100-Statistiken-berichten_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Der Schalter <code>show_intercept</code> regelt, ob der Schätzwert für den Achsenabschnitt gezeigt werden soll oder nicht.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
@@ -3473,11 +3506,11 @@ Tabelle&nbsp;14.8: Parameter für das Modell m1.
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>axis.text.y <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span>  <span class="co"># keine Achsenlabels auf Y ("am" weg)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<div id="fig-m1-hdi" class="quarto-figure quarto-figure-center anchored" width="672">
+<div id="fig-m1-hdi" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-m1-hdi-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="100-Statistiken-berichten_files/figure-html/fig-m1-hdi-1.png" class="img-fluid figure-img" width="672">
 </div>
-<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-m1-hdi-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-m1-hdi-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;14.2: Die Postverteilung als Berg visualisiert, nicht als Seil.
 </figcaption></figure>
 </div>
@@ -3510,7 +3543,10 @@ Abbildung&nbsp;14.2: Die Postverteilung als Berg visualisiert, nicht als Seil.
 <div class="cell" data-fig.asp="0.3" data-hash="100-Statistiken-berichten_cache/html/unnamed-chunk-21_07272e9301fb57be0ff2d04e8246d432">
 <div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="fu">rope</span><span class="op">(</span><span class="va">m1</span><span class="op">)</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
-<p><img src="100-Statistiken-berichten_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid" style="width:100.0%"></p>
+<div>
+<figure class="figure"><p><img src="100-Statistiken-berichten_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Die Hilfeseite von <code>rope</code> sagt uns:</p>
@@ -3780,12 +3816,12 @@ Peters, Jan H., und Tobias Dörfler. 2015. <em>Abschlussarbeiten in der Psycholo
 Peters, Jan Hendrik, und Tobias Dörfler. 2019. <em>Planen, Durchführen und Auswerten von Abschlussarbeiten in der Psychologie und den Sozialwissenschaften</em>. <span>Pearson</span>. <a href="https://www.pearson-studium.de/planen-durchfuehren-und-auswerten-von-abschlussarbeiten-in-der-psychologie-und-den-sozialwissenschaften.html">https://www.pearson-studium.de/planen-durchfuehren-und-auswerten-von-abschlussarbeiten-in-der-psychologie-und-den-sozialwissenschaften.html</a>.
 </div>
 </div>
-</section><aside id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><hr>
+</section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><hr>
 <ol>
 <li id="fn1"><p>Das war Ihnen noch nicht aufgefallen? Ach so.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>In Markdown-Formaten mit Quarto etc. wird es automatisch ersetzt durch das Plus-Minus-Zeichen.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p>Hat man <em>nur</em> einen Intercept, so muss man den Schalter auf <code>TRUE</code> setzen, will man nicht mit einer Fehlermeldung abgestraft werden.<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol></aside></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</ol></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -4057,38 +4093,28 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    const typesetMath = (el) => {
-      if (window.MathJax) {
-        // MathJax Typeset
-        window.MathJax.typeset([el]);
-      } else if (window.katex) {
-        // KaTeX Render
-        var mathElements = el.getElementsByClassName("math");
-        var macros = [];
-        for (var i = 0; i < mathElements.length; i++) {
-          var texText = mathElements[i].firstChild;
-          if (mathElements[i].tagName == "SPAN") {
-            window.katex.render(texText.data, mathElements[i], {
-              displayMode: mathElements[i].classList.contains('display'),
-              throwOnError: false,
-              macros: macros,
-              fleqn: false
-            });
-          }
-        }
-      }
-    }
     if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
       if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
         }
-        typesetMath(container);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
         return container.innerHTML
       } else {
-        typesetMath(note);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
@@ -4097,8 +4123,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      typesetMath(note);
-      return note.innerHTML;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -4333,4 +4366,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sebastiansauer/fopra/blob/main/100-Statistiken-berichten.qmd" class="toc-action"><i class="bi bi-github"></i>Quellcode anzeigen</a></li><li><a href="https://github.com/sebastiansauer/fopra/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div></div></footer></body></html>

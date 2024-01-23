@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.478">
+<meta name="generator" content="quarto-1.4.544">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Forschungsprojekt - 9&nbsp; Erheben</title>
 <style>
@@ -79,12 +79,38 @@ div.csl-indent {
     "search-more-match-text": "weitere Treffer in diesem Dokument",
     "search-more-matches-text": "weitere Treffer in diesem Dokument",
     "search-clear-button-title": "Zurücksetzen",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Abbrechen",
     "search-submit-button-title": "Abschicken",
     "search-label": "Suchen"
   }
 }</script><link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
-<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><link rel="stylesheet" href="styles.css">
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script><link rel="stylesheet" href="styles.css">
 </head>
 <body class="nav-sidebar floating">
 
@@ -106,6 +132,7 @@ div.csl-indent {
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Forschungsprojekt</a> 
         <div class="sidebar-tools-main">
+    <a href="https://github.com/sebastiansauer/fopra" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Dunkelmodus umschalten"><i class="bi"></i></a>
 </div>
     </div>
@@ -300,7 +327,7 @@ div.csl-indent {
 </li>
   <li><a href="#checklisten" id="toc-checklisten" class="nav-link" data-scroll-target="#checklisten"><span class="header-section-number">9.5</span> Checklisten</a></li>
   <li><a href="#weiterf%C3%BChrende-literatur" id="toc-weiterführende-literatur" class="nav-link" data-scroll-target="#weiterf%C3%BChrende-literatur"><span class="header-section-number">9.6</span> Weiterführende Literatur</a></li>
-  </ul></nav>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/sebastiansauer/fopra/blob/main/070-Erheben.qmd" class="toc-action"><i class="bi bi-github"></i>Quellcode anzeigen</a></li><li><a href="https://github.com/sebastiansauer/fopra/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./040-Populationsbeschreibung.html">Empirie</a></li><li class="breadcrumb-item"><a href="./070-Erheben.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Erheben</span></a></li></ol></nav><div class="quarto-title">
@@ -339,7 +366,7 @@ div.csl-indent {
 <span class="header-section-number">9.2.1.1</span> „no risk research“ bzw. „minimal risk research“</h4>
 <p>Das sind Studien, die für die Versuchsperson (VP) keinerlei bzw. dem Alltag entsprechende Belastungen mit sich bringen. In diesen Fällen kann auf umfangreiche Aufklärung und informierte Einwilligung verzichtet werden.</p>
 <div id="exm-noriskresearch" class="theorem example">
-<p><span class="theorem-title"><strong>Beispiel 9.1 (Bildschirmzeit und Merkfähigkeit) </strong></span>Für eine Beobachtungsstudie, die den (kausalen) Zusammenhang von Bildschirmzeit und Konzentrationsfähigkeit untersucht, ist keine informierte Einwilligung der VP nötig, da durch die Teilnahme keine Risiken (die über Alltagsrisiken hinausgehen) zu erwarten sind.<span class="math inline">\(\square\)</span></p>
+<p><span class="theorem-title"><strong>Beispiel 9.1 (Bildschirmzeit und Merkfähigkeit)</strong></span> Für eine Beobachtungsstudie, die den (kausalen) Zusammenhang von Bildschirmzeit und Konzentrationsfähigkeit untersucht, ist keine informierte Einwilligung der VP nötig, da durch die Teilnahme keine Risiken (die über Alltagsrisiken hinausgehen) zu erwarten sind.<span class="math inline">\(\square\)</span></p>
 </div>
 </section><section id="greater-than-minimal-risk-research" class="level4" data-number="9.2.1.2"><h4 data-number="9.2.1.2" class="anchored" data-anchor-id="greater-than-minimal-risk-research">
 <span class="header-section-number">9.2.1.2</span> „greater than minimal risk research“</h4>
@@ -364,7 +391,7 @@ div.csl-indent {
 <p>Nach Abschluss der Datenerhebung sind die Vpn im vollen Umfang über die tatsächlichen Ziele der Untersuchung aufzuklären. (Ausnahme: wenn dies schmerzhaft oder sehr unangenehm wäre).</p>
 <p>Die in einer Untersuchung gewonnenen Informationen über Versuchsteilnehmer sind absolut vertraulich zu behandeln <span class="citation" data-cites="reis_experimentelle_2012">(<a href="130-references.html#ref-reis_experimentelle_2012" role="doc-biblioref">Reiß und Sarris 2012</a>)</span>.</p>
 <div id="exr-ethikbdp" class="theorem exercise">
-<p><span class="theorem-title"><strong>Übungsaufgabe 9.1 (Ethik-Richtlinien der Deutschen Gesellschaft für Psychologie (DGPs)) </strong></span>Lesen und diskutieren Sie die <a href="https://www.dgps.de/die-dgps/aufgaben-und-ziele/berufsethische-richtlinien">Ethik-Richtlinien der DGPS</a>, speziell Kapitel 7 “7. Psychologie in Forschung und Lehre”.</p>
+<p><span class="theorem-title"><strong>Übungsaufgabe 9.1 (Ethik-Richtlinien der Deutschen Gesellschaft für Psychologie (DGPs))</strong></span> Lesen und diskutieren Sie die <a href="https://www.dgps.de/die-dgps/aufgaben-und-ziele/berufsethische-richtlinien">Ethik-Richtlinien der DGPS</a>, speziell Kapitel 7 “7. Psychologie in Forschung und Lehre”.</p>
 </div>
 </section><section id="wissenschaftsethik" class="level3" data-number="9.2.4"><h3 data-number="9.2.4" class="anchored" data-anchor-id="wissenschaftsethik">
 <span class="header-section-number">9.2.4</span> Wissenschaftsethik</h3>
@@ -539,12 +566,12 @@ Reiß, Siegbert, und Viktor Sarris. 2012. <em>Experimentelle Psychologie: von de
 Schönbrodt, Felix D, Moritz Heene, Michael Zehetleitner, Markus Maier, Anne M Scheel, Caroline Zygar-Hoffmann, Ramona Schoedel, Larissa Sust, Lena Schiestel, und Malika Ihle. 2023. <span>„Open Science Initiative in Psychology @<span>LMU</span>“</span>. <span>OSF</span>. <a href="https://osf.io/mgwk8">osf.io/mgwk8</a>.
 </div>
 </div>
-</section><aside id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><hr>
+</section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><hr>
 <ol>
 <li id="fn1"><p>synonym: Data Dictionnary<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>Motto der Royal Society, der ältesten Wissenschaftsgesellschaft<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p>sondern bestenfalls ein Nerd 🤓<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol></aside></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</ol></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -816,38 +843,28 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    const typesetMath = (el) => {
-      if (window.MathJax) {
-        // MathJax Typeset
-        window.MathJax.typeset([el]);
-      } else if (window.katex) {
-        // KaTeX Render
-        var mathElements = el.getElementsByClassName("math");
-        var macros = [];
-        for (var i = 0; i < mathElements.length; i++) {
-          var texText = mathElements[i].firstChild;
-          if (mathElements[i].tagName == "SPAN") {
-            window.katex.render(texText.data, mathElements[i], {
-              displayMode: mathElements[i].classList.contains('display'),
-              throwOnError: false,
-              macros: macros,
-              fleqn: false
-            });
-          }
-        }
-      }
-    }
     if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
       if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
         }
-        typesetMath(container);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
         return container.innerHTML
       } else {
-        typesetMath(note);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
@@ -856,8 +873,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      typesetMath(note);
-      return note.innerHTML;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -1092,4 +1116,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sebastiansauer/fopra/blob/main/070-Erheben.qmd" class="toc-action"><i class="bi bi-github"></i>Quellcode anzeigen</a></li><li><a href="https://github.com/sebastiansauer/fopra/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div></div></footer></body></html>

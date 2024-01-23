@@ -89,9 +89,9 @@ flowchart LR
     B[Studie lesen] --> C[etwas mehr Plan]
     C --> B
   end
-  A[Kein Plan] --> F[Idee für ein Thema]
+  A[Kein' Plan 😔] --> F[Idee für ein Thema 🤓]
   F --> D
-  D --> E[genaue<br>Forschungsfrage]
+  D --> E[genaue<br>Forschungsfrage 🤓]
 ```
 
 
@@ -110,7 +110,7 @@ Eine Forschungsfrage definiert die Frage (das Problem), die Sie in Ihrer Arbeit 
 
 
 Eine Forschungsfrage ist häufig so aufgebaut, s. @fig-fofra: "Führt X zu Y"?
-Synonym könnte man auch fragen: "Hat X einen Einfluss (Effekt) auf Y?"
+Synonym könnte man auch fragen: "Hat X einen (kausalen) Einfluss (synonym: Effekt) auf Y?"
 
 
 ```{mermaid}
@@ -129,7 +129,7 @@ Beachten Sie, dass eine Forschungsfrage nicht so aussehen muss; sie kann auch an
 ### Taxonomie von Forschungsfragen {#sec-taxo}
 
 
-Man kann Forschungsfragen in drei Arten gliedern, s. @fig-ziele.
+Man kann Forschungsfragen in drei Arten gliedern, s. @fig-ziele. 
 
 ```{mermaid}
 %%| fig-cap: Zielarten einer Datenanalyse
@@ -182,6 +182,8 @@ Eine Arbeit sollte nur eine Forschungsfrage haben.
 
 
 
+
+
 :::{.callout-important}
 Die Forschungsfrage ist das Fundament Ihrer Studie (und Ihrer Prüfungsleistung).
 Ohne gute Forschungsfrage daher keine gute Studie. 
@@ -200,6 +202,13 @@ In der Laienformulierung lautet die Forschungsfrage:
 
 >    Wer viel am Handy rumdaddelt, der ist halt nicht so auf Zack, im Hirn, und so, vor allem bei Jungs, übrigens, liegt an den Genen. Ach ja, wer sich halt nicht im Griff hat, der daddelt halt mehr.$\square$
 
+:::
+
+
+:::callout-tip
+Fragen Sie eine AI wie ChatGPT nach möglichen Forschungsfragen zu Ihrem Thema. 
+Erwarten Sie nicht eine abschließende Antwort.
+Aber Anregung, Ideen und Inspiration dürfen Sie erwarten. $\square$
 :::
 
 
@@ -247,9 +256,9 @@ Die Literaturrecherche ist ein Ablauf, also eine zusammenhänge Folge mehrere T�
 1. *Suchen* ist das Ausfindigmachen geeigneter Literatur. Dazu sucht man meist in einschlägigen wissenschaftlichen Literatur-Datenbanken wie z.B. Google Scholar.
 Beim Suchen von muss man unterscheiden zwischen dem Finden von 
 
-  a. *Zitierinformationen* wie Autor, Titel, Datum der Veröffentlichung oder ID-Nummer (wie DOI oder ISBN)
-  b. *(Always-)Open-Access-Elemente* wie Titel, Abstract und Literaturverzeichnis
-  c. *Volltexten*, d.h. dem kompletten Text eines Werks
+  a. 🖋️ *Zitierinformationen* wie Autor, Titel, Datum der Veröffentlichung oder ID-Nummer (wie DOI oder ISBN)
+  b. 📌 *(Always-)Open-Access-Elemente* wie Titel, Abstract und Literaturverzeichnis
+  c. 📖 *Volltexten*, d.h. dem kompletten Text eines Werks
 
 2. Im nächsten Schritt, *Screenen*, sind zumeist die Open-Access-Elemente am wichtigsten, damit man einschätzen kann, ob das Werk geeignet ist. Der Volltext ist an dieser Stelle nicht (unbedingt) nötig.
 
@@ -447,7 +456,10 @@ Wenn Sie arbeiten, sollten Sie sich daher vornehmen: "Ich werde jetzt konzentrie
 Schalten Sie Ihr Handy aus und stellen Sie sicher, dass Sie nicht gestört werden.
 :::
 
-
+:::callout-tip
+### Tools für Notizen
+Es gibt (IT-)Tools, die Sie beim Notizen machen unterstützen, etwa [Notion](https://www.notion.so/product/ai), [Zotero](https://www.zotero.org/),  [Zettelkasten](https://zettelkasten.de/introduction/) oder schöne Notizbücher. $\square$
+:::
 
 
 ### So liest man technische Literatur
@@ -525,7 +537,7 @@ Die Methode der "drei Blicke" erlaubt Ihnen, das Wesentliche (oder einen Teil da
 
 
 
-## Fachartikel erarbeiten
+### Fachartikel erarbeiten
 
 
 
@@ -545,6 +557,35 @@ Falls nein: Es ist wichtig, dass Sie zu Beginn viel lesen, s. @fig-sieb. Die bes
 
 
 
+### AI-Tools
+
+Es gibt AI-Tools, die Ihnen beim Lesen helfen können.
+Der Nutzen liegt darin, dass Sie eine Zusammenfassung des Volltextes bekommen. 
+Bleibt zu hoffen, dass die Zusammenfassung korrekt ist.
+
+
+>    🧑‍🎓 Aber könnte ich nicht einfach den Abstract des Papers lesen?
+
+>    👨‍🏫 Äh, ja, das könnte auf das Gleiche rauskommen.
+
+
+
+Bei [ChatGPT](https://chat.openai.com) kann man z.B. schreiben *tldr: 'Positive' Results Increase Down the Hierarchy of the Sciences*.
+Dann gibt ChatGPT drei Sätze zur Zusammenfassung dieses Artikels. Alternativ könnten Sie auch schreiben: "Fasse folgenden Artikel zusammen:".
+
+
+Andere Dienste, wie [ChatPDF](https://www.chatpdf.com/), erlauben das Hochladen von PDF-Dokumenten und der Dienst liefert eine Zusammenfassung.
+
+:::callout-caution
+Beachten Sie Datenschutz und Urheberrechte, wenn Sie Fachartikel an Dritte weitergeben. $\square$
+:::
+
+
+:::callout-important
+### Der Mensch bleibt verantwortlich
+Wenn Sie Dienste von Maschinen oder Dritten  - sei es Word, Zotero, Google Scholar, oder einen AI-Dienst - in Anspruch nehmen, die Verantwortung für das Ergebnis hat der Mensch, der Nutzer, die Person, die Studentin oder der Student, der die  Qualifizierungsarbeit einreicht. 
+Dienste wie ChatGPT geben nicht immer korrekte Antworten; sachliche Fehler sind möglich. Prüfen Sie die Ergebnisse bei einer vertrauenswürdigen Quelle.$\square$
+:::
 
 
 

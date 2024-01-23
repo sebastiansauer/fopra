@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.478">
+<meta name="generator" content="quarto-1.4.544">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Forschungsprojekt - 3&nbsp; Rahmen: Hallo Forschung!</title>
 <style>
@@ -79,6 +79,7 @@ div.csl-indent {
     "search-more-match-text": "weitere Treffer in diesem Dokument",
     "search-more-matches-text": "weitere Treffer in diesem Dokument",
     "search-clear-button-title": "Zurücksetzen",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Abbrechen",
     "search-submit-button-title": "Abschicken",
     "search-label": "Suchen"
@@ -86,7 +87,32 @@ div.csl-indent {
 }</script><meta name="mermaid-theme" content="neutral">
 <script src="site_libs/quarto-diagram/mermaid.min.js"></script><script src="site_libs/quarto-diagram/mermaid-init.js"></script><link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
-<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><link rel="stylesheet" href="styles.css">
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script><link rel="stylesheet" href="styles.css">
 </head>
 <body class="nav-sidebar floating">
 
@@ -108,6 +134,7 @@ div.csl-indent {
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Forschungsprojekt</a> 
         <div class="sidebar-tools-main">
+    <a href="https://github.com/sebastiansauer/fopra" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Dunkelmodus umschalten"><i class="bi"></i></a>
 </div>
     </div>
@@ -316,7 +343,7 @@ div.csl-indent {
 </li>
   <li><a href="#fazit" id="toc-fazit" class="nav-link" data-scroll-target="#fazit"><span class="header-section-number">3.7</span> Fazit</a></li>
   <li><a href="#vertiefung" id="toc-vertiefung" class="nav-link" data-scroll-target="#vertiefung"><span class="header-section-number">3.8</span> Vertiefung</a></li>
-  </ul></nav>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/sebastiansauer/fopra/blob/main/010-rahmen.qmd" class="toc-action"><i class="bi bi-github"></i>Quellcode anzeigen</a></li><li><a href="https://github.com/sebastiansauer/fopra/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./010-rahmen.html">Theorie</a></li><li class="breadcrumb-item"><a href="./010-rahmen.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Rahmen: Hallo Forschung!</span></a></li></ol></nav><div class="quarto-title">
@@ -373,15 +400,15 @@ div.csl-indent {
 </div>
 <p>Der Nachteil solcher Magazine ist die Oberflächlichkeit der Darstellung: Viele Fragen zu der vorgestellten Forschung wird ein Bericht aus einem solchen Magazin unbeantwortet lassen. Der Nutzen solcher Magazine ist in ihrem Inspirationscharakter zu sehen: Man liest von faszinierender Forschung, fängt an, Fragen zu stellen und entwickelt Ideen (und Freude auf) eigene Forschung. Grund genug, dass wir uns einmal mit solchen Magazinen beschäftigen.</p>
 <div id="exr-inmind" class="theorem exercise">
-<p><span class="theorem-title"><strong>Übungsaufgabe 3.1 (Erarbeiten Sie eine Studie aus einem Wissenschaftsmagazin!) </strong></span>Suchen Sie sich eine Studie aus einem Wissenchaftsmagazin und arbeiten Sie die Kernaspekte heraus. Erarbeiten Sie ein Profil der Studie. Orientieren Sie sich an dem Leitfaden aus <a href="#tbl-studienprofil" class="quarto-xref">Tabelle&nbsp;<span>3.1</span></a>.</p>
+<p><span class="theorem-title"><strong>Übungsaufgabe 3.1 (Erarbeiten Sie eine Studie aus einem Wissenschaftsmagazin!)</strong></span> Suchen Sie sich eine Studie aus einem Wissenchaftsmagazin und arbeiten Sie die Kernaspekte heraus. Erarbeiten Sie ein Profil der Studie. Orientieren Sie sich an dem Leitfaden aus <a href="#tbl-studienprofil" class="quarto-xref">Tabelle&nbsp;<span>3.1</span></a>.</p>
 </div>
 <div class="cell" data-hash="010-rahmen_cache/html/tbl-studienprofil_29879d79052e2d07bf57d2ab65fbfeba">
-<div id="tbl-studienprofil" class="cell anchored" data-hash="010-rahmen_cache/html/tbl-studienprofil_29879d79052e2d07bf57d2ab65fbfeba">
-<figure class="quarto-float quarto-float-tbl figure"><figcaption class="table quarto-float-caption quarto-float-tbl" id="tbl-studienprofil-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="tbl-studienprofil" class="cell quarto-float anchored" data-hash="010-rahmen_cache/html/tbl-studienprofil_29879d79052e2d07bf57d2ab65fbfeba">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-studienprofil-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Tabelle&nbsp;3.1: Vorlage zur Erstellung eines Studienprofils
 </figcaption><div aria-describedby="tbl-studienprofil-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<table class="cell table table-sm table-striped small">
+<table class="do-not-create-environment cell table table-sm table-striped small">
 <thead><tr class="header">
 <th style="text-align: right;">id</th>
 <th style="text-align: left;">Kriterium</th>
@@ -441,10 +468,10 @@ Tabelle&nbsp;3.1: Vorlage zur Erstellung eines Studienprofils
 <p>Fachartikel zu Fachbuch verhält sich wie Wissenschaftsmagazin zu Popscience-Buch.</p>
 <p>Hier sind einige Beispiele für solche Bücher.</p>
 <div id="exm-popscience" class="theorem example">
-<p><span class="theorem-title"><strong>Beispiel 3.1 (Auswahl an lesenswerten Popscience-Büchern) </strong></span><span class="citation" data-cites="kahneman2012schnelles">Kahneman (<a href="130-references.html#ref-kahneman2012schnelles" role="doc-biblioref">2012</a>)</span>, <span class="citation" data-cites="Ariely2012">Ariely (<a href="130-references.html#ref-Ariely2012" role="doc-biblioref">2012</a>)</span>, <span class="citation" data-cites="cialdini_psychologie_2017">Cialdini (<a href="130-references.html#ref-cialdini_psychologie_2017" role="doc-biblioref">2017</a>)</span>, <span class="citation" data-cites="ariely_denken_2015">Ariely (<a href="130-references.html#ref-ariely_denken_2015" role="doc-biblioref">2015</a>)</span></p>
+<p><span class="theorem-title"><strong>Beispiel 3.1 (Auswahl an lesenswerten Popscience-Büchern)</strong></span> <span class="citation" data-cites="kahneman2012schnelles">Kahneman (<a href="130-references.html#ref-kahneman2012schnelles" role="doc-biblioref">2012</a>)</span>, <span class="citation" data-cites="Ariely2012">Ariely (<a href="130-references.html#ref-Ariely2012" role="doc-biblioref">2012</a>)</span>, <span class="citation" data-cites="cialdini_psychologie_2017">Cialdini (<a href="130-references.html#ref-cialdini_psychologie_2017" role="doc-biblioref">2017</a>)</span>, <span class="citation" data-cites="ariely_denken_2015">Ariely (<a href="130-references.html#ref-ariely_denken_2015" role="doc-biblioref">2015</a>)</span></p>
 </div>
 <div id="exr-yourpop" class="theorem exercise">
-<p><span class="theorem-title"><strong>Übungsaufgabe 3.2 (Welche Popscience-Bücher kennen Sie?) </strong></span>Stellen Sie ein Popscience-Buch kurz vor! Orientieren Sie sich an folgender Gliederung:</p>
+<p><span class="theorem-title"><strong>Übungsaufgabe 3.2 (Welche Popscience-Bücher kennen Sie?)</strong></span> Stellen Sie ein Popscience-Buch kurz vor! Orientieren Sie sich an folgender Gliederung:</p>
 <ol type="1">
 <li>Kernaussage des Buches</li>
 <li>Gut fand ich an dem Buch, …</li>
@@ -457,21 +484,21 @@ Tabelle&nbsp;3.1: Vorlage zur Erstellung eines Studienprofils
 <span class="header-section-number">3.3.2</span> Echte Forschung aus studentischer Feder</h3>
 <p>Auf der Seite <a href="https://www.fom.de/forschung/institute/iwp-institut-fuer-wirtschaftspsychologie/publikationen/iwp-schriftenreihe.html">des Instituts für Wirtschaftspsychologie (iwp) der FOM Hochschule</a> finden Sie eine Auswahl an insgesamt gut aufbereiteten psychologischen Studien aus studentischer Feder.</p>
 <div id="exr-iwp" class="theorem exercise">
-<p><span class="theorem-title"><strong>Übungsaufgabe 3.3 (Einblick in studentische Forschung) </strong></span>Lesen Sie eine studentische Forschungsarbeit quer und präsentieren Sie die wesentlichen Ergebnisse! Nutzen Sie <a href="#tbl-studienprofil" class="quarto-xref">Tabelle&nbsp;<span>3.1</span></a> zur Gliederung Ihrer Analyse.</p>
+<p><span class="theorem-title"><strong>Übungsaufgabe 3.3 (Einblick in studentische Forschung)</strong></span> Lesen Sie eine studentische Forschungsarbeit quer und präsentieren Sie die wesentlichen Ergebnisse! Nutzen Sie <a href="#tbl-studienprofil" class="quarto-xref">Tabelle&nbsp;<span>3.1</span></a> zur Gliederung Ihrer Analyse.</p>
 </div>
 </section></section><section id="was-ist-wissenschaft" class="level2" data-number="3.4"><h2 data-number="3.4" class="anchored" data-anchor-id="was-ist-wissenschaft">
 <span class="header-section-number">3.4</span> Was ist Wissenschaft?</h2>
 <section id="definitionsversuche" class="level3" data-number="3.4.1"><h3 data-number="3.4.1" class="anchored" data-anchor-id="definitionsversuche">
 <span class="header-section-number">3.4.1</span> Definitionsversuche</h3>
 <div id="def-science" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3.1 (Wissenschaft) </strong></span>Wissenschaft ist ein systematisches Unterfangen, das Wissen erzeugt und organisiert, primär in Form von testbaren Erklärungen von Vorhersagen über das Universum.<span class="math inline">\(\square\)</span></p>
+<p><span class="theorem-title"><strong>Definition 3.1 (Wissenschaft)</strong></span> Wissenschaft ist ein systematisches Unterfangen, das Wissen erzeugt und organisiert, primär in Form von testbaren Erklärungen von Vorhersagen über das Universum.<span class="math inline">\(\square\)</span></p>
 </div>
 <p>Disziplinen, die wissenschaftliche Erkenntnisse zur Lösung praktischer Probleme nutzen (wie Medizin oder Wirtschaftspsychologie), nennt man auch angewandte Wissenschaft; Wissenschaftszweige mit weniger (direktem) Anwendungsbezug nennt man Grundlagenwissenschaft.</p>
 <p>Aspekte der Wissenschaft, die die Erzeugung von Wissen in den Vordergrund stellen, nennt man Forschung.</p>
 <p>Die Art und Weise der Wissenschaft nennt man die wissenschaftliche Methode. Die wissenschaftliche Methode ist geprägt von dem Versuch, das Universum objektiv und reproduzierbar zu erklären. Damit ist gemeint, dass rationale und fachlich informierte Menschen zu der gleichen Einschätzung eines wissenschaftlichen Arguments kommen sollten. Die Falsifizierung einer Hypothese stellt für viele das Kennzeichen wissenschaftlichen Fortschritts dar. Verifizieren wird hingegen von vielen als kein starkes Mittel wissenschaftlichen Fortschritts gesehen. Daraus kann die Relevanz des Zweifelns (Skeptizismus) für die Wissenschaft abgeleitet werden.</p>
 <p>Da die Phänomene der Welt (Evolution, Gravitation, Liebe, Inflation, Agression, …) komplex sind, neigen auch die Erklärungsansätze der Wissenschaft dazu, kompliziert zu sein.</p>
 <div id="exm-theorie" class="theorem example">
-<p><span class="theorem-title"><strong>Beispiel 3.2 </strong></span>Die Wissenschaft organisiert ihr Wissen (auch) in Theorien. Theorien sind ein Bündel von Aussagen. Diese Aussagen sind</p>
+<p><span class="theorem-title"><strong>Beispiel 3.2</strong></span> Die Wissenschaft organisiert ihr Wissen (auch) in Theorien. Theorien sind ein Bündel von Aussagen. Diese Aussagen sind</p>
 <ul>
 <li>aufeinander bezogen</li>
 <li>widerspruchsfrei</li>
@@ -480,7 +507,7 @@ Tabelle&nbsp;3.1: Vorlage zur Erstellung eines Studienprofils
 </ul>
 </div>
 <div id="exm-science" class="theorem example">
-<p><span class="theorem-title"><strong>Beispiel 3.3 (Beispiele für Theorien) </strong></span>Zu den bekanntesten und einflussreichsten Theorien gehören die Evolutionstheorie oder die Relativitätstheorie.<span class="math inline">\(\square\)</span></p>
+<p><span class="theorem-title"><strong>Beispiel 3.3 (Beispiele für Theorien)</strong></span> Zu den bekanntesten und einflussreichsten Theorien gehören die Evolutionstheorie oder die Relativitätstheorie.<span class="math inline">\(\square\)</span></p>
 </div>
 </section><section id="eigenschaften-von-wissenschaft" class="level3" data-number="3.4.2"><h3 data-number="3.4.2" class="anchored" data-anchor-id="eigenschaften-von-wissenschaft">
 <span class="header-section-number">3.4.2</span> Eigenschaften von Wissenschaft</h3>
@@ -527,18 +554,18 @@ Tabelle&nbsp;3.1: Vorlage zur Erstellung eines Studienprofils
 </div>
 <p>Im XKCD-Cartoon <a href="https://www.explainxkcd.com/wiki/index.php/435:_Purity">435</a> wird Mathematik als Grundlage der Wissenschaften dargestellt.</p>
 <div id="exr-xkcd" class="theorem exercise">
-<p><span class="theorem-title"><strong>Übungsaufgabe 3.4 (Ist die Mathematik die Grundlage der Wissenschaften?) </strong></span>Beziehen Sie Stellung zu dem Cartoon und den damit verbundenen Aussagen!</p>
+<p><span class="theorem-title"><strong>Übungsaufgabe 3.4 (Ist die Mathematik die Grundlage der Wissenschaften?)</strong></span> Beziehen Sie Stellung zu dem Cartoon und den damit verbundenen Aussagen!</p>
 </div>
 </section><section id="was-ist-ein-modell" class="level3" data-number="3.4.4"><h3 data-number="3.4.4" class="anchored" data-anchor-id="was-ist-ein-modell">
 <span class="header-section-number">3.4.4</span> Was ist ein Modell?</h3>
 <div id="def-modell" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3.2 </strong></span>Ein wissenschaftliches Modell ist eine vereinfachte (aber kohärente) Auffassung eines Forschungsgegenstands (d.h. ein Auszug der Realität). Häuﬁg spielen Metaphern oder Analogien dabei eine Rolle (z. B. lehnt sich das Atommodell nach Bohr an das Sonnensystem an).<span class="math inline">\(\square\)</span></p>
+<p><span class="theorem-title"><strong>Definition 3.2</strong></span> Ein wissenschaftliches Modell ist eine vereinfachte (aber kohärente) Auffassung eines Forschungsgegenstands (d.h. ein Auszug der Realität). Häuﬁg spielen Metaphern oder Analogien dabei eine Rolle (z. B. lehnt sich das Atommodell nach Bohr an das Sonnensystem an).<span class="math inline">\(\square\)</span></p>
 </div>
 <p>Modelle können z. B. grafisch, mathematisch oder statistisch ausgebildet sein.</p>
 <p>Modelle erläutern das Zusammenspiel mehrerer Merkmale innerhalb des Modells.</p>
 <p>Der Nutzen von Modellen besteht darin, komplexe Sachverhalte verständlich und „greifbar“ oder „anschaulich“ zu machen. Häuﬁg versucht man, wesentliche Größen (wie Einflussfaktoren) in das Modell aufzunehmen und unwesentliche außen vor zu lassen. Die Güte eines Modell kann man an diesem Spagat bemessen.</p>
 <div id="exm-modell" class="theorem example">
-<p><span class="theorem-title"><strong>Beispiel 3.4 </strong></span>Beispiele für Modelle: Globus, Klimamodelle, Doppelhelix der DNA. <span class="math inline">\(\square\)</span></p>
+<p><span class="theorem-title"><strong>Beispiel 3.4</strong></span> Beispiele für Modelle: Globus, Klimamodelle, Doppelhelix der DNA. <span class="math inline">\(\square\)</span></p>
 </div>
 <p>Es hat sich herausgestellt, dass viele Phänomene des Universums kompliziert (oder besser: komplex) sind, so dass („richtiges“) Vereinfachen in Form von Modellbildung nützlich ist – tatsächlich der zentrale Weg des wissenschaftlichen Denkens darstellt.</p>
 <p>Modelle ermöglichen damit die Beschreibung, Erklärung und Vorhersage von Phänomen (und damit auch die Einflussnahme).</p>
@@ -601,9 +628,9 @@ Tabelle&nbsp;3.1: Vorlage zur Erstellung eines Studienprofils
 </section><section id="die-drei-ziele-einer-empirischen-wissenschaft" class="level3" data-number="3.4.6"><h3 data-number="3.4.6" class="anchored" data-anchor-id="die-drei-ziele-einer-empirischen-wissenschaft">
 <span class="header-section-number">3.4.6</span> Die drei Ziele einer empirischen Wissenschaft</h3>
 <p><a href="020-themawahl.html#fig-ziele" class="quarto-xref">Abbildung&nbsp;<span>4.4</span></a> zeigt die drei Ziele einer empirischen Wissenschaft. Es gibt nur diese drei! Allerdings könnte man auch von Ziel<em>arten</em> sprechen.</p>
-<div class="cell">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-ziele" class="quarto-figure quarto-figure-center anchored">
+<div id="fig-ziele" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-ziele-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
 <pre class="mermaid mermaid-js" data-label="fig-ziele">graph TD
@@ -615,7 +642,7 @@ Tabelle&nbsp;3.1: Vorlage zur Erstellung eines Studienprofils
 </pre>
 </div>
 </div>
-<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-ziele-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ziele-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;3.1: Zielarten der empirisichen Wissenschaft
 </figcaption></figure>
 </div>
@@ -648,37 +675,37 @@ Abbildung&nbsp;3.1: Zielarten der empirisichen Wissenschaft
 <span class="header-section-number">3.5.3</span> Wissenschaft im Alltag</h3>
 <div id="fig-science-everyday" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-science-everyday-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-science-everyday" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-phone" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-science-everyday" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-phone" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-subfloat-fig figure"><div aria-describedby="fig-phone-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="img/smartphone.jpg" class="img-fluid figure-img" data-ref-parent="fig-science-everyday">
 </div>
-<figcaption class="figure quarto-subfloat-caption quarto-subfloat-fig" id="fig-phone-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-phone-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (a) Smartphone. Image Credit: Kārlis Dambrāns on Flickr, CC-BY
 </figcaption></figure>
 </div>
 </div>
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-science-everyday" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-vaccine" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-science-everyday" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-vaccine" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-subfloat-fig figure"><div aria-describedby="fig-vaccine-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="img/vaccine.jpg" class="img-fluid figure-img" data-ref-parent="fig-science-everyday">
 </div>
-<figcaption class="figure quarto-subfloat-caption quarto-subfloat-fig" id="fig-vaccine-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-vaccine-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (b) Impfung. Image Credit: NIAID on Flickr, CC-BY
 </figcaption></figure>
 </div>
 </div>
 </div>
 </div>
-<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-science-everyday-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-science-everyday-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;3.2: Wissenschaftliche Errungenschaften, die aus dem Alltag nicht wegzudenken sind.
 </figcaption></figure>
 </div>
 </section><section id="wissenschaft-und-lernen" class="level3" data-number="3.5.4"><h3 data-number="3.5.4" class="anchored" data-anchor-id="wissenschaft-und-lernen">
 <span class="header-section-number">3.5.4</span> Wissenschaft und Lernen</h3>
 <div id="exm-science2" class="theorem example">
-<p><span class="theorem-title"><strong>Beispiel 3.5 (Aus der Forschung) </strong></span>Handschriftliche Notizen merkt man sich besser als mit der Tastatur getippte <span class="citation" data-cites="mueller_pen_2014">(<a href="130-references.html#ref-mueller_pen_2014" role="doc-biblioref">Mueller und Oppenheimer 2014</a>)</span>.<span class="math inline">\(\square\)</span></p>
+<p><span class="theorem-title"><strong>Beispiel 3.5 (Aus der Forschung)</strong></span> Handschriftliche Notizen merkt man sich besser als mit der Tastatur getippte <span class="citation" data-cites="mueller_pen_2014">(<a href="130-references.html#ref-mueller_pen_2014" role="doc-biblioref">Mueller und Oppenheimer 2014</a>)</span>.<span class="math inline">\(\square\)</span></p>
 </div>
 </section><section id="wissenschaft-als-wert-an-sich" class="level3" data-number="3.5.5"><h3 data-number="3.5.5" class="anchored" data-anchor-id="wissenschaft-als-wert-an-sich">
 <span class="header-section-number">3.5.5</span> Wissenschaft als Wert an sich</h3>
@@ -700,7 +727,7 @@ Wichtig
 </section><section id="reproduzierbarkeit" class="level3" data-number="3.5.6"><h3 data-number="3.5.6" class="anchored" data-anchor-id="reproduzierbarkeit">
 <span class="header-section-number">3.5.6</span> Reproduzierbarkeit</h3>
 <div id="def-repro" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 3.3 (Reproduzierbarkeit) </strong></span>Reproduzierbarkeit (“Wiederholbarkeit”) ist das Vermögen, eine Analyse durch Dritte zu wiederholen und zu einem ähnlichen (gleichen) Ergebnis wie in der ursprünglichen Analyse zu bekommen.<span class="math inline">\(\square\)</span></p>
+<p><span class="theorem-title"><strong>Definition 3.3 (Reproduzierbarkeit)</strong></span> Reproduzierbarkeit (“Wiederholbarkeit”) ist das Vermögen, eine Analyse durch Dritte zu wiederholen und zu einem ähnlichen (gleichen) Ergebnis wie in der ursprünglichen Analyse zu bekommen.<span class="math inline">\(\square\)</span></p>
 </div>
 <p>Wenn ein Befund nicht reproduzierbar ist, ist es dann echtes Wissen?</p>
 </section><section id="forschung-früher-und-heute" class="level3" data-number="3.5.7"><h3 data-number="3.5.7" class="anchored" data-anchor-id="forschung-früher-und-heute">
@@ -723,14 +750,16 @@ Wichtig
 <figcaption>Hey, solange wir das „Warum“ einer Sache, also die Ursache, nicht verstanden haben, wissen wir nichts über ein Ding (Aristotle,&nbsp;Physics&nbsp;194 b17–20)!</figcaption></figure>
 </div>
 <p><a href="https://de.wikipedia.org/wiki/Aristoteles#/media/Datei:Aristotle_Altemps_Inv8575.jpg">Bildquelle: Jastrow, Wikipedia, Gemeinfrei</a></p>
-<div class="cell">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div>
+<p></p><figure class="figure"></figure><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart LR
   Ursache --&gt; Wirkung
 </pre>
 </div>
+<p></p>
 </div>
 </div>
 </div>
@@ -782,7 +811,7 @@ Wichtig
 <li>Schwäche: Keine wirklich neuen Erkenntnisse möglich</li>
 </ul>
 <div id="exm-schlussarten" class="theorem example">
-<p><span class="theorem-title"><strong>Beispiel 3.6 (Beispiele zu den Schlussarten) </strong></span><em>Induktion</em> „In meiner Studie-Stichprobe war die IQ im Mittel 120. Daraus schließe ich, dass in der Grundgesamtheit aller Studies der IQ im Mittel 120 beträgt“ (Verallgemeinerung).</p>
+<p><span class="theorem-title"><strong>Beispiel 3.6 (Beispiele zu den Schlussarten)</strong></span> <em>Induktion</em> „In meiner Studie-Stichprobe war die IQ im Mittel 120. Daraus schließe ich, dass in der Grundgesamtheit aller Studies der IQ im Mittel 120 beträgt“ (Verallgemeinerung).</p>
 <p><em>Abduktion</em> “Joachim, Du hast 10 Mal am Stück Kopf geworfen; das passiert selten bei fairen Münzen. Daher schließe ich, dass Deine Münze nicht fair ist“ (Spekulation! Joachim könnte Glück gehabt haben).</p>
 <p><em>Deduktion</em> „In einer Normalverteilung liegen 2/3 aller Werte höchstens eine SD-Einheit vom Mittelwert entfernt. Mir liegt ein Messwert aus einer Normalverteilung vor, der nur als eine halbe SD-Einheit vom Mittelwert ist. Daher schließe ich, dass er zu den inneren 2/3 aller Werte gehört“ (wenn die Regel der Normalverteilung wahr ist, dann muss der Schluss richtig sein, mit Sicherheit).<span class="math inline">\(\square\)</span></p>
 </div>
@@ -825,7 +854,7 @@ Vorsicht
 <figcaption>Wie oft schlägt er zu?. Bildquelle: Tim Reckmann on flickr, CC-By</figcaption></figure>
 </div>
 <div id="exr-einbruch" class="theorem exercise">
-<p><span class="theorem-title"><strong>Übungsaufgabe 3.5 (Wie viele Einbrüche passieren in Deutschland?) </strong></span>Wie fundiert ist obige Aussage zu “alle zwei Minuten” wohl?</p>
+<p><span class="theorem-title"><strong>Übungsaufgabe 3.5 (Wie viele Einbrüche passieren in Deutschland?)</strong></span> Wie fundiert ist obige Aussage zu “alle zwei Minuten” wohl?</p>
 </div>
 </section></section><section id="fazit" class="level2" data-number="3.7"><h2 data-number="3.7" class="anchored" data-anchor-id="fazit">
 <span class="header-section-number">3.7</span> Fazit</h2>
@@ -877,13 +906,13 @@ Suppes, Patrick. 1999. <em>Introduction to Logic</em>. <span>Mineola, N.Y</span>
 Walach, Harald, und Nikolaus von Stillfried. 2013. <em>Psychologie: Wissenschaftstheorie, philosophische Grundlagen und Geschichte: ein Lehrbuch</em>. 3., überarb. und erw. Aufl. <span>Stuttgart</span>: <span>Kohlhammer</span>.
 </div>
 </div>
-</section><aside id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><hr>
+</section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><hr>
 <ol>
 <li id="fn1"><p>“Desiderata”<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>https://www.savagechickens.com/2021/07/big-question.html<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p>Vgl. https://www.savagechickens.com/2022/04/so-many-questions.html<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn4"><p>z.B. ich<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol></aside></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</ol></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -1155,38 +1184,28 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    const typesetMath = (el) => {
-      if (window.MathJax) {
-        // MathJax Typeset
-        window.MathJax.typeset([el]);
-      } else if (window.katex) {
-        // KaTeX Render
-        var mathElements = el.getElementsByClassName("math");
-        var macros = [];
-        for (var i = 0; i < mathElements.length; i++) {
-          var texText = mathElements[i].firstChild;
-          if (mathElements[i].tagName == "SPAN") {
-            window.katex.render(texText.data, mathElements[i], {
-              displayMode: mathElements[i].classList.contains('display'),
-              throwOnError: false,
-              macros: macros,
-              fleqn: false
-            });
-          }
-        }
-      }
-    }
     if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
       if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
         }
-        typesetMath(container);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
         return container.innerHTML
       } else {
-        typesetMath(note);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
@@ -1195,8 +1214,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      typesetMath(note);
-      return note.innerHTML;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -1431,4 +1457,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sebastiansauer/fopra/blob/main/010-rahmen.qmd" class="toc-action"><i class="bi bi-github"></i>Quellcode anzeigen</a></li><li><a href="https://github.com/sebastiansauer/fopra/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div></div></footer></body></html>

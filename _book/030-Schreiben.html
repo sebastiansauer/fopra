@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.478">
+<meta name="generator" content="quarto-1.4.544">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Forschungsprojekt - 5&nbsp; Schreiben</title>
 <style>
@@ -113,6 +113,7 @@ div.csl-indent {
     "search-more-match-text": "weitere Treffer in diesem Dokument",
     "search-more-matches-text": "weitere Treffer in diesem Dokument",
     "search-clear-button-title": "Zurücksetzen",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Abbrechen",
     "search-submit-button-title": "Abschicken",
     "search-label": "Suchen"
@@ -120,7 +121,32 @@ div.csl-indent {
 }</script><meta name="mermaid-theme" content="neutral">
 <script src="site_libs/quarto-diagram/mermaid.min.js"></script><script src="site_libs/quarto-diagram/mermaid-init.js"></script><link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
-<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><link rel="stylesheet" href="styles.css">
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script><link rel="stylesheet" href="styles.css">
 </head>
 <body class="nav-sidebar floating">
 
@@ -142,6 +168,7 @@ div.csl-indent {
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Forschungsprojekt</a> 
         <div class="sidebar-tools-main">
+    <a href="https://github.com/sebastiansauer/fopra" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Dunkelmodus umschalten"><i class="bi"></i></a>
 </div>
     </div>
@@ -355,8 +382,9 @@ div.csl-indent {
   <li><a href="#word-checkas" id="toc-word-checkas" class="nav-link" data-scroll-target="#word-checkas"><span class="header-section-number">5.5.6</span> Word-Checkas</a></li>
   </ul>
 </li>
-  <li><a href="#literatur" id="toc-literatur" class="nav-link" data-scroll-target="#literatur"><span class="header-section-number">5.6</span> Literatur</a></li>
-  </ul></nav>
+  <li><a href="#it-tools" id="toc-it-tools" class="nav-link" data-scroll-target="#it-tools"><span class="header-section-number">5.6</span> IT-Tools</a></li>
+  <li><a href="#literatur" id="toc-literatur" class="nav-link" data-scroll-target="#literatur"><span class="header-section-number">5.7</span> Literatur</a></li>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/sebastiansauer/fopra/blob/main/030-Schreiben.qmd" class="toc-action"><i class="bi bi-github"></i>Quellcode anzeigen</a></li><li><a href="https://github.com/sebastiansauer/fopra/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./010-rahmen.html">Theorie</a></li><li class="breadcrumb-item"><a href="./030-Schreiben.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Schreiben</span></a></li></ol></nav><div class="quarto-title">
@@ -406,9 +434,9 @@ div.csl-indent {
 <span class="header-section-number">5.2.1</span> Gliedern Sie Ihren Schreibprozess</h3>
 <p>Okay, Sie haben viel gelesen. <del>1</del>, <del>10</del>, <del>100</del>, sagen wir 30 Fachartikel. Gut. Was jetzt? Fertig mit Lesen, los geht’s mit Schreiben?!</p>
 <p>Nein (s. <a href="#fig-lies-schreib" class="quarto-xref">Abbildung&nbsp;<span>5.1</span></a>). Lesen und Schreiben sollten sich abwechseln.</p>
-<div class="cell">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-lies-schreib" class="quarto-figure quarto-figure-center anchored">
+<div id="fig-lies-schreib" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-lies-schreib-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
 <pre class="mermaid mermaid-js" data-label="fig-lies-schreib">flowchart TD
@@ -421,7 +449,7 @@ div.csl-indent {
 </pre>
 </div>
 </div>
-<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-lies-schreib-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-lies-schreib-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;5.1: Lesen und Schreiben wechseln sich ab.
 </figcaption></figure>
 </div>
@@ -491,13 +519,13 @@ Abbildung&nbsp;5.1: Lesen und Schreiben wechseln sich ab.
 <blockquote class="blockquote">
 <p>👨‍🏫 <a href="#tbl-aufteilung" class="quarto-xref">Tabelle&nbsp;<span>5.1</span></a> <a href="#tbl-aufteilung" class="quarto-xref">Tabelle&nbsp;<span>5.1</span></a> gibt Ihnen eine grobe Richtlinie, wie groß der Anteil der verschiedenen Kapitel des Hauptteils sind.</p>
 </blockquote>
-<div class="cell" data-hash="030-Schreiben_cache/html/tbl-aufteilung_c7ab93d58764217fdd4cd92c2777571f">
-<div id="tbl-aufteilung" class="cell anchored" data-hash="030-Schreiben_cache/html/tbl-aufteilung_c7ab93d58764217fdd4cd92c2777571f">
-<figure class="quarto-float quarto-float-tbl figure"><figcaption class="table quarto-float-caption quarto-float-tbl" id="tbl-aufteilung-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell">
+<div id="tbl-aufteilung" class="cell quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-aufteilung-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Tabelle&nbsp;5.1: Grobe Richtlinien zum Textanteil der Kapitel des Hauptteils
 </figcaption><div aria-describedby="tbl-aufteilung-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<table class="cell table table-sm table-striped small">
+<table class="do-not-create-environment cell table table-sm table-striped small">
 <colgroup>
 <col style="width: 5%">
 <col style="width: 7%">
@@ -549,11 +577,11 @@ Tabelle&nbsp;5.1: Grobe Richtlinien zum Textanteil der Kapitel des Hauptteils
 <p>So könnte eine Titelseite aussehen, s. <a href="#fig-titelseite" class="quarto-xref">Abbildung&nbsp;<span>5.2</span></a>.</p>
 <div class="columns">
 <div class="column" style="width:45%;">
-<div id="fig-titelseite" class="quarto-figure quarto-figure-center anchored">
+<div id="fig-titelseite" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-titelseite-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="img/titelseite.jpg" class="img-fluid figure-img">
 </div>
-<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-titelseite-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-titelseite-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;5.2: So könnte eine Titelseite aussehen
 </figcaption></figure>
 </div>
@@ -582,23 +610,23 @@ Abbildung&nbsp;5.2: So könnte eine Titelseite aussehen
 <span class="header-section-number">5.3.3</span> Inhaltsverzeichnis</h3>
 <p>Anhand des Inhaltsverzeichnisses wird bereits viel über den weiteren Verlauf der Arbeit deutlich: Es gibt eine Übersicht zum Inhalt der Arbeit und sollte entsprechend logisch aufgebaut sein und den Gedankengang der Arbeit widerspiegeln. Die Gliederung sollte ausführlich, aber auch nicht zu detailliert sein. Dabei hat der Grad der Untergliederung der einzelnen Gliederungspunkte ausgewogen zu sein. ︎ Unterpunkte eines Kapitels dürfen übergeordnete Punkte nicht wiederholen. Gliederungspunkte dürfen nicht zu 100 % identisch formuliert werden. Gemäß dem Grundsatz der Proportionalität sollten die Hauptkapitel in etwa den gleichen Seitenumfang aufweisen.︎ Jede Gliederungsstufe muss mindestens zwei Punkte enthalten. Wird also ein Kapitel 3.2.1 eingeführt, muss es auch ein Kapitel 3.2.2 geben; sollte nach 3.2.1 unmittelbar 3.3 folgen, wird die Logik der Gliederung nicht erfüllt. Bei der Formulierung der Gliederungspunkte ist darauf zu achten, entweder keine oder immer Artikel zu verwenden. Der optische Aufbau sollte den logischen Aufbau der Gliederung widerspiegeln z. B. durch räumliche Nähe von zusammengehörigen Abschnitten und Platz zwischen unterschiedlichen Themen. Der optische Eindruck sollte Übersichtlichkeit vermitteln. Nutzen Sie Links im Inhaltsverzeichnis, um das Navigieren im (elektronischen) Dokument zu erleichtern.</p>
 <div id="exr-gliederung" class="theorem exercise">
-<p><span class="theorem-title"><strong>Übungsaufgabe 5.1 (Wie sieht eine gute Gliederung aus?) </strong></span>Betrachten Sie <a href="#fig-gliederung" class="quarto-xref">Abbildung&nbsp;<span>5.3</span></a>! Diskutieren Sie Stärken und Schwächen dieser Gliederung.<span class="math inline">\(\square\)</span></p>
-<div id="fig-gliederung" class="quarto-figure quarto-figure-center anchored">
+<p><span class="theorem-title"><strong>Übungsaufgabe 5.1 (Wie sieht eine gute Gliederung aus?)</strong></span> Betrachten Sie <a href="#fig-gliederung" class="quarto-xref">Abbildung&nbsp;<span>5.3</span></a>! Diskutieren Sie Stärken und Schwächen dieser Gliederung.<span class="math inline">\(\square\)</span></p>
+<div id="fig-gliederung" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-gliederung-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="img/gliederung.jpg" class="img-fluid figure-img">
 </div>
-<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-gliederung-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-gliederung-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;5.3: Ein Beispiel für eine Gliederung
 </figcaption></figure>
 </div>
 </div>
 <div id="exr-glied-link" class="theorem exercise">
-<p><span class="theorem-title"><strong>Übungsaufgabe 5.2 (Wie verlinkt man eine Gliederung?) </strong></span>Wie man in <a href="#fig-glied-link" class="quarto-xref">Abbildung&nbsp;<span>5.4</span></a> sieht (links), sind die Kapitel (und offenbar Unterkapitel) verlinkt in der PDF-Datei. Probieren Sie, ob Sie das mit Ihrem Schreibprogramm (z.B. Word) auch hinkriegen.<span class="math inline">\(\square\)</span></p>
-<div id="fig-glied-link" class="quarto-figure quarto-figure-center anchored">
+<p><span class="theorem-title"><strong>Übungsaufgabe 5.2 (Wie verlinkt man eine Gliederung?)</strong></span> Wie man in <a href="#fig-glied-link" class="quarto-xref">Abbildung&nbsp;<span>5.4</span></a> sieht (links), sind die Kapitel (und offenbar Unterkapitel) verlinkt in der PDF-Datei. Probieren Sie, ob Sie das mit Ihrem Schreibprogramm (z.B. Word) auch hinkriegen.<span class="math inline">\(\square\)</span></p>
+<div id="fig-glied-link" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-glied-link-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="img/glied-link.jpg" class="img-fluid figure-img">
 </div>
-<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-glied-link-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-glied-link-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;5.4: Ein Beispiel für eine verlinkte Gliederung
 </figcaption></figure>
 </div>
@@ -619,9 +647,9 @@ Hinweis
 <p>In der Einleitung schreibt man noch nichts über die theoretischen Grundlagen Ihrer Studie.<span class="math inline">\(\square\)</span></p>
 </div>
 </div>
-<div class="cell">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-einleitung" class="quarto-figure quarto-figure-center anchored">
+<div id="fig-einleitung" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-einleitung-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
 <pre class="mermaid mermaid-js" data-label="fig-einleitung">flowchart LR
@@ -630,7 +658,7 @@ Hinweis
 </pre>
 </div>
 </div>
-<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-einleitung-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-einleitung-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;5.5: Die Bestandteile der Einleitung
 </figcaption></figure>
 </div>
@@ -662,9 +690,9 @@ Vorsicht
 <li>Zusammenhang von X und Y (häufig kausal)</li>
 </ol>
 <p>Entsprechend schreiben Sie also im Theorieteil über diese drei Teile (und über nichts anderes), s. <a href="#fig-theorieteil" class="quarto-xref">Abbildung&nbsp;<span>5.6</span></a>.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> Es bieten sich also <em>drei</em> Unterkapitel des Theorieteils an. Allerdings sind auch andere Untergliederungen Ihres Theoreteils möglich. So fließt der Zusammenhang von X und Y häufig schon in die Erläuterung von X und Y ein.</p>
-<div class="cell">
+<div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div id="fig-theorieteil" class="quarto-figure quarto-figure-center anchored">
+<div id="fig-theorieteil" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-theorieteil-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
 <pre class="mermaid mermaid-js" data-label="fig-theorieteil">flowchart LR
@@ -672,14 +700,14 @@ Vorsicht
 </pre>
 </div>
 </div>
-<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-theorieteil-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-theorieteil-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;5.6: Die Bestandteile des Theorieteils
 </figcaption></figure>
 </div>
 </div>
 </div>
 <div id="exm-theorie" class="theorem example">
-<p><span class="theorem-title"><strong>Beispiel 5.1 (Beispiel für den Aufbau eines Theorieteils: Statussymbole und Online-Dating) </strong></span>Ihre Forschungsfrage lautet: “Haben Statussymbole einen Einfluss auf den Erfolg beim Online-Dating?”. Bei dieser Fragestellung sollten Sie drei Aspekte im Theorieteil erörtern:</p>
+<p><span class="theorem-title"><strong>Beispiel 5.1 (Beispiel für den Aufbau eines Theorieteils: Statussymbole und Online-Dating)</strong></span> Ihre Forschungsfrage lautet: “Haben Statussymbole einen Einfluss auf den Erfolg beim Online-Dating?”. Bei dieser Fragestellung sollten Sie drei Aspekte im Theorieteil erörtern:</p>
 <ol type="1">
 <li>Psychologie des sozialen Status</li>
 <li>Partnerschaft/Partnersuche</li>
@@ -688,7 +716,7 @@ Abbildung&nbsp;5.6: Die Bestandteile des Theorieteils
 <p>Ggf. sind noch Teile wie „Besonderheiten des Online-Datings“ etc. zu ergänzen.<span class="math inline">\(\square\)</span></p>
 </div>
 <div id="exm-theorie2" class="theorem example">
-<p><span class="theorem-title"><strong>Beispiel 5.2 (Beispiel für den Aufbau eines Theorieteils: Wirkfaktoren von Achtsamkeit) </strong></span>Ihre Forschungsfrage lautet: “Wirkfaktoren von Achtsamkeit: Wirkt Achtsamkeit durch Verringerung der affektiven Reaktivität?”. Bei dieser Fragestellung sollten Sie drei Aspekte im Theorieteil erörtern:</p>
+<p><span class="theorem-title"><strong>Beispiel 5.2 (Beispiel für den Aufbau eines Theorieteils: Wirkfaktoren von Achtsamkeit)</strong></span> Ihre Forschungsfrage lautet: “Wirkfaktoren von Achtsamkeit: Wirkt Achtsamkeit durch Verringerung der affektiven Reaktivität?”. Bei dieser Fragestellung sollten Sie drei Aspekte im Theorieteil erörtern:</p>
 <ol type="1">
 <li>Achtsamkeit</li>
 <li>Affektive Reaktivität</li>
@@ -751,11 +779,11 @@ Abbildung&nbsp;5.6: Die Bestandteile des Theorieteils
 <span class="header-section-number">5.3.7.1</span> Formatierung von Tabellen</h4>
 <p>Eine kleine Menge an Zahlen (z.B. fünf) kann konziser im Text berichtet werden. Größere Mengen an Zahlen sollten in Tabellen berichtet werden.</p>
 <p>Ein Beispiel für eine Tabelle zur Untersuchung von Korrelation, die nach APA (V7) formatiert ist, zeigt <a href="#fig-corr1" class="quarto-xref">Abbildung&nbsp;<span>5.7</span></a>.</p>
-<div id="fig-corr1" class="quarto-figure quarto-figure-center anchored" width="50%">
+<div id="fig-corr1" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-corr1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="img/tab-corr.jpg" class="img-fluid figure-img" style="width:50.0%">
 </div>
-<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-corr1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-corr1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;5.7: Ein Beispiel für eine Korrelationstabelle, formatiert nach APA7
 </figcaption></figure>
 </div>
@@ -764,20 +792,20 @@ Abbildung&nbsp;5.7: Ein Beispiel für eine Korrelationstabelle, formatiert nach 
 <p>Zentral bei der Gestaltung von Tabellen sind drei Prinzipien: 1) Übersichtlichkeit, 2) Konsistenz und 3) Ehrlichkeit.</p>
 <p>Man kann solche Tabellen von “Hand” erstellen, oder man nutzt Hilfen wie z.B. das <a href="https://dstanley4.github.io/apaTables/index.html">R-Paket <code>apaTables</code></a>, welche Tabellen im APA-Format erstellt und in Word exportiert.</p>
 <p>Betrachten wir ein Beispiel anhand des Datensatzes <code>mtcars</code><a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>, wie man mit <code>apaTables</code> eine Korrelationstabelle erstellt.</p>
-<div class="cell" data-hash="030-Schreiben_cache/html/unnamed-chunk-7_4beeaeb346f3976416d3296cca1e11a8">
+<div class="cell">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/dstanley4/apaTables">apaTables</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="va">mtcars</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/pkg/apaTables/man/apa.cor.table.html">apa.cor.table</a></span><span class="op">(</span><span class="va">mtcars</span>, filename <span class="op">=</span> <span class="st">"apa_cor_tab_mtcars.doc"</span>, table.number <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="exr-tab-apa" class="theorem exercise">
-<p><span class="theorem-title"><strong>Übungsaufgabe 5.3 (Merkmale eine Tabelle nach APA7) </strong></span>Betrachten Sie <a href="https://apastyle.apa.org/style-grammar-guidelines/tables-figures/sample-tables#correlation">dieses Beispiel</a> für eine Tabelle! Arbeiten Sie die wesentlichen Merkmale der Formatierung heraus.<span class="math inline">\(\square\)</span></p>
+<p><span class="theorem-title"><strong>Übungsaufgabe 5.3 (Merkmale eine Tabelle nach APA7)</strong></span> Betrachten Sie <a href="https://apastyle.apa.org/style-grammar-guidelines/tables-figures/sample-tables#correlation">dieses Beispiel</a> für eine Tabelle! Arbeiten Sie die wesentlichen Merkmale der Formatierung heraus.<span class="math inline">\(\square\)</span></p>
 </div>
 <p>Aber was sind die Bestandteile des APA-Formats? Schauen Sie sich dazu <a href="#fig-tab-apa" class="quarto-xref">Abbildung&nbsp;<span>5.8</span></a> an, in der Abbildung sind wesentliche Merkmale des APA-Formats hervorgehoben.</p>
-<div id="fig-tab-apa" class="quarto-figure quarto-figure-center anchored" width="50%">
+<div id="fig-tab-apa" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-tab-apa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="img/tab-apa.jpg" class="img-fluid figure-img" style="width:50.0%">
 </div>
-<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-tab-apa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tab-apa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;5.8: Beispiel für eine APA-Tabelle
 </figcaption></figure>
 </div>
@@ -814,30 +842,30 @@ Häufiger Fehler
 <p>Nach APA7 steht die Nummer der Abbildung über der Abbildung, z.B. “Abbildung 1”; es folgt kein Punkt. In der nächsten Zeile steht der Titel der Abbildung, wiederum ohne Punkt am Ende. Wichtig ist, dass die Abbildung für sich selbst genommen verständlich ist. Farben können verwendet werden, soweit nützlich, aber sollten idealerweise auch im Schwarz-Weiß-Druck erkennbar sein. Hilfreich ist es zudem, wenn die Ungewissheit in den Kennzahlen durch Fehlerbalken verdeutlicht ist. <a href="#fig-apa" class="quarto-xref">Abbildung&nbsp;<span>5.9</span></a> verdeutlicht diese Aspekte der Formatierung einer Abbildung (in englischer Sprache in diesem Fall).</p>
 <div id="fig-apa" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-apa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-apa" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-apa-format" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-apa" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-apa-format" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-subfloat-fig figure"><div aria-describedby="fig-apa-format-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="img/fig-apa.jpeg" class="img-fluid figure-img" data-ref-parent="fig-apa">
 </div>
-<figcaption class="figure quarto-subfloat-caption quarto-subfloat-fig" id="fig-apa-format-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-apa-format-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (a) Bestandteile des APA-Format für Abbildungen
 </figcaption></figure>
 </div>
 </div>
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-apa" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-linegraph-apa" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-apa" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-linegraph-apa" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-subfloat-fig figure"><div aria-describedby="fig-linegraph-apa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="img/fig-linegraph-apa.jpg" class="img-fluid figure-img" style="width:50.0%" data-ref-parent="fig-apa">
 </div>
-<figcaption class="figure quarto-subfloat-caption quarto-subfloat-fig" id="fig-linegraph-apa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-linegraph-apa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (b) Ein Beispiel für eine Abbildung, formatiert nach APA7
 </figcaption></figure>
 </div>
 </div>
 </div>
 </div>
-<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-apa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-apa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;5.9: Beispiel-Datendiagramme formatiert nach APA
 </figcaption></figure>
 </div>
@@ -845,37 +873,37 @@ Abbildung&nbsp;5.9: Beispiel-Datendiagramme formatiert nach APA
 <p>Eine nützliche Hilfe zur Erstellung von hochwertigen Diagrammen sind die R-Pakete <a href="https://rpkgs.datanovia.com/ggpubr/index.html">ggpubr</a> und <a href="https://indrajeetpatil.github.io/ggstatsplot/">ggstatsplot</a>, s. <a href="#fig-ggpubr-ggstatsplot" class="quarto-xref">Abbildung&nbsp;<span>5.10</span></a>.</p>
 <div id="fig-ggpubr-ggstatsplot" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-ggpubr-ggstatsplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="quarto-layout-row quarto-layout-valign-top">
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-ggpubr-ggstatsplot" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-ggpubr1" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-ggpubr-ggstatsplot" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-ggpubr1" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-subfloat-fig figure"><div aria-describedby="fig-ggpubr1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="img/ggpubr1.png" class="img-fluid figure-img" data-ref-parent="fig-ggpubr-ggstatsplot">
 </div>
-<figcaption class="figure quarto-subfloat-caption quarto-subfloat-fig" id="fig-ggpubr1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-ggpubr1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (a) Eine Abbildung erstellt von ggpubr
 </figcaption></figure>
 </div>
 </div>
-<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-ggpubr-ggstatsplot" style="flex-basis: 50.0%;justify-content: center;">
-<div id="fig-ggstatsplot1" class="quarto-figure quarto-figure-center anchored">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-ggpubr-ggstatsplot" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div id="fig-ggstatsplot1" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-subfloat-fig figure"><div aria-describedby="fig-ggstatsplot1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="img/ggstatsplot1.png" class="img-fluid figure-img" data-ref-parent="fig-ggpubr-ggstatsplot">
 </div>
-<figcaption class="figure quarto-subfloat-caption quarto-subfloat-fig" id="fig-ggstatsplot1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-ggstatsplot1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (b) Eine Abbildung erstellt von ggstatsplot
 </figcaption></figure>
 </div>
 </div>
 </div>
 </div>
-<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-ggpubr-ggstatsplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ggpubr-ggstatsplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;5.10: R-Pakete zur Erstellung hochwertiger Diagramme
 </figcaption></figure>
 </div>
 <p>Die Nummer der Abbildung fügen Sie von “Hand” hinzu (z.B. in Word). Zu beachten ist, dass die Statistiken in <a href="#fig-ggstatsplot1" class="quarto-xref">Abbildung&nbsp;<span>5.10 (b)</span></a> laut APA als Anmerkung unter der Abbildung gestellt werden müssen, vgl. <a href="#fig-apa-format" class="quarto-xref">Abbildung&nbsp;<span>5.9 (a)</span></a>. Weitere Hinweise finden Sie <a href="https://apastyle.apa.org/style-grammar-guidelines/tables-figures/figures">hier</a>.</p>
 </section><section id="statistik-im-text" class="level4" data-number="5.3.7.3"><h4 data-number="5.3.7.3" class="anchored" data-anchor-id="statistik-im-text">
 <span class="header-section-number">5.3.7.3</span> Statistik im Text</h4>
-<p>Dazu später mehr, s. Kapitel zum Berichten von Ergebnissen, <a href="100-Statistiken-berichten.html" class="quarto-xref"><span>Kapitel&nbsp;14</span></a>.</p>
+<p>Dazu später mehr, s. Kapitel zum Berichten von Ergebnissen, <a href="100-Statistiken-berichten.html" class="quarto-xref"><span>Kapitel 14</span></a>.</p>
 </section></section><section id="diskussion" class="level3" data-number="5.3.8"><h3 data-number="5.3.8" class="anchored" data-anchor-id="diskussion">
 <span class="header-section-number">5.3.8</span> Diskussion</h3>
 <p>Die Diskussion beinhaltet den Kommentar des Autors (neutral formuliert) zu seinen Ergebnissen im Bezug zum in der Einleitung beschriebenen aktuellen theoretischem und empirischem Wissensstand. Der besondere wissenschaftliche Beitrag der durchgeführten Untersuchung wird dargestellt. Zu Beginn der Diskussion sollten eine kritische Zusammenfassung der hypothesenbezogenen Hauptergebnisse gegeben werde und diese Befunde mit anderen Untersuchungsergebnissen verglichen werden. Ein psychologisch (theoretisch) sinnvoller Erklärungsansatz für die Hauptbefunde sollte dargestellt werden und die Ergebnisse auch im Hinblick auf andere Erklärungsversuche diskutiert werden. Ggf. müssen (mögliche) Gründe angegeben werden, warum die Ergebnisse die Hypothesen nicht bestätigen bzw. nur tendenziell. Wichtig ist die Diskussion der Schwächen (Limitationen) der vorliegenden Studie; widmen Sie diesem Punkt einen eigenen Absatz. Als Abschluss der Diskussion sollten Verbesserungsvorschläge für eine nochmalige Durchführung der Untersuchung beschrieben werden sowie Vorschläge für weitere Untersuchungsansätze gegeben werden. Erörtern Sie Ihre Ergebnisse auch vor den Hintergrund anderer Studien/der Literatur, d.&nbsp;h. Die Ergebnisse sollten in die Literatur rückbezogen werden.</p>
@@ -904,7 +932,7 @@ Hinweis
 <span class="header-section-number">5.4.1</span> Wissenschaftlicher Schreibstil</h3>
 <p>Zwei Hauptarten von wissenschaftlichen Aussagen lassen sich unterscheiden: <em>Behauptungen</em> und <em>Bewertungen.</em></p>
 <div id="exm-behauptung" class="theorem example">
-<p><span class="theorem-title"><strong>Beispiel 5.3 (Behauptungen) </strong></span>&nbsp;</p>
+<p><span class="theorem-title"><strong>Beispiel 5.3 (Behauptungen)</strong></span> &nbsp;</p>
 <ul>
 <li>Deutschland hat ca. 80 Millionen Einwohner.</li>
 <li>Die Hauptstadt der Schweiz ist Bern.</li>
@@ -913,7 +941,7 @@ Hinweis
 </div>
 <p>Eine <em>Behauptung</em> ist ein Satz, der eine (vermeintliche) Tatsache angibt.</p>
 <div id="exm-bewertung" class="theorem example">
-<p><span class="theorem-title"><strong>Beispiel 5.4 (Bewertung) </strong></span>&nbsp;</p>
+<p><span class="theorem-title"><strong>Beispiel 5.4 (Bewertung)</strong></span> &nbsp;</p>
 <ul>
 <li>Deutschland ist übervölkert.</li>
 <li>Die Qualität der Studie von Müller (2023) ist fragwürdig.</li>
@@ -930,7 +958,7 @@ Hinweis
 </ol>
 <p>Ein <em>Beleg</em> liefert Gründe für eine Behauptung.</p>
 <div id="exm-beleg" class="theorem example">
-<p><span class="theorem-title"><strong>Beispiel 5.5 (Beleg) </strong></span>&nbsp;</p>
+<p><span class="theorem-title"><strong>Beispiel 5.5 (Beleg)</strong></span> &nbsp;</p>
 <ul>
 <li>Die Entwicklung der Bevölkerungszahlen von Deutschland sind bei Schmidt (2023) nachzulesen.</li>
 <li>Wie in Tabelle 1 zu sehen ist, sind die von Meier (2022) aufgestellten Qualitätskriterien mehrheitlich nicht erfüllt in der Studie von Müller (2023).</li>
@@ -957,7 +985,7 @@ Hinweis
 <span class="header-section-number">5.4.2</span> Titel</h3>
 <p>Der Titel Ihrer Arbeit präzise sein, d.h. konkret genug und passend gewählt sein muss, dass die damit von Ihnen angekündigte Fragestellung auch beantwortet werden kann Andererseits sollte ein Titel auch interessant sein, also Lust machen, die Arbeit zu lesen. Häufig ist es sinnvoll, Ihrer Forschungsfrage (zugespitzt) zu formulieren und Hinweise zur Art der empirischen Studie zu geben (z.B. querschnittliche Beobachtungsstudie).</p>
 <div id="exm-titel" class="theorem example">
-<p><span class="theorem-title"><strong>Beispiel 5.6 (Beispiele für gute Titel von Forschungsarbeiten) </strong></span>&nbsp;</p>
+<p><span class="theorem-title"><strong>Beispiel 5.6 (Beispiele für gute Titel von Forschungsarbeiten)</strong></span> &nbsp;</p>
 <ol type="1">
 <li>Der Einfluss von Autonomie am Arbeitsplatz auf Arbeitsmotivation – eine Moderatoranalyse unter besonderer Berücksichtigung des Bedürfnisses nach Autonomie</li>
 <li>Der Zusammenhang von flexibler Arbeit, selbstbestimmte Arbeitsmotivation und Wohlbefinden – eine quantitative empirische Untersuchung</li>
@@ -1088,37 +1116,37 @@ Hinweis
 <span class="header-section-number">5.5.1.2</span> Seitenränder und Satzspiegel</h4>
 <p>Seitenränder, Satzspiegel und andere typografische Elemente sind zumeist nur für paginierte Dokumenten relevant, Dokumente also, die auf einem Blatt Papier gedruckt werden soll. Typische paginierte Dokumenttypen sind Word- oder PDF-Dokumente. Elektronische Dokumente sind dagegen in aller Regel nicht paginiert, also nicht auf physikalische (Papier-)Blätter eines festen Formats zugeschnitten. Das typische elektronische Format für Text sind Webseiten (HTML-Dokumente). Will man einen Text nicht primär in Papierform lesen, so bieten sich elektronische Dokumente an, da diese komfortabler auf Bildschirmen zu lesen sind. Z.B. kann man die Schriftgröße auf die Größe des Displays einstellen. Das ist praktisch, da Displaygrößen enorm schwanken. Mit paginierten Dokumenten kann man das Layout hingegen nicht auf ein Display anpassen.<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a></p>
 <div id="def-typografie" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5.1 (Typografie) </strong></span>Die Typografie ist die Lehre der ästhetischen und funktionalen Gestaltung der Gestaltung von Schriftwerken z.B. des Satzspiegels, der Buchstaben, Satzzeichen und Schriften <span class="citation" data-cites="gulbins_mut_2000">(<a href="130-references.html#ref-gulbins_mut_2000" role="doc-biblioref">Gulbins und Kahrmann 2000</a>)</span>.<span class="math inline">\(\square\)</span></p>
+<p><span class="theorem-title"><strong>Definition 5.1 (Typografie)</strong></span> Die Typografie ist die Lehre der ästhetischen und funktionalen Gestaltung der Gestaltung von Schriftwerken z.B. des Satzspiegels, der Buchstaben, Satzzeichen und Schriften <span class="citation" data-cites="gulbins_mut_2000">(<a href="130-references.html#ref-gulbins_mut_2000" role="doc-biblioref">Gulbins und Kahrmann 2000</a>)</span>.<span class="math inline">\(\square\)</span></p>
 </div>
 <div id="def-satzspiegel" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 5.2 (Satzspiegel) </strong></span>Der Satzspiegel defineirt die Nutzfläche einer Seite (im Gegensatz zum Gesamtplatz und leerem Platz).<span class="math inline">\(\square\)</span></p>
+<p><span class="theorem-title"><strong>Definition 5.2 (Satzspiegel)</strong></span> Der Satzspiegel defineirt die Nutzfläche einer Seite (im Gegensatz zum Gesamtplatz und leerem Platz).<span class="math inline">\(\square\)</span></p>
 </div>
 <p>Ein Satzspiegel wird dann als ästhetisch empfunden, wenn sich (selbst-)ähnliche Proportionen wiederfinden. Die Länge einer Zeile sollte sich nach der optimalen Lesbarkeit ausrichten, für die ca. 65 Zeichen angenommen werden. Papierseiten nach Din-Normen haben ein Seitenverhältnis von ca. 1:1.4. Ein Satzspiegel im gleichen Verhältnis ist ästhetisch. Ein weiterer klassischer Satzspiegel ist nach dem Goldenen Schnitt aufgebaut.</p>
 <p><a href="#fig-seitenrand" class="quarto-xref">Abbildung&nbsp;<span>5.11</span></a> stellt die Namen der “Seitenränder”, der sog. <em>Stege</em> vor.</p>
-<div id="fig-seitenrand" class="quarto-figure quarto-figure-center anchored">
+<div id="fig-seitenrand" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-seitenrand-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="img/seitenrand.png" class="img-fluid figure-img">
 </div>
-<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-seitenrand-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-seitenrand-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;5.11: Die Bezeichnung der Stege eines Druckseite, die u.a. die Seitenränder definieren
 </figcaption></figure>
 </div>
 <p>Eine mögliche (und optisch ansprechende) Aufteilung der Seite ist die <em>Rasterteilung</em>, s. <a href="#fig-raster" class="quarto-xref">Abbildung&nbsp;<span>5.12</span></a>. Üblich sind 9 x 9 Felder, die sog. <em>Neunerteilung</em>. Diese Aufteilung liefert fast die gleichen Maßstäbe wie eine Aufteilung nach dem Goldenen Schnitt. Eine A4-Seite hat folgende Maße: 210mm x 297mm (21cm x 29,7cm). Bei der Neuneraufteilung hat ein Feld also folgend Größe: 23mm x 33mm (2,33cm x 3,3cm).</p>
-<div id="fig-raster" class="quarto-figure quarto-figure-center anchored">
+<div id="fig-raster" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-raster-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="img/neunerteilung.png" class="img-fluid figure-img">
 </div>
-<figcaption class="figure quarto-float-caption quarto-float-fig" id="fig-raster-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-raster-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;5.12: Die Neunerteilung: Eine typografisch ansprechende Gestaltung des Satzspiegels
 </figcaption></figure>
 </div>
-<div class="cell" data-hash="030-Schreiben_cache/html/tbl-neunerteilung_650691d843b93456a1114d7988a4babf">
-<div id="tbl-neunerteilung" class="cell anchored" data-hash="030-Schreiben_cache/html/tbl-neunerteilung_650691d843b93456a1114d7988a4babf">
-<figure class="quarto-float quarto-float-tbl figure"><figcaption class="table quarto-float-caption quarto-float-tbl" id="tbl-neunerteilung-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell">
+<div id="tbl-neunerteilung" class="cell quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-neunerteilung-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Tabelle&nbsp;5.2: Satzspiegel mit der Neunerteilung bei einer Doppelseite im A4-Format
 </figcaption><div aria-describedby="tbl-neunerteilung-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<table class="cell table table-sm table-striped small">
+<table class="do-not-create-environment cell table table-sm table-striped small">
 <thead><tr class="header">
 <th style="text-align: left;">Formataspekt</th>
 <th style="text-align: left;">Maße in mm</th>
@@ -1207,8 +1235,11 @@ Tabelle&nbsp;5.2: Satzspiegel mit der Neunerteilung bei einer Doppelseite im A4-
 <li>Pixelige Bilder vermeiden</li>
 <li>Sonstiges ???<span class="math inline">\(\square\)</span>
 </li>
-</ul></section></section><section id="literatur" class="level2" data-number="5.6"><h2 data-number="5.6" class="anchored" data-anchor-id="literatur">
-<span class="header-section-number">5.6</span> Literatur</h2>
+</ul></section></section><section id="it-tools" class="level2" data-number="5.6"><h2 data-number="5.6" class="anchored" data-anchor-id="it-tools">
+<span class="header-section-number">5.6</span> IT-Tools</h2>
+<p>Neben MS Word oder Libe Office kann Google Docs eine sinnvolle Alternative sein, um ihre Arbeit zu verschriftlichen.</p>
+</section><section id="literatur" class="level2" data-number="5.7"><h2 data-number="5.7" class="anchored" data-anchor-id="literatur">
+<span class="header-section-number">5.7</span> Literatur</h2>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
@@ -1237,7 +1268,7 @@ Peters, Jan H, und Tobias Dörfler. 2019. <em>Schreiben und Gestalten von Abschl
 Theisen, Manuel René. 2021. <em>Wissenschaftliches Arbeiten: erfolgreich bei Bachelor- und Masterarbeit</em>. 18., neu bearbeitete und gekürzte Auflage. <span>München</span>: <span>Verlag Franz Vahlen</span>.
 </div>
 </div>
-</section><aside id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><hr>
+</section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><hr>
 <ol>
 <li id="fn1"><p>Ablaufdiagramme, DAGs, Schemata oder andere Nicht-Daten-Diagramme kann man z.B. mit einem Zeichenprogramm erstellen.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>Man kann Ihre Analyse nachrechnen und kommt zum gleichen Ergebnis<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
@@ -1247,7 +1278,7 @@ Theisen, Manuel René. 2021. <em>Wissenschaftliches Arbeiten: erfolgreich bei Ba
 <li id="fn6"><p>Damit sind nicht Sie gemeint, als Autor:in einer studentischen Arbeit, sondern der Mann, der den Text geschrieben hat, den Sie gerade zitieren<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn7"><p>V7<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn8"><p>Es gibt ein paar Versuche, wie Adobes “Liquid Mode”, paginierte Formate auf nicht-paginierte umzuwandeln.<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol></aside></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</ol></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -1519,38 +1550,28 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
     stripColumnClz(note)
-    const typesetMath = (el) => {
-      if (window.MathJax) {
-        // MathJax Typeset
-        window.MathJax.typeset([el]);
-      } else if (window.katex) {
-        // KaTeX Render
-        var mathElements = el.getElementsByClassName("math");
-        var macros = [];
-        for (var i = 0; i < mathElements.length; i++) {
-          var texText = mathElements[i].firstChild;
-          if (mathElements[i].tagName == "SPAN") {
-            window.katex.render(texText.data, mathElements[i], {
-              displayMode: mathElements[i].classList.contains('display'),
-              throwOnError: false,
-              macros: macros,
-              fleqn: false
-            });
-          }
-        }
-      }
-    }
     if (id === null || id.startsWith('sec-')) {
       // Special case sections, only their first couple elements
       const container = document.createElement("div");
       if (note.children && note.children.length > 2) {
-        for (let i = 0; i < 2; i++) {
-          container.appendChild(note.children[i].cloneNode(true));
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
         }
-        typesetMath(container);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
         return container.innerHTML
       } else {
-        typesetMath(note);
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
         return note.innerHTML;
       }
     } else {
@@ -1559,8 +1580,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (anchorLink) {
         anchorLink.remove();
       }
-      typesetMath(note);
-      return note.innerHTML;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -1795,4 +1823,4 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-</body></html>
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sebastiansauer/fopra/blob/main/030-Schreiben.qmd" class="toc-action"><i class="bi bi-github"></i>Quellcode anzeigen</a></li><li><a href="https://github.com/sebastiansauer/fopra/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div></div></footer></body></html>
