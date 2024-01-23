@@ -16,7 +16,7 @@ book:
     - part: "Organisatorisches"
       chapters:
         - index.qmd
-        - 110-pruefung.qmd
+
     - part: "Theorie"
       chapters:
         - 010-rahmen.qmd

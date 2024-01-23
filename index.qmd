@@ -90,6 +90,7 @@ Das Diagramm hilft Ihnen zu verorten, wo welches Thema im Gesamtzusammenhang ste
 ```{mermaid}
 %%| label: fig-ueberblick
 %%| fig-cap: "Ein 'Fahrplan' als 'Big Picture' dieses Buches"
+
 flowchart LR
   subgraph R[Rahmen]
     direction LR
