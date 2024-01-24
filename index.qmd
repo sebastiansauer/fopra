@@ -83,37 +83,11 @@ sollten Sie Folgendes mitbringen:
 
 ### Überblick
 
-Abb. @fig-ueberblick gibt einen Überblick über den Verlauf und die Inhalte des Buches.
+@fig-ueberblick gibt einen Überblick über den Verlauf und die Inhalte des Buches.
 Das Diagramm hilft Ihnen zu verorten, wo welches Thema im Gesamtzusammenhang steht.
 
 
-```{mermaid}
-%%| label: fig-ueberblick
-%%| fig-cap: "Ein 'Fahrplan' als 'Big Picture' dieses Buches"
-
-flowchart LR
-  subgraph R[Rahmen]
-    direction LR
-    subgraph V[Theorie]
-      direction TB
-      E[Themawahl] --> Um[Schreiben]
-    end
-    subgraph M[Empirie]
-      direction TB
-      M1[Studiendesign] --> Vis[Messinstrumente]
-      Vis --> U[Stichprobe]
-      U --> G[Auswertung]
-    end
-    subgraph N[Fertigstellen]
-      direction TB
-      D[Diskutieren]
-    end
-  V --> M
-  M --> N
-  end
-```
-
-
+![Ein ‘Fahrplan’ als ‘Big Picture’ dieses Buches](img/fig-ueberblick.png){#fig-ueberblick}
 
 
 
@@ -209,10 +183,20 @@ Das führt zu Stress gegen Ende der Projektlaufzeit - und mitunter zu (erheblich
 :::
 
 
+
+### Kollaborationssoftware 
+
+Hinweise zu Software zum gemeinsamen Bearbeiten von Dokumenten und Lernstrategien finden Sie [hier](https://hinweisbuch.netlify.app/hinweise-software#kolloboration).
+
+
+
 ### Weitere Lernhilfen
 
 
-[Hier](https://hinweisbuch.netlify.app/hinweise-lernhilfen-frame) finden Sie einen Überblick über weitere Lernhilfen.
+[Hier](https://hinweisbuch.netlify.app/hinweise-lernhilfen-frame) finden Sie einen Überblick über weitere Lernhilfen wie Videos oder Vorlagen.
+
+
+
 
 
 
