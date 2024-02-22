@@ -679,11 +679,11 @@ Behauptungen sollten nie eines Beleges entbehren.
 
 #### Präzision: Do not Schwafel
 
-Popper ist der Spruch zugeschrieben "Man sage ungewöhnliche Dinge mit gewöhnlichen Worten". Das Gegenteil davon ist *Schwafeln* (Geschwurbel). Das Gegenteil von Schwafeln ist Präzision (im Formulieren).
+Schopenhauer ist der Spruch zugeschrieben "Man gebrauche gewöhnliche Worte und sage ungewöhnliche Dinge". Das Gegenteil davon ist *Schwafeln* (Geschwurbel). Das Gegenteil von Schwafeln ist Präzision (im Formulieren).
 
 :::{#def-schwafel}
 ### Schwafel (Geschwurbel)
-Schafeln ist eine wortreiche und/oder wenig präzise Darstellung mit wenig Information. $\square$
+Schwafeln ist eine wortreiche und/oder wenig präzise Darstellung mit wenig Information. $\square$
 :::
 
 :::{#exm-schwafel}
@@ -721,6 +721,11 @@ Schafeln ist eine wortreiche und/oder wenig präzise Darstellung mit wenig Infor
 8. Beispiel:
   - Schwafel: "Im Weiteren werden diverse potenzielle Schwächen dieser Studie aufgezeigt, die zum einen ..."
   - Besser: Schwächen der Studie aufzählen
+
+  
+9. Beispiel
+  - Schwafel: "Die Diskussion beleuchtet Implikationen für die Praxis, Limitationen und Empfehlungen für die weitere Erforschung dieses Phänomens im digitalen Umfeld."
+  - Besser: Limitationen nennen.
   
 :::
 
