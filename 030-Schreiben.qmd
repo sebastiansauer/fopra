@@ -720,7 +720,9 @@ Schafeln ist eine wortreiche und/oder wenig präzise Darstellung mit wenig Infor
   
 8. Beispiel:
   - Schwafel: "Im Weiteren werden diverse potenzielle Schwächen dieser Studie aufgezeigt, die zum einen ..."
-  - Besser: Schwächen der Studie aufzählens
+  - Besser: Schwächen der Studie aufzählen
+  
+:::
 
 
 ### Titel

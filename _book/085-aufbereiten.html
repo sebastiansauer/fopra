@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.544">
+<meta name="generator" content="quarto-1.4.549">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Forschungsprojekt - 11&nbsp; Auswerten: Grundlegende Datenanalyse</title>
 <style>
@@ -426,7 +426,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span class="header-section-number">11.2.4</span> Spaltenweises Zusammenführen</h3>
 <ol start="2" type="1">
 <li>
-<em>In jeder Gruppe</em> wurde ein anderer Fragebogen ausgefüllt (z.B. weil Sie unterschiedliche experimentelle Gruppen untersucht haben). Sie haben also zwei Datensätze mit unterschiedlichen Personen (nämlich in Datensatz A die Personen der Gruppe A und in Datensatz B die Personen der Gruppe B). Aber in jedem Datensatz finden sich die gleichen Variablen.</li>
+<em>In jeder Gruppe</em> wurde ein anderer Fragebogen ausgefüllt (z. B. weil Sie unterschiedliche experimentelle Gruppen untersucht haben). Sie haben also zwei Datensätze mit unterschiedlichen Personen (nämlich in Datensatz A die Personen der Gruppe A und in Datensatz B die Personen der Gruppe B). Aber in jedem Datensatz finden sich die gleichen Variablen.</li>
 </ol>
 <p>Sagen wir, wir haben zwei Tabellen, die wir “hintereinander kleben” möchten, also spaltenweise zusammenführen möchten:</p>
 <div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-4_9f2198932afbedaecea703b29a900ee9">
@@ -437,7 +437,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span>  <span class="va">tab1</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind_cols.html">bind_cols</a></span><span class="op">(</span><span class="va">tab2</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><a href="https://dplyr.tidyverse.org/reference/bind.html">Hier</a> findet sich auch ein nützliches Beispiel.</p>
+<p><a href="https://dplyr.tidyverse.org/reference/bind.%E2%80%89h.ml">Hier</a> findet sich auch ein nützliches Beispiel.</p>
 <p><em>Achtung</em> Diese Art des Zusammenfügens prüft <em>nicht</em>, ob die Sortierung der Tabellen identisch ist: Ob also die Zeile für “Schorsch” aus Tabelle 1 auch mit Schorschs Zeile aus Tabelle 2 zusammengefügt werden (und nicht etwas mit denen von Alois). Sie müssen also selber dafür sorgen, dass die Sortierung richtig ist. Alternativ könnten Sie mit einem <code>join</code> arbeiten, der die korrekte Sortierung für Sie übernimmt.</p>
 </section></section><section id="text-in-zahlen-umwandeln" class="level2" data-number="11.3"><h2 data-number="11.3" class="anchored" data-anchor-id="text-in-zahlen-umwandeln">
 <span class="header-section-number">11.3</span> Text in Zahlen umwandeln</h2>
@@ -629,7 +629,7 @@ stimme überhaupt nicht zu --&gt; 1</code></pre>
 <p>Eine alternative Funktion des Umkodierens ist <code>recode_value()</code> aus <code>easystats</code> nutzen.</p>
 </section><section id="zeilen-fälle-löschen" class="level2" data-number="11.6"><h2 data-number="11.6" class="anchored" data-anchor-id="zeilen-fälle-löschen">
 <span class="header-section-number">11.6</span> Zeilen (Fälle) löschen</h2>
-<p>In jeder braven Tabelle steht pro Zeile (genau) ein Fall; mit “Fall”, auch als “Beobachtung” bezeichnet, ist ein Untersuchungsobjekt gemeint. Häufig sind das in der Psychologie Personen, es könnten aber auch z.B. Versuchsdurchgänge, Teams oder Firmen sein. Sagen wir, Sie möchten einen bestimmten Fall löschen. Der Einfachheit halber nehmen wir den ersten Fall der Tabelle <code>extra</code>. Hier hat jeder Fall schon eine “ID”, eine unique, also eineindeutige Zuordnung, das ist die Spalte <code>code</code>. Auch die Spalte <code>timestamp</code> taugt vermutlich für eine Zuordnung.</p>
+<p>In jeder braven Tabelle steht pro Zeile (genau) ein Fall; mit “Fall”, auch als “Beobachtung” bezeichnet, ist ein Untersuchungsobjekt gemeint. Häufig sind das in der Psychologie Personen, es könnten aber auch z. B. Versuchsdurchgänge, Teams oder Firmen sein. Sagen wir, Sie möchten einen bestimmten Fall löschen. Der Einfachheit halber nehmen wir den ersten Fall der Tabelle <code>extra</code>. Hier hat jeder Fall schon eine “ID”, eine unique, also eineindeutige Zuordnung, das ist die Spalte <code>code</code>. Auch die Spalte <code>timestamp</code> taugt vermutlich für eine Zuordnung.</p>
 <p>In R könnten Sie die erste Zeile also anhand dieser ID-Spalte ansprechen und entsprechend filtern:</p>
 <div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-17_f78e5317678f15fc53c9d9e95d98a345">
 <div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra_kurz</span> <span class="op">&lt;-</span></span>
@@ -776,7 +776,7 @@ stimme überhaupt nicht zu --&gt; 1</code></pre>
 <div class="sourceCode" id="cb29"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="http://boxuancui.github.io/DataExplorer/">DataExplorer</a></span><span class="op">)</span></span>
 <span><span class="va">extra2</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">extra_var</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://rdrr.io/pkg/DataExplorer/man/plot_histogram.html">plot_histogram</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="fu"><a href="http://boxuancui.github.io/DataExplorer/reference/plot_histogram.html">plot_histogram</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="085-aufbereiten_files/figure-html/unnamed-chunk-26-1.png" class="img-fluid figure-img" width="672"></p>
@@ -784,7 +784,7 @@ stimme überhaupt nicht zu --&gt; 1</code></pre>
 </div>
 </div>
 </div>
-<p>Auf dieser Basis könnte man Fälle (Versuchspersonen, d.h. Zeilen) entfernen, die keine Varianz oder eine Varianz höher als 1.75 aufweisen.</p>
+<p>Auf dieser Basis könnte man Fälle (Versuchspersonen, d. h. Zeilen) entfernen, die keine Varianz oder eine Varianz höher als 1.75 aufweisen.</p>
 <div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-27_7613a05a47f5b95fa09850ec29ed0af5">
 <div class="sourceCode" id="cb30"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra3</span> <span class="op">&lt;-</span></span>
 <span>  <span class="va">extra2</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
@@ -871,7 +871,7 @@ Tabelle&nbsp;11.1: Extraversion-Score berechen
 <span><span class="co">## [1] 3</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Der Mittelwert von Alois beträgt 3 – das passt genau zu unserer Argumentation von gerade (s. oben), dass 3 eine bessere Schätzung der Ausprägung der latenten Variable von Alois ist. Daher ist der Mittelwert dem Summenscore vorzuziehen.</p>
-<p>Ein anderer Vorteil des Mittelwerts ist, dass er etwas anschaulicher ist als der Summenscore: Ein Mittelwert von 3 (auf einer Skala von 1 bis 4) ist anschaulicher als eine Summe von 9 (bei drei Items). Wir werden daher den Mittelwert vorziehen.</p>
+<p>Ein anderer Vorteil des Mittelwerts ist, dass er etwas anschaulicher ist als der Summenscore: Ein Mittelwert von 3 (auf einer Skala von 1 bis 4) ist anschaulicher als eine Summe von 9 (bei drei Items). Wir werden d. h.r den Mittelwert vorziehen.</p>
 <p>Noch anschaulicher wäre es, die Mittelwerte auf den Bereich von 0 bis 1 zu normalisieren.</p>
 </section><section id="berechnung-mit-r" class="level3" data-number="11.8.3"><h3 data-number="11.8.3" class="anchored" data-anchor-id="berechnung-mit-r">
 <span class="header-section-number">11.8.3</span> Berechnung mit R</h3>
@@ -891,7 +891,7 @@ Tabelle&nbsp;11.1: Extraversion-Score berechen
 <p>Der Parameter <code>n</code> bei <code><a href="https://strengejacke.github.io/sjmisc/reference/row_sums.html">row_means()</a></code> gibt den Anteil der <em>nicht</em> fehlenden Werte (pro Zeile) wieder, damit ein Wert berechnet wird: Bei zu vielen fehlenden Werten (zu wenig Daten) pro Person wird sonst <code>NA</code> zurückgeliefert. Das ist sinnvoll, denn hat eine Person von 10 Items nur 1 Item beantwortet, so kann man wohl nicht zuverlässig sagen, dass Extraversion in seiner Breite zuverlässig geschätzt wird. Die Funktion fügt dem Datensatz eine Spalte hinzu, deren Name mit <code>var</code> angegeben wird.</p>
 </section></section><section id="standardisieren-mit-z-werten" class="level2" data-number="11.9"><h2 data-number="11.9" class="anchored" data-anchor-id="standardisieren-mit-z-werten">
 <span class="header-section-number">11.9</span> Standardisieren mit z-Werten</h2>
-<p>Man kann die Aussagekraft eines Mittelwerts noch erhöhen, in dem man ihn standardisiert, z.B. mit der z-Transformation. Das geht zum Beispiel so:</p>
+<p>Man kann die Aussagekraft eines Mittelwerts noch erhöhen, in dem man ihn standardisiert, z. B. mit der z-Transformation. Das geht zum Beispiel so:</p>
 <div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-31_42d8efd3f61dd639c6b56934354a1b0a">
 <div class="sourceCode" id="cb35"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra_std</span> <span class="op">&lt;-</span> <span class="va">extra</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="fu">standardize</span><span class="op">(</span>select <span class="op">=</span> <span class="va">extra_mean</span>, append <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -926,7 +926,7 @@ Tabelle&nbsp;11.1: Extraversion-Score berechen
 </div>
 <section id="deskriptive-ergebnisse-darstellen" class="level3" data-number="11.10.1"><h3 data-number="11.10.1" class="anchored" data-anchor-id="deskriptive-ergebnisse-darstellen">
 <span class="header-section-number">11.10.1</span> Deskriptive Ergebnisse darstellen</h3>
-<p>Sie können deskriptive Ergebnisse (Ihrer relevanten Variablen) z.B. so darstellen.</p>
+<p>Sie können deskriptive Ergebnisse (Ihrer relevanten Variablen) z. B. so darstellen.</p>
 <div class="cell" data-hash="085-aufbereiten_cache/html/unnamed-chunk-34_c6a31662ad77d30ec0425fca1ac64a6f">
 <div class="sourceCode" id="cb38"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/all_of.html">any_of</a></span><span class="op">(</span><span class="va">extra_corr_names</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
@@ -1691,25 +1691,64 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         }
       };
     }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
+      const annoteTargets = window.document.querySelectorAll('.code-annotation-anchor');
+      for (let i=0; i<annoteTargets.length; i++) {
+        const annoteTarget = annoteTargets[i];
+        const targetCell = annoteTarget.getAttribute("data-target-cell");
+        const targetAnnotation = annoteTarget.getAttribute("data-target-annotation");
+        const contentFn = () => {
+          const content = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          if (content) {
+            const tipContent = content.cloneNode(true);
+            tipContent.classList.add("code-annotation-tip-content");
+            return tipContent.outerHTML;
           }
-        });
+        }
+        const config = {
+          allowHTML: true,
+          content: contentFn,
+          onShow: (instance) => {
+            selectCodeLines(instance.reference);
+            instance.reference.classList.add('code-annotation-active');
+            window.tippy.hideAll();
+          },
+          onHide: (instance) => {
+            unselectCodeLines();
+            instance.reference.classList.remove('code-annotation-active');
+          },
+          maxWidth: 300,
+          delay: [50, 0],
+          duration: [200, 0],
+          offset: [5, 10],
+          arrow: true,
+          appendTo: function(el) {
+            return el.parentElement.parentElement.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'quarto',
+          placement: 'right',
+          popperOptions: {
+            modifiers: [
+            {
+              name: 'flip',
+              options: {
+                flipVariations: false, // true by default
+                allowedAutoPlacements: ['right'],
+                fallbackPlacements: ['right', 'top', 'top-start', 'top-end', 'bottom', 'bottom-start', 'bottom-end', 'left'],
+              },
+            },
+            {
+              name: 'preventOverflow',
+              options: {
+                mainAxis: false,
+                altAxis: false
+              }
+            }
+            ]        
+          }      
+        };
+        window.tippy(annoteTarget, config); 
       }
   const findCites = (el) => {
     const parentEl = el.parentElement;

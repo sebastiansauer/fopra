@@ -18,6 +18,7 @@ book:
     - name: Sebastian Sauer
       orcid: 0000-0003-1515-8348
   date: now
+  doi: 10.5281/zenodo.6602668
   repo-url: https://github.com/sebastiansauer/fopra
   repo-actions: [source, issue]
 
