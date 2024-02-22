@@ -616,6 +616,8 @@ Auch wenn Sie im Anhang "nur" auf Dateien verweisen, sollte im Anhang aufgeführ
 
 ### Wissenschaftlicher Schreibstil
 
+#### Behauptungen vs. Bewertungen
+
 Zwei Hauptarten von wissenschaftlichen Aussagen lassen sich unterscheiden: *Behauptungen* und *Bewertungen.*
 
 :::{#exm-behauptung}
@@ -673,6 +675,52 @@ Alternativ liefert man ein Argument, das die eigene Behauptung stützt.
 Wissenschaftlicher Schreibstil ist essenziell für einen wissenschaftlichen Bericht: wohl belegte Behauptungen, präzise Sprache und gut überlegte Bewertungen.
 Behauptungen sollten nie eines Beleges entbehren.
 :::
+
+
+#### Präzision: Do not Schwafel
+
+Popper ist der Spruch zugeschrieben "Man sage ungewöhnliche Dinge mit gewöhnlichen Worten". Das Gegenteil davon ist *Schwafeln* (Geschwurbel). Das Gegenteil von Schwafeln ist Präzision (im Formulieren).
+
+:::{#def-schwafel}
+### Schwafel (Geschwurbel)
+Schafeln ist eine wortreiche und/oder wenig präzise Darstellung mit wenig Information. $\square$
+:::
+
+:::{#exm-schwafel}
+### Beispiele für Schwafel aus studentischer Feder^[Das heißt nicht, das Profs nicht auch Schwafeln würden -- vermutlich sogar mehr!]
+
+
+1. Beispiel
+  - Schwafel: "Beispielsweise ist XYZ als Phänomen ein Konstrukt, das noch nicht lange untersucht wird und dementsprechend noch keine große Menge an tiefgründiger Literatur vorzuweisen hat."
+  - Besser: "Bislang liegen wenig Erkenntnisse zu XYZ vor."
+  
+2. Beispiel
+  - Schwafel: "Die Herausforderung besteht ebenfalls darin, einen fundierten Überblick über das Thema zu bieten, der Aspekte aus Soziologie, Rechtswissenschaft und Psychologie vereint, ohne jedoch in die Falle der Generalisierung zu geraten."
+  - Besser: "Ein Überblick zu XYZ muss Befunde aux X, Y und Z vereinen."
+  
+3. Beispiel
+  - Schwafel: "Zu Beginn ist es wichtig festzuhalten, dass XYZ äußerst komplex ist."
+  - Besser: Satz streichen.
+  
+4. Beispiel
+  - Schwafel: "Um XYZ zu beschreiben und nachvollziehen zu können, wie sie sich entwickelten, bietet es sich an, einen Blick auf die metaphorischen Wurzeln zu werfen und sich zunächst mit folgender Frage zu beschäftigen: ...".
+  - Besser: Satz streichen.
+  
+5. Beispiel
+  - Schwafel: "XYZ folgt einem gewissen Schema."
+  - Besser: Satz streichen.
+  
+6. Beispiel
+  - Schwafel: "Es ist wichtig zu erwähnen, dass ..."
+  - Besser: Satzteil streichen.
+  
+7. Beispiel:
+  - Schwafel: "Die präzise Definition des Begriffs XYZ und die Abgrenzung zu A, B, und C ist zudem von entscheidender Bedeutung, da sie die Grundlage für eine differenzierte Analyse darstellt und dabei die Unterscheidungsmerkmale im Diskurs hervorhebt."
+  - Besser: Satz streichen.
+  
+8. Beispiel:
+  - Schwafel: "Im Weiteren werden diverse potenzielle Schwächen dieser Studie aufgezeigt, die zum einen ..."
+  - Besser: Schwächen der Studie aufzählens
 
 
 ### Titel

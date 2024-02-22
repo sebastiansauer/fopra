@@ -285,7 +285,7 @@ Der Quelltext dieses Buchs ist [hier](https://fopro.netlify.app/) zugänglich.
 
 
 
-## Reproduzierbarkeit
+### Reproduzierbarkeit
 
 Hier sind einige technische Details zur Reproduzierbarkeit des Buchs. 
 

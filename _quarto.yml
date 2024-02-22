@@ -2,12 +2,21 @@ project:
   type: book
 
 
+filters:
+  - search-replace
+search-replace:
+  z.B.  : "z.&thinsp;B."
+  d.h.  : "d.&thinsp;h."
+  +br    : <br>\newline
+
 lang: de
 
 
 book:
   title: "Forschungsprojekt"
-  author: "Sebastian Sauer"
+  author:
+    - name: Sebastian Sauer
+      orcid: 0000-0003-1515-8348
   date: now
   repo-url: https://github.com/sebastiansauer/fopra
   repo-actions: [source, issue]
@@ -53,11 +62,13 @@ bibliography: library-ses.bib
 editor: source
 keep-md: false
 prefer-html: true
+code-annotations: hover
 
 execute:
   freeze: auto
   warning: false
   cache: true
+
 
 knitr:
   opts_knit:
