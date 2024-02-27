@@ -32,6 +32,9 @@ book:
   # google-analytics:
 
 
+
+
+
   chapters:
     - part: "Organisatorisches"
       chapters:
@@ -59,16 +62,16 @@ book:
         - 130-references.qmd
       # - test.qmd
 
-website:
-  favicon: img/Albert_Einstein_head.jpg
-  open-graph: true
-  image: img/Albert_Einstein_head.jpg
-  google-analytics: G-1K43PN7CP3
-  cookie-consent: true
+# website:
+#   favicon: img/Albert_Einstein_head.jpg
+#   open-graph: true
+#   image: img/Albert_Einstein_head.jpg
+#   google-analytics: G-1K43PN7CP3
+#   cookie-consent: true
 
 
 bibliography: library-ses.bib
-
+csl: "/Users/sebastiansaueruser/Google Drive/Literatur/refmgt/apa7.csl"
 
 editor: source
 keep-md: false

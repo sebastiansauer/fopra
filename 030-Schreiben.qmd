@@ -696,7 +696,7 @@ Schwafeln ist eine wortreiche und/oder wenig präzise Darstellung mit wenig Info
   
 2. Beispiel
   - Schwafel: "Die Herausforderung besteht ebenfalls darin, einen fundierten Überblick über das Thema zu bieten, der Aspekte aus Soziologie, Rechtswissenschaft und Psychologie vereint, ohne jedoch in die Falle der Generalisierung zu geraten."
-  - Besser: "Ein Überblick zu XYZ muss Befunde aux X, Y und Z vereinen."
+  - Besser: "Ein Überblick zu XYZ muss Befunde aus X, Y und Z vereinen."
   
 3. Beispiel
   - Schwafel: "Zu Beginn ist es wichtig festzuhalten, dass XYZ äußerst komplex ist."
@@ -752,11 +752,10 @@ Häufig ist es sinnvoll, Ihrer Forschungsfrage (zugespitzt) zu formulieren und H
 - Kurze Sätze 
 - Nicht wertend 
 - Bevorzugt in der dritten Person 
-- "Ich"/"Wir" sparsam verwenden
+- "Ich"/"Wir" sparsam verwenden. Oft kann man in neutrale Formulierungen umschreiben:
   - „Die Überprüfung der Hypothesen erfolgte mittels Regressionsanalyse.“ 
-  - „Die Hypothesenprüfung erfolgt mittels Regressionsanalyse.“ 
-  - „Gemäß der Annahmen…“, 
-  - „Ausgehend von den bisherigen Forschungsbefunden ist zu vermuten…“ 
+  - „Gemäß der Annahmen …“, 
+  - „Ausgehend von den bisherigen Forschungsbefunden ist zu vermuten …“ 
   - „Als theoretisches Fundament dient die Theorie von …“.
 
 - Eher Aktiv statt passiv:
