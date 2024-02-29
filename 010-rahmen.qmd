@@ -539,6 +539,15 @@ Wie fundiert ist obige Aussage zu "alle zwei Minuten" wohl?
 
 
 
+## Arbeitsmittel
+
+Schauen Sie sich mal diesen Überblick über [KI-Arbeitsmittel für Forschung](https://docs.google.com/document/d/1mb4SWtqyi1iEGCn2uTnHkPHqW3UoQr8b0xv5_81a-4Y/edit) an.
+
+:::{.callout-caution}
+Prüfen Sie, welche KI-Hilfsmittel für Ihre Qualifizierungsarbeit erlaubt sind. 
+Informieren Sie sich, was einen Plagiatsfall darstellt und stellen Sie sicher, keinen Plagiatsfall zu begehen.
+
+
 ## Fazit
 
 Vorsicht: Forschung kann süchtig machen, s. [XKCD 1564](https://www.explainxkcd.com/wiki/index.php/1564:_Every_Seven_Seconds).
