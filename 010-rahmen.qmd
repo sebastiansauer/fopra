@@ -1,4 +1,4 @@
-# Rahmen: Hallo Forschung!
+# Rahmen: Hallo, Forschung!
 
 
 ```{r}
@@ -35,7 +35,7 @@ Wenn Sie es mir nicht glauben, werfen Sie einen Blick auf @fig-ueberblick und @f
 
 >   😈 Welcher Rat führt am sichersten zu einer schlechten Note?
 
->    👹 Ok, hier ist der Monster-Rat: "Lass dir Zeit, ach, dass kannst du nächste oder übernächste Woche auch noch erledigen, oder irgendwann halt!"^
+>    👹 Ok, hier ist der Monster-Rat: "Lass dir Zeit, ach, dass kannst du nächste oder übernächste Woche auch noch erledigen, oder irgendwann halt!"
 
 
 
@@ -62,7 +62,7 @@ Wissenschaftsmagazine wie [In-Mind](https://de.in-mind.org/), [Alltagsforschung.
 
 Der Nachteil solcher Magazine ist die Oberflächlichkeit der Darstellung: Viele Fragen zu der vorgestellten Forschung wird ein Bericht aus einem solchen Magazin unbeantwortet lassen.
 Der Nutzen solcher Magazine ist in ihrem Inspirationscharakter zu sehen:
-Man liest von faszinierender Forschung, fängt an, Fragen zu stellen und entwickelt Ideen (und Freude auf) eigene Forschung.
+Man liest von faszinierender Forschung, fängt an, Fragen zu stellen und entwickelt Ideen (und Freude) auf eigene Forschung.
 Grund genug, dass wir uns einmal mit solchen Magazinen beschäftigen.
 
 :::{#exr-inmind}
@@ -101,7 +101,6 @@ Modifizieren Sie ggf. das Studienprofil, so dass es zu Ihrer Studie passt.
 ### Popscience-Bücher
 
 Fachartikel zu Fachbuch verhält sich wie Wissenschaftsmagazin zu Popscience-Buch.
-
 Hier sind einige Beispiele für solche Bücher.
 
 :::{#exm-popscience}
@@ -113,7 +112,7 @@ Hier sind einige Beispiele für solche Bücher.
 ### Welche Popscience-Bücher kennen Sie?
 Stellen Sie ein Popscience-Buch kurz vor! Orientieren Sie sich an folgender Gliederung:
 
-1. Kernaussage des Buches
+1. Kernaussage des Buches ist ...
 2. Gut fand ich an dem Buch, ...
 3. Weniger gut fand ich an dem Buch, ...
 4. Interessant fand ich ...
@@ -159,14 +158,16 @@ Disziplinen, die wissenschaftliche Erkenntnisse zur Lösung praktischer Probleme
 
 Aspekte der Wissenschaft, die die Erzeugung von Wissen in den Vordergrund stellen, nennt man Forschung.
 
-Die Art und Weise der Wissenschaft nennt man die wissenschaftliche Methode. Die wissenschaftliche Methode ist geprägt von dem Versuch, das Universum objektiv und reproduzierbar zu erklären. Damit ist gemeint, dass rationale und fachlich informierte Menschen zu der gleichen Einschätzung eines wissenschaftlichen Arguments kommen sollten. Die Falsifizierung einer Hypothese stellt für viele das Kennzeichen wissenschaftlichen Fortschritts dar. Verifizieren wird hingegen von vielen als kein starkes Mittel wissenschaftlichen Fortschritts gesehen. Daraus kann die Relevanz des Zweifelns (Skeptizismus) für die Wissenschaft abgeleitet werden.
+Die Art und Weise einer Wissenschaft nennt man ihre wissenschaftliche Methode. Die wissenschaftliche Methode ist geprägt von dem Versuch, das Universum objektiv, korrekt, reproduzierbar und so einfach wie möglich zu erklären. Damit ist gemeint, dass rationale und fachlich informierte Menschen zu der gleichen Einschätzung eines wissenschaftlichen Arguments kommen sollten. Die Falsifizierung einer Hypothese stellt für viele das Kennzeichen wissenschaftlichen Fortschritts dar. Verifizieren wird hingegen von vielen als kein starkes Mittel wissenschaftlichen Fortschritts gesehen. Daraus kann die Relevanz des Zweifelns (Skeptizismus) für die Wissenschaft abgeleitet werden.
 
 
 
 Da die Phänomene der Welt (Evolution, Gravitation, Liebe, Inflation, Agression, ...) komplex sind, neigen auch die Erklärungsansätze der Wissenschaft dazu, kompliziert zu sein.
+Allerdings sollten die Erkärungsansätze so einfach wie möglich sein (und so komplex wie nötig).
 
 
-:::{#exm-theorie}
+:::{#def-theorie}
+### Theorie
 Die Wissenschaft organisiert ihr Wissen (auch) in Theorien. Theorien sind ein Bündel von Aussagen. Diese Aussagen sind 
 
 - aufeinander bezogen
@@ -189,7 +190,7 @@ Zu den (gewünschten^["Desiderata"]) Eigenschaften von Wissenschaft gehören:
 - *Objektivität*: Ein Befund hängt nicht davon ab, wer Messungen oder einen Versuch durchführt. Die Sprache ist nüchtern und unvoreingenommen.
 - *Offenheit*: Der Leser muss nicht glauben, sondern kann selber nachprüfen.
 - *Abstraktion*: Eine wissenschaftliche Aussage soll möglichst weite Gültigkeit besitzen, Spezifika von Einzelfällen werden auf zugrundeliegende Konstanzen verallgemeinert
-- *Analyse*: Komplexe Probleme werden soweit als möglich in Einzelaspekte aufgebrochen^[https://www.savagechickens.com/2021/07/big-question.html]
+- *Analyse*: Komplexe Probleme werden soweit als möglich in Einzelaspekte aufgebrochen^[<https://www.savagechickens.com/2021/07/big-question.html>]
 - *Evidenzgründung*: Schlüsse werden auf Basis von Daten (Fakten, Messungen, etc.) gezogen.
 - *Quellen*: Aussagen werden mit Quellenangaben untermauert.
 
@@ -202,7 +203,7 @@ Zitate zu den Eigenschaften von Wissenschaft
 >   Non-reproducible single occurrences are of no significance to science. – Karl Popper
 
 
->   Der Fortgang der wissenschaftlichen Entwicklung ist im Endeffekt eine ständige Flucht vor dem Staunen.^[Vgl. https://www.savagechickens.com/2022/04/so-many-questions.html] – Albert Einstein
+>   Der Fortgang der wissenschaftlichen Entwicklung ist im Endeffekt eine ständige Flucht vor dem Staunen.^[Vgl. <https://www.savagechickens.com/2022/04/so-many-questions.html>] – Albert Einstein
 
 >    Auf die Frage, was der Nutzen von Grundlagenforschung sei (im Gegensatz zur praktischen Relevanz angewandter Forschung), soll Michael Faraday gesagt haben: „Sir, what is the use of a new-born child“?
 
@@ -246,9 +247,7 @@ Ein wissenschaftliches Modell ist eine vereinfachte (aber kohärente) Auffassung
 
 
 Modelle können z. B. grafisch, mathematisch oder statistisch ausgebildet sein.
-
 Modelle erläutern das Zusammenspiel mehrerer Merkmale innerhalb des Modells.
-
 Der Nutzen von Modellen besteht darin, komplexe Sachverhalte verständlich und „greifbar“ oder „anschaulich“ zu machen. Häuﬁg versucht man, wesentliche Größen (wie Einflussfaktoren) in das Modell aufzunehmen und unwesentliche außen vor zu lassen. Die Güte eines Modell kann man an diesem Spagat bemessen.
 
 
@@ -259,19 +258,22 @@ Beispiele für Modelle: Globus, Klimamodelle, Doppelhelix der DNA. $\square$
 Es hat sich herausgestellt, dass viele Phänomene des Universums kompliziert (oder besser: komplex) sind, so dass („richtiges“) Vereinfachen in Form von Modellbildung nützlich ist – tatsächlich der zentrale Weg des wissenschaftlichen Denkens darstellt.
 
 Modelle ermöglichen damit die Beschreibung, Erklärung und Vorhersage von Phänomen (und damit auch die Einflussnahme).
-
 Modelle sind ähnlich zu Theorien, aber meist kleiner gefasst und die Analogie oder Metapher steht im Vordergrund.
 
-
-### Beispiele für Wissenschaften und ihre Einordnung
-
+:::{exm-sciences-types}
+### Beispiele für Wissenschaften
+@tbl-sciences stellt Beispiele vor für Wissenschaften und ihre Einordnung. 
 
 ```{r}
 #| echo: false
+#| tbl-cap: Beispiele für Wissenschaften und ihre Einordnung
+#| label: tbl-sciences
 d <- read.csv("children/sciences-tab.csv")
 kable(d)
 ```
 
+$\square$
+:::
 
 
 ### Die drei Ziele einer empirischen Wissenschaft
@@ -296,8 +298,8 @@ graph TD
 Beispiele für die einzelnen Zielarten:
 
 - *Beschreiben*: "Wie groß ist der Gender-Paygap in der Branche X im Zeitraum Y?"
-- *Vorhersagen*: Wenn eine Person X^[z.B. ich] 100 Stunden auf die Statistikklausur lernen, welche Note kann diese Person dann erwarten?
-- *Erklären*: Wie viel bringt (mir) das Lernen auf die Statistikklausur?
+- *Vorhersagen*: Wenn eine Person X^[z. B. ich] 100 Stunden auf die Statistikklausur lernen, welche Note kann diese Person dann erwarten?
+- *Erklären*: Wie viel bringt das Lernen auf die Statistik-Klausur?
 
 <!-- ### Taxonomie der psychologischen Modalitäten -->
 
@@ -332,7 +334,7 @@ Arbeitweisen in beiden Feldern:
 
 - Evidenzbasiertes Vorgehen: Zahlen, Daten, Fakten
 - Systematisches Vorgehen: Hohe Qualitätsstandards bei den Kernprozessen
-- Annahmen und Ideen testen: Nicht glauben, überprüfen
+- Annahmen und Ideen testen: Nicht glauben, sondern vüberprüfen
 - Gute Schätzungen erstellen: "Tacheles reden"$\square$
 :::
 
@@ -392,11 +394,11 @@ Wenn ein Befund nicht reproduzierbar ist, ist es dann echtes Wissen?
 
 
 
-### Ein Prozess der Wissenschaft
+### Ein Prozess der Forschung
 
+@fig-prozess-wiss stellt eine mögliche Gliederung des Prozesses der Forschung dar.
 
-
-![Ein Prozess von Wissenschaft](img/science-process.jpg)
+![Ein Prozess von Wissenschaft](img/science-process.jpg){#fig-prozess-wiss}
 
 
 
@@ -483,7 +485,7 @@ Bohnen! Die Grundfesten der Wissenschaft!
 :::{#exm-schlussarten}
 #### Beispiele zu den Schlussarten
 
-*Induktion* „In meiner Studie-Stichprobe war die IQ im Mittel 120. Daraus schließe ich, dass in der Grundgesamtheit aller Studies der IQ im Mittel 120 beträgt“ (Verallgemeinerung).
+*Induktion* „In meiner Studie-Stichprobe war der IQ im Mittel 120. Daraus schließe ich, dass in der Grundgesamtheit aller Studies der IQ im Mittel 120 beträgt“ (Verallgemeinerung).
 
 *Abduktion* "Joachim, Du hast 10 Mal am Stück Kopf geworfen; das passiert selten bei fairen Münzen. Daher schließe ich, dass Deine Münze nicht fair ist“ (Spekulation! Joachim könnte Glück gehabt haben).
 
@@ -513,7 +515,7 @@ Annahmen:
 
 Folgerung:
 
-Albert Einstein ist Nobelpreisträger (falsch!).$\square$
+Albert Einstein ist Nobelpreisträger (falsch!). Nicht alle Schlauen sind Nobelpreisträger. $\square$
 :::
 
 
@@ -545,7 +547,9 @@ Schauen Sie sich mal diesen Überblick über [KI-Arbeitsmittel für Forschung](h
 
 :::{.callout-caution}
 Prüfen Sie, welche KI-Hilfsmittel für Ihre Qualifizierungsarbeit erlaubt sind. 
-Informieren Sie sich, was einen Plagiatsfall darstellt und stellen Sie sicher, keinen Plagiatsfall zu begehen.
+Informieren Sie sich, was einen Plagiatsfall darstellt und stellen Sie sicher, keinen Plagiatsfall zu begehen. $\square$
+:::
+
 
 
 ## Fazit

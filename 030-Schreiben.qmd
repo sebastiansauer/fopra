@@ -893,7 +893,7 @@ Die Typografie ist die Lehre der ästhetischen und funktionalen Gestaltung der G
 
 :::{#def-satzspiegel}
 ### Satzspiegel
-Der Satzspiegel defineirt die Nutzfläche einer Seite (im Gegensatz zum Gesamtplatz und leerem Platz).$\square$
+Der Satzspiegel definiert die Nutzfläche einer Seite (im Gegensatz zum Gesamtplatz und leerem Platz).$\square$
 :::
 
 Ein Satzspiegel wird dann als ästhetisch empfunden, wenn sich (selbst-)ähnliche Proportionen wiederfinden.

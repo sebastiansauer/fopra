@@ -80,6 +80,7 @@ Deswegen ist es wichtig, dass Sie einen ersten Schritt tun:
 Fangen Sie, ein "Thema" zu suchen, s. @fig-themawahl.
 
 
+ 
 ```{mermaid}
 %%| echo: false
 %%| fig-cap: "Von *Keine Ahnung* bis zu *Ich hab meine Forschungsfrage*"
@@ -89,17 +90,18 @@ flowchart LR
     B[Studie lesen] --> C[etwas mehr Plan]
     C --> B
   end
-  A[Kein' Plan 😔] --> F[Idee für ein Thema 🤓]
+  A[Kein' Plan] --> F[Idee für ein Thema]
   F --> D
-  D --> E[genaue<br>Forschungsfrage 🤓]
+  D --> E[genaue<br>Forschungsfrage]
 ```
+
 
 
 
 ### Forschungsfrage 
 Beachten Sie, dass ein "Thema" keinesfalls ausreichend ist, um eine wissenschaftliche Studie durchzuführen und zu dokumentieren.
 Ein "Thema" als solches ist viel zu unpräzise.
-Was Sie brauchen ist eine präzise Forschungsfrage.
+Was Sie brauchenk ist eine präzise Forschungsfrage.
 
 
 
@@ -177,7 +179,7 @@ Eine Arbeit sollte nur eine Forschungsfrage haben.
 
 2. Cognitive Reflection Test: Wie ist der Einfluss einer Ablenkung/Zeitdruck/Induktion negativer Gefühle auf die Leistung? 
 
-3. 12 vs. 6 Beispiele für Durchsetzungsfähigkeit: Schätzen sich Probanden, die nur 6 Beispiele nennen mussten, wirklich als durchsetzungsfähiger ein?$\square$
+3. 12 vs. 6 Beispiele für Durchsetzungsfähigkeit: Schätzen sich Probanden, die nur 6 Beispiele nennen mussten, wirklich als durchsetzungsfähiger ein, als solche, die 12 Beispiele nennen mussten?$\square$
 :::
 
 
@@ -250,10 +252,10 @@ Suchen-->Screenen-->Sammeln-->Lesen-->Extrahieren
 
 :::{#def-litsearch}
 ### Literaturrecherche
-Die Literaturrecherche ist ein Ablauf, also eine zusammenhänge Folge mehrere Tätigkeitsschitte, mit dem Ziel ein Literaturwerk (kurz: Werk) oder mehrere für die Forschungsfrage geeignete Werke zu finden. $\square$
+Die Literaturrecherche ist ein Ablauf, also eine zusammenhänge Folge mehrere Tätigkeitsschitte, mit dem Ziel, ein Literaturwerk (kurz: Werk) oder mehrere für die Forschungsfrage geeignete Werke zu finden. $\square$
 :::
 
-1. *Suchen* ist das Ausfindigmachen geeigneter Literatur. Dazu sucht man meist in einschlägigen wissenschaftlichen Literatur-Datenbanken wie z.B. Google Scholar.
+1. *Suchen* ist das Ausfindigmachen geeigneter Literatur. Dazu sucht man meist in einschlägigen wissenschaftlichen Literatur-Datenbanken wie z. B. Google Scholar.
 Beim Suchen von muss man unterscheiden zwischen dem Finden von 
 
   a. 🖋️ *Zitierinformationen* wie Autor, Titel, Datum der Veröffentlichung oder ID-Nummer (wie DOI oder ISBN)
@@ -262,11 +264,11 @@ Beim Suchen von muss man unterscheiden zwischen dem Finden von
 
 2. Im nächsten Schritt, *Screenen*, sind zumeist die Open-Access-Elemente am wichtigsten, damit man einschätzen kann, ob das Werk geeignet ist. Der Volltext ist an dieser Stelle nicht (unbedingt) nötig.
 
-3. Geeignete Werke *sammelt* man in einer Liste, z.b. via dem Literaturprogramm Zotero. Dabei werden pro Werk die Zitierinformationen festgehalten.
+3. Geeignete Werke *sammelt* man in einer Liste, z. B. via dem Literaturprogramm Zotero. Dabei werden pro Werk die Zitierinformationen festgehalten.
 
 4. Jetzt folgt das *Lesen*^[Ein eigener Ablauf mit mehereren Schritten] eines geeigneten Werks. 
 
-5. Zentrale Inhalte *extrahiert* man aus dem Werk und hält sie an geeigneter Stelle fest, z.B. als Tag oder Notiz in Zotero.
+5. Zentrale Inhalte *extrahiert* man aus dem Werk und hält sie an geeigneter Stelle fest, z. B. als Tag oder Notiz in Zotero.
 
 
 :::{#def-werk}
@@ -373,7 +375,7 @@ Erst Denken. Dann Lesen. Zuletzt Schreiben.
 :::
 
 Ihr Workflow sollte eher so aussehen (s. @fig-nicht-schreiben):
-Sie lesen einen Artikel. Dann skizzieren Sie Ihre Gedanken. Am besten auf einem Blatt Papier. Es kann ein Schmierzettel sein. Zur Not ein iPad.
+Sie lesen einen Artikel. Dann skizzieren Sie Ihre Gedanken. Am besten auf einem Blatt Papier. Es kann ein Schmierzettel sein. Zur Not ein Tablet wie ein iPad.
 Das Skizzieren Ihrer Gedanken mit einem Stift (nicht Tippen) ist das Entscheidende.
 Dabei reifen Ihre Gedanken.
 Sie sollten Ihr Hirn während dieser hochproduktiven Arbeit keinesfalls mit irgendwelchen Schnörkeln wie schönes Deutsch oder schöne Schrift belasten.
@@ -451,14 +453,14 @@ Recherchieren Sie, wie diese Methode funktioniert und erklären Sie es einem ver
 :::{.callout-caution}
 ### Brain-Drain
 
-Laut @ward_brain_2017 verringert die *bloße Anwesenheit* eines Handies o.Ä. auf Ihrem Schreibtisch oder in Ihrer Ihren IQ.
+Laut @ward_brain_2017 verringert die *bloße Anwesenheit* eines Handies o.Ä. auf Ihrem Schreibtisch oder in Ihrer Tasche Ihren IQ.
 Wenn Sie arbeiten, sollten Sie sich daher vornehmen: "Ich werde jetzt konzentriert arbeiten und mich nicht ablenken lassen".
-Schalten Sie Ihr Handy aus und stellen Sie sicher, dass Sie nicht gestört werden.
+Schalten Sie Ihr Handy aus und stellen Sie sicher, dass Sie nicht gestört werden. Am besten legen Sie es in ein anderes Zimmer.
 :::
 
 :::callout-tip
 ### Tools für Notizen
-Es gibt (IT-)Tools, die Sie beim Notizen machen unterstützen, etwa [Notion](https://www.notion.so/product/ai), [Zotero](https://www.zotero.org/),  [Zettelkasten](https://zettelkasten.de/introduction/) oder schöne Notizbücher. $\square$
+Es gibt (IT-)Tools, die Sie beim Notizen machen unterstützen, etwa [Notion](https://www.notion.so/product/ai), [Zotero](https://www.zotero.org/),  [Zettelkasten](https://zettelkasten.de/introduction/), [notion](https://www.notion.so/help/guides/category/ai) oder schöne Notizbücher. $\square$
 :::
 
 
@@ -501,7 +503,7 @@ es kann aber auch anders sein.
 
 Es ist übrigens nicht notwendig, einen fremdsprachigen Artikel Wort für Wort zu übersetzen. 
 Bei den ersten Fachartikeln in englischer Sprache werden Sie für das Lesen wahrscheinlich einige Zeit benötigen. 
-Allerdings gibt es z.B. Übersetzungsdienste, die eine Webseite auf Deutsch übersetzen, was komfortabel ist.
+Allerdings gibt es z. B. Übersetzungsdienste, die eine Webseite auf Deutsch übersetzen, was komfortabel ist.
 Da sich der wissenschaftliche „Jargon“ allerdings in den meisten Veröffentlichungen wiederfindet, werden Sie nach wenigen Übungseinheiten deutlich schneller werden.
 
 
@@ -570,14 +572,14 @@ Bleibt zu hoffen, dass die Zusammenfassung korrekt ist.
 
 
 
-Bei [ChatGPT](https://chat.openai.com) kann man z.B. schreiben *tldr: 'Positive' Results Increase Down the Hierarchy of the Sciences*.
+Bei [ChatGPT](https://chat.openai.com) kann man z. B. schreiben *tldr: 'Positive' Results Increase Down the Hierarchy of the Sciences*.
 Dann gibt ChatGPT drei Sätze zur Zusammenfassung dieses Artikels. Alternativ könnten Sie auch schreiben: "Fasse folgenden Artikel zusammen:".
 
 
 Andere Dienste, wie [ChatPDF](https://www.chatpdf.com/), erlauben das Hochladen von PDF-Dokumenten und der Dienst liefert eine Zusammenfassung.
 
 :::callout-caution
-Beachten Sie Datenschutz und Urheberrechte, wenn Sie Fachartikel an Dritte weitergeben. $\square$
+Beachten Sie Datenschutz und Urheberrechte, wenn Sie Texte wie Fachartikel an Dritte weitergeben. $\square$
 :::
 
 
@@ -714,14 +716,12 @@ Sie können die Methode des "ersten Blicks" nutzen.$\square$
 ## Was ist ein gutes Journal?
 
 Journal-Ranking sind eine gängige Methode, um die "Qualität" eines Journals zu bemessen. 
-Z.B. [SJR](https://www.scimagojr.com/) bietet ein Ranking wissenschaftlicher Journals, auch [z.B. für Psychologie](https://www.scimagojr.com/journalrank.php?area=3200).
-Eigentlich sind Rankings wenig aussagekräftig [@Brembs2018], aber hypnosestark und (daher) weit verbreitet.
-Ein wichtige(re)s Kriterium ist, wie oft ein Paper zitiert wurde (wird z.B. von Google Scholar ausgewiesen).
+Z. B. [SJR](https://www.scimagojr.com/) bietet ein Ranking wissenschaftlicher Journals, auch [z. B. für Psychologie](https://www.scimagojr.com/journalrank.php?area=3200).
+Eigentlich sind Rankings nur bedingt aussagekräftig [@Brembs2018], aber hypnosestark und (daher) weit verbreitet.
+Ein wichtige(re)s Kriterium ist, wie oft ein Paper zitiert wurde (wird z. B. von Google Scholar ausgewiesen).
 
 Vertrauen Sie also wenig auf das Renommee des Journals, sondern mehr auf die Qualität eines Artikels. Leider ist das aufwändiger.
-
 Was Sie aber tun können ist, einem Artikel aus einem renommierten Journal einen Vertrauensvorschuss zu geben.
-
 Abgesehen davon muss eine hohe Zitationszahl eines Fachartikels auch kein Garant für die Qualität eines Fachartikels sein^[vgl. [Matthäus-Effekt](https://de.wikipedia.org/wiki/Matth%C3%A4us-Effekt)]
 
 
@@ -786,10 +786,10 @@ Auf dieser Basis führten weitere Untersuchungen zur Entwicklung des Antibiotiku
 :::{#exm-konf}
 ### Eine berühmte konfirmatorische Studie: Der Cholera-Ausbruch in London, 1854
 
-Im Jahr 1831 brach eine bis dato unbekannte Epidemie in London aus, Cholera, die viele Opfer forderte^[Quelle: https://www.sciencemuseum.org.uk/objects-and-stories/medicine/cholera-victorian-london].
+Im Jahr 1831 brach eine bis dato unbekannte Epidemie in London aus, Cholera, die viele Opfer forderte^[Quelle: <https://www.sciencemuseum.org.uk/objects-and-stories/medicine/cholera-victorian-london>].
 Zuerst waren Ärzte und Forscher ratlos, aber nach einiger Zeit wurde entdeckt, dass es einen Zusammenhang gab zwischen schlechten Lebensbedingungen (Armut) und der Krankheit.
 Eine vorherrschende Theorie (als Erklärung der Ursache) war „schlechte Luft“ (bad air), die sog. „Miasma-Theorie“.
-Erste Hygienebemühungen führten leider dazu, dass noch mehr (schmutzige) Abwässer in die Themse gerieten, Londons Trinkwasser-versorgung.
+Erste Hygienebemühungen führten leider dazu, dass noch mehr (schmutzige) Abwässer in die Themse gerieten, Londons Trinkwasser-Versorgung.
 John Snow schlug 1848 vor, dass Cholera durch Keime im Wasser verbreitet wurde. Sein Paper stieß aber auf wenig Interesse.
 1866 wurde seine Theorie schließlich anerkannt.
 :::
@@ -808,7 +808,7 @@ Eine Hypothese ist der Baustein, aus dem Theorien zusammengesetzt sind.
 
 >   🧑‍🎓  Woran erkennt man eine gute Hypothese?
 
->    👨‍🏫  Es gibt einige Gütekriterien, wie Überprüfbarkeit, Fundierung und Gewagtheit. Schwer zu sagen, welches Kriterium am wichtigsten ist.
+>    👨‍🏫  Es gibt einige Gütekriterien, wie Überprüfbarkeit, Fundiertheit, Präzision, Geltungsbreite und Gewagtheit. Schwer zu sagen, welches Kriterium am wichtigsten ist.
 
 
 ### Gütekriterien von Hypothesen
@@ -821,7 +821,7 @@ Ist eine Hypothese nicht in Aussagenform, so ist es gar keine Hypothese. Eine Au
 
 #### Empirischer Gehalt
 
-Eine Hypothese mit *geringen* empirischen Gehalt wäre "Es gibt einen Zusammenhang zwischen Lernen und Prüfungserfolg" (Nennen wir diese Hypothese HA). Diese Aussage kann zwar falsch sein - wenn es keinen Zusammenhang zwischen Lernen und Prüfungserfolg gibt in Wirklichkeit. Allerdings müsste dann der Zusammenhang *exakt* Null sein. Wie wahrscheinlich ist es, dass der Zusammenhang exakt Null ist, also 0,000000000? Schon wenn der Zusammenhang nur eine winzige Kleinigkeit von Null abweicht, ist die Aussage wahr! Das Beispiel zeigt, dass der empirische Gehalt von HA gering ist. Ein anderes wichtiges Beispiel sind "Es-gibt-Aussgen", wie "Es gibt Einhörner". Es ist (fast) unmöglich, diese Aussage zu widerlegen. Auch wenn ich jahrelang alle Habitate möglicher Einhörner abgrase und keines finde, könnten Sie immer noch sagen "Das Einhorn hat sich gerade versteckt". Also: Es-gibt-Aussagen sind von empirisch geringem Gehalt.
+Eine Hypothese mit *geringen* empirischen Gehalt wäre "Es gibt einen Zusammenhang zwischen Lernen und Prüfungserfolg" (Nennen wir diese Hypothese HA). Diese Aussage kann zwar falsch sein - wenn es keinen Zusammenhang zwischen Lernen und Prüfungserfolg gibt in Wirklichkeit. Allerdings müsste dann der Zusammenhang *exakt* Null sein. Wie wahrscheinlich ist es, dass der Zusammenhang exakt Null ist, also 0,000000000? Schon wenn der Zusammenhang in Wirklichkeit nur eine winzige Kleinigkeit von Null abweicht, ist die Aussage (Hypothese HA) wahr! Das Beispiel zeigt, dass der empirische Gehalt von HA gering ist. Ein anderes wichtiges Beispiel sind "Es-gibt-Aussgen", wie "Es gibt Einhörner". Es ist (fast) unmöglich, diese Aussage zu widerlegen. Auch wenn ich jahrelang alle Habitate möglicher Einhörner abgrase und keines finde, könnten Sie immer noch sagen "Das Einhorn hat sich gerade versteckt". Also: Es-gibt-Aussagen sind von empirisch geringem Gehalt.
 Dem gegenüber wäre der empirische Gehalt von "Am 28. Februar 2025 um 15.31h wird es Lyon, Frankreich, zu einer vollständigen Sonnenfinsternis kommen". 
 
 #### Theoretische Fundierung
@@ -873,7 +873,7 @@ Eine Schlussfolgerung, eine Verallgemeinerung von bekannten Fakten auf neues, bi
 :::
 
 
-Hypothesen beziehen sich nicht auf Stichproben, sondern auf Populationen (Grundgesamtheiten), da die Daten einer Stichproben auf der Hand liegen, also bekannt sind. Für die Stichprobe gibt es eine Ungewissheit. Aber für die Population schon.
+Hypothesen beziehen sich nicht auf Stichproben, sondern auf Populationen (Grundgesamtheiten), da die Daten einer Stichproben auf der Hand liegen, also bekannt sind. Für die Stichprobe gibt es keine Ungewissheit. Aber für die Population schon.
 Schlüsse von einer Stichprobe auf eine Population sind (fast immer) mit Unsicherheit behaftet, denn die ganze Population ist nicht bekannt, sondern nur ein Auszug, eben die Stichprobe. 
 Man schließt also von einer bekannten Teilmenge auf eine nicht in Gänze bekannte Gesamtmenge.
 Unbekannte Kennwerte der Population bezeichnet man als Parameter.
@@ -933,13 +933,13 @@ kable(d)
 #### Sachhypothese
 
 Eine Sachhypothese kommt dem Alltagsverstädnis von Hypothese am nächsten. 
-Man formuliert eine Behauptung in den Fachbegriffen des Themenfelds oder einer Theorie, z.B. "Tägliches Musizieren erhöht die Konzentrationsfähigkeit",
+Man formuliert eine Behauptung in den Fachbegriffen des Themenfelds oder einer Theorie, z. B. "Tägliches Musizieren erhöht die Konzentrationsfähigkeit",
 "Ambiguitätstoleranz A und Frustrationsschwelle F hängen (positiv) zusammen"^[Wenn man behauptet, dass zwei Dinge zusammenhängen, so meint man oft implizit, dass sie gleichsinnig, also positiv zusammenhängen.] 
 oder "Der Zusammenhang von Trait-Achtsamkeit und Stresslevel wird über die affektiven Reaktivität teilvermittelt". 
 Beachten Sie, dass sich Sachhypothesen je nachdem wie sie formuliert sind, in ihrer Exaktheit unterscheiden können.
 
 :::{.callout-important}
-Je präziser eine Hypothese formuliert ist (unter sonst gleichen Bedingungen^[das nennt man auch "[ceteris paribus](https://de.wikipedia.org/wiki/Ceteris_paribus)"]), desto besser ist die Hypothese.$\square$
+Je präziser eine Hypothese formuliert ist, desto besser ist die Hypothese  (unter sonst gleichen Bedingungen^[das nennt man auch "[ceteris paribus](https://de.wikipedia.org/wiki/Ceteris_paribus)"]).$\square$
 :::
 
 :::: {.columns}
@@ -981,15 +981,15 @@ Eine statistische Hypothese gibt die "Zahlenbasis" an, anhand derer die Bestäti
 
 - $\mu_1 > \mu_2$: "Der Mittelwert 1 ist größer als der Mittelwert 2". Welche Variable und welche sonstigen Randbedingungen (Annahmen) sich hinter $\mu$ verbergen, muss anderer Stelle erläutert sein.
 - $\mu > 42$: "Der Mittelwert ist größer als 42".
-- $R^2 > 0.23$: "Die erklärte Varianz laut $R^2$ ist größer als 23%".
+- $R^2 > 0.23$: "Die erklärte Varianz ($R^2$) ist größer als 23%".
 - $\rho > 0$: "Es gibt einen positiven Zusammenhang (gemessen mit der Pearson-Korrelation)."
-- $\beta_1 > 0$: "Der Regressionskoeffizient 1 ist positiv". Das zugrundeliegende Regressionsmodell muss an anderer Stelle definiert sein.
+- $\beta_1 > 0$: "Der Regressionskoeffizient beta 1 ist positiv". Das zugrundeliegende Regressionsmodell muss an anderer Stelle definiert sein.
 - $r(E, V) > 0$: "Es gibt eine positive Korrelation von negativer Erfahrung mit KI und Vertrauen in KI"
 :::
 
 
 Mit einer Formel kann man einen komplexen Sachverhalt oft prägnanter und präziser formulieren als mit Worten.
-Das hat den Grund, dass man mathematische Symbole klar definieren muss und dass wohldefinierte mathematische Symbole eindeutige Bedeutungen haben (z.B. das Größer-Als-Zeichen).
+Das hat den Grund, dass man mathematische Symbole klar definieren muss und dass wohldefinierte mathematische Symbole eindeutige Bedeutungen haben (z. B. das Größer-Als-Zeichen).
 Mathematische Symbole tragen daher zur Präzision (wissenschaftlicher) Hypothesen bei.
 Typischerweise werden gängige Abkürzungen statistischer Kennwerte verwendet, die auf Populationen bezogen sind und daher zumeist griechische Buchstaben verwenden.
 
@@ -1005,14 +1005,16 @@ Häufig werden folgende Koeffizienten in Hypothesen untersucht:  Mittelwerte bzw
 ### Nullhypothesen (H0 ) testen
 
 
-Leider sind viele Theorien in den Sozialwissenschaften (aber nicht in der Physik) zu schwach (unpräzise), um genaue Vorhersagen zu machen.
-Eine totale Sonnenfinsternis für einen bestimmten Tag und einem bestimmten Ort vorherzusagen, ist eine unpräzise Hypothese. 
-Man spricht auch von einem geringem empirischen Gehalt.
-Vorherzusagen, dass Männer in einem von vielen Kriterien einen höheren Mittelwert aufweisen als Frauen, hat ebenfalls einen geringen empirischen Gehalt.
+Leider sind viele Theorien in den Sozialwissenschaften (aber nicht so sehr in der Physik) zu schwach (unpräzise), um genaue Vorhersagen zu machen.
+Eine totale Sonnenfinsternis für einen bestimmten Tag, zu einer bestimmten Uhrzeit  und an einem bestimmten Ort vorherzusagen, ist eine hoch präzise Hypothese. 
+Man spricht auch von einem hohem empirischen Gehalt.
+
+Vorherzusagen, dass Männer in einem von vielen Kriterien einen höheren Mittelwert aufweisen als Frauen, hat hingegen einen geringen empirischen Gehalt.
+
 Je höher der empirische Gehalt, desto falsifizierbarer die Hypothese (und desto wertvoller die Hypothese^[ceteris paribus, wie so oft]).
 Je gewagter die Hypothese, desto leichter wäre sie zu falsifizieren, wenn sie falsch sein sollte.
 Eine häufige Form von Hypothesen ist (in geringer entwickelten Wissenschaftszweigen) ist daher die Nullhypothese: Der Unterschied zwischen Gruppe 1 und 2 ist größer als Null. 
-Synonym: Gruppe 1 hat einen höheren Mittelwert als Gruppe 2. In mathematischer Notation: X1 > X2.
+Synonym: Gruppe 1 hat einen höheren Mittelwert als Gruppe 2. In mathematischer Notation: $X_1 > X_2$.
 
 Die *Forschungshypothese* - Ihre Hypothese! -  ist fast immer das *Gegenteil* der Nullhypothese: Meist glaubt man, dass es einen Effekt gibt, dass ein Effekt eben nicht Null ist.
 Man prüft also, ob die Evidenz gegen die Nullhypothese bzw. zugunsten der Forschungshypothese spricht.
@@ -1029,11 +1031,11 @@ Daher ist das Parameterschätzen (oft) dem reinen Hypothesentesten vorzuziehen.$
 ### Gott liebt 4,9% fast genau wie 5.1%
 
 
-Häufig wird die Entscheidung über eine Hypothese (Ablehnung, Nicht-Verwerfung als „Quasi-Annahme) anhand es eines *Grenzwertes* oder sog. "kritischen Werts" entschieden.
+Häufig wird die Entscheidung über eine Hypothese (Ablehnung, Nicht-Verwerfung als "Quasi-Annahme") anhand es eines *Grenzwertes* oder sog. "kritischen Werts" entschieden.
 Dazu wird häufig der p-Wert verwendet, meist mit dem Grenzwert von 5%:  Studienergebnisse mit p < .05 werden als (statistisch) signifikant bezeichnet und die Hypothese „nicht verworfen“. Praktisch heißt das in diesem Fall meist, man verhält sich so, als ob die Hypothese wahr sei.
  Studienergebnisse mit p > .05 werden als „nicht signifikant“ bezeichnet und die Hypothese verworfen. Man geht dann also davon aus, dass die Hypothese falsch ist.
 
-In der *Bayes-Statistik* könnte man analog z.B. prüfen, ob die Post-Verteilung zu 95% oberhalb  der Null liegt. Solches Schwarz-Weiß-Verhalten hat Vor- und Nachteile.
+In der *Bayes-Statistik* könnte man analog z. B. prüfen, ob die Post-Verteilung zu 95% oberhalb  der Null liegt. Solches Schwarz-Weiß-Verhalten hat Vor- und Nachteile.
 
 Zunehmend geht man dazu über, anstelle von Schwarz-Weiß die „Grautöne“ zu sehen, was sinnvoll ist.
 Je größer die Evidenz zugunsten (oder entgegen) einer Hypothese, desto mehr (weniger) sollte man an die Hypothese glauben bzw. das Verhalten danach ausrichten.
@@ -1055,7 +1057,7 @@ Photo by <a href="https://unsplash.com/pt-br/@nicholassampson?utm_source=unsplas
 
 Ein rundherum empfehlenswertes Buch für empirische Projekte ist @peters_planen_2019.
 Wenn Sie sich mehr mit dem Thema "Wie man gut liest" beschäftigen möchten, sei Ihnen @adler_how_1972 ans Herz gelegt.
-Haben Sie gefallen gefunden an der Kritik des Mainstream-Publizierens, dann lesen Sie doch mal z.B. @Brembs2018 oder @Brembs2013.
+Haben Sie gefallen gefunden an der Kritik des Mainstream-Publizierens, dann lesen Sie doch mal z. B. @Brembs2018 oder @Brembs2013.
 
 
 
