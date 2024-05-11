@@ -3,12 +3,29 @@ title: test
 echo: false
 ---
 
-jlgd
 
-dasfjk sdöljf
 
- jsldkf
- 
- 
-"jl"
+```{r}
+library(nomnoml)
+```
+
+
+```{r}
+nomnoml::nomnoml("
+           [<table>table1| Var1 | Var2 || 1 | A || 2 | B || 3 | C ]
+           [<table>table2| Var1 | Var2 || 1 | D || 2 | E || 3 | F ]
+           [<table>table3| Var1 | Var2 | Var3|| 
+                            1 | A | D || 
+                            2 | B | E || 
+                            3 | C| F ]
+           [table1] - +[table2]
+           [table2] -> =[table3]
+
+                 ")
+
+```
+
+
+
+
 

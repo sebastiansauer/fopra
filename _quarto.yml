@@ -22,7 +22,7 @@ book:
   doi: 10.5281/zenodo.6602668
   repo-url: https://github.com/sebastiansauer/fopra
   repo-actions: [source, issue]
-  cover-image: img/foproa-logo.png
+  cover-image: img/foproa-logo-small.png
   #cover-image-alt: "Willkommen in Ihrem Forschungsprojekt!"
   favicon: img/fopra-logo-small.png
   license: CC-By
@@ -30,6 +30,8 @@ book:
     logo: img/fopra-logo-small.png
     search: true
   # google-analytics:
+  navbar: false
+  page-footer: "footer test"
 
 
 

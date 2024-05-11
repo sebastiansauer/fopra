@@ -364,6 +364,8 @@ Man kann Antwortformate dahingehend unterscheiden, ob sie *uni- oder bipolar* au
 
 - Die [University of Texas at Arlington UTA](https://libraries.uta.edu/tmdb/) stellt eine große Auswahl an Testverfahren bereit.
 
+- Die Webseite [Psychology Tools](https://psychology-tools.com/) stellt eine Auswahl an englischsprachigen Instrumenten zusammen, darunter eine Empathie-Skala und eine Internetsucht-Skala.
+
 - Mitunter hilft es, die Autoren anzuschreiben.
 
 - @sec-bsp-skalen stellt eine Zotero-Gruppe mit einer Auswahl an Skalen (v.a. aus dem Bereich Usability) bereit.

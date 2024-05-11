@@ -1,4 +1,4 @@
-# Auswerten: Grundlegende Datenanalyse
+# Auswerten: Daten aufbereiten
 
 
 
@@ -6,6 +6,7 @@
 #| echo: false
 library(ggplot2)
 theme_set(theme_minimal())
+library(nomnoml)
 ```
 
 ## Lernsteuerung
@@ -32,7 +33,6 @@ Behalten Sie Ihren Fortschritt im Projektplan im Blick, s. @fig-projektplan.
 #| messagen: false
 library(tidyverse)
 library(easystats)
-library(sjmisc)  # für row_means
 ```
 
 
@@ -40,33 +40,18 @@ library(sjmisc)  # für row_means
  
 ```{r load-extra-web, eval = TRUE}
 data_url <- "https://raw.githubusercontent.com/sebastiansauer/modar/master/datasets/extra.csv"
-extra <- read_csv(data_url)  # aus `{easystats}`
+extra <- data_read(data_url)  # aus `{easystats}`
 ```
 
 
-## Daten aufbereiten
+Anstelle von `data_read` könnten Sie auch `read_csv` (Tidyverse) oder `read.csv` (Standard-R) verwenden.
 
+## Wir brachen brave Daten
 
-
-Häufig sind Daten noch nicht "aufbereitet" und müssen noch "geputzt" oder "aufgeräumt" werden. Dazu gehören Schritte wie
-
-- Daten umkodieren
-- Daten aggregieren
-- Daten gruppieren
-- Fehlende Werte ersetzen
-- Datenqualität prüfen
-- Verteilungsformen prüfen
-- Ausreißer behandeln
-
-Betrachten wir einige zentrale Aspekte dieser Schritte.
-
-
-### Brave Daten
-
-Wie muss eine Tabelle gestaltet sein,
+Wie muss eine Tabelle aufgebaut sein,
 damit man sie gut in R importieren kann, bzw. gut damit weiterarbeiten kann?
 
-[Das ist eine gute Quelle](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989) zu diesem Thema.
+
 
 Im Überblick sollten Sie auf Folgendes achten:
 
@@ -76,18 +61,44 @@ Im Überblick sollten Sie auf Folgendes achten:
 - Es muss genau eine Kopfzeile geben.
 - Es darf keine Lücken geben (leere Zeilen oder Spalten oder Zellen).
 - Vermeiden Sie Umlaute und Leerzeichen in den Variablennamen.
+- Die Daten sollten dem Prinzip von "tidy data" folgen.
 
 
 
+:::{.callout-important}
+### Tidy Data
 Beachten Sie das Prinzip von "tidy data":
 
 - In jeder Zeile steht *eine Beobachtung*.
 - In jeder Spalte steht *eine Variable*.
-- In jeder Zelle steht *eine Wert*.
+- In jeder Zelle steht *eine Wert*. $\square$
+:::
+
+
+[Hier ist eine gute Quelle](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989) für weitere Erläuterung zu diesem Thema.
+
+
+## Typische Schritte beim Daten aufbereiten
 
 
 
-### Eine Gesamttabelle
+Häufig sind Daten noch nicht "aufbereitet" und müssen noch "geputzt" oder "aufgeräumt" werden. Dazu gehören Schritte wie
+
+- Datentabellen zusammenführen
+- Daten umkodieren
+- Daten aggregieren
+- Daten gruppieren
+- Fehlende Werte ersetzen
+- Datenqualität prüfen
+- Verteilungsformen prüfen
+- Ausreißer behandeln
+
+Betrachten wir im Folgenden einige zentrale Aspekte dieser Schritte.
+
+
+
+
+## Datentabellen zusammenführen
 
 
 Sie haben die Daten anhand mehrerer Fragebogen erhoben?
@@ -95,24 +106,64 @@ Oder Sie haben mehrere Gruppen untersucht?
 Jetzt haben Sie *mehrere* Datentabellen, die 
 auf eine Analyse harren?
 
-*Verheiraten* ist angesagt.
-Sie müssen *alle* Ihre Daten in *eine* Tabelle (Datensatz) bringen.
+*Verheiraten* ist angesagt:
+Sie müssen *alle* Teiltabellen in *eine* Tabelle (Datensatz) bringen.
 
-Dazu kann man zwei Fälle unterscheiden:
+Dazu kann man zwei Fälle unterscheiden: 
 
+
+1. Zeilenweises zusammenführen
+2. Spaltenweises zusammenführen
+
+
+Das kann man in Excel-Programmen erledigen,
+aber auch in R.
+
+Um es in R zu erledigen, müssen Sie erst eine Idee verstehen und dann etwas Syntax lernen. Warum sollten Sie die vielleicht 10 Minuten Lernaufwand investieren?
+
+Ein Grund ist, dass es sinnvoll für Ihre berufliche Entwicklung ein Kernkonzept der Datenaufbereitung zu verstehen.
+
+Ein anderer Grund ist, dass Sie mit einer Skriptsprache (wie R) ein "Kochrezept" erstellen, dass Sie ohne Zusatzaufwand wiederholt durchlaufen lassen können. Und, glauben Sie mir, in einer Datenanalyse passiert es oft, dass man mehrere (viele!) Durchläufe braucht, bis man mit dem Ergebnis zufrieden ist. Außerdem dokumentiert so ein Kochrezept Ihr Vorgehen transparent. Reproduzierbarkeit ist zentral für die Wissenschaft (und Technik).
 
 ### Zeilenweises zusammenführen
 
-1. *Jede Person* hat zwei (oder mehrere) Fragebögen ausgefüllt. In Datensatz A finden sich die ersten paar Variablen und in Datensatz B die restlichen Variablen. Aber in beiden Datensätzen kommen alle Personen vor.
+:::{#exm-bind-rows}
+*Jede Versuchsperson* Ihrer Studie hat zwei (oder mehrere) Fragebögen ausgefüllt. In Datensatz A finden sich die ersten paar Variablen und in Datensatz B die restlichen Variablen. Aber in beiden Datensätzen kommen alle Personen vor. $\square$
+:::
+
+@fig-bind-rows veranschaulicht das zeilenweise Zusammenführen.
+
+<!-- ![Tabellen zeilenweise zusammenführen](img/bind-rows.png){#fig-bind-rows width=75%} -->
+
+
+
+```{r}
+#| label: fig-bind-rows
+#| echo: false
+#| fig-align: center
+#| fig-cap: Tabellen zeilenweise zusammenführen
+#| out-width: 50%
+nomnoml::nomnoml("
+           [<table>table1| Var1 | Var2 || 1 | ... || 2 | ... || 3 | .. ]
+           [<table>table2| Var1 | Var2 || 4 | ... || 5 | ... || 6 | .. ]
+           [<table>table3| Var1 | Var2 || 1 | ... || 2 | ... || 3 | .. || 4 | ... || 5 | ... || 6 | .. ]
+           [table1] - +[table2]
+           [table2] -> =[table3]
+
+                 ")
+```
 
 
 
 
 
-Etwas ausführlicher ist es im Folgenden dargestellt.
+Etwas ausführlicher ist es im Listing @lst-bind-rows dargestellt.
 
-Sagen wir, wir haben zwei Tabellen, die wir "untereinander" (also zeilenweise) "zusammenkleben" möchten:
+Sagen wir, wir haben zwei Tabellen, die wir "untereinander" (also zeilenweise) "zusammenkleben" möchten.
+Dann hilft uns `bind_rows()`.
 
+
+:::{#lst-bind-rows}
 
 ```{r}
 tab1 <- mtcars %>% slice(1:16)
@@ -120,20 +171,51 @@ tab2 <- mtcars %>% slice(17:32)
 
 mtcars_gesamt <-
   tab1 %>% 
-  bind_rows(tab2)
+  bind_rows(tab2)  # aus `tidyverse`
+```
+
+:::
+
+
+### Spaltenweises Zusammenführen 1
+
+
+:::{#exm-bind-cols}
+*In jeder Gruppe* Ihrer Studie wurde ein anderer Fragebogen ausgefüllt (z.B. weil Sie unterschiedliche experimentelle Gruppen untersucht haben). Sie haben also zwei Datensätze mit unterschiedlichen Personen (nämlich in Datensatz A die Personen der Gruppe A und in Datensatz B die Personen der Gruppe B). Aber in jedem Datensatz finden sich die gleichen Variablen. $\square$
+:::
+
+
+@fig-bind-cols veranschaulicht das spaltenweise Zusammenführen von Tabellen.
+
+
+
+```{r}
+#| label: fig-bind-cols
+#| echo: false
+#| fig-align: center
+#| fig-cap: Tabellen spaltenweise zusammenführen
+#| out-width: 75%
+nomnoml::nomnoml("
+           [<table>table1| Var1 | Var2 || 1 | A || 2 | B || 3 | C ]
+           [<table>table2| Var1 | Var2 || 1 | D || 2 | E || 3 | F ]
+           [<table>table3| Var1 | Var2 | Var3|| 
+                            1 | A | D || 
+                            2 | B | E || 
+                            3 | C| F ]
+           [table1] - +[table2]
+           [table2] -> =[table3]
+
+                 ")
+
 ```
 
 
 
 
-### Spaltenweises Zusammenführen
+Sagen wir, wir haben zwei Tabellen, die wir "hintereinander kleben" möchten, also spaltenweise zusammenführen möchten, s. @lst-bind-cols.
 
 
-2. *In jeder Gruppe* wurde ein anderer Fragebogen ausgefüllt (z.B. weil Sie unterschiedliche experimentelle Gruppen untersucht haben). Sie haben also zwei Datensätze mit unterschiedlichen Personen (nämlich in Datensatz A die Personen der Gruppe A und in Datensatz B die Personen der Gruppe B). Aber in jedem Datensatz finden sich die gleichen Variablen.
-
-
-Sagen wir, wir haben zwei Tabellen, die wir "hintereinander kleben" möchten, also spaltenweise zusammenführen möchten:
-
+:::{#lst-bind-cols}
 
 ```{r}
 tab1 <- mtcars %>% select(1:5)
@@ -145,18 +227,34 @@ mtcars_gesamt <-
 ```
 
 
+:::
+
 [Hier](https://dplyr.tidyverse.org/reference/bind.html) findet sich auch ein nützliches Beispiel.
 
+
+:::{.callout-caution}
 *Achtung* Diese Art des Zusammenfügens prüft *nicht*, 
 ob die Sortierung der Tabellen identisch ist:
 Ob also die Zeile für "Schorsch" aus Tabelle 1 auch mit Schorschs Zeile aus Tabelle 2 zusammengefügt werden (und nicht etwas mit denen von Alois).
 Sie müssen also selber dafür sorgen,
 dass die Sortierung richtig ist.
 Alternativ könnten Sie mit einem `join` arbeiten,
-der die korrekte Sortierung für Sie übernimmt.
+der die korrekte Sortierung für Sie übernimmt. $\square$
+:::
+
+### Spaltenweises Zusammenführen 2
 
 
+@fig-full-join veranschaulicht das spaltenweise Zusammenführen, wenn die Sortierung der Tabellen nicht übereinstimmt. 
 
+:::{#def-join}
+### Join zweier Tabellen
+Das spaltenweise Zusammenführen zweier Tabellen unter der Beachtung der Sortierung nennt man einen "Join". Genauer gesagt versteht man unter "Sortierung" die Beachtung der Werte einer ID-Spalte (auch "Key-Spalte") genannt. $\square$
+:::
+
+![Das "Joinen" zweier Tabellen](img/full-join.gif){#fig-full-join width=50%}
+
+Bildquelle: [Garrick Aden-Buie](https://www.garrickadenbuie.com/project/tidyexplain/), [CC-BY-SA 4.0](https://www.garrickadenbuie.com/colophon/)
 
 ## Text in Zahlen umwandeln
 
@@ -306,6 +404,7 @@ Beim Umkodieren wird das Item "auf den Kopf gestellt": Der höchste Wert wird de
 2 --> 3
 3 --> 2
 4 --> 1
+alter Wert --> neuer Wert
 ```
 
 
@@ -317,15 +416,21 @@ extra %>%
   recode_values(select = i02r, 
                 recode = list(`1`=4, `2`=3, `3`=2, `4`=1), 
                 append = TRUE) %>% 
-  select(starts_with("i02")) %>% 
+  select(starts_with("i02")) %>%  # zeige nur die beiden Item i02r und i02r_r
   head()
 ```
 
-In diesem Fall ist das Item `i02r` bereits umkodiert - genau wie alle Items im Datensatz die mit dem Suffix `r` gekennzeichnet sind. 
-Daher war das Umkodieren hier nicht nötig - sogar falsch, um genau zu sein. 
-Das diente nur zu Übungszwekcen.
+In diesem Fall ist das Item `i02r` bereits umkodiert -- genau wie alle Items im Datensatz die mit dem Suffix `r` gekennzeichnet sind. 
+Daher war das Umkodieren hier nicht nötig -- sogar *falsch*, um genau zu sein. 
+Das diente nur zu Übungszwecken.
 In anderen Situationen kann es aber nötig sein, Items umzukodieren. 
-Vergessen Sie dann nicht, das Ergebnis als (neuen) Datensatz zu speichern.
+Vergessen Sie dann nicht, das Ergebnis (die resultierende Tabelle) als (neuen) Datensatz zu speichern.
+
+Alternativ zu `recode_values` können Sie auch folgende Rechenmethode verwenden:
+
+$$\text{neuer Wert} = \text{Anzahl Kategorien} + 1 - \text{alter Wert}$$
+Diese Rechenmethode funktioniert aber nur, wenn z.B. bei vier Antwortstufen die Ausprägungen mit 1,2,3,4 kodiert sind. Allgemeiner: Bei $n$ Ausprägungen müssen die Werte mit $1,2, \ldots, n$ kodiert sein, so dass die Ausprägungen den Werten entsprechen.
+
 
 
 ## Item-Labels in Zahlen umwandeln
@@ -347,7 +452,7 @@ stimme überhaupt nicht zu --> 1
 Dieses Umwandeln können Sie  mit `case_when()` vornehmen.
 `case_when()` listet einfach Wenn-Dann-Regeln auf.
 
-Erzeugen wir uns mal ein paar Daten, 
+Erzeugen wir uns mal eine einfache Tabelle, 
 um die Sache zu illustrieren:
 
 
@@ -356,6 +461,8 @@ um die Sache zu illustrieren:
 d <-
   tibble(person_nr = 1:3,
          i01 = c("stimme überhaupt nicht zu", "stimmer eher zu", "stimme voll und ganz zu"))
+
+d
 ```
 
 So ähnlich würden also Ihre Daten aussehen.
@@ -366,7 +473,7 @@ Jetzt zum Umwandeln:
 d %>% 
   mutate(i01_r = case_when(
     i01 == "stimme überhaupt nicht zu" ~ 1,
-    i01 == "stimmer eher nicht zu" ~ 2,
+    i01 == "stimme eher nicht zu" ~ 2,
     i01 == "stimme eher zu" ~3,
     i01 == "stimme voll und ganz zu" ~ 4
   ))
@@ -384,7 +491,29 @@ Ansonsten wird auf `Prüfung2` getestet, etc.
 
 
 
-Eine alternative Funktion des Umkodierens ist `recode_value()` aus `easystats` nutzen.
+Eine alternativer Weg des Umkodierens ist `recode_value()` aus `easystats` zu nutzen.
+
+
+## Fehlende Werte ersetzen
+
+Wie geht man mit fehlenden Werten um? Das ist im Detail keine leichte Frage. Eine einfache Antwort ist: alle Zeilen mit fehlenden Werten löschen. Das hat aber den Nachteil, dass man ggf. viele Daten verliert. Eine andere einfache Antwort lautet: Nichts machen. Das kann ein sinvoller Start sein; zumindest macht man nichts kaputt.
+
+Was die ID-Spalte betrifft, sollte man aber fehlende Werte ersetzen, damit man jede Zeile identifizieren kann.
+
+
+```{r replace-na-in-id-col}
+extra_nona_in_id_col <-
+  extra |> 
+  mutate(code = replace_na(code, "fehlt"))   # aus tidyverse
+```
+
+
+:::{#exr-nona-id}
+Betrachten Sie beide Tabellen (mit der Tabellenansicht in RStudio) und finden Sie den Unterschied in der Spalte `code`. $\square$
+:::
+
+
+
 
 
 ## Zeilen (Fälle) löschen
@@ -397,33 +526,49 @@ Der Einfachheit halber nehmen wir den ersten Fall der Tabelle `extra`.
 Hier hat jeder Fall schon eine "ID", eine unique, also eineindeutige Zuordnung,
 das ist die Spalte `code`. Auch die Spalte `timestamp` taugt vermutlich für eine Zuordnung.
 
-In R könnten Sie die erste Zeile also anhand dieser ID-Spalte ansprechen und entsprechend filtern:
+In R könnten Sie die erste Zeile also anhand dieser ID-Spalte ansprechen und entsprechend filtern. Sagen wir, wir möchten die Person/Datenzeile mit der ID "HSC" entfernen:
+
+
+```{r}
+extra_kurz <-
+  extra_nona_in_id_col %>% 
+  filter(!(code == "HSC"))  # ! ist die logische Verneinung
+```
+
+
+### Vertiefung
+
+Schauen Sie sich mal diese Variante an:
+
 
 ```{r}
 extra_kurz <-
   extra %>% 
-  ungroup() %>% 
   filter(code != "HSC" | is.na(code))  # ! ist die logische Verneinung
 ```
 
 
+
+Falls die ID-Spalte (`code`) fehlende Werte hat, könnten Sie sich wundern: `extra |> filter(code != "HSC")` hätte zwar die Zeile, in der bei `code` der Wert `HSC` steht entfernt, aber *auch* *alle* Zeilen, in denen bei `code` `NA` steht. 
+Darum haben wir die fehlenden Werte explizit drinnen gelassen. 
+Die technischen Details für dieses vorsichtige Verhalten von `filter()` finden sich [hier](https://stackoverflow.com/questions/28857653/removing-na-observations-with-dplyrfilter).
+
+
 Prüfen wir die Anzahl der Zeilen:
+
 ```{r}
 nrow(extra_kurz)
 nrow(extra)
 ```
 
 
-Falls Sie sich wundern: `filter(code != "HSC")` hätte zwar die Zeile, in der bei `code` der Wert `HSC` steht entfernt, aber auch *alle* Zeilen, in denen bei `code` `NA` steht. 
-Darum haben wir die fehlenden Werte explizit drinnen gelassen. 
-Die technischen Details für dieses vorsichitge Verhaltne von `filter()` finden sich [hier](https://stackoverflow.com/questions/28857653/removing-na-observations-with-dplyrfilter).
 
-Alternativ könnte man eine ID-Spalte ergänzen (oder auch falls man keine hat):
+Falls Ihr Datensatz über keine ID-Spalte verfügt, können Sie so eine hinzufügen:
 
 ```{r}
 extra2 <-
   extra %>% 
-  mutate(id = 1:nrow(extra)) %>% 
+  mutate(id = 1:nrow(extra)) %>%   # nrow liefert die Anzahl der Zeilen der Tabelle zurück
   relocate(id, .before = 1) # wir ziehen die ID-Variable an die erste Spalte
 ```
 
@@ -450,24 +595,56 @@ Ein paar typische Probleme, die man immer wieder findet, und die wir gelöst hab
 
 - *Dubletten* (doppelte Zeilen/Fälle) in den Daten
 - Eingabefehler (unplausible oder unmögliche Werte)
-- *Geringe Eingabqualität*: Versuchspersonen haben "Blümchen gekreuzt", also keine ernsthaften Antworten gegeben
+- Zu schnelle Bearbeitungszeit (pro Item 1 Sekunde Bearbeitungszeit erlaubt nicht wirklich überlegte Antworten)
+- *Geringe Eingabequalität*: Versuchspersonen haben "Blümchen gekreuzt", also keine ernsthaften Antworten gegeben
 - ...
 
 
 
-### Auf Dubletten prüfen
+### Auf Dublikate prüfen
 
-Betrachten wir der Einfachheit halber folgenden Datensatz, in dem die erste und zweite Zeile identisch sind; die zweite Zeile ist also eine Dublette.
+Betrachten wir der Einfachheit halber folgenden Datensatz, in dem die erste und zweite Zeile identisch sind; die zweite Zeile ist also eine Dublette (Dublikat).
 Die dritte Zeile ist unique.
 
 
 ```{r}
 df <-
   tibble(id = c(1, 2, 3),
-         x = c("a", "a", "caskjld"),
+         x = c("a", "a", "yeah"),
          y = c(5, 5, 3000))
 
 df
+```
+
+Genau genommen hat `df` keine Dublikate, aber wenn wir die Spalte  `id` ausklammern, dann schon:
+
+```{r}
+df |> 
+  select(2, 3)
+```
+
+
+Dann kann man `distinct()`, nutzen, um Dublikate zu entfernen:
+
+```{r}
+df |> 
+  select(2, 3) |>  
+  distinct()
+```
+
+
+Man kann `distinct()` auch nutzen, um nur in bestimmten Spalten auf Dublikate zu suchen:
+
+```{r}
+df |> 
+  distinct(x, y, .keep_all = TRUE)
+```
+
+Ohne das `.keep_all = TRUE` werden nur die Spalten `x` und `y` zurückgeliefert (also die Spalten, die wir bei `distinct()` ausgewählt hatten):
+
+```{r}
+df |> 
+  distinct(x, y)
 ```
 
 
@@ -544,6 +721,7 @@ Wir stellen uns dabei Fragen wie:
 - Hat eine Versuchsperson wenig (keine) Varianz in ihrem Antwortverhalten?
 - Hat eine Versuchsperson viel mehr Varianz als die (allermeisten) anderen?
 
+
 Technisch gesprochen prüfen wir pro Person mehrere Spalten eines Datensatzes,
 etwa indem wir die Varianz berechnen.
 Eine Komplikation ist, dass Datensätze in R *spaltenweise* aufgebaut sind,
@@ -563,15 +741,19 @@ extra2 %>%
 ```
 
 
+:::{.callout-note}
+`c_across()` hat das gleiche Ziel wie `c()`.
+Da aber `c()` bei zeilenweisen Operationen nicht verwendet kann (das checkt `c()` leider nicht), greifen wir auf seinen Cousin, `c_across()` zurück, der das kann. $\square$
+:::
+
 Aber was ist viel und was ist weniger Varianz in diesem Zusammenhang?
 
 Am besten schauen wir uns mal die typische Varianz der Itemantworten für diesen Datensatz an.
 
 ```{r}
-library(DataExplorer)
+library(ggpubr)
 extra2 %>% 
-  select(extra_var) %>% 
-  plot_histogram()
+  gghistogram(x = "extra_var")
 ```
 
 
@@ -635,7 +817,7 @@ extra_bsp %>%
 ```
 
  Praktischerweise gibt es Funktionen, die die Berechnung eines Scores noch weiter vereinfachen, 
- zum Beispiel im Paket `sjmisc`: `row_sums()` (Summenscore pro Person) und `row_means()` (Mittelwert pro Person). 
+ zum Beispiel im Paket `easystats`: `row_means()` (Mittelwert pro Person). 
  Da Respondenten (meist Personen) in *Zeilen* stehen heißen die Befehle `row_XXX()`.
  Fragt sich noch, ob es mehr Sinn macht, einen Summenscore oder einen Mittelwert zu berechnen. 
  Kurz gesagt macht es keinen großen Unterschied, solange es keine fehlenden Werte gibt. 
@@ -669,14 +851,41 @@ Noch anschaulicher wäre es, die Mittelwerte auf den Bereich von 0 bis 1 zu norm
 
 ### Berechnung mit R
 
+Wie in jeder Sprache gibt es auch in R oft mehrere Möglichkeiten, um eine Sache auszudrücken.
+Betrachten wir im Folgenden, wie man einen *Score*, also einen *Zeilenmittelwert*, berechnet.
+
+#### Mit `easystats`
+
+`row_means`  wohnt im Paket `easystats`.
+
 ```{r}
 extra %>% 
-  row_means(i01:i10, n = .90, var = "extra_avg") %>% 
+  mutate(extra_avg = 
+           row_means(extra, select = i01:i10, min_valid = .9))  |> 
   select(extra_avg) %>% 
   slice_head(n = 3)
 ```
 
-Der Parameter `n` bei `row_means()` gibt den Anteil der *nicht* fehlenden Werte (pro Zeile) wieder, damit ein Wert berechnet wird: Bei zu vielen fehlenden Werten (zu wenig Daten) pro Person wird sonst `NA` zurückgeliefert. Das ist sinnvoll, denn hat eine Person von 10 Items nur 1 Item beantwortet, so kann man wohl nicht zuverlässig sagen, dass Extraversion in seiner Breite zuverlässig geschätzt wird. Die Funktion fügt dem Datensatz eine Spalte hinzu, deren Name mit `var` angegeben wird.
+
+Der Parameter `min_valid` bei `row_means()` gibt den Anteil der *nicht* fehlenden Werte (pro Zeile) wieder, damit ein Wert berechnet wird: Bei zu vielen fehlenden Werten (zu wenig Daten) pro Person wird sonst `NA` zurückgeliefert. Das ist sinnvoll, denn hat eine Person von 10 Items nur 1 Item beantwortet, so kann man wohl nicht zuverlässig sagen, dass Extraversion in seiner Breite zuverlässig geschätzt wird. Die Funktion fügt dem Datensatz eine Spalte hinzu, deren Name mit `var` angegeben wird.
+
+
+#### Mit `tidyverse`
+
+Die Idee von `rowwise()` ist es, den Datensatz so in Gruppen einzuteilen, dass jede Zeile eine Gruppe ist. Dann wird für jede "Gruppe" (Zeile) eine normale Operation durchgeführt.
+
+Leider versteht der `c()`-Befehl es nicht, wenn man ihm mehrere Spalten (Vektoren) als Input gibt. `i01` und `i02` etc. sind technisch gesehen jeweils Vektoren. Der `c()`-Befehl verkraftet leider nur *einen* Vektor mit Daten als Input. Daher brauchen wir einen verwandten Befehl, der wie `c()` funktioniert, aber mehrere Vektoren als Eingabe akzeptiert: Enter `c_across()`. 
+
+```{r}
+extra |> 
+  rowwise() |> 
+  mutate(extra_avg = mean(c_across(i01:i10))) |> 
+  select(extra_avg) %>% 
+  ungroup() |> 
+  slice_head(n = 3)
+```
+
+
 
 
 ## Standardisieren mit z-Werten
@@ -723,9 +932,9 @@ extra_corr_names
 
 
 
-### Deskriptive Ergebnisse darstellen
+### Deskriptive Ergebnisse für metrische Variablen 
 
-Sie können deskriptive Ergebnisse (Ihrer relevanten Variablen) z.B. so darstellen.
+Sie können deskriptive Ergebnisse (Ihrer relevanten Variablen) für *metrische* Variablen z.B. so darstellen.
 
 
 ```{r}
@@ -734,6 +943,58 @@ extra %>%
   describe_distribution() %>% 
   kable(digits = 2)
 ```
+
+
+`kable()` macht aus dem drögen Output in der R-Konsole eine schicke HTML-Tabelle^[funktioniert auch in Word und PDF], wenn man das Quarto-Dokument rendert.
+
+Statt `select(any_of(extra_corr_names))` könnten Sie natürlich auch schreiben `select(n_facebook_friends, ...)`, wobei Sie für die drei Punkte alle Variablen von Interesse nennen würden.
+
+
+Praktischerweise kann man `describe_distribution` auch für gruppierte Datensätze nutzen, um so gruppierte Verteilungsmaße zu bekommen:
+
+```{r}
+extra |> 
+  group_by(sex) |> 
+  describe_distribution(extra_mean)
+```
+
+
+### Deskriptive Ergebnisse für nominale Variablen 
+
+
+#### Univariate Häufigkeiten
+
+Lassen wir uns die Häufigkeiten für `sex` und für `smoker` ausgeben, also für jede Variable separat (univariat).
+
+
+Mit `tidyverse` kann man das in vertrauter Manier bewerkstelligen:
+
+```{r}
+extra |> 
+  count(sex)
+```
+
+Etwas schicker sieht es aus mit `data_tabulate` aus `easystats`:
+
+```{r}
+extra |> 
+  select(sex, smoker) |> 
+  #drop_na() |>  ggf. ohne fehlende Werte
+  data_tabulate()
+```
+
+Wir können uns auch die *bi*variaten Häufigkeiten ausgeben lassen.
+
+```{r}
+extra |> 
+  drop_na(sex, smoker) |>  # fehlende Werte entfernt
+  group_by(sex) |> 
+  data_tabulate("smoker")
+```
+
+
+
+
 
 
 ### Korrelationen darstellen
@@ -805,6 +1066,24 @@ extra %>%
 
 
 
+
+## Aufgaben
+
+Im Folgenden ist eine Auswahl an Aufgaben zur praktischen Datenanalyse vorgestellt. Das sind genau die Probleme, auf die Sie treffen (könnten), wenn Sie Ihre eigenen Daten auswerten, jetzt oder bei einer späteren Analyse.
+Hier ist eine Auwahl an Aufgaben auf dem Bereich "Datenjudo":
+
+
+- [tidy1](https://datenwerk.netlify.app/posts/tidy1/tidy1)
+- [ausreisser1](https://datenwerk.netlify.app/posts/ausreisser1/ausreisser1)
+- [na-per-col](https://datenwerk.netlify.app/posts/na-per-col/na-per-col)
+- [filter-na1](https://datenwerk.netlify.app/posts/filter-na1/filter-na1)
+- [filter-na2](https://datenwerk.netlify.app/posts/filter-na2/filter-na2)
+- [filter-na4](https://datenwerk.netlify.app/posts/filter-na4/filter-na4)
+
+## Fallstudien
+
+- [Seitensprünge](https://data-se.netlify.app/2021/05/28/yacsda-seitenspr%C3%BCnge/)
+- [London Marathon](https://lsinks.github.io/posts/2023-04-25-tidytuesday-marathon/marathon.html)
 
 
 
