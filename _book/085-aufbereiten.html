@@ -1113,7 +1113,7 @@ Tabelle&nbsp;11.1: Extraversion-Score berechen
 </div>
 </div>
 </div>
-<p><code>min_valid</code> gibt den Mindest-Anteil von nicht-fehlenden Werten an, damit für die die betreffende Zeile der Score berechnet wird.</p>
+<p>Der Parameter <code>min_valid</code> bei <code>row_means()</code> gibt den Anteil der <em>nicht</em> fehlenden Werte (pro Zeile) wieder, damit ein Wert berechnet wird: Bei zu vielen fehlenden Werten (zu wenig Daten) pro Person wird sonst <code>NA</code> zurückgeliefert. Das ist sinnvoll, denn hat eine Person von 10 Items nur 1 Item beantwortet, so kann man wohl nicht zuverlässig sagen, dass Extraversion in seiner Breite zuverlässig geschätzt wird. Die Funktion fügt dem Datensatz eine Spalte hinzu, deren Name mit <code>var</code> angegeben wird.</p>
 </section><section id="mit-tidyverse" class="level4" data-number="11.11.3.2"><h4 data-number="11.11.3.2" class="anchored" data-anchor-id="mit-tidyverse">
 <span class="header-section-number">11.11.3.2</span> Mit <code>tidyverse</code>
 </h4>
@@ -1134,7 +1134,6 @@ Tabelle&nbsp;11.1: Extraversion-Score berechen
 </div>
 </div>
 </div>
-<p>Der Parameter <code>n</code> bei <code>row_means()</code> gibt den Anteil der <em>nicht</em> fehlenden Werte (pro Zeile) wieder, damit ein Wert berechnet wird: Bei zu vielen fehlenden Werten (zu wenig Daten) pro Person wird sonst <code>NA</code> zurückgeliefert. Das ist sinnvoll, denn hat eine Person von 10 Items nur 1 Item beantwortet, so kann man wohl nicht zuverlässig sagen, dass Extraversion in seiner Breite zuverlässig geschätzt wird. Die Funktion fügt dem Datensatz eine Spalte hinzu, deren Name mit <code>var</code> angegeben wird.</p>
 </section></section></section><section id="standardisieren-mit-z-werten" class="level2" data-number="11.12"><h2 data-number="11.12" class="anchored" data-anchor-id="standardisieren-mit-z-werten">
 <span class="header-section-number">11.12</span> Standardisieren mit z-Werten</h2>
 <p>Man kann die Aussagekraft eines Mittelwerts noch erhöhen, in dem man ihn standardisiert, z. B. mit der z-Transformation. Das geht zum Beispiel so:</p>
