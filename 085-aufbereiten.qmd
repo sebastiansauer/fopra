@@ -1,3 +1,8 @@
+---
+output: html_document
+editor_options: 
+  chunk_output_type: console
+---
 # Auswerten: Daten aufbereiten
 
 
@@ -45,37 +50,6 @@ extra <- data_read(data_url)  # aus `{easystats}`
 
 
 Anstelle von `data_read` könnten Sie auch `read_csv` (Tidyverse) oder `read.csv` (Standard-R) verwenden.
-
-## Wir brachen brave Daten
-
-Wie muss eine Tabelle aufgebaut sein,
-damit man sie gut in R importieren kann, bzw. gut damit weiterarbeiten kann?
-
-
-
-Im Überblick sollten Sie auf Folgendes achten:
-
-- Wenn Sie händisch Daten eintragen, hacken Sie das einfach in Excel sein.
-- CSV-Dateien bieten sich als Datenformat an.
-- Alternativ kann man auch Excel-Dateien in R importieren.
-- Es muss genau eine Kopfzeile geben.
-- Es darf keine Lücken geben (leere Zeilen oder Spalten oder Zellen).
-- Vermeiden Sie Umlaute und Leerzeichen in den Variablennamen.
-- Die Daten sollten dem Prinzip von "tidy data" folgen.
-
-
-
-:::{.callout-important}
-### Tidy Data
-Beachten Sie das Prinzip von "tidy data":
-
-- In jeder Zeile steht *eine Beobachtung*.
-- In jeder Spalte steht *eine Variable*.
-- In jeder Zelle steht *eine Wert*. $\square$
-:::
-
-
-[Hier ist eine gute Quelle](https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989) für weitere Erläuterung zu diesem Thema.
 
 
 ## Typische Schritte beim Daten aufbereiten
