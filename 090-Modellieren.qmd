@@ -34,8 +34,9 @@ theme_set(theme_minimal())
 #| message: false
 library(tidyverse)
 library(easystats)
-library(ggstatsplot)
-library(rstanarm)
+library(ggstatsplot)  # Visualisierung
+library(ggpubr)  # Visualisierung
+library(rstanarm)  # Bayes
 ```
 
 
@@ -165,6 +166,8 @@ d_bringtnixtin %>%
 ```
 
 
+
+
 ```{r}
 #| echo: false
 #| label: tbl-bringtnixtin-desk
@@ -175,12 +178,16 @@ d_bringtnixtin %>%
             iq_sd = sd(y2)) 
 ```
 
-Die deskriptiven Kennwerte sind in @fig-bringtnixtin-desk dargestellt.
+Die deskriptiven Kennwerte sind in @fig-bringtnixtin-desk1 bzw. @fig-bringtnixtin-desk1 visualisiert.
 Das sieht nicht gerade nach einem großen Effekt aus ...^[Die Mittelwerte der beiden Gruppen sind praktisch identisch.]
 
+:::{.panel-tabset}
+
+
+### Mit ggstatsplot
 
 ```{r}
-#| label: fig-bringtnixtin-desk
+#| label: fig-bringtnixtin-desk1
 #| fig-cap: "Fluide Intelligenz (y2) nach der Bringtnixtin-Intervention. g=0: Kontrollgruppe (Placebo), g=1: Experimentalgruppe (hohe Dosis)"
 ggbetweenstats(
   data = d_bringtnixtin,
@@ -191,6 +198,20 @@ ggbetweenstats(
 ```
 
 
+#### Mit ggpubr
+
+```{r}
+#| label: fig-bringtnixtin-desk2
+#| fig-cap: "Fluide Intelligenz (y2) nach der Bringtnixtin-Intervention. g=0: Kontrollgruppe (Placebo), g=1: Experimentalgruppe (hohe Dosis)"
+ggboxplot(
+  data = d_bringtnixtin,
+  x = "g",
+  y = "y2"
+)
+```
+::::
+
+Sowohl das R-Paket `ggstatsplot` als auch das R-Paket `ggpubr` bieten ansprechende Datenvisualisierung.^[Beide bauen auf dem R-Paket `ggplot` auf, sind also eigentlich nur "Abkürzungen".]
 
 ### Modellierung
 
@@ -938,7 +959,9 @@ Die Inferenzstatistik hilft, die Modellparameter mit Schätzwerten für die Popu
 ## Aufgaben
 
 
-S. bei [Datenwerk]() die Aufgaben mit dem Tag [research-question](https://datenwerk.netlify.app/#category=research-question) und [researchdesign](https://datenwerk.netlify.app/#category=researchdesign)
+Schauen Sie sich im [Datenwerk](https://datenwerk.netlify.app/) die Aufgaben mit folgenden Tags an:
 
-
-- [within-design-analysis1](https://datenwerk.netlify.app/posts/within-design-analysis1/within-design-analysis1.html)
+- [research-question](https://datenwerk.netlify.app/#category=research-question) - [researchdesign](https://datenwerk.netlify.app/#category=researchdesign)
+<!-- - [within-design-analysis1](https://datenwerk.netlify.app/posts/within-design-analysis1/within-design-analysis1.html) -->
+- [inference](https://datenwerk.netlify.app/#category=inference)
+- [bayes](https://datenwerk.netlify.app/#category=bayes)

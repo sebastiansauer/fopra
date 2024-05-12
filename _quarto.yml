@@ -54,6 +54,8 @@ book:
         - 060-Messen.qmd
         - 070-Erheben.qmd
         - 075-kausal.qmd
+    - part: "Auswerten"
+      chapters:
         - 080-Auswerten.qmd
         - 085-aufbereiten.qmd
         - 090-Modellieren.qmd

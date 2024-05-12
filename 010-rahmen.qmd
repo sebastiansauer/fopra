@@ -380,7 +380,7 @@ Habe den Mut, dich deines eigenen Verstandes zu bedienen! Das Motto Kants fasst 
 :::{#def-repro}
 ### Reproduzierbarkeit
 
-Reproduzierbarkeit ("Wiederholbarkeit") ist das Vermögen, eine Analyse durch Dritte zu wiederholen und zu einem ähnlichen (gleichen) Ergebnis wie in der ursprünglichen Analyse zu bekommen.$\square$
+Reproduzierbarkeit ("Wiederholbarkeit") ist das Vermögen, eine Analyse durch Dritte zu wiederholen und zu einem ähnlichen (gleichen) Ergebnis wie in der ursprünglichen Analyse zu bekommen. Es handelt sich um ein Kernkriterium für wissenschaftliche Qualität. $\square$
 :::
 
 

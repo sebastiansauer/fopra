@@ -249,7 +249,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./080-Auswerten.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Auswerten: Überblick</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Auswerten: Grundlagen</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -311,59 +311,22 @@ window.Quarto = {
   <li><a href="#ben%C3%B6tigte-r-pakete-und-daten" id="toc-benötigte-r-pakete-und-daten" class="nav-link" data-scroll-target="#ben%C3%B6tigte-r-pakete-und-daten"><span class="header-section-number">11.1.3</span> Benötigte R-Pakete und Daten</a></li>
   </ul>
 </li>
-  <li><a href="#typische-schritte-beim-daten-aufbereiten" id="toc-typische-schritte-beim-daten-aufbereiten" class="nav-link" data-scroll-target="#typische-schritte-beim-daten-aufbereiten"><span class="header-section-number">11.2</span> Typische Schritte beim Daten aufbereiten</a></li>
   <li>
-<a href="#datentabellen-zusammenf%C3%BChren" id="toc-datentabellen-zusammenführen" class="nav-link" data-scroll-target="#datentabellen-zusammenf%C3%BChren"><span class="header-section-number">11.3</span> Datentabellen zusammenführen</a>
+<a href="#typische-schritte-beim-daten-aufbereiten" id="toc-typische-schritte-beim-daten-aufbereiten" class="nav-link" data-scroll-target="#typische-schritte-beim-daten-aufbereiten"><span class="header-section-number">11.2</span> Typische Schritte beim Daten aufbereiten</a>
   <ul class="collapse">
-<li><a href="#zeilenweises-zusammenf%C3%BChren" id="toc-zeilenweises-zusammenführen" class="nav-link" data-scroll-target="#zeilenweises-zusammenf%C3%BChren"><span class="header-section-number">11.3.1</span> Zeilenweises zusammenführen</a></li>
-  <li><a href="#spaltenweises-zusammenf%C3%BChren-1" id="toc-spaltenweises-zusammenführen-1" class="nav-link" data-scroll-target="#spaltenweises-zusammenf%C3%BChren-1"><span class="header-section-number">11.3.2</span> Spaltenweises Zusammenführen 1</a></li>
-  <li><a href="#spaltenweises-zusammenf%C3%BChren-2" id="toc-spaltenweises-zusammenführen-2" class="nav-link" data-scroll-target="#spaltenweises-zusammenf%C3%BChren-2"><span class="header-section-number">11.3.3</span> Spaltenweises Zusammenführen 2</a></li>
+<li><a href="#datentabellen-zusammenf%C3%BChren" id="toc-datentabellen-zusammenführen" class="nav-link" data-scroll-target="#datentabellen-zusammenf%C3%BChren"><span class="header-section-number">11.2.1</span> Datentabellen zusammenführen</a></li>
+  <li><a href="#text-in-zahlen-umwandeln" id="toc-text-in-zahlen-umwandeln" class="nav-link" data-scroll-target="#text-in-zahlen-umwandeln"><span class="header-section-number">11.2.2</span> Text in Zahlen umwandeln</a></li>
+  <li><a href="#items-umkodieren" id="toc-items-umkodieren" class="nav-link" data-scroll-target="#items-umkodieren"><span class="header-section-number">11.2.3</span> Items umkodieren</a></li>
+  <li><a href="#item-labels-in-zahlen-umwandeln" id="toc-item-labels-in-zahlen-umwandeln" class="nav-link" data-scroll-target="#item-labels-in-zahlen-umwandeln"><span class="header-section-number">11.2.4</span> Item-Labels in Zahlen umwandeln</a></li>
+  <li><a href="#fehlende-werte-ersetzen" id="toc-fehlende-werte-ersetzen" class="nav-link" data-scroll-target="#fehlende-werte-ersetzen"><span class="header-section-number">11.2.5</span> Fehlende Werte ersetzen</a></li>
+  <li><a href="#zeilen-f%C3%A4lle-l%C3%B6schen" id="toc-zeilen-fälle-löschen" class="nav-link" data-scroll-target="#zeilen-f%C3%A4lle-l%C3%B6schen"><span class="header-section-number">11.2.6</span> Zeilen (Fälle) löschen</a></li>
+  <li><a href="#datenqualit%C3%A4t-pr%C3%BCfen" id="toc-datenqualität-prüfen" class="nav-link" data-scroll-target="#datenqualit%C3%A4t-pr%C3%BCfen"><span class="header-section-number">11.2.7</span> Datenqualität prüfen</a></li>
+  <li><a href="#scores-berechnen" id="toc-scores-berechnen" class="nav-link" data-scroll-target="#scores-berechnen"><span class="header-section-number">11.2.8</span> Scores berechnen</a></li>
+  <li><a href="#standardisieren-mit-z-werten" id="toc-standardisieren-mit-z-werten" class="nav-link" data-scroll-target="#standardisieren-mit-z-werten"><span class="header-section-number">11.2.9</span> Standardisieren mit z-Werten</a></li>
   </ul>
 </li>
-  <li>
-<a href="#text-in-zahlen-umwandeln" id="toc-text-in-zahlen-umwandeln" class="nav-link" data-scroll-target="#text-in-zahlen-umwandeln"><span class="header-section-number">11.4</span> Text in Zahlen umwandeln</a>
-  <ul class="collapse">
-<li><a href="#hilfe-ich-habe-keine-zahlen" id="toc-hilfe-ich-habe-keine-zahlen" class="nav-link" data-scroll-target="#hilfe-ich-habe-keine-zahlen"><span class="header-section-number">11.4.1</span> Hilfe, ich habe keine Zahlen</a></li>
-  <li><a href="#introducing-parse_number" id="toc-introducing-parse_number" class="nav-link" data-scroll-target="#introducing-parse_number"><span class="header-section-number">11.4.2</span> Introducing <code>parse_number()</code></a></li>
-  <li><a href="#schleifen-befehl-auf-mehrere-spalten-anwenden" id="toc-schleifen-befehl-auf-mehrere-spalten-anwenden" class="nav-link" data-scroll-target="#schleifen-befehl-auf-mehrere-spalten-anwenden"><span class="header-section-number">11.4.3</span> Schleifen: Befehl auf mehrere Spalten anwenden</a></li>
-  </ul>
-</li>
-  <li><a href="#items-umkodieren" id="toc-items-umkodieren" class="nav-link" data-scroll-target="#items-umkodieren"><span class="header-section-number">11.5</span> Items umkodieren</a></li>
-  <li><a href="#item-labels-in-zahlen-umwandeln" id="toc-item-labels-in-zahlen-umwandeln" class="nav-link" data-scroll-target="#item-labels-in-zahlen-umwandeln"><span class="header-section-number">11.6</span> Item-Labels in Zahlen umwandeln</a></li>
-  <li><a href="#fehlende-werte-ersetzen" id="toc-fehlende-werte-ersetzen" class="nav-link" data-scroll-target="#fehlende-werte-ersetzen"><span class="header-section-number">11.7</span> Fehlende Werte ersetzen</a></li>
-  <li>
-<a href="#zeilen-f%C3%A4lle-l%C3%B6schen" id="toc-zeilen-fälle-löschen" class="nav-link" data-scroll-target="#zeilen-f%C3%A4lle-l%C3%B6schen"><span class="header-section-number">11.8</span> Zeilen (Fälle) löschen</a>
-  <ul class="collapse">
-<li><a href="#vertiefung" id="toc-vertiefung" class="nav-link" data-scroll-target="#vertiefung"><span class="header-section-number">11.8.1</span> Vertiefung</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#datenqualit%C3%A4t-pr%C3%BCfen" id="toc-datenqualität-prüfen" class="nav-link" data-scroll-target="#datenqualit%C3%A4t-pr%C3%BCfen"><span class="header-section-number">11.9</span> Datenqualität prüfen</a>
-  <ul class="collapse">
-<li><a href="#auf-dublikate-pr%C3%BCfen" id="toc-auf-dublikate-prüfen" class="nav-link" data-scroll-target="#auf-dublikate-pr%C3%BCfen"><span class="header-section-number">11.9.1</span> Auf Dublikate prüfen</a></li>
-  <li><a href="#auf-eingabefehler-pr%C3%BCfen" id="toc-auf-eingabefehler-prüfen" class="nav-link" data-scroll-target="#auf-eingabefehler-pr%C3%BCfen"><span class="header-section-number">11.9.2</span> Auf Eingabefehler prüfen</a></li>
-  <li><a href="#geringe-eingabequalit%C3%A4t" id="toc-geringe-eingabequalität" class="nav-link" data-scroll-target="#geringe-eingabequalit%C3%A4t"><span class="header-section-number">11.9.3</span> Geringe Eingabequalität</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#scores-berechnen" id="toc-scores-berechnen" class="nav-link" data-scroll-target="#scores-berechnen"><span class="header-section-number">11.10</span> Scores berechnen</a>
-  <ul class="collapse">
-<li><a href="#summen--und-mittelwerte" id="toc-summen--und-mittelwerte" class="nav-link" data-scroll-target="#summen--und-mittelwerte"><span class="header-section-number">11.10.1</span> Summen- und Mittelwerte</a></li>
-  <li><a href="#vertiefung-summen--vs.-mittelwertscores" id="toc-vertiefung-summen--vs.-mittelwertscores" class="nav-link" data-scroll-target="#vertiefung-summen--vs.-mittelwertscores"><span class="header-section-number">11.10.2</span> Vertiefung: Summen- vs.&nbsp;Mittelwertscores</a></li>
-  <li><a href="#berechnung-mit-r" id="toc-berechnung-mit-r" class="nav-link" data-scroll-target="#berechnung-mit-r"><span class="header-section-number">11.10.3</span> Berechnung mit R</a></li>
-  </ul>
-</li>
-  <li><a href="#standardisieren-mit-z-werten" id="toc-standardisieren-mit-z-werten" class="nav-link" data-scroll-target="#standardisieren-mit-z-werten"><span class="header-section-number">11.11</span> Standardisieren mit z-Werten</a></li>
-  <li>
-<a href="#daten-zusammenfassen-deskriptive-analyse" id="toc-daten-zusammenfassen-deskriptive-analyse" class="nav-link" data-scroll-target="#daten-zusammenfassen-deskriptive-analyse"><span class="header-section-number">11.12</span> Daten zusammenfassen (deskriptive Analyse)</a>
-  <ul class="collapse">
-<li><a href="#deskriptive-ergebnisse-f%C3%BCr-metrische-variablen" id="toc-deskriptive-ergebnisse-für-metrische-variablen" class="nav-link" data-scroll-target="#deskriptive-ergebnisse-f%C3%BCr-metrische-variablen"><span class="header-section-number">11.12.1</span> Deskriptive Ergebnisse für metrische Variablen</a></li>
-  <li><a href="#deskriptive-ergebnisse-f%C3%BCr-nominale-variablen" id="toc-deskriptive-ergebnisse-für-nominale-variablen" class="nav-link" data-scroll-target="#deskriptive-ergebnisse-f%C3%BCr-nominale-variablen"><span class="header-section-number">11.12.2</span> Deskriptive Ergebnisse für nominale Variablen</a></li>
-  <li><a href="#korrelationen-darstellen" id="toc-korrelationen-darstellen" class="nav-link" data-scroll-target="#korrelationen-darstellen"><span class="header-section-number">11.12.3</span> Korrelationen darstellen</a></li>
-  </ul>
-</li>
-  <li><a href="#aufgaben" id="toc-aufgaben" class="nav-link" data-scroll-target="#aufgaben"><span class="header-section-number">11.13</span> Aufgaben</a></li>
-  <li><a href="#fallstudien" id="toc-fallstudien" class="nav-link" data-scroll-target="#fallstudien"><span class="header-section-number">11.14</span> Fallstudien</a></li>
+  <li><a href="#aufgaben" id="toc-aufgaben" class="nav-link" data-scroll-target="#aufgaben"><span class="header-section-number">11.3</span> Aufgaben</a></li>
+  <li><a href="#fallstudien" id="toc-fallstudien" class="nav-link" data-scroll-target="#fallstudien"><span class="header-section-number">11.4</span> Fallstudien</a></li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/sebastiansauer/fopra/blob/main/085-aufbereiten.qmd" class="toc-action"><i class="bi bi-github"></i>Quellcode anzeigen</a></li><li><a href="https://github.com/sebastiansauer/fopra/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
@@ -421,8 +384,8 @@ window.Quarto = {
 <li>Ausreißer behandeln</li>
 </ul>
 <p>Betrachten wir im Folgenden einige zentrale Aspekte dieser Schritte.</p>
-</section><section id="datentabellen-zusammenführen" class="level2" data-number="11.3"><h2 data-number="11.3" class="anchored" data-anchor-id="datentabellen-zusammenführen">
-<span class="header-section-number">11.3</span> Datentabellen zusammenführen</h2>
+<section id="datentabellen-zusammenführen" class="level3" data-number="11.2.1"><h3 data-number="11.2.1" class="anchored" data-anchor-id="datentabellen-zusammenführen">
+<span class="header-section-number">11.2.1</span> Datentabellen zusammenführen</h3>
 <p>Sie haben die Daten anhand mehrerer Fragebogen erhoben? Oder Sie haben mehrere Gruppen untersucht? Jetzt haben Sie <em>mehrere</em> Datentabellen, die auf eine Analyse harren?</p>
 <p><em>Verheiraten</em> ist angesagt: Sie müssen <em>alle</em> Teiltabellen in <em>eine</em> Tabelle (Datensatz) bringen.</p>
 <p>Dazu kann man zwei Fälle unterscheiden:</p>
@@ -434,8 +397,8 @@ window.Quarto = {
 <p>Um es in R zu erledigen, müssen Sie erst eine Idee verstehen und dann etwas Syntax lernen. Warum sollten Sie die vielleicht 10 Minuten Lernaufwand investieren?</p>
 <p>Ein Grund ist, dass es sinnvoll für Ihre berufliche Entwicklung ein Kernkonzept der Datenaufbereitung zu verstehen.</p>
 <p>Ein anderer Grund ist, dass Sie mit einer Skriptsprache (wie R) ein “Kochrezept” erstellen, dass Sie ohne Zusatzaufwand wiederholt durchlaufen lassen können. Und, glauben Sie mir, in einer Datenanalyse passiert es oft, dass man mehrere (viele!) Durchläufe braucht, bis man mit dem Ergebnis zufrieden ist. Außerdem dokumentiert so ein Kochrezept Ihr Vorgehen transparent. Reproduzierbarkeit ist zentral für die Wissenschaft (und Technik).</p>
-<section id="zeilenweises-zusammenführen" class="level3" data-number="11.3.1"><h3 data-number="11.3.1" class="anchored" data-anchor-id="zeilenweises-zusammenführen">
-<span class="header-section-number">11.3.1</span> Zeilenweises zusammenführen</h3>
+<section id="zeilenweises-zusammenführen" class="level4" data-number="11.2.1.1"><h4 data-number="11.2.1.1" class="anchored" data-anchor-id="zeilenweises-zusammenführen">
+<span class="header-section-number">11.2.1.1</span> Zeilenweises zusammenführen</h4>
 <div id="exm-bind-rows" class="theorem example">
 <p><span class="theorem-title"><strong>Beispiel 11.1</strong></span> <em>Jede Versuchsperson</em> Ihrer Studie hat zwei (oder mehrere) Fragebögen ausgefüllt. In Datensatz A finden sich die ersten paar Variablen und in Datensatz B die restlichen Variablen. Aber in beiden Datensätzen kommen alle Personen vor. <span class="math inline">\(\square\)</span></p>
 </div>
@@ -469,8 +432,8 @@ Listing&nbsp;11.1
 </div>
 </figure>
 </div>
-</section><section id="spaltenweises-zusammenführen-1" class="level3" data-number="11.3.2"><h3 data-number="11.3.2" class="anchored" data-anchor-id="spaltenweises-zusammenführen-1">
-<span class="header-section-number">11.3.2</span> Spaltenweises Zusammenführen 1</h3>
+</section><section id="spaltenweises-zusammenführen-1" class="level4" data-number="11.2.1.2"><h4 data-number="11.2.1.2" class="anchored" data-anchor-id="spaltenweises-zusammenführen-1">
+<span class="header-section-number">11.2.1.2</span> Spaltenweises Zusammenführen 1</h4>
 <div id="exm-bind-cols" class="theorem example">
 <p><span class="theorem-title"><strong>Beispiel 11.2</strong></span> <em>In jeder Gruppe</em> Ihrer Studie wurde ein anderer Fragebogen ausgefüllt (z. B. weil Sie unterschiedliche experimentelle Gruppen untersucht haben). Sie haben also zwei Datensätze mit unterschiedlichen Personen (nämlich in Datensatz A die Personen der Gruppe A und in Datensatz B die Personen der Gruppe B). Aber in jedem Datensatz finden sich die gleichen Variablen. <span class="math inline">\(\square\)</span></p>
 </div>
@@ -516,8 +479,8 @@ Vorsicht
 <p><em>Achtung</em> Diese Art des Zusammenfügens prüft <em>nicht</em>, ob die Sortierung der Tabellen identisch ist: Ob also die Zeile für “Schorsch” aus Tabelle 1 auch mit Schorschs Zeile aus Tabelle 2 zusammengefügt werden (und nicht etwas mit denen von Alois). Sie müssen also selber dafür sorgen, dass die Sortierung richtig ist. Alternativ könnten Sie mit einem <code>join</code> arbeiten, der die korrekte Sortierung für Sie übernimmt. <span class="math inline">\(\square\)</span></p>
 </div>
 </div>
-</section><section id="spaltenweises-zusammenführen-2" class="level3" data-number="11.3.3"><h3 data-number="11.3.3" class="anchored" data-anchor-id="spaltenweises-zusammenführen-2">
-<span class="header-section-number">11.3.3</span> Spaltenweises Zusammenführen 2</h3>
+</section><section id="spaltenweises-zusammenführen-2" class="level4" data-number="11.2.1.3"><h4 data-number="11.2.1.3" class="anchored" data-anchor-id="spaltenweises-zusammenführen-2">
+<span class="header-section-number">11.2.1.3</span> Spaltenweises Zusammenführen 2</h4>
 <p><a href="#fig-full-join" class="quarto-xref">Abbildung&nbsp;<span>11.3</span></a> veranschaulicht das spaltenweise Zusammenführen, wenn die Sortierung der Tabellen nicht übereinstimmt.</p>
 <div id="def-join" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 11.1 (Join zweier Tabellen)</strong></span> Das spaltenweise Zusammenführen zweier Tabellen unter der Beachtung der Sortierung nennt man einen “Join”. Genauer gesagt versteht man unter “Sortierung” die Beachtung der Werte einer ID-Spalte (auch “Key-Spalte”) genannt. <span class="math inline">\(\square\)</span></p>
@@ -531,10 +494,10 @@ Abbildung&nbsp;11.3: Das “Joinen” zweier Tabellen
 </figcaption></figure>
 </div>
 <p>Bildquelle: <a href="https://www.garrickadenbuie.com/project/tidyexplain/">Garrick Aden-Buie</a>, <a href="https://www.garrickadenbuie.com/colophon/">CC-BY-SA 4.0</a></p>
-</section></section><section id="text-in-zahlen-umwandeln" class="level2" data-number="11.4"><h2 data-number="11.4" class="anchored" data-anchor-id="text-in-zahlen-umwandeln">
-<span class="header-section-number">11.4</span> Text in Zahlen umwandeln</h2>
-<section id="hilfe-ich-habe-keine-zahlen" class="level3" data-number="11.4.1"><h3 data-number="11.4.1" class="anchored" data-anchor-id="hilfe-ich-habe-keine-zahlen">
-<span class="header-section-number">11.4.1</span> Hilfe, ich habe keine Zahlen</h3>
+</section></section><section id="text-in-zahlen-umwandeln" class="level3" data-number="11.2.2"><h3 data-number="11.2.2" class="anchored" data-anchor-id="text-in-zahlen-umwandeln">
+<span class="header-section-number">11.2.2</span> Text in Zahlen umwandeln</h3>
+<section id="hilfe-ich-habe-keine-zahlen" class="level4" data-number="11.2.2.1"><h4 data-number="11.2.2.1" class="anchored" data-anchor-id="hilfe-ich-habe-keine-zahlen">
+<span class="header-section-number">11.2.2.1</span> Hilfe, ich habe keine Zahlen</h4>
 <p>Kennen Sie das? Sie haben eine Umfrage durchgeführt, Daten sind erhoben, puh, bald können Sie das Projekt abschließen.</p>
 <p>Jetzt haben Sie die Daten in R importiert, aber müssen zu Ihrem Schrecken feststellen, dass die Spalten (Variablen) die eigentlich Zahlen sein sollten, als <code>character</code>, Text also, formatiert sind in R.</p>
 <p>Anstelle der Zahl <code>5</code> steht in der Spalte also <code>"5"</code> (man beachte die Anführungszeichen, die anzeigen, dass es sich um einen Text handelt).</p>
@@ -568,9 +531,9 @@ Abbildung&nbsp;11.3: Das “Joinen” zweier Tabellen
 <p>Stellen Sie sich vor, die Tabelle ist ein Auszug aus Ihrer Umfrage, wobei <code>i01</code> das erste Item (Frage) Ihres Fragebogens darstellt etc.</p>
 <p>Wie kann man R beibringen, dass die fraglichen Spalte <code>i01</code> doch “in Wirklichkeit” Zahlen sind und kein Text?</p>
 <p>Welcher R-Befehl hilft hier?</p>
-</section><section id="introducing-parse_number" class="level3" data-number="11.4.2"><h3 data-number="11.4.2" class="anchored" data-anchor-id="introducing-parse_number">
-<span class="header-section-number">11.4.2</span> Introducing <code>parse_number()</code>
-</h3>
+</section><section id="introducing-parse_number" class="level4" data-number="11.2.2.2"><h4 data-number="11.2.2.2" class="anchored" data-anchor-id="introducing-parse_number">
+<span class="header-section-number">11.2.2.2</span> Introducing <code>parse_number()</code>
+</h4>
 <p><code><a href="https://readr.tidyverse.org/reference/parse_number.html">parse_number()</a></code> (aus <a href="https://tidyverse.tidyverse.org">tidyverse</a>) löst das Problem für Sie:</p>
 <div class="cell">
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">d2</span> <span class="op">&lt;-</span> </span>
@@ -634,8 +597,11 @@ Abbildung&nbsp;11.3: Das “Joinen” zweier Tabellen
 <!-- data_rec %>%  -->
 <!--   count(sex_r) -->
 <!-- ``` -->
-</section><section id="schleifen-befehl-auf-mehrere-spalten-anwenden" class="level3" data-number="11.4.3"><h3 data-number="11.4.3" class="anchored" data-anchor-id="schleifen-befehl-auf-mehrere-spalten-anwenden">
-<span class="header-section-number">11.4.3</span> Schleifen: Befehl auf mehrere Spalten anwenden</h3>
+</section><section id="vertiefung-schleifen" class="level4" data-number="11.2.2.3"><h4 data-number="11.2.2.3" class="anchored" data-anchor-id="vertiefung-schleifen">
+<span class="header-section-number">11.2.2.3</span> VERTIEFUNG Schleifen</h4>
+<div id="def-schleife" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 11.2 (Schleife)</strong></span> Eine Schleife ist ein Operation, die einen Befehl (im Rahmen der computergestützten Datenanalyse) mehrfach (wiederholt) ausführt. Da im Kontext der Datenanalyse oft mit Tabellen gearbeitet wird, bezieht sich die Wiederholung oft auf eine Spalten-Operation, die dann für mehrere Spalten wiederholt wird. <span class="math inline">\(\square\)</span></p>
+</div>
 <p>Wir können einen Befehl auf mehrere Spalten einer Tabelle anwenden, und zwar mit <code>across</code> (aus <code>tidyverse</code>):</p>
 <div class="cell">
 <div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">d</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
@@ -662,8 +628,8 @@ Abbildung&nbsp;11.3: Das “Joinen” zweier Tabellen
 </div>
 </div>
 <p>Natürlich müssen Sie <code>across</code> nicht verwenden; Sie können auch “von Hand” die Spalten einzeln beatmen und jeweils (pro Spalte) <code>as.character</code> und <code>parse_number</code> anwenden.</p>
-</section></section><section id="items-umkodieren" class="level2" data-number="11.5"><h2 data-number="11.5" class="anchored" data-anchor-id="items-umkodieren">
-<span class="header-section-number">11.5</span> Items umkodieren</h2>
+</section></section><section id="items-umkodieren" class="level3" data-number="11.2.3"><h3 data-number="11.2.3" class="anchored" data-anchor-id="items-umkodieren">
+<span class="header-section-number">11.2.3</span> Items umkodieren</h3>
 <p>In Fragebogen werden immer wieder Items <em>negativ</em> kodiert. Das bedeutet, dass sie gegenteilig zum messenden Konstrukt formuliert sind. Ist das Konstrukt Extraversion, so würde ein negatives Item im Sinne von Introversion kodiert sein. Ein Beispiel-Item für negative Kodierung wäre: “Ich bin ein Couch-Potato” oder “Ich bleibe am liebsten alleine zuhause.”</p>
 <p>Zuerst müssen wir die Anzahl der Antwortstufen wissen; diese Information findet sich in der Dokumentation der Skala (im “Manual” auch “Testdokumentation” oder “Benutzerhandbuch” genannt). Natürlich kann man prüfen, welche Antwortstufen die Respondenten gefunden haben, aber man wäre nicht sicher, ob auch alle möglichen Antworten ausgeschöpft wurden.</p>
 <p>Im vorliegenden Fall ist der Dokumentation des Instruments zu entnehmen, dass jedes Item vier Antwortstufen (Likertformat) aufweist. Likert-skalierte Items zeichnen sich dadurch aus, dass sie so formuliert sind, dass höhere Werte in der Antwortstufe mit höherer Ausprägung des zu messenden Konstrukts einher gehen.</p>
@@ -685,8 +651,8 @@ alter Wert --&gt; neuer Wert</code></pre>
 <p>In diesem Fall ist das Item <code>i02r</code> bereits umkodiert – genau wie alle Items im Datensatz die mit dem Suffix <code>r</code> gekennzeichnet sind. Daher war das Umkodieren hier nicht nötig – sogar <em>falsch</em>, um genau zu sein. Das diente nur zu Übungszwecken. In anderen Situationen kann es aber nötig sein, Items umzukodieren. Vergessen Sie dann nicht, das Ergebnis (die resultierende Tabelle) als (neuen) Datensatz zu speichern.</p>
 <p>Alternativ zu <code>recode_values</code> können Sie auch folgende Rechenmethode verwenden:</p>
 <p><span class="math display">\[\text{neuer Wert} = \text{Anzahl Kategorien} + 1 - \text{alter Wert}\]</span> Diese Rechenmethode funktioniert aber nur, wenn z. B. bei vier Antwortstufen die Ausprägungen mit 1,2,3,4 kodiert sind. Allgemeiner: Bei <span class="math inline">\(n\)</span> Ausprägungen müssen die Werte mit <span class="math inline">\(1,2, \ldots, n\)</span> kodiert sein, so dass die Ausprägungen den Werten entsprechen.</p>
-</section><section id="item-labels-in-zahlen-umwandeln" class="level2" data-number="11.6"><h2 data-number="11.6" class="anchored" data-anchor-id="item-labels-in-zahlen-umwandeln">
-<span class="header-section-number">11.6</span> Item-Labels in Zahlen umwandeln</h2>
+</section><section id="item-labels-in-zahlen-umwandeln" class="level3" data-number="11.2.4"><h3 data-number="11.2.4" class="anchored" data-anchor-id="item-labels-in-zahlen-umwandeln">
+<span class="header-section-number">11.2.4</span> Item-Labels in Zahlen umwandeln</h3>
 <p>Eine ähnliche Sache wie das Umpolen von Items ist folgende Situation: Ihre Umfrage-Software spuckt als Item-Antworten die “Ankertexte” oder “Itemlabels” aus wie <em>stimme überhaupt nicht zu</em> oder <em>stimme voll und ganz zu</em>. Da man bekanntlich (höchstens) mit Zahlen aber nicht mit Texten rechnen kann, möchten Sie diese Itemlabels in Zahlen umwandeln. Das sieht dann ähnlich zu folgendem Wenn-Dann-Regel-Schema aus:</p>
 <pre><code>stimme voll und ganz zu --&gt; 4
 stimme eher zu --&gt; 3
@@ -731,8 +697,8 @@ stimme überhaupt nicht zu --&gt; 1</code></pre>
           Prüfung2 ~ Konsequenz)</code></pre>
 <p>Nur wenn <code>Prüfung</code> erfüllt ist (den Wert <code>TRUE</code> hat), dann wird <code>Konsequenz</code> ausgeführt. Ansonsten wird auf <code>Prüfung2</code> getestet, etc.</p>
 <p>Eine alternativer Weg des Umkodierens ist <code>recode_value()</code> aus <code>easystats</code> zu nutzen.</p>
-</section><section id="fehlende-werte-ersetzen" class="level2" data-number="11.7"><h2 data-number="11.7" class="anchored" data-anchor-id="fehlende-werte-ersetzen">
-<span class="header-section-number">11.7</span> Fehlende Werte ersetzen</h2>
+</section><section id="fehlende-werte-ersetzen" class="level3" data-number="11.2.5"><h3 data-number="11.2.5" class="anchored" data-anchor-id="fehlende-werte-ersetzen">
+<span class="header-section-number">11.2.5</span> Fehlende Werte ersetzen</h3>
 <p>Wie geht man mit fehlenden Werten um? Das ist im Detail keine leichte Frage. Eine einfache Antwort ist: alle Zeilen mit fehlenden Werten löschen. Das hat aber den Nachteil, dass man ggf. viele Daten verliert. Eine andere einfache Antwort lautet: Nichts machen. Das kann ein sinvoller Start sein; zumindest macht man nichts kaputt.</p>
 <p>Was die ID-Spalte betrifft, sollte man aber fehlende Werte ersetzen, damit man jede Zeile identifizieren kann.</p>
 <div class="cell">
@@ -743,8 +709,10 @@ stimme überhaupt nicht zu --&gt; 1</code></pre>
 <div id="exr-nona-id" class="theorem exercise">
 <p><span class="theorem-title"><strong>Übungsaufgabe 11.1</strong></span> Betrachten Sie beide Tabellen (mit der Tabellenansicht in RStudio) und finden Sie den Unterschied in der Spalte <code>code</code>. <span class="math inline">\(\square\)</span></p>
 </div>
-</section><section id="zeilen-fälle-löschen" class="level2" data-number="11.8"><h2 data-number="11.8" class="anchored" data-anchor-id="zeilen-fälle-löschen">
-<span class="header-section-number">11.8</span> Zeilen (Fälle) löschen</h2>
+</section><section id="zeilen-fälle-löschen" class="level3" data-number="11.2.6"><h3 data-number="11.2.6" class="anchored" data-anchor-id="zeilen-fälle-löschen">
+<span class="header-section-number">11.2.6</span> Zeilen (Fälle) löschen</h3>
+<section id="zeilen-löschen-nach-id-spalte" class="level4" data-number="11.2.6.1"><h4 data-number="11.2.6.1" class="anchored" data-anchor-id="zeilen-löschen-nach-id-spalte">
+<span class="header-section-number">11.2.6.1</span> Zeilen löschen nach ID-Spalte</h4>
 <p>In jeder braven Tabelle steht pro Zeile (genau) ein Fall; mit “Fall”, auch als “Beobachtung” bezeichnet, ist ein Untersuchungsobjekt gemeint. Häufig sind das in der Psychologie Personen, es könnten aber auch z. B. Versuchsdurchgänge, Teams oder Firmen sein. Sagen wir, Sie möchten einen bestimmten Fall löschen. Der Einfachheit halber nehmen wir den ersten Fall der Tabelle <code>extra</code>. Hier hat jeder Fall schon eine “ID”, eine unique, also eineindeutige Zuordnung, das ist die Spalte <code>code</code>. Auch die Spalte <code>timestamp</code> taugt vermutlich für eine Zuordnung.</p>
 <p>In R könnten Sie die erste Zeile also anhand dieser ID-Spalte ansprechen und entsprechend filtern. Sagen wir, wir möchten die Person/Datenzeile mit der ID “HSC” entfernen:</p>
 <div class="cell">
@@ -752,8 +720,8 @@ stimme überhaupt nicht zu --&gt; 1</code></pre>
 <span>  <span class="va">extra_nona_in_id_col</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="op">(</span><span class="va">code</span> <span class="op">==</span> <span class="st">"HSC"</span><span class="op">)</span><span class="op">)</span>  <span class="co"># ! ist die logische Verneinung</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<section id="vertiefung" class="level3" data-number="11.8.1"><h3 data-number="11.8.1" class="anchored" data-anchor-id="vertiefung">
-<span class="header-section-number">11.8.1</span> Vertiefung</h3>
+</section><section id="vertiefung" class="level4" data-number="11.2.6.2"><h4 data-number="11.2.6.2" class="anchored" data-anchor-id="vertiefung">
+<span class="header-section-number">11.2.6.2</span> Vertiefung</h4>
 <p>Schauen Sie sich mal diese Variante an:</p>
 <div class="cell">
 <div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra_kurz</span> <span class="op">&lt;-</span></span>
@@ -782,8 +750,8 @@ stimme überhaupt nicht zu --&gt; 1</code></pre>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">id</span> <span class="op">!=</span> <span class="fl">1</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <!-- ### Vertiefung: Duplikate entfernen -->
-</section></section><section id="datenqualität-prüfen" class="level2" data-number="11.9"><h2 data-number="11.9" class="anchored" data-anchor-id="datenqualität-prüfen">
-<span class="header-section-number">11.9</span> Datenqualität prüfen</h2>
+</section></section><section id="datenqualität-prüfen" class="level3" data-number="11.2.7"><h3 data-number="11.2.7" class="anchored" data-anchor-id="datenqualität-prüfen">
+<span class="header-section-number">11.2.7</span> Datenqualität prüfen</h3>
 <p>Bevor wir die Daten interpretieren, müssen wir sie auf Herz und Nieren prüfen, ein Daten-Gesundheitscheck<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
 <p>Ein paar typische Probleme, die man immer wieder findet, und die wir gelöst haben wollen, sind:</p>
 <ul>
@@ -795,8 +763,8 @@ stimme überhaupt nicht zu --&gt; 1</code></pre>
 <em>Geringe Eingabequalität</em>: Versuchspersonen haben “Blümchen gekreuzt”, also keine ernsthaften Antworten gegeben</li>
 <li>…</li>
 </ul>
-<section id="auf-dublikate-prüfen" class="level3" data-number="11.9.1"><h3 data-number="11.9.1" class="anchored" data-anchor-id="auf-dublikate-prüfen">
-<span class="header-section-number">11.9.1</span> Auf Dublikate prüfen</h3>
+<section id="auf-dublikate-prüfen" class="level4" data-number="11.2.7.1"><h4 data-number="11.2.7.1" class="anchored" data-anchor-id="auf-dublikate-prüfen">
+<span class="header-section-number">11.2.7.1</span> Auf Dublikate prüfen</h4>
 <p>Betrachten wir der Einfachheit halber folgenden Datensatz, in dem die erste und zweite Zeile identisch sind; die zweite Zeile ist also eine Dublette (Dublikat). Die dritte Zeile ist unique.</p>
 <div class="cell">
 <div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span></span>
@@ -862,8 +830,8 @@ stimme überhaupt nicht zu --&gt; 1</code></pre>
 </div>
 </div>
 </div>
-</section><section id="auf-eingabefehler-prüfen" class="level3" data-number="11.9.2"><h3 data-number="11.9.2" class="anchored" data-anchor-id="auf-eingabefehler-prüfen">
-<span class="header-section-number">11.9.2</span> Auf Eingabefehler prüfen</h3>
+</section><section id="auf-eingabefehler-prüfen" class="level4" data-number="11.2.7.2"><h4 data-number="11.2.7.2" class="anchored" data-anchor-id="auf-eingabefehler-prüfen">
+<span class="header-section-number">11.2.7.2</span> Auf Eingabefehler prüfen</h4>
 <p>Sagen wir, für Variable <code>x</code> ist nur ein einzelner Buchstabe erlaubt; alles andere ist ein Eingabe- oder sonstiger Fehler. Eine Variable vom Typ “Text” heißt in R <code>Character</code> oder <code>String</code>. Mit <code>str_length(x)</code> bekommt man entsprechend die Länge eines Strings. Hier prüfen wir, ob die String-Länge 1 ist, dann alles okay. Wenn die String-Länge von <code>x</code> (für eine bestimmte Zeile) ungleich 1 ist, dann nicht-okay:</p>
 <div class="cell">
 <div class="sourceCode" id="cb31"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df_check</span> <span class="op">&lt;-</span> </span>
@@ -914,8 +882,8 @@ stimme überhaupt nicht zu --&gt; 1</code></pre>
 </div>
 <p><code>case_when</code> arbeitet die Prüfbedingungen <em>zeilenweise</em> ab. Ist die erste Zeile (<code>0&lt;y &amp; y&lt;=5</code>) nicht erfüllt, dann können wir R sagen: “Immer nicht okay”, das erreichen wir mit <code>TRUE</code> (<code>TRUE</code> ist immer wahr) <code>~ FALSE</code> (<code>y_check_okay</code> wird auf <code>FALSE</code>) gesetzt.</p>
 <p>Im Anschluss könnten wir wieder die “bösen Zeilen” herausfiltern.</p>
-</section><section id="geringe-eingabequalität" class="level3" data-number="11.9.3"><h3 data-number="11.9.3" class="anchored" data-anchor-id="geringe-eingabequalität">
-<span class="header-section-number">11.9.3</span> Geringe Eingabequalität</h3>
+</section><section id="geringe-eingabequalität" class="level4" data-number="11.2.7.3"><h4 data-number="11.2.7.3" class="anchored" data-anchor-id="geringe-eingabequalität">
+<span class="header-section-number">11.2.7.3</span> Geringe Eingabequalität</h4>
 <p>Vielleicht hätte ihr Fragebogen nicht so lang sein sollen, 60 Minuten Befragung war dann wohl doch etwas viel.</p>
 <p>Erfahrungsgemäß verliert man pro Seite Fragebogen substanziell Versuchspersonen. Zehn Minuten sind für viele Menschen schon eine lange Befragung. Also: Beim nächsten Mal kürzer halten.</p>
 <p>Schlimmer noch als keine Antworten sind allerdings schlechte Antworten, wenn Versuchspersonen (aus Demotivation heraus) “Blümchen” kreuzen. Häufig bedeutet das, dass einfach immer die erste Antwortoption angekreuzt wird; das ist am einfachsten für die Versuchsperson.</p>
@@ -975,10 +943,10 @@ Hinweis
 <span>  <span class="va">extra2</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">extra_var</span> <span class="op">&gt;</span> <span class="fl">0</span> <span class="op">&amp;</span> <span class="va">extra_var</span> <span class="op">&lt;</span> <span class="fl">1.76</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section></section><section id="scores-berechnen" class="level2" data-number="11.10"><h2 data-number="11.10" class="anchored" data-anchor-id="scores-berechnen">
-<span class="header-section-number">11.10</span> Scores berechnen</h2>
-<section id="summen--und-mittelwerte" class="level3" data-number="11.10.1"><h3 data-number="11.10.1" class="anchored" data-anchor-id="summen--und-mittelwerte">
-<span class="header-section-number">11.10.1</span> Summen- und Mittelwerte</h3>
+</section></section><section id="scores-berechnen" class="level3" data-number="11.2.8"><h3 data-number="11.2.8" class="anchored" data-anchor-id="scores-berechnen">
+<span class="header-section-number">11.2.8</span> Scores berechnen</h3>
+<section id="summen--und-mittelwerte" class="level4" data-number="11.2.8.1"><h4 data-number="11.2.8.1" class="anchored" data-anchor-id="summen--und-mittelwerte">
+<span class="header-section-number">11.2.8.1</span> Summen- und Mittelwerte</h4>
 <p>In der Psychometrie werden komplexe Konstrukte wie etwa das Persönlichkeitsmerkmal Extraversion anhand mehrerer Indikatoren (meistens Items eines Fragebogens) gemessen. Um zu einem Personenwert für Extraversion zu gelangen, werden die Itemwerte im einfachsten Fall summiert. Alternativ kann man auch einen Mittelwert bilden. Dieses Aggregieren bietet den Vorteil, dass sich Messfehler (möglicherweise) herausmitteln. Außerdem versucht man so abzubilden, dass Extraversion aus mehreren unterschiedlichen Facetten besteht, die nicht mit einem einzelnen Item, sondern über mehrere unterschiedliche Items, erfasst werden. Viele Psychometriker sind skeptisch, wenn man versuchen würde, Extraversion mit der Frage “Wie extrovertiert sind Sie?” zu erfassen. Ihre Bedenken sind, dass Menschen die vielen Facetten von Extraversion nicht im Arbeitsgedächtnis vorhalten können. Fragt man hingegen nur einen kleinen Aspekt von Extraversion ab, trägt man der Breite des Konstrukts nicht Rechnung.</p>
 <p>Die Zusammenfassung der Itemwerte eines Konstrukts zu einem Mittelwert oder einem Summenwert bezeichnet man als <em>Score</em>.</p>
 <p>Ein einfaches Beispiel zur Berechnung des Extraversion-Summenscore:</p>
@@ -1046,8 +1014,8 @@ Tabelle&nbsp;11.1: Extraversion-Score berechen
 </div>
 </div>
 <p>Praktischerweise gibt es Funktionen, die die Berechnung eines Scores noch weiter vereinfachen, zum Beispiel im Paket <code>easystats</code>: <code>row_means()</code> (Mittelwert pro Person). Da Respondenten (meist Personen) in <em>Zeilen</em> stehen heißen die Befehle <code>row_XXX()</code>. Fragt sich noch, ob es mehr Sinn macht, einen Summenscore oder einen Mittelwert zu berechnen. Kurz gesagt macht es keinen großen Unterschied, solange es keine fehlenden Werte gibt. Gibt es aber fehlende Werte, sollte man Mittelwerte statt Summenwerte vorziehen.</p>
-</section><section id="vertiefung-summen--vs.-mittelwertscores" class="level3" data-number="11.10.2"><h3 data-number="11.10.2" class="anchored" data-anchor-id="vertiefung-summen--vs.-mittelwertscores">
-<span class="header-section-number">11.10.2</span> Vertiefung: Summen- vs.&nbsp;Mittelwertscores</h3>
+</section><section id="vertiefung-summen--vs.-mittelwertscores" class="level4" data-number="11.2.8.2"><h4 data-number="11.2.8.2" class="anchored" data-anchor-id="vertiefung-summen--vs.-mittelwertscores">
+<span class="header-section-number">11.2.8.2</span> Vertiefung: Summen- vs.&nbsp;Mittelwertscores</h4>
 <p>Dazu ein erläuterndes Beispiel. Alois habe in einem Persönlichkeitstest mit 3 Items nur Item 1 beantwortet und zwar mit “3”, wobei Antwortstufen von 1 bis 4 vorgegeben waren. Vermutlich ist der Gesamtwert im Form des Summenscores von 3 zu klein, unterschätzt als Alois’ Wert. Schließlich hat er beim ersten Item die Antwort “3” gewählt, insofern ist es plausibel, dass er bei den anderen auch diese Option gewählt hätte. Somit hätte er insgesamt 9 Punkte (nicht 3) erzielt. Würden wir 3 als Gesamtwert (Summenscore) annehmen, so bedeutet das, das wir davon ausgehen, dass er im Schnitt “1” gewählt hat - Eine Annahme, die nicht sehr plausibel erscheint.</p>
 <p>Vergleichen wir das mit dem Mittelwert-Score. Jetzt lassen wir R die Rechenarbeit machen:</p>
 <div class="cell">
@@ -1058,12 +1026,12 @@ Tabelle&nbsp;11.1: Extraversion-Score berechen
 <p>Der Mittelwert von Alois beträgt 3 – das passt genau zu unserer Argumentation von gerade (s. oben), dass 3 eine bessere Schätzung der Ausprägung der latenten Variable von Alois ist. Daher ist der Mittelwert dem Summenscore vorzuziehen.</p>
 <p>Ein anderer Vorteil des Mittelwerts ist, dass er etwas anschaulicher ist als der Summenscore: Ein Mittelwert von 3 (auf einer Skala von 1 bis 4) ist anschaulicher als eine Summe von 9 (bei drei Items). Wir werden d. h.r den Mittelwert vorziehen.</p>
 <p>Noch anschaulicher wäre es, die Mittelwerte auf den Bereich von 0 bis 1 zu normalisieren.</p>
-</section><section id="berechnung-mit-r" class="level3" data-number="11.10.3"><h3 data-number="11.10.3" class="anchored" data-anchor-id="berechnung-mit-r">
-<span class="header-section-number">11.10.3</span> Berechnung mit R</h3>
+</section><section id="berechnung-mit-r" class="level4" data-number="11.2.8.3"><h4 data-number="11.2.8.3" class="anchored" data-anchor-id="berechnung-mit-r">
+<span class="header-section-number">11.2.8.3</span> Berechnung mit R</h4>
 <p>Wie in jeder Sprache gibt es auch in R oft mehrere Möglichkeiten, um eine Sache auszudrücken. Betrachten wir im Folgenden, wie man einen <em>Score</em>, also einen <em>Zeilenmittelwert</em>, berechnet.</p>
-<section id="mit-easystats" class="level4" data-number="11.10.3.1"><h4 data-number="11.10.3.1" class="anchored" data-anchor-id="mit-easystats">
-<span class="header-section-number">11.10.3.1</span> Mit <code>easystats</code>
-</h4>
+<section id="mit-easystats" class="level5" data-number="11.2.8.3.1"><h5 data-number="11.2.8.3.1" class="anchored" data-anchor-id="mit-easystats">
+<span class="header-section-number">11.2.8.3.1</span> Mit <code>easystats</code>
+</h5>
 <p><code>row_means</code> wohnt im Paket <code>easystats</code>.</p>
 <div class="cell">
 <div class="sourceCode" id="cb40"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
@@ -1080,9 +1048,9 @@ Tabelle&nbsp;11.1: Extraversion-Score berechen
 </div>
 </div>
 <p>Der Parameter <code>min_valid</code> bei <code>row_means()</code> gibt den Anteil der <em>nicht</em> fehlenden Werte (pro Zeile) wieder, damit ein Wert berechnet wird: Bei zu vielen fehlenden Werten (zu wenig Daten) pro Person wird sonst <code>NA</code> zurückgeliefert. Das ist sinnvoll, denn hat eine Person von 10 Items nur 1 Item beantwortet, so kann man wohl nicht zuverlässig sagen, dass Extraversion in seiner Breite zuverlässig geschätzt wird. Die Funktion fügt dem Datensatz eine Spalte hinzu, deren Name mit <code>var</code> angegeben wird.</p>
-</section><section id="mit-tidyverse" class="level4" data-number="11.10.3.2"><h4 data-number="11.10.3.2" class="anchored" data-anchor-id="mit-tidyverse">
-<span class="header-section-number">11.10.3.2</span> Mit <code>tidyverse</code>
-</h4>
+</section><section id="mit-tidyverse" class="level5" data-number="11.2.8.3.2"><h5 data-number="11.2.8.3.2" class="anchored" data-anchor-id="mit-tidyverse">
+<span class="header-section-number">11.2.8.3.2</span> Mit <code>tidyverse</code>
+</h5>
 <p>Die Idee von <code><a href="https://dplyr.tidyverse.org/reference/rowwise.html">rowwise()</a></code> ist es, den Datensatz so in Gruppen einzuteilen, dass jede Zeile eine Gruppe ist. Dann wird für jede “Gruppe” (Zeile) eine normale Operation durchgeführt.</p>
 <p>Leider versteht der <code><a href="https://rdrr.io/r/base/c.html">c()</a></code>-Befehl es nicht, wenn man ihm mehrere Spalten (Vektoren) als Input gibt. <code>i01</code> und <code>i02</code> etc. sind technisch gesehen jeweils Vektoren. Der <code><a href="https://rdrr.io/r/base/c.html">c()</a></code>-Befehl verkraftet leider nur <em>einen</em> Vektor mit Daten als Input. Daher brauchen wir einen verwandten Befehl, der wie <code><a href="https://rdrr.io/r/base/c.html">c()</a></code> funktioniert, aber mehrere Vektoren als Eingabe akzeptiert: Enter <code><a href="https://dplyr.tidyverse.org/reference/c_across.html">c_across()</a></code>.</p>
 <div class="cell">
@@ -1100,8 +1068,8 @@ Tabelle&nbsp;11.1: Extraversion-Score berechen
 </div>
 </div>
 </div>
-</section></section></section><section id="standardisieren-mit-z-werten" class="level2" data-number="11.11"><h2 data-number="11.11" class="anchored" data-anchor-id="standardisieren-mit-z-werten">
-<span class="header-section-number">11.11</span> Standardisieren mit z-Werten</h2>
+</section></section></section><section id="standardisieren-mit-z-werten" class="level3" data-number="11.2.9"><h3 data-number="11.2.9" class="anchored" data-anchor-id="standardisieren-mit-z-werten">
+<span class="header-section-number">11.2.9</span> Standardisieren mit z-Werten</h3>
 <p>Man kann die Aussagekraft eines Mittelwerts noch erhöhen, in dem man ihn standardisiert, z. B. mit der z-Transformation. Das geht zum Beispiel so:</p>
 <div class="cell">
 <div class="sourceCode" id="cb42"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra_std</span> <span class="op">&lt;-</span> <span class="va">extra</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
@@ -1121,394 +1089,8 @@ Tabelle&nbsp;11.1: Extraversion-Score berechen
 </div>
 </div>
 <p>Zu beachten ist, dass der Mittelwert der Stichprobe und deren Standardabweichung als Referenzwerte herangezogen wurden, nicht die entsprechenden Größen der Normierungsstichprobe.</p>
-</section><section id="daten-zusammenfassen-deskriptive-analyse" class="level2" data-number="11.12"><h2 data-number="11.12" class="anchored" data-anchor-id="daten-zusammenfassen-deskriptive-analyse">
-<span class="header-section-number">11.12</span> Daten zusammenfassen (deskriptive Analyse)</h2>
-<p>Damit es einfach bleibt, begrenzen wir uns auf ein paar Variablen.</p>
-<p>Sagen wir, das sind die Variablen, die uns interessieren:</p>
-<div class="cell">
-<div class="sourceCode" id="cb44"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra_corr_names</span> <span class="op">&lt;-</span> </span>
-<span><span class="va">extra</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">n_facebook_friends</span>, <span class="va">n_hangover</span>, <span class="va">age</span>, <span class="va">extra_single_item</span>, <span class="va">n_party</span>, <span class="va">extra_mean</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">extra_corr_names</span></span>
-<span><span class="co">## [1] "n_facebook_friends" "n_hangover"         "age"               </span></span>
-<span><span class="co">## [4] "extra_single_item"  "n_party"            "extra_mean"</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<section id="deskriptive-ergebnisse-für-metrische-variablen" class="level3" data-number="11.12.1"><h3 data-number="11.12.1" class="anchored" data-anchor-id="deskriptive-ergebnisse-für-metrische-variablen">
-<span class="header-section-number">11.12.1</span> Deskriptive Ergebnisse für metrische Variablen</h3>
-<p>Sie können deskriptive Ergebnisse (Ihrer relevanten Variablen) für <em>metrische</em> Variablen z. B. so darstellen.</p>
-<div class="cell">
-<div class="sourceCode" id="cb45"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/all_of.html">any_of</a></span><span class="op">(</span><span class="va">extra_corr_names</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu">describe_distribution</span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu">kable</span><span class="op">(</span>digits <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<table class="table table-sm table-striped small">
-<colgroup>
-<col style="width: 22%">
-<col style="width: 8%">
-<col style="width: 9%">
-<col style="width: 7%">
-<col style="width: 6%">
-<col style="width: 7%">
-<col style="width: 10%">
-<col style="width: 10%">
-<col style="width: 4%">
-<col style="width: 12%">
-</colgroup>
-<thead><tr class="header">
-<th style="text-align: left;">Variable</th>
-<th style="text-align: right;">Mean</th>
-<th style="text-align: right;">SD</th>
-<th style="text-align: right;">IQR</th>
-<th style="text-align: right;">Min</th>
-<th style="text-align: right;">Max</th>
-<th style="text-align: right;">Skewness</th>
-<th style="text-align: right;">Kurtosis</th>
-<th style="text-align: right;">n</th>
-<th style="text-align: right;">n_Missing</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">n_facebook_friends</td>
-<td style="text-align: right;">532.61</td>
-<td style="text-align: right;">3704.48</td>
-<td style="text-align: right;">300.0</td>
-<td style="text-align: right;">0.0</td>
-<td style="text-align: right;">96055</td>
-<td style="text-align: right;">25.67</td>
-<td style="text-align: right;">662.76</td>
-<td style="text-align: right;">671</td>
-<td style="text-align: right;">155</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">n_hangover</td>
-<td style="text-align: right;">9.47</td>
-<td style="text-align: right;">30.72</td>
-<td style="text-align: right;">9.0</td>
-<td style="text-align: right;">0.0</td>
-<td style="text-align: right;">738</td>
-<td style="text-align: right;">17.54</td>
-<td style="text-align: right;">399.53</td>
-<td style="text-align: right;">800</td>
-<td style="text-align: right;">26</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">age</td>
-<td style="text-align: right;">25.50</td>
-<td style="text-align: right;">5.75</td>
-<td style="text-align: right;">6.0</td>
-<td style="text-align: right;">18.0</td>
-<td style="text-align: right;">54</td>
-<td style="text-align: right;">1.81</td>
-<td style="text-align: right;">4.39</td>
-<td style="text-align: right;">813</td>
-<td style="text-align: right;">13</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">extra_single_item</td>
-<td style="text-align: right;">2.79</td>
-<td style="text-align: right;">0.86</td>
-<td style="text-align: right;">1.0</td>
-<td style="text-align: right;">1.0</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">-0.27</td>
-<td style="text-align: right;">-0.60</td>
-<td style="text-align: right;">816</td>
-<td style="text-align: right;">10</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">n_party</td>
-<td style="text-align: right;">17.38</td>
-<td style="text-align: right;">19.32</td>
-<td style="text-align: right;">19.0</td>
-<td style="text-align: right;">0.0</td>
-<td style="text-align: right;">150</td>
-<td style="text-align: right;">3.27</td>
-<td style="text-align: right;">16.10</td>
-<td style="text-align: right;">793</td>
-<td style="text-align: right;">33</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">extra_mean</td>
-<td style="text-align: right;">2.89</td>
-<td style="text-align: right;">0.45</td>
-<td style="text-align: right;">0.6</td>
-<td style="text-align: right;">1.2</td>
-<td style="text-align: right;">4</td>
-<td style="text-align: right;">-0.43</td>
-<td style="text-align: right;">-0.11</td>
-<td style="text-align: right;">822</td>
-<td style="text-align: right;">4</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<p><code>kable()</code> macht aus dem drögen Output in der R-Konsole eine schicke HTML-Tabelle<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>, wenn man das Quarto-Dokument rendert.</p>
-<p>Statt <code>select(any_of(extra_corr_names))</code> könnten Sie natürlich auch schreiben <code>select(n_facebook_friends, ...)</code>, wobei Sie für die drei Punkte alle Variablen von Interesse nennen würden.</p>
-<p>Praktischerweise kann man <code>describe_distribution</code> auch für gruppierte Datensätze nutzen, um so gruppierte Verteilungsmaße zu bekommen:</p>
-<div class="cell">
-<div class="sourceCode" id="cb46"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">sex</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu">describe_distribution</span><span class="op">(</span><span class="va">extra_mean</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div data-pagedtable="false">
-  <script data-pagedtable-source="" type="application/json">
-{"columns":[{"label":["Variable"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Mean"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["SD"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["IQR"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["Min"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["Max"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["Skewness"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["Kurtosis"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["n"],"name":[9],"type":["int"],"align":["right"]},{"label":["n_Missing"],"name":[10],"type":["int"],"align":["right"]},{"label":[".group"],"name":[11],"type":["chr"],"align":["left"]}],"data":[{"1":"extra_mean","2":"2.908705","3":"0.4219142","4":"0.6","5":"1.6","6":"3.9","7":"-0.3380531","8":"-0.1665412","9":"529","10":"0","11":"sex=Frau"},{"1":"extra_mean","2":"2.861772","3":"0.4989651","4":"0.7","5":"1.2","6":"4.0","7":"-0.4812037","8":"-0.2230608","9":"286","10":"0","11":"sex=Mann"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-  </script>
-</div>
-</div>
-</div>
-</section><section id="deskriptive-ergebnisse-für-nominale-variablen" class="level3" data-number="11.12.2"><h3 data-number="11.12.2" class="anchored" data-anchor-id="deskriptive-ergebnisse-für-nominale-variablen">
-<span class="header-section-number">11.12.2</span> Deskriptive Ergebnisse für nominale Variablen</h3>
-<section id="univariate-häufigkeiten" class="level4" data-number="11.12.2.1"><h4 data-number="11.12.2.1" class="anchored" data-anchor-id="univariate-häufigkeiten">
-<span class="header-section-number">11.12.2.1</span> Univariate Häufigkeiten</h4>
-<p>Lassen wir uns die Häufigkeiten für <code>sex</code> und für <code>smoker</code> ausgeben, also für jede Variable separat (univariat).</p>
-<p>Mit <code>tidyverse</code> kann man das in vertrauter Manier bewerkstelligen:</p>
-<div class="cell">
-<div class="sourceCode" id="cb47"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">sex</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div data-pagedtable="false">
-  <script data-pagedtable-source="" type="application/json">
-{"columns":[{"label":["sex"],"name":[1],"type":["chr"],"align":["left"]},{"label":["n"],"name":[2],"type":["int"],"align":["right"]}],"data":[{"1":"Frau","2":"529"},{"1":"Mann","2":"286"},{"1":"NA","2":"11"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-  </script>
-</div>
-</div>
-</div>
-<p>Etwas schicker sieht es aus mit <code>data_tabulate</code> aus <code>easystats</code>:</p>
-<div class="cell">
-<div class="sourceCode" id="cb48"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">sex</span>, <span class="va">smoker</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="co">#drop_na() |&gt;  ggf. ohne fehlende Werte</span></span>
-<span>  <span class="fu">data_tabulate</span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="co">## sex (sex) &lt;character&gt;</span></span>
-<span><span class="co">## # total N=826 valid N=815</span></span>
-<span><span class="co">## </span></span>
-<span><span class="co">## Value |   N | Raw % | Valid % | Cumulative %</span></span>
-<span><span class="co">## ------+-----+-------+---------+-------------</span></span>
-<span><span class="co">## Frau  | 529 | 64.04 |   64.91 |        64.91</span></span>
-<span><span class="co">## Mann  | 286 | 34.62 |   35.09 |       100.00</span></span>
-<span><span class="co">## &lt;NA&gt;  |  11 |  1.33 |    &lt;NA&gt; |         &lt;NA&gt;</span></span>
-<span><span class="co">## </span></span>
-<span><span class="co">## smoker (smoker) &lt;character&gt;</span></span>
-<span><span class="co">## # total N=826 valid N=12</span></span>
-<span><span class="co">## </span></span>
-<span><span class="co">## Value                           |   N | Raw % | Valid % | Cumulative %</span></span>
-<span><span class="co">## --------------------------------+-----+-------+---------+-------------</span></span>
-<span><span class="co">## Gelegentlich (z. B. auf Partys) |   1 |  0.12 |    8.33 |         8.33</span></span>
-<span><span class="co">## Ja                              |   3 |  0.36 |   25.00 |        33.33</span></span>
-<span><span class="co">## Nein                            |   8 |  0.97 |   66.67 |       100.00</span></span>
-<span><span class="co">## &lt;NA&gt;                            | 814 | 98.55 |    &lt;NA&gt; |         &lt;NA&gt;</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Wir können uns auch die <em>bi</em>variaten Häufigkeiten ausgeben lassen.</p>
-<div class="cell">
-<div class="sourceCode" id="cb49"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/drop_na.html">drop_na</a></span><span class="op">(</span><span class="va">sex</span>, <span class="va">smoker</span><span class="op">)</span> <span class="op">|&gt;</span>  <span class="co"># fehlende Werte entfernt</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">sex</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu">data_tabulate</span><span class="op">(</span><span class="st">"smoker"</span><span class="op">)</span></span>
-<span><span class="co">## smoker (smoker) &lt;character&gt;</span></span>
-<span><span class="co">## Grouped by sex (Frau)</span></span>
-<span><span class="co">## # total N=10 valid N=10</span></span>
-<span><span class="co">## </span></span>
-<span><span class="co">## Value                           | N | Raw % | Valid % | Cumulative %</span></span>
-<span><span class="co">## --------------------------------+---+-------+---------+-------------</span></span>
-<span><span class="co">## Gelegentlich (z. B. auf Partys) | 1 | 10.00 |   10.00 |        10.00</span></span>
-<span><span class="co">## Ja                              | 1 | 10.00 |   10.00 |        20.00</span></span>
-<span><span class="co">## Nein                            | 8 | 80.00 |   80.00 |       100.00</span></span>
-<span><span class="co">## &lt;NA&gt;                            | 0 |  0.00 |    &lt;NA&gt; |         &lt;NA&gt;</span></span>
-<span><span class="co">## </span></span>
-<span><span class="co">## smoker (smoker) &lt;character&gt;</span></span>
-<span><span class="co">## Grouped by sex (Mann)</span></span>
-<span><span class="co">## # total N=2 valid N=2</span></span>
-<span><span class="co">## </span></span>
-<span><span class="co">## Value | N |  Raw % | Valid % | Cumulative %</span></span>
-<span><span class="co">## ------+---+--------+---------+-------------</span></span>
-<span><span class="co">## Ja    | 2 | 100.00 |  100.00 |       100.00</span></span>
-<span><span class="co">## &lt;NA&gt;  | 0 |   0.00 |    &lt;NA&gt; |         &lt;NA&gt;</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section></section><section id="korrelationen-darstellen" class="level3" data-number="11.12.3"><h3 data-number="11.12.3" class="anchored" data-anchor-id="korrelationen-darstellen">
-<span class="header-section-number">11.12.3</span> Korrelationen darstellen</h3>
-<p>In einer Umfrage erhebt man häufig mehrere Variablen, ein Teil davon oft <em>Konstrukte</em>. Es bietet sich in einem ersten Schritt an, die Korrelationen dieser Variablen untereinander darzustellen.</p>
-<section id="korrelationsmatrix" class="level4" data-number="11.12.3.1"><h4 data-number="11.12.3.1" class="anchored" data-anchor-id="korrelationsmatrix">
-<span class="header-section-number">11.12.3.1</span> Korrelationsmatrix</h4>
-<div class="cell">
-<div class="sourceCode" id="cb50"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/all_of.html">any_of</a></span><span class="op">(</span><span class="va">extra_corr_names</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>  </span>
-<span>  <span class="fu">correlation</span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu">kable</span><span class="op">(</span>digits <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<table class="table table-sm table-striped small">
-<colgroup>
-<col style="width: 26%">
-<col style="width: 15%">
-<col style="width: 10%">
-<col style="width: 24%">
-<col style="width: 8%">
-<col style="width: 15%">
-</colgroup>
-<thead><tr class="header">
-<th style="text-align: left;">Parameter</th>
-<th style="text-align: right;">extra_mean</th>
-<th style="text-align: right;">n_party</th>
-<th style="text-align: right;">extra_single_item</th>
-<th style="text-align: right;">age</th>
-<th style="text-align: right;">n_hangover</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">n_facebook_friends</td>
-<td style="text-align: right;">0.05</td>
-<td style="text-align: right;">0.08</td>
-<td style="text-align: right;">0.07</td>
-<td style="text-align: right;">-0.03</td>
-<td style="text-align: right;">0.13</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">n_hangover</td>
-<td style="text-align: right;">0.06</td>
-<td style="text-align: right;">0.34</td>
-<td style="text-align: right;">-0.02</td>
-<td style="text-align: right;">-0.06</td>
-<td style="text-align: right;">NA</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">age</td>
-<td style="text-align: right;">-0.14</td>
-<td style="text-align: right;">-0.21</td>
-<td style="text-align: right;">-0.03</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">extra_single_item</td>
-<td style="text-align: right;">0.57</td>
-<td style="text-align: right;">0.06</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">n_party</td>
-<td style="text-align: right;">0.25</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-<p>Sie möchten das Ergebnis als normalen R-Dataframe? Sie haben keine Lust auf dieses Rumgetue, sondern wollen das lieber als selber gerade ziehen. Also gut:</p>
-<div class="cell">
-<div class="sourceCode" id="cb51"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cor_results</span> <span class="op">&lt;-</span> </span>
-<span><span class="va">extra</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/all_of.html">any_of</a></span><span class="op">(</span><span class="va">extra_corr_names</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>  </span>
-<span>  <span class="fu">correlation</span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">cor_results</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div data-pagedtable="false">
-  <script data-pagedtable-source="" type="application/json">
-{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["Parameter"],"name":[1],"type":["chr"],"align":["left"]},{"label":["extra_mean"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["n_party"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["extra_single_item"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["age"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["n_hangover"],"name":[6],"type":["dbl"],"align":["right"]}],"data":[{"1":"n_facebook_friends","2":"0.04548507","3":"0.07809922","4":"0.06854083","5":"-0.03483500","6":"0.1273312","_rn_":"1"},{"1":"n_hangover","2":"0.05547249","3":"0.33639095","4":"-0.02383673","5":"-0.06301264","6":"NA","_rn_":"2"},{"1":"age","2":"-0.13775429","3":"-0.21080773","4":"-0.03009269","5":"NA","6":"NA","_rn_":"3"},{"1":"extra_single_item","2":"0.56806090","3":"0.05989951","4":"NA","5":"NA","6":"NA","_rn_":"4"},{"1":"n_party","2":"0.25486061","3":"NA","4":"NA","5":"NA","6":"NA","_rn_":"5"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-  </script>
-</div>
-</div>
-</div>
-<p>Man kann sich die Korrelationsmatrix auch in der <em>Bayes-Geschmacksrichtung</em> ausgeben lassen:</p>
-<div class="cell">
-<div class="sourceCode" id="cb52"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/all_of.html">any_of</a></span><span class="op">(</span><span class="va">extra_corr_names</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>  </span>
-<span>  <span class="fu">correlation</span><span class="op">(</span>bayesian <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu">kable</span><span class="op">(</span>digits <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<table class="table table-sm table-striped small">
-<colgroup>
-<col style="width: 26%">
-<col style="width: 15%">
-<col style="width: 10%">
-<col style="width: 24%">
-<col style="width: 8%">
-<col style="width: 15%">
-</colgroup>
-<thead><tr class="header">
-<th style="text-align: left;">Parameter</th>
-<th style="text-align: right;">extra_mean</th>
-<th style="text-align: right;">n_party</th>
-<th style="text-align: right;">extra_single_item</th>
-<th style="text-align: right;">age</th>
-<th style="text-align: right;">n_hangover</th>
-</tr></thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">n_facebook_friends</td>
-<td style="text-align: right;">0.04</td>
-<td style="text-align: right;">0.08</td>
-<td style="text-align: right;">0.07</td>
-<td style="text-align: right;">-0.04</td>
-<td style="text-align: right;">0.13</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">n_hangover</td>
-<td style="text-align: right;">0.05</td>
-<td style="text-align: right;">0.33</td>
-<td style="text-align: right;">-0.02</td>
-<td style="text-align: right;">-0.06</td>
-<td style="text-align: right;">NA</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">age</td>
-<td style="text-align: right;">-0.14</td>
-<td style="text-align: right;">-0.21</td>
-<td style="text-align: right;">-0.03</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">extra_single_item</td>
-<td style="text-align: right;">0.56</td>
-<td style="text-align: right;">0.06</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">n_party</td>
-<td style="text-align: right;">0.25</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-<td style="text-align: right;">NA</td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</section><section id="korrelationsmatrizen-visualisieren" class="level4" data-number="11.12.3.2"><h4 data-number="11.12.3.2" class="anchored" data-anchor-id="korrelationsmatrizen-visualisieren">
-<span class="header-section-number">11.12.3.2</span> Korrelationsmatrizen visualisieren</h4>
-<p>Viele R-Pakete bieten sich an. Nehmen wir <a href="https://easystats.github.io/easystats/">easystats</a>.</p>
-<div class="cell">
-<div class="sourceCode" id="cb53"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/all_of.html">any_of</a></span><span class="op">(</span><span class="va">extra_corr_names</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>  </span>
-<span>  <span class="fu">correlation</span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Korrelationsmatrix, boa"</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure"><p><img src="085-aufbereiten_files/figure-html/unnamed-chunk-50-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-</section></section></section><section id="aufgaben" class="level2" data-number="11.13"><h2 data-number="11.13" class="anchored" data-anchor-id="aufgaben">
-<span class="header-section-number">11.13</span> Aufgaben</h2>
+</section></section><section id="aufgaben" class="level2" data-number="11.3"><h2 data-number="11.3" class="anchored" data-anchor-id="aufgaben">
+<span class="header-section-number">11.3</span> Aufgaben</h2>
 <p>Im Folgenden ist eine Auswahl an Aufgaben zur praktischen Datenanalyse vorgestellt. Das sind genau die Probleme, auf die Sie treffen (könnten), wenn Sie Ihre eigenen Daten auswerten, jetzt oder bei einer späteren Analyse. Hier ist eine Auwahl an Aufgaben auf dem Bereich “Datenjudo”:</p>
 <ul>
 <li><a href="https://datenwerk.netlify.app/posts/tidy1/tidy1">tidy1</a></li>
@@ -1517,8 +1099,8 @@ Tabelle&nbsp;11.1: Extraversion-Score berechen
 <li><a href="https://datenwerk.netlify.app/posts/filter-na1/filter-na1">filter-na1</a></li>
 <li><a href="https://datenwerk.netlify.app/posts/filter-na2/filter-na2">filter-na2</a></li>
 <li><a href="https://datenwerk.netlify.app/posts/filter-na4/filter-na4">filter-na4</a></li>
-</ul></section><section id="fallstudien" class="level2" data-number="11.14"><h2 data-number="11.14" class="anchored" data-anchor-id="fallstudien">
-<span class="header-section-number">11.14</span> Fallstudien</h2>
+</ul></section><section id="fallstudien" class="level2" data-number="11.4"><h2 data-number="11.4" class="anchored" data-anchor-id="fallstudien">
+<span class="header-section-number">11.4</span> Fallstudien</h2>
 <ul>
 <li><a href="https://data-se.netlify.app/2021/05/28/yacsda-seitenspr%C3%BCnge/">Seitensprünge</a></li>
 <li><a href="https://lsinks.github.io/posts/2023-04-25-tidytuesday-marathon/marathon.html">London Marathon</a></li>
@@ -1529,7 +1111,6 @@ Tabelle&nbsp;11.1: Extraversion-Score berechen
 <ol>
 <li id="fn1"><p>Haben ich eigentlich schon einmal erwähnt, dass Sie ggf. die Pakete zuerst (einmalig) installieren müssen, bevor Sie sie verwenden können?<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>Sanity Check, hört sich cooler an<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn3"><p>funktioniert auch in Word und PDF<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -2100,8 +1681,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="./080-Auswerten.html" class="pagination-link  aria-label=">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Auswerten: Überblick</span></span>
+      <a href="./080-Auswerten.html" class="pagination-link  aria-label=" grundlagen="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Auswerten: Grundlagen</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

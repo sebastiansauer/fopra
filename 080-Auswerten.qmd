@@ -1,4 +1,4 @@
-# Auswerten: Überblick
+# Auswerten: Grundlagen
 
 
 ```{r}
@@ -29,6 +29,28 @@ theme_set(theme_minimal())
 Sie befinden sich im Abschnitt "Auswertung" in @fig-ueberblick.
 Behalten Sie Ihren Fortschritt im Projektplan im Blick, s. @fig-projektplan.
 
+
+
+### Benötigte R-Pakete und Daten
+
+In diesem Kapitel benötigen Sie die folgenden R-Pakete und Datensätze.
+
+```{r}
+#| messagen: false
+library(tidyverse)
+library(easystats)
+```
+
+
+
+ 
+```{r load-extra-web, eval = TRUE}
+data_url <- "https://raw.githubusercontent.com/sebastiansauer/modar/master/datasets/extra.csv"
+extra <- data_read(data_url)  # aus `{easystats}`
+```
+
+
+Anstelle der Funktion `data_read` könnten Sie auch `read_csv` (Tidyverse) oder `read.csv` (Standard-R) verwenden.
 
 
 ## Überblick zur Datenanalyse
@@ -91,9 +113,17 @@ In etwas mehr Detail sieht der Fortgang Ihrer Datenanalyse so aus:
 
 ## Reproduzierbarkeit
 
-Transparenz ist ein zentrals oder das zentrale Gütemaße der Wissenschaft.
-Darum sollten Sie alles dran setzen, dass Ihre Studie bzw. die Analyse Ihrer Daten nachvollziehbar ist.
-Wesentliche Faktoren dafür sind:
+
+
+
+
+
+:::{.callout-important}
+Transparenz (vgl. @def-repro) ist ein zentrales oder das zentrale Gütemaße der Wissenschaft.
+Darum sollten Sie alles dran setzen, dass Ihre Studie bzw. die Analyse Ihrer Daten nachvollziehbar ist. $\square$
+:::
+
+Wesentliche Faktoren für Reproduzierbarkeit sind:
 
 - Sie reichen Ihre *Rohdaten* ein (inkl. Codebook)
 - Sie reichen Ihr *Analyseskript* ein
@@ -104,7 +134,7 @@ Wesentliche Faktoren dafür sind:
 
 
 
-### Codebook
+## Codebook
 
 Ein Teil der Dokumentation ist ein Codebook (auch Data-Dictionary genannt). Ein Codebook erläutert die Namen der Variablen in Ihrer (Roh-)Datentabelle, s. @fig-codebook.
 
@@ -113,10 +143,8 @@ Ein Teil der Dokumentation ist ein Codebook (auch Data-Dictionary genannt). Ein 
 [Quelle](https://www.psycharchives.org/en/item/8b13c82b-1c31-481a-b4be-0d5779d87033)
 
 
-## Grundlagen der Datenanalyse
 
-
-### Wir brachen brave Daten
+## Wir brauchen brave Daten
 
 Wie muss eine Tabelle aufgebaut sein,
 damit man sie gut in R importieren kann, bzw. gut damit weiterarbeiten kann?
@@ -156,7 +184,7 @@ Beachten Sie das Prinzip von "tidy data":
 
 
 
-### Checkliste zur Datenanalyse
+## Checkliste zur Datenanalyse
 
 Hier sehen Sie im Überblick die Schritte, die in vielen Fällen sinnvoll sind, um Daten auf einem guten Niveau auszuwerten.
 
@@ -197,7 +225,233 @@ Das Kursbuch [Start:Bayes!](https://start-bayes.netlify.app/) stellt einen Einst
 
 
 
+
+## Skriptbasierte vs. klickbasierte Software zur Datenanalyse
+
+
+Man kann grob zwei Arten von Software-Programmen für Datenanalyse unterscheiden:
+
+1. *Skriptbasierte*: Man schreibt seine Befehle in einer Programmiersprache (z.B. R)
+2. *Klickbasierte*: Man klickt in einer Gui, um Befehle auszulösen (z.B. Jamovi)
+
+Die gängigen Beispiele für skriptbasierte Software für Datenanalyse sind R und Python.
+
+
+
+Einige empfehlenswerte(re) Programme für die klickbasierte Datenanalyse sind:
+
+
+1. [Jamovi](https://www.jamovi.org/)
+2. [JASP](https://jasp-stats.org/)
+3. [Exploratory](https://exploratory.io/about/)
+
+
+
+
+
+Im Folgenden sind die Vorteile der oben genannten klickbasierten Software-Programmen den Vorteilen der oben genannten skriptbasierten Software-Programmen gegenüber gestellt
+
+::::{.columns}
+
+:::{.column}
+### Vorteile klickbasierter Software
+
+![JASP](img/JASP-logo.webp){width=30%} ![Jamovi](img/jamovi-icon.png){width=30%} ![[Exploratory](exploratory.io)](img/exploratory-icon.png){width=30%} 
+
+
+- eher kostenlos (es gibt kostenpflichtige Premium-Versionen wie  Jamovi Cloud)
+- aktuell
+- flachere Lernkurve
+- R-Code integriert
+:::
+
+:::{.column}
+### Vorteile skriptbasierter Software
+
+![R](img/R-logo.png){width=30%} ![Python](img/python-logo.png){width=50%}
+
+- kostenlos
+- aktueller
+- umfassend (klickbasierte Software kann nicht alles, was man braucht)
+- steilere Lernkurve
+:::
+
+::::
+
+
+
+
+
+
+## Daten zusammenfassen (deskriptive Analyse)
+
+Damit es einfach bleibt, begrenzen wir uns auf ein paar Variablen.
+
+Sagen wir, 
+das sind die Variablen, die uns interessieren:
+
+```{r}
+extra_corr_names <- 
+extra %>% 
+  select(n_facebook_friends, n_hangover, age, extra_single_item, n_party, extra_mean) %>% 
+  names()
+
+extra_corr_names
+```
+
+
+
+### Deskriptive Ergebnisse für metrische Variablen 
+
+Sie können deskriptive Ergebnisse (Ihrer relevanten Variablen) für *metrische* Variablen z.B. so darstellen.
+
+
+```{r}
+extra %>% 
+  select(any_of(extra_corr_names)) %>% 
+  describe_distribution() %>% 
+  kable(digits = 2)
+```
+
+
+`kable()` macht aus dem drögen Output in der R-Konsole eine schicke HTML-Tabelle^[funktioniert auch in Word und PDF], wenn man das Quarto-Dokument rendert.
+
+Statt `select(any_of(extra_corr_names))` könnten Sie natürlich auch schreiben `select(n_facebook_friends, ...)`, wobei Sie für die drei Punkte alle Variablen von Interesse nennen würden.
+
+
+Praktischerweise kann man `describe_distribution` auch für gruppierte Datensätze nutzen, um so gruppierte Verteilungsmaße zu bekommen:
+
+```{r}
+extra |> 
+  group_by(sex) |> 
+  describe_distribution(extra_mean)
+```
+
+
+### Deskriptive Ergebnisse für nominale Variablen 
+
+
+#### Univariate Häufigkeiten
+
+Lassen wir uns die Häufigkeiten für `sex` und für `smoker` ausgeben, also für jede Variable separat (univariat).
+
+
+Mit `tidyverse` kann man das in vertrauter Manier bewerkstelligen:
+
+```{r}
+extra |> 
+  count(sex)
+```
+
+Etwas schicker sieht es aus mit `data_tabulate` aus `easystats`:
+
+```{r}
+extra |> 
+  select(sex, smoker) |> 
+  #drop_na() |>  ggf. ohne fehlende Werte
+  data_tabulate()
+```
+
+Wir können uns auch die *bi*variaten Häufigkeiten ausgeben lassen.
+
+```{r}
+extra |> 
+  drop_na(sex, smoker) |>  # fehlende Werte entfernt
+  group_by(sex) |> 
+  data_tabulate("smoker")
+```
+
+
+
+
+
+
+### Korrelationen darstellen
+
+In einer Umfrage erhebt man häufig mehrere Variablen, ein Teil davon oft *Konstrukte*.
+Es bietet sich in einem ersten Schritt an, die Korrelationen dieser Variablen untereinander
+darzustellen.
+
+
+
+#### Korrelationsmatrix
+
+
+
+```{r}
+extra %>% 
+  select(any_of(extra_corr_names)) %>%  
+  correlation() %>% 
+  summary() %>% 
+  kable(digits = 2)
+```
+
+
+Sie möchten das Ergebnis als normalen R-Dataframe? 
+Sie haben keine Lust auf dieses Rumgetue, sondern wollen das lieber als selber gerade ziehen.
+Also gut:
+
+
+```{r}
+cor_results <- 
+extra %>% 
+  select(any_of(extra_corr_names)) %>%  
+  correlation() %>% 
+  summary()
+
+cor_results
+```
+
+
+
+
+Man kann sich die Korrelationsmatrix auch in der *Bayes-Geschmacksrichtung* ausgeben lassen:
+
+
+```{r}
+extra %>% 
+  select(any_of(extra_corr_names)) %>%  
+  correlation(bayesian = TRUE) %>% 
+  summary() %>% 
+  kable(digits = 2)
+```
+
+
+#### Korrelationsmatrizen visualisieren
+
+Viele R-Pakete bieten sich an. Nehmen wir `{easystats}`.
+
+
+```{r}
+extra %>% 
+  select(any_of(extra_corr_names)) %>%  
+  correlation() %>% 
+  summary() %>% 
+  plot() +
+  labs(title = "Korrelationsmatrix, boa")
+```
+
+
+
+
+
+
+
+
 ## Aufgaben
 
 
 Auf dem [Datenwerk](https://datenwerk.netlify.app/) finden Sie eine Anzahl an Aufgaben zum Thema Datenanalyse.
+Schauen Sie sich mal die folgenden Tags an:
+
+- [eda](https://datenwerk.netlify.app/#category=eda)
+
+
+
+## Fallstudien
+
+Fallstudien zur explorativen Datenanalyse (EDA; d.h. deskriptive Statistik und Datenvisualisierung) finden Sie z.B. im [Datenwerk](https://datenwerk.netlify.app/):
+
+- [flights-yacsda-eda](https://datenwerk.netlify.app/posts/flights-yacsda-eda/)
+- [oecd-yacsda](https://datenwerk.netlify.app/posts/oecd-yacsda/)
+- [smartphone1](https://datenwerk.netlify.app/posts/smartphone1/)

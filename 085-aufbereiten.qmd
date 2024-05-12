@@ -72,7 +72,7 @@ Betrachten wir im Folgenden einige zentrale Aspekte dieser Schritte.
 
 
 
-## Datentabellen zusammenführen
+### Datentabellen zusammenführen
 
 
 Sie haben die Daten anhand mehrerer Fragebogen erhoben?
@@ -99,7 +99,7 @@ Ein Grund ist, dass es sinnvoll für Ihre berufliche Entwicklung ein Kernkonzept
 
 Ein anderer Grund ist, dass Sie mit einer Skriptsprache (wie R) ein "Kochrezept" erstellen, dass Sie ohne Zusatzaufwand wiederholt durchlaufen lassen können. Und, glauben Sie mir, in einer Datenanalyse passiert es oft, dass man mehrere (viele!) Durchläufe braucht, bis man mit dem Ergebnis zufrieden ist. Außerdem dokumentiert so ein Kochrezept Ihr Vorgehen transparent. Reproduzierbarkeit ist zentral für die Wissenschaft (und Technik).
 
-### Zeilenweises zusammenführen
+#### Zeilenweises zusammenführen
 
 :::{#exm-bind-rows}
 *Jede Versuchsperson* Ihrer Studie hat zwei (oder mehrere) Fragebögen ausgefüllt. In Datensatz A finden sich die ersten paar Variablen und in Datensatz B die restlichen Variablen. Aber in beiden Datensätzen kommen alle Personen vor. $\square$
@@ -151,7 +151,7 @@ mtcars_gesamt <-
 :::
 
 
-### Spaltenweises Zusammenführen 1
+#### Spaltenweises Zusammenführen 1
 
 
 :::{#exm-bind-cols}
@@ -216,13 +216,13 @@ Alternativ könnten Sie mit einem `join` arbeiten,
 der die korrekte Sortierung für Sie übernimmt. $\square$
 :::
 
-### Spaltenweises Zusammenführen 2
+#### Spaltenweises Zusammenführen 2
 
 
 @fig-full-join veranschaulicht das spaltenweise Zusammenführen, wenn die Sortierung der Tabellen nicht übereinstimmt. 
 
 :::{#def-join}
-### Join zweier Tabellen
+#### Join zweier Tabellen
 Das spaltenweise Zusammenführen zweier Tabellen unter der Beachtung der Sortierung nennt man einen "Join". Genauer gesagt versteht man unter "Sortierung" die Beachtung der Werte einer ID-Spalte (auch "Key-Spalte") genannt. $\square$
 :::
 
@@ -230,10 +230,10 @@ Das spaltenweise Zusammenführen zweier Tabellen unter der Beachtung der Sortier
 
 Bildquelle: [Garrick Aden-Buie](https://www.garrickadenbuie.com/project/tidyexplain/), [CC-BY-SA 4.0](https://www.garrickadenbuie.com/colophon/)
 
-## Text in Zahlen umwandeln
+### Text in Zahlen umwandeln
 
 
-### Hilfe, ich habe keine Zahlen
+#### Hilfe, ich habe keine Zahlen
 
 Kennen Sie das? Sie haben eine Umfrage durchgeführt, Daten sind erhoben, puh, bald können Sie das Projekt abschließen.
 
@@ -282,7 +282,7 @@ dass die fraglichen Spalte `i01` doch "in Wirklichkeit" Zahlen sind und kein Tex
 
 Welcher R-Befehl hilft hier? 
 
-### Introducing `parse_number()`
+#### Introducing `parse_number()`
 
 `parse_number()` (aus `{tidyverse}`) löst das Problem für Sie:
 
@@ -337,7 +337,13 @@ d %>% mutate(i03_r = parse_number(as.character(i03)))
 <!--   count(sex_r) -->
 <!-- ``` -->
 
-### Schleifen: Befehl auf mehrere Spalten anwenden
+#### VERTIEFUNG Schleifen
+
+:::{#def-schleife}
+#### Schleife
+Eine Schleife ist ein Operation, die einen Befehl (im Rahmen der computergestützten Datenanalyse) mehrfach (wiederholt) ausführt. Da im Kontext der Datenanalyse oft mit Tabellen gearbeitet wird, bezieht sich die Wiederholung oft auf eine Spalten-Operation, die dann für mehrere Spalten wiederholt wird. $\square$
+:::
+
 
 Wir können einen Befehl auf mehrere Spalten einer Tabelle anwenden,
 und zwar mit `across` (aus `tidyverse`):
@@ -362,7 +368,7 @@ Natürlich müssen Sie `across` nicht verwenden; Sie können auch "von Hand" die
 
 
 
-## Items umkodieren
+### Items umkodieren
 
 In Fragebogen werden immer wieder Items *negativ* kodiert. Das bedeutet, dass sie gegenteilig zum messenden Konstrukt formuliert sind. Ist das Konstrukt Extraversion, so würde ein negatives Item im Sinne von Introversion kodiert sein. Ein Beispiel-Item für negative Kodierung wäre: "Ich bin ein Couch-Potato" oder "Ich bleibe am liebsten alleine zuhause."
 
@@ -407,7 +413,7 @@ Diese Rechenmethode funktioniert aber nur, wenn z.B. bei vier Antwortstufen die 
 
 
 
-## Item-Labels in Zahlen umwandeln
+### Item-Labels in Zahlen umwandeln
 
 
 Eine ähnliche Sache wie das Umpolen von Items ist folgende Situation: Ihre Umfrage-Software spuckt als Item-Antworten die "Ankertexte" oder "Itemlabels" aus wie *stimme überhaupt nicht zu* oder *stimme voll und ganz zu*.
@@ -468,7 +474,7 @@ Ansonsten wird auf `Prüfung2` getestet, etc.
 Eine alternativer Weg des Umkodierens ist `recode_value()` aus `easystats` zu nutzen.
 
 
-## Fehlende Werte ersetzen
+### Fehlende Werte ersetzen
 
 Wie geht man mit fehlenden Werten um? Das ist im Detail keine leichte Frage. Eine einfache Antwort ist: alle Zeilen mit fehlenden Werten löschen. Das hat aber den Nachteil, dass man ggf. viele Daten verliert. Eine andere einfache Antwort lautet: Nichts machen. Das kann ein sinvoller Start sein; zumindest macht man nichts kaputt.
 
@@ -490,7 +496,9 @@ Betrachten Sie beide Tabellen (mit der Tabellenansicht in RStudio) und finden Si
 
 
 
-## Zeilen (Fälle) löschen
+### Zeilen (Fälle) löschen
+
+#### Zeilen löschen nach ID-Spalte
 
 In jeder braven Tabelle steht pro Zeile (genau) ein Fall;
 mit "Fall", auch als "Beobachtung" bezeichnet, ist ein Untersuchungsobjekt gemeint.
@@ -510,7 +518,7 @@ extra_kurz <-
 ```
 
 
-### Vertiefung
+#### Vertiefung
 
 Schauen Sie sich mal diese Variante an:
 
@@ -560,7 +568,7 @@ extra_kurz <-
 <!-- ### Vertiefung: Duplikate entfernen -->
 
 
-## Datenqualität prüfen
+### Datenqualität prüfen
 
 Bevor wir die Daten interpretieren, müssen wir sie auf Herz und Nieren prüfen,
 ein Daten-Gesundheitscheck^[Sanity Check, hört sich cooler an].
@@ -575,7 +583,7 @@ Ein paar typische Probleme, die man immer wieder findet, und die wir gelöst hab
 
 
 
-### Auf Dublikate prüfen
+#### Auf Dublikate prüfen
 
 Betrachten wir der Einfachheit halber folgenden Datensatz, in dem die erste und zweite Zeile identisch sind; die zweite Zeile ist also eine Dublette (Dublikat).
 Die dritte Zeile ist unique.
@@ -623,7 +631,7 @@ df |>
 
 
 
-### Auf Eingabefehler prüfen
+#### Auf Eingabefehler prüfen
 
 
 Sagen wir, für Variable `x` ist nur ein einzelner Buchstabe erlaubt; 
@@ -677,7 +685,7 @@ das erreichen wir mit `TRUE` (`TRUE` ist immer wahr) `~ FALSE` (`y_check_okay` w
 Im Anschluss könnten wir wieder die "bösen Zeilen" herausfiltern.
 
 
-### Geringe Eingabequalität
+#### Geringe Eingabequalität
 
 Vielleicht hätte ihr Fragebogen nicht so lang sein sollen, 60 Minuten Befragung war dann wohl doch etwas viel.
 
@@ -743,10 +751,10 @@ extra3 <-
 
 
 
-## Scores berechnen
+### Scores berechnen
 
 
-### Summen- und Mittelwerte
+#### Summen- und Mittelwerte
 
 In der Psychometrie werden komplexe Konstrukte wie etwa das Persönlichkeitsmerkmal Extraversion anhand mehrerer Indikatoren (meistens Items eines Fragebogens) gemessen. 
 Um zu einem Personenwert für Extraversion zu gelangen, werden die Itemwerte im einfachsten Fall summiert. Alternativ kann man auch einen Mittelwert bilden. 
@@ -798,9 +806,10 @@ extra_bsp %>%
  Gibt es aber fehlende Werte, sollte man Mittelwerte statt Summenwerte vorziehen.
 
 
-### Vertiefung: Summen- vs. Mittelwertscores
-  Dazu ein erläuterndes Beispiel. 
-  Alois habe in einem Persönlichkeitstest mit 3 Items nur Item 1 beantwortet und zwar mit "3", wobei Antwortstufen von 1 bis 4 vorgegeben waren. Vermutlich ist der Gesamtwert im Form des Summenscores von 3 zu klein, unterschätzt als Alois' Wert. 
+#### Vertiefung: Summen- vs. Mittelwertscores
+
+Dazu ein erläuterndes Beispiel. 
+Alois habe in einem Persönlichkeitstest mit 3 Items nur Item 1 beantwortet und zwar mit "3", wobei Antwortstufen von 1 bis 4 vorgegeben waren. Vermutlich ist der Gesamtwert im Form des Summenscores von 3 zu klein, unterschätzt als Alois' Wert. 
   Schließlich hat er beim ersten Item die Antwort "3" gewählt, insofern ist es plausibel, dass er bei den anderen auch diese Option gewählt hätte. 
   Somit hätte er insgesamt 9 Punkte (nicht 3) erzielt. Würden wir 3 als Gesamtwert (Summenscore) annehmen, so bedeutet das, das wir davon ausgehen, dass er im Schnitt "1" gewählt hat - 
   Eine Annahme, die nicht sehr plausibel erscheint.
@@ -823,12 +832,12 @@ Noch anschaulicher wäre es, die Mittelwerte auf den Bereich von 0 bis 1 zu norm
 
  
 
-### Berechnung mit R
+#### Berechnung mit R
 
 Wie in jeder Sprache gibt es auch in R oft mehrere Möglichkeiten, um eine Sache auszudrücken.
 Betrachten wir im Folgenden, wie man einen *Score*, also einen *Zeilenmittelwert*, berechnet.
 
-#### Mit `easystats`
+##### Mit `easystats`
 
 `row_means`  wohnt im Paket `easystats`.
 
@@ -844,7 +853,7 @@ extra %>%
 Der Parameter `min_valid` bei `row_means()` gibt den Anteil der *nicht* fehlenden Werte (pro Zeile) wieder, damit ein Wert berechnet wird: Bei zu vielen fehlenden Werten (zu wenig Daten) pro Person wird sonst `NA` zurückgeliefert. Das ist sinnvoll, denn hat eine Person von 10 Items nur 1 Item beantwortet, so kann man wohl nicht zuverlässig sagen, dass Extraversion in seiner Breite zuverlässig geschätzt wird. Die Funktion fügt dem Datensatz eine Spalte hinzu, deren Name mit `var` angegeben wird.
 
 
-#### Mit `tidyverse`
+##### Mit `tidyverse`
 
 Die Idee von `rowwise()` ist es, den Datensatz so in Gruppen einzuteilen, dass jede Zeile eine Gruppe ist. Dann wird für jede "Gruppe" (Zeile) eine normale Operation durchgeführt.
 
@@ -862,7 +871,7 @@ extra |>
 
 
 
-## Standardisieren mit z-Werten
+### Standardisieren mit z-Werten
 
 
 
@@ -884,160 +893,6 @@ extra_std %>%
 
 
 Zu beachten ist, dass der Mittelwert der Stichprobe und deren Standardabweichung als Referenzwerte herangezogen wurden, nicht die entsprechenden Größen der Normierungsstichprobe.
-
-
-
-
-## Daten zusammenfassen (deskriptive Analyse)
-
-Damit es einfach bleibt, begrenzen wir uns auf ein paar Variablen.
-
-Sagen wir, 
-das sind die Variablen, die uns interessieren:
-
-```{r}
-extra_corr_names <- 
-extra %>% 
-  select(n_facebook_friends, n_hangover, age, extra_single_item, n_party, extra_mean) %>% 
-  names()
-
-extra_corr_names
-```
-
-
-
-### Deskriptive Ergebnisse für metrische Variablen 
-
-Sie können deskriptive Ergebnisse (Ihrer relevanten Variablen) für *metrische* Variablen z.B. so darstellen.
-
-
-```{r}
-extra %>% 
-  select(any_of(extra_corr_names)) %>% 
-  describe_distribution() %>% 
-  kable(digits = 2)
-```
-
-
-`kable()` macht aus dem drögen Output in der R-Konsole eine schicke HTML-Tabelle^[funktioniert auch in Word und PDF], wenn man das Quarto-Dokument rendert.
-
-Statt `select(any_of(extra_corr_names))` könnten Sie natürlich auch schreiben `select(n_facebook_friends, ...)`, wobei Sie für die drei Punkte alle Variablen von Interesse nennen würden.
-
-
-Praktischerweise kann man `describe_distribution` auch für gruppierte Datensätze nutzen, um so gruppierte Verteilungsmaße zu bekommen:
-
-```{r}
-extra |> 
-  group_by(sex) |> 
-  describe_distribution(extra_mean)
-```
-
-
-### Deskriptive Ergebnisse für nominale Variablen 
-
-
-#### Univariate Häufigkeiten
-
-Lassen wir uns die Häufigkeiten für `sex` und für `smoker` ausgeben, also für jede Variable separat (univariat).
-
-
-Mit `tidyverse` kann man das in vertrauter Manier bewerkstelligen:
-
-```{r}
-extra |> 
-  count(sex)
-```
-
-Etwas schicker sieht es aus mit `data_tabulate` aus `easystats`:
-
-```{r}
-extra |> 
-  select(sex, smoker) |> 
-  #drop_na() |>  ggf. ohne fehlende Werte
-  data_tabulate()
-```
-
-Wir können uns auch die *bi*variaten Häufigkeiten ausgeben lassen.
-
-```{r}
-extra |> 
-  drop_na(sex, smoker) |>  # fehlende Werte entfernt
-  group_by(sex) |> 
-  data_tabulate("smoker")
-```
-
-
-
-
-
-
-### Korrelationen darstellen
-
-In einer Umfrage erhebt man häufig mehrere Variablen, ein Teil davon oft *Konstrukte*.
-Es bietet sich in einem ersten Schritt an, die Korrelationen dieser Variablen untereinander
-darzustellen.
-
-
-
-#### Korrelationsmatrix
-
-
-
-```{r}
-extra %>% 
-  select(any_of(extra_corr_names)) %>%  
-  correlation() %>% 
-  summary() %>% 
-  kable(digits = 2)
-```
-
-
-Sie möchten das Ergebnis als normalen R-Dataframe? 
-Sie haben keine Lust auf dieses Rumgetue, sondern wollen das lieber als selber gerade ziehen.
-Also gut:
-
-
-```{r}
-cor_results <- 
-extra %>% 
-  select(any_of(extra_corr_names)) %>%  
-  correlation() %>% 
-  summary()
-
-cor_results
-```
-
-
-
-
-Man kann sich die Korrelationsmatrix auch in der *Bayes-Geschmacksrichtung* ausgeben lassen:
-
-
-```{r}
-extra %>% 
-  select(any_of(extra_corr_names)) %>%  
-  correlation(bayesian = TRUE) %>% 
-  summary() %>% 
-  kable(digits = 2)
-```
-
-
-#### Korrelationsmatrizen visualisieren
-
-Viele R-Pakete bieten sich an. Nehmen wir `{easystats}`.
-
-
-```{r}
-extra %>% 
-  select(any_of(extra_corr_names)) %>%  
-  correlation() %>% 
-  summary() %>% 
-  plot() +
-  labs(title = "Korrelationsmatrix, boa")
-```
-
-
-
 
 
 
