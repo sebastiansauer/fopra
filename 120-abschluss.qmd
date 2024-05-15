@@ -7,6 +7,10 @@
 Auf der Seite der [Schriftenreihe des Instituts für Wirtschaftspsychologie (iwp) der FOM Hochschule](https://forschung.fom.de/forschung/institute/iwp/publikationen.html#!acc=iwp-schriftenreihe/accid=18799) finden Sie eine Auswahl an insgesamt gut aufbereiteten Berichten zu psychologischen Studien -- fast alle aus studentischer Feder.
 Diese Arbeiten können als Vorbilder für Ihren eigenen Bericht dienen.
 
+
+Interessant ist z.B. die Arbeit zum Thema [Selbstwirksamkeit, Selbstregulation und Prokrastination – Überprüfung eines Mediationsmodells](https://forschung.fom.de/fileadmin/fom/forschung/iwp/Schriftenreihe/FOM-Forschung-iwp-Schriftenreihe-Band-11-Schuhmacher-Beatrice-Prokastination-2022.pdf) von @schuhmacher_selbstwirksamkeit_2022. Die Arbeit ist frei im Netz verfügbar.
+
+
 :::{callout-tip}
 Lernen Sie von anderen, vergleichbaren Arbeiten und nutzen Sie diese als Vorbild. $\square$
 :::
