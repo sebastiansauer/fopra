@@ -1,6 +1,20 @@
 # Abschluss
 
 
+## Beispiele für gute Projektarbeiten
+
+
+Auf der Seite der [Schriftenreihe des Instituts für Wirtschaftspsychologie (iwp) der FOM Hochschule](https://forschung.fom.de/forschung/institute/iwp/publikationen.html#!acc=iwp-schriftenreihe/accid=18799) finden Sie eine Auswahl an insgesamt gut aufbereiteten Berichten zu psychologischen Studien -- fast alle aus studentischer Feder.
+Diese Arbeiten können als Vorbilder für Ihren eigenen Bericht dienen.
+
+:::{callout-tip}
+Lernen Sie von anderen, vergleichbaren Arbeiten und nutzen Sie diese als Vorbild. $\square$
+:::
+
+
+
+
+## Fertig
 
 Sie haben dieses Modul abgeschlossen. 
 Sie müssen Ihren Fortschritt im Projektplan nicht mehr im Blick behalten. 😄 

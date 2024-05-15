@@ -151,7 +151,7 @@ d_bringtnixtin <- read_csv(d_bringtnixtin_path)
 
 {{< downloadthis data/d_bringtnixtin.csv dname = "bringtnixtin.csv" >}}
 
-Die Autoren der Studie geben an, dass die Daten in z-Einheiten skaliert sind.
+Die Autoren der Studie geben an, dass die Daten in *z*-Einheiten skaliert sind.
 
 
 ### Deskriptive Analyse
