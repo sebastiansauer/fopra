@@ -252,7 +252,7 @@ Das Prüfungsformat ist: *Projektarbeit*.
 - [Hinweise zu Projekt- und Seminararbeiten](https://hinweisbuch.netlify.app/060-hinweise-pruefung-projektarbeit-frame)
 
 
-- [Prüfungsvorbereitung](https://hinweisbuch.netlify.app/hinweise-pruefungsvorbereitung-frame)
+- [Prüfungsvorbereitung](https://hinweisbuch.netlify.app/150-hinweise-pruefungsvorbereitung-frame)
 
 
 

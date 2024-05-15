@@ -99,7 +99,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Abschicken",
     "search-label": "Suchen"
   }
-}</script><script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script><script src="site_libs/es6shim-0.35.6/es6shim.js"></script><script src="site_libs/es7shim-6.0.0/es7shim.js"></script><script src="site_libs/graphre-0.1.3/graphre.js"></script><script src="site_libs/nomnoml-1.5.3/nomnoml.js"></script><script src="site_libs/nomnoml-binding-0.2.6/nomnoml.js"></script><link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+}</script><link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
 <script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
 const typesetMath = (el) => {
   if (window.MathJax) {
@@ -134,7 +134,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./040-Populationsbeschreibung.html">Empirie</a></li><li class="breadcrumb-item"><a href="./085-aufbereiten.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Auswerten: Daten aufbereiten</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./080-Auswerten.html">Auswerten</a></li><li class="breadcrumb-item"><a href="./085-aufbereiten.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Auswerten: Daten aufbereiten</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -246,7 +246,18 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Kausalinferenz</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">Auswerten</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./080-Auswerten.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Auswerten: Grundlagen</span></span></a>
@@ -268,13 +279,13 @@ window.Quarto = {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
  <span class="menu-text">Fertigstellen</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./100-Statistiken-berichten.html" class="sidebar-item-text sidebar-link">
@@ -330,7 +341,7 @@ window.Quarto = {
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/sebastiansauer/fopra/blob/main/085-aufbereiten.qmd" class="toc-action"><i class="bi bi-github"></i>Quellcode anzeigen</a></li><li><a href="https://github.com/sebastiansauer/fopra/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./040-Populationsbeschreibung.html">Empirie</a></li><li class="breadcrumb-item"><a href="./085-aufbereiten.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Auswerten: Daten aufbereiten</span></a></li></ol></nav><div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./080-Auswerten.html">Auswerten</a></li><li class="breadcrumb-item"><a href="./085-aufbereiten.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Auswerten: Daten aufbereiten</span></a></li></ol></nav><div class="quarto-title">
 <h1 class="title">
 <span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Auswerten: Daten aufbereiten</span>
 </h1>
@@ -403,19 +414,15 @@ window.Quarto = {
 <p><span class="theorem-title"><strong>Beispiel 11.1</strong></span> <em>Jede Versuchsperson</em> Ihrer Studie hat zwei (oder mehrere) Fragebögen ausgefüllt. In Datensatz A finden sich die ersten paar Variablen und in Datensatz B die restlichen Variablen. Aber in beiden Datensätzen kommen alle Personen vor. <span class="math inline">\(\square\)</span></p>
 </div>
 <p><a href="#fig-bind-rows" class="quarto-xref">Abbildung&nbsp;<span>11.1</span></a> veranschaulicht das zeilenweise Zusammenführen.</p>
-<!-- ![Tabellen zeilenweise zusammenführen](img/bind-rows.png){#fig-bind-rows width=75%} -->
-<div class="cell" data-layout-align="center">
-<div id="fig-bind-rows" class="cell-output-display quarto-figure quarto-figure-center quarto-float anchored">
+<div id="fig-bind-rows" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-bind-rows-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="nomnoml html-widget html-fill-item" id="htmlwidget-0f74534d5fe7934dbc37" style="width:50%;height:480px;"></div>
-<script type="application/json" data-for="htmlwidget-0f74534d5fe7934dbc37">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n\n           [<table>table1| Var1 | Var2 || 1 | ... || 2 | ... || 3 | .. ]\n           [<table>table2| Var1 | Var2 || 4 | ... || 5 | ... || 6 | .. ]\n           [<table>table3| Var1 | Var2 || 1 | ... || 2 | ... || 3 | .. || 4 | ... || 5 | ... || 6 | .. ]\n           [table1] - +[table2]\n           [table2] -> =[table3]\n\n                 ","svg":false,"png":null},"evals":[],"jsHooks":[]}</script>
+<img src="img/add-rowwise.svg" class="img-fluid figure-img" style="width:50.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bind-rows-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;11.1: Tabellen zeilenweise zusammenführen
 </figcaption></figure>
 </div>
-</div>
-<p>Etwas ausführlicher ist es im Listing <a href="#lst-bind-rows" class="quarto-xref">Listing&nbsp;<span>11.1</span></a> dargestellt.</p>
+<p>Etwas ausführlicher ist der Sachverhalt im Listing <a href="#lst-bind-rows" class="quarto-xref">Listing&nbsp;<span>11.1</span></a> dargestellt.</p>
 <p>Sagen wir, wir haben zwei Tabellen, die wir “untereinander” (also zeilenweise) “zusammenkleben” möchten. Dann hilft uns <code><a href="https://dplyr.tidyverse.org/reference/bind_rows.html">bind_rows()</a></code>.</p>
 <div id="lst-bind-rows" class="listing quarto-float">
 <figure class="quarto-float quarto-float-lst figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst quarto-uncaptioned" id="lst-bind-rows-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -437,17 +444,14 @@ Listing&nbsp;11.1
 <div id="exm-bind-cols" class="theorem example">
 <p><span class="theorem-title"><strong>Beispiel 11.2</strong></span> <em>In jeder Gruppe</em> Ihrer Studie wurde ein anderer Fragebogen ausgefüllt (z. B. weil Sie unterschiedliche experimentelle Gruppen untersucht haben). Sie haben also zwei Datensätze mit unterschiedlichen Personen (nämlich in Datensatz A die Personen der Gruppe A und in Datensatz B die Personen der Gruppe B). Aber in jedem Datensatz finden sich die gleichen Variablen. <span class="math inline">\(\square\)</span></p>
 </div>
-<p><a href="#fig-bind-cols" class="quarto-xref">Abbildung&nbsp;<span>11.2</span></a> veranschaulicht das spaltenweise Zusammenführen von Tabellen.</p>
-<div class="cell" data-layout-align="center">
-<div id="fig-bind-cols" class="cell-output-display quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-bind-cols-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="nomnoml html-widget html-fill-item" id="htmlwidget-f378cb33615c98824a45" style="width:75%;height:480px;"></div>
-<script type="application/json" data-for="htmlwidget-f378cb33615c98824a45">{"x":{"code":"\n#fill: #FEFEFF\n#lineWidth: 1\n#zoom: 4\n#direction: right\n\n\n           [<table>table1| Var1 | Var2 || 1 | A || 2 | B || 3 | C ]\n           [<table>table2| Var1 | Var2 || 1 | D || 2 | E || 3 | F ]\n           [<table>table3| Var1 | Var2 | Var3|| \n                            1 | A | D || \n                            2 | B | E || \n                            3 | C| F ]\n           [table1] - +[table2]\n           [table2] -> =[table3]\n\n                 ","svg":false,"png":null},"evals":[],"jsHooks":[]}</script>
+<p><span class="quarto-unresolved-ref">?fig-bind-cols</span> veranschaulicht das spaltenweise Zusammenführen von Tabellen.</p>
+<div id="fig-bin-cols" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-bin-cols-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="img/add-colwise.svg" class="img-fluid figure-img">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bind-cols-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;11.2: Tabellen spaltenweise zusammenführen
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bin-cols-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;11.2: : Tabellen spaltenweise zusammenführen
 </figcaption></figure>
-</div>
 </div>
 <p>Sagen wir, wir haben zwei Tabellen, die wir “hintereinander kleben” möchten, also spaltenweise zusammenführen möchten, s. <a href="#lst-bind-cols" class="quarto-xref">Listing&nbsp;<span>11.2</span></a>.</p>
 <div id="lst-bind-cols" class="listing quarto-float">
@@ -932,7 +936,7 @@ Hinweis
 <span>  <span class="fu"><a href="https://rpkgs.datanovia.com/ggpubr/reference/gghistogram.html">gghistogram</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"extra_var"</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="085-aufbereiten_files/figure-html/unnamed-chunk-33-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><img src="085-aufbereiten_files/figure-html/unnamed-chunk-31-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1692,18 +1696,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer">
-    <div class="nav-footer-left">
-      &nbsp;
-    </div>   
-    <div class="nav-footer-center">
-<p>footer test</p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sebastiansauer/fopra/blob/main/085-aufbereiten.qmd" class="toc-action"><i class="bi bi-github"></i>Quellcode anzeigen</a></li><li><a href="https://github.com/sebastiansauer/fopra/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
-    <div class="nav-footer-right">
-      &nbsp;
-    </div>
-  </div>
-</footer>
 
 
-</body></html>
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sebastiansauer/fopra/blob/main/085-aufbereiten.qmd" class="toc-action"><i class="bi bi-github"></i>Quellcode anzeigen</a></li><li><a href="https://github.com/sebastiansauer/fopra/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div></div></footer></body></html>
