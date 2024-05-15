@@ -234,10 +234,21 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Kausalinferenz</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">Auswerten</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./080-Auswerten.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Auswerten: Überblick</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Auswerten: Grundlagen</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -256,13 +267,13 @@ window.Quarto = {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
  <span class="menu-text">Fertigstellen</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./100-Statistiken-berichten.html" class="sidebar-item-text sidebar-link">
@@ -366,7 +377,7 @@ window.Quarto = {
 <figcaption>Hallo Forschung! Wer bist und wer bin ich?</figcaption></figure>
 </div>
 <div class="xsmall">
-<p>This image and their code are taken from the <a href="https://wjschne.github.io/spiro/articles/Gallery/Gallery.html">phantastic Spiro R package</a> bei <a href="https://github.com/wjschne">W. J. Schneider</a>. Eine schöne Fraktalsammlung findet sich bei <a href="https://www.flickr.com/search/?text=fractal">Flickr</a>. Eine interessante, aber recht eigenwillige Antwort auf die Frage ” Wer bist und wer bin ich?” liefert <span class="citation" data-cites="hofstadter_ich_2008">Hofstadter et al. (<a href="130-references.html#ref-hofstadter_ich_2008" role="doc-biblioref">2008</a>)</span>.</p>
+<p>This image and their code are taken from the <a href="https://wjschne.github.io/spiro/articles/Gallery/Gallery.html">phantastic Spiro R package</a> bei <a href="https://github.com/wjschne">W. J. Schneider</a>. Eine schöne Fraktalsammlung findet sich bei <a href="https://www.flickr.com/search/?text=fractal">Flickr</a>. Eine interessante, aber recht eigenwillige Antwort auf die Frage ” Wer bist und wer bin ich?” liefert <span class="citation" data-cites="hofstadter_ich_2008">Hofstadter et al. (<a href="#ref-hofstadter_ich_2008" role="doc-biblioref">2008</a>)</span>.</p>
 </div>
 <section id="lernsteuerung" class="level2" data-number="2.1"><h2 data-number="2.1" class="anchored" data-anchor-id="lernsteuerung">
 <span class="header-section-number">2.1</span> Lernsteuerung</h2>
@@ -378,7 +389,7 @@ window.Quarto = {
 <li>Sie können die drei Schlussarten der Wissenschaft erläutern und mit Beispielen verdeutlichen.</li>
 </ul></section><section id="blick-zum-fahrplan-und-projektplan" class="level3" data-number="2.1.2"><h3 data-number="2.1.2" class="anchored" data-anchor-id="blick-zum-fahrplan-und-projektplan">
 <span class="header-section-number">2.1.2</span> Blick zum Fahrplan und Projektplan</h3>
-<p>Sie stehen am Anfang Ihrer Reise 😄. Wenn Sie es mir nicht glauben, werfen Sie einen Blick auf <a href="index.html#fig-ueberblick" class="quarto-xref">Abbildung&nbsp;<span>1.2</span></a> und <a href="index.html#fig-projektplan" class="quarto-xref">Abbildung&nbsp;<span>1.3</span></a>.</p>
+<p>Sie stehen am Anfang Ihrer Reise 😄. Wenn Sie es mir nicht glauben, werfen Sie einen Blick auf <a href="#fig-ueberblick" class="quarto-xref">Abbildung&nbsp;<span class="quarto-unresolved-ref">fig-ueberblick</span></a> und <a href="#fig-projektplan" class="quarto-xref">Abbildung&nbsp;<span class="quarto-unresolved-ref">fig-projektplan</span></a>.</p>
 <blockquote class="blockquote">
 <p>😈 Welcher Rat führt am sichersten zu einer schlechten Note?</p>
 </blockquote>
@@ -398,7 +409,7 @@ window.Quarto = {
 </div>
 <p>Der Nachteil solcher Magazine ist die Oberflächlichkeit der Darstellung: Viele Fragen zu der vorgestellten Forschung wird ein Bericht aus einem solchen Magazin unbeantwortet lassen. Der Nutzen solcher Magazine ist in ihrem Inspirationscharakter zu sehen: Man liest von faszinierender Forschung, fängt an, Fragen zu stellen und entwickelt Ideen (und Freude) auf eigene Forschung. Grund genug, dass wir uns einmal mit solchen Magazinen beschäftigen.</p>
 <div id="exr-inmind" class="theorem exercise">
-<p><span class="theorem-title"><strong>Übungsaufgabe 2.1 (Erarbeiten Sie eine Studie aus einem Wissenschaftsmagazin!)</strong></span> Suchen Sie sich eine Studie aus einem Wissenchaftsmagazin und arbeiten Sie die Kernaspekte heraus. Erarbeiten Sie ein Profil der Studie. Orientieren Sie sich an dem Leitfaden aus <a href="#tbl-studienprofil" class="quarto-xref">Tabelle&nbsp;<span>2.1</span></a>.</p>
+<p><span class="theorem-title"><strong>Übungsaufgabe 2.1 (Erarbeiten Sie eine Studie aus einem Wissenschaftsmagazin!)</strong></span> Suchen Sie sich eine Studie aus einem Wissenchaftsmagazin und arbeiten Sie die Kernaspekte heraus. Erarbeiten Sie ein Profil der Studie. Orientieren Sie sich an dem Leitfaden aus <a href="#tbl-studienprofil" class="quarto-xref">Tabelle&nbsp;<span class="quarto-unresolved-ref">tbl-studienprofil</span></a>.</p>
 </div>
 <div class="cell">
 <div id="tbl-studienprofil" class="cell quarto-float anchored">
@@ -460,12 +471,12 @@ Tabelle&nbsp;2.1: Vorlage zur Erstellung eines Studienprofils
 </figure>
 </div>
 </div>
-<p>Ein Studienprofil wie in <a href="#tbl-studienprofil" class="quarto-xref">Tabelle&nbsp;<span>2.1</span></a> passt nicht auf jede Studie, aber auf viele. Modifizieren Sie ggf. das Studienprofil, so dass es zu Ihrer Studie passt.</p>
+<p>Ein Studienprofil wie in <a href="#tbl-studienprofil" class="quarto-xref">Tabelle&nbsp;<span class="quarto-unresolved-ref">tbl-studienprofil</span></a> passt nicht auf jede Studie, aber auf viele. Modifizieren Sie ggf. das Studienprofil, so dass es zu Ihrer Studie passt.</p>
 <section id="popscience-bücher" class="level3" data-number="2.3.1"><h3 data-number="2.3.1" class="anchored" data-anchor-id="popscience-bücher">
 <span class="header-section-number">2.3.1</span> Popscience-Bücher</h3>
 <p>Fachartikel zu Fachbuch verhält sich wie Wissenschaftsmagazin zu Popscience-Buch. Hier sind einige Beispiele für solche Bücher.</p>
 <div id="exm-popscience" class="theorem example">
-<p><span class="theorem-title"><strong>Beispiel 2.1 (Auswahl an lesenswerten Popscience-Büchern)</strong></span> <span class="citation" data-cites="kahneman2012schnelles">Kahneman (<a href="130-references.html#ref-kahneman2012schnelles" role="doc-biblioref">2012</a>)</span>, <span class="citation" data-cites="Ariely2012">Ariely (<a href="130-references.html#ref-Ariely2012" role="doc-biblioref">2012</a>)</span>, <span class="citation" data-cites="cialdini_psychologie_2017">Cialdini (<a href="130-references.html#ref-cialdini_psychologie_2017" role="doc-biblioref">2017</a>)</span>, <span class="citation" data-cites="ariely_denken_2015">Ariely (<a href="130-references.html#ref-ariely_denken_2015" role="doc-biblioref">2015</a>)</span></p>
+<p><span class="theorem-title"><strong>Beispiel 2.1 (Auswahl an lesenswerten Popscience-Büchern)</strong></span> <span class="citation" data-cites="kahneman2012schnelles">Kahneman (<a href="#ref-kahneman2012schnelles" role="doc-biblioref">2012</a>)</span>, <span class="citation" data-cites="Ariely2012">Ariely (<a href="#ref-Ariely2012" role="doc-biblioref">2012</a>)</span>, <span class="citation" data-cites="cialdini_psychologie_2017">Cialdini (<a href="#ref-cialdini_psychologie_2017" role="doc-biblioref">2017</a>)</span>, <span class="citation" data-cites="ariely_denken_2015">Ariely (<a href="#ref-ariely_denken_2015" role="doc-biblioref">2015</a>)</span></p>
 </div>
 <div id="exr-yourpop" class="theorem exercise">
 <p><span class="theorem-title"><strong>Übungsaufgabe 2.2 (Welche Popscience-Bücher kennen Sie?)</strong></span> Stellen Sie ein Popscience-Buch kurz vor! Orientieren Sie sich an folgender Gliederung:</p>
@@ -475,13 +486,13 @@ Tabelle&nbsp;2.1: Vorlage zur Erstellung eines Studienprofils
 <li>Weniger gut fand ich an dem Buch, …</li>
 <li>Interessant fand ich …</li>
 </ol>
-<p>Tipp: Lassen Sie sich ähnliche Bücher wie in <a href="#exm-popscience" class="quarto-xref">Beispiel&nbsp;<span>2.1</span></a> vorschlagen, wenn Sie keinen Zugang finden.</p>
+<p>Tipp: Lassen Sie sich ähnliche Bücher wie in <a href="#exm-popscience" class="quarto-xref">Beispiel&nbsp;<span class="quarto-unresolved-ref">exm-popscience</span></a> vorschlagen, wenn Sie keinen Zugang finden.</p>
 </div>
 </section><section id="echte-forschung-aus-studentischer-feder" class="level3" data-number="2.3.2"><h3 data-number="2.3.2" class="anchored" data-anchor-id="echte-forschung-aus-studentischer-feder">
 <span class="header-section-number">2.3.2</span> Echte Forschung aus studentischer Feder</h3>
 <p>Auf der Seite <a href="https://www.fom.de/forschung/institute/iwp-institut-fuer-wirtschaftspsychologie/publikationen/iwp-schriftenreihe.html">des Instituts für Wirtschaftspsychologie (iwp) der FOM Hochschule</a> finden Sie eine Auswahl an insgesamt gut aufbereiteten psychologischen Studien aus studentischer Feder.</p>
 <div id="exr-iwp" class="theorem exercise">
-<p><span class="theorem-title"><strong>Übungsaufgabe 2.3 (Einblick in studentische Forschung)</strong></span> Lesen Sie eine studentische Forschungsarbeit quer und präsentieren Sie die wesentlichen Ergebnisse! Nutzen Sie <a href="#tbl-studienprofil" class="quarto-xref">Tabelle&nbsp;<span>2.1</span></a> zur Gliederung Ihrer Analyse.</p>
+<p><span class="theorem-title"><strong>Übungsaufgabe 2.3 (Einblick in studentische Forschung)</strong></span> Lesen Sie eine studentische Forschungsarbeit quer und präsentieren Sie die wesentlichen Ergebnisse! Nutzen Sie <a href="#tbl-studienprofil" class="quarto-xref">Tabelle&nbsp;<span class="quarto-unresolved-ref">tbl-studienprofil</span></a> zur Gliederung Ihrer Analyse.</p>
 </div>
 </section></section><section id="was-ist-wissenschaft" class="level2" data-number="2.4"><h2 data-number="2.4" class="anchored" data-anchor-id="was-ist-wissenschaft">
 <span class="header-section-number">2.4</span> Was ist Wissenschaft?</h2>
@@ -566,7 +577,7 @@ Tabelle&nbsp;2.1: Vorlage zur Erstellung eines Studienprofils
 <p>Modelle ermöglichen damit die Beschreibung, Erklärung und Vorhersage von Phänomen (und damit auch die Einflussnahme). Modelle sind ähnlich zu Theorien, aber meist kleiner gefasst und die Analogie oder Metapher steht im Vordergrund.</p>
 </section><section id="beispiele-für-wissenschaften" class="level3 {exm-sciences-types}" data-number="2.4.5"><h3 data-number="2.4.5" class="anchored" data-anchor-id="beispiele-für-wissenschaften">
 <span class="header-section-number">2.4.5</span> Beispiele für Wissenschaften</h3>
-<p><a href="#tbl-sciences" class="quarto-xref">Tabelle&nbsp;<span>2.2</span></a> stellt Beispiele vor für Wissenschaften und ihre Einordnung.</p>
+<p><a href="#tbl-sciences" class="quarto-xref">Tabelle&nbsp;<span class="quarto-unresolved-ref">tbl-sciences</span></a> stellt Beispiele vor für Wissenschaften und ihre Einordnung.</p>
 <div class="cell">
 <div id="tbl-sciences" class="cell quarto-float anchored">
 <figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-sciences-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -630,7 +641,7 @@ Tabelle&nbsp;2.2: Beispiele für Wissenschaften und ihre Einordnung
 <p><span class="math inline">\(\square\)</span></p>
 </section><section id="die-drei-ziele-einer-empirischen-wissenschaft" class="level3" data-number="2.4.6"><h3 data-number="2.4.6" class="anchored" data-anchor-id="die-drei-ziele-einer-empirischen-wissenschaft">
 <span class="header-section-number">2.4.6</span> Die drei Ziele einer empirischen Wissenschaft</h3>
-<p><a href="020-themawahl.html#fig-ziele" class="quarto-xref">Abbildung&nbsp;<span>3.4</span></a> zeigt die drei Ziele einer empirischen Wissenschaft. Es gibt nur diese drei! Allerdings könnte man auch von Ziel<em>arten</em> sprechen.</p>
+<p><a href="#fig-ziele" class="quarto-xref">Abbildung&nbsp;<span class="quarto-unresolved-ref">fig-ziele</span></a> zeigt die drei Ziele einer empirischen Wissenschaft. Es gibt nur diese drei! Allerdings könnte man auch von Ziel<em>arten</em> sprechen.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-ziele" class="quarto-figure quarto-figure-center quarto-float anchored">
@@ -708,7 +719,7 @@ Abbildung&nbsp;2.2: Wissenschaftliche Errungenschaften, die aus dem Alltag nicht
 </section><section id="wissenschaft-und-lernen" class="level3" data-number="2.5.4"><h3 data-number="2.5.4" class="anchored" data-anchor-id="wissenschaft-und-lernen">
 <span class="header-section-number">2.5.4</span> Wissenschaft und Lernen</h3>
 <div id="exm-science2" class="theorem example">
-<p><span class="theorem-title"><strong>Beispiel 2.4 (Aus der Forschung)</strong></span> Handschriftliche Notizen merkt man sich besser als mit der Tastatur getippte <span class="citation" data-cites="mueller_pen_2014">(<a href="130-references.html#ref-mueller_pen_2014" role="doc-biblioref">Mueller &amp; Oppenheimer, 2014</a>)</span>.<span class="math inline">\(\square\)</span></p>
+<p><span class="theorem-title"><strong>Beispiel 2.4 (Aus der Forschung)</strong></span> Handschriftliche Notizen merkt man sich besser als mit der Tastatur getippte <span class="citation" data-cites="mueller_pen_2014">(<a href="#ref-mueller_pen_2014" role="doc-biblioref">Mueller &amp; Oppenheimer, 2014</a>)</span>.<span class="math inline">\(\square\)</span></p>
 </div>
 </section><section id="wissenschaft-als-wert-an-sich" class="level3" data-number="2.5.5"><h3 data-number="2.5.5" class="anchored" data-anchor-id="wissenschaft-als-wert-an-sich">
 <span class="header-section-number">2.5.5</span> Wissenschaft als Wert an sich</h3>
@@ -730,7 +741,7 @@ Wichtig
 </section><section id="reproduzierbarkeit" class="level3" data-number="2.5.6"><h3 data-number="2.5.6" class="anchored" data-anchor-id="reproduzierbarkeit">
 <span class="header-section-number">2.5.6</span> Reproduzierbarkeit</h3>
 <div id="def-repro" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2.4 (Reproduzierbarkeit)</strong></span> Reproduzierbarkeit (“Wiederholbarkeit”) ist das Vermögen, eine Analyse durch Dritte zu wiederholen und zu einem ähnlichen (gleichen) Ergebnis wie in der ursprünglichen Analyse zu bekommen.<span class="math inline">\(\square\)</span></p>
+<p><span class="theorem-title"><strong>Definition 2.4 (Reproduzierbarkeit)</strong></span> Reproduzierbarkeit (“Wiederholbarkeit”) ist das Vermögen, eine Analyse durch Dritte zu wiederholen und zu einem ähnlichen (gleichen) Ergebnis wie in der ursprünglichen Analyse zu bekommen. Es handelt sich um ein Kernkriterium für wissenschaftliche Qualität. <span class="math inline">\(\square\)</span></p>
 </div>
 <p>Wenn ein Befund nicht reproduzierbar ist, ist es dann echtes Wissen?</p>
 </section><section id="forschung-früher-und-heute" class="level3" data-number="2.5.7"><h3 data-number="2.5.7" class="anchored" data-anchor-id="forschung-früher-und-heute">
@@ -741,7 +752,7 @@ Wichtig
 </div>
 </section><section id="ein-prozess-der-forschung" class="level3" data-number="2.5.8"><h3 data-number="2.5.8" class="anchored" data-anchor-id="ein-prozess-der-forschung">
 <span class="header-section-number">2.5.8</span> Ein Prozess der Forschung</h3>
-<p><a href="#fig-prozess-wiss" class="quarto-xref">Abbildung&nbsp;<span>2.3</span></a> stellt eine mögliche Gliederung des Prozesses der Forschung dar.</p>
+<p><a href="#fig-prozess-wiss" class="quarto-xref">Abbildung&nbsp;<span class="quarto-unresolved-ref">fig-prozess-wiss</span></a> stellt eine mögliche Gliederung des Prozesses der Forschung dar.</p>
 <div id="fig-prozess-wiss" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-prozess-wiss-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="img/science-process.jpg" class="img-fluid figure-img">
@@ -783,7 +794,7 @@ Abbildung&nbsp;2.3: Ein Prozess von Wissenschaft
 <span class="header-section-number">2.6</span> Wissenschaftliches Schließen</h2>
 <section id="arten-des-schließens" class="level3" data-number="2.6.1"><h3 data-number="2.6.1" class="anchored" data-anchor-id="arten-des-schließens">
 <span class="header-section-number">2.6.1</span> Arten des Schließens</h3>
-<p>Es gibt drei Arten, wie man zu Wissen (über nicht beobachtbare Dinge) kommen kann <span class="citation" data-cites="walach_psychologie_2013">(<a href="130-references.html#ref-walach_psychologie_2013" role="doc-biblioref">Walach &amp; Stillfried, 2013</a>)</span>.</p>
+<p>Es gibt drei Arten, wie man zu Wissen (über nicht beobachtbare Dinge) kommen kann <span class="citation" data-cites="walach_psychologie_2013">(<a href="#ref-walach_psychologie_2013" role="doc-biblioref">Walach &amp; Stillfried, 2013</a>)</span>.</p>
 <p>Bohnen! Die Grundfesten der Wissenschaft!</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="img/pinto-bean-3728767_640.jpg" class="img-fluid figure-img" style="width:50.0%"></p>
@@ -889,10 +900,10 @@ Vorsicht
 </div>
 </section><section id="vertiefung" class="level2" data-number="2.9"><h2 data-number="2.9" class="anchored" data-anchor-id="vertiefung">
 <span class="header-section-number">2.9</span> Vertiefung</h2>
-<p>Was ist Wissenschaft? – Antworten auf diese Frage versucht u.a. <span class="citation" data-cites="chalmers_wege_2007">Chalmers &amp; Chalmers (<a href="130-references.html#ref-chalmers_wege_2007" role="doc-biblioref">2007</a>)</span> zu geben. Einen breiteren Fokus auf die methodologischen Grundlagen der Psychologie liefert <span class="citation" data-cites="walach_psychologie_2013">Walach &amp; Stillfried (<a href="130-references.html#ref-walach_psychologie_2013" role="doc-biblioref">2013</a>)</span>. Wer sich mit den Grundlagen der Logik befassen möchte - als Fundament vernünftiger Aussagen -, der findet etwa bei <span class="citation" data-cites="suppes_introduction_1999">Suppes (<a href="130-references.html#ref-suppes_introduction_1999" role="doc-biblioref">1999</a>)</span> eine nützliche Einführung. Sie zweifeln, ob die Psychologie überhaupt eine Wissenschaft ist? Das ist keine Blasphemie, wie man <span class="citation" data-cites="galliker_ist_2016">Galliker (<a href="130-references.html#ref-galliker_ist_2016" role="doc-biblioref">2016</a>)</span> nachlesen kann. Dass Psychologie eine Wissenschaft ist, ist für <span class="citation" data-cites="dienes_understanding_2008">Dienes (<a href="130-references.html#ref-dienes_understanding_2008" role="doc-biblioref">2008</a>)</span> klar. Übrigens ist dieses Buch weit rezipiert worden, mit positivem Echo. Wer Lust hat auf einen Klassiker der Wissenschaftstheorie, der kommt an <span class="citation" data-cites="popper_logik_2013">Popper (<a href="130-references.html#ref-popper_logik_2013" role="doc-biblioref">2013</a>)</span> nicht vorbei.</p>
+<p>Was ist Wissenschaft? – Antworten auf diese Frage versucht u.a. <span class="citation" data-cites="chalmers_wege_2007">Chalmers &amp; Chalmers (<a href="#ref-chalmers_wege_2007" role="doc-biblioref">2007</a>)</span> zu geben. Einen breiteren Fokus auf die methodologischen Grundlagen der Psychologie liefert <span class="citation" data-cites="walach_psychologie_2013">Walach &amp; Stillfried (<a href="#ref-walach_psychologie_2013" role="doc-biblioref">2013</a>)</span>. Wer sich mit den Grundlagen der Logik befassen möchte - als Fundament vernünftiger Aussagen -, der findet etwa bei <span class="citation" data-cites="suppes_introduction_1999">Suppes (<a href="#ref-suppes_introduction_1999" role="doc-biblioref">1999</a>)</span> eine nützliche Einführung. Sie zweifeln, ob die Psychologie überhaupt eine Wissenschaft ist? Das ist keine Blasphemie, wie man <span class="citation" data-cites="galliker_ist_2016">Galliker (<a href="#ref-galliker_ist_2016" role="doc-biblioref">2016</a>)</span> nachlesen kann. Dass Psychologie eine Wissenschaft ist, ist für <span class="citation" data-cites="dienes_understanding_2008">Dienes (<a href="#ref-dienes_understanding_2008" role="doc-biblioref">2008</a>)</span> klar. Übrigens ist dieses Buch weit rezipiert worden, mit positivem Echo. Wer Lust hat auf einen Klassiker der Wissenschaftstheorie, der kommt an <span class="citation" data-cites="popper_logik_2013">Popper (<a href="#ref-popper_logik_2013" role="doc-biblioref">2013</a>)</span> nicht vorbei.</p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
 <div id="ref-Ariely2012" class="csl-entry" role="listitem">
 Ariely, D. (2012). <em>Die Halbe <span>Wahrheit</span> Ist Die Beste <span>Lüge</span>: <span>Wie</span> Wir Andere Täuschen–Und Uns Selbst Am Meisten</em>. <span>Droemer</span>.
 </div>
@@ -1517,18 +1528,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer">
-    <div class="nav-footer-left">
-      &nbsp;
-    </div>   
-    <div class="nav-footer-center">
-<p>footer test</p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sebastiansauer/fopra/blob/main/010-rahmen.qmd" class="toc-action"><i class="bi bi-github"></i>Quellcode anzeigen</a></li><li><a href="https://github.com/sebastiansauer/fopra/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
-    <div class="nav-footer-right">
-      &nbsp;
-    </div>
-  </div>
-</footer>
 
 
-</body></html>
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sebastiansauer/fopra/blob/main/010-rahmen.qmd" class="toc-action"><i class="bi bi-github"></i>Quellcode anzeigen</a></li><li><a href="https://github.com/sebastiansauer/fopra/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div></div></footer></body></html>
