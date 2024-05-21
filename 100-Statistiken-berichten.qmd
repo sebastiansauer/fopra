@@ -31,6 +31,8 @@ In diesem Kapitel wird folgende Frage beantwortet: "Wie man die Ergebnisse einer
 library(tidyverse)
 library(easystats)
 library(rstanarm)
+library(gt)  # optional
+library(gtsummary)  # optional
 ```
 
 

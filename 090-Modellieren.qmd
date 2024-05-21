@@ -149,9 +149,9 @@ d_bringtnixtin <- read_csv(d_bringtnixtin_path)
 ```
 
 
-{{< downloadthis data/d_bringtnixtin.csv >}}
+{{< downloadthis data/d_bringtnixtin.csv dname = "bringtnixtin.csv" >}}
 
-Die Autoren der Studie geben an, dass die Daten in z-Einheiten skaliert sind.
+Die Autoren der Studie geben an, dass die Daten in *z*-Einheiten skaliert sind.
 
 
 ### Deskriptive Analyse
@@ -421,11 +421,11 @@ d_bringtnixtin %>%
   print_md()
 ```
 
-Die deskiptiven Kennwerte sind in @fig-bringtnixtin-desk2 dargestellt.
+Die deskriptiven Kennwerte sind in @fig-bringtnixtin-within-desk dargestellt.
 
 
 ```{r}
-#| label: fig-bringtnixtin-desk2
+#| label: fig-bringtnixtin-within-desk
 #| fig-cap: "Veränderung der fluiden Intelligenz (d) in Abhängigkeit der Gruppe; g=0: Kontrollgruppe (Placebo), g=1: Experimentalgruppe (hohe Dosis)"
 ggbetweenstats(
   data = d_bringtnixtin,
@@ -439,7 +439,7 @@ ggbetweenstats(
 
 ### Modellierung
 
-Wir modellieren (in `m_bringtnixtin2`) jetzt die Veränderung `d = y2 - y1` als AV; UV ist wieder `g`, s. @tbl-m-bringtnixtin2-params.
+Wir modellieren (in `m_bringtnixtin2`) jetzt die *Veränderung* `d = y2 - y1` als AV; UV ist wieder `g`, s. @tbl-m-bringtnixtin2-params.
 
 ```{r}
 #| results: hide
@@ -551,7 +551,7 @@ d_within <-
 head(d_within)
 ```
 
-{{< downloadthis data/withindesign.csv >}}
+{{< downloadthis data/withindesign.csv dname = "withindesign.csv" >}}
 
 
 

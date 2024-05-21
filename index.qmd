@@ -246,13 +246,13 @@ Hinweise zu Software zum gemeinsamen Bearbeiten von Dokumenten und Lernstrategie
 
 Das Prüfungsformat ist: *Projektarbeit*.
 
-- [Allgemeine Prüfungshinweise](https://hinweisbuch.netlify.app/hinweise-pruefung-allgemein-frame)
+- [Allgemeine Prüfungshinweise](https://hinweisbuch.netlify.app/010-hinweise-pruefung-allgemein-frame)
 
 
-- [Hinweise zu Projekt- und Seminararbeiten](https://hinweisbuch.netlify.app/hinweise-pruefung-projektarbeit-frame)
+- [Hinweise zu Projekt- und Seminararbeiten](https://hinweisbuch.netlify.app/060-hinweise-pruefung-projektarbeit-frame)
 
 
-- [Prüfungsvorbereitung](https://hinweisbuch.netlify.app/hinweise-pruefungsvorbereitung-frame)
+- [Prüfungsvorbereitung](https://hinweisbuch.netlify.app/150-hinweise-pruefungsvorbereitung-frame)
 
 
 

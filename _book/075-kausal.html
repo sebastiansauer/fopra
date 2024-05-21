@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.549">
+<meta name="generator" content="quarto-1.4.553">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <title>Forschungsprojekt - 9&nbsp; Kausalinferenz</title>
 <style>
@@ -268,10 +268,21 @@ window.Quarto = {
  <span class="menu-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Kausalinferenz</span></span></a>
   </div>
 </li>
-          <li class="sidebar-item">
+      </ul>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">Auswerten</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Abschnitt umschalten">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./080-Auswerten.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Auswerten: Überblick</span></span></a>
+ <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Auswerten: Grundlagen</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -290,13 +301,13 @@ window.Quarto = {
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
  <span class="menu-text">Fertigstellen</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Abschnitt umschalten">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true" aria-label="Abschnitt umschalten">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./100-Statistiken-berichten.html" class="sidebar-item-text sidebar-link">
@@ -371,7 +382,7 @@ window.Quarto = {
 <p>Sie befinden sich im Abschnitt “Auswertung” in <a href="index.html#fig-ueberblick" class="quarto-xref">Abbildung&nbsp;<span>1.2</span></a>. Behalten Sie Ihren Fortschritt im Projektplan im Blick, s. <a href="index.html#fig-projektplan" class="quarto-xref">Abbildung&nbsp;<span>1.3</span></a>.</p>
 </section><section id="benötigte-r-pakete" class="level3" data-number="9.1.3"><h3 data-number="9.1.3" class="anchored" data-anchor-id="benötigte-r-pakete">
 <span class="header-section-number">9.1.3</span> Benötigte R-Pakete</h3>
-<div class="cell" data-hash="075-kausal_cache/html/unnamed-chunk-1_7c40dd55256a8c81be46b60d8c7f7122">
+<div class="cell">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://easystats.github.io/easystats/">easystats</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://mc-stan.org/rstanarm/">rstanarm</a></span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -383,7 +394,7 @@ window.Quarto = {
 <div id="exm-stoerche" class="theorem example">
 <p><span class="theorem-title"><strong>Beispiel 9.1</strong></span> Der Effekt von Störchen auf Babies ist nicht identifiziert. Der Einfluss von Störchen auf Babies ist konfundiert durch den Einfluss der Umwelt. Das heißt, dass der Zusammenhang von Störchen und Babies nicht kausal ist, sondern ein Scheinkorrelation, vgl. <a href="#fig-stoerche" class="quarto-xref">Abbildung&nbsp;<span>9.1</span></a>.<span class="math inline">\(\square\)</span></p>
 </div>
-<div class="cell" data-hash="075-kausal_cache/html/fig-stoerche_90cbd151bfe9a2da838e09b0320f292c">
+<div class="cell">
 <div class="cell-output-display">
 <div id="fig-stoerche" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-stoerche-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -411,7 +422,7 @@ Abbildung&nbsp;9.1: Kausalmodell für das Lehrbuchbeispiel ‘Störche und Babie
 <li>
 <i class="fa-solid fa-file" aria-label="file"></i> Lassen Sie sich von Dagitty angeben, welche Variablen Sie kontrollieren müssen, um den Kausaleffekt zu identifizieren.</li>
 </ol>
-<p>Gute Nachricht: Ein <em>schwacher</em> konfundierender Einfluss darf als “marginal” deklariert und ignoriert werden. Fragt sich nur, ab wann ist schwach schwach? Eine Antwort darauf ist, wenn der entsprechende Regressionskoeffizient kleiner ist als 5% der Streuung (SD) der AV <span class="citation" data-cites="kruschke_rejecting_2018">(<a href="130-references.html#ref-kruschke_rejecting_2018" role="doc-biblioref">Kruschke, 2018</a>)</span>.</p>
+<p>Gute Nachricht: Ein <em>schwacher</em> konfundierender Einfluss darf als “marginal” deklariert und ignoriert werden. Fragt sich nur, ab wann ist schwach schwach? Eine Antwort darauf ist, wenn der entsprechende Regressionskoeffizient kleiner ist als 5% der Streuung (SD) der AV <span class="citation" data-cites="kruschke_rejecting_2018">(<a href="130-references.html#ref-kruschke_rejecting_2018" role="doc-biblioref">Kruschke 2018</a>)</span>.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -433,12 +444,12 @@ Hinweis
 <p>Im <a href="https://datenwerk.netlify.app/">Datenwerk</a> unter dem Tag <a href="https://datenwerk.netlify.app/#category=causal">causal</a> finden sich eine Reihe von Aufgaben zur Kausalanalyse.</p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
 <div id="ref-huntington-klein_effect_2022" class="csl-entry" role="listitem">
-Huntington-Klein, N. (2022). <em>The Effect: An Introduction to Research Design and Causality</em>. <span>CRC Press, Taylor &amp; Francis Group</span>. <a href="https://theeffectbook.net/">https://theeffectbook.net/</a>
+Huntington-Klein, Nick. 2022. <em>The Effect: An Introduction to Research Design and Causality</em>. <span>Boca Raton</span>: <span>CRC Press, Taylor &amp; Francis Group</span>. <a href="https://theeffectbook.net/">https://theeffectbook.net/</a>.
 </div>
 <div id="ref-kruschke_rejecting_2018" class="csl-entry" role="listitem">
-Kruschke, J. K. (2018). Rejecting or <span>Accepting Parameter Values</span> in <span>Bayesian Estimation</span>. <em>Advances in Methods and Practices in Psychological Science</em>, <em>1</em>(2), 270–280. <a href="https://doi.org/10.1177/2515245918771304">https://doi.org/10.1177/2515245918771304</a>
+Kruschke, John K. 2018. <span>„Rejecting or <span>Accepting Parameter Values</span> in <span>Bayesian Estimation</span>“</span>. <em>Advances in Methods and Practices in Psychological Science</em> 1 (2): 270–80. <a href="https://doi.org/10.1177/2515245918771304">https://doi.org/10.1177/2515245918771304</a>.
 </div>
 </div>
 </section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
@@ -664,6 +675,24 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -698,7 +727,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -1011,29 +1044,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="./070-Erheben.html" class="pagination-link  aria-label=">
+      <a href="./070-Erheben.html" class="pagination-link" aria-label="Erheben">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Erheben</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./080-Auswerten.html" class="pagination-link" aria-label="<span class='chapter-number'>10</span>&nbsp; <span class='chapter-title'>Auswerten: Überblick</span>">
-        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Auswerten: Überblick</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./080-Auswerten.html" class="pagination-link" aria-label="Auswerten: Grundlagen">
+        <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Auswerten: Grundlagen</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
-<footer class="footer"><div class="nav-footer">
-    <div class="nav-footer-left">
-      &nbsp;
-    </div>   
-    <div class="nav-footer-center">
-<p>footer test</p>
-<div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sebastiansauer/fopra/blob/main/075-kausal.qmd" class="toc-action"><i class="bi bi-github"></i>Quellcode anzeigen</a></li><li><a href="https://github.com/sebastiansauer/fopra/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div>
-    <div class="nav-footer-right">
-      &nbsp;
-    </div>
-  </div>
-</footer>
 
 
-</body></html>
+
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sebastiansauer/fopra/blob/main/075-kausal.qmd" class="toc-action"><i class="bi bi-github"></i>Quellcode anzeigen</a></li><li><a href="https://github.com/sebastiansauer/fopra/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div></div></footer></body></html>
