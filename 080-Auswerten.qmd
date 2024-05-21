@@ -195,7 +195,7 @@ Hier sehen Sie im Überblick die Schritte, die in vielen Fällen sinnvoll sind, 
 2. Explorative Analyse
     1. Daten zusammenfassen (zentrale Tendenz, Streuung, Zusammenhang)
     2. Daten visualisieren
-3. Modellierung
+3. Modellierung und Inferenzstatistik
     1. Modell berechnen
     2. Parameter berichten (Punkt- und Intervallschätzer)
     3. Parameter visualisieren
@@ -223,6 +223,117 @@ Das Kursbuch [Start:Bayes!](https://start-bayes.netlify.app/) stellt einen Einst
 
 [Hier](https://sebastiansauer.github.io/umfragen-auswerten/index.html) finden Sie (m)eine Anleitung zur Auswertung von Umfragedaten.
 
+
+
+## Überblick zur Statistik
+
+### Deskriptiv- vs. Inferenzstatistik
+
+@fig-inf1 und @fig-inf2 geben einen Überblick zum Unterschied von Deskriptiv- und Inferenzstatistik.
+
+
+
+![Deskriptiv- vs. Inferenzstatistik](img/desk-inf.jpg){#fig-inf1 width=70% fig-align="center"}
+
+
+
+![Inferenzstatistik schätzt die (Un-)Genauigkeit der Kennwerte der Deskriptivstatatistik](img/desk-inf-fans.jpg){#fig-inf2 width=70% fig-align="center"}
+
+
+
+### Deskriptivstatistik
+
+
+Typische Kennwerte der Deskriptivstatistik sind:
+
+- Arithmetisches Mittel
+- Standardabweichung
+- Anteil
+- Korrelation
+- Regressionskoeffizienten
+
+
+
+
+@fig-scatter-interactive zeigt interaktive Beispiele für einen Kennwert des Deskriptivstatistik: (lineare) Korrelation^[Quelle: <https://observablehq.com/d/bb7ad3ecfb1ac2a6>]. 
+
+
+
+:::{#fig-scatter-interactive}
+
+::: {.figure-content}
+
+
+
+{{< include children/scatterplot-interactive.qmd >}}
+
+
+
+:::
+
+Interaktives Beispiel für Zusammenhangsdiagramme.
+
+:::
+
+
+
+### Inferenzstatistik
+
+@fig-samples-for-inference veranschautlicht die Daaseinsberechtigung der Inferenzstatistik: 
+Eine einzelne Stichprobe schätzt den Mittelwert der Population (mu) ungenau (je kleiner die Stichprobe, desto ungenauer, ceteris paribus). 
+Daher brauchen wir eine Angabe, wie (un)genau unser Mittelwert wohl den "wahren" Mittelwert der Population (mu) schätzt. 
+Genau das macht die Inferenzstatistik!
+
+
+
+```{r}
+#| echo: false
+#| label: fig-samples-for-inference 
+#| fig-cap: "Inferenzstatistik veranschaulicht: Einzelne Stichproben schätzen den Mittelwert der Populationswert (mu) nur ungenau. Daher brauchen eine Quantifizierung der Schätz(un)genauigkeit des Mittelwerts der Population."
+source("img/samples-for-inference.R")
+```
+
+
+
+### Modellieren
+
+
+:::{#def-model}
+### Modell
+Ein Modell ist ein vereinfachtes Abbild der Wirklichkeit.$\square$
+:::
+
+Der Nutzen eines Modells ist, einen (übermäßig) komplexen Sachverhalt zu vereinfachen oder überhaupt erst handhabbar zu machen.
+Man versucht zu vereinfachen, ohne Wesentliches wegzulassen. 
+Der Speck muss weg, sozusagen. Das Wesentliche bleibt.
+
+Auf die Statistik bezogen heißt das,
+dass man einen Datensatz dabei so zusammenfasst,
+damit man das Wesentliche erkennt.
+Was ist das "Wesentliche"? Oft interessiert man sich für die Ursachen eines Phänomens. 
+Etwa: "Wie kommt es bloß, dass ich ohne zu lernen die Klausur so gut bestanden habe?"^[Das ist natürlich nur ein fiktives, komplett unrealistisches Beispiel, das auch unklaren Ursachen den Weg auf diese Seite gefunden hat.]
+Noch allgemeiner ist man dabei häufig am Zusammenhang von `X ` und `Y` interessiert, s. @fig-xy, die ein Sinnbild von statistischen Modellen widergibt.
+
+
+
+
+
+:::{#fig-xy fig-align="center"}
+
+
+```{mermaid}
+flowchart LR
+X --> Y
+
+
+X1 --> Y2
+X2 --> Y2
+```
+
+oben: Sinnbild eines statistischen Modells; unten: Sinnbild eines statistischen Modells, mit zwei Inputvariablen ("Ursachen")
+
+
+:::
 
 
 
@@ -282,10 +393,13 @@ Im Folgenden sind die Vorteile der oben genannten klickbasierten Software-Progra
 
 
 
+## Deskriptivstatistik in der Praxis
 
-## Daten zusammenfassen (deskriptive Analyse)
+:::{.callout-important}
+Die Deskriptivstatistik fasst eine Datenreihe zu einer Kennzahl zusammen. Der Nutzen liegt im Überblick, den man so gewinnt. 
+:::
 
-Damit es einfach bleibt, begrenzen wir uns auf ein paar Variablen.
+Damit es einfach bleibt, begrenzen wir uns im Folgenden auf ein paar Variablen.
 
 Sagen wir, 
 das sind die Variablen, die uns interessieren:
@@ -303,18 +417,38 @@ extra_corr_names
 
 ### Deskriptive Ergebnisse für metrische Variablen 
 
-Sie können deskriptive Ergebnisse (Ihrer relevanten Variablen) für *metrische* Variablen z.B. so darstellen.
+Sie können deskriptive Ergebnisse (Ihrer relevanten Variablen) für *metrische* Variablen z.B. so darstellen, s. @lst-desk1.
+
+
+:::{#lst-desk1}
 
 
 ```{r}
 extra %>% 
   select(any_of(extra_corr_names)) %>% 
-  describe_distribution() %>% 
+  describe_distribution() %>%  # aus `easystats`
   kable(digits = 2)
 ```
 
+Deskriptive Statistik mit Hilfe des R-Pakets `easystats` 
 
-`kable()` macht aus dem drögen Output in der R-Konsole eine schicke HTML-Tabelle^[funktioniert auch in Word und PDF], wenn man das Quarto-Dokument rendert.
+:::
+
+Übersetzen wir @lst-desk1 vom Errischen ins Deutsche:
+
+1. Hey R,
+2. nimm die Tabelle `extra` ... und dann
+3. wähle jede Variable, die ich im Vektor `extra_corr_names` angegeben habe ... und dann
+4. beschreibe die Verteilung (jeweils, also für jede Variable) ... und dann
+5. mache aus der drögen Tabelle eine schicke. Fertig!
+
+
+
+
+
+
+
+`kable()` macht aus dem drögen Output in der R-Konsole eine schicke HTML-Tabelle^[funktioniert auch mit Word und PDF als Ausgabeformat], wenn man das Quarto-Dokument rendert.
 
 Statt `select(any_of(extra_corr_names))` könnten Sie natürlich auch schreiben `select(n_facebook_friends, ...)`, wobei Sie für die drei Punkte alle Variablen von Interesse nennen würden.
 

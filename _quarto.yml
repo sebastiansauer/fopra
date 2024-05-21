@@ -7,7 +7,7 @@ filters:
 search-replace:
   z.B.  : "z.&thinsp;B."
   Z.B.  : "Z.&thinsp;B."
-  d.h.  : "d.&thinsp;h."
+#  d.h.  : "d.&thinsp;h."
   +br    : <br>\newline
 
 lang: de
@@ -31,7 +31,7 @@ book:
     search: true
   # google-analytics:
   navbar: false
-  page-footer: "footer test"
+ # page-footer: "footer test"
 
 
 
@@ -75,7 +75,7 @@ book:
 
 
 bibliography: library-ses.bib
-csl: "/Users/sebastiansaueruser/Google Drive/Literatur/refmgt/apa7.csl"
+#csl: "/Users/sebastiansaueruser/Google Drive/Literatur/refmgt/apa7.csl"
 
 editor: source
 keep-md: false
