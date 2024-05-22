@@ -77,6 +77,10 @@ Also gut, Sie haben es so gewollt: Gehen Sie geradeaus weiter zur Statistik.
 ### Über 7 Brücken musst du gehen: Die Schritte der Datenanalyse
 
 
+@fig-sieben-bruecken stellt die typischen Schritte ("Brücken") der Datenanalyse dar.
+
+:::{#fig-sieben-bruecken fig-align="center"}
+
  
 ```{mermaid}
 flowchart TD
@@ -89,6 +93,9 @@ flowchart TD
   Ü --> A
 ```
 
+Die sieben ~~Siegel~~ Brücken der Datenanalyse
+
+:::
 
 
 
@@ -288,9 +295,11 @@ Genau das macht die Inferenzstatistik!
 
 ```{r}
 #| echo: false
+#| warning: false
 #| label: fig-samples-for-inference 
 #| fig-cap: "Inferenzstatistik veranschaulicht: Einzelne Stichproben schätzen den Mittelwert der Populationswert (mu) nur ungenau. Daher brauchen eine Quantifizierung der Schätz(un)genauigkeit des Mittelwerts der Population."
 source("img/samples-for-inference.R")
+p_infence_with_samples
 ```
 
 
@@ -424,15 +433,26 @@ Sie können deskriptive Ergebnisse (Ihrer relevanten Variablen) für *metrische*
 
 
 ```{r}
+#| eval: false
+extra %>% 
+  select(any_of(extra_corr_names)) %>% 
+  describe_distribution()  # aus `easystats`
+```
+
+Deskriptive Statistik mit Hilfe des R-Pakets `easystats` 
+
+:::
+
+
+
+```{r}
+#| echo: false
 extra %>% 
   select(any_of(extra_corr_names)) %>% 
   describe_distribution() %>%  # aus `easystats`
   kable(digits = 2)
 ```
 
-Deskriptive Statistik mit Hilfe des R-Pakets `easystats` 
-
-:::
 
 Übersetzen wir @lst-desk1 vom Errischen ins Deutsche:
 

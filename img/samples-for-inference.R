@@ -128,5 +128,5 @@ p_all_samples <- group_means |>
 layout <- "AAABCDDD"
 
 p_infence_with_samples <- p_samples + p_etc + p_arrow + p_all_samples + plot_layout(design = layout)
-p_infence_with_samples
+#p_infence_with_samples
 

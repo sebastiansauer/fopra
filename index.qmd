@@ -275,26 +275,16 @@ Dieses Dokument entstand mit Unterstützung vieler Kolleginnen und Kollegen, vor
 
 
 
-## Technische Details
-
-
-### Quelltext
-
-Der Quelltext dieses Buchs ist [hier](https://fopro.netlify.app/) zugänglich.
 
 
 
-
-### Reproduzierbarkeit
+## Reproduzierbarkeit
 
 Hier sind einige technische Details zur Reproduzierbarkeit des Buchs. 
 
 Dieses Dokument wurde erzeugt am/um `r Sys.time()`.
 
+Die verwendeten R-Pakete sind mit [renv](https://rstudio.github.io/renv/) dokumentiert.
 
-```{r}
-#| echo: false
-#| eval: !expr knitr:::is_html_output()
-sessioninfo::session_info()
-```
+Der Quellcode ist in [diesem Github-Repo](https://github.com/sebastiansauer/fopra) dokumentiert.
 
