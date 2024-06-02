@@ -349,12 +349,48 @@ Beim Umkodieren wird das Item "auf den Kopf gestellt": Der höchste Wert wird de
   
   
 ```
-1 --> 4
-2 --> 3
-3 --> 2
-4 --> 1
+alter Wert ist 1 --> neuer Wert ist 4
+alter Wert ist 2 --> neuer Wert ist 3
+alter Wert ist 3 --> neuer Wert ist 2
+alter Wert ist 4 --> neuer Wert ist 1
+
 alter Wert --> neuer Wert
 ```
+
+#### Umkodieren mit `case_when`
+
+
+Zum Umkodieren der Werte negativ kodierter Items bietet sich die Funktion `case_when` aus `tidyverse` an.
+
+```{r}
+extra |>
+  mutate(i01r = case_when(
+    i01 == 1 ~ 4,
+    i01 == 2 ~ 3,
+    i01 == 3 ~ 2,
+    i01 == 4 ~ 1
+  )) |>
+  select(i01, i01r) |>
+  head()
+```
+
+Die Syntax von `case_when()` lautet:
+
+```
+case_when(Prüfung ~ Konsequenz,
+          Prüfung2 ~ Konsequenz)
+```
+
+Nur wenn `Prüfung` erfüllt ist (den Wert `TRUE` hat), dann wird `Konsequenz` ausgeführt.
+Ansonsten wird auf `Prüfung2` getestet, etc.
+
+
+
+
+Vergessen Sie dann nicht, das Ergebnis (die resultierende Tabelle) als (neuen) Datensatz zu speichern.
+
+
+#### Vertiefung: Umkodieren mit `recoce_values`
 
 
 Zum Umkodieren der Werte negativ kodierter Items bietet sich die Funktion `recode_values` aus `easystats` an.
@@ -362,10 +398,10 @@ Zum Umkodieren der Werte negativ kodierter Items bietet sich die Funktion `recod
 
 ```{r eval = FALSE}
 extra %>% 
-  recode_values(select = i02r, 
-                recode = list(`1`=4, `2`=3, `3`=2, `4`=1), 
-                append = TRUE) %>% 
-  select(starts_with("i02")) %>%  # zeige nur die beiden Item i02r und i02r_r
+recode_values(select = i02r,  # aus `easystats`
+recode = list(`1`=4, `2`=3, `3`=2, `4`=1), 
+append = TRUE) %>% 
+  select(i02, i02r) %>%  # zeige nur die beiden Item i02r und i02r_r
   head()
 ```
 
@@ -373,13 +409,30 @@ In diesem Fall ist das Item `i02r` bereits umkodiert -- genau wie alle Items im 
 Daher war das Umkodieren hier nicht nötig -- sogar *falsch*, um genau zu sein. 
 Das diente nur zu Übungszwecken.
 In anderen Situationen kann es aber nötig sein, Items umzukodieren. 
-Vergessen Sie dann nicht, das Ergebnis (die resultierende Tabelle) als (neuen) Datensatz zu speichern.
 
-Alternativ zu `recode_values` können Sie auch folgende Rechenmethode verwenden:
+
+#### Vertiefung: Umkodieren mit Rechenregel
+
+Alternativ können Sie auch folgende Rechenmethode zum Umkodieren von Items verwenden:
 
 $$\text{neuer Wert} = \text{Anzahl Kategorien} + 1 - \text{alter Wert}$$
 Diese Rechenmethode funktioniert aber nur, wenn z.B. bei vier Antwortstufen die Ausprägungen mit 1,2,3,4 kodiert sind. Allgemeiner: Bei $n$ Ausprägungen müssen die Werte mit $1,2, \ldots, n$ kodiert sein, so dass die Ausprägungen den Werten entsprechen.
 
+
+:::{#exm-umkodieren}
+Wir kodieren Item 1 (`i01`) um:
+
+```{r}
+extra_umcodiert_i01 <-
+extra |> 
+mutate(i01r = 5 - i01)
+
+extra_umcodiert_i01 |> 
+select(i01, i01r) |> 
+head()
+```
+
+:::
 
 
 ### Item-Labels in Zahlen umwandeln
@@ -427,16 +480,6 @@ d %>%
     i01 == "stimme voll und ganz zu" ~ 4
   ))
 ```
-
-Die Syntax von `case_when()` lautet:
-
-```
-case_when(Prüfung ~ Konsequenz,
-          Prüfung2 ~ Konsequenz)
-```
-
-Nur wenn `Prüfung` erfüllt ist (den Wert `TRUE` hat), dann wird `Konsequenz` ausgeführt.
-Ansonsten wird auf `Prüfung2` getestet, etc.
 
 
 

@@ -18,9 +18,9 @@ theme_set(theme_minimal())
 
 ### Lernziele
 
-- Sie können die typischen Schritte einer Datenanalyse (von Forschungsdaten der Psychologie) benennen.
-- Sie können grundlegende Forschungsdesigns auswerten (mit R).
-- Sie können Grenzen Ihrer Auswertungsmethodik nennen.
+- Sie können die typischen Schritte einer Datenanalyse (von Forschungsdaten z.B. aus der Psychologie) benennen.
+- Sie können den Unterschied zwischen Deskriptiv- und Inferenzstatistik benennen.
+- Sie können die Relevanz von Reproduzierbarkeit erläutern.
 
 
 
@@ -33,7 +33,7 @@ Behalten Sie Ihren Fortschritt im Projektplan im Blick, s. @fig-projektplan.
 
 ### Benötigte R-Pakete und Daten
 
-In diesem Kapitel benötigen Sie die folgenden R-Pakete und Datensätze.
+In diesem Kapitel benötigen Sie die folgenden R-Pakete:
 
 ```{r}
 #| messagen: false
@@ -42,6 +42,8 @@ library(easystats)
 ```
 
 
+Wir arbeiten mit dem Datensatz `extra`, aus dem Paket [pradadata](https://sebastiansauer.github.io/pradadata/). in dem Datensatz werden Korrelate zum Persönlichkeitsmerkmal Extraversion untersucht.
+Ein Codebook findet sich [hier](https://sebastiansauer.github.io/pradadata/reference/extra.html).
 
  
 ```{r load-extra-web, eval = TRUE}
@@ -59,16 +61,16 @@ Anstelle der Funktion `data_read` könnten Sie auch `read_csv` (Tidyverse) oder 
 Mühsam haben Sie Ihre Studie geplant, minutiös den Versuchsplan ausgeheckt, pedantisch die Messinstrumente bestimmt.
 Dann! Die Datenerhebung! Versuchspersonen, manche nervig, manche freundlich.
 Ist Forschung denn so anstrengend?
-Endlich! Geschafft - die Daten sind im Sack, sozusagen.
+Endlich! Geschafft -- die Daten sind im Sack, sozusagen.
 Die Datenerhebung ist abgeschlossen.
 Was jetzt?
 
 
 ### Wozu ist das gut?
 
-Würden Sie einem Medikament trauen, von dem es heißt, das Forschungsteam hatten keinen Bock, Statistik ist zu stressig, aber sie hätten da so ein Gefühl, könnte schon was bringen, die Pille, immer rein damit.
+Würden Sie einem Medikament trauen, von dem es heißt, das Forschungsteam hatten keinen Bock, Statistik ist zu stressig, aber die Typen aus dem Forschungsteam hätten da so ein Gefühl, könnte schon was bringen, die Pille, immer rein damit.
 Was?! Sie zögern sich das Medikament einzuwerfen?
-Sie hätten es lieber genauer, sicherer, belastbarer? Es ginge schließlich um ihre Gesundheit?
+Sie wüssten es lieber genauer, sicherer, belastbarer? Es ginge schließlich um ihre Gesundheit?
 
 Also gut, Sie haben es so gewollt: Gehen Sie geradeaus weiter zur Statistik.
 
@@ -104,7 +106,7 @@ In etwas mehr Detail sieht der Fortgang Ihrer Datenanalyse so aus:
 
 1. *Einlesen und Aufbereiten*: Nachdem Sie die Daten in R importiert haben, bereiten Sie sie auf. Das klingt läppisch, langweilig fast und nicht so cool wie Modellieren. Schon richtig. Fakt ist aber, dass dieser Teil der Analyse häufig ein Großteil  der Zeit benötigt. Wahr ist: Das Daten aufbereiten ist enorm wichtig. Typische Beispiele für solche Tätigkeiten sind das Behandeln fehlender Werte, das Umformen von Tabellen und das Zähmen von Extremwerten
 
-2. *Zusammenfassen*: Nachdem Sie die in Ordnung gebracht haben, fassen Sie sie zusammen, um zentrale Trends zu versethen. Praktisch gesprochen berechnen Sie Maße der Lage, der Streuung und des Zusammenhangs.
+2. *Zusammenfassen*: Nachdem Sie die in Ordnung gebracht haben, fassen Sie sie zusammen, um zentrale Trends zu verstehen. Praktisch gesprochen berechnen Sie Maße der Lage, der Streuung und des Zusammenhangs.
 
 3. *Visualisieren*: Der Mensch ist halt ein Augentier. So ein schönes Diagramm macht einfach was her und besticht auch den strengsten Gutachter.
 
@@ -112,7 +114,7 @@ In etwas mehr Detail sieht der Fortgang Ihrer Datenanalyse so aus:
 
 4. *Interpretieren*: So ein Modell bzw. die entsprechende Funktion in R spuckt einige Zahlen aus. Aber was sagt uns das jetzt? Das würden Sie auch gerne wissen? Prima! Finden wir es zusammen raus.
 
-5. *Kritisieren*: Jetzt müssen Sie stark sein. Keine Analyse ist perfekt. Keine Studie ist abschließend. Niemand hat den goldenen Gral gefunden. Okay, aber bisher haben Sie sich auch noch nicht an der Sache versucht! Jedenfalls bricht niemanden ein Zacken aus der Krone, wenn man aufzeigt, wo noch Forschungslücken sind, auch nach der eigenen Studie. Oder sogar, welche Schwächen die eigene Studie bzw. Analyse hat und was man beim nächsten Mal noch berücksichtigen könnte.
+5. *Kritisieren*: Jetzt müssen Sie stark sein. Keine Analyse ist perfekt. Keine Studie ist abschließend. Niemand hat bislang den goldenen Gral gefunden. Okay, aber bisher haben Sie sich auch noch nicht an der Sache versucht! Jedenfalls bricht niemanden ein Zacken aus der Krone, wenn man aufzeigt, wo noch Forschungslücken sind, auch nach der eigenen Studie. Oder sogar, welche Schwächen die eigene Studie bzw. Analyse hat und was man beim nächsten Mal noch besser machen könnte.
 
 6. *Amüsieren*: So, irgendwann ist auch gut. Jetzt belohnen Sie sich mal für die ganze harte Arbeit des Studierens.
 
@@ -160,10 +162,10 @@ damit man sie gut in R importieren kann, bzw. gut damit weiterarbeiten kann?
 
 Im Überblick sollten Sie auf Folgendes achten:
 
-- Wenn Sie händisch Daten eintragen, hacken Sie das einfach in Excel sein.
+- Wenn Sie händisch Daten eintragen, hacken Sie das einfach in Excel o.Ä. sein.
 - CSV-Dateien bieten sich als Datenformat an.
 - Alternativ kann man auch Excel-Dateien in R importieren.
-- Es muss genau eine Kopfzeile geben.
+- Es muss genau *eine* Kopfzeile geben.
 - Es darf keine Lücken geben (leere Zeilen oder Spalten oder Zellen).
 - Vermeiden Sie Umlaute und Leerzeichen in den Variablennamen.
 - Die Daten sollten dem Prinzip von "tidy data" folgen.
@@ -204,7 +206,7 @@ Hier sehen Sie im Überblick die Schritte, die in vielen Fällen sinnvoll sind, 
     2. Daten visualisieren
 3. Modellierung und Inferenzstatistik
     1. Modell berechnen
-    2. Parameter berichten (Punkt- und Intervallschätzer)
+    2. Parameter berichten (Punkt- und Intervallschätzer) und ggf. visualisieren
     3. Parameter visualisieren
     4. Nullhypothesen testen (z.B. ROPE)
     5. Modellgüte berichten (z.B. R-Quadrat)
@@ -408,7 +410,9 @@ Im Folgenden sind die Vorteile der oben genannten klickbasierten Software-Progra
 Die Deskriptivstatistik fasst eine Datenreihe zu einer Kennzahl zusammen. Der Nutzen liegt im Überblick, den man so gewinnt. 
 :::
 
-Damit es einfach bleibt, begrenzen wir uns im Folgenden auf ein paar Variablen.
+
+Wir analysieren den Datensatz `extra`.
+Damit es einfach bleibt, begrenzen wir uns im Folgenden auf ein paar Variablen. 
 
 Sagen wir, 
 das sind die Variablen, die uns interessieren:
@@ -501,23 +505,35 @@ Etwas schicker sieht es aus mit `data_tabulate` aus `easystats`:
 
 ```{r}
 extra |> 
-  select(sex, smoker) |> 
+  select(sex) |> 
   #drop_na() |>  ggf. ohne fehlende Werte
   data_tabulate()
 ```
 
-Wir können uns auch die *bi*variaten Häufigkeiten ausgeben lassen.
+#### Bivariate Häufigkeiten
+
+Wir können uns auch die *bi*variaten Häufigkeiten ausgeben lassen:
+Betrachten wir die Geschlechtsverteilung bei Menschen, die (nicht) jünger als 20 Jahre sind:
 
 ```{r}
+#| eval: false
 extra |> 
-  drop_na(sex, smoker) |>  # fehlende Werte entfernt
-  group_by(sex) |> 
-  data_tabulate("smoker")
+  drop_na(sex, age) |>  # fehlende Werte entfernt
+  group_by(age > 20) |> 
+  data_tabulate(sex)
 ```
 
 
 
 
+```{r}
+#| echo: false
+extra |> 
+  drop_na(sex, age) |>  # fehlende Werte entfernt
+  group_by(age > 20) |> 
+  data_tabulate(sex) |> 
+  print_md()
+```
 
 
 ### Korrelationen darstellen
@@ -531,8 +547,8 @@ darzustellen.
 #### Korrelationsmatrix
 
 
-
 ```{r}
+#| echo: false
 extra %>% 
   select(any_of(extra_corr_names)) %>%  
   correlation() %>% 
@@ -541,8 +557,18 @@ extra %>%
 ```
 
 
+
+```{r}
+#| eval: false
+extra %>% 
+  select(any_of(extra_corr_names)) %>%  
+  correlation() %>% 
+  summary() 
+```
+
+
 Sie möchten das Ergebnis als normalen R-Dataframe? 
-Sie haben keine Lust auf dieses Rumgetue, sondern wollen das lieber als selber gerade ziehen.
+Sie haben keine Lust auf dieses Rumgetue, sondern wollen das lieber als selber geradeziehen.
 Also gut:
 
 

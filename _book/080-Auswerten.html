@@ -389,19 +389,20 @@ window.Quarto = {
 <section id="lernziele" class="level3" data-number="10.1.1"><h3 data-number="10.1.1" class="anchored" data-anchor-id="lernziele">
 <span class="header-section-number">10.1.1</span> Lernziele</h3>
 <ul>
-<li>Sie können die typischen Schritte einer Datenanalyse (von Forschungsdaten der Psychologie) benennen.</li>
-<li>Sie können grundlegende Forschungsdesigns auswerten (mit R).</li>
-<li>Sie können Grenzen Ihrer Auswertungsmethodik nennen.</li>
+<li>Sie können die typischen Schritte einer Datenanalyse (von Forschungsdaten z. B. aus der Psychologie) benennen.</li>
+<li>Sie können den Unterschied zwischen Deskriptiv- und Inferenzstatistik benennen.</li>
+<li>Sie können die Relevanz von Reproduzierbarkeit erläutern.</li>
 </ul></section><section id="position-im-lernpfad" class="level3" data-number="10.1.2"><h3 data-number="10.1.2" class="anchored" data-anchor-id="position-im-lernpfad">
 <span class="header-section-number">10.1.2</span> Position im Lernpfad</h3>
 <p>Sie befinden sich im Abschnitt “Auswertung” in <a href="index.html#fig-ueberblick" class="quarto-xref">Abbildung&nbsp;<span>1.2</span></a>. Behalten Sie Ihren Fortschritt im Projektplan im Blick, s. <a href="index.html#fig-projektplan" class="quarto-xref">Abbildung&nbsp;<span>1.3</span></a>.</p>
 </section><section id="benötigte-r-pakete-und-daten" class="level3" data-number="10.1.3"><h3 data-number="10.1.3" class="anchored" data-anchor-id="benötigte-r-pakete-und-daten">
 <span class="header-section-number">10.1.3</span> Benötigte R-Pakete und Daten</h3>
-<p>In diesem Kapitel benötigen Sie die folgenden R-Pakete und Datensätze.</p>
+<p>In diesem Kapitel benötigen Sie die folgenden R-Pakete:</p>
 <div class="cell" data-messagen="false">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://easystats.github.io/easystats/">easystats</a></span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>Wir arbeiten mit dem Datensatz <code>extra</code>, aus dem Paket <a href="https://sebastiansauer.github.io/pradadata/">pradadata</a>. in dem Datensatz werden Korrelate zum Persönlichkeitsmerkmal Extraversion untersucht. Ein Codebook findet sich <a href="https://sebastiansauer.github.io/pradadata/reference/extra.html">hier</a>.</p>
 <div class="cell">
 <div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">data_url</span> <span class="op">&lt;-</span> <span class="st">"https://raw.githubusercontent.com/sebastiansauer/modar/master/datasets/extra.csv"</span></span>
 <span><span class="va">extra</span> <span class="op">&lt;-</span> <span class="fu">data_read</span><span class="op">(</span><span class="va">data_url</span><span class="op">)</span>  <span class="co"># aus `{easystats}`</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -409,10 +410,10 @@ window.Quarto = {
 <p>Anstelle der Funktion <code>data_read</code> könnten Sie auch <code>read_csv</code> (Tidyverse) oder <code>read.csv</code> (Standard-R) verwenden.</p>
 </section></section><section id="überblick-zur-datenanalyse" class="level2" data-number="10.2"><h2 data-number="10.2" class="anchored" data-anchor-id="überblick-zur-datenanalyse">
 <span class="header-section-number">10.2</span> Überblick zur Datenanalyse</h2>
-<p>Mühsam haben Sie Ihre Studie geplant, minutiös den Versuchsplan ausgeheckt, pedantisch die Messinstrumente bestimmt. Dann! Die Datenerhebung! Versuchspersonen, manche nervig, manche freundlich. Ist Forschung denn so anstrengend? Endlich! Geschafft - die Daten sind im Sack, sozusagen. Die Datenerhebung ist abgeschlossen. Was jetzt?</p>
+<p>Mühsam haben Sie Ihre Studie geplant, minutiös den Versuchsplan ausgeheckt, pedantisch die Messinstrumente bestimmt. Dann! Die Datenerhebung! Versuchspersonen, manche nervig, manche freundlich. Ist Forschung denn so anstrengend? Endlich! Geschafft – die Daten sind im Sack, sozusagen. Die Datenerhebung ist abgeschlossen. Was jetzt?</p>
 <section id="wozu-ist-das-gut" class="level3" data-number="10.2.1"><h3 data-number="10.2.1" class="anchored" data-anchor-id="wozu-ist-das-gut">
 <span class="header-section-number">10.2.1</span> Wozu ist das gut?</h3>
-<p>Würden Sie einem Medikament trauen, von dem es heißt, das Forschungsteam hatten keinen Bock, Statistik ist zu stressig, aber sie hätten da so ein Gefühl, könnte schon was bringen, die Pille, immer rein damit. Was?! Sie zögern sich das Medikament einzuwerfen? Sie hätten es lieber genauer, sicherer, belastbarer? Es ginge schließlich um ihre Gesundheit?</p>
+<p>Würden Sie einem Medikament trauen, von dem es heißt, das Forschungsteam hatten keinen Bock, Statistik ist zu stressig, aber die Typen aus dem Forschungsteam hätten da so ein Gefühl, könnte schon was bringen, die Pille, immer rein damit. Was?! Sie zögern sich das Medikament einzuwerfen? Sie wüssten es lieber genauer, sicherer, belastbarer? Es ginge schließlich um ihre Gesundheit?</p>
 <p>Also gut, Sie haben es so gewollt: Gehen Sie geradeaus weiter zur Statistik.</p>
 </section><section id="über-7-brücken-musst-du-gehen-die-schritte-der-datenanalyse" class="level3" data-number="10.2.2"><h3 data-number="10.2.2" class="anchored" data-anchor-id="über-7-brücken-musst-du-gehen-die-schritte-der-datenanalyse">
 <span class="header-section-number">10.2.2</span> Über 7 Brücken musst du gehen: Die Schritte der Datenanalyse</h3>
@@ -446,11 +447,11 @@ Abbildung&nbsp;10.1: Die sieben <del>Siegel</del> Brücken der Datenanalyse
 <p>In etwas mehr Detail sieht der Fortgang Ihrer Datenanalyse so aus:</p>
 <ol type="1">
 <li><p><em>Einlesen und Aufbereiten</em>: Nachdem Sie die Daten in R importiert haben, bereiten Sie sie auf. Das klingt läppisch, langweilig fast und nicht so cool wie Modellieren. Schon richtig. Fakt ist aber, dass dieser Teil der Analyse häufig ein Großteil der Zeit benötigt. Wahr ist: Das Daten aufbereiten ist enorm wichtig. Typische Beispiele für solche Tätigkeiten sind das Behandeln fehlender Werte, das Umformen von Tabellen und das Zähmen von Extremwerten</p></li>
-<li><p><em>Zusammenfassen</em>: Nachdem Sie die in Ordnung gebracht haben, fassen Sie sie zusammen, um zentrale Trends zu versethen. Praktisch gesprochen berechnen Sie Maße der Lage, der Streuung und des Zusammenhangs.</p></li>
+<li><p><em>Zusammenfassen</em>: Nachdem Sie die in Ordnung gebracht haben, fassen Sie sie zusammen, um zentrale Trends zu verstehen. Praktisch gesprochen berechnen Sie Maße der Lage, der Streuung und des Zusammenhangs.</p></li>
 <li><p><em>Visualisieren</em>: Der Mensch ist halt ein Augentier. So ein schönes Diagramm macht einfach was her und besticht auch den strengsten Gutachter.</p></li>
 <li><p><em>Modellieren</em>: Ah, hier kommt der Teil, in dem der Connaisseur seine Muskeln spielen lassen kann: Bayes-Inferenz, multiple Regression, Moderation, Mediation, Kausalanalyse… Ich weiß, Sie können Ihre Freude kaum noch zügeln, aber geduldigen Sie sich noch einen kleinen Augenblick.</p></li>
 <li><p><em>Interpretieren</em>: So ein Modell bzw. die entsprechende Funktion in R spuckt einige Zahlen aus. Aber was sagt uns das jetzt? Das würden Sie auch gerne wissen? Prima! Finden wir es zusammen raus.</p></li>
-<li><p><em>Kritisieren</em>: Jetzt müssen Sie stark sein. Keine Analyse ist perfekt. Keine Studie ist abschließend. Niemand hat den goldenen Gral gefunden. Okay, aber bisher haben Sie sich auch noch nicht an der Sache versucht! Jedenfalls bricht niemanden ein Zacken aus der Krone, wenn man aufzeigt, wo noch Forschungslücken sind, auch nach der eigenen Studie. Oder sogar, welche Schwächen die eigene Studie bzw. Analyse hat und was man beim nächsten Mal noch berücksichtigen könnte.</p></li>
+<li><p><em>Kritisieren</em>: Jetzt müssen Sie stark sein. Keine Analyse ist perfekt. Keine Studie ist abschließend. Niemand hat bislang den goldenen Gral gefunden. Okay, aber bisher haben Sie sich auch noch nicht an der Sache versucht! Jedenfalls bricht niemanden ein Zacken aus der Krone, wenn man aufzeigt, wo noch Forschungslücken sind, auch nach der eigenen Studie. Oder sogar, welche Schwächen die eigene Studie bzw. Analyse hat und was man beim nächsten Mal noch besser machen könnte.</p></li>
 <li><p><em>Amüsieren</em>: So, irgendwann ist auch gut. Jetzt belohnen Sie sich mal für die ganze harte Arbeit des Studierens.</p></li>
 </ol></section></section><section id="reproduzierbarkeit" class="level2" data-number="10.3"><h2 data-number="10.3" class="anchored" data-anchor-id="reproduzierbarkeit">
 <span class="header-section-number">10.3</span> Reproduzierbarkeit</h2>
@@ -491,10 +492,10 @@ Abbildung&nbsp;10.2: Beispiel für ein Codebook
 <p>Wie muss eine Tabelle aufgebaut sein, damit man sie gut in R importieren kann, bzw. gut damit weiterarbeiten kann?</p>
 <p>Im Überblick sollten Sie auf Folgendes achten:</p>
 <ul>
-<li>Wenn Sie händisch Daten eintragen, hacken Sie das einfach in Excel sein.</li>
+<li>Wenn Sie händisch Daten eintragen, hacken Sie das einfach in Excel o.Ä. sein.</li>
 <li>CSV-Dateien bieten sich als Datenformat an.</li>
 <li>Alternativ kann man auch Excel-Dateien in R importieren.</li>
-<li>Es muss genau eine Kopfzeile geben.</li>
+<li>Es muss genau <em>eine</em> Kopfzeile geben.</li>
 <li>Es darf keine Lücken geben (leere Zeilen oder Spalten oder Zellen).</li>
 <li>Vermeiden Sie Umlaute und Leerzeichen in den Variablennamen.</li>
 <li>Die Daten sollten dem Prinzip von “tidy data” folgen.</li>
@@ -538,7 +539,7 @@ Tidy Data
 <li>Modellierung und Inferenzstatistik
 <ol type="1">
 <li>Modell berechnen</li>
-<li>Parameter berichten (Punkt- und Intervallschätzer)</li>
+<li>Parameter berichten (Punkt- und Intervallschätzer) und ggf. visualisieren</li>
 <li>Parameter visualisieren</li>
 <li>Nullhypothesen testen (z. B. ROPE)</li>
 <li>Modellgüte berichten (z. B. R-Quadrat)</li>
@@ -864,7 +865,7 @@ Wichtig
 <p>Die Deskriptivstatistik fasst eine Datenreihe zu einer Kennzahl zusammen. Der Nutzen liegt im Überblick, den man so gewinnt.</p>
 </div>
 </div>
-<p>Damit es einfach bleibt, begrenzen wir uns im Folgenden auf ein paar Variablen.</p>
+<p>Wir analysieren den Datensatz <code>extra</code>. Damit es einfach bleibt, begrenzen wir uns im Folgenden auf ein paar Variablen.</p>
 <p>Sagen wir, das sind die Variablen, die uns interessieren:</p>
 <div class="cell">
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra_corr_names</span> <span class="op">&lt;-</span> </span>
@@ -1038,7 +1039,7 @@ Listing&nbsp;10.1: Deskriptive Statistik mit Hilfe des R-Pakets <code>easystats<
 <p>Etwas schicker sieht es aus mit <code>data_tabulate</code> aus <code>easystats</code>:</p>
 <div class="cell">
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">sex</span>, <span class="va">smoker</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">sex</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="co">#drop_na() |&gt;  ggf. ohne fehlende Werte</span></span>
 <span>  <span class="fu">data_tabulate</span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co">## sex (sex) &lt;character&gt;</span></span>
@@ -1048,43 +1049,113 @@ Listing&nbsp;10.1: Deskriptive Statistik mit Hilfe des R-Pakets <code>easystats<
 <span><span class="co">## ------+-----+-------+---------+-------------</span></span>
 <span><span class="co">## Frau  | 529 | 64.04 |   64.91 |        64.91</span></span>
 <span><span class="co">## Mann  | 286 | 34.62 |   35.09 |       100.00</span></span>
-<span><span class="co">## &lt;NA&gt;  |  11 |  1.33 |    &lt;NA&gt; |         &lt;NA&gt;</span></span>
-<span><span class="co">## </span></span>
-<span><span class="co">## smoker (smoker) &lt;character&gt;</span></span>
-<span><span class="co">## # total N=826 valid N=12</span></span>
-<span><span class="co">## </span></span>
-<span><span class="co">## Value                           |   N | Raw % | Valid % | Cumulative %</span></span>
-<span><span class="co">## --------------------------------+-----+-------+---------+-------------</span></span>
-<span><span class="co">## Gelegentlich (z. B. auf Partys) |   1 |  0.12 |    8.33 |         8.33</span></span>
-<span><span class="co">## Ja                              |   3 |  0.36 |   25.00 |        33.33</span></span>
-<span><span class="co">## Nein                            |   8 |  0.97 |   66.67 |       100.00</span></span>
-<span><span class="co">## &lt;NA&gt;                            | 814 | 98.55 |    &lt;NA&gt; |         &lt;NA&gt;</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">## &lt;NA&gt;  |  11 |  1.33 |    &lt;NA&gt; |         &lt;NA&gt;</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Wir können uns auch die <em>bi</em>variaten Häufigkeiten ausgeben lassen.</p>
+<p>Wir können uns auch die <em>bi</em>variaten Häufigkeiten ausgeben lassen: Betrachten wir die Geschlechtsverteilung bei Menschen, die (nicht) jünger als 20 Jahre sind:</p>
 <div class="cell">
 <div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/drop_na.html">drop_na</a></span><span class="op">(</span><span class="va">sex</span>, <span class="va">smoker</span><span class="op">)</span> <span class="op">|&gt;</span>  <span class="co"># fehlende Werte entfernt</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">sex</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu">data_tabulate</span><span class="op">(</span><span class="st">"smoker"</span><span class="op">)</span></span>
-<span><span class="co">## smoker (smoker) &lt;character&gt;</span></span>
-<span><span class="co">## Grouped by sex (Frau)</span></span>
-<span><span class="co">## # total N=10 valid N=10</span></span>
-<span><span class="co">## </span></span>
-<span><span class="co">## Value                           | N | Raw % | Valid % | Cumulative %</span></span>
-<span><span class="co">## --------------------------------+---+-------+---------+-------------</span></span>
-<span><span class="co">## Gelegentlich (z. B. auf Partys) | 1 | 10.00 |   10.00 |        10.00</span></span>
-<span><span class="co">## Ja                              | 1 | 10.00 |   10.00 |        20.00</span></span>
-<span><span class="co">## Nein                            | 8 | 80.00 |   80.00 |       100.00</span></span>
-<span><span class="co">## &lt;NA&gt;                            | 0 |  0.00 |    &lt;NA&gt; |         &lt;NA&gt;</span></span>
-<span><span class="co">## </span></span>
-<span><span class="co">## smoker (smoker) &lt;character&gt;</span></span>
-<span><span class="co">## Grouped by sex (Mann)</span></span>
-<span><span class="co">## # total N=2 valid N=2</span></span>
-<span><span class="co">## </span></span>
-<span><span class="co">## Value | N |  Raw % | Valid % | Cumulative %</span></span>
-<span><span class="co">## ------+---+--------+---------+-------------</span></span>
-<span><span class="co">## Ja    | 2 | 100.00 |  100.00 |       100.00</span></span>
-<span><span class="co">## &lt;NA&gt;  | 0 |   0.00 |    &lt;NA&gt; |         &lt;NA&gt;</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/drop_na.html">drop_na</a></span><span class="op">(</span><span class="va">sex</span>, <span class="va">age</span><span class="op">)</span> <span class="op">|&gt;</span>  <span class="co"># fehlende Werte entfernt</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">age</span> <span class="op">&gt;</span> <span class="fl">20</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu">data_tabulate</span><span class="op">(</span><span class="va">sex</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<table class="table table-sm table-striped small">
+<caption>Frequency Table</caption>
+<colgroup>
+<col style="width: 10%">
+<col style="width: 13%">
+<col style="width: 39%">
+<col style="width: 2%">
+<col style="width: 8%">
+<col style="width: 9%">
+<col style="width: 15%">
+</colgroup>
+<thead><tr class="header">
+<th style="text-align: left;">Variable</th>
+<th style="text-align: left;">Group</th>
+<th style="text-align: left;">Value</th>
+<th style="text-align: left;">N</th>
+<th style="text-align: right;">Raw %</th>
+<th style="text-align: right;">Valid %</th>
+<th style="text-align: right;">Cumulative %</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">smoker</td>
+<td style="text-align: left;">sex (Frau)</td>
+<td style="text-align: left;">Gelegentlich (z. B. auf Partys)</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">10.00</td>
+<td style="text-align: right;">10.00</td>
+<td style="text-align: right;">10.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Ja</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: right;">10.00</td>
+<td style="text-align: right;">10.00</td>
+<td style="text-align: right;">20.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">Nein</td>
+<td style="text-align: left;">8</td>
+<td style="text-align: right;">80.00</td>
+<td style="text-align: right;">80.00</td>
+<td style="text-align: right;">100.00</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">(NA)</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">(NA)</td>
+<td style="text-align: right;">(NA)</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">smoker</td>
+<td style="text-align: left;">sex (Mann)</td>
+<td style="text-align: left;">Ja</td>
+<td style="text-align: left;">2</td>
+<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">100.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">(NA)</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">(NA)</td>
+<td style="text-align: right;">(NA)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 </section></section><section id="korrelationen-darstellen" class="level3" data-number="10.10.3"><h3 data-number="10.10.3" class="anchored" data-anchor-id="korrelationen-darstellen">
 <span class="header-section-number">10.10.3</span> Korrelationen darstellen</h3>
@@ -1160,7 +1231,7 @@ Listing&nbsp;10.1: Deskriptive Statistik mit Hilfe des R-Pakets <code>easystats<
 </table>
 </div>
 </div>
-<p>Sie möchten das Ergebnis als normalen R-Dataframe? Sie haben keine Lust auf dieses Rumgetue, sondern wollen das lieber als selber gerade ziehen. Also gut:</p>
+<p>Sie möchten das Ergebnis als normalen R-Dataframe? Sie haben keine Lust auf dieses Rumgetue, sondern wollen das lieber als selber geradeziehen. Also gut:</p>
 <div class="cell">
 <div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cor_results</span> <span class="op">&lt;-</span> </span>
 <span><span class="va">extra</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
@@ -1259,7 +1330,7 @@ Listing&nbsp;10.1: Deskriptive Statistik mit Hilfe des R-Pakets <code>easystats<
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Korrelationsmatrix, boa"</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="080-Auswerten_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><img src="080-Auswerten_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>

@@ -115,6 +115,7 @@ Wie lange dauert es von "Start" bis "Ziel"?
 #| echo: false
 #| tbl-cap: "Grober Zeitplan für Ihre empirische Projektrarbeit"
 #| label: tbl-zeitplan
+#| out-width: 100%
 
 d <- tibble::tribble(
   ~Nr, ~Arbeitsschritt, ~Zeitbedarf, ~Kommentar,
