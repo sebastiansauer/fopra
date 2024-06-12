@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.4.527">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
 <title>Forschungsprojekt - 10&nbsp; Auswerten: Grundlagen</title>
 <style>
 code{white-space: pre-wrap;}
@@ -53,6 +56,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 </style>
 
+
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
@@ -73,7 +77,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -99,11 +104,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Abschicken",
     "search-label": "Suchen"
   }
-}</script><script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script><link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+}</script>
+<script type="module" src="site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
 <meta name="mermaid-theme" content="neutral">
-<script src="site_libs/quarto-diagram/mermaid.min.js"></script><script src="site_libs/quarto-diagram/mermaid-init.js"></script><link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 <link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
-<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
 const typesetMath = (el) => {
   if (window.MathJax) {
     // MathJax Typeset
@@ -128,12 +142,17 @@ const typesetMath = (el) => {
 window.Quarto = {
   typesetMath
 };
-</script><link rel="stylesheet" href="styles.css">
+</script>
+
+<link rel="stylesheet" href="styles.css">
 </head>
+
 <body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
@@ -144,15 +163,20 @@ window.Quarto = {
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="./index.html" class="sidebar-logo-link">
-      <img src="./img/fopra-logo-small.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none"></a>
+      <img src="./img/fopra-logo-small.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Forschungsprojekt</a> 
         <div class="sidebar-tools-main">
-    <a href="https://github.com/sebastiansauer/fopra" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/sebastiansauer/fopra" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Dunkelmodus umschalten"><i class="bi"></i></a>
 </div>
     </div>
@@ -164,7 +188,7 @@ window.Quarto = {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-<li class="sidebar-item sidebar-item-section">
+        <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
  <span class="menu-text">Organisatorisches</span></a>
@@ -172,15 +196,15 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Hinweise</span></span></a>
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
@@ -189,8 +213,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./010-rahmen.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Rahmen: Hallo, Forschung!</span></span></a>
@@ -209,7 +233,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
@@ -218,8 +242,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./040-Populationsbeschreibung.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Beschreiben</span></span></a>
@@ -250,7 +274,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
@@ -259,8 +283,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./080-Auswerten.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Auswerten: Grundlagen</span></span></a>
@@ -279,7 +303,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
@@ -288,8 +312,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./100-Statistiken-berichten.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Auswerten: Berichten von Statistiken</span></span></a>
@@ -308,69 +332,63 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-</li>
+  </li>
     </ul>
-</div>
-</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Inhaltsverzeichnis</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
-<li>
-<a href="#lernsteuerung" id="toc-lernsteuerung" class="nav-link active" data-scroll-target="#lernsteuerung"><span class="header-section-number">10.1</span> Lernsteuerung</a>
+  <li><a href="#lernsteuerung" id="toc-lernsteuerung" class="nav-link active" data-scroll-target="#lernsteuerung"><span class="header-section-number">10.1</span> Lernsteuerung</a>
   <ul class="collapse">
-<li><a href="#lernziele" id="toc-lernziele" class="nav-link" data-scroll-target="#lernziele"><span class="header-section-number">10.1.1</span> Lernziele</a></li>
+  <li><a href="#lernziele" id="toc-lernziele" class="nav-link" data-scroll-target="#lernziele"><span class="header-section-number">10.1.1</span> Lernziele</a></li>
   <li><a href="#position-im-lernpfad" id="toc-position-im-lernpfad" class="nav-link" data-scroll-target="#position-im-lernpfad"><span class="header-section-number">10.1.2</span> Position im Lernpfad</a></li>
-  <li><a href="#ben%C3%B6tigte-r-pakete-und-daten" id="toc-benötigte-r-pakete-und-daten" class="nav-link" data-scroll-target="#ben%C3%B6tigte-r-pakete-und-daten"><span class="header-section-number">10.1.3</span> Benötigte R-Pakete und Daten</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#%C3%BCberblick-zur-datenanalyse" id="toc-überblick-zur-datenanalyse" class="nav-link" data-scroll-target="#%C3%BCberblick-zur-datenanalyse"><span class="header-section-number">10.2</span> Überblick zur Datenanalyse</a>
+  <li><a href="#benötigte-r-pakete-und-daten" id="toc-benötigte-r-pakete-und-daten" class="nav-link" data-scroll-target="#benötigte-r-pakete-und-daten"><span class="header-section-number">10.1.3</span> Benötigte R-Pakete und Daten</a></li>
+  </ul></li>
+  <li><a href="#überblick-zur-datenanalyse" id="toc-überblick-zur-datenanalyse" class="nav-link" data-scroll-target="#überblick-zur-datenanalyse"><span class="header-section-number">10.2</span> Überblick zur Datenanalyse</a>
   <ul class="collapse">
-<li><a href="#wozu-ist-das-gut" id="toc-wozu-ist-das-gut" class="nav-link" data-scroll-target="#wozu-ist-das-gut"><span class="header-section-number">10.2.1</span> Wozu ist das gut?</a></li>
-  <li><a href="#%C3%BCber-7-br%C3%BCcken-musst-du-gehen-die-schritte-der-datenanalyse" id="toc-über-7-brücken-musst-du-gehen-die-schritte-der-datenanalyse" class="nav-link" data-scroll-target="#%C3%BCber-7-br%C3%BCcken-musst-du-gehen-die-schritte-der-datenanalyse"><span class="header-section-number">10.2.2</span> Über 7 Brücken musst du gehen: Die Schritte der Datenanalyse</a></li>
-  </ul>
-</li>
+  <li><a href="#wozu-ist-das-gut" id="toc-wozu-ist-das-gut" class="nav-link" data-scroll-target="#wozu-ist-das-gut"><span class="header-section-number">10.2.1</span> Wozu ist das gut?</a></li>
+  <li><a href="#über-7-brücken-musst-du-gehen-die-schritte-der-datenanalyse" id="toc-über-7-brücken-musst-du-gehen-die-schritte-der-datenanalyse" class="nav-link" data-scroll-target="#über-7-brücken-musst-du-gehen-die-schritte-der-datenanalyse"><span class="header-section-number">10.2.2</span> Über 7 Brücken musst du gehen: Die Schritte der Datenanalyse</a></li>
+  </ul></li>
   <li><a href="#reproduzierbarkeit" id="toc-reproduzierbarkeit" class="nav-link" data-scroll-target="#reproduzierbarkeit"><span class="header-section-number">10.3</span> Reproduzierbarkeit</a></li>
   <li><a href="#codebook" id="toc-codebook" class="nav-link" data-scroll-target="#codebook"><span class="header-section-number">10.4</span> Codebook</a></li>
   <li><a href="#wir-brauchen-brave-daten" id="toc-wir-brauchen-brave-daten" class="nav-link" data-scroll-target="#wir-brauchen-brave-daten"><span class="header-section-number">10.5</span> Wir brauchen brave Daten</a></li>
   <li><a href="#checkliste-zur-datenanalyse" id="toc-checkliste-zur-datenanalyse" class="nav-link" data-scroll-target="#checkliste-zur-datenanalyse"><span class="header-section-number">10.6</span> Checkliste zur Datenanalyse</a></li>
-  <li>
-<a href="#rostl%C3%B6ser" id="toc-rostlöser" class="nav-link" data-scroll-target="#rostl%C3%B6ser"><span class="header-section-number">10.7</span> Rostlöser</a>
+  <li><a href="#rostlöser" id="toc-rostlöser" class="nav-link" data-scroll-target="#rostlöser"><span class="header-section-number">10.7</span> Rostlöser</a>
   <ul class="collapse">
-<li><a href="#grundlagen-der-statistik" id="toc-grundlagen-der-statistik" class="nav-link" data-scroll-target="#grundlagen-der-statistik"><span class="header-section-number">10.7.1</span> Grundlagen der Statistik</a></li>
+  <li><a href="#grundlagen-der-statistik" id="toc-grundlagen-der-statistik" class="nav-link" data-scroll-target="#grundlagen-der-statistik"><span class="header-section-number">10.7.1</span> Grundlagen der Statistik</a></li>
   <li><a href="#grundlagen-der-inferenzstatistik" id="toc-grundlagen-der-inferenzstatistik" class="nav-link" data-scroll-target="#grundlagen-der-inferenzstatistik"><span class="header-section-number">10.7.2</span> Grundlagen der Inferenzstatistik</a></li>
   <li><a href="#wie-man-umfragedaten-auswertet" id="toc-wie-man-umfragedaten-auswertet" class="nav-link" data-scroll-target="#wie-man-umfragedaten-auswertet"><span class="header-section-number">10.7.3</span> Wie man Umfragedaten auswertet</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#%C3%BCberblick-zur-statistik" id="toc-überblick-zur-statistik" class="nav-link" data-scroll-target="#%C3%BCberblick-zur-statistik"><span class="header-section-number">10.8</span> Überblick zur Statistik</a>
+  </ul></li>
+  <li><a href="#überblick-zur-statistik" id="toc-überblick-zur-statistik" class="nav-link" data-scroll-target="#überblick-zur-statistik"><span class="header-section-number">10.8</span> Überblick zur Statistik</a>
   <ul class="collapse">
-<li><a href="#deskriptiv--vs.-inferenzstatistik" id="toc-deskriptiv--vs.-inferenzstatistik" class="nav-link" data-scroll-target="#deskriptiv--vs.-inferenzstatistik"><span class="header-section-number">10.8.1</span> Deskriptiv- vs.&nbsp;Inferenzstatistik</a></li>
+  <li><a href="#deskriptiv--vs.-inferenzstatistik" id="toc-deskriptiv--vs.-inferenzstatistik" class="nav-link" data-scroll-target="#deskriptiv--vs.-inferenzstatistik"><span class="header-section-number">10.8.1</span> Deskriptiv- vs.&nbsp;Inferenzstatistik</a></li>
   <li><a href="#deskriptivstatistik" id="toc-deskriptivstatistik" class="nav-link" data-scroll-target="#deskriptivstatistik"><span class="header-section-number">10.8.2</span> Deskriptivstatistik</a></li>
   <li><a href="#inferenzstatistik" id="toc-inferenzstatistik" class="nav-link" data-scroll-target="#inferenzstatistik"><span class="header-section-number">10.8.3</span> Inferenzstatistik</a></li>
   <li><a href="#modellieren" id="toc-modellieren" class="nav-link" data-scroll-target="#modellieren"><span class="header-section-number">10.8.4</span> Modellieren</a></li>
-  </ul>
-</li>
+  </ul></li>
   <li><a href="#skriptbasierte-vs.-klickbasierte-software-zur-datenanalyse" id="toc-skriptbasierte-vs.-klickbasierte-software-zur-datenanalyse" class="nav-link" data-scroll-target="#skriptbasierte-vs.-klickbasierte-software-zur-datenanalyse"><span class="header-section-number">10.9</span> Skriptbasierte vs.&nbsp;klickbasierte Software zur Datenanalyse</a></li>
-  <li>
-<a href="#deskriptivstatistik-in-der-praxis" id="toc-deskriptivstatistik-in-der-praxis" class="nav-link" data-scroll-target="#deskriptivstatistik-in-der-praxis"><span class="header-section-number">10.10</span> Deskriptivstatistik in der Praxis</a>
+  <li><a href="#deskriptivstatistik-in-der-praxis" id="toc-deskriptivstatistik-in-der-praxis" class="nav-link" data-scroll-target="#deskriptivstatistik-in-der-praxis"><span class="header-section-number">10.10</span> Deskriptivstatistik in der Praxis</a>
   <ul class="collapse">
-<li><a href="#deskriptive-ergebnisse-f%C3%BCr-metrische-variablen" id="toc-deskriptive-ergebnisse-für-metrische-variablen" class="nav-link" data-scroll-target="#deskriptive-ergebnisse-f%C3%BCr-metrische-variablen"><span class="header-section-number">10.10.1</span> Deskriptive Ergebnisse für metrische Variablen</a></li>
-  <li><a href="#deskriptive-ergebnisse-f%C3%BCr-nominale-variablen" id="toc-deskriptive-ergebnisse-für-nominale-variablen" class="nav-link" data-scroll-target="#deskriptive-ergebnisse-f%C3%BCr-nominale-variablen"><span class="header-section-number">10.10.2</span> Deskriptive Ergebnisse für nominale Variablen</a></li>
+  <li><a href="#deskriptive-ergebnisse-für-metrische-variablen" id="toc-deskriptive-ergebnisse-für-metrische-variablen" class="nav-link" data-scroll-target="#deskriptive-ergebnisse-für-metrische-variablen"><span class="header-section-number">10.10.1</span> Deskriptive Ergebnisse für metrische Variablen</a></li>
+  <li><a href="#deskriptive-ergebnisse-für-nominale-variablen" id="toc-deskriptive-ergebnisse-für-nominale-variablen" class="nav-link" data-scroll-target="#deskriptive-ergebnisse-für-nominale-variablen"><span class="header-section-number">10.10.2</span> Deskriptive Ergebnisse für nominale Variablen</a></li>
   <li><a href="#korrelationen-darstellen" id="toc-korrelationen-darstellen" class="nav-link" data-scroll-target="#korrelationen-darstellen"><span class="header-section-number">10.10.3</span> Korrelationen darstellen</a></li>
-  </ul>
-</li>
+  </ul></li>
   <li><a href="#aufgaben" id="toc-aufgaben" class="nav-link" data-scroll-target="#aufgaben"><span class="header-section-number">10.11</span> Aufgaben</a></li>
   <li><a href="#fallstudien" id="toc-fallstudien" class="nav-link" data-scroll-target="#fallstudien"><span class="header-section-number">10.12</span> Fallstudien</a></li>
-  </ul><div class="toc-actions"><ul><li><a href="https://github.com/sebastiansauer/fopra/blob/main/080-Auswerten.qmd" class="toc-action"><i class="bi bi-github"></i>Quellcode anzeigen</a></li><li><a href="https://github.com/sebastiansauer/fopra/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/sebastiansauer/fopra/blob/main/080-Auswerten.qmd" class="toc-action"><i class="bi bi-github"></i>Quellcode anzeigen</a></li><li><a href="https://github.com/sebastiansauer/fopra/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./080-Auswerten.html">Auswerten</a></li><li class="breadcrumb-item"><a href="./080-Auswerten.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Auswerten: Grundlagen</span></a></li></ol></nav><div class="quarto-title">
-<h1 class="title">
-<span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Auswerten: Grundlagen</span>
-</h1>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./080-Auswerten.html">Auswerten</a></li><li class="breadcrumb-item"><a href="./080-Auswerten.html"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Auswerten: Grundlagen</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Auswerten: Grundlagen</span></h1>
 </div>
 
 
@@ -384,46 +402,56 @@ window.Quarto = {
   
 
 
-</header><section id="lernsteuerung" class="level2" data-number="10.1"><h2 data-number="10.1" class="anchored" data-anchor-id="lernsteuerung">
-<span class="header-section-number">10.1</span> Lernsteuerung</h2>
-<section id="lernziele" class="level3" data-number="10.1.1"><h3 data-number="10.1.1" class="anchored" data-anchor-id="lernziele">
-<span class="header-section-number">10.1.1</span> Lernziele</h3>
+</header>
+
+
+<section id="lernsteuerung" class="level2" data-number="10.1">
+<h2 data-number="10.1" class="anchored" data-anchor-id="lernsteuerung"><span class="header-section-number">10.1</span> Lernsteuerung</h2>
+<section id="lernziele" class="level3" data-number="10.1.1">
+<h3 data-number="10.1.1" class="anchored" data-anchor-id="lernziele"><span class="header-section-number">10.1.1</span> Lernziele</h3>
 <ul>
 <li>Sie können die typischen Schritte einer Datenanalyse (von Forschungsdaten z. B. aus der Psychologie) benennen.</li>
 <li>Sie können den Unterschied zwischen Deskriptiv- und Inferenzstatistik benennen.</li>
 <li>Sie können die Relevanz von Reproduzierbarkeit erläutern.</li>
-</ul></section><section id="position-im-lernpfad" class="level3" data-number="10.1.2"><h3 data-number="10.1.2" class="anchored" data-anchor-id="position-im-lernpfad">
-<span class="header-section-number">10.1.2</span> Position im Lernpfad</h3>
-<p>Sie befinden sich im Abschnitt “Auswertung” in <a href="index.html#fig-ueberblick" class="quarto-xref">Abbildung&nbsp;<span>1.2</span></a>. Behalten Sie Ihren Fortschritt im Projektplan im Blick, s. <a href="index.html#fig-projektplan" class="quarto-xref">Abbildung&nbsp;<span>1.3</span></a>.</p>
-</section><section id="benötigte-r-pakete-und-daten" class="level3" data-number="10.1.3"><h3 data-number="10.1.3" class="anchored" data-anchor-id="benötigte-r-pakete-und-daten">
-<span class="header-section-number">10.1.3</span> Benötigte R-Pakete und Daten</h3>
+</ul>
+</section>
+<section id="position-im-lernpfad" class="level3" data-number="10.1.2">
+<h3 data-number="10.1.2" class="anchored" data-anchor-id="position-im-lernpfad"><span class="header-section-number">10.1.2</span> Position im Lernpfad</h3>
+<p>Sie befinden sich im Abschnitt “Auswertung” in <a href="#fig-ueberblick" class="quarto-xref">Abbildung&nbsp;<span class="quarto-unresolved-ref">fig-ueberblick</span></a>. Behalten Sie Ihren Fortschritt im Projektplan im Blick, s. <a href="#fig-projektplan" class="quarto-xref">Abbildung&nbsp;<span class="quarto-unresolved-ref">fig-projektplan</span></a>.</p>
+</section>
+<section id="benötigte-r-pakete-und-daten" class="level3" data-number="10.1.3">
+<h3 data-number="10.1.3" class="anchored" data-anchor-id="benötigte-r-pakete-und-daten"><span class="header-section-number">10.1.3</span> Benötigte R-Pakete und Daten</h3>
 <p>In diesem Kapitel benötigen Sie die folgenden R-Pakete:</p>
 <div class="cell" data-messagen="false">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://easystats.github.io/easystats/">easystats</a></span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(easystats)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Wir arbeiten mit dem Datensatz <code>extra</code>, aus dem Paket <a href="https://sebastiansauer.github.io/pradadata/">pradadata</a>. in dem Datensatz werden Korrelate zum Persönlichkeitsmerkmal Extraversion untersucht. Ein Codebook findet sich <a href="https://sebastiansauer.github.io/pradadata/reference/extra.html">hier</a>.</p>
 <div class="cell">
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">data_url</span> <span class="op">&lt;-</span> <span class="st">"https://raw.githubusercontent.com/sebastiansauer/modar/master/datasets/extra.csv"</span></span>
-<span><span class="va">extra</span> <span class="op">&lt;-</span> <span class="fu">data_read</span><span class="op">(</span><span class="va">data_url</span><span class="op">)</span>  <span class="co"># aus `{easystats}`</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>data_url <span class="ot">&lt;-</span> <span class="st">"https://raw.githubusercontent.com/sebastiansauer/modar/master/datasets/extra.csv"</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>extra <span class="ot">&lt;-</span> <span class="fu">data_read</span>(data_url)  <span class="co"># aus `{easystats}`</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Anstelle der Funktion <code>data_read</code> könnten Sie auch <code>read_csv</code> (Tidyverse) oder <code>read.csv</code> (Standard-R) verwenden.</p>
-</section></section><section id="überblick-zur-datenanalyse" class="level2" data-number="10.2"><h2 data-number="10.2" class="anchored" data-anchor-id="überblick-zur-datenanalyse">
-<span class="header-section-number">10.2</span> Überblick zur Datenanalyse</h2>
+</section>
+</section>
+<section id="überblick-zur-datenanalyse" class="level2" data-number="10.2">
+<h2 data-number="10.2" class="anchored" data-anchor-id="überblick-zur-datenanalyse"><span class="header-section-number">10.2</span> Überblick zur Datenanalyse</h2>
 <p>Mühsam haben Sie Ihre Studie geplant, minutiös den Versuchsplan ausgeheckt, pedantisch die Messinstrumente bestimmt. Dann! Die Datenerhebung! Versuchspersonen, manche nervig, manche freundlich. Ist Forschung denn so anstrengend? Endlich! Geschafft – die Daten sind im Sack, sozusagen. Die Datenerhebung ist abgeschlossen. Was jetzt?</p>
-<section id="wozu-ist-das-gut" class="level3" data-number="10.2.1"><h3 data-number="10.2.1" class="anchored" data-anchor-id="wozu-ist-das-gut">
-<span class="header-section-number">10.2.1</span> Wozu ist das gut?</h3>
+<section id="wozu-ist-das-gut" class="level3" data-number="10.2.1">
+<h3 data-number="10.2.1" class="anchored" data-anchor-id="wozu-ist-das-gut"><span class="header-section-number">10.2.1</span> Wozu ist das gut?</h3>
 <p>Würden Sie einem Medikament trauen, von dem es heißt, das Forschungsteam hatten keinen Bock, Statistik ist zu stressig, aber die Typen aus dem Forschungsteam hätten da so ein Gefühl, könnte schon was bringen, die Pille, immer rein damit. Was?! Sie zögern sich das Medikament einzuwerfen? Sie wüssten es lieber genauer, sicherer, belastbarer? Es ginge schließlich um ihre Gesundheit?</p>
 <p>Also gut, Sie haben es so gewollt: Gehen Sie geradeaus weiter zur Statistik.</p>
-</section><section id="über-7-brücken-musst-du-gehen-die-schritte-der-datenanalyse" class="level3" data-number="10.2.2"><h3 data-number="10.2.2" class="anchored" data-anchor-id="über-7-brücken-musst-du-gehen-die-schritte-der-datenanalyse">
-<span class="header-section-number">10.2.2</span> Über 7 Brücken musst du gehen: Die Schritte der Datenanalyse</h3>
-<p><a href="#fig-sieben-bruecken" class="quarto-xref">Abbildung&nbsp;<span>10.1</span></a> stellt die typischen Schritte (“Brücken”) der Datenanalyse dar.</p>
-<div id="fig-sieben-bruecken" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-sieben-bruecken-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+</section>
+<section id="über-7-brücken-musst-du-gehen-die-schritte-der-datenanalyse" class="level3" data-number="10.2.2">
+<h3 data-number="10.2.2" class="anchored" data-anchor-id="über-7-brücken-musst-du-gehen-die-schritte-der-datenanalyse"><span class="header-section-number">10.2.2</span> Über 7 Brücken musst du gehen: Die Schritte der Datenanalyse</h3>
+<p><a href="#fig-sieben-bruecken" class="quarto-xref">Abbildung&nbsp;<span class="quarto-unresolved-ref">fig-sieben-bruecken</span></a> stellt die typischen Schritte (“Brücken”) der Datenanalyse dar.</p>
+<div id="fig-sieben-bruecken" class="quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-sieben-bruecken-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div>
-<p></p><figure class="figure"></figure><p></p>
+<p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart TD
   A[Einlesen und Aufbereiten] --&gt; Z[Zusammenfassen]
@@ -435,14 +463,15 @@ window.Quarto = {
   Ü --&gt; A
 </pre>
 </div>
-<p></p>
+<p></p></figure><p></p>
 </div>
 </div>
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sieben-bruecken-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;10.1: Die sieben <del>Siegel</del> Brücken der Datenanalyse
-</figcaption></figure>
+</figcaption>
+</figure>
 </div>
 <p>In etwas mehr Detail sieht der Fortgang Ihrer Datenanalyse so aus:</p>
 <ol type="1">
@@ -453,8 +482,11 @@ Abbildung&nbsp;10.1: Die sieben <del>Siegel</del> Brücken der Datenanalyse
 <li><p><em>Interpretieren</em>: So ein Modell bzw. die entsprechende Funktion in R spuckt einige Zahlen aus. Aber was sagt uns das jetzt? Das würden Sie auch gerne wissen? Prima! Finden wir es zusammen raus.</p></li>
 <li><p><em>Kritisieren</em>: Jetzt müssen Sie stark sein. Keine Analyse ist perfekt. Keine Studie ist abschließend. Niemand hat bislang den goldenen Gral gefunden. Okay, aber bisher haben Sie sich auch noch nicht an der Sache versucht! Jedenfalls bricht niemanden ein Zacken aus der Krone, wenn man aufzeigt, wo noch Forschungslücken sind, auch nach der eigenen Studie. Oder sogar, welche Schwächen die eigene Studie bzw. Analyse hat und was man beim nächsten Mal noch besser machen könnte.</p></li>
 <li><p><em>Amüsieren</em>: So, irgendwann ist auch gut. Jetzt belohnen Sie sich mal für die ganze harte Arbeit des Studierens.</p></li>
-</ol></section></section><section id="reproduzierbarkeit" class="level2" data-number="10.3"><h2 data-number="10.3" class="anchored" data-anchor-id="reproduzierbarkeit">
-<span class="header-section-number">10.3</span> Reproduzierbarkeit</h2>
+</ol>
+</section>
+</section>
+<section id="reproduzierbarkeit" class="level2" data-number="10.3">
+<h2 data-number="10.3" class="anchored" data-anchor-id="reproduzierbarkeit"><span class="header-section-number">10.3</span> Reproduzierbarkeit</h2>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -465,7 +497,7 @@ Wichtig
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Transparenz (vgl. <a href="010-rahmen.html#def-repro" class="quarto-xref">Definition&nbsp;<span>2.4</span></a>) ist ein zentrales oder das zentrale Gütemaße der Wissenschaft. Darum sollten Sie alles dran setzen, dass Ihre Studie bzw. die Analyse Ihrer Daten nachvollziehbar ist. <span class="math inline">\(\square\)</span></p>
+<p>Transparenz (vgl. <a href="#def-repro" class="quarto-xref">Definition&nbsp;<span class="quarto-unresolved-ref">def-repro</span></a>) ist ein zentrales oder das zentrale Gütemaße der Wissenschaft. Darum sollten Sie alles dran setzen, dass Ihre Studie bzw. die Analyse Ihrer Daten nachvollziehbar ist. <span class="math inline">\(\square\)</span></p>
 </div>
 </div>
 <p>Wesentliche Faktoren für Reproduzierbarkeit sind:</p>
@@ -475,20 +507,25 @@ Wichtig
 <li>Sie reichen Ihre <em>Stimuli</em> ein (sofern nicht öffentlich verfügbar)</li>
 <li>Sie reichen Ihre <em>Messinstrumente</em> ein (sofern nicht öffentlich verfügbar)</li>
 <li>Sie dokumentieren Ihr <em>Vorgehen</em> und reichen es ein</li>
-</ul></section><section id="codebook" class="level2" data-number="10.4"><h2 data-number="10.4" class="anchored" data-anchor-id="codebook">
-<span class="header-section-number">10.4</span> Codebook</h2>
-<p>Ein Teil der Dokumentation ist ein Codebook (auch Data-Dictionary genannt). Ein Codebook erläutert die Namen der Variablen in Ihrer (Roh-)Datentabelle, s. <a href="#fig-codebook" class="quarto-xref">Abbildung&nbsp;<span>10.2</span></a>.</p>
-<div id="fig-codebook" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-codebook-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+</ul>
+</section>
+<section id="codebook" class="level2" data-number="10.4">
+<h2 data-number="10.4" class="anchored" data-anchor-id="codebook"><span class="header-section-number">10.4</span> Codebook</h2>
+<p>Ein Teil der Dokumentation ist ein Codebook (auch Data-Dictionary genannt). Ein Codebook erläutert die Namen der Variablen in Ihrer (Roh-)Datentabelle, s. <a href="#fig-codebook" class="quarto-xref">Abbildung&nbsp;<span class="quarto-unresolved-ref">fig-codebook</span></a>.</p>
+<div id="fig-codebook" class="quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-codebook-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="img/codebook.jpg" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-codebook-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;10.2: Beispiel für ein Codebook
-</figcaption></figure>
+</figcaption>
+</figure>
 </div>
 <p><a href="https://www.psycharchives.org/en/item/8b13c82b-1c31-481a-b4be-0d5779d87033">Quelle</a></p>
-</section><section id="wir-brauchen-brave-daten" class="level2" data-number="10.5"><h2 data-number="10.5" class="anchored" data-anchor-id="wir-brauchen-brave-daten">
-<span class="header-section-number">10.5</span> Wir brauchen brave Daten</h2>
+</section>
+<section id="wir-brauchen-brave-daten" class="level2" data-number="10.5">
+<h2 data-number="10.5" class="anchored" data-anchor-id="wir-brauchen-brave-daten"><span class="header-section-number">10.5</span> Wir brauchen brave Daten</h2>
 <p>Wie muss eine Tabelle aufgebaut sein, damit man sie gut in R importieren kann, bzw. gut damit weiterarbeiten kann?</p>
 <p>Im Überblick sollten Sie auf Folgendes achten:</p>
 <ul>
@@ -514,28 +551,26 @@ Tidy Data
 <ul>
 <li>In jeder Zeile steht <em>eine Beobachtung</em>.</li>
 <li>In jeder Spalte steht <em>eine Variable</em>.</li>
-<li>In jeder Zelle steht <em>eine Wert</em>. <span class="math inline">\(\square\)</span>
-</li>
+<li>In jeder Zelle steht <em>eine Wert</em>. <span class="math inline">\(\square\)</span></li>
 </ul>
 </div>
 </div>
 <p><a href="https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989">Hier ist eine gute Quelle</a> für weitere Erläuterung zu diesem Thema.</p>
-</section><section id="checkliste-zur-datenanalyse" class="level2" data-number="10.6"><h2 data-number="10.6" class="anchored" data-anchor-id="checkliste-zur-datenanalyse">
-<span class="header-section-number">10.6</span> Checkliste zur Datenanalyse</h2>
+</section>
+<section id="checkliste-zur-datenanalyse" class="level2" data-number="10.6">
+<h2 data-number="10.6" class="anchored" data-anchor-id="checkliste-zur-datenanalyse"><span class="header-section-number">10.6</span> Checkliste zur Datenanalyse</h2>
 <p>Hier sehen Sie im Überblick die Schritte, die in vielen Fällen sinnvoll sind, um Daten auf einem guten Niveau auszuwerten.</p>
 <ol type="1">
 <li>Vorverarbeitung
 <ol type="1">
 <li>Importieren</li>
 <li>Aufbereiten (Umkodieren, fehlende Wert versorgen, Transformieren, neue Spalten berechnen)</li>
-</ol>
-</li>
+</ol></li>
 <li>Explorative Analyse
 <ol type="1">
 <li>Daten zusammenfassen (zentrale Tendenz, Streuung, Zusammenhang)</li>
 <li>Daten visualisieren</li>
-</ol>
-</li>
+</ol></li>
 <li>Modellierung und Inferenzstatistik
 <ol type="1">
 <li>Modell berechnen</li>
@@ -543,43 +578,53 @@ Tidy Data
 <li>Parameter visualisieren</li>
 <li>Nullhypothesen testen (z. B. ROPE)</li>
 <li>Modellgüte berichten (z. B. R-Quadrat)</li>
+</ol></li>
 </ol>
-</li>
-</ol></section><section id="rostlöser" class="level2" data-number="10.7"><h2 data-number="10.7" class="anchored" data-anchor-id="rostlöser">
-<span class="header-section-number">10.7</span> Rostlöser</h2>
+</section>
+<section id="rostlöser" class="level2" data-number="10.7">
+<h2 data-number="10.7" class="anchored" data-anchor-id="rostlöser"><span class="header-section-number">10.7</span> Rostlöser</h2>
 <p>Ihre R-Skills sind etwas eingerostet? Flutscht nicht so? Keine Sorge! Es gibt Rostlöser, der Sie schnell wieder in Schwung bringt. 🧴</p>
-<section id="grundlagen-der-statistik" class="level3" data-number="10.7.1"><h3 data-number="10.7.1" class="anchored" data-anchor-id="grundlagen-der-statistik">
-<span class="header-section-number">10.7.1</span> Grundlagen der Statistik</h3>
+<section id="grundlagen-der-statistik" class="level3" data-number="10.7.1">
+<h3 data-number="10.7.1" class="anchored" data-anchor-id="grundlagen-der-statistik"><span class="header-section-number">10.7.1</span> Grundlagen der Statistik</h3>
 <p>Das Kursbuch <a href="https://statistik1.netlify.app/">Statistik1</a> beinhaltet einen Überblick über Datenaufbereitung und -visualierung sowie Modellierung mit dem linearen Modell, alles mit R.</p>
-</section><section id="grundlagen-der-inferenzstatistik" class="level3" data-number="10.7.2"><h3 data-number="10.7.2" class="anchored" data-anchor-id="grundlagen-der-inferenzstatistik">
-<span class="header-section-number">10.7.2</span> Grundlagen der Inferenzstatistik</h3>
+</section>
+<section id="grundlagen-der-inferenzstatistik" class="level3" data-number="10.7.2">
+<h3 data-number="10.7.2" class="anchored" data-anchor-id="grundlagen-der-inferenzstatistik"><span class="header-section-number">10.7.2</span> Grundlagen der Inferenzstatistik</h3>
 <p>Das Kursbuch <a href="https://start-bayes.netlify.app/">Start:Bayes!</a> stellt einen Einstieg in die Inferenzstatistik mit der Bayes-Statistik bereit.</p>
-</section><section id="wie-man-umfragedaten-auswertet" class="level3" data-number="10.7.3"><h3 data-number="10.7.3" class="anchored" data-anchor-id="wie-man-umfragedaten-auswertet">
-<span class="header-section-number">10.7.3</span> Wie man Umfragedaten auswertet</h3>
+</section>
+<section id="wie-man-umfragedaten-auswertet" class="level3" data-number="10.7.3">
+<h3 data-number="10.7.3" class="anchored" data-anchor-id="wie-man-umfragedaten-auswertet"><span class="header-section-number">10.7.3</span> Wie man Umfragedaten auswertet</h3>
 <p><a href="https://sebastiansauer.github.io/umfragen-auswerten/index.html">Hier</a> finden Sie (m)eine Anleitung zur Auswertung von Umfragedaten.</p>
-</section></section><section id="überblick-zur-statistik" class="level2" data-number="10.8"><h2 data-number="10.8" class="anchored" data-anchor-id="überblick-zur-statistik">
-<span class="header-section-number">10.8</span> Überblick zur Statistik</h2>
-<section id="deskriptiv--vs.-inferenzstatistik" class="level3" data-number="10.8.1"><h3 data-number="10.8.1" class="anchored" data-anchor-id="deskriptiv--vs.-inferenzstatistik">
-<span class="header-section-number">10.8.1</span> Deskriptiv- vs.&nbsp;Inferenzstatistik</h3>
-<p><a href="#fig-inf1" class="quarto-xref">Abbildung&nbsp;<span>10.3</span></a> und <a href="#fig-inf2" class="quarto-xref">Abbildung&nbsp;<span>10.4</span></a> geben einen Überblick zum Unterschied von Deskriptiv- und Inferenzstatistik.</p>
-<div id="fig-inf1" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-inf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+</section>
+</section>
+<section id="überblick-zur-statistik" class="level2" data-number="10.8">
+<h2 data-number="10.8" class="anchored" data-anchor-id="überblick-zur-statistik"><span class="header-section-number">10.8</span> Überblick zur Statistik</h2>
+<section id="deskriptiv--vs.-inferenzstatistik" class="level3" data-number="10.8.1">
+<h3 data-number="10.8.1" class="anchored" data-anchor-id="deskriptiv--vs.-inferenzstatistik"><span class="header-section-number">10.8.1</span> Deskriptiv- vs.&nbsp;Inferenzstatistik</h3>
+<p><a href="#fig-inf1" class="quarto-xref">Abbildung&nbsp;<span class="quarto-unresolved-ref">fig-inf1</span></a> und <a href="#fig-inf2" class="quarto-xref">Abbildung&nbsp;<span class="quarto-unresolved-ref">fig-inf2</span></a> geben einen Überblick zum Unterschied von Deskriptiv- und Inferenzstatistik.</p>
+<div id="fig-inf1" class="quarto-figure quarto-figure-center anchored" width="70%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-inf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="img/desk-inf.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-inf1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;10.3: Deskriptiv- vs.&nbsp;Inferenzstatistik
-</figcaption></figure>
+</figcaption>
+</figure>
 </div>
-<div id="fig-inf2" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-inf2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="fig-inf2" class="quarto-figure quarto-figure-center anchored" width="70%" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-inf2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="img/desk-inf-fans.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:70.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-inf2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;10.4: Inferenzstatistik schätzt die (Un-)Genauigkeit der Kennwerte der Deskriptivstatatistik
-</figcaption></figure>
+</figcaption>
+</figure>
 </div>
-</section><section id="deskriptivstatistik" class="level3" data-number="10.8.2"><h3 data-number="10.8.2" class="anchored" data-anchor-id="deskriptivstatistik">
-<span class="header-section-number">10.8.2</span> Deskriptivstatistik</h3>
+</section>
+<section id="deskriptivstatistik" class="level3" data-number="10.8.2">
+<h3 data-number="10.8.2" class="anchored" data-anchor-id="deskriptivstatistik"><span class="header-section-number">10.8.2</span> Deskriptivstatistik</h3>
 <p>Typische Kennwerte der Deskriptivstatistik sind:</p>
 <ul>
 <li>Arithmetisches Mittel</li>
@@ -588,11 +633,7 @@ Abbildung&nbsp;10.4: Inferenzstatistik schätzt die (Un-)Genauigkeit der Kennwer
 <li>Korrelation</li>
 <li>Regressionskoeffizienten</li>
 </ul>
-<p><a href="#fig-scatter-interactive" class="quarto-xref">Abbildung&nbsp;<span>10.5</span></a> zeigt interaktive Beispiele für einen Kennwert des Deskriptivstatistik: (lineare) Korrelation<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
-<div id="fig-scatter-interactive" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-scatter-interactive-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="figure-content">
-<div class="cell">
+<p><a href="#fig-scatter-interactive" class="quarto-xref">Abbildung&nbsp;<span class="quarto-unresolved-ref">fig-scatter-interactive</span></a> zeigt interaktive Beispiele für einen Kennwert des Deskriptivstatistik: (lineare) Korrelation<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>.</p>
 <div class="sourceCode cell-code hidden" id="cb3" data-startfrom="0" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line -1;"><span id="cb3-0"><a href="#cb3-0" aria-hidden="true" tabindex="-1"></a>viewof cor_type <span class="op">=</span> <span class="fu">select</span>({</span>
 <span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>  <span class="dt">title</span><span class="op">:</span> <span class="st">"Correlation type"</span><span class="op">,</span></span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">options</span><span class="op">:</span> [</span>
@@ -605,29 +646,8 @@ Abbildung&nbsp;10.4: Inferenzstatistik schätzt die (Un-)Genauigkeit der Kennwer
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  ]<span class="op">,</span></span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="dt">value</span><span class="op">:</span> <span class="st">"A perfect linear relationship"</span></span>
 <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div id="ojs-cell-1" data-nodetype="declaration">
-
-</div>
-</div>
-</div>
-<div class="cell">
 <div class="sourceCode cell-code hidden" id="cb4" data-startfrom="0" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line -1;"><span id="cb4-0"><a href="#cb4-0" aria-hidden="true" tabindex="-1"></a>viewof redo <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">button</span>(<span class="st">"Redo"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div id="ojs-cell-2" data-nodetype="declaration">
-
-</div>
-</div>
-</div>
-<div class="cell">
 <div class="sourceCode cell-code hidden" id="cb5" data-startfrom="0" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line -1;"><span id="cb5-0"><a href="#cb5-0" aria-hidden="true" tabindex="-1"></a>pic <span class="op">=</span> (redo<span class="op">,</span> <span class="fu">graph_from_type</span>(cor_type))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div id="ojs-cell-3" data-nodetype="declaration">
-
-</div>
-</div>
-</div>
-<div class="cell">
 <div class="sourceCode cell-code hidden" id="cb6" data-startfrom="0" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line -1;"><span id="cb6-0"><a href="#cb6-0" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">graph_from_type</span>(s) {</span>
 <span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (s <span class="op">==</span> <span class="st">"A perfect linear relationship"</span>) {</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> a <span class="op">=</span> jstat<span class="op">.</span><span class="at">uniform</span><span class="op">.</span><span class="fu">sample</span>(<span class="dv">1</span> <span class="op">/</span> <span class="dv">3</span><span class="op">,</span> <span class="dv">2</span> <span class="op">/</span> <span class="dv">3</span>)<span class="op">;</span></span>
@@ -691,13 +711,6 @@ Abbildung&nbsp;10.4: Inferenzstatistik schätzt die (Un-)Genauigkeit der Kennwer
 <span id="cb6-60"><a href="#cb6-60" aria-hidden="true" tabindex="-1"></a>    )<span class="op">;</span></span>
 <span id="cb6-61"><a href="#cb6-61" aria-hidden="true" tabindex="-1"></a>  }</span>
 <span id="cb6-62"><a href="#cb6-62" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display">
-<div id="ojs-cell-4" data-nodetype="declaration">
-
-</div>
-</div>
-</div>
-<div class="cell">
 <div class="sourceCode cell-code hidden" id="cb7" data-startfrom="0" data-source-offset="0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line -1;"><span id="cb7-0"><a href="#cb7-0" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">make_perturbed_graph</span>(f<span class="op">,</span> r<span class="op">,</span> a<span class="op">,</span> b<span class="op">,</span> n) {</span>
 <span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> xs <span class="op">=</span> jstat<span class="op">.</span><span class="fu">arange</span>(n)<span class="op">.</span><span class="fu">map</span>(() <span class="kw">=&gt;</span> jstat<span class="op">.</span><span class="at">uniform</span><span class="op">.</span><span class="fu">sample</span>(a<span class="op">,</span> b))<span class="op">;</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">let</span> ys <span class="op">=</span> xs<span class="op">.</span><span class="fu">map</span>((x) <span class="kw">=&gt;</span> <span class="fu">f</span>(x) <span class="op">+</span> <span class="fu">r</span>())<span class="op">;</span></span>
@@ -710,6 +723,44 @@ Abbildung&nbsp;10.4: Inferenzstatistik schätzt die (Un-)Genauigkeit der Kennwer
 <span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"0.4f"</span></span>
 <span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>  )(R)<span class="sc">}</span><span class="vs">&lt;/div&gt;</span><span class="sc">${</span>plot<span class="op">.</span><span class="at">node</span><span class="sc">}</span><span class="vs">`</span><span class="op">;</span></span>
 <span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code hidden" id="cb8" data-startfrom="1" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {select} <span class="im">from</span> <span class="st">"@jashkenas/inputs"</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>jstat <span class="op">=</span> <span class="pp">require</span>(<span class="st">'jstat'</span>)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { plotter } <span class="im">from</span> <span class="st">'50dadfdec01c15a8'</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { rk4 } <span class="im">from</span> <span class="st">'@mcmcclur/runge-kutta-for-systems-of-odes'</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { slider } <span class="im">from</span> <span class="st">"@jashkenas/inputs"</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="fig-scatter-interactive" class="quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-scatter-interactive-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="figure-content">
+<div class="cell">
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-3" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output cell-output-display">
+<div id="ojs-cell-4" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell">
 <div class="cell-output cell-output-display">
 <div id="ojs-cell-5" data-nodetype="declaration">
 
@@ -717,11 +768,6 @@ Abbildung&nbsp;10.4: Inferenzstatistik schätzt die (Un-)Genauigkeit der Kennwer
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code hidden" id="cb8" data-startfrom="1" data-source-offset="-0"><pre class="sourceCode js code-with-copy"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> {select} <span class="im">from</span> <span class="st">"@jashkenas/inputs"</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>jstat <span class="op">=</span> <span class="pp">require</span>(<span class="st">'jstat'</span>)</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { plotter } <span class="im">from</span> <span class="st">'50dadfdec01c15a8'</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { rk4 } <span class="im">from</span> <span class="st">'@mcmcclur/runge-kutta-for-systems-of-odes'</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> { slider } <span class="im">from</span> <span class="st">"@jashkenas/inputs"</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
 <div id="ojs-cell-6-1" data-nodetype="declaration">
@@ -762,36 +808,42 @@ Abbildung&nbsp;10.4: Inferenzstatistik schätzt die (Un-)Genauigkeit der Kennwer
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-scatter-interactive-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;10.5: Interaktives Beispiel für Zusammenhangsdiagramme.
-</figcaption></figure>
+</figcaption>
+</figure>
 </div>
-</section><section id="inferenzstatistik" class="level3" data-number="10.8.3"><h3 data-number="10.8.3" class="anchored" data-anchor-id="inferenzstatistik">
-<span class="header-section-number">10.8.3</span> Inferenzstatistik</h3>
-<p><a href="#fig-samples-for-inference" class="quarto-xref">Abbildung&nbsp;<span>10.6</span></a> veranschautlicht die Daaseinsberechtigung der Inferenzstatistik: Eine einzelne Stichprobe schätzt den Mittelwert der Population (mu) ungenau (je kleiner die Stichprobe, desto ungenauer, ceteris paribus). Daher brauchen wir eine Angabe, wie (un)genau unser Mittelwert wohl den “wahren” Mittelwert der Population (mu) schätzt. Genau das macht die Inferenzstatistik!</p>
+</section>
+<section id="inferenzstatistik" class="level3" data-number="10.8.3">
+<h3 data-number="10.8.3" class="anchored" data-anchor-id="inferenzstatistik"><span class="header-section-number">10.8.3</span> Inferenzstatistik</h3>
+<p><a href="#fig-samples-for-inference" class="quarto-xref">Abbildung&nbsp;<span class="quarto-unresolved-ref">fig-samples-for-inference</span></a> veranschautlicht die Daaseinsberechtigung der Inferenzstatistik: Eine einzelne Stichprobe schätzt den Mittelwert der Population (mu) ungenau (je kleiner die Stichprobe, desto ungenauer, ceteris paribus). Daher brauchen wir eine Angabe, wie (un)genau unser Mittelwert wohl den “wahren” Mittelwert der Population (mu) schätzt. Genau das macht die Inferenzstatistik!</p>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-samples-for-inference" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-samples-for-inference-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="fig-samples-for-inference" class="quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-samples-for-inference-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="080-Auswerten_files/figure-html/fig-samples-for-inference-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-samples-for-inference-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;10.6: Inferenzstatistik veranschaulicht: Einzelne Stichproben schätzen den Mittelwert der Populationswert (mu) nur ungenau. Daher brauchen eine Quantifizierung der Schätz(un)genauigkeit des Mittelwerts der Population.
-</figcaption></figure>
+</figcaption>
+</figure>
 </div>
 </div>
 </div>
-</section><section id="modellieren" class="level3" data-number="10.8.4"><h3 data-number="10.8.4" class="anchored" data-anchor-id="modellieren">
-<span class="header-section-number">10.8.4</span> Modellieren</h3>
+</section>
+<section id="modellieren" class="level3" data-number="10.8.4">
+<h3 data-number="10.8.4" class="anchored" data-anchor-id="modellieren"><span class="header-section-number">10.8.4</span> Modellieren</h3>
 <div id="def-model" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 10.1 (Modell)</strong></span> Ein Modell ist ein vereinfachtes Abbild der Wirklichkeit.<span class="math inline">\(\square\)</span></p>
+<p><span class="theorem-title"><strong>Definition 10.1 (Modell) </strong></span>Ein Modell ist ein vereinfachtes Abbild der Wirklichkeit.<span class="math inline">\(\square\)</span></p>
 </div>
 <p>Der Nutzen eines Modells ist, einen (übermäßig) komplexen Sachverhalt zu vereinfachen oder überhaupt erst handhabbar zu machen. Man versucht zu vereinfachen, ohne Wesentliches wegzulassen. Der Speck muss weg, sozusagen. Das Wesentliche bleibt.</p>
-<p>Auf die Statistik bezogen heißt das, dass man einen Datensatz dabei so zusammenfasst, damit man das Wesentliche erkennt. Was ist das “Wesentliche”? Oft interessiert man sich für die Ursachen eines Phänomens. Etwa: “Wie kommt es bloß, dass ich ohne zu lernen die Klausur so gut bestanden habe?”<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> Noch allgemeiner ist man dabei häufig am Zusammenhang von <code>X</code> und <code>Y</code> interessiert, s. <a href="#fig-xy" class="quarto-xref">Abbildung&nbsp;<span>10.7</span></a>, die ein Sinnbild von statistischen Modellen widergibt.</p>
-<div id="fig-xy" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
-<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-xy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p>Auf die Statistik bezogen heißt das, dass man einen Datensatz dabei so zusammenfasst, damit man das Wesentliche erkennt. Was ist das “Wesentliche”? Oft interessiert man sich für die Ursachen eines Phänomens. Etwa: “Wie kommt es bloß, dass ich ohne zu lernen die Klausur so gut bestanden habe?”<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> Noch allgemeiner ist man dabei häufig am Zusammenhang von <code>X</code> und <code>Y</code> interessiert, s. <a href="#fig-xy" class="quarto-xref">Abbildung&nbsp;<span class="quarto-unresolved-ref">fig-xy</span></a>, die ein Sinnbild von statistischen Modellen widergibt.</p>
+<div id="fig-xy" class="quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-xy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div>
-<p></p><figure class="figure"></figure><p></p>
+<p></p><figure class="figure"><p></p>
 <div>
 <pre class="mermaid mermaid-js">flowchart LR
 X --&gt; Y
@@ -801,23 +853,24 @@ X1 --&gt; Y2
 X2 --&gt; Y2
 </pre>
 </div>
-<p></p>
+<p></p></figure><p></p>
 </div>
 </div>
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-xy-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;10.7: oben: Sinnbild eines statistischen Modells; unten: Sinnbild eines statistischen Modells, mit zwei Inputvariablen (“Ursachen”)
-</figcaption></figure>
+</figcaption>
+</figure>
 </div>
-</section></section><section id="skriptbasierte-vs.-klickbasierte-software-zur-datenanalyse" class="level2" data-number="10.9"><h2 data-number="10.9" class="anchored" data-anchor-id="skriptbasierte-vs.-klickbasierte-software-zur-datenanalyse">
-<span class="header-section-number">10.9</span> Skriptbasierte vs.&nbsp;klickbasierte Software zur Datenanalyse</h2>
+</section>
+</section>
+<section id="skriptbasierte-vs.-klickbasierte-software-zur-datenanalyse" class="level2" data-number="10.9">
+<h2 data-number="10.9" class="anchored" data-anchor-id="skriptbasierte-vs.-klickbasierte-software-zur-datenanalyse"><span class="header-section-number">10.9</span> Skriptbasierte vs.&nbsp;klickbasierte Software zur Datenanalyse</h2>
 <p>Man kann grob zwei Arten von Software-Programmen für Datenanalyse unterscheiden:</p>
 <ol type="1">
-<li>
-<em>Skriptbasierte</em>: Man schreibt seine Befehle in einer Programmiersprache (z. B. R)</li>
-<li>
-<em>Klickbasierte</em>: Man klickt in einer Gui, um Befehle auszulösen (z. B. Jamovi)</li>
+<li><em>Skriptbasierte</em>: Man schreibt seine Befehle in einer Programmiersprache (z. B. R)</li>
+<li><em>Klickbasierte</em>: Man klickt in einer Gui, um Befehle auszulösen (z. B. Jamovi)</li>
 </ol>
 <p>Die gängigen Beispiele für skriptbasierte Software für Datenanalyse sind R und Python.</p>
 <p>Einige empfehlenswerte(re) Programme für die klickbasierte Datenanalyse sind:</p>
@@ -829,29 +882,32 @@ Abbildung&nbsp;10.7: oben: Sinnbild eines statistischen Modells; unten: Sinnbild
 <p>Im Folgenden sind die Vorteile der oben genannten klickbasierten Software-Programmen den Vorteilen der oben genannten skriptbasierten Software-Programmen gegenüber gestellt</p>
 <div class="columns">
 <div class="column">
-<section id="vorteile-klickbasierter-software" class="level3" data-number="10.9.1"><h3 data-number="10.9.1" class="anchored" data-anchor-id="vorteile-klickbasierter-software">
-<span class="header-section-number">10.9.1</span> Vorteile klickbasierter Software</h3>
-<p><img src="img/JASP-logo.webp" class="img-fluid" style="width:30.0%" alt="JASP"><img src="img/jamovi-icon.png" class="img-fluid" style="width:30.0%" alt="Jamovi"><img src="img/exploratory-icon.png" class="img-fluid" style="width:30.0%" alt="Exploratory"></p>
+<section id="vorteile-klickbasierter-software" class="level3" data-number="10.9.1">
+<h3 data-number="10.9.1" class="anchored" data-anchor-id="vorteile-klickbasierter-software"><span class="header-section-number">10.9.1</span> Vorteile klickbasierter Software</h3>
+<p><img src="img/JASP-logo.webp" class="img-fluid" style="width:30.0%" alt="JASP"> <img src="img/jamovi-icon.png" class="img-fluid" style="width:30.0%" alt="Jamovi"> <img src="img/exploratory-icon.png" class="img-fluid" style="width:30.0%" alt="Exploratory"></p>
 <ul>
 <li>eher kostenlos (es gibt kostenpflichtige Premium-Versionen wie Jamovi Cloud)</li>
 <li>aktuell</li>
 <li>flachere Lernkurve</li>
 <li>R-Code integriert</li>
-</ul></section>
+</ul>
+</section>
 </div><div class="column">
-<section id="vorteile-skriptbasierter-software" class="level3" data-number="10.9.2"><h3 data-number="10.9.2" class="anchored" data-anchor-id="vorteile-skriptbasierter-software">
-<span class="header-section-number">10.9.2</span> Vorteile skriptbasierter Software</h3>
-<p><img src="img/R-logo.png" class="img-fluid" style="width:30.0%" alt="R"><img src="img/python-logo.png" class="img-fluid" style="width:50.0%" alt="Python"></p>
+<section id="vorteile-skriptbasierter-software" class="level3" data-number="10.9.2">
+<h3 data-number="10.9.2" class="anchored" data-anchor-id="vorteile-skriptbasierter-software"><span class="header-section-number">10.9.2</span> Vorteile skriptbasierter Software</h3>
+<p><img src="img/R-logo.png" class="img-fluid" style="width:30.0%" alt="R"> <img src="img/python-logo.png" class="img-fluid" style="width:50.0%" alt="Python"></p>
 <ul>
 <li>kostenlos</li>
 <li>aktueller</li>
 <li>umfassend (klickbasierte Software kann nicht alles, was man braucht)</li>
 <li>steilere Lernkurve</li>
-</ul></section>
+</ul>
+</section>
 </div>
 </div>
-</section><section id="deskriptivstatistik-in-der-praxis" class="level2" data-number="10.10"><h2 data-number="10.10" class="anchored" data-anchor-id="deskriptivstatistik-in-der-praxis">
-<span class="header-section-number">10.10</span> Deskriptivstatistik in der Praxis</h2>
+</section>
+<section id="deskriptivstatistik-in-der-praxis" class="level2" data-number="10.10">
+<h2 data-number="10.10" class="anchored" data-anchor-id="deskriptivstatistik-in-der-praxis"><span class="header-section-number">10.10</span> Deskriptivstatistik in der Praxis</h2>
 <div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -868,26 +924,28 @@ Wichtig
 <p>Wir analysieren den Datensatz <code>extra</code>. Damit es einfach bleibt, begrenzen wir uns im Folgenden auf ein paar Variablen.</p>
 <p>Sagen wir, das sind die Variablen, die uns interessieren:</p>
 <div class="cell">
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra_corr_names</span> <span class="op">&lt;-</span> </span>
-<span><span class="va">extra</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">n_facebook_friends</span>, <span class="va">n_hangover</span>, <span class="va">age</span>, <span class="va">extra_single_item</span>, <span class="va">n_party</span>, <span class="va">extra_mean</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/base/names.html">names</a></span><span class="op">(</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">extra_corr_names</span></span>
-<span><span class="co">## [1] "n_facebook_friends" "n_hangover"         "age"               </span></span>
-<span><span class="co">## [4] "extra_single_item"  "n_party"            "extra_mean"</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>extra_corr_names <span class="ot">&lt;-</span> </span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>extra <span class="sc">%&gt;%</span> </span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(n_facebook_friends, n_hangover, age, extra_single_item, n_party, extra_mean) <span class="sc">%&gt;%</span> </span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">names</span>()</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>extra_corr_names</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] "n_facebook_friends" "n_hangover"         "age"               </span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="do">## [4] "extra_single_item"  "n_party"            "extra_mean"</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<section id="deskriptive-ergebnisse-für-metrische-variablen" class="level3" data-number="10.10.1"><h3 data-number="10.10.1" class="anchored" data-anchor-id="deskriptive-ergebnisse-für-metrische-variablen">
-<span class="header-section-number">10.10.1</span> Deskriptive Ergebnisse für metrische Variablen</h3>
-<p>Sie können deskriptive Ergebnisse (Ihrer relevanten Variablen) für <em>metrische</em> Variablen z. B. so darstellen, s. <a href="#lst-desk1" class="quarto-xref">Listing&nbsp;<span>10.1</span></a>.</p>
-<div id="lst-desk1" class="listing quarto-float">
-<figure class="quarto-float quarto-float-lst figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-desk1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<section id="deskriptive-ergebnisse-für-metrische-variablen" class="level3" data-number="10.10.1">
+<h3 data-number="10.10.1" class="anchored" data-anchor-id="deskriptive-ergebnisse-für-metrische-variablen"><span class="header-section-number">10.10.1</span> Deskriptive Ergebnisse für metrische Variablen</h3>
+<p>Sie können deskriptive Ergebnisse (Ihrer relevanten Variablen) für <em>metrische</em> Variablen z. B. so darstellen, s. <a href="#lst-desk1" class="quarto-xref">Listing&nbsp;<span class="quarto-unresolved-ref">lst-desk1</span></a>.</p>
+<div id="lst-desk1" class="listing">
+<figure class="quarto-float quarto-float-lst figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-desk1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Listing&nbsp;10.1: Deskriptive Statistik mit Hilfe des R-Pakets <code>easystats</code>
-</figcaption><div aria-describedby="lst-desk1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+</figcaption>
+<div aria-describedby="lst-desk1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell">
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/all_of.html">any_of</a></span><span class="op">(</span><span class="va">extra_corr_names</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu">describe_distribution</span><span class="op">(</span><span class="op">)</span>  <span class="co"># aus `easystats`</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>extra <span class="sc">%&gt;%</span> </span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">any_of</span>(extra_corr_names)) <span class="sc">%&gt;%</span> </span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">describe_distribution</span>()  <span class="co"># aus `easystats`</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </figure>
@@ -907,7 +965,8 @@ Listing&nbsp;10.1: Deskriptive Statistik mit Hilfe des R-Pakets <code>easystats<
 <col style="width: 4%">
 <col style="width: 12%">
 </colgroup>
-<thead><tr class="header">
+<thead>
+<tr class="header">
 <th style="text-align: left;">Variable</th>
 <th style="text-align: right;">Mean</th>
 <th style="text-align: right;">SD</th>
@@ -918,7 +977,8 @@ Listing&nbsp;10.1: Deskriptive Statistik mit Hilfe des R-Pakets <code>easystats<
 <th style="text-align: right;">Kurtosis</th>
 <th style="text-align: right;">n</th>
 <th style="text-align: right;">n_Missing</th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">n_facebook_friends</td>
@@ -996,7 +1056,7 @@ Listing&nbsp;10.1: Deskriptive Statistik mit Hilfe des R-Pakets <code>easystats<
 </table>
 </div>
 </div>
-<p>Übersetzen wir <a href="#lst-desk1" class="quarto-xref">Listing&nbsp;<span>10.1</span></a> vom Errischen ins Deutsche:</p>
+<p>Übersetzen wir <a href="#lst-desk1" class="quarto-xref">Listing&nbsp;<span class="quarto-unresolved-ref">lst-desk1</span></a> vom Errischen ins Deutsche:</p>
 <ol type="1">
 <li>Hey R,</li>
 <li>nimm die Tabelle <code>extra</code> … und dann</li>
@@ -1008,9 +1068,9 @@ Listing&nbsp;10.1: Deskriptive Statistik mit Hilfe des R-Pakets <code>easystats<
 <p>Statt <code>select(any_of(extra_corr_names))</code> könnten Sie natürlich auch schreiben <code>select(n_facebook_friends, ...)</code>, wobei Sie für die drei Punkte alle Variablen von Interesse nennen würden.</p>
 <p>Praktischerweise kann man <code>describe_distribution</code> auch für gruppierte Datensätze nutzen, um so gruppierte Verteilungsmaße zu bekommen:</p>
 <div class="cell">
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">sex</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu">describe_distribution</span><span class="op">(</span><span class="va">extra_mean</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>extra <span class="sc">|&gt;</span> </span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(sex) <span class="sc">|&gt;</span> </span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">describe_distribution</span>(extra_mean)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -1019,15 +1079,16 @@ Listing&nbsp;10.1: Deskriptive Statistik mit Hilfe des R-Pakets <code>easystats<
 </div>
 </div>
 </div>
-</section><section id="deskriptive-ergebnisse-für-nominale-variablen" class="level3" data-number="10.10.2"><h3 data-number="10.10.2" class="anchored" data-anchor-id="deskriptive-ergebnisse-für-nominale-variablen">
-<span class="header-section-number">10.10.2</span> Deskriptive Ergebnisse für nominale Variablen</h3>
-<section id="univariate-häufigkeiten" class="level4" data-number="10.10.2.1"><h4 data-number="10.10.2.1" class="anchored" data-anchor-id="univariate-häufigkeiten">
-<span class="header-section-number">10.10.2.1</span> Univariate Häufigkeiten</h4>
+</section>
+<section id="deskriptive-ergebnisse-für-nominale-variablen" class="level3" data-number="10.10.2">
+<h3 data-number="10.10.2" class="anchored" data-anchor-id="deskriptive-ergebnisse-für-nominale-variablen"><span class="header-section-number">10.10.2</span> Deskriptive Ergebnisse für nominale Variablen</h3>
+<section id="univariate-häufigkeiten" class="level4" data-number="10.10.2.1">
+<h4 data-number="10.10.2.1" class="anchored" data-anchor-id="univariate-häufigkeiten"><span class="header-section-number">10.10.2.1</span> Univariate Häufigkeiten</h4>
 <p>Lassen wir uns die Häufigkeiten für <code>sex</code> und für <code>smoker</code> ausgeben, also für jede Variable separat (univariat).</p>
 <p>Mit <code>tidyverse</code> kann man das in vertrauter Manier bewerkstelligen:</p>
 <div class="cell">
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/count.html">count</a></span><span class="op">(</span><span class="va">sex</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>extra <span class="sc">|&gt;</span> </span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(sex)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -1038,118 +1099,114 @@ Listing&nbsp;10.1: Deskriptive Statistik mit Hilfe des R-Pakets <code>easystats<
 </div>
 <p>Etwas schicker sieht es aus mit <code>data_tabulate</code> aus <code>easystats</code>:</p>
 <div class="cell">
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">sex</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="co">#drop_na() |&gt;  ggf. ohne fehlende Werte</span></span>
-<span>  <span class="fu">data_tabulate</span><span class="op">(</span><span class="op">)</span></span>
-<span><span class="co">## sex (sex) &lt;character&gt;</span></span>
-<span><span class="co">## # total N=826 valid N=815</span></span>
-<span><span class="co">## </span></span>
-<span><span class="co">## Value |   N | Raw % | Valid % | Cumulative %</span></span>
-<span><span class="co">## ------+-----+-------+---------+-------------</span></span>
-<span><span class="co">## Frau  | 529 | 64.04 |   64.91 |        64.91</span></span>
-<span><span class="co">## Mann  | 286 | 34.62 |   35.09 |       100.00</span></span>
-<span><span class="co">## &lt;NA&gt;  |  11 |  1.33 |    &lt;NA&gt; |         &lt;NA&gt;</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>extra <span class="sc">|&gt;</span> </span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(sex) <span class="sc">|&gt;</span> </span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">#drop_na() |&gt;  ggf. ohne fehlende Werte</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data_tabulate</span>()</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="do">## sex (sex) &lt;character&gt;</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="do">## # total N=826 valid N=815</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="do">## Value |   N | Raw % | Valid % | Cumulative %</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="do">## ------+-----+-------+---------+-------------</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="do">## Frau  | 529 | 64.04 |   64.91 |        64.91</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="do">## Mann  | 286 | 34.62 |   35.09 |       100.00</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="do">## &lt;NA&gt;  |  11 |  1.33 |    &lt;NA&gt; |         &lt;NA&gt;</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="bivariate-häufigkeiten" class="level4" data-number="10.10.2.2">
+<h4 data-number="10.10.2.2" class="anchored" data-anchor-id="bivariate-häufigkeiten"><span class="header-section-number">10.10.2.2</span> Bivariate Häufigkeiten</h4>
 <p>Wir können uns auch die <em>bi</em>variaten Häufigkeiten ausgeben lassen: Betrachten wir die Geschlechtsverteilung bei Menschen, die (nicht) jünger als 20 Jahre sind:</p>
 <div class="cell">
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/drop_na.html">drop_na</a></span><span class="op">(</span><span class="va">sex</span>, <span class="va">age</span><span class="op">)</span> <span class="op">|&gt;</span>  <span class="co"># fehlende Werte entfernt</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">age</span> <span class="op">&gt;</span> <span class="fl">20</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu">data_tabulate</span><span class="op">(</span><span class="va">sex</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>extra <span class="sc">|&gt;</span> </span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>(sex, age) <span class="sc">|&gt;</span>  <span class="co"># fehlende Werte entfernt</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(age <span class="sc">&gt;</span> <span class="dv">20</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data_tabulate</span>(sex)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
 <div class="cell-output-display">
 <table class="table table-sm table-striped small">
 <caption>Frequency Table</caption>
-<colgroup>
-<col style="width: 10%">
-<col style="width: 13%">
-<col style="width: 39%">
-<col style="width: 2%">
-<col style="width: 8%">
-<col style="width: 9%">
-<col style="width: 15%">
-</colgroup>
-<thead><tr class="header">
+<thead>
+<tr class="header">
 <th style="text-align: left;">Variable</th>
 <th style="text-align: left;">Group</th>
-<th style="text-align: left;">Value</th>
-<th style="text-align: left;">N</th>
-<th style="text-align: right;">Raw %</th>
+<th style="text-align: right;">Value</th>
+<th style="text-align: right;">N</th>
+<th style="text-align: left;">Raw %</th>
 <th style="text-align: right;">Valid %</th>
 <th style="text-align: right;">Cumulative %</th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">smoker</td>
-<td style="text-align: left;">sex (Frau)</td>
-<td style="text-align: left;">Gelegentlich (z. B. auf Partys)</td>
-<td style="text-align: left;">1</td>
-<td style="text-align: right;">10.00</td>
-<td style="text-align: right;">10.00</td>
-<td style="text-align: right;">10.00</td>
+<td style="text-align: left;">sex</td>
+<td style="text-align: left;">age &gt; 20 (FALSE)</td>
+<td style="text-align: right;">Frau</td>
+<td style="text-align: right;">89</td>
+<td style="text-align: left;">74.17</td>
+<td style="text-align: right;">74.17</td>
+<td style="text-align: right;">74.17</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
-<td style="text-align: left;">Ja</td>
-<td style="text-align: left;">1</td>
-<td style="text-align: right;">10.00</td>
-<td style="text-align: right;">10.00</td>
-<td style="text-align: right;">20.00</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">Nein</td>
-<td style="text-align: left;">8</td>
-<td style="text-align: right;">80.00</td>
-<td style="text-align: right;">80.00</td>
-<td style="text-align: right;">100.00</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;">(NA)</td>
-<td style="text-align: left;">0</td>
-<td style="text-align: right;">0.00</td>
-<td style="text-align: right;">(NA)</td>
-<td style="text-align: right;">(NA)</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-<td style="text-align: right;"></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">smoker</td>
-<td style="text-align: left;">sex (Mann)</td>
-<td style="text-align: left;">Ja</td>
-<td style="text-align: left;">2</td>
-<td style="text-align: right;">100.00</td>
-<td style="text-align: right;">100.00</td>
+<td style="text-align: right;">Mann</td>
+<td style="text-align: right;">31</td>
+<td style="text-align: left;">25.83</td>
+<td style="text-align: right;">25.83</td>
 <td style="text-align: right;">100.00</td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
-<td style="text-align: left;">(NA)</td>
-<td style="text-align: left;">0</td>
-<td style="text-align: right;">0.00</td>
+<td style="text-align: right;">(NA)</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">0.00</td>
 <td style="text-align: right;">(NA)</td>
 <td style="text-align: right;">(NA)</td>
 </tr>
 <tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">sex</td>
+<td style="text-align: left;">age &gt; 20 (TRUE)</td>
+<td style="text-align: right;">Frau</td>
+<td style="text-align: right;">437</td>
+<td style="text-align: left;">63.43</td>
+<td style="text-align: right;">63.43</td>
+<td style="text-align: right;">63.43</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">Mann</td>
+<td style="text-align: right;">252</td>
+<td style="text-align: left;">36.57</td>
+<td style="text-align: right;">36.57</td>
+<td style="text-align: right;">100.00</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"></td>
+<td style="text-align: left;"></td>
+<td style="text-align: right;">(NA)</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: left;">0.00</td>
+<td style="text-align: right;">(NA)</td>
+<td style="text-align: right;">(NA)</td>
+</tr>
+<tr class="even">
 <td style="text-align: left;"></td>
 <td style="text-align: left;"></td>
 <td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: left;"></td>
 <td style="text-align: right;"></td>
 <td style="text-align: right;"></td>
 </tr>
@@ -1157,17 +1214,14 @@ Listing&nbsp;10.1: Deskriptive Statistik mit Hilfe des R-Pakets <code>easystats<
 </table>
 </div>
 </div>
-</section></section><section id="korrelationen-darstellen" class="level3" data-number="10.10.3"><h3 data-number="10.10.3" class="anchored" data-anchor-id="korrelationen-darstellen">
-<span class="header-section-number">10.10.3</span> Korrelationen darstellen</h3>
+</section>
+</section>
+<section id="korrelationen-darstellen" class="level3" data-number="10.10.3">
+<h3 data-number="10.10.3" class="anchored" data-anchor-id="korrelationen-darstellen"><span class="header-section-number">10.10.3</span> Korrelationen darstellen</h3>
 <p>In einer Umfrage erhebt man häufig mehrere Variablen, ein Teil davon oft <em>Konstrukte</em>. Es bietet sich in einem ersten Schritt an, die Korrelationen dieser Variablen untereinander darzustellen.</p>
-<section id="korrelationsmatrix" class="level4" data-number="10.10.3.1"><h4 data-number="10.10.3.1" class="anchored" data-anchor-id="korrelationsmatrix">
-<span class="header-section-number">10.10.3.1</span> Korrelationsmatrix</h4>
+<section id="korrelationsmatrix" class="level4" data-number="10.10.3.1">
+<h4 data-number="10.10.3.1" class="anchored" data-anchor-id="korrelationsmatrix"><span class="header-section-number">10.10.3.1</span> Korrelationsmatrix</h4>
 <div class="cell">
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/all_of.html">any_of</a></span><span class="op">(</span><span class="va">extra_corr_names</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>  </span>
-<span>  <span class="fu">correlation</span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu">kable</span><span class="op">(</span>digits <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="table table-sm table-striped small">
 <colgroup>
@@ -1178,14 +1232,16 @@ Listing&nbsp;10.1: Deskriptive Statistik mit Hilfe des R-Pakets <code>easystats<
 <col style="width: 8%">
 <col style="width: 15%">
 </colgroup>
-<thead><tr class="header">
+<thead>
+<tr class="header">
 <th style="text-align: left;">Parameter</th>
 <th style="text-align: right;">extra_mean</th>
 <th style="text-align: right;">n_party</th>
 <th style="text-align: right;">extra_single_item</th>
 <th style="text-align: right;">age</th>
 <th style="text-align: right;">n_hangover</th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">n_facebook_friends</td>
@@ -1231,15 +1287,21 @@ Listing&nbsp;10.1: Deskriptive Statistik mit Hilfe des R-Pakets <code>easystats<
 </table>
 </div>
 </div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>extra <span class="sc">%&gt;%</span> </span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">any_of</span>(extra_corr_names)) <span class="sc">%&gt;%</span>  </span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">correlation</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summary</span>() </span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <p>Sie möchten das Ergebnis als normalen R-Dataframe? Sie haben keine Lust auf dieses Rumgetue, sondern wollen das lieber als selber geradeziehen. Also gut:</p>
 <div class="cell">
-<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">cor_results</span> <span class="op">&lt;-</span> </span>
-<span><span class="va">extra</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/all_of.html">any_of</a></span><span class="op">(</span><span class="va">extra_corr_names</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>  </span>
-<span>  <span class="fu">correlation</span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">cor_results</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>cor_results <span class="ot">&lt;-</span> </span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>extra <span class="sc">%&gt;%</span> </span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">any_of</span>(extra_corr_names)) <span class="sc">%&gt;%</span>  </span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">correlation</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summary</span>()</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>cor_results</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -1250,11 +1312,11 @@ Listing&nbsp;10.1: Deskriptive Statistik mit Hilfe des R-Pakets <code>easystats<
 </div>
 <p>Man kann sich die Korrelationsmatrix auch in der <em>Bayes-Geschmacksrichtung</em> ausgeben lassen:</p>
 <div class="cell">
-<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/all_of.html">any_of</a></span><span class="op">(</span><span class="va">extra_corr_names</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>  </span>
-<span>  <span class="fu">correlation</span><span class="op">(</span>bayesian <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu">kable</span><span class="op">(</span>digits <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>extra <span class="sc">%&gt;%</span> </span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">any_of</span>(extra_corr_names)) <span class="sc">%&gt;%</span>  </span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">correlation</span>(<span class="at">bayesian =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summary</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(<span class="at">digits =</span> <span class="dv">2</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <table class="table table-sm table-striped small">
 <colgroup>
@@ -1265,14 +1327,16 @@ Listing&nbsp;10.1: Deskriptive Statistik mit Hilfe des R-Pakets <code>easystats<
 <col style="width: 8%">
 <col style="width: 15%">
 </colgroup>
-<thead><tr class="header">
+<thead>
+<tr class="header">
 <th style="text-align: left;">Parameter</th>
 <th style="text-align: right;">extra_mean</th>
 <th style="text-align: right;">n_party</th>
 <th style="text-align: right;">extra_single_item</th>
 <th style="text-align: right;">age</th>
 <th style="text-align: right;">n_hangover</th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: left;">n_facebook_friends</td>
@@ -1318,30 +1382,37 @@ Listing&nbsp;10.1: Deskriptive Statistik mit Hilfe des R-Pakets <code>easystats<
 </table>
 </div>
 </div>
-</section><section id="korrelationsmatrizen-visualisieren" class="level4" data-number="10.10.3.2"><h4 data-number="10.10.3.2" class="anchored" data-anchor-id="korrelationsmatrizen-visualisieren">
-<span class="header-section-number">10.10.3.2</span> Korrelationsmatrizen visualisieren</h4>
-<p>Viele R-Pakete bieten sich an. Nehmen wir <a href="https://easystats.github.io/easystats/">easystats</a>.</p>
+</section>
+<section id="korrelationsmatrizen-visualisieren" class="level4" data-number="10.10.3.2">
+<h4 data-number="10.10.3.2" class="anchored" data-anchor-id="korrelationsmatrizen-visualisieren"><span class="header-section-number">10.10.3.2</span> Korrelationsmatrizen visualisieren</h4>
+<p>Viele R-Pakete bieten sich an. Nehmen wir <code>{easystats}</code>.</p>
 <div class="cell">
-<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/all_of.html">any_of</a></span><span class="op">(</span><span class="va">extra_corr_names</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>  </span>
-<span>  <span class="fu">correlation</span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Korrelationsmatrix, boa"</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>extra <span class="sc">%&gt;%</span> </span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">any_of</span>(extra_corr_names)) <span class="sc">%&gt;%</span>  </span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">correlation</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summary</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot</span>() <span class="sc">+</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Korrelationsmatrix, boa"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="080-Auswerten_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure">
+<p><img src="080-Auswerten_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-</section></section></section><section id="aufgaben" class="level2" data-number="10.11"><h2 data-number="10.11" class="anchored" data-anchor-id="aufgaben">
-<span class="header-section-number">10.11</span> Aufgaben</h2>
+</section>
+</section>
+</section>
+<section id="aufgaben" class="level2" data-number="10.11">
+<h2 data-number="10.11" class="anchored" data-anchor-id="aufgaben"><span class="header-section-number">10.11</span> Aufgaben</h2>
 <p>Auf dem <a href="https://datenwerk.netlify.app/">Datenwerk</a> finden Sie eine Anzahl an Aufgaben zum Thema Datenanalyse. Schauen Sie sich mal die folgenden Tags an:</p>
 <ul>
 <li><a href="https://datenwerk.netlify.app/#category=eda">eda</a></li>
-</ul></section><section id="fallstudien" class="level2" data-number="10.12"><h2 data-number="10.12" class="anchored" data-anchor-id="fallstudien">
-<span class="header-section-number">10.12</span> Fallstudien</h2>
+</ul>
+</section>
+<section id="fallstudien" class="level2" data-number="10.12">
+<h2 data-number="10.12" class="anchored" data-anchor-id="fallstudien"><span class="header-section-number">10.12</span> Fallstudien</h2>
 <p>Fallstudien zur explorativen Datenanalyse (EDA; d.h. deskriptive Statistik und Datenvisualisierung) finden Sie z. B. im <a href="https://datenwerk.netlify.app/">Datenwerk</a>:</p>
 <ul>
 <li><a href="https://datenwerk.netlify.app/posts/flights-yacsda-eda/">flights-yacsda-eda</a></li>
@@ -1350,21 +1421,29 @@ Listing&nbsp;10.1: Deskriptive Statistik mit Hilfe des R-Pakets <code>easystats<
 </ul>
 
 
-</section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><hr>
+</section>
+<aside id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
 <ol>
 <li id="fn1"><p>Quelle: <a href="https://observablehq.com/d/bb7ad3ecfb1ac2a6" class="uri">https://observablehq.com/d/bb7ad3ecfb1ac2a6</a><a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>Das ist natürlich nur ein fiktives, komplett unrealistisches Beispiel, das auch unklaren Ursachen den Weg auf diese Seite gefunden hat.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p>funktioniert auch mit Word und PDF als Ausgabeformat<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol></section></main><!-- /main --><script type="ojs-module-contents">
+</ol>
+</aside>
+
+</main> <!-- /main -->
+<script type="ojs-module-contents">
 eyJjb250ZW50cyI6W3sibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtMSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6Ilxudmlld29mIGNvcl90eXBlID0gc2VsZWN0KHtcbiAgdGl0bGU6IFwiQ29ycmVsYXRpb24gdHlwZVwiLFxuICBvcHRpb25zOiBbXG4gICAgXCJBIHBlcmZlY3QgbGluZWFyIHJlbGF0aW9uc2hpcFwiLFxuICAgIFwiQSBjbG9zZSB0byBsaW5lYXIgcmVsYXRpb25zaGlwXCIsXG4gICAgXCJBIGNsb3NlIHRvIGxpbmVhciwgYnV0IG5lZ2F0aXZlLCByZWxhdGlvbnNoaXBcIixcbiAgICBcIkEgd2Vha2VyIHJlbGF0aW9uc2hpcFwiLFxuICAgIFwiQSBub25saW5lYXIgcmVsYXRpb25zaGlwXCIsXG4gICAgXCJObyByZWxhdGlvbnNoaXBcIlxuICBdLFxuICB2YWx1ZTogXCJBIHBlcmZlY3QgbGluZWFyIHJlbGF0aW9uc2hpcFwiXG59KVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0yIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoidmlld29mIHJlZG8gPSBJbnB1dHMuYnV0dG9uKFwiUmVkb1wiKVxuIn0seyJtZXRob2ROYW1lIjoiaW50ZXJwcmV0IiwiY2VsbE5hbWUiOiJvanMtY2VsbC0zIiwiaW5saW5lIjpmYWxzZSwic291cmNlIjoiXG5waWMgPSAocmVkbywgZ3JhcGhfZnJvbV90eXBlKGNvcl90eXBlKSlcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNCIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6IlxuZnVuY3Rpb24gZ3JhcGhfZnJvbV90eXBlKHMpIHtcbiAgaWYgKHMgPT0gXCJBIHBlcmZlY3QgbGluZWFyIHJlbGF0aW9uc2hpcFwiKSB7XG4gICAgbGV0IGEgPSBqc3RhdC51bmlmb3JtLnNhbXBsZSgxIC8gMywgMiAvIDMpO1xuICAgIGxldCBiID0ganN0YXQudW5pZm9ybS5zYW1wbGUoLTYsIDYpO1xuICAgIHJldHVybiBtYWtlX3BlcnR1cmJlZF9ncmFwaChcbiAgICAgICh4KSA9PiBhICogeCArIGIsXG4gICAgICAoeCkgPT4gMCxcbiAgICAgIC0xMCxcbiAgICAgIDEwLFxuICAgICAgMTAwXG4gICAgKTtcbiAgfSBlbHNlIGlmIChzID09IFwiQSBjbG9zZSB0byBsaW5lYXIgcmVsYXRpb25zaGlwXCIpIHtcbiAgICBsZXQgYSA9IGpzdGF0LnVuaWZvcm0uc2FtcGxlKDEgLyAzLCAyIC8gMyk7XG4gICAgbGV0IGIgPSBqc3RhdC51bmlmb3JtLnNhbXBsZSgtNiwgNik7XG4gICAgcmV0dXJuIG1ha2VfcGVydHVyYmVkX2dyYXBoKFxuICAgICAgKHgpID0+IGEgKiB4ICsgYixcbiAgICAgICh4KSA9PiBqc3RhdC5yYW5kbigpLFxuICAgICAgLTEwLFxuICAgICAgMTAsXG4gICAgICAxMDBcbiAgICApO1xuICB9IGVsc2UgaWYgKHMgPT0gXCJBIGNsb3NlIHRvIGxpbmVhciwgYnV0IG5lZ2F0aXZlLCByZWxhdGlvbnNoaXBcIikge1xuICAgIGxldCBhID0ganN0YXQudW5pZm9ybS5zYW1wbGUoMSAvIDMsIDIgLyAzKTtcbiAgICBsZXQgYiA9IGpzdGF0LnVuaWZvcm0uc2FtcGxlKC02LCA2KTtcbiAgICByZXR1cm4gbWFrZV9wZXJ0dXJiZWRfZ3JhcGgoXG4gICAgICAoeCkgPT4gLWEgKiB4ICsgYixcbiAgICAgICh4KSA9PiBqc3RhdC5yYW5kbigpLFxuICAgICAgLTEwLFxuICAgICAgMTAsXG4gICAgICAxMDBcbiAgICApO1xuICB9IGVsc2UgaWYgKHMgPT0gXCJBIHdlYWtlciByZWxhdGlvbnNoaXBcIikge1xuICAgIGxldCBhID0ganN0YXQudW5pZm9ybS5zYW1wbGUoLTIgLyAzLCAyIC8gMyk7XG4gICAgbGV0IGIgPSBqc3RhdC51bmlmb3JtLnNhbXBsZSgtNiwgNik7XG4gICAgcmV0dXJuIG1ha2VfcGVydHVyYmVkX2dyYXBoKFxuICAgICAgKHgpID0+IGEgKiB4ICsgYixcbiAgICAgICh4KSA9PiA0ICoganN0YXQucmFuZG4oKSxcbiAgICAgIC0xMCxcbiAgICAgIDEwLFxuICAgICAgMTAwXG4gICAgKTtcbiAgfSBlbHNlIGlmIChzID09IFwiQSBub25saW5lYXIgcmVsYXRpb25zaGlwXCIpIHtcbiAgICBsZXQgYSA9IGpzdGF0LnVuaWZvcm0uc2FtcGxlKC0zLCAxKTtcbiAgICBsZXQgYiA9IGpzdGF0LnVuaWZvcm0uc2FtcGxlKDEsIDMpO1xuICAgIHJldHVybiBtYWtlX3BlcnR1cmJlZF9ncmFwaChcbiAgICAgICh4KSA9PiAoeCAtIGEpICogKHggLSBiKSxcbiAgICAgICh4KSA9PiAwLjYgKiBqc3RhdC5yYW5kbigpLFxuICAgICAgLTEwLFxuICAgICAgMTAsXG4gICAgICAxMDBcbiAgICApO1xuICB9IGVsc2UgaWYgKHMgPT0gXCJObyByZWxhdGlvbnNoaXBcIikge1xuICAgIGxldCBhID0ganN0YXQudW5pZm9ybS5zYW1wbGUoLTMsIDEpO1xuICAgIGxldCBiID0ganN0YXQudW5pZm9ybS5zYW1wbGUoMSwgMyk7XG4gICAgcmV0dXJuIG1ha2VfcGVydHVyYmVkX2dyYXBoKFxuICAgICAgKHgpID0+IDAsXG4gICAgICAoeCkgPT4ganN0YXQudW5pZm9ybS5zYW1wbGUoLTEwLCAxMCksXG4gICAgICAtMTAsXG4gICAgICAxMCxcbiAgICAgIDEwMFxuICAgICk7XG4gIH1cbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNSIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImZ1bmN0aW9uIG1ha2VfcGVydHVyYmVkX2dyYXBoKGYsIHIsIGEsIGIsIG4pIHtcbiAgbGV0IHhzID0ganN0YXQuYXJhbmdlKG4pLm1hcCgoKSA9PiBqc3RhdC51bmlmb3JtLnNhbXBsZShhLCBiKSk7XG4gIGxldCB5cyA9IHhzLm1hcCgoeCkgPT4gZih4KSArIHIoKSk7XG4gIGxldCBwbG90ID0gcGxvdHRlcih7IHdpZHRoOiA1MDAsIGhlaWdodDogNDAwLCBncmlkOiBmYWxzZSB9KTtcbiAganN0YXQuYXJhbmdlKG4pLmZvckVhY2goKF8sIGkpID0+IHBsb3QucG9pbnQoeHNbaV0sIHlzW2ldKSk7XG5cbiAgbGV0IFIgPSBqc3RhdC5jb3JyY29lZmYoeHMsIHlzKTtcblxuICByZXR1cm4gaHRtbGA8ZGl2IHN0eWxlPVwidGV4dC1hbGlnbjpjZW50ZXI7IHdpZHRoOjUwMHB4XCI+UiA9ICR7ZDMuZm9ybWF0KFxuICAgIFwiMC40ZlwiXG4gICkoUil9PC9kaXY+JHtwbG90Lm5vZGV9YDtcbn1cbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldCIsImNlbGxOYW1lIjoib2pzLWNlbGwtNiIsImlubGluZSI6ZmFsc2UsInNvdXJjZSI6ImltcG9ydCB7c2VsZWN0fSBmcm9tIFwiQGphc2hrZW5hcy9pbnB1dHNcIlxuanN0YXQgPSByZXF1aXJlKCdqc3RhdCcpXG5pbXBvcnQgeyBwbG90dGVyIH0gZnJvbSAnNTBkYWRmZGVjMDFjMTVhOCdcbmltcG9ydCB7IHJrNCB9IGZyb20gJ0BtY21jY2x1ci9ydW5nZS1rdXR0YS1mb3Itc3lzdGVtcy1vZi1vZGVzJ1xuaW1wb3J0IHsgc2xpZGVyIH0gZnJvbSBcIkBqYXNoa2VuYXMvaW5wdXRzXCJcbiJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgnY29yX3R5cGUnKSJ9LHsibWV0aG9kTmFtZSI6ImludGVycHJldFF1aWV0Iiwic291cmNlIjoic2hpbnlJbnB1dCgncmVkbycpIn1dfQ==
-</script><script type="module">
+</script>
+<script type="module">
 if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
 window._ojs.paths.runtimeToDoc = "../..";
 window._ojs.paths.runtimeToRoot = "../..";
 window._ojs.paths.docToRoot = "";
 window._ojs.selfContained = false;
 window._ojs.runtime.interpretFromScriptTags();
-</script><script id="quarto-html-after-body" type="application/javascript">
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -1587,24 +1666,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-      }
-    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -1639,11 +1700,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
+      return note.innerHTML;
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -1691,12 +1748,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
-      }
+      return note.innerHTML;
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -1955,18 +2007,21 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="./075-kausal.html" class="pagination-link" aria-label="Kausalinferenz">
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./075-kausal.html" class="pagination-link  aria-label=" &lt;span="">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Kausalinferenz</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./085-aufbereiten.html" class="pagination-link" aria-label="Auswerten: Daten aufbereiten">
+      <a href="./085-aufbereiten.html" class="pagination-link" aria-label="<span class='chapter-number'>11</span>&nbsp; <span class='chapter-title'>Auswerten: Daten aufbereiten</span>">
         <span class="nav-page-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Auswerten: Daten aufbereiten</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+
 
 
 

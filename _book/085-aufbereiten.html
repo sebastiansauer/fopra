@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.4.527">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
 <title>Forschungsprojekt - 11&nbsp; Auswerten: Daten aufbereiten</title>
 <style>
 code{white-space: pre-wrap;}
@@ -53,6 +56,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 }
 </style>
 
+
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
@@ -73,7 +77,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -99,8 +104,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-submit-button-title": "Abschicken",
     "search-label": "Suchen"
   }
-}</script><link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
-<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+}</script>
+<link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
 const typesetMath = (el) => {
   if (window.MathJax) {
     // MathJax Typeset
@@ -125,12 +136,17 @@ const typesetMath = (el) => {
 window.Quarto = {
   typesetMath
 };
-</script><link rel="stylesheet" href="styles.css">
+</script>
+
+<link rel="stylesheet" href="styles.css">
 </head>
+
 <body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
@@ -141,15 +157,20 @@ window.Quarto = {
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="./index.html" class="sidebar-logo-link">
-      <img src="./img/fopra-logo-small.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none"></a>
+      <img src="./img/fopra-logo-small.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Forschungsprojekt</a> 
         <div class="sidebar-tools-main">
-    <a href="https://github.com/sebastiansauer/fopra" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/sebastiansauer/fopra" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Dunkelmodus umschalten"><i class="bi"></i></a>
 </div>
     </div>
@@ -161,7 +182,7 @@ window.Quarto = {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-<li class="sidebar-item sidebar-item-section">
+        <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
  <span class="menu-text">Organisatorisches</span></a>
@@ -169,15 +190,15 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Hinweise</span></span></a>
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
@@ -186,8 +207,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./010-rahmen.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Rahmen: Hallo, Forschung!</span></span></a>
@@ -206,7 +227,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
@@ -215,8 +236,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./040-Populationsbeschreibung.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Beschreiben</span></span></a>
@@ -247,7 +268,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
@@ -256,8 +277,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./080-Auswerten.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Auswerten: Grundlagen</span></span></a>
@@ -276,7 +297,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
@@ -285,8 +306,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./100-Statistiken-berichten.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Auswerten: Berichten von Statistiken</span></span></a>
@@ -305,46 +326,46 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-</li>
+  </li>
     </ul>
-</div>
-</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Inhaltsverzeichnis</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
-<li>
-<a href="#lernsteuerung" id="toc-lernsteuerung" class="nav-link active" data-scroll-target="#lernsteuerung"><span class="header-section-number">11.1</span> Lernsteuerung</a>
+  <li><a href="#lernsteuerung" id="toc-lernsteuerung" class="nav-link active" data-scroll-target="#lernsteuerung"><span class="header-section-number">11.1</span> Lernsteuerung</a>
   <ul class="collapse">
-<li><a href="#lernziele" id="toc-lernziele" class="nav-link" data-scroll-target="#lernziele"><span class="header-section-number">11.1.1</span> Lernziele</a></li>
+  <li><a href="#lernziele" id="toc-lernziele" class="nav-link" data-scroll-target="#lernziele"><span class="header-section-number">11.1.1</span> Lernziele</a></li>
   <li><a href="#position-im-lernpfad" id="toc-position-im-lernpfad" class="nav-link" data-scroll-target="#position-im-lernpfad"><span class="header-section-number">11.1.2</span> Position im Lernpfad</a></li>
-  <li><a href="#ben%C3%B6tigte-r-pakete-und-daten" id="toc-benötigte-r-pakete-und-daten" class="nav-link" data-scroll-target="#ben%C3%B6tigte-r-pakete-und-daten"><span class="header-section-number">11.1.3</span> Benötigte R-Pakete und Daten</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#typische-schritte-beim-daten-aufbereiten" id="toc-typische-schritte-beim-daten-aufbereiten" class="nav-link" data-scroll-target="#typische-schritte-beim-daten-aufbereiten"><span class="header-section-number">11.2</span> Typische Schritte beim Daten aufbereiten</a>
+  <li><a href="#benötigte-r-pakete-und-daten" id="toc-benötigte-r-pakete-und-daten" class="nav-link" data-scroll-target="#benötigte-r-pakete-und-daten"><span class="header-section-number">11.1.3</span> Benötigte R-Pakete und Daten</a></li>
+  </ul></li>
+  <li><a href="#typische-schritte-beim-daten-aufbereiten" id="toc-typische-schritte-beim-daten-aufbereiten" class="nav-link" data-scroll-target="#typische-schritte-beim-daten-aufbereiten"><span class="header-section-number">11.2</span> Typische Schritte beim Daten aufbereiten</a>
   <ul class="collapse">
-<li><a href="#datentabellen-zusammenf%C3%BChren" id="toc-datentabellen-zusammenführen" class="nav-link" data-scroll-target="#datentabellen-zusammenf%C3%BChren"><span class="header-section-number">11.2.1</span> Datentabellen zusammenführen</a></li>
+  <li><a href="#datentabellen-zusammenführen" id="toc-datentabellen-zusammenführen" class="nav-link" data-scroll-target="#datentabellen-zusammenführen"><span class="header-section-number">11.2.1</span> Datentabellen zusammenführen</a></li>
   <li><a href="#text-in-zahlen-umwandeln" id="toc-text-in-zahlen-umwandeln" class="nav-link" data-scroll-target="#text-in-zahlen-umwandeln"><span class="header-section-number">11.2.2</span> Text in Zahlen umwandeln</a></li>
   <li><a href="#items-umkodieren" id="toc-items-umkodieren" class="nav-link" data-scroll-target="#items-umkodieren"><span class="header-section-number">11.2.3</span> Items umkodieren</a></li>
   <li><a href="#item-labels-in-zahlen-umwandeln" id="toc-item-labels-in-zahlen-umwandeln" class="nav-link" data-scroll-target="#item-labels-in-zahlen-umwandeln"><span class="header-section-number">11.2.4</span> Item-Labels in Zahlen umwandeln</a></li>
   <li><a href="#fehlende-werte-ersetzen" id="toc-fehlende-werte-ersetzen" class="nav-link" data-scroll-target="#fehlende-werte-ersetzen"><span class="header-section-number">11.2.5</span> Fehlende Werte ersetzen</a></li>
-  <li><a href="#zeilen-f%C3%A4lle-l%C3%B6schen" id="toc-zeilen-fälle-löschen" class="nav-link" data-scroll-target="#zeilen-f%C3%A4lle-l%C3%B6schen"><span class="header-section-number">11.2.6</span> Zeilen (Fälle) löschen</a></li>
-  <li><a href="#datenqualit%C3%A4t-pr%C3%BCfen" id="toc-datenqualität-prüfen" class="nav-link" data-scroll-target="#datenqualit%C3%A4t-pr%C3%BCfen"><span class="header-section-number">11.2.7</span> Datenqualität prüfen</a></li>
+  <li><a href="#zeilen-fälle-löschen" id="toc-zeilen-fälle-löschen" class="nav-link" data-scroll-target="#zeilen-fälle-löschen"><span class="header-section-number">11.2.6</span> Zeilen (Fälle) löschen</a></li>
+  <li><a href="#datenqualität-prüfen" id="toc-datenqualität-prüfen" class="nav-link" data-scroll-target="#datenqualität-prüfen"><span class="header-section-number">11.2.7</span> Datenqualität prüfen</a></li>
   <li><a href="#scores-berechnen" id="toc-scores-berechnen" class="nav-link" data-scroll-target="#scores-berechnen"><span class="header-section-number">11.2.8</span> Scores berechnen</a></li>
   <li><a href="#standardisieren-mit-z-werten" id="toc-standardisieren-mit-z-werten" class="nav-link" data-scroll-target="#standardisieren-mit-z-werten"><span class="header-section-number">11.2.9</span> Standardisieren mit z-Werten</a></li>
-  </ul>
-</li>
+  </ul></li>
   <li><a href="#aufgaben" id="toc-aufgaben" class="nav-link" data-scroll-target="#aufgaben"><span class="header-section-number">11.3</span> Aufgaben</a></li>
   <li><a href="#fallstudien" id="toc-fallstudien" class="nav-link" data-scroll-target="#fallstudien"><span class="header-section-number">11.4</span> Fallstudien</a></li>
-  </ul><div class="toc-actions"><ul><li><a href="https://github.com/sebastiansauer/fopra/blob/main/085-aufbereiten.qmd" class="toc-action"><i class="bi bi-github"></i>Quellcode anzeigen</a></li><li><a href="https://github.com/sebastiansauer/fopra/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/sebastiansauer/fopra/blob/main/085-aufbereiten.qmd" class="toc-action"><i class="bi bi-github"></i>Quellcode anzeigen</a></li><li><a href="https://github.com/sebastiansauer/fopra/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./080-Auswerten.html">Auswerten</a></li><li class="breadcrumb-item"><a href="./085-aufbereiten.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Auswerten: Daten aufbereiten</span></a></li></ol></nav><div class="quarto-title">
-<h1 class="title">
-<span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Auswerten: Daten aufbereiten</span>
-</h1>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./080-Auswerten.html">Auswerten</a></li><li class="breadcrumb-item"><a href="./085-aufbereiten.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Auswerten: Daten aufbereiten</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Auswerten: Daten aufbereiten</span></h1>
 </div>
 
 
@@ -358,31 +379,38 @@ window.Quarto = {
   
 
 
-</header><section id="lernsteuerung" class="level2" data-number="11.1"><h2 data-number="11.1" class="anchored" data-anchor-id="lernsteuerung">
-<span class="header-section-number">11.1</span> Lernsteuerung</h2>
-<section id="lernziele" class="level3" data-number="11.1.1"><h3 data-number="11.1.1" class="anchored" data-anchor-id="lernziele">
-<span class="header-section-number">11.1.1</span> Lernziele</h3>
+</header>
+
+
+<section id="lernsteuerung" class="level2" data-number="11.1">
+<h2 data-number="11.1" class="anchored" data-anchor-id="lernsteuerung"><span class="header-section-number">11.1</span> Lernsteuerung</h2>
+<section id="lernziele" class="level3" data-number="11.1.1">
+<h3 data-number="11.1.1" class="anchored" data-anchor-id="lernziele"><span class="header-section-number">11.1.1</span> Lernziele</h3>
 <ul>
 <li>Sie können grundlegende Schritte der Datenaufbereitung in R durchführen.</li>
 <li>Sie können die typischen Schritte einer deskriptiven Datenanalyse durchführen in R.</li>
 <li>Sie können Grenzen Ihrer Auswertungsmethodik nennen.</li>
-</ul></section><section id="position-im-lernpfad" class="level3" data-number="11.1.2"><h3 data-number="11.1.2" class="anchored" data-anchor-id="position-im-lernpfad">
-<span class="header-section-number">11.1.2</span> Position im Lernpfad</h3>
-<p>Sie befinden sich im Abschnitt “Auswertung” in <a href="index.html#fig-ueberblick" class="quarto-xref">Abbildung&nbsp;<span>1.2</span></a>. Behalten Sie Ihren Fortschritt im Projektplan im Blick, s. <a href="index.html#fig-projektplan" class="quarto-xref">Abbildung&nbsp;<span>1.3</span></a>.</p>
-</section><section id="benötigte-r-pakete-und-daten" class="level3" data-number="11.1.3"><h3 data-number="11.1.3" class="anchored" data-anchor-id="benötigte-r-pakete-und-daten">
-<span class="header-section-number">11.1.3</span> Benötigte R-Pakete und Daten<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>
-</h3>
+</ul>
+</section>
+<section id="position-im-lernpfad" class="level3" data-number="11.1.2">
+<h3 data-number="11.1.2" class="anchored" data-anchor-id="position-im-lernpfad"><span class="header-section-number">11.1.2</span> Position im Lernpfad</h3>
+<p>Sie befinden sich im Abschnitt “Auswertung” in <a href="#fig-ueberblick" class="quarto-xref">Abbildung&nbsp;<span class="quarto-unresolved-ref">fig-ueberblick</span></a>. Behalten Sie Ihren Fortschritt im Projektplan im Blick, s. <a href="#fig-projektplan" class="quarto-xref">Abbildung&nbsp;<span class="quarto-unresolved-ref">fig-projektplan</span></a>.</p>
+</section>
+<section id="benötigte-r-pakete-und-daten" class="level3" data-number="11.1.3">
+<h3 data-number="11.1.3" class="anchored" data-anchor-id="benötigte-r-pakete-und-daten"><span class="header-section-number">11.1.3</span> Benötigte R-Pakete und Daten<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></h3>
 <div class="cell" data-messagen="false">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://easystats.github.io/easystats/">easystats</a></span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(easystats)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">data_url</span> <span class="op">&lt;-</span> <span class="st">"https://raw.githubusercontent.com/sebastiansauer/modar/master/datasets/extra.csv"</span></span>
-<span><span class="va">extra</span> <span class="op">&lt;-</span> <span class="fu">data_read</span><span class="op">(</span><span class="va">data_url</span><span class="op">)</span>  <span class="co"># aus `{easystats}`</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>data_url <span class="ot">&lt;-</span> <span class="st">"https://raw.githubusercontent.com/sebastiansauer/modar/master/datasets/extra.csv"</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>extra <span class="ot">&lt;-</span> <span class="fu">data_read</span>(data_url)  <span class="co"># aus `{easystats}`</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Anstelle von <code>data_read</code> könnten Sie auch <code>read_csv</code> (Tidyverse) oder <code>read.csv</code> (Standard-R) verwenden.</p>
-</section></section><section id="typische-schritte-beim-daten-aufbereiten" class="level2" data-number="11.2"><h2 data-number="11.2" class="anchored" data-anchor-id="typische-schritte-beim-daten-aufbereiten">
-<span class="header-section-number">11.2</span> Typische Schritte beim Daten aufbereiten</h2>
+</section>
+</section>
+<section id="typische-schritte-beim-daten-aufbereiten" class="level2" data-number="11.2">
+<h2 data-number="11.2" class="anchored" data-anchor-id="typische-schritte-beim-daten-aufbereiten"><span class="header-section-number">11.2</span> Typische Schritte beim Daten aufbereiten</h2>
 <p>Häufig sind Daten noch nicht “aufbereitet” und müssen noch “geputzt” oder “aufgeräumt” werden. Dazu gehören Schritte wie</p>
 <ul>
 <li>Datentabellen zusammenführen</li>
@@ -395,8 +423,8 @@ window.Quarto = {
 <li>Ausreißer behandeln</li>
 </ul>
 <p>Betrachten wir im Folgenden einige zentrale Aspekte dieser Schritte.</p>
-<section id="datentabellen-zusammenführen" class="level3" data-number="11.2.1"><h3 data-number="11.2.1" class="anchored" data-anchor-id="datentabellen-zusammenführen">
-<span class="header-section-number">11.2.1</span> Datentabellen zusammenführen</h3>
+<section id="datentabellen-zusammenführen" class="level3" data-number="11.2.1">
+<h3 data-number="11.2.1" class="anchored" data-anchor-id="datentabellen-zusammenführen"><span class="header-section-number">11.2.1</span> Datentabellen zusammenführen</h3>
 <p>Sie haben die Daten anhand mehrerer Fragebogen erhoben? Oder Sie haben mehrere Gruppen untersucht? Jetzt haben Sie <em>mehrere</em> Datentabellen, die auf eine Analyse harren?</p>
 <p><em>Verheiraten</em> ist angesagt: Sie müssen <em>alle</em> Teiltabellen in <em>eine</em> Tabelle (Datensatz) bringen.</p>
 <p>Dazu kann man zwei Fälle unterscheiden:</p>
@@ -408,63 +436,72 @@ window.Quarto = {
 <p>Um es in R zu erledigen, müssen Sie erst eine Idee verstehen und dann etwas Syntax lernen. Warum sollten Sie die vielleicht 10 Minuten Lernaufwand investieren?</p>
 <p>Ein Grund ist, dass es sinnvoll für Ihre berufliche Entwicklung ein Kernkonzept der Datenaufbereitung zu verstehen.</p>
 <p>Ein anderer Grund ist, dass Sie mit einer Skriptsprache (wie R) ein “Kochrezept” erstellen, dass Sie ohne Zusatzaufwand wiederholt durchlaufen lassen können. Und, glauben Sie mir, in einer Datenanalyse passiert es oft, dass man mehrere (viele!) Durchläufe braucht, bis man mit dem Ergebnis zufrieden ist. Außerdem dokumentiert so ein Kochrezept Ihr Vorgehen transparent. Reproduzierbarkeit ist zentral für die Wissenschaft (und Technik).</p>
-<section id="zeilenweises-zusammenführen" class="level4" data-number="11.2.1.1"><h4 data-number="11.2.1.1" class="anchored" data-anchor-id="zeilenweises-zusammenführen">
-<span class="header-section-number">11.2.1.1</span> Zeilenweises zusammenführen</h4>
+<section id="zeilenweises-zusammenführen" class="level4" data-number="11.2.1.1">
+<h4 data-number="11.2.1.1" class="anchored" data-anchor-id="zeilenweises-zusammenführen"><span class="header-section-number">11.2.1.1</span> Zeilenweises zusammenführen</h4>
 <div id="exm-bind-rows" class="theorem example">
-<p><span class="theorem-title"><strong>Beispiel 11.1</strong></span> <em>Jede Versuchsperson</em> Ihrer Studie hat zwei (oder mehrere) Fragebögen ausgefüllt. In Datensatz A finden sich die ersten paar Variablen und in Datensatz B die restlichen Variablen. Aber in beiden Datensätzen kommen alle Personen vor. <span class="math inline">\(\square\)</span></p>
+<p><span class="theorem-title"><strong>Beispiel 11.1 </strong></span><em>Jede Versuchsperson</em> Ihrer Studie hat zwei (oder mehrere) Fragebögen ausgefüllt. In Datensatz A finden sich die ersten paar Variablen und in Datensatz B die restlichen Variablen. Aber in beiden Datensätzen kommen alle Personen vor. <span class="math inline">\(\square\)</span></p>
 </div>
-<p><a href="#fig-bind-rows" class="quarto-xref">Abbildung&nbsp;<span>11.1</span></a> veranschaulicht das zeilenweise Zusammenführen.</p>
-<div id="fig-bind-rows" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-bind-rows-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p><a href="#fig-bind-rows" class="quarto-xref">Abbildung&nbsp;<span class="quarto-unresolved-ref">fig-bind-rows</span></a> veranschaulicht das zeilenweise Zusammenführen.</p>
+<div id="fig-bind-rows" class="quarto-figure quarto-figure-center anchored" width="50%">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bind-rows-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="img/add-rowwise.svg" class="img-fluid figure-img" style="width:50.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bind-rows-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;11.1: Tabellen zeilenweise zusammenführen
-</figcaption></figure>
+</figcaption>
+</figure>
 </div>
-<p>Etwas ausführlicher ist der Sachverhalt im Listing <a href="#lst-bind-rows" class="quarto-xref">Listing&nbsp;<span>11.1</span></a> dargestellt.</p>
-<p>Sagen wir, wir haben zwei Tabellen, die wir “untereinander” (also zeilenweise) “zusammenkleben” möchten. Dann hilft uns <code><a href="https://dplyr.tidyverse.org/reference/bind_rows.html">bind_rows()</a></code>.</p>
-<div id="lst-bind-rows" class="listing quarto-float">
-<figure class="quarto-float quarto-float-lst figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst quarto-uncaptioned" id="lst-bind-rows-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p>Etwas ausführlicher ist der Sachverhalt im Listing <a href="#lst-bind-rows" class="quarto-xref">Listing&nbsp;<span class="quarto-unresolved-ref">lst-bind-rows</span></a> dargestellt.</p>
+<p>Sagen wir, wir haben zwei Tabellen, die wir “untereinander” (also zeilenweise) “zusammenkleben” möchten. Dann hilft uns <code>bind_rows()</code>.</p>
+<div id="lst-bind-rows" class="listing">
+<figure class="quarto-float quarto-float-lst figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst quarto-uncaptioned" id="lst-bind-rows-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Listing&nbsp;11.1
-</figcaption><div aria-describedby="lst-bind-rows-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+</figcaption>
+<div aria-describedby="lst-bind-rows-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell">
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">tab1</span> <span class="op">&lt;-</span> <span class="va">mtcars</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html">slice</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">16</span><span class="op">)</span></span>
-<span><span class="va">tab2</span> <span class="op">&lt;-</span> <span class="va">mtcars</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html">slice</a></span><span class="op">(</span><span class="fl">17</span><span class="op">:</span><span class="fl">32</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">mtcars_gesamt</span> <span class="op">&lt;-</span></span>
-<span>  <span class="va">tab1</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind_rows.html">bind_rows</a></span><span class="op">(</span><span class="va">tab2</span><span class="op">)</span>  <span class="co"># aus `tidyverse`</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>tab1 <span class="ot">&lt;-</span> mtcars <span class="sc">%&gt;%</span> <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">16</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>tab2 <span class="ot">&lt;-</span> mtcars <span class="sc">%&gt;%</span> <span class="fu">slice</span>(<span class="dv">17</span><span class="sc">:</span><span class="dv">32</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>mtcars_gesamt <span class="ot">&lt;-</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  tab1 <span class="sc">%&gt;%</span> </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_rows</span>(tab2)  <span class="co"># aus `tidyverse`</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </figure>
 </div>
-</section><section id="spaltenweises-zusammenführen-1" class="level4" data-number="11.2.1.2"><h4 data-number="11.2.1.2" class="anchored" data-anchor-id="spaltenweises-zusammenführen-1">
-<span class="header-section-number">11.2.1.2</span> Spaltenweises Zusammenführen 1</h4>
+</section>
+<section id="spaltenweises-zusammenführen-1" class="level4" data-number="11.2.1.2">
+<h4 data-number="11.2.1.2" class="anchored" data-anchor-id="spaltenweises-zusammenführen-1"><span class="header-section-number">11.2.1.2</span> Spaltenweises Zusammenführen 1</h4>
 <div id="exm-bind-cols" class="theorem example">
-<p><span class="theorem-title"><strong>Beispiel 11.2</strong></span> <em>In jeder Gruppe</em> Ihrer Studie wurde ein anderer Fragebogen ausgefüllt (z. B. weil Sie unterschiedliche experimentelle Gruppen untersucht haben). Sie haben also zwei Datensätze mit unterschiedlichen Personen (nämlich in Datensatz A die Personen der Gruppe A und in Datensatz B die Personen der Gruppe B). Aber in jedem Datensatz finden sich die gleichen Variablen. <span class="math inline">\(\square\)</span></p>
+<p><span class="theorem-title"><strong>Beispiel 11.2 </strong></span><em>In jeder Gruppe</em> Ihrer Studie wurde ein anderer Fragebogen ausgefüllt (z. B. weil Sie unterschiedliche experimentelle Gruppen untersucht haben). Sie haben also zwei Datensätze mit unterschiedlichen Personen (nämlich in Datensatz A die Personen der Gruppe A und in Datensatz B die Personen der Gruppe B). Aber in jedem Datensatz finden sich die gleichen Variablen. <span class="math inline">\(\square\)</span></p>
 </div>
-<p><a href="#fig-bind-cols" class="quarto-xref">Abbildung&nbsp;<span>11.2</span></a> veranschaulicht das spaltenweise Zusammenführen von Tabellen.</p>
-<div id="fig-bind-cols" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-bind-cols-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p><a href="#fig-bind-cols" class="quarto-xref">Abbildung&nbsp;<span class="quarto-unresolved-ref">fig-bind-cols</span></a> veranschaulicht das spaltenweise Zusammenführen von Tabellen.</p>
+<div id="fig-bind-cols" class="quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-bind-cols-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="img/add-colwise.svg" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bind-cols-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;11.2: Tabellen spaltenweise zusammenführen
-</figcaption></figure>
+</figcaption>
+</figure>
 </div>
-<p>Sagen wir, wir haben zwei Tabellen, die wir “hintereinander kleben” möchten, also spaltenweise zusammenführen möchten, s. <a href="#lst-bind-cols" class="quarto-xref">Listing&nbsp;<span>11.2</span></a>.</p>
-<div id="lst-bind-cols" class="listing quarto-float">
-<figure class="quarto-float quarto-float-lst figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst quarto-uncaptioned" id="lst-bind-cols-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p>Sagen wir, wir haben zwei Tabellen, die wir “hintereinander kleben” möchten, also spaltenweise zusammenführen möchten, s. <a href="#lst-bind-cols" class="quarto-xref">Listing&nbsp;<span class="quarto-unresolved-ref">lst-bind-cols</span></a>.</p>
+<div id="lst-bind-cols" class="listing">
+<figure class="quarto-float quarto-float-lst figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst quarto-uncaptioned" id="lst-bind-cols-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Listing&nbsp;11.2
-</figcaption><div aria-describedby="lst-bind-cols-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+</figcaption>
+<div aria-describedby="lst-bind-cols-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell">
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">tab1</span> <span class="op">&lt;-</span> <span class="va">mtcars</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">5</span><span class="op">)</span></span>
-<span><span class="va">tab2</span> <span class="op">&lt;-</span> <span class="va">mtcars</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="fl">6</span><span class="op">:</span><span class="fl">11</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">mtcars_gesamt</span> <span class="op">&lt;-</span></span>
-<span>  <span class="va">tab1</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/bind_cols.html">bind_cols</a></span><span class="op">(</span><span class="va">tab2</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>tab1 <span class="ot">&lt;-</span> mtcars <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>tab2 <span class="ot">&lt;-</span> mtcars <span class="sc">%&gt;%</span> <span class="fu">select</span>(<span class="dv">6</span><span class="sc">:</span><span class="dv">11</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>mtcars_gesamt <span class="ot">&lt;-</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  tab1 <span class="sc">%&gt;%</span> </span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_cols</span>(tab2)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </figure>
@@ -483,25 +520,30 @@ Vorsicht
 <p><em>Achtung</em> Diese Art des Zusammenfügens prüft <em>nicht</em>, ob die Sortierung der Tabellen identisch ist: Ob also die Zeile für “Schorsch” aus Tabelle 1 auch mit Schorschs Zeile aus Tabelle 2 zusammengefügt werden (und nicht etwas mit denen von Alois). Sie müssen also selber dafür sorgen, dass die Sortierung richtig ist. Alternativ könnten Sie mit einem <code>join</code> arbeiten, der die korrekte Sortierung für Sie übernimmt. <span class="math inline">\(\square\)</span></p>
 </div>
 </div>
-</section><section id="spaltenweises-zusammenführen-2" class="level4" data-number="11.2.1.3"><h4 data-number="11.2.1.3" class="anchored" data-anchor-id="spaltenweises-zusammenführen-2">
-<span class="header-section-number">11.2.1.3</span> Spaltenweises Zusammenführen 2</h4>
-<p><a href="#fig-full-join" class="quarto-xref">Abbildung&nbsp;<span>11.3</span></a> veranschaulicht das spaltenweise Zusammenführen, wenn die Sortierung der Tabellen nicht übereinstimmt.</p>
+</section>
+<section id="spaltenweises-zusammenführen-2" class="level4" data-number="11.2.1.3">
+<h4 data-number="11.2.1.3" class="anchored" data-anchor-id="spaltenweises-zusammenführen-2"><span class="header-section-number">11.2.1.3</span> Spaltenweises Zusammenführen 2</h4>
+<p><a href="#fig-full-join" class="quarto-xref">Abbildung&nbsp;<span class="quarto-unresolved-ref">fig-full-join</span></a> veranschaulicht das spaltenweise Zusammenführen, wenn die Sortierung der Tabellen nicht übereinstimmt.</p>
 <div id="def-join" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 11.1 (Join zweier Tabellen)</strong></span> Das spaltenweise Zusammenführen zweier Tabellen unter der Beachtung der Sortierung nennt man einen “Join”. Genauer gesagt versteht man unter “Sortierung” die Beachtung der Werte einer ID-Spalte (auch “Key-Spalte”) genannt. <span class="math inline">\(\square\)</span></p>
+<p><span class="theorem-title"><strong>Definition 11.1 (Join zweier Tabellen) </strong></span>Das spaltenweise Zusammenführen zweier Tabellen unter der Beachtung der Sortierung nennt man einen “Join”. Genauer gesagt versteht man unter “Sortierung” die Beachtung der Werte einer ID-Spalte (auch “Key-Spalte”) genannt. <span class="math inline">\(\square\)</span></p>
 </div>
-<div id="fig-full-join" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-full-join-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="fig-full-join" class="quarto-figure quarto-figure-center anchored" width="50%">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-full-join-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="img/full-join.gif" class="img-fluid figure-img" style="width:50.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-full-join-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;11.3: Das “Joinen” zweier Tabellen
-</figcaption></figure>
+</figcaption>
+</figure>
 </div>
 <p>Bildquelle: <a href="https://www.garrickadenbuie.com/project/tidyexplain/">Garrick Aden-Buie</a>, <a href="https://www.garrickadenbuie.com/colophon/">CC-BY-SA 4.0</a></p>
-</section></section><section id="text-in-zahlen-umwandeln" class="level3" data-number="11.2.2"><h3 data-number="11.2.2" class="anchored" data-anchor-id="text-in-zahlen-umwandeln">
-<span class="header-section-number">11.2.2</span> Text in Zahlen umwandeln</h3>
-<section id="hilfe-ich-habe-keine-zahlen" class="level4" data-number="11.2.2.1"><h4 data-number="11.2.2.1" class="anchored" data-anchor-id="hilfe-ich-habe-keine-zahlen">
-<span class="header-section-number">11.2.2.1</span> Hilfe, ich habe keine Zahlen</h4>
+</section>
+</section>
+<section id="text-in-zahlen-umwandeln" class="level3" data-number="11.2.2">
+<h3 data-number="11.2.2" class="anchored" data-anchor-id="text-in-zahlen-umwandeln"><span class="header-section-number">11.2.2</span> Text in Zahlen umwandeln</h3>
+<section id="hilfe-ich-habe-keine-zahlen" class="level4" data-number="11.2.2.1">
+<h4 data-number="11.2.2.1" class="anchored" data-anchor-id="hilfe-ich-habe-keine-zahlen"><span class="header-section-number">11.2.2.1</span> Hilfe, ich habe keine Zahlen</h4>
 <p>Kennen Sie das? Sie haben eine Umfrage durchgeführt, Daten sind erhoben, puh, bald können Sie das Projekt abschließen.</p>
 <p>Jetzt haben Sie die Daten in R importiert, aber müssen zu Ihrem Schrecken feststellen, dass die Spalten (Variablen) die eigentlich Zahlen sein sollten, als <code>character</code>, Text also, formatiert sind in R.</p>
 <p>Anstelle der Zahl <code>5</code> steht in der Spalte also <code>"5"</code> (man beachte die Anführungszeichen, die anzeigen, dass es sich um einen Text handelt).</p>
@@ -509,20 +551,20 @@ Abbildung&nbsp;11.3: Das “Joinen” zweier Tabellen
 <p>Mit Wörtern (Text) kann man nicht rechnen, und Sie rechnen doch so gern…</p>
 <p>R weigert sich standhaft, mit Text zu rechnen:</p>
 <div class="cell">
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="st">"5"</span> <span class="op">+</span> <span class="st">"5"</span></span>
-<span><span class="co">## Error in "5" + "5": nicht-numerisches Argument für binären Operator</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="st">"5"</span> <span class="sc">+</span> <span class="st">"5"</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="do">## Error in "5" + "5": nicht-numerisches Argument für binären Operator</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Hätten wir brave Zahlen, wäre alles paletti:</p>
 <div class="cell">
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fl">5</span><span class="op">+</span><span class="fl">5</span></span>
-<span><span class="co">## [1] 10</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="dv">5</span><span class="sc">+</span><span class="dv">5</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 10</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Der Einfachheit halber erzeugen wir uns eine einfache Tabelle, mit ein paar Spalten, die <em>als Text</em> formatierte Zahlen enthalten:</p>
 <div class="cell">
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">d</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>i01 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"1"</span>, <span class="st">"3"</span>, <span class="st">"4"</span><span class="op">)</span>,  <span class="co"># von 1 bis 4</span></span>
-<span>            i02 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"-2"</span>, <span class="st">"+3"</span>, <span class="st">"-1"</span><span class="op">)</span>,  <span class="co"># von -3 bis -3</span></span>
-<span>            i03 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"-2"</span>, <span class="st">"+2"</span>, <span class="st">"-1"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span>  <span class="co"># als Faktorvariable formatiert</span></span>
-<span><span class="va">d</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">i01 =</span> <span class="fu">c</span>(<span class="st">"1"</span>, <span class="st">"3"</span>, <span class="st">"4"</span>),  <span class="co"># von 1 bis 4</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>            <span class="at">i02 =</span> <span class="fu">c</span>(<span class="st">"-2"</span>, <span class="st">"+3"</span>, <span class="st">"-1"</span>),  <span class="co"># von -3 bis -3</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">i03 =</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">"-2"</span>, <span class="st">"+2"</span>, <span class="st">"-1"</span>)))  <span class="co"># als Faktorvariable formatiert</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>d</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -535,15 +577,15 @@ Abbildung&nbsp;11.3: Das “Joinen” zweier Tabellen
 <p>Stellen Sie sich vor, die Tabelle ist ein Auszug aus Ihrer Umfrage, wobei <code>i01</code> das erste Item (Frage) Ihres Fragebogens darstellt etc.</p>
 <p>Wie kann man R beibringen, dass die fraglichen Spalte <code>i01</code> doch “in Wirklichkeit” Zahlen sind und kein Text?</p>
 <p>Welcher R-Befehl hilft hier?</p>
-</section><section id="introducing-parse_number" class="level4" data-number="11.2.2.2"><h4 data-number="11.2.2.2" class="anchored" data-anchor-id="introducing-parse_number">
-<span class="header-section-number">11.2.2.2</span> Introducing <code>parse_number()</code>
-</h4>
-<p><code><a href="https://readr.tidyverse.org/reference/parse_number.html">parse_number()</a></code> (aus <a href="https://tidyverse.tidyverse.org">tidyverse</a>) löst das Problem für Sie:</p>
+</section>
+<section id="introducing-parse_number" class="level4" data-number="11.2.2.2">
+<h4 data-number="11.2.2.2" class="anchored" data-anchor-id="introducing-parse_number"><span class="header-section-number">11.2.2.2</span> Introducing <code>parse_number()</code></h4>
+<p><code>parse_number()</code> (aus <code>{tidyverse}</code>) löst das Problem für Sie:</p>
 <div class="cell">
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">d2</span> <span class="op">&lt;-</span> </span>
-<span>  <span class="va">d</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>i01_num <span class="op">=</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/parse_number.html">parse_number</a></span><span class="op">(</span><span class="va">i01</span><span class="op">)</span><span class="op">)</span></span>
-<span><span class="va">d2</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>d2 <span class="ot">&lt;-</span> </span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  d <span class="sc">%&gt;%</span> </span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">i01_num =</span> <span class="fu">parse_number</span>(i01))</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>d2</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -554,7 +596,7 @@ Abbildung&nbsp;11.3: Das “Joinen” zweier Tabellen
 </div>
 <p>So würde es <em>in einigen Fällen</em> auch gehen:</p>
 <div class="cell">
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">d</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>i01_r <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="va">i01</span><span class="op">)</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>d <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">i01_r =</span> <span class="fu">as.numeric</span>(i01))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -563,9 +605,9 @@ Abbildung&nbsp;11.3: Das “Joinen” zweier Tabellen
 </div>
 </div>
 </div>
-<p>Aber wenn <code>i01</code> als <code><a href="https://rdrr.io/r/base/factor.html">factor()</a></code> formatiert ist, dann geht es nicht unbedingt.</p>
+<p>Aber wenn <code>i01</code> als <code>factor()</code> formatiert ist, dann geht es nicht unbedingt.</p>
 <div class="cell">
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">d</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>i02_r <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/numeric.html">as.numeric</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/factor.html">factor</a></span><span class="op">(</span><span class="va">i02</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>d <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">i02_r =</span> <span class="fu">as.numeric</span>(<span class="fu">factor</span>(i02)))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -575,9 +617,9 @@ Abbildung&nbsp;11.3: Das “Joinen” zweier Tabellen
 </div>
 </div>
 <p>Hoppla! Die Zahlen passen nicht!</p>
-<p><code><a href="https://readr.tidyverse.org/reference/parse_number.html">parse_number()</a></code> verlangt als Input <code>character</code>, so dass Sie ggf. noch von <code>factor</code> auf <code>character</code> umformatieren müssen.</p>
+<p><code>parse_number()</code> verlangt als Input <code>character</code>, so dass Sie ggf. noch von <code>factor</code> auf <code>character</code> umformatieren müssen.</p>
 <div class="cell">
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">d</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>i03_r <span class="op">=</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/parse_number.html">parse_number</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/character.html">as.character</a></span><span class="op">(</span><span class="va">i03</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>d <span class="sc">%&gt;%</span> <span class="fu">mutate</span>(<span class="at">i03_r =</span> <span class="fu">parse_number</span>(<span class="fu">as.character</span>(i03)))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -601,15 +643,16 @@ Abbildung&nbsp;11.3: Das “Joinen” zweier Tabellen
 <!-- data_rec %>%  -->
 <!--   count(sex_r) -->
 <!-- ``` -->
-</section><section id="vertiefung-schleifen" class="level4" data-number="11.2.2.3"><h4 data-number="11.2.2.3" class="anchored" data-anchor-id="vertiefung-schleifen">
-<span class="header-section-number">11.2.2.3</span> VERTIEFUNG Schleifen</h4>
+</section>
+<section id="vertiefung-schleifen" class="level4" data-number="11.2.2.3">
+<h4 data-number="11.2.2.3" class="anchored" data-anchor-id="vertiefung-schleifen"><span class="header-section-number">11.2.2.3</span> VERTIEFUNG Schleifen</h4>
 <div id="def-schleife" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 11.2 (Schleife)</strong></span> Eine Schleife ist ein Operation, die einen Befehl (im Rahmen der computergestützten Datenanalyse) mehrfach (wiederholt) ausführt. Da im Kontext der Datenanalyse oft mit Tabellen gearbeitet wird, bezieht sich die Wiederholung oft auf eine Spalten-Operation, die dann für mehrere Spalten wiederholt wird. <span class="math inline">\(\square\)</span></p>
+<p><span class="theorem-title"><strong>Definition 11.2 (Schleife) </strong></span>Eine Schleife ist ein Operation, die einen Befehl (im Rahmen der computergestützten Datenanalyse) mehrfach (wiederholt) ausführt. Da im Kontext der Datenanalyse oft mit Tabellen gearbeitet wird, bezieht sich die Wiederholung oft auf eine Spalten-Operation, die dann für mehrere Spalten wiederholt wird. <span class="math inline">\(\square\)</span></p>
 </div>
 <p>Wir können einen Befehl auf mehrere Spalten einer Tabelle anwenden, und zwar mit <code>across</code> (aus <code>tidyverse</code>):</p>
 <div class="cell">
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">d</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/across.html">across</a></span><span class="op">(</span><span class="va">i01</span><span class="op">:</span><span class="va">i03</span>, <span class="va">as.character</span><span class="op">)</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>d <span class="sc">%&gt;%</span> </span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(i01<span class="sc">:</span>i03, as.character))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -620,9 +663,9 @@ Abbildung&nbsp;11.3: Das “Joinen” zweier Tabellen
 </div>
 <p>Neben <code>as.character</code> könnte <code>parse_number</code> ein Befehl sein, den man auf mehrere Spalten gleichzeitig anwenden will:</p>
 <div class="cell">
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">d</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/across.html">across</a></span><span class="op">(</span><span class="va">i01</span><span class="op">:</span><span class="va">i03</span>, <span class="va">as.character</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/across.html">across</a></span><span class="op">(</span><span class="va">i01</span><span class="op">:</span><span class="va">i03</span>, <span class="va">parse_number</span><span class="op">)</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>d <span class="sc">%&gt;%</span> </span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(i01<span class="sc">:</span>i03, as.character)) <span class="sc">%&gt;%</span> </span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="fu">across</span>(i01<span class="sc">:</span>i03, parse_number))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -632,8 +675,10 @@ Abbildung&nbsp;11.3: Das “Joinen” zweier Tabellen
 </div>
 </div>
 <p>Natürlich müssen Sie <code>across</code> nicht verwenden; Sie können auch “von Hand” die Spalten einzeln beatmen und jeweils (pro Spalte) <code>as.character</code> und <code>parse_number</code> anwenden.</p>
-</section></section><section id="items-umkodieren" class="level3" data-number="11.2.3"><h3 data-number="11.2.3" class="anchored" data-anchor-id="items-umkodieren">
-<span class="header-section-number">11.2.3</span> Items umkodieren</h3>
+</section>
+</section>
+<section id="items-umkodieren" class="level3" data-number="11.2.3">
+<h3 data-number="11.2.3" class="anchored" data-anchor-id="items-umkodieren"><span class="header-section-number">11.2.3</span> Items umkodieren</h3>
 <p>In Fragebogen werden immer wieder Items <em>negativ</em> kodiert. Das bedeutet, dass sie gegenteilig zum messenden Konstrukt formuliert sind. Ist das Konstrukt Extraversion, so würde ein negatives Item im Sinne von Introversion kodiert sein. Ein Beispiel-Item für negative Kodierung wäre: “Ich bin ein Couch-Potato” oder “Ich bleibe am liebsten alleine zuhause.”</p>
 <p>Zuerst müssen wir die Anzahl der Antwortstufen wissen; diese Information findet sich in der Dokumentation der Skala (im “Manual” auch “Testdokumentation” oder “Benutzerhandbuch” genannt). Natürlich kann man prüfen, welche Antwortstufen die Respondenten gefunden haben, aber man wäre nicht sicher, ob auch alle möglichen Antworten ausgeschöpft wurden.</p>
 <p>Im vorliegenden Fall ist der Dokumentation des Instruments zu entnehmen, dass jedes Item vier Antwortstufen (Likertformat) aufweist. Likert-skalierte Items zeichnen sich dadurch aus, dass sie so formuliert sind, dass höhere Werte in der Antwortstufe mit höherer Ausprägung des zu messenden Konstrukts einher gehen.</p>
@@ -644,20 +689,19 @@ alter Wert ist 3 --&gt; neuer Wert ist 2
 alter Wert ist 4 --&gt; neuer Wert ist 1
 
 alter Wert --&gt; neuer Wert</code></pre>
-<section id="umkodieren-mit-case_when" class="level4" data-number="11.2.3.1"><h4 data-number="11.2.3.1" class="anchored" data-anchor-id="umkodieren-mit-case_when">
-<span class="header-section-number">11.2.3.1</span> Umkodieren mit <code>case_when</code>
-</h4>
+<section id="umkodieren-mit-case_when" class="level4" data-number="11.2.3.1">
+<h4 data-number="11.2.3.1" class="anchored" data-anchor-id="umkodieren-mit-case_when"><span class="header-section-number">11.2.3.1</span> Umkodieren mit <code>case_when</code></h4>
 <p>Zum Umkodieren der Werte negativ kodierter Items bietet sich die Funktion <code>case_when</code> aus <code>tidyverse</code> an.</p>
 <div class="cell">
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>i01r <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/case_when.html">case_when</a></span><span class="op">(</span></span>
-<span>    <span class="va">i01</span> <span class="op">==</span> <span class="fl">1</span> <span class="op">~</span> <span class="fl">4</span>,</span>
-<span>    <span class="va">i01</span> <span class="op">==</span> <span class="fl">2</span> <span class="op">~</span> <span class="fl">3</span>,</span>
-<span>    <span class="va">i01</span> <span class="op">==</span> <span class="fl">3</span> <span class="op">~</span> <span class="fl">2</span>,</span>
-<span>    <span class="va">i01</span> <span class="op">==</span> <span class="fl">4</span> <span class="op">~</span> <span class="fl">1</span></span>
-<span>  <span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">i01</span>, <span class="va">i01r</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>extra <span class="sc">|&gt;</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">i01r =</span> <span class="fu">case_when</span>(</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    i01 <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="dv">4</span>,</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    i01 <span class="sc">==</span> <span class="dv">2</span> <span class="sc">~</span> <span class="dv">3</span>,</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    i01 <span class="sc">==</span> <span class="dv">3</span> <span class="sc">~</span> <span class="dv">2</span>,</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    i01 <span class="sc">==</span> <span class="dv">4</span> <span class="sc">~</span> <span class="dv">1</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">|&gt;</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(i01, i01r) <span class="sc">|&gt;</span></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -666,33 +710,39 @@ alter Wert --&gt; neuer Wert</code></pre>
 </div>
 </div>
 </div>
-<p>In diesem Fall ist das Item <code>i02r</code> bereits umkodiert – genau wie alle Items im Datensatz die mit dem Suffix <code>r</code> gekennzeichnet sind. Daher war das Umkodieren hier nicht nötig – sogar <em>falsch</em>, um genau zu sein. Das diente nur zu Übungszwecken. In anderen Situationen kann es aber nötig sein, Items umzukodieren. Vergessen Sie dann nicht, das Ergebnis (die resultierende Tabelle) als (neuen) Datensatz zu speichern.</p>
-</section><section id="vertiefung-umkodieren-mit-recoce_values" class="level4" data-number="11.2.3.2"><h4 data-number="11.2.3.2" class="anchored" data-anchor-id="vertiefung-umkodieren-mit-recoce_values">
-<span class="header-section-number">11.2.3.2</span> Vertiefung: Umkodieren mit <code>recoce_values</code>
-</h4>
+<p>Die Syntax von <code>case_when()</code> lautet:</p>
+<pre><code>case_when(Prüfung ~ Konsequenz,
+          Prüfung2 ~ Konsequenz)</code></pre>
+<p>Nur wenn <code>Prüfung</code> erfüllt ist (den Wert <code>TRUE</code> hat), dann wird <code>Konsequenz</code> ausgeführt. Ansonsten wird auf <code>Prüfung2</code> getestet, etc.</p>
+<p>Vergessen Sie dann nicht, das Ergebnis (die resultierende Tabelle) als (neuen) Datensatz zu speichern.</p>
+</section>
+<section id="vertiefung-umkodieren-mit-recoce_values" class="level4" data-number="11.2.3.2">
+<h4 data-number="11.2.3.2" class="anchored" data-anchor-id="vertiefung-umkodieren-mit-recoce_values"><span class="header-section-number">11.2.3.2</span> Vertiefung: Umkodieren mit <code>recoce_values</code></h4>
 <p>Zum Umkodieren der Werte negativ kodierter Items bietet sich die Funktion <code>recode_values</code> aus <code>easystats</code> an.</p>
 <div class="cell">
-<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span><span class="fu">recode_values</span><span class="op">(</span>select <span class="op">=</span> <span class="va">i02r</span>,  <span class="co"># aus `easystats`</span></span>
-<span>recode <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>`1`<span class="op">=</span><span class="fl">4</span>, `2`<span class="op">=</span><span class="fl">3</span>, `3`<span class="op">=</span><span class="fl">2</span>, `4`<span class="op">=</span><span class="fl">1</span><span class="op">)</span>, </span>
-<span>append <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">i02</span>, <span class="va">i02r</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>  <span class="co"># zeige nur die beiden Item i02r und i02r_r</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>extra <span class="sc">%&gt;%</span> </span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">recode_values</span>(<span class="at">select =</span> i02r,  <span class="co"># aus `easystats`</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="at">recode =</span> <span class="fu">list</span>(<span class="st">`</span><span class="at">1</span><span class="st">`</span><span class="ot">=</span><span class="dv">4</span>, <span class="st">`</span><span class="at">2</span><span class="st">`</span><span class="ot">=</span><span class="dv">3</span>, <span class="st">`</span><span class="at">3</span><span class="st">`</span><span class="ot">=</span><span class="dv">2</span>, <span class="st">`</span><span class="at">4</span><span class="st">`</span><span class="ot">=</span><span class="dv">1</span>), </span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="at">append =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(i02, i02r) <span class="sc">%&gt;%</span>  <span class="co"># zeige nur die beiden Item i02r und i02r_r</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section><section id="vertiefung-umkodieren-mit-rechenregel" class="level4" data-number="11.2.3.3"><h4 data-number="11.2.3.3" class="anchored" data-anchor-id="vertiefung-umkodieren-mit-rechenregel">
-<span class="header-section-number">11.2.3.3</span> Vertiefung: Umkodieren mit Rechenregel</h4>
+<p>In diesem Fall ist das Item <code>i02r</code> bereits umkodiert – genau wie alle Items im Datensatz die mit dem Suffix <code>r</code> gekennzeichnet sind. Daher war das Umkodieren hier nicht nötig – sogar <em>falsch</em>, um genau zu sein. Das diente nur zu Übungszwecken. In anderen Situationen kann es aber nötig sein, Items umzukodieren.</p>
+</section>
+<section id="vertiefung-umkodieren-mit-rechenregel" class="level4" data-number="11.2.3.3">
+<h4 data-number="11.2.3.3" class="anchored" data-anchor-id="vertiefung-umkodieren-mit-rechenregel"><span class="header-section-number">11.2.3.3</span> Vertiefung: Umkodieren mit Rechenregel</h4>
 <p>Alternativ können Sie auch folgende Rechenmethode zum Umkodieren von Items verwenden:</p>
 <p><span class="math display">\[\text{neuer Wert} = \text{Anzahl Kategorien} + 1 - \text{alter Wert}\]</span> Diese Rechenmethode funktioniert aber nur, wenn z. B. bei vier Antwortstufen die Ausprägungen mit 1,2,3,4 kodiert sind. Allgemeiner: Bei <span class="math inline">\(n\)</span> Ausprägungen müssen die Werte mit <span class="math inline">\(1,2, \ldots, n\)</span> kodiert sein, so dass die Ausprägungen den Werten entsprechen.</p>
 <div id="exm-umkodieren" class="theorem example">
-<p><span class="theorem-title"><strong>Beispiel 11.3</strong></span> Wir kodieren Item 1 (<code>i01</code>) um:</p>
+<p><span class="theorem-title"><strong>Beispiel 11.3 </strong></span>Wir kodieren Item 1 (<code>i01</code>) um:</p>
 <div class="cell">
-<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra_umcodiert_i01</span> <span class="op">&lt;-</span></span>
-<span><span class="va">extra</span> <span class="op">|&gt;</span> </span>
-<span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>i01r <span class="op">=</span> <span class="fl">5</span> <span class="op">-</span> <span class="va">i01</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">extra_umcodiert_i01</span> <span class="op">|&gt;</span> </span>
-<span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">i01</span>, <span class="va">i01r</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
-<span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>extra_umcodiert_i01 <span class="ot">&lt;-</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>extra <span class="sc">|&gt;</span> </span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mutate</span>(<span class="at">i01r =</span> <span class="dv">5</span> <span class="sc">-</span> i01)</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>extra_umcodiert_i01 <span class="sc">|&gt;</span> </span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(i01, i01r) <span class="sc">|&gt;</span> </span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -702,21 +752,23 @@ alter Wert --&gt; neuer Wert</code></pre>
 </div>
 </div>
 </div>
-</section></section><section id="item-labels-in-zahlen-umwandeln" class="level3" data-number="11.2.4"><h3 data-number="11.2.4" class="anchored" data-anchor-id="item-labels-in-zahlen-umwandeln">
-<span class="header-section-number">11.2.4</span> Item-Labels in Zahlen umwandeln</h3>
+</section>
+</section>
+<section id="item-labels-in-zahlen-umwandeln" class="level3" data-number="11.2.4">
+<h3 data-number="11.2.4" class="anchored" data-anchor-id="item-labels-in-zahlen-umwandeln"><span class="header-section-number">11.2.4</span> Item-Labels in Zahlen umwandeln</h3>
 <p>Eine ähnliche Sache wie das Umpolen von Items ist folgende Situation: Ihre Umfrage-Software spuckt als Item-Antworten die “Ankertexte” oder “Itemlabels” aus wie <em>stimme überhaupt nicht zu</em> oder <em>stimme voll und ganz zu</em>. Da man bekanntlich (höchstens) mit Zahlen aber nicht mit Texten rechnen kann, möchten Sie diese Itemlabels in Zahlen umwandeln. Das sieht dann ähnlich zu folgendem Wenn-Dann-Regel-Schema aus:</p>
 <pre><code>stimme voll und ganz zu --&gt; 4
 stimme eher zu --&gt; 3
 stimme eher nicht zu--&gt; 2
 stimme überhaupt nicht zu --&gt; 1</code></pre>
-<p>Dieses Umwandeln können Sie mit <code><a href="https://dplyr.tidyverse.org/reference/case_when.html">case_when()</a></code> vornehmen. <code><a href="https://dplyr.tidyverse.org/reference/case_when.html">case_when()</a></code> listet einfach Wenn-Dann-Regeln auf.</p>
+<p>Dieses Umwandeln können Sie mit <code>case_when()</code> vornehmen. <code>case_when()</code> listet einfach Wenn-Dann-Regeln auf.</p>
 <p>Erzeugen wir uns mal eine einfache Tabelle, um die Sache zu illustrieren:</p>
 <div class="cell">
-<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">d</span> <span class="op">&lt;-</span></span>
-<span>  <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>person_nr <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fl">3</span>,</span>
-<span>         i01 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"stimme überhaupt nicht zu"</span>, <span class="st">"stimmer eher zu"</span>, <span class="st">"stimme voll und ganz zu"</span><span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">d</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tibble</span>(<span class="at">person_nr =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>,</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">i01 =</span> <span class="fu">c</span>(<span class="st">"stimme überhaupt nicht zu"</span>, <span class="st">"stimmer eher zu"</span>, <span class="st">"stimme voll und ganz zu"</span>))</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>d</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -728,13 +780,13 @@ stimme überhaupt nicht zu --&gt; 1</code></pre>
 <p>So ähnlich würden also Ihre Daten aussehen.</p>
 <p>Jetzt zum Umwandeln:</p>
 <div class="cell">
-<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">d</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>i01_r <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/case_when.html">case_when</a></span><span class="op">(</span></span>
-<span>    <span class="va">i01</span> <span class="op">==</span> <span class="st">"stimme überhaupt nicht zu"</span> <span class="op">~</span> <span class="fl">1</span>,</span>
-<span>    <span class="va">i01</span> <span class="op">==</span> <span class="st">"stimme eher nicht zu"</span> <span class="op">~</span> <span class="fl">2</span>,</span>
-<span>    <span class="va">i01</span> <span class="op">==</span> <span class="st">"stimme eher zu"</span> <span class="op">~</span><span class="fl">3</span>,</span>
-<span>    <span class="va">i01</span> <span class="op">==</span> <span class="st">"stimme voll und ganz zu"</span> <span class="op">~</span> <span class="fl">4</span></span>
-<span>  <span class="op">)</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>d <span class="sc">%&gt;%</span> </span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">i01_r =</span> <span class="fu">case_when</span>(</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>    i01 <span class="sc">==</span> <span class="st">"stimme überhaupt nicht zu"</span> <span class="sc">~</span> <span class="dv">1</span>,</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>    i01 <span class="sc">==</span> <span class="st">"stimme eher nicht zu"</span> <span class="sc">~</span> <span class="dv">2</span>,</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>    i01 <span class="sc">==</span> <span class="st">"stimme eher zu"</span> <span class="sc">~</span><span class="dv">3</span>,</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>    i01 <span class="sc">==</span> <span class="st">"stimme voll und ganz zu"</span> <span class="sc">~</span> <span class="dv">4</span></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>  ))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -743,87 +795,86 @@ stimme überhaupt nicht zu --&gt; 1</code></pre>
 </div>
 </div>
 </div>
-<p>Die Syntax von <code><a href="https://dplyr.tidyverse.org/reference/case_when.html">case_when()</a></code> lautet:</p>
-<pre><code>case_when(Prüfung ~ Konsequenz,
-          Prüfung2 ~ Konsequenz)</code></pre>
-<p>Nur wenn <code>Prüfung</code> erfüllt ist (den Wert <code>TRUE</code> hat), dann wird <code>Konsequenz</code> ausgeführt. Ansonsten wird auf <code>Prüfung2</code> getestet, etc.</p>
 <p>Eine alternativer Weg des Umkodierens ist <code>recode_value()</code> aus <code>easystats</code> zu nutzen.</p>
-</section><section id="fehlende-werte-ersetzen" class="level3" data-number="11.2.5"><h3 data-number="11.2.5" class="anchored" data-anchor-id="fehlende-werte-ersetzen">
-<span class="header-section-number">11.2.5</span> Fehlende Werte ersetzen</h3>
+</section>
+<section id="fehlende-werte-ersetzen" class="level3" data-number="11.2.5">
+<h3 data-number="11.2.5" class="anchored" data-anchor-id="fehlende-werte-ersetzen"><span class="header-section-number">11.2.5</span> Fehlende Werte ersetzen</h3>
 <p>Wie geht man mit fehlenden Werten um? Das ist im Detail keine leichte Frage. Eine einfache Antwort ist: alle Zeilen mit fehlenden Werten löschen. Das hat aber den Nachteil, dass man ggf. viele Daten verliert. Eine andere einfache Antwort lautet: Nichts machen. Das kann ein sinvoller Start sein; zumindest macht man nichts kaputt.</p>
 <p>Was die ID-Spalte betrifft, sollte man aber fehlende Werte ersetzen, damit man jede Zeile identifizieren kann.</p>
 <div class="cell">
-<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra_nona_in_id_col</span> <span class="op">&lt;-</span></span>
-<span>  <span class="va">extra</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>code <span class="op">=</span> <span class="fu"><a href="https://tidyr.tidyverse.org/reference/replace_na.html">replace_na</a></span><span class="op">(</span><span class="va">code</span>, <span class="st">"fehlt"</span><span class="op">)</span><span class="op">)</span>   <span class="co"># aus tidyverse</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>extra_nona_in_id_col <span class="ot">&lt;-</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  extra <span class="sc">|&gt;</span> </span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">code =</span> <span class="fu">replace_na</span>(code, <span class="st">"fehlt"</span>))   <span class="co"># aus tidyverse</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="exr-nona-id" class="theorem exercise">
-<p><span class="theorem-title"><strong>Übungsaufgabe 11.1</strong></span> Betrachten Sie beide Tabellen (mit der Tabellenansicht in RStudio) und finden Sie den Unterschied in der Spalte <code>code</code>. <span class="math inline">\(\square\)</span></p>
+<p><span class="theorem-title"><strong>Übungsaufgabe 11.1 </strong></span>Betrachten Sie beide Tabellen (mit der Tabellenansicht in RStudio) und finden Sie den Unterschied in der Spalte <code>code</code>. <span class="math inline">\(\square\)</span></p>
 </div>
-</section><section id="zeilen-fälle-löschen" class="level3" data-number="11.2.6"><h3 data-number="11.2.6" class="anchored" data-anchor-id="zeilen-fälle-löschen">
-<span class="header-section-number">11.2.6</span> Zeilen (Fälle) löschen</h3>
-<section id="zeilen-löschen-nach-id-spalte" class="level4" data-number="11.2.6.1"><h4 data-number="11.2.6.1" class="anchored" data-anchor-id="zeilen-löschen-nach-id-spalte">
-<span class="header-section-number">11.2.6.1</span> Zeilen löschen nach ID-Spalte</h4>
+</section>
+<section id="zeilen-fälle-löschen" class="level3" data-number="11.2.6">
+<h3 data-number="11.2.6" class="anchored" data-anchor-id="zeilen-fälle-löschen"><span class="header-section-number">11.2.6</span> Zeilen (Fälle) löschen</h3>
+<section id="zeilen-löschen-nach-id-spalte" class="level4" data-number="11.2.6.1">
+<h4 data-number="11.2.6.1" class="anchored" data-anchor-id="zeilen-löschen-nach-id-spalte"><span class="header-section-number">11.2.6.1</span> Zeilen löschen nach ID-Spalte</h4>
 <p>In jeder braven Tabelle steht pro Zeile (genau) ein Fall; mit “Fall”, auch als “Beobachtung” bezeichnet, ist ein Untersuchungsobjekt gemeint. Häufig sind das in der Psychologie Personen, es könnten aber auch z. B. Versuchsdurchgänge, Teams oder Firmen sein. Sagen wir, Sie möchten einen bestimmten Fall löschen. Der Einfachheit halber nehmen wir den ersten Fall der Tabelle <code>extra</code>. Hier hat jeder Fall schon eine “ID”, eine unique, also eineindeutige Zuordnung, das ist die Spalte <code>code</code>. Auch die Spalte <code>timestamp</code> taugt vermutlich für eine Zuordnung.</p>
 <p>In R könnten Sie die erste Zeile also anhand dieser ID-Spalte ansprechen und entsprechend filtern. Sagen wir, wir möchten die Person/Datenzeile mit der ID “HSC” entfernen:</p>
 <div class="cell">
-<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra_kurz</span> <span class="op">&lt;-</span></span>
-<span>  <span class="va">extra_nona_in_id_col</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="op">!</span><span class="op">(</span><span class="va">code</span> <span class="op">==</span> <span class="st">"HSC"</span><span class="op">)</span><span class="op">)</span>  <span class="co"># ! ist die logische Verneinung</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a>extra_kurz <span class="ot">&lt;-</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  extra_nona_in_id_col <span class="sc">%&gt;%</span> </span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span>(code <span class="sc">==</span> <span class="st">"HSC"</span>))  <span class="co"># ! ist die logische Verneinung</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section><section id="vertiefung" class="level4" data-number="11.2.6.2"><h4 data-number="11.2.6.2" class="anchored" data-anchor-id="vertiefung">
-<span class="header-section-number">11.2.6.2</span> Vertiefung</h4>
+</section>
+<section id="vertiefung" class="level4" data-number="11.2.6.2">
+<h4 data-number="11.2.6.2" class="anchored" data-anchor-id="vertiefung"><span class="header-section-number">11.2.6.2</span> Vertiefung</h4>
 <p>Schauen Sie sich mal diese Variante an:</p>
 <div class="cell">
-<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra_kurz</span> <span class="op">&lt;-</span></span>
-<span>  <span class="va">extra</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">code</span> <span class="op">!=</span> <span class="st">"HSC"</span> <span class="op">|</span> <span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">code</span><span class="op">)</span><span class="op">)</span>  <span class="co"># ! ist die logische Verneinung</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>extra_kurz <span class="ot">&lt;-</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  extra <span class="sc">%&gt;%</span> </span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(code <span class="sc">!=</span> <span class="st">"HSC"</span> <span class="sc">|</span> <span class="fu">is.na</span>(code))  <span class="co"># ! ist die logische Verneinung</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Falls die ID-Spalte (<code>code</code>) fehlende Werte hat, könnten Sie sich wundern: <code>extra |&gt; filter(code != "HSC")</code> hätte zwar die Zeile, in der bei <code>code</code> der Wert <code>HSC</code> steht entfernt, aber <em>auch</em> <em>alle</em> Zeilen, in denen bei <code>code</code> <code>NA</code> steht. Darum haben wir die fehlenden Werte explizit drinnen gelassen. Die technischen Details für dieses vorsichtige Verhalten von <code><a href="https://dplyr.tidyverse.org/reference/filter.html">filter()</a></code> finden sich <a href="https://stackoverflow.com/questions/28857653/removing-na-observations-with-dplyrfilter">hier</a>.</p>
+<p>Falls die ID-Spalte (<code>code</code>) fehlende Werte hat, könnten Sie sich wundern: <code>extra |&gt; filter(code != "HSC")</code> hätte zwar die Zeile, in der bei <code>code</code> der Wert <code>HSC</code> steht entfernt, aber <em>auch</em> <em>alle</em> Zeilen, in denen bei <code>code</code> <code>NA</code> steht. Darum haben wir die fehlenden Werte explizit drinnen gelassen. Die technischen Details für dieses vorsichtige Verhalten von <code>filter()</code> finden sich <a href="https://stackoverflow.com/questions/28857653/removing-na-observations-with-dplyrfilter">hier</a>.</p>
 <p>Prüfen wir die Anzahl der Zeilen:</p>
 <div class="cell">
-<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">extra_kurz</span><span class="op">)</span></span>
-<span><span class="co">## [1] 825</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">extra</span><span class="op">)</span></span>
-<span><span class="co">## [1] 826</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(extra_kurz)</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 825</span></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(extra)</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 826</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Falls Ihr Datensatz über keine ID-Spalte verfügt, können Sie so eine hinzufügen:</p>
 <div class="cell">
-<div class="sourceCode" id="cb26"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra2</span> <span class="op">&lt;-</span></span>
-<span>  <span class="va">extra</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>id <span class="op">=</span> <span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span><span class="op">(</span><span class="va">extra</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>   <span class="co"># nrow liefert die Anzahl der Zeilen der Tabelle zurück</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/relocate.html">relocate</a></span><span class="op">(</span><span class="va">id</span>, .before <span class="op">=</span> <span class="fl">1</span><span class="op">)</span> <span class="co"># wir ziehen die ID-Variable an die erste Spalte</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>extra2 <span class="ot">&lt;-</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  extra <span class="sc">%&gt;%</span> </span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">id =</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(extra)) <span class="sc">%&gt;%</span>   <span class="co"># nrow liefert die Anzahl der Zeilen der Tabelle zurück</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">relocate</span>(id, <span class="at">.before =</span> <span class="dv">1</span>) <span class="co"># wir ziehen die ID-Variable an die erste Spalte</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Und jetzt können wir entspannt filtern:</p>
 <div class="cell">
-<div class="sourceCode" id="cb27"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra_kurz</span> <span class="op">&lt;-</span></span>
-<span>  <span class="va">extra2</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">id</span> <span class="op">!=</span> <span class="fl">1</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>extra_kurz <span class="ot">&lt;-</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  extra2 <span class="sc">%&gt;%</span> </span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(id <span class="sc">!=</span> <span class="dv">1</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <!-- ### Vertiefung: Duplikate entfernen -->
-</section></section><section id="datenqualität-prüfen" class="level3" data-number="11.2.7"><h3 data-number="11.2.7" class="anchored" data-anchor-id="datenqualität-prüfen">
-<span class="header-section-number">11.2.7</span> Datenqualität prüfen</h3>
+</section>
+</section>
+<section id="datenqualität-prüfen" class="level3" data-number="11.2.7">
+<h3 data-number="11.2.7" class="anchored" data-anchor-id="datenqualität-prüfen"><span class="header-section-number">11.2.7</span> Datenqualität prüfen</h3>
 <p>Bevor wir die Daten interpretieren, müssen wir sie auf Herz und Nieren prüfen, ein Daten-Gesundheitscheck<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>.</p>
 <p>Ein paar typische Probleme, die man immer wieder findet, und die wir gelöst haben wollen, sind:</p>
 <ul>
-<li>
-<em>Dubletten</em> (doppelte Zeilen/Fälle) in den Daten</li>
+<li><em>Dubletten</em> (doppelte Zeilen/Fälle) in den Daten</li>
 <li>Eingabefehler (unplausible oder unmögliche Werte)</li>
 <li>Zu schnelle Bearbeitungszeit (pro Item 1 Sekunde Bearbeitungszeit erlaubt nicht wirklich überlegte Antworten)</li>
-<li>
-<em>Geringe Eingabequalität</em>: Versuchspersonen haben “Blümchen gekreuzt”, also keine ernsthaften Antworten gegeben</li>
+<li><em>Geringe Eingabequalität</em>: Versuchspersonen haben “Blümchen gekreuzt”, also keine ernsthaften Antworten gegeben</li>
 <li>…</li>
 </ul>
-<section id="auf-dublikate-prüfen" class="level4" data-number="11.2.7.1"><h4 data-number="11.2.7.1" class="anchored" data-anchor-id="auf-dublikate-prüfen">
-<span class="header-section-number">11.2.7.1</span> Auf Dublikate prüfen</h4>
+<section id="auf-dublikate-prüfen" class="level4" data-number="11.2.7.1">
+<h4 data-number="11.2.7.1" class="anchored" data-anchor-id="auf-dublikate-prüfen"><span class="header-section-number">11.2.7.1</span> Auf Dublikate prüfen</h4>
 <p>Betrachten wir der Einfachheit halber folgenden Datensatz, in dem die erste und zweite Zeile identisch sind; die zweite Zeile ist also eine Dublette (Dublikat). Die dritte Zeile ist unique.</p>
 <div class="cell">
-<div class="sourceCode" id="cb28"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span></span>
-<span>  <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span>id <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span>,</span>
-<span>         x <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"a"</span>, <span class="st">"a"</span>, <span class="st">"yeah"</span><span class="op">)</span>,</span>
-<span>         y <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">5</span>, <span class="fl">5</span>, <span class="fl">3000</span><span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">df</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span></span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">tibble</span>(<span class="at">id =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>),</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>         <span class="at">x =</span> <span class="fu">c</span>(<span class="st">"a"</span>, <span class="st">"a"</span>, <span class="st">"yeah"</span>),</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">y =</span> <span class="fu">c</span>(<span class="dv">5</span>, <span class="dv">5</span>, <span class="dv">3000</span>))</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>df</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -834,8 +885,8 @@ stimme überhaupt nicht zu --&gt; 1</code></pre>
 </div>
 <p>Genau genommen hat <code>df</code> keine Dublikate, aber wenn wir die Spalte <code>id</code> ausklammern, dann schon:</p>
 <div class="cell">
-<div class="sourceCode" id="cb29"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>df <span class="sc">|&gt;</span> </span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="dv">2</span>, <span class="dv">3</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -844,11 +895,11 @@ stimme überhaupt nicht zu --&gt; 1</code></pre>
 </div>
 </div>
 </div>
-<p>Dann kann man <code><a href="https://dplyr.tidyverse.org/reference/distinct.html">distinct()</a></code>, nutzen, um Dublikate zu entfernen:</p>
+<p>Dann kann man <code>distinct()</code>, nutzen, um Dublikate zu entfernen:</p>
 <div class="cell">
-<div class="sourceCode" id="cb30"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="fl">2</span>, <span class="fl">3</span><span class="op">)</span> <span class="op">|&gt;</span>  </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/distinct.html">distinct</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>df <span class="sc">|&gt;</span> </span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="dv">2</span>, <span class="dv">3</span>) <span class="sc">|&gt;</span>  </span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -857,10 +908,10 @@ stimme überhaupt nicht zu --&gt; 1</code></pre>
 </div>
 </div>
 </div>
-<p>Man kann <code><a href="https://dplyr.tidyverse.org/reference/distinct.html">distinct()</a></code> auch nutzen, um nur in bestimmten Spalten auf Dublikate zu suchen:</p>
+<p>Man kann <code>distinct()</code> auch nutzen, um nur in bestimmten Spalten auf Dublikate zu suchen:</p>
 <div class="cell">
-<div class="sourceCode" id="cb31"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/distinct.html">distinct</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span>, .keep_all <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>df <span class="sc">|&gt;</span> </span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>(x, y, <span class="at">.keep_all =</span> <span class="cn">TRUE</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -869,10 +920,10 @@ stimme überhaupt nicht zu --&gt; 1</code></pre>
 </div>
 </div>
 </div>
-<p>Ohne das <code>.keep_all = TRUE</code> werden nur die Spalten <code>x</code> und <code>y</code> zurückgeliefert (also die Spalten, die wir bei <code><a href="https://dplyr.tidyverse.org/reference/distinct.html">distinct()</a></code> ausgewählt hatten):</p>
+<p>Ohne das <code>.keep_all = TRUE</code> werden nur die Spalten <code>x</code> und <code>y</code> zurückgeliefert (also die Spalten, die wir bei <code>distinct()</code> ausgewählt hatten):</p>
 <div class="cell">
-<div class="sourceCode" id="cb32"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/distinct.html">distinct</a></span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>df <span class="sc">|&gt;</span> </span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>(x, y)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -881,18 +932,19 @@ stimme überhaupt nicht zu --&gt; 1</code></pre>
 </div>
 </div>
 </div>
-</section><section id="auf-eingabefehler-prüfen" class="level4" data-number="11.2.7.2"><h4 data-number="11.2.7.2" class="anchored" data-anchor-id="auf-eingabefehler-prüfen">
-<span class="header-section-number">11.2.7.2</span> Auf Eingabefehler prüfen</h4>
+</section>
+<section id="auf-eingabefehler-prüfen" class="level4" data-number="11.2.7.2">
+<h4 data-number="11.2.7.2" class="anchored" data-anchor-id="auf-eingabefehler-prüfen"><span class="header-section-number">11.2.7.2</span> Auf Eingabefehler prüfen</h4>
 <p>Sagen wir, für Variable <code>x</code> ist nur ein einzelner Buchstabe erlaubt; alles andere ist ein Eingabe- oder sonstiger Fehler. Eine Variable vom Typ “Text” heißt in R <code>Character</code> oder <code>String</code>. Mit <code>str_length(x)</code> bekommt man entsprechend die Länge eines Strings. Hier prüfen wir, ob die String-Länge 1 ist, dann alles okay. Wenn die String-Länge von <code>x</code> (für eine bestimmte Zeile) ungleich 1 ist, dann nicht-okay:</p>
 <div class="cell">
-<div class="sourceCode" id="cb33"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df_check</span> <span class="op">&lt;-</span> </span>
-<span>  <span class="va">df</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>x_check_okay <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/case_when.html">case_when</a></span><span class="op">(</span></span>
-<span>    <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_length.html">str_length</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">==</span> <span class="fl">1</span> <span class="op">~</span> <span class="cn">TRUE</span>,</span>
-<span>    <span class="fu"><a href="https://stringr.tidyverse.org/reference/str_length.html">str_length</a></span><span class="op">(</span><span class="va">x</span><span class="op">)</span> <span class="op">!=</span> <span class="fl">1</span> <span class="op">~</span> <span class="cn">FALSE</span></span>
-<span>  <span class="op">)</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">df_check</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>df_check <span class="ot">&lt;-</span> </span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  df <span class="sc">%&gt;%</span> </span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">x_check_okay =</span> <span class="fu">case_when</span>(</span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">str_length</span>(x) <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="cn">TRUE</span>,</span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">str_length</span>(x) <span class="sc">!=</span> <span class="dv">1</span> <span class="sc">~</span> <span class="cn">FALSE</span></span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>  ))</span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>df_check</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -903,11 +955,11 @@ stimme überhaupt nicht zu --&gt; 1</code></pre>
 </div>
 <p>Jetzt könnten wir alle “bösen” Zeilen rausschmeißen:</p>
 <div class="cell">
-<div class="sourceCode" id="cb34"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df2</span> <span class="op">&lt;-</span></span>
-<span>  <span class="va">df_check</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">x_check_okay</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">df2</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span></span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>  df_check <span class="sc">%&gt;%</span> </span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(x_check_okay)</span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>df2</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -918,11 +970,11 @@ stimme überhaupt nicht zu --&gt; 1</code></pre>
 </div>
 <p>Als Nächstes prüfen wir, ob <code>y</code>, eine metrische (numerische) Variable den richtigen Wertebereich hat. Sagen wir, Es sind nur positive Werte nicht größer als 5 erlaubt, also <code>0&lt;x&lt;=5</code>.</p>
 <div class="cell">
-<div class="sourceCode" id="cb35"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>y_check_okay <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/case_when.html">case_when</a></span><span class="op">(</span></span>
-<span>    <span class="fl">0</span><span class="op">&lt;</span><span class="va">y</span> <span class="op">&amp;</span> <span class="va">y</span><span class="op">&lt;=</span><span class="fl">5</span> <span class="op">~</span> <span class="cn">TRUE</span>,  <span class="co"># wenn y im erlaubten Wertebereich, dann okay</span></span>
-<span>    <span class="cn">TRUE</span> <span class="op">~</span> <span class="cn">FALSE</span>  <span class="co"># ansonsten: nicht-okay</span></span>
-<span>  <span class="op">)</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span> </span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">y_check_okay =</span> <span class="fu">case_when</span>(</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>    <span class="dv">0</span><span class="sc">&lt;</span>y <span class="sc">&amp;</span> y<span class="sc">&lt;=</span><span class="dv">5</span> <span class="sc">~</span> <span class="cn">TRUE</span>,  <span class="co"># wenn y im erlaubten Wertebereich, dann okay</span></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> <span class="cn">FALSE</span>  <span class="co"># ansonsten: nicht-okay</span></span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>  ))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -933,8 +985,9 @@ stimme überhaupt nicht zu --&gt; 1</code></pre>
 </div>
 <p><code>case_when</code> arbeitet die Prüfbedingungen <em>zeilenweise</em> ab. Ist die erste Zeile (<code>0&lt;y &amp; y&lt;=5</code>) nicht erfüllt, dann können wir R sagen: “Immer nicht okay”, das erreichen wir mit <code>TRUE</code> (<code>TRUE</code> ist immer wahr) <code>~ FALSE</code> (<code>y_check_okay</code> wird auf <code>FALSE</code>) gesetzt.</p>
 <p>Im Anschluss könnten wir wieder die “bösen Zeilen” herausfiltern.</p>
-</section><section id="geringe-eingabequalität" class="level4" data-number="11.2.7.3"><h4 data-number="11.2.7.3" class="anchored" data-anchor-id="geringe-eingabequalität">
-<span class="header-section-number">11.2.7.3</span> Geringe Eingabequalität</h4>
+</section>
+<section id="geringe-eingabequalität" class="level4" data-number="11.2.7.3">
+<h4 data-number="11.2.7.3" class="anchored" data-anchor-id="geringe-eingabequalität"><span class="header-section-number">11.2.7.3</span> Geringe Eingabequalität</h4>
 <p>Vielleicht hätte ihr Fragebogen nicht so lang sein sollen, 60 Minuten Befragung war dann wohl doch etwas viel.</p>
 <p>Erfahrungsgemäß verliert man pro Seite Fragebogen substanziell Versuchspersonen. Zehn Minuten sind für viele Menschen schon eine lange Befragung. Also: Beim nächsten Mal kürzer halten.</p>
 <p>Schlimmer noch als keine Antworten sind allerdings schlechte Antworten, wenn Versuchspersonen (aus Demotivation heraus) “Blümchen” kreuzen. Häufig bedeutet das, dass einfach immer die erste Antwortoption angekreuzt wird; das ist am einfachsten für die Versuchsperson.</p>
@@ -945,15 +998,15 @@ stimme überhaupt nicht zu --&gt; 1</code></pre>
 </ul>
 <p>Technisch gesprochen prüfen wir pro Person mehrere Spalten eines Datensatzes, etwa indem wir die Varianz berechnen. Eine Komplikation ist, dass Datensätze in R <em>spaltenweise</em> aufgebaut sind, wir aber das Ergebnis <em>pro Zeile</em> (Versuchsperson) haben möchten.</p>
 <div class="cell">
-<div class="sourceCode" id="cb36"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra2</span> <span class="op">&lt;-</span> </span>
-<span><span class="va">extra</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rowwise.html">rowwise</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>extra_var <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/cor.html">var</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/c_across.html">c_across</a></span><span class="op">(</span><span class="va">i01</span><span class="op">:</span><span class="va">i10</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> </span>
-<span></span>
-<span><span class="va">extra2</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">extra_var</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="va">extra_var</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>extra2 <span class="ot">&lt;-</span> </span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>extra <span class="sc">%&gt;%</span> </span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">extra_var =</span> <span class="fu">var</span>(<span class="fu">c_across</span>(i01<span class="sc">:</span>i10))) </span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a>extra2 <span class="sc">%&gt;%</span> </span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(extra_var) <span class="sc">%&gt;%</span> </span>
+<span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(extra_var) <span class="sc">%&gt;%</span> </span>
+<span id="cb36-9"><a href="#cb36-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -972,42 +1025,45 @@ Hinweis
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><code><a href="https://dplyr.tidyverse.org/reference/c_across.html">c_across()</a></code> hat das gleiche Ziel wie <code><a href="https://rdrr.io/r/base/c.html">c()</a></code>. Da aber <code><a href="https://rdrr.io/r/base/c.html">c()</a></code> bei zeilenweisen Operationen nicht verwendet kann (das checkt <code><a href="https://rdrr.io/r/base/c.html">c()</a></code> leider nicht), greifen wir auf seinen Cousin, <code><a href="https://dplyr.tidyverse.org/reference/c_across.html">c_across()</a></code> zurück, der das kann. <span class="math inline">\(\square\)</span></p>
+<p><code>c_across()</code> hat das gleiche Ziel wie <code>c()</code>. Da aber <code>c()</code> bei zeilenweisen Operationen nicht verwendet kann (das checkt <code>c()</code> leider nicht), greifen wir auf seinen Cousin, <code>c_across()</code> zurück, der das kann. <span class="math inline">\(\square\)</span></p>
 </div>
 </div>
 <p>Aber was ist viel und was ist weniger Varianz in diesem Zusammenhang?</p>
 <p>Am besten schauen wir uns mal die typische Varianz der Itemantworten für diesen Datensatz an.</p>
 <div class="cell">
-<div class="sourceCode" id="cb37"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://rpkgs.datanovia.com/ggpubr/">ggpubr</a></span><span class="op">)</span></span>
-<span><span class="va">extra2</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://rpkgs.datanovia.com/ggpubr/reference/gghistogram.html">gghistogram</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"extra_var"</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggpubr)</span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>extra2 <span class="sc">%&gt;%</span> </span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">gghistogram</span>(<span class="at">x =</span> <span class="st">"extra_var"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="085-aufbereiten_files/figure-html/unnamed-chunk-33-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure">
+<p><img src="085-aufbereiten_files/figure-html/unnamed-chunk-33-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 <p>Auf dieser Basis könnte man Fälle (Versuchspersonen, d.h. Zeilen) entfernen, die keine Varianz oder eine Varianz höher als 1.75 aufweisen.</p>
 <div class="cell">
-<div class="sourceCode" id="cb38"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra3</span> <span class="op">&lt;-</span></span>
-<span>  <span class="va">extra2</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">extra_var</span> <span class="op">&gt;</span> <span class="fl">0</span> <span class="op">&amp;</span> <span class="va">extra_var</span> <span class="op">&lt;</span> <span class="fl">1.76</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>extra3 <span class="ot">&lt;-</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>  extra2 <span class="sc">%&gt;%</span> </span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(extra_var <span class="sc">&gt;</span> <span class="dv">0</span> <span class="sc">&amp;</span> extra_var <span class="sc">&lt;</span> <span class="fl">1.76</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section></section><section id="scores-berechnen" class="level3" data-number="11.2.8"><h3 data-number="11.2.8" class="anchored" data-anchor-id="scores-berechnen">
-<span class="header-section-number">11.2.8</span> Scores berechnen</h3>
-<section id="summen--und-mittelwerte" class="level4" data-number="11.2.8.1"><h4 data-number="11.2.8.1" class="anchored" data-anchor-id="summen--und-mittelwerte">
-<span class="header-section-number">11.2.8.1</span> Summen- und Mittelwerte</h4>
+</section>
+</section>
+<section id="scores-berechnen" class="level3" data-number="11.2.8">
+<h3 data-number="11.2.8" class="anchored" data-anchor-id="scores-berechnen"><span class="header-section-number">11.2.8</span> Scores berechnen</h3>
+<section id="summen--und-mittelwerte" class="level4" data-number="11.2.8.1">
+<h4 data-number="11.2.8.1" class="anchored" data-anchor-id="summen--und-mittelwerte"><span class="header-section-number">11.2.8.1</span> Summen- und Mittelwerte</h4>
 <p>In der Psychometrie werden komplexe Konstrukte wie etwa das Persönlichkeitsmerkmal Extraversion anhand mehrerer Indikatoren (meistens Items eines Fragebogens) gemessen. Um zu einem Personenwert für Extraversion zu gelangen, werden die Itemwerte im einfachsten Fall summiert. Alternativ kann man auch einen Mittelwert bilden. Dieses Aggregieren bietet den Vorteil, dass sich Messfehler (möglicherweise) herausmitteln. Außerdem versucht man so abzubilden, dass Extraversion aus mehreren unterschiedlichen Facetten besteht, die nicht mit einem einzelnen Item, sondern über mehrere unterschiedliche Items, erfasst werden. Viele Psychometriker sind skeptisch, wenn man versuchen würde, Extraversion mit der Frage “Wie extrovertiert sind Sie?” zu erfassen. Ihre Bedenken sind, dass Menschen die vielen Facetten von Extraversion nicht im Arbeitsgedächtnis vorhalten können. Fragt man hingegen nur einen kleinen Aspekt von Extraversion ab, trägt man der Breite des Konstrukts nicht Rechnung.</p>
 <p>Die Zusammenfassung der Itemwerte eines Konstrukts zu einem Mittelwert oder einem Summenwert bezeichnet man als <em>Score</em>.</p>
 <p>Ein einfaches Beispiel zur Berechnung des Extraversion-Summenscore:</p>
 <div class="cell">
-<div class="sourceCode" id="cb39"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra_bsp</span> <span class="op">&lt;-</span> <span class="va">extra</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">i01</span><span class="op">:</span><span class="va">i03</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html">slice_head</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">3</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>extra_sum <span class="op">=</span> <span class="va">i01</span> <span class="op">+</span> <span class="va">i02r</span> <span class="op">+</span> <span class="va">i03</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">extra_bsp</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>extra_bsp <span class="ot">&lt;-</span> extra <span class="sc">%&gt;%</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(i01<span class="sc">:</span>i03) <span class="sc">%&gt;%</span></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">3</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">extra_sum =</span> i01 <span class="sc">+</span> i02r <span class="sc">+</span> i03)</span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a>extra_bsp</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -1016,25 +1072,29 @@ Hinweis
 </div>
 </div>
 </div>
-<p>Der Wert von <code>extra_sum</code> berechnet sich jeweils als Summe der drei Itemwerte. Mit dem Mittelwert verhält es sich analog (s. <a href="#tbl-extra-score-mean" class="quarto-xref">Tabelle&nbsp;<span>11.1</span></a>).</p>
+<p>Der Wert von <code>extra_sum</code> berechnet sich jeweils als Summe der drei Itemwerte. Mit dem Mittelwert verhält es sich analog (s. <a href="#tbl-extra-score-mean" class="quarto-xref">Tabelle&nbsp;<span class="quarto-unresolved-ref">tbl-extra-score-mean</span></a>).</p>
 <div class="cell">
-<div class="sourceCode" id="cb40"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra_bsp</span> <span class="op">&lt;-</span> <span class="va">extra_bsp</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>extra_mean <span class="op">=</span> <span class="va">extra_sum</span> <span class="op">/</span> <span class="fl">3</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>extra_bsp <span class="ot">&lt;-</span> extra_bsp <span class="sc">%&gt;%</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">extra_mean =</span> extra_sum <span class="sc">/</span> <span class="dv">3</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div id="tbl-extra-score-mean" class="cell quarto-float anchored">
-<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-extra-score-mean-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="tbl-extra-score-mean" class="cell anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-extra-score-mean-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Tabelle&nbsp;11.1: Extraversion-Score berechen
-</figcaption><div aria-describedby="tbl-extra-score-mean-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+</figcaption>
+<div aria-describedby="tbl-extra-score-mean-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<table class="do-not-create-environment cell table table-sm table-striped small">
-<thead><tr class="header">
+<table class="cell table table-sm table-striped small">
+<thead>
+<tr class="header">
 <th style="text-align: right;">i01</th>
 <th style="text-align: right;">i02r</th>
 <th style="text-align: right;">i03</th>
 <th style="text-align: right;">extra_sum</th>
 <th style="text-align: right;">extra_mean</th>
-</tr></thead>
+</tr>
+</thead>
 <tbody>
 <tr class="odd">
 <td style="text-align: right;">3</td>
@@ -1065,31 +1125,32 @@ Tabelle&nbsp;11.1: Extraversion-Score berechen
 </div>
 </div>
 <p>Praktischerweise gibt es Funktionen, die die Berechnung eines Scores noch weiter vereinfachen, zum Beispiel im Paket <code>easystats</code>: <code>row_means()</code> (Mittelwert pro Person). Da Respondenten (meist Personen) in <em>Zeilen</em> stehen heißen die Befehle <code>row_XXX()</code>. Fragt sich noch, ob es mehr Sinn macht, einen Summenscore oder einen Mittelwert zu berechnen. Kurz gesagt macht es keinen großen Unterschied, solange es keine fehlenden Werte gibt. Gibt es aber fehlende Werte, sollte man Mittelwerte statt Summenwerte vorziehen.</p>
-</section><section id="vertiefung-summen--vs.-mittelwertscores" class="level4" data-number="11.2.8.2"><h4 data-number="11.2.8.2" class="anchored" data-anchor-id="vertiefung-summen--vs.-mittelwertscores">
-<span class="header-section-number">11.2.8.2</span> Vertiefung: Summen- vs.&nbsp;Mittelwertscores</h4>
+</section>
+<section id="vertiefung-summen--vs.-mittelwertscores" class="level4" data-number="11.2.8.2">
+<h4 data-number="11.2.8.2" class="anchored" data-anchor-id="vertiefung-summen--vs.-mittelwertscores"><span class="header-section-number">11.2.8.2</span> Vertiefung: Summen- vs.&nbsp;Mittelwertscores</h4>
 <p>Dazu ein erläuterndes Beispiel. Alois habe in einem Persönlichkeitstest mit 3 Items nur Item 1 beantwortet und zwar mit “3”, wobei Antwortstufen von 1 bis 4 vorgegeben waren. Vermutlich ist der Gesamtwert im Form des Summenscores von 3 zu klein, unterschätzt als Alois’ Wert. Schließlich hat er beim ersten Item die Antwort “3” gewählt, insofern ist es plausibel, dass er bei den anderen auch diese Option gewählt hätte. Somit hätte er insgesamt 9 Punkte (nicht 3) erzielt. Würden wir 3 als Gesamtwert (Summenscore) annehmen, so bedeutet das, das wir davon ausgehen, dass er im Schnitt “1” gewählt hat - Eine Annahme, die nicht sehr plausibel erscheint.</p>
 <p>Vergleichen wir das mit dem Mittelwert-Score. Jetzt lassen wir R die Rechenarbeit machen:</p>
 <div class="cell">
-<div class="sourceCode" id="cb41"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">Alois</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">3</span>, <span class="cn">NA</span>, <span class="cn">NA</span><span class="op">)</span></span>
-<span><span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">Alois</span>, na.rm <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span>
-<span><span class="co">## [1] 3</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>Alois <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="cn">NA</span>, <span class="cn">NA</span>)</span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(Alois, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 3</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Der Mittelwert von Alois beträgt 3 – das passt genau zu unserer Argumentation von gerade (s. oben), dass 3 eine bessere Schätzung der Ausprägung der latenten Variable von Alois ist. Daher ist der Mittelwert dem Summenscore vorzuziehen.</p>
 <p>Ein anderer Vorteil des Mittelwerts ist, dass er etwas anschaulicher ist als der Summenscore: Ein Mittelwert von 3 (auf einer Skala von 1 bis 4) ist anschaulicher als eine Summe von 9 (bei drei Items). Wir werden daher den Mittelwert vorziehen.</p>
 <p>Noch anschaulicher wäre es, die Mittelwerte auf den Bereich von 0 bis 1 zu normalisieren.</p>
-</section><section id="berechnung-mit-r" class="level4" data-number="11.2.8.3"><h4 data-number="11.2.8.3" class="anchored" data-anchor-id="berechnung-mit-r">
-<span class="header-section-number">11.2.8.3</span> Berechnung mit R</h4>
+</section>
+<section id="berechnung-mit-r" class="level4" data-number="11.2.8.3">
+<h4 data-number="11.2.8.3" class="anchored" data-anchor-id="berechnung-mit-r"><span class="header-section-number">11.2.8.3</span> Berechnung mit R</h4>
 <p>Wie in jeder Sprache gibt es auch in R oft mehrere Möglichkeiten, um eine Sache auszudrücken. Betrachten wir im Folgenden, wie man einen <em>Score</em>, also einen <em>Zeilenmittelwert</em>, berechnet.</p>
-<section id="mit-easystats" class="level5" data-number="11.2.8.3.1"><h5 data-number="11.2.8.3.1" class="anchored" data-anchor-id="mit-easystats">
-<span class="header-section-number">11.2.8.3.1</span> Mit <code>easystats</code>
-</h5>
+<section id="mit-easystats" class="level5" data-number="11.2.8.3.1">
+<h5 data-number="11.2.8.3.1" class="anchored" data-anchor-id="mit-easystats"><span class="header-section-number">11.2.8.3.1</span> Mit <code>easystats</code></h5>
 <p><code>row_means</code> wohnt im Paket <code>easystats</code>.</p>
 <div class="cell">
-<div class="sourceCode" id="cb42"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>extra_avg <span class="op">=</span> </span>
-<span>           <span class="fu">row_means</span><span class="op">(</span><span class="va">extra</span>, select <span class="op">=</span> <span class="va">i01</span><span class="op">:</span><span class="va">i10</span>, min_valid <span class="op">=</span> <span class="fl">.9</span><span class="op">)</span><span class="op">)</span>  <span class="op">|&gt;</span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">extra_avg</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html">slice_head</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>extra <span class="sc">%&gt;%</span> </span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">extra_avg =</span> </span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>           <span class="fu">row_means</span>(extra, <span class="at">select =</span> i01<span class="sc">:</span>i10, <span class="at">min_valid =</span> .<span class="dv">9</span>))  <span class="sc">|&gt;</span> </span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(extra_avg) <span class="sc">%&gt;%</span> </span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">3</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -1099,18 +1160,18 @@ Tabelle&nbsp;11.1: Extraversion-Score berechen
 </div>
 </div>
 <p>Der Parameter <code>min_valid</code> bei <code>row_means()</code> gibt den Anteil der <em>nicht</em> fehlenden Werte (pro Zeile) wieder, damit ein Wert berechnet wird: Bei zu vielen fehlenden Werten (zu wenig Daten) pro Person wird sonst <code>NA</code> zurückgeliefert. Das ist sinnvoll, denn hat eine Person von 10 Items nur 1 Item beantwortet, so kann man wohl nicht zuverlässig sagen, dass Extraversion in seiner Breite zuverlässig geschätzt wird. Die Funktion fügt dem Datensatz eine Spalte hinzu, deren Name mit <code>var</code> angegeben wird.</p>
-</section><section id="mit-tidyverse" class="level5" data-number="11.2.8.3.2"><h5 data-number="11.2.8.3.2" class="anchored" data-anchor-id="mit-tidyverse">
-<span class="header-section-number">11.2.8.3.2</span> Mit <code>tidyverse</code>
-</h5>
-<p>Die Idee von <code><a href="https://dplyr.tidyverse.org/reference/rowwise.html">rowwise()</a></code> ist es, den Datensatz so in Gruppen einzuteilen, dass jede Zeile eine Gruppe ist. Dann wird für jede “Gruppe” (Zeile) eine normale Operation durchgeführt.</p>
-<p>Leider versteht der <code><a href="https://rdrr.io/r/base/c.html">c()</a></code>-Befehl es nicht, wenn man ihm mehrere Spalten (Vektoren) als Input gibt. <code>i01</code> und <code>i02</code> etc. sind technisch gesehen jeweils Vektoren. Der <code><a href="https://rdrr.io/r/base/c.html">c()</a></code>-Befehl verkraftet leider nur <em>einen</em> Vektor mit Daten als Input. Daher brauchen wir einen verwandten Befehl, der wie <code><a href="https://rdrr.io/r/base/c.html">c()</a></code> funktioniert, aber mehrere Vektoren als Eingabe akzeptiert: Enter <code><a href="https://dplyr.tidyverse.org/reference/c_across.html">c_across()</a></code>.</p>
+</section>
+<section id="mit-tidyverse" class="level5" data-number="11.2.8.3.2">
+<h5 data-number="11.2.8.3.2" class="anchored" data-anchor-id="mit-tidyverse"><span class="header-section-number">11.2.8.3.2</span> Mit <code>tidyverse</code></h5>
+<p>Die Idee von <code>rowwise()</code> ist es, den Datensatz so in Gruppen einzuteilen, dass jede Zeile eine Gruppe ist. Dann wird für jede “Gruppe” (Zeile) eine normale Operation durchgeführt.</p>
+<p>Leider versteht der <code>c()</code>-Befehl es nicht, wenn man ihm mehrere Spalten (Vektoren) als Input gibt. <code>i01</code> und <code>i02</code> etc. sind technisch gesehen jeweils Vektoren. Der <code>c()</code>-Befehl verkraftet leider nur <em>einen</em> Vektor mit Daten als Input. Daher brauchen wir einen verwandten Befehl, der wie <code>c()</code> funktioniert, aber mehrere Vektoren als Eingabe akzeptiert: Enter <code>c_across()</code>.</p>
 <div class="cell">
-<div class="sourceCode" id="cb43"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rowwise.html">rowwise</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>extra_avg <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="fu"><a href="https://dplyr.tidyverse.org/reference/c_across.html">c_across</a></span><span class="op">(</span><span class="va">i01</span><span class="op">:</span><span class="va">i10</span><span class="op">)</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">extra_avg</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">ungroup</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html">slice_head</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>extra <span class="sc">|&gt;</span> </span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rowwise</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">extra_avg =</span> <span class="fu">mean</span>(<span class="fu">c_across</span>(i01<span class="sc">:</span>i10))) <span class="sc">|&gt;</span> </span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(extra_avg) <span class="sc">%&gt;%</span> </span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">3</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -1119,18 +1180,21 @@ Tabelle&nbsp;11.1: Extraversion-Score berechen
 </div>
 </div>
 </div>
-</section></section></section><section id="standardisieren-mit-z-werten" class="level3" data-number="11.2.9"><h3 data-number="11.2.9" class="anchored" data-anchor-id="standardisieren-mit-z-werten">
-<span class="header-section-number">11.2.9</span> Standardisieren mit z-Werten</h3>
+</section>
+</section>
+</section>
+<section id="standardisieren-mit-z-werten" class="level3" data-number="11.2.9">
+<h3 data-number="11.2.9" class="anchored" data-anchor-id="standardisieren-mit-z-werten"><span class="header-section-number">11.2.9</span> Standardisieren mit z-Werten</h3>
 <p>Man kann die Aussagekraft eines Mittelwerts noch erhöhen, in dem man ihn standardisiert, z. B. mit der z-Transformation. Das geht zum Beispiel so:</p>
 <div class="cell">
-<div class="sourceCode" id="cb44"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra_std</span> <span class="op">&lt;-</span> <span class="va">extra</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu">standardize</span><span class="op">(</span>select <span class="op">=</span> <span class="va">extra_mean</span>, append <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>extra_std <span class="ot">&lt;-</span> extra <span class="sc">%&gt;%</span> </span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">standardize</span>(<span class="at">select =</span> extra_mean, <span class="at">append =</span> <span class="cn">TRUE</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Die Funktion <code>standardize()</code> z-standardisiert eine oder mehrere angegebene Spalten. Setzt man den Schatler <code>append</code> auf <code>TRUE</code>, werden neue Spalten erzeugt, deren Namen gleich dem alten Namen plus dem Suffix <code>_z</code> entspricht. Betrachten wir die ersten drei Zeilen:</p>
 <div class="cell">
-<div class="sourceCode" id="cb45"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra_std</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">extra_mean</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/slice.html">slice_head</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a>extra_std <span class="sc">%&gt;%</span> </span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(extra_mean) <span class="sc">%&gt;%</span> </span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice_head</span>(<span class="at">n =</span> <span class="dv">3</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -1140,8 +1204,10 @@ Tabelle&nbsp;11.1: Extraversion-Score berechen
 </div>
 </div>
 <p>Zu beachten ist, dass der Mittelwert der Stichprobe und deren Standardabweichung als Referenzwerte herangezogen wurden, nicht die entsprechenden Größen der Normierungsstichprobe.</p>
-</section></section><section id="aufgaben" class="level2" data-number="11.3"><h2 data-number="11.3" class="anchored" data-anchor-id="aufgaben">
-<span class="header-section-number">11.3</span> Aufgaben</h2>
+</section>
+</section>
+<section id="aufgaben" class="level2" data-number="11.3">
+<h2 data-number="11.3" class="anchored" data-anchor-id="aufgaben"><span class="header-section-number">11.3</span> Aufgaben</h2>
 <p>Im Folgenden ist eine Auswahl an Aufgaben zur praktischen Datenanalyse vorgestellt. Das sind genau die Probleme, auf die Sie treffen (könnten), wenn Sie Ihre eigenen Daten auswerten, jetzt oder bei einer späteren Analyse. Hier ist eine Auwahl an Aufgaben auf dem Bereich “Datenjudo”:</p>
 <ul>
 <li><a href="https://datenwerk.netlify.app/posts/tidy1/tidy1">tidy1</a></li>
@@ -1150,19 +1216,27 @@ Tabelle&nbsp;11.1: Extraversion-Score berechen
 <li><a href="https://datenwerk.netlify.app/posts/filter-na1/filter-na1">filter-na1</a></li>
 <li><a href="https://datenwerk.netlify.app/posts/filter-na2/filter-na2">filter-na2</a></li>
 <li><a href="https://datenwerk.netlify.app/posts/filter-na4/filter-na4">filter-na4</a></li>
-</ul></section><section id="fallstudien" class="level2" data-number="11.4"><h2 data-number="11.4" class="anchored" data-anchor-id="fallstudien">
-<span class="header-section-number">11.4</span> Fallstudien</h2>
+</ul>
+</section>
+<section id="fallstudien" class="level2" data-number="11.4">
+<h2 data-number="11.4" class="anchored" data-anchor-id="fallstudien"><span class="header-section-number">11.4</span> Fallstudien</h2>
 <ul>
 <li><a href="https://data-se.netlify.app/2021/05/28/yacsda-seitenspr%C3%BCnge/">Seitensprünge</a></li>
 <li><a href="https://lsinks.github.io/posts/2023-04-25-tidytuesday-marathon/marathon.html">London Marathon</a></li>
 </ul>
 
 
-</section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><hr>
+</section>
+<aside id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr>
 <ol>
 <li id="fn1"><p>Haben ich eigentlich schon einmal erwähnt, dass Sie ggf. die Pakete zuerst (einmalig) installieren müssen, bevor Sie sie verwenden können?<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>Sanity Check, hört sich cooler an<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-</ol></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</ol>
+</aside>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -1385,24 +1459,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-      }
-    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -1437,11 +1493,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
+      return note.innerHTML;
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -1489,12 +1541,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
-      }
+      return note.innerHTML;
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -1753,18 +1800,21 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="./080-Auswerten.html" class="pagination-link" aria-label="Auswerten: Grundlagen">
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./080-Auswerten.html" class="pagination-link  aria-label=" &lt;span="" grundlagen&lt;="" span&gt;"="">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Auswerten: Grundlagen</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./090-Modellieren.html" class="pagination-link" aria-label="Auswerten: Modellieren">
+      <a href="./090-Modellieren.html" class="pagination-link" aria-label="<span class='chapter-number'>12</span>&nbsp; <span class='chapter-title'>Auswerten: Modellieren</span>">
         <span class="nav-page-text"><span class="chapter-number">12</span>&nbsp; <span class="chapter-title">Auswerten: Modellieren</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+
 
 
 

@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.553">
+<meta name="generator" content="quarto-1.4.527">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
 <title>Forschungsprojekt - 9&nbsp; Kausalinferenz</title>
 <style>
 code{white-space: pre-wrap;}
@@ -73,6 +76,7 @@ div.csl-indent {
   margin-left: 2em;
 }</style>
 
+
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
@@ -95,7 +99,8 @@ div.csl-indent {
 <link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -121,8 +126,14 @@ div.csl-indent {
     "search-submit-button-title": "Abschicken",
     "search-label": "Suchen"
   }
-}</script><link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
-<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+}</script>
+<link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
 const typesetMath = (el) => {
   if (window.MathJax) {
     // MathJax Typeset
@@ -147,12 +158,17 @@ const typesetMath = (el) => {
 window.Quarto = {
   typesetMath
 };
-</script><link rel="stylesheet" href="styles.css">
+</script>
+
+<link rel="stylesheet" href="styles.css">
 </head>
+
 <body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Seitenleiste umschalten" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
@@ -163,15 +179,20 @@ window.Quarto = {
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="./index.html" class="sidebar-logo-link">
-      <img src="./img/fopra-logo-small.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none"></a>
+      <img src="./img/fopra-logo-small.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
+      </a>
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Forschungsprojekt</a> 
         <div class="sidebar-tools-main">
-    <a href="https://github.com/sebastiansauer/fopra" title="Quellcode" class="quarto-navigation-tool px-1" aria-label="Quellcode"><i class="bi bi-github"></i></a>
+    <a href="https://github.com/sebastiansauer/fopra" title="Source Code" class="quarto-navigation-tool px-1" aria-label="Source Code"><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Dunkelmodus umschalten"><i class="bi"></i></a>
 </div>
     </div>
@@ -183,7 +204,7 @@ window.Quarto = {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-<li class="sidebar-item sidebar-item-section">
+        <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true">
  <span class="menu-text">Organisatorisches</span></a>
@@ -191,15 +212,15 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Hinweise</span></span></a>
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
@@ -208,8 +229,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./010-rahmen.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Rahmen: Hallo, Forschung!</span></span></a>
@@ -228,7 +249,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="true">
@@ -237,8 +258,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./040-Populationsbeschreibung.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Beschreiben</span></span></a>
@@ -269,7 +290,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
@@ -278,8 +299,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./080-Auswerten.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Auswerten: Grundlagen</span></span></a>
@@ -298,7 +319,7 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-</li>
+  </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" aria-expanded="true">
@@ -307,8 +328,8 @@ window.Quarto = {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">
-<li class="sidebar-item">
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./100-Statistiken-berichten.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Auswerten: Berichten von Statistiken</span></span></a>
@@ -327,36 +348,38 @@ window.Quarto = {
   </div>
 </li>
       </ul>
-</li>
+  </li>
     </ul>
-</div>
-</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Inhaltsverzeichnis</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Inhaltsverzeichnis</h2>
    
   <ul>
-<li>
-<a href="#lernsteuerung" id="toc-lernsteuerung" class="nav-link active" data-scroll-target="#lernsteuerung"><span class="header-section-number">9.1</span> Lernsteuerung</a>
+  <li><a href="#lernsteuerung" id="toc-lernsteuerung" class="nav-link active" data-scroll-target="#lernsteuerung"><span class="header-section-number">9.1</span> Lernsteuerung</a>
   <ul class="collapse">
-<li><a href="#lernziele" id="toc-lernziele" class="nav-link" data-scroll-target="#lernziele"><span class="header-section-number">9.1.1</span> Lernziele</a></li>
+  <li><a href="#lernziele" id="toc-lernziele" class="nav-link" data-scroll-target="#lernziele"><span class="header-section-number">9.1.1</span> Lernziele</a></li>
   <li><a href="#position-im-lernpfad" id="toc-position-im-lernpfad" class="nav-link" data-scroll-target="#position-im-lernpfad"><span class="header-section-number">9.1.2</span> Position im Lernpfad</a></li>
-  <li><a href="#ben%C3%B6tigte-r-pakete" id="toc-benötigte-r-pakete" class="nav-link" data-scroll-target="#ben%C3%B6tigte-r-pakete"><span class="header-section-number">9.1.3</span> Benötigte R-Pakete</a></li>
+  <li><a href="#benötigte-r-pakete" id="toc-benötigte-r-pakete" class="nav-link" data-scroll-target="#benötigte-r-pakete"><span class="header-section-number">9.1.3</span> Benötigte R-Pakete</a></li>
   <li><a href="#tldr" id="toc-tldr" class="nav-link" data-scroll-target="#tldr"><span class="header-section-number">9.1.4</span> tl;dr</a></li>
-  </ul>
-</li>
-  <li><a href="#einf%C3%BChrung-in-die-kausalanalyse" id="toc-einführung-in-die-kausalanalyse" class="nav-link" data-scroll-target="#einf%C3%BChrung-in-die-kausalanalyse"><span class="header-section-number">9.2</span> Einführung in die Kausalanalyse</a></li>
+  </ul></li>
+  <li><a href="#einführung-in-die-kausalanalyse" id="toc-einführung-in-die-kausalanalyse" class="nav-link" data-scroll-target="#einführung-in-die-kausalanalyse"><span class="header-section-number">9.2</span> Einführung in die Kausalanalyse</a></li>
   <li><a href="#kausalanalyse-praktisch-dagitty.net" id="toc-kausalanalyse-praktisch-dagitty.net" class="nav-link" data-scroll-target="#kausalanalyse-praktisch-dagitty.net"><span class="header-section-number">9.3</span> Kausalanalyse praktisch: dagitty.net</a></li>
   <li><a href="#kausalanalyse-in-der-praxis" id="toc-kausalanalyse-in-der-praxis" class="nav-link" data-scroll-target="#kausalanalyse-in-der-praxis"><span class="header-section-number">9.4</span> Kausalanalyse in der Praxis</a></li>
   <li><a href="#literaturempfehlung" id="toc-literaturempfehlung" class="nav-link" data-scroll-target="#literaturempfehlung"><span class="header-section-number">9.5</span> Literaturempfehlung</a></li>
   <li><a href="#aufgaben" id="toc-aufgaben" class="nav-link" data-scroll-target="#aufgaben"><span class="header-section-number">9.6</span> Aufgaben</a></li>
-  </ul><div class="toc-actions"><ul><li><a href="https://github.com/sebastiansauer/fopra/blob/main/075-kausal.qmd" class="toc-action"><i class="bi bi-github"></i>Quellcode anzeigen</a></li><li><a href="https://github.com/sebastiansauer/fopra/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
+  </ul>
+<div class="toc-actions"><ul><li><a href="https://github.com/sebastiansauer/fopra/blob/main/075-kausal.qmd" class="toc-action"><i class="bi bi-github"></i>Quellcode anzeigen</a></li><li><a href="https://github.com/sebastiansauer/fopra/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./040-Populationsbeschreibung.html">Empirie</a></li><li class="breadcrumb-item"><a href="./075-kausal.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Kausalinferenz</span></a></li></ol></nav><div class="quarto-title">
-<h1 class="title">
-<span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Kausalinferenz</span>
-</h1>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./040-Populationsbeschreibung.html">Empirie</a></li><li class="breadcrumb-item"><a href="./075-kausal.html"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Kausalinferenz</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span class="chapter-number">9</span>&nbsp; <span class="chapter-title">Kausalinferenz</span></h1>
 </div>
 
 
@@ -370,59 +393,69 @@ window.Quarto = {
   
 
 
-</header><section id="lernsteuerung" class="level2" data-number="9.1"><h2 data-number="9.1" class="anchored" data-anchor-id="lernsteuerung">
-<span class="header-section-number">9.1</span> Lernsteuerung</h2>
-<section id="lernziele" class="level3" data-number="9.1.1"><h3 data-number="9.1.1" class="anchored" data-anchor-id="lernziele">
-<span class="header-section-number">9.1.1</span> Lernziele</h3>
+</header>
+
+
+<section id="lernsteuerung" class="level2" data-number="9.1">
+<h2 data-number="9.1" class="anchored" data-anchor-id="lernsteuerung"><span class="header-section-number">9.1</span> Lernsteuerung</h2>
+<section id="lernziele" class="level3" data-number="9.1.1">
+<h3 data-number="9.1.1" class="anchored" data-anchor-id="lernziele"><span class="header-section-number">9.1.1</span> Lernziele</h3>
 <ul>
 <li>Sie wissen, ob in Ihrer der Kausaleffekt Ihrer Hypothese identifizierbar ist.</li>
 <li>Sie wissen, wie man einen DAG erstellt und prüft, um die Identifizierbarkeit eines Kausaleffekts zu untersuchen.</li>
-</ul></section><section id="position-im-lernpfad" class="level3" data-number="9.1.2"><h3 data-number="9.1.2" class="anchored" data-anchor-id="position-im-lernpfad">
-<span class="header-section-number">9.1.2</span> Position im Lernpfad</h3>
-<p>Sie befinden sich im Abschnitt “Auswertung” in <a href="index.html#fig-ueberblick" class="quarto-xref">Abbildung&nbsp;<span>1.2</span></a>. Behalten Sie Ihren Fortschritt im Projektplan im Blick, s. <a href="index.html#fig-projektplan" class="quarto-xref">Abbildung&nbsp;<span>1.3</span></a>.</p>
-</section><section id="benötigte-r-pakete" class="level3" data-number="9.1.3"><h3 data-number="9.1.3" class="anchored" data-anchor-id="benötigte-r-pakete">
-<span class="header-section-number">9.1.3</span> Benötigte R-Pakete</h3>
+</ul>
+</section>
+<section id="position-im-lernpfad" class="level3" data-number="9.1.2">
+<h3 data-number="9.1.2" class="anchored" data-anchor-id="position-im-lernpfad"><span class="header-section-number">9.1.2</span> Position im Lernpfad</h3>
+<p>Sie befinden sich im Abschnitt “Auswertung” in <a href="#fig-ueberblick" class="quarto-xref">Abbildung&nbsp;<span class="quarto-unresolved-ref">fig-ueberblick</span></a>. Behalten Sie Ihren Fortschritt im Projektplan im Blick, s. <a href="#fig-projektplan" class="quarto-xref">Abbildung&nbsp;<span class="quarto-unresolved-ref">fig-projektplan</span></a>.</p>
+</section>
+<section id="benötigte-r-pakete" class="level3" data-number="9.1.3">
+<h3 data-number="9.1.3" class="anchored" data-anchor-id="benötigte-r-pakete"><span class="header-section-number">9.1.3</span> Benötigte R-Pakete</h3>
 <div class="cell">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://easystats.github.io/easystats/">easystats</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://mc-stan.org/rstanarm/">rstanarm</a></span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(easystats)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rstanarm)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section><section id="tldr" class="level3" data-number="9.1.4"><h3 data-number="9.1.4" class="anchored" data-anchor-id="tldr">
-<span class="header-section-number">9.1.4</span> tl;dr</h3>
-<p>In diesem Kapitel wird folgende Frage beantwortet: “Macht es überhaupt Sinn, Statistik zu bemühen und einen Effekt meiner UV auf die AV auszurechnen?”. In der Regel untersucht Ihre Forschungsfrage eine Kausalfrage. Eine Kausalfrage fragt, ob X eine Auswirkung (einen “Effekt”) auf Y hat, vgl. <a href="020-themawahl.html#sec-taxo" class="quarto-xref"><span>Kapitel 3.2.3</span></a> und <a href="020-themawahl.html#fig-ziele" class="quarto-xref">Abbildung&nbsp;<span>3.4</span></a>.</p>
+</section>
+<section id="tldr" class="level3" data-number="9.1.4">
+<h3 data-number="9.1.4" class="anchored" data-anchor-id="tldr"><span class="header-section-number">9.1.4</span> tl;dr</h3>
+<p>In diesem Kapitel wird folgende Frage beantwortet: “Macht es überhaupt Sinn, Statistik zu bemühen und einen Effekt meiner UV auf die AV auszurechnen?”. In der Regel untersucht Ihre Forschungsfrage eine Kausalfrage. Eine Kausalfrage fragt, ob X eine Auswirkung (einen “Effekt”) auf Y hat, vgl. <a href="#sec-taxo" class="quarto-xref"><span class="quarto-unresolved-ref">sec-taxo</span></a> und <a href="#fig-ziele" class="quarto-xref">Abbildung&nbsp;<span class="quarto-unresolved-ref">fig-ziele</span></a>.</p>
 <p>(Nur) wenn man aufgrund des DAGs sagen kann, dass der Effekt der UV (auf die AV) “rein” ist, also nicht von anderen Variablen überlagert wird, ist der Effekt der UV <em>identifiziert</em>.</p>
 <div id="exm-stoerche" class="theorem example">
-<p><span class="theorem-title"><strong>Beispiel 9.1</strong></span> Der Effekt von Störchen auf Babies ist nicht identifiziert. Der Einfluss von Störchen auf Babies ist konfundiert durch den Einfluss der Umwelt. Das heißt, dass der Zusammenhang von Störchen und Babies nicht kausal ist, sondern ein Scheinkorrelation, vgl. <a href="#fig-stoerche" class="quarto-xref">Abbildung&nbsp;<span>9.1</span></a>.<span class="math inline">\(\square\)</span></p>
+<p><span class="theorem-title"><strong>Beispiel 9.1 </strong></span>Der Effekt von Störchen auf Babies ist nicht identifiziert. Der Einfluss von Störchen auf Babies ist konfundiert durch den Einfluss der Umwelt. Das heißt, dass der Zusammenhang von Störchen und Babies nicht kausal ist, sondern ein Scheinkorrelation, vgl. <a href="#fig-stoerche" class="quarto-xref">Abbildung&nbsp;<span class="quarto-unresolved-ref">fig-stoerche</span></a>.<span class="math inline">\(\square\)</span></p>
 </div>
 <div class="cell">
 <div class="cell-output-display">
-<div id="fig-stoerche" class="quarto-figure quarto-figure-center quarto-float anchored">
-<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-stoerche-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="fig-stoerche" class="quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-stoerche-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="075-kausal_files/figure-html/fig-stoerche-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-stoerche-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;9.1: Kausalmodell für das Lehrbuchbeispiel ‘Störche und Babies’
-</figcaption></figure>
+</figcaption>
+</figure>
 </div>
 </div>
 </div>
-</section></section><section id="einführung-in-die-kausalanalyse" class="level2" data-number="9.2"><h2 data-number="9.2" class="anchored" data-anchor-id="einführung-in-die-kausalanalyse">
-<span class="header-section-number">9.2</span> Einführung in die Kausalanalyse</h2>
+</section>
+</section>
+<section id="einführung-in-die-kausalanalyse" class="level2" data-number="9.2">
+<h2 data-number="9.2" class="anchored" data-anchor-id="einführung-in-die-kausalanalyse"><span class="header-section-number">9.2</span> Einführung in die Kausalanalyse</h2>
 <p><a href="https://start-bayes.netlify.app/1100-kausal.html">Dieses Kapitel</a> gibt eine Einführung in die Kausalanalyse.</p>
-</section><section id="kausalanalyse-praktisch-dagitty.net" class="level2" data-number="9.3"><h2 data-number="9.3" class="anchored" data-anchor-id="kausalanalyse-praktisch-dagitty.net">
-<span class="header-section-number">9.3</span> Kausalanalyse praktisch: dagitty.net</h2>
+</section>
+<section id="kausalanalyse-praktisch-dagitty.net" class="level2" data-number="9.3">
+<h2 data-number="9.3" class="anchored" data-anchor-id="kausalanalyse-praktisch-dagitty.net"><span class="header-section-number">9.3</span> Kausalanalyse praktisch: dagitty.net</h2>
 <p><a href="http://dagitty.net/dags.html">dagitty.net</a> erlaubt, DAGs online zu zeichnen und ihre Identizierbarkeit zu prüfen.</p>
-</section><section id="kausalanalyse-in-der-praxis" class="level2" data-number="9.4"><h2 data-number="9.4" class="anchored" data-anchor-id="kausalanalyse-in-der-praxis">
-<span class="header-section-number">9.4</span> Kausalanalyse in der Praxis</h2>
+</section>
+<section id="kausalanalyse-in-der-praxis" class="level2" data-number="9.4">
+<h2 data-number="9.4" class="anchored" data-anchor-id="kausalanalyse-in-der-praxis"><span class="header-section-number">9.4</span> Kausalanalyse in der Praxis</h2>
 <ol type="1">
-<li>
-<i class="fa-solid fa-book" aria-label="book"></i> Lesen Sie die Literatur zu den Kausaleffekten zwischen Ihrer UV und AV.</li>
-<li>
-<i class="fa-solid fa-pen" aria-label="pen"></i> Zeichnen Sie bei Dagitty DAGs, die zur Literatur passen.</li>
-<li>
-<i class="fa-solid fa-file" aria-label="file"></i> Lassen Sie sich von Dagitty angeben, welche Variablen Sie kontrollieren müssen, um den Kausaleffekt zu identifizieren.</li>
+<li><i class="fa-solid fa-book" aria-label="book"></i> Lesen Sie die Literatur zu den Kausaleffekten zwischen Ihrer UV und AV.</li>
+<li><i class="fa-solid fa-pen" aria-label="pen"></i> Zeichnen Sie bei Dagitty DAGs, die zur Literatur passen.</li>
+<li><i class="fa-solid fa-file" aria-label="file"></i> Lassen Sie sich von Dagitty angeben, welche Variablen Sie kontrollieren müssen, um den Kausaleffekt zu identifizieren.</li>
 </ol>
-<p>Gute Nachricht: Ein <em>schwacher</em> konfundierender Einfluss darf als “marginal” deklariert und ignoriert werden. Fragt sich nur, ab wann ist schwach schwach? Eine Antwort darauf ist, wenn der entsprechende Regressionskoeffizient kleiner ist als 5% der Streuung (SD) der AV <span class="citation" data-cites="kruschke_rejecting_2018">(<a href="130-references.html#ref-kruschke_rejecting_2018" role="doc-biblioref">Kruschke 2018</a>)</span>.</p>
+<p>Gute Nachricht: Ein <em>schwacher</em> konfundierender Einfluss darf als “marginal” deklariert und ignoriert werden. Fragt sich nur, ab wann ist schwach schwach? Eine Antwort darauf ist, wenn der entsprechende Regressionskoeffizient kleiner ist als 5% der Streuung (SD) der AV <span class="citation" data-cites="kruschke_rejecting_2018">(<a href="#ref-kruschke_rejecting_2018" role="doc-biblioref">Kruschke 2018</a>)</span>.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -436,15 +469,17 @@ Hinweis
 <p>Nicht jede Forschungsfrage ist identifizierbar. Es ist keine Schande, wenn man erkennt, dass der Kausaleffekt der eigenen Studie nicht identifizierbar ist. Im Gegenteil: Sie haben eine wissenschaftlichen Fortschritt erzielt. Denn vor Ihrer Studie war (evtl.) nicht klar, dass es noch ein Problem zu lösen gibt, bevor man die Forschungsfrage beantworten kann. Man war falschen Tatsachen aufgesessen. Jetzt, durch Ihre Studie, ist man einen Schritt weiter: Man weiß jetzt, wo das Problem liegt - und irgendwann wird die Forschung (vielleicht) auch diesen Kausaleffekt identifizieren. <i class="fa-solid fa-award" aria-label="award"></i> Für Ihre Note in einer Qualifizierungsarbeit spielt es keine Rolle, ob der Effekt identifizierbar ist. Für Ihre Note zählt alleine, ob Sie sorgfältig gearbeitet haben.<span class="math inline">\(\square\)</span></p>
 </div>
 </div>
-</section><section id="literaturempfehlung" class="level2" data-number="9.5"><h2 data-number="9.5" class="anchored" data-anchor-id="literaturempfehlung">
-<span class="header-section-number">9.5</span> Literaturempfehlung</h2>
-<p><span class="citation" data-cites="huntington-klein_effect_2022">Huntington-Klein (<a href="130-references.html#ref-huntington-klein_effect_2022" role="doc-biblioref">2022</a>)</span> beschreibt auf anschauliche Weise die Praxis der Versuchsplanung mit einem Schwerpunkt auf die Kausalanalyse. Ein weiteres Plus ist, dass das Buch <a href="https://theeffectbook.net/">frei im Internet zu lesen</a> ist. Tipp: Mit dem Übersetzungtool eines jeden Browers kann man sich das Buch schnell auf Deutsch übersetzen lassen.</p>
-</section><section id="aufgaben" class="level2" data-number="9.6"><h2 data-number="9.6" class="anchored" data-anchor-id="aufgaben">
-<span class="header-section-number">9.6</span> Aufgaben</h2>
+</section>
+<section id="literaturempfehlung" class="level2" data-number="9.5">
+<h2 data-number="9.5" class="anchored" data-anchor-id="literaturempfehlung"><span class="header-section-number">9.5</span> Literaturempfehlung</h2>
+<p><span class="citation" data-cites="huntington-klein_effect_2022">Huntington-Klein (<a href="#ref-huntington-klein_effect_2022" role="doc-biblioref">2022</a>)</span> beschreibt auf anschauliche Weise die Praxis der Versuchsplanung mit einem Schwerpunkt auf die Kausalanalyse. Ein weiteres Plus ist, dass das Buch <a href="https://theeffectbook.net/">frei im Internet zu lesen</a> ist. Tipp: Mit dem Übersetzungtool eines jeden Browers kann man sich das Buch schnell auf Deutsch übersetzen lassen.</p>
+</section>
+<section id="aufgaben" class="level2" data-number="9.6">
+<h2 data-number="9.6" class="anchored" data-anchor-id="aufgaben"><span class="header-section-number">9.6</span> Aufgaben</h2>
 <p>Im <a href="https://datenwerk.netlify.app/">Datenwerk</a> unter dem Tag <a href="https://datenwerk.netlify.app/#category=causal">causal</a> finden sich eine Reihe von Aufgaben zur Kausalanalyse.</p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-huntington-klein_effect_2022" class="csl-entry" role="listitem">
 Huntington-Klein, Nick. 2022. <em>The Effect: An Introduction to Research Design and Causality</em>. <span>Boca Raton</span>: <span>CRC Press, Taylor &amp; Francis Group</span>. <a href="https://theeffectbook.net/">https://theeffectbook.net/</a>.
 </div>
@@ -452,7 +487,10 @@ Huntington-Klein, Nick. 2022. <em>The Effect: An Introduction to Research Design
 Kruschke, John K. 2018. <span>„Rejecting or <span>Accepting Parameter Values</span> in <span>Bayesian Estimation</span>“</span>. <em>Advances in Methods and Practices in Psychological Science</em> 1 (2): 270–80. <a href="https://doi.org/10.1177/2515245918771304">https://doi.org/10.1177/2515245918771304</a>.
 </div>
 </div>
-</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -675,24 +713,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
-    }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
-      }
-    }
   function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
@@ -727,11 +747,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
+      return note.innerHTML;
     });
   }
   const xrefs = window.document.querySelectorAll('a.quarto-xref');
@@ -779,12 +795,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
-      }
+      return note.innerHTML;
     }
   }
   for (var i=0; i<xrefs.length; i++) {
@@ -1043,18 +1054,21 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
-      <a href="./070-Erheben.html" class="pagination-link" aria-label="Erheben">
+</script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="./070-Erheben.html" class="pagination-link  aria-label=" &lt;span="">
         <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Erheben</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./080-Auswerten.html" class="pagination-link" aria-label="Auswerten: Grundlagen">
+      <a href="./080-Auswerten.html" class="pagination-link" aria-label="<span class='chapter-number'>10</span>&nbsp; <span class='chapter-title'>Auswerten: Grundlagen</span>">
         <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Auswerten: Grundlagen</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
 </div> <!-- /content -->
+
 
 
 
