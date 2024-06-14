@@ -47,12 +47,24 @@ Sie befinden sich im Abschnitt "Auswerten" in @fig-ueberblick.
 Behalten Sie Ihren Fortschritt im Projektplan im Blick, s. @fig-projektplan.
 
 
-### Grundlagen der statischen Modellierung
 
+
+
+### Weitere Lernmaterialien
+
+#### Skript Bayes-Modellierung 📖
 
 Die Grundlagen der statistischen Modellierung mit einem Fokus auf Bayes-Modellen können Sie [hier](https://start-bayes.netlify.app/) nachlesen.
 
 
+#### Videos 📽️
+
+In einigen Playlists des Autors finden Sie Videos passend zu diesem Kapitel:
+
+- [Playlist "Forschungspraxis](https://youtube.com/playlist?list=PLRR4REmBgpIEh_YSXawzTs6jybXFcXJxM&si=R-YT9lsIOuW_vXP-)
+- [Playlist "ROPE"](https://www.youtube.com/playlist?list=PLRR4REmBgpIGKGnvnpno2Cc3kq294RQsl)
+- [Playlist "Bayes"](https://www.youtube.com/playlist?list=PLRR4REmBgpIFRDF5WvsNM9Bqj_bhYJLHG)
+- [Playlist "Regression](https://www.youtube.com/playlist?list=PLRR4REmBgpIFoiu3mVXF0zISTKzBOYfdy)
 
 ### Überblick
 
@@ -311,6 +323,14 @@ Das ist nicht viel; aber streng genommen heißt das als Fazit:
 >    Wir können nicht ausschließen, dass der Effekt von `g` ein praktisch unbedeutsamen Wert hat,
 also sehr klein und nahe der Null ist. Diese Wahrscheinlichkeit ist allerdings nicht hoch. Es ist somit keine klare Entscheidung möglich.
 
+Ist man sich nicht sicher, wie der ROPE-Wert zu interpretieren ist,
+kann man auch R fragen:
+
+```{r}
+interpret_rope(0.03)
+```
+
+
 
 Das gleiche Ergebnis zeigt uns anschaulicher @fig-m1-rope.
 
@@ -568,7 +588,7 @@ plot(rope(m_bringtnixtin2)) + scale_fill_okabeito()
 
 ## Beobachtungsstudien
 
-Gängige Forschungsfragen für Beobachtungsstudien sind [hier](https://start-bayes.netlify.app/https://start-bayes.netlify.app/1000-metrische-av) erläutert.
+Gängige Forschungsfragen für Beobachtungsstudien sind im Skript [Start:Byes](https://start-bayes.netlify.app/) aufgeführt, schauen Sie mal [hier]https://start-bayes.netlify.app/1000-metrische-av).
 
 
 
