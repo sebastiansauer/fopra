@@ -123,18 +123,18 @@ Ein anderer Grund ist, dass Sie mit einer Skriptsprache (wie R) ein "Kochrezept"
 Etwas ausführlicher ist der Sachverhalt im Listing @lst-bind-rows dargestellt.
 
 Sagen wir, wir haben zwei Tabellen, die wir "untereinander" (also zeilenweise) "zusammenkleben" möchten.
-Dann hilft uns `bind_rows()`.
+Dann hilft uns `bind_rows()` (aus `tidyverse`).
 
 
 :::{#lst-bind-rows}
 
 ```{r}
-tab1 <- mtcars %>% slice(1:16)
-tab2 <- mtcars %>% slice(17:32)
+tab1 <- mtcars %>% slice(1:16)  # Datensatz 1
+tab2 <- mtcars %>% slice(17:32)  # Datensatz 2
 
-mtcars_gesamt <-
-  tab1 %>% 
-  bind_rows(tab2)  # aus `tidyverse`
+mtcars_gesamt <-  # Datensatz gesamt ist
+  tab1 %>%    # Datensatz 1 
+  bind_rows(tab2)  # und angebunden Datensatz 2 
 ```
 
 :::
@@ -233,8 +233,8 @@ Der Einfachheit halber erzeugen wir uns eine einfache Tabelle, mit ein paar Spal
 die *als Text* formatierte Zahlen enthalten:
 
 ```{r}
-d <- tibble(i01 = c("1", "3", "4"),  # von 1 bis 4
-            i02 = c("-2", "+3", "-1"),  # von -3 bis -3
+d <- tibble(i01 = c("1", "3", "4"),  # von 1 bis 4 als Text formatiert
+            i02 = c("-2", "+3", "-1"),  # von -3 bis -3 als Text formatiert
             i03 = factor(c("-2", "+2", "-1")))  # als Faktorvariable formatiert
 d
 ```

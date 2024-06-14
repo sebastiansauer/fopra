@@ -24,7 +24,7 @@ theme_set(theme_minimal())
 - Sie können die Modellformel Ihrer Forschungsfrage nennen.
 - Sie können Ihre Modellformel (korrekt) in R spezifizieren.
 - Sie können Ihr Modell in R berechnen und die Ausgabe interpretieren.
-- Sie können die Gültigkeit bzw. die Grenzen der Aussagen Ihres Modells einschätzen.
+<!-- - Sie können die Gültigkeit bzw. die Grenzen der Aussagen Ihres Modells einschätzen. -->
 
 
 ### Benötigte R-Pakete
@@ -59,7 +59,7 @@ Die Grundlagen der statistischen Modellierung mit einem Fokus auf Bayes-Modellen
 In diesem Kapitel sind die grundlegenden Verfahren zur Modellierung und inferenzstatistischen Absicherung Ihrer Forschungsfragen angerissen.
 Die Darstellung zielt auf ein "so-geht's" ab, nicht auf eine vollständige Darstellung aller Auswertungsmöglichkeiten.
 
-## 1 between-Variable
+## 1 between-Variable, nur Nachher-Messung
 
 ### Design
 
@@ -217,7 +217,11 @@ Sowohl das R-Paket `ggstatsplot` als auch das R-Paket `ggpubr` bieten ansprechen
 
 
 Wir berechnen ein lineares Modell mit der Modellformel `y2 ~ g`. 
-Die Ergebnisse sind in @tbl-m1-params zu sehen.
+
+
+#### Parameterschätzung
+
+Die Ergebnisse unseres Modells `m_bringtnixtin` sind in @tbl-m1-params zu sehen.
 
 ```{r}
 #| label: tbl-m1-params
@@ -243,7 +247,14 @@ Die Grenzen eines 95%-CI für die UV liegen bei `r m1_lo_ci` bzw. `r m1_high_ci`
 Dieser Bereich enthält die Null, vgl. @fig-m1-params.
 Daher kann nicht ausgeschlossen werden,
 dass Bringtnixtin *nix* bringt.
-Anders gesagt: Die Nullhypothese kann nicht verworfen werden.
+Anders gesagt: Die (strenge) Nullhypothese kann *nicht* verworfen werden. Der Wert Null ist ein plausibler Wert für den Parameter, da er im 95%-CI enthalten ist.
+
+
+:::{.callout-note}
+- Ist der Wert Null NICHT im 95%-Schätzintervall enthalten, so heißt das, dass die Null(hypothese) verworfen werden. 
+- Ist der Wert Null im 95%-Schätzintervall enthalten, so heißt das, dass die Null(hypothese) NICHT verworfen werden. 
+$\square$
+:::
 
 
 Die Punkt- und Intervallschätzer (95%-ETI) für Achsenabschnitt und Regressiongewicht von `g` sind in @fig-m1-params visualisiert.
@@ -254,9 +265,17 @@ Ein *Interschätzer* schätzt einen Wertebereich für diesen unbekannten Wert. $
 :::
 
 ```{r}
-#| label: fig-m1-params
-#| fig-cap: "Parameter des Modells `m_bringtnixtin (95%-ETI)`"
+#| eval: false
 parameters(m_bringtnixtin) %>% plot(show_intercept = TRUE)
+```
+
+
+```{r}
+#| label: fig-m1-params
+#| fig-cap: "Parameter des Modells `m_bringtnixtin (95%-ETI)`; der ROPE ist als vertikaler blauer Balken markiert"
+parameters(m_bringtnixtin) %>% plot(show_intercept = TRUE) +
+  geom_rect(aes(xmin = -.13, xmax = 0+.13, ymin = -Inf, ymax = Inf), 
+              fill = "lightblue", alpha = .3, color = NA)
 ```
 
 
@@ -269,10 +288,12 @@ parameters(m_bringtnixtin) %>% plot(show_intercept = TRUE)
 >   👩‍🏫 Herr Professor Sauer, auch ein negatives Ergebnis bringt die Wissenschaft weiter.
 
 
-Mit dem Rope-Verfahren kann man testen, 
-ob ein Bereich *um die Null herum*, also "Null plus-minus ein bisschen" im Hauptbereich im Hauptbereich (95%-KI) enthalten ist.
+#### Praktisch-Null-Hypothese (ROPE)
 
-Testen wir eine Nullhypothese mit dem ROPE-Verfahren: `rope(m_bringtnixtin)`, s. @tbl-m1-rope und @fig-m1-rope.
+Mit dem ROPE-Verfahren kann man eine "Praktisch-Null-Hypothese" testen, 
+also ob ein Bereich *um die Null herum*, also "Null plus-minus ein bisschen" im Hauptbereich im Hauptbereich (95%-KI) enthalten ist.
+
+In R geht das so: `rope(m_bringtnixtin)`, s. @tbl-m1-rope und @fig-m1-rope.
 
 
 
@@ -284,11 +305,27 @@ Testen wir eine Nullhypothese mit dem ROPE-Verfahren: `rope(m_bringtnixtin)`, s.
 rope(m_bringtnixtin) %>% print_md()
 ```
 
+@tbl-m1-rope zeigt uns, dass 3% des 95%-HDIs im ROPE-Bereich liegt.
+Das ist nicht viel; aber streng genommen heißt das als Fazit:
+
+>    Wir können nicht ausschließen, dass der Effekt von `g` ein praktisch unbedeutsamen Wert hat,
+also sehr klein und nahe der Null ist. Diese Wahrscheinlichkeit ist allerdings nicht hoch. Es ist somit keine klare Entscheidung möglich.
+
+
+Das gleiche Ergebnis zeigt uns anschaulicher @fig-m1-rope.
+
+```{r}
+#| eval: false
+rope(m_bringtnixtin) %>% plot()
+```
+
+
+
 ```{r}
 #| label: fig-m1-rope
 #| fig-cap: "ROPE für Modell `m_bringtnixtin`"
 
-plot(rope(m_bringtnixtin)) + scale_fill_okabeito()
+plot(rope(m_bringtnixtin)) + scale_fill_okabeito() 
 ```
 
 [`scale_fill_okabeito()`](https://malcolmbarrett.github.io/ggokabeito/reference/scale_okabe_ito.html) ist eine Funktion aus dem Metapaket `{easystats}`.^[Genauer gesagt aus dem Paket `{see}`, das ein Teil des Metapakets `{easystasts}` ist.]
@@ -321,7 +358,9 @@ Aber eine kleine Chance, dass der Effekt von `g` doch (ungefähr) Null oder soga
 >   👩‍🏫 Herr Professor Sauer, wir müssen erst einmal in Ruhe die Studie replizieren. Eine Schwalbe macht noch keinen Frühling.
 
 
-Berechnen wir abschließend noch eine standardisierte Effektstärke, $R²$.
+#### Modellgüte
+
+Berechnen wir abschließend noch eine standardisierte Effektstärke der Modellgüte, $R²$.
 
 ```{r}
 r2(m_bringtnixtin)
@@ -350,7 +389,8 @@ Daher haben sie sowohl vor der Intervention (`t1`) als auch nach der Interventio
 
 
 :::{.callout-note}
-Eine Vorher-Nachher-Messung hat den Verteil, dass sie - im Gegensatz zur Nur-Nachher-Messung - unterschiedliche Ausgangswerte in der AV herausrechnet. 
+Eine Vorher-Nachher-Messung hat den Verteil, dass sie - im Gegensatz zur Nur-Nachher-Messung - unterschiedliche Ausgangswerte in der AV herausrechnet.
+Damit kommt man oft zu belastbareren, also besseren, Ergebnissen.
 Bei großen Gruppen wird sich bei einer randomisierten Zuweisung zu den Gruppen der Ausgangswert der AV angleichen. Bei nicht so großen Gruppen kann aber auch bei Randomisierung ein - mitunter erheblicher - Unterschied zwischen den Gruppen verbleiben.
 Findet man bei der Post-Messung einen Effekt, so kann es sein, dass dieser nicht auf die Intervention beruht, sondern auf die von vornherein vorhandenen Unterschieden zwischen den Gruppen.$\square$
 :::
@@ -495,15 +535,35 @@ parameters(m_bringtnixtin2) %>%
 @fig-bringtnixtin2-params zeigt die Parameterwerte für `m_bringtnixtin2`,
 
 ```{r}
-#| fig-cap: "Parameterwerte von m_bringtnixtin2 (Intercept ist nicht dargestellt), 95%-ETI; die Null ist nicht enthalten, der Mittelwert ist negativ."
+#| fig-cap: "Parameterwerte von m_bringtnixtin2 (Intercept ist nicht dargestellt), 95%-ETI; die Null ist nicht enthalten, der Mittelwert ist negativ. ROPE ist als blaues Balken eingezeichnet. Wir können die exakte und die praktische Nullhypothese ausschließen."
 #| label: fig-bringtnixtin2-params
-plot(parameters(m_bringtnixtin2))
+plot(parameters(m_bringtnixtin2)) +
+  geom_rect(aes(xmin = -.023, xmax = 0+.023, ymin = -Inf, ymax = Inf), 
+              fill = "lightblue", color = NA)
 ```
 
 
 Wie man den Parameterwerten entnehmen kann,
 ist sich das Modell sehr sicher, dass der Effekt von Bringtnixtin *negativ* ist.
 <!-- ist sich das Modell nicht sicher, welche Richtung der Effekt von Bringtnixtin hat. -->
+
+
+Testen wir noch die Praktisch-Null-Hypothese (für den Effekt von `g` auf `d`) mit dem ROPE-Verfahern:
+
+```{r}
+rope(m_bringtnixtin2)
+```
+
+
+Das Ergebnis zeigt uns, dass wir die Praktisch-Null-Hypothese ausschließen können:
+Null Prozent des 95%-HDI liegt im ROPE.
+
+```{r}
+#| label: fig-rope-m_bringtnixtin2
+#| fig-cap: "95%-HDI und ROPE überlappt nicht: Wir verwerfen die ROPE Hypothese"
+plot(rope(m_bringtnixtin2)) + scale_fill_okabeito()
+```
+
 
 
 ## Beobachtungsstudien
@@ -746,8 +806,8 @@ Da es zwei UVs gibt, gibt es auch zwei Hypothesen:
 
 Die Modellformel lautet: `y ~ 1 + g`.
 Das kann man synonym so schreiben: `y ~ g`.
-`y` meint die Behaltensleistung;
-statisch erfassen wir den *Effekt* auf `y` anhand des Differenzmaßes `d`.
+Dabei meint `y` meint die Behaltensleistung;
+statistisch erfassen wir den *Effekt* auf `y` anhand des Differenzmaßes `d`.
 
 
 

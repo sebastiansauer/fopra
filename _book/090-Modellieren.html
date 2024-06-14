@@ -372,7 +372,7 @@ window.Quarto = {
   <li><a href="#grundlagen-der-statischen-modellierung" id="toc-grundlagen-der-statischen-modellierung" class="nav-link" data-scroll-target="#grundlagen-der-statischen-modellierung"><span class="header-section-number">12.1.4</span> Grundlagen der statischen Modellierung</a></li>
   <li><a href="#überblick" id="toc-überblick" class="nav-link" data-scroll-target="#überblick"><span class="header-section-number">12.1.5</span> Überblick</a></li>
   </ul></li>
-  <li><a href="#between-variable" id="toc-between-variable" class="nav-link" data-scroll-target="#between-variable"><span class="header-section-number">12.2</span> 1 between-Variable</a>
+  <li><a href="#between-variable-nur-nachher-messung" id="toc-between-variable-nur-nachher-messung" class="nav-link" data-scroll-target="#between-variable-nur-nachher-messung"><span class="header-section-number">12.2</span> 1 between-Variable, nur Nachher-Messung</a>
   <ul class="collapse">
   <li><a href="#design" id="toc-design" class="nav-link" data-scroll-target="#design"><span class="header-section-number">12.2.1</span> Design</a></li>
   <li><a href="#deskriptive-analyse" id="toc-deskriptive-analyse" class="nav-link" data-scroll-target="#deskriptive-analyse"><span class="header-section-number">12.2.2</span> Deskriptive Analyse</a></li>
@@ -440,8 +440,7 @@ window.Quarto = {
 <ul>
 <li>Sie können die Modellformel Ihrer Forschungsfrage nennen.</li>
 <li>Sie können Ihre Modellformel (korrekt) in R spezifizieren.</li>
-<li>Sie können Ihr Modell in R berechnen und die Ausgabe interpretieren.</li>
-<li>Sie können die Gültigkeit bzw. die Grenzen der Aussagen Ihres Modells einschätzen.</li>
+<li>Sie können Ihr Modell in R berechnen und die Ausgabe interpretieren. <!-- - Sie können die Gültigkeit bzw. die Grenzen der Aussagen Ihres Modells einschätzen. --></li>
 </ul>
 </section>
 <section id="benötigte-r-pakete" class="level3" data-number="12.1.2">
@@ -467,8 +466,8 @@ window.Quarto = {
 <p>In diesem Kapitel sind die grundlegenden Verfahren zur Modellierung und inferenzstatistischen Absicherung Ihrer Forschungsfragen angerissen. Die Darstellung zielt auf ein “so-geht’s” ab, nicht auf eine vollständige Darstellung aller Auswertungsmöglichkeiten.</p>
 </section>
 </section>
-<section id="between-variable" class="level2" data-number="12.2">
-<h2 data-number="12.2" class="anchored" data-anchor-id="between-variable"><span class="header-section-number">12.2</span> 1 between-Variable</h2>
+<section id="between-variable-nur-nachher-messung" class="level2" data-number="12.2">
+<h2 data-number="12.2" class="anchored" data-anchor-id="between-variable-nur-nachher-messung"><span class="header-section-number">12.2</span> 1 between-Variable, nur Nachher-Messung</h2>
 <section id="design" class="level3" data-number="12.2.1">
 <h3 data-number="12.2.1" class="anchored" data-anchor-id="design"><span class="header-section-number">12.2.1</span> Design</h3>
 <p><span class="citation" data-cites="sauer_effect_2023">Sauer und Lustig (<a href="130-references.html#ref-sauer_effect_2023" role="doc-biblioref">2023</a>)</span> untersuchten in einer Querschnittsstudie den Effekt des Wirkstoff <em>Bringnixtin</em> auf die fluide Intelligenz. Die Autoren nahmen an, dass der Wirkstoff den individuellen Wert der abhängigen Variable erhöhen würde.</p>
@@ -533,7 +532,7 @@ Hinweis
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>d_bringtnixtin_path <span class="ot">&lt;-</span> <span class="st">"https://raw.githubusercontent.com/sebastiansauer/fopra/main/data/d_bringtnixtin.csv"</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>d_bringtnixtin <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(d_bringtnixtin_path)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p><a href="#dnldts4979" onclick="fetch('data:text/csv;base64,aWQsZyx5MSx5MixkCjEsMCwxLjM3MDk1ODQ0NzE0NjY2ODUsMS40MTIxNTgxNjcxODY3MTkyLDAuMDQxMTk5NzIwMDQwMDUwNjgKMiwwLC0wLjU2NDY5ODE3MTM5NjA4ODcsLTAuNjM2OTA5NjMxMTA1ODIyLC0wLjA3MjIxMTQ1OTcwOTczMzMKMywwLDAuMzYzMTI4NDExMzM3MzM5MiwwLjUxNDc2MTA1ODQ3NzI0MjYsMC4xNTE2MzI2NDcxMzk5MDM0Mwo0LDAsMC42MzI4NjI2MDQ5NjEwNDA0LDAuNDg3NTIxNjM5NTQ1NzI1MzYsLTAuMTQ1MzQwOTY1NDE1MzE1MDUKNSwwLDAuNDA0MjY4MzIzMTQwOTk5MDMsMC4xMzA2MTIxMTQyNTcxNDAxLC0wLjI3MzY1NjIwODg4Mzg1ODk0CjYsMCwtMC4xMDYxMjQ1MTYwOTE0ODQwMywtMC4wMTk1NjA5MTA5MTM3NDA1OTgsMC4wODY1NjM2MDUxNzc3NDM0Mwo3LDAsMS41MTE1MjE5OTc0Mzg5MzksMS4zNDkyNDMzNjIyMDE2MDQ3LC0wLjE2MjI3ODYzNTIzNzMzNDIKOCwwLC0wLjA5NDY1OTAzODQxMzA5NzU2LDAuMTk0MTYxMjEzOTMxMTUzMDEsMC4yODg4MjAyNTIzNDQyNTA1Nwo5LDAsMi4wMTg0MjM3MTM4NzcwNDIsMS45MzIxMzQ0NzMzNTQzNzI2LC0wLjA4NjI4OTI0MDUyMjY2OTE3NQoxMCwwLC0wLjA2MjcxNDA5OTA1MjQyMSwwLjA2ODQxNTQ3NzYyODAyMDM3LDAuMTMxMTI5NTc2NjgwNDQxMzcKMTEsMCwxLjMwNDg2OTY1NDIyMzQ4NTIsMS4zNjkyNTQ3MDcyNjQyNzQ1LDAuMDY0Mzg1MDUzMDQwNzg5MjMKMTIsMCwyLjI4NjY0NTM5MjcwMTEwNywyLjEyOTg3NzYwNDUyNTAzMiwtMC4xNTY3Njc3ODgxNzYwNzQ5NQoxMywwLC0xLjM4ODg2MDcwMTExMjMzOTMsLTEuMDczNzE1MTk3MTUzOTQzOCwwLjMxNTE0NTUwMzk1ODM5NTQ3CjE0LDAsLTAuMjc4Nzg4NzY2ODE3MzcxMzYsLTAuMTUwMjA4OTA1NjczOTA4MDcsMC4xMjg1Nzk4NjExNDM0NjMzCjE1LDAsLTAuMTMzMzIxMzM2MzkzNjU4MDQsLTAuMTE1MzY5MjA3MDczNzM2OSwwLjAxNzk1MjEyOTMxOTkyMTEzCjE2LDAsMC42MzU5NTAzOTgwNzAwNzQ0LDAuNjkxMjYwNTQ3NTI4MzY3LDAuMDU1MzEwMTQ5NDU4MjkyNgoxNywwLC0wLjI4NDI1MjkyMTQxNjA3MjQsLTAuMTQ4Mzk1MTU4MjA1MDE4MjIsMC4xMzU4NTc3NjMyMTEwNTQxNwoxOCwwLC0yLjY1NjQ1NTQyMDkwNDc3NTcsLTIuNjM4NDg4ODQzNTg4OTU5MywwLjAxNzk2NjU3NzMxNTgxNjQxMgoxOSwwLC0yLjQ0MDQ2NjkyODU3NTUxOTQsLTMuMDM5MDg0OTQ1MjA2MTA2LC0wLjU5ODYxODAxNjYzMDU4NjgKMjAsMCwxLjMyMDExMzM0NTczMDE5MjEsMS4zNzcwODk5MzY0MzYzMjQsMC4wNTY5NzY1OTA3MDYxMzE5MjQKMjEsMSwtMC4zMDY2Mzg1OTQwNzg0NzQ1NSwtMC43MTM0MTg4NTU5NjAwMDMsLTAuNDA2NzgwMjYxODgxNTI4NDQKMjIsMSwtMS43ODEzMDg0MzM5OCwtMi4wNzc1OTU2NTQzNDAyMTE0LC0wLjI5NjI4NzIyMDM2MDIxMTQKMjMsMSwtMC4xNzE5MTczNTU3NTk2MjEzNiwtMC4zODg4ODU5NDM2MTk4NTMzNSwtMC4yMTY5Njg1ODc4NjAyMzIKMjQsMSwxLjIxNDY3NDY5OTE3MjU5ODcsMS4xNjEyODg3MzEyOTc4MDEsLTAuMDUzMzg1OTY3ODc0Nzk3NjYKMjUsMSwxLjg5NTE5MzQ2MTI2NDk2NTIsMS40MTY0MDE3MTYwMzY3MzksLTAuNDc4NzkxNzQ1MjI4MjI2MgoyNiwxLC0wLjQzMDQ2OTEzMTYwNjE5OTY1LC0wLjUwMzI5MzkzODUzMDcwNDMsLTAuMDcyODI0ODA2OTI0NTA0NgoyNywxLC0wLjI1NzI2OTM4Mjc2ODkyOTYzLC0wLjUyMzQzMzA5MjE1MTg0ODEsLTAuMjY2MTYzNzA5MzgyOTE4NDUKMjgsMSwtMS43NjMxNjMwODUxOTQ3ODAyLC0xLjg4ODc5NTE5ODc4ODU4OTEsLTAuMTI1NjMyMTEzNTkzODA5CjI5LDEsMC40NjAwOTczNTQ4MzEyNzE0LDAuMzEwOTA5NzM1MTU2MDY3NCwtMC4xNDkxODc2MTk2NzUyMDQKMzAsMSwtMC42Mzk5OTQ4NzU5NjAxMTkyLC0wLjgyOTE1MjU3NjcyMDA4LC0wLjE4OTE1NzcwMDc1OTk2MDg2CjMxLDEsMC40NTU0NTAxMjMyNDEyMTkzNiwtMC4wODY1MDY5OTc4MDU2ODQ5NywtMC41NDE5NTcxMjEwNDY5MDQzCjMyLDEsMC43MDQ4MzczMzcyMjg4MTkxLDAuMzUzNDY2NzI2NTczMzQ0NSwtMC4zNTEzNzA2MTA2NTU0NzQ2NQozMywxLDEuMDM1MTAzNTIxOTY5OTIyMywwLjgyNjQ3MzgyMTAzNjQ5NzcsLTAuMjA4NjI5NzAwOTMzNDI0NgozNCwxLC0wLjYwODkyNjM3NTQwNzIxMTEsLTEuMTMyOTY0MzgwMjk1MDEzMSwtMC41MjQwMzgwMDQ4ODc4MDIxCjM1LDEsMC41MDQ5NTUxMjMyOTc5NzAzLDAuMDYzMDU2MDI3MDQ5ODY1NjgsLTAuNDQxODk5MDk2MjQ4MTA0NjQKMzYsMSwtMS43MTcwMDg2NzkwNzMzNDI1LC0xLjkzNDE0MjcxMjg3MDMzOTIsLTAuMjE3MTM0MDMzNzk2OTk2NwozNywxLC0wLjc4NDQ1OTAwODM3OTQ5NiwtMC45NjQxNTY1OTQxNDU5MTExNSwtMC4xNzk2OTc1ODU3NjY0MTUxNQozOCwxLC0wLjg1MDkwNzU5NDE3NjUxODMsLTEuMDkxNDg3NDA5ODAxODE4MSwtMC4yNDA1Nzk4MTU2MjUyOTk4NAozOSwxLC0yLjQxNDIwNzY0OTk0NjYzMiwtMi45MjQ2OTYyNDI3NjE5MDEsLTAuNTEwNDg4NTkyODE1MjY5NAo0MCwxLDAuMDM2MTIyNjA2ODkyMjU1NjMsLTAuNTE3MTY2OTA2MTcwNjQ4OSwtMC41NTMyODk1MTMwNjI5MDQ1Cg==').then(res => res.blob()).then(blob => {
+<p><a href="#dnldts12847" onclick="fetch('data:text/csv;base64,aWQsZyx5MSx5MixkCjEsMCwxLjM3MDk1ODQ0NzE0NjY2ODUsMS40MTIxNTgxNjcxODY3MTkyLDAuMDQxMTk5NzIwMDQwMDUwNjgKMiwwLC0wLjU2NDY5ODE3MTM5NjA4ODcsLTAuNjM2OTA5NjMxMTA1ODIyLC0wLjA3MjIxMTQ1OTcwOTczMzMKMywwLDAuMzYzMTI4NDExMzM3MzM5MiwwLjUxNDc2MTA1ODQ3NzI0MjYsMC4xNTE2MzI2NDcxMzk5MDM0Mwo0LDAsMC42MzI4NjI2MDQ5NjEwNDA0LDAuNDg3NTIxNjM5NTQ1NzI1MzYsLTAuMTQ1MzQwOTY1NDE1MzE1MDUKNSwwLDAuNDA0MjY4MzIzMTQwOTk5MDMsMC4xMzA2MTIxMTQyNTcxNDAxLC0wLjI3MzY1NjIwODg4Mzg1ODk0CjYsMCwtMC4xMDYxMjQ1MTYwOTE0ODQwMywtMC4wMTk1NjA5MTA5MTM3NDA1OTgsMC4wODY1NjM2MDUxNzc3NDM0Mwo3LDAsMS41MTE1MjE5OTc0Mzg5MzksMS4zNDkyNDMzNjIyMDE2MDQ3LC0wLjE2MjI3ODYzNTIzNzMzNDIKOCwwLC0wLjA5NDY1OTAzODQxMzA5NzU2LDAuMTk0MTYxMjEzOTMxMTUzMDEsMC4yODg4MjAyNTIzNDQyNTA1Nwo5LDAsMi4wMTg0MjM3MTM4NzcwNDIsMS45MzIxMzQ0NzMzNTQzNzI2LC0wLjA4NjI4OTI0MDUyMjY2OTE3NQoxMCwwLC0wLjA2MjcxNDA5OTA1MjQyMSwwLjA2ODQxNTQ3NzYyODAyMDM3LDAuMTMxMTI5NTc2NjgwNDQxMzcKMTEsMCwxLjMwNDg2OTY1NDIyMzQ4NTIsMS4zNjkyNTQ3MDcyNjQyNzQ1LDAuMDY0Mzg1MDUzMDQwNzg5MjMKMTIsMCwyLjI4NjY0NTM5MjcwMTEwNywyLjEyOTg3NzYwNDUyNTAzMiwtMC4xNTY3Njc3ODgxNzYwNzQ5NQoxMywwLC0xLjM4ODg2MDcwMTExMjMzOTMsLTEuMDczNzE1MTk3MTUzOTQzOCwwLjMxNTE0NTUwMzk1ODM5NTQ3CjE0LDAsLTAuMjc4Nzg4NzY2ODE3MzcxMzYsLTAuMTUwMjA4OTA1NjczOTA4MDcsMC4xMjg1Nzk4NjExNDM0NjMzCjE1LDAsLTAuMTMzMzIxMzM2MzkzNjU4MDQsLTAuMTE1MzY5MjA3MDczNzM2OSwwLjAxNzk1MjEyOTMxOTkyMTEzCjE2LDAsMC42MzU5NTAzOTgwNzAwNzQ0LDAuNjkxMjYwNTQ3NTI4MzY3LDAuMDU1MzEwMTQ5NDU4MjkyNgoxNywwLC0wLjI4NDI1MjkyMTQxNjA3MjQsLTAuMTQ4Mzk1MTU4MjA1MDE4MjIsMC4xMzU4NTc3NjMyMTEwNTQxNwoxOCwwLC0yLjY1NjQ1NTQyMDkwNDc3NTcsLTIuNjM4NDg4ODQzNTg4OTU5MywwLjAxNzk2NjU3NzMxNTgxNjQxMgoxOSwwLC0yLjQ0MDQ2NjkyODU3NTUxOTQsLTMuMDM5MDg0OTQ1MjA2MTA2LC0wLjU5ODYxODAxNjYzMDU4NjgKMjAsMCwxLjMyMDExMzM0NTczMDE5MjEsMS4zNzcwODk5MzY0MzYzMjQsMC4wNTY5NzY1OTA3MDYxMzE5MjQKMjEsMSwtMC4zMDY2Mzg1OTQwNzg0NzQ1NSwtMC43MTM0MTg4NTU5NjAwMDMsLTAuNDA2NzgwMjYxODgxNTI4NDQKMjIsMSwtMS43ODEzMDg0MzM5OCwtMi4wNzc1OTU2NTQzNDAyMTE0LC0wLjI5NjI4NzIyMDM2MDIxMTQKMjMsMSwtMC4xNzE5MTczNTU3NTk2MjEzNiwtMC4zODg4ODU5NDM2MTk4NTMzNSwtMC4yMTY5Njg1ODc4NjAyMzIKMjQsMSwxLjIxNDY3NDY5OTE3MjU5ODcsMS4xNjEyODg3MzEyOTc4MDEsLTAuMDUzMzg1OTY3ODc0Nzk3NjYKMjUsMSwxLjg5NTE5MzQ2MTI2NDk2NTIsMS40MTY0MDE3MTYwMzY3MzksLTAuNDc4NzkxNzQ1MjI4MjI2MgoyNiwxLC0wLjQzMDQ2OTEzMTYwNjE5OTY1LC0wLjUwMzI5MzkzODUzMDcwNDMsLTAuMDcyODI0ODA2OTI0NTA0NgoyNywxLC0wLjI1NzI2OTM4Mjc2ODkyOTYzLC0wLjUyMzQzMzA5MjE1MTg0ODEsLTAuMjY2MTYzNzA5MzgyOTE4NDUKMjgsMSwtMS43NjMxNjMwODUxOTQ3ODAyLC0xLjg4ODc5NTE5ODc4ODU4OTEsLTAuMTI1NjMyMTEzNTkzODA5CjI5LDEsMC40NjAwOTczNTQ4MzEyNzE0LDAuMzEwOTA5NzM1MTU2MDY3NCwtMC4xNDkxODc2MTk2NzUyMDQKMzAsMSwtMC42Mzk5OTQ4NzU5NjAxMTkyLC0wLjgyOTE1MjU3NjcyMDA4LC0wLjE4OTE1NzcwMDc1OTk2MDg2CjMxLDEsMC40NTU0NTAxMjMyNDEyMTkzNiwtMC4wODY1MDY5OTc4MDU2ODQ5NywtMC41NDE5NTcxMjEwNDY5MDQzCjMyLDEsMC43MDQ4MzczMzcyMjg4MTkxLDAuMzUzNDY2NzI2NTczMzQ0NSwtMC4zNTEzNzA2MTA2NTU0NzQ2NQozMywxLDEuMDM1MTAzNTIxOTY5OTIyMywwLjgyNjQ3MzgyMTAzNjQ5NzcsLTAuMjA4NjI5NzAwOTMzNDI0NgozNCwxLC0wLjYwODkyNjM3NTQwNzIxMTEsLTEuMTMyOTY0MzgwMjk1MDEzMSwtMC41MjQwMzgwMDQ4ODc4MDIxCjM1LDEsMC41MDQ5NTUxMjMyOTc5NzAzLDAuMDYzMDU2MDI3MDQ5ODY1NjgsLTAuNDQxODk5MDk2MjQ4MTA0NjQKMzYsMSwtMS43MTcwMDg2NzkwNzMzNDI1LC0xLjkzNDE0MjcxMjg3MDMzOTIsLTAuMjE3MTM0MDMzNzk2OTk2NwozNywxLC0wLjc4NDQ1OTAwODM3OTQ5NiwtMC45NjQxNTY1OTQxNDU5MTExNSwtMC4xNzk2OTc1ODU3NjY0MTUxNQozOCwxLC0wLjg1MDkwNzU5NDE3NjUxODMsLTEuMDkxNDg3NDA5ODAxODE4MSwtMC4yNDA1Nzk4MTU2MjUyOTk4NAozOSwxLC0yLjQxNDIwNzY0OTk0NjYzMiwtMi45MjQ2OTYyNDI3NjE5MDEsLTAuNTEwNDg4NTkyODE1MjY5NAo0MCwxLDAuMDM2MTIyNjA2ODkyMjU1NjMsLTAuNTE3MTY2OTA2MTcwNjQ4OSwtMC41NTMyODk1MTMwNjI5MDQ1Cg==').then(res => res.blob()).then(blob => {
       const downloadURL = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       document.body.appendChild(a);
@@ -541,7 +540,7 @@ Hinweis
       a.download = 'bringtnixtin.csv.csv'; a.click();
       window.URL.revokeObjectURL(downloadURL);
       document.body.removeChild(a);
-        });"><button class="btn btn-default downloadthis  " id="dnldts4979"><i class="bi bi-download"></i> Download </button></a></p>
+        });"><button class="btn btn-default downloadthis  " id="dnldts12847"><i class="bi bi-download"></i> Download </button></a></p>
 <p>Die Autoren der Studie geben an, dass die Daten in <em>z</em>-Einheiten skaliert sind.</p>
 </section>
 <section id="deskriptive-analyse" class="level3" data-number="12.2.2">
@@ -624,7 +623,10 @@ Abbildung&nbsp;12.4: Fluide Intelligenz (y2) nach der Bringtnixtin-Intervention.
 </section>
 <section id="modellierung" class="level3" data-number="12.2.3">
 <h3 data-number="12.2.3" class="anchored" data-anchor-id="modellierung"><span class="header-section-number">12.2.3</span> Modellierung</h3>
-<p>Wir berechnen ein lineares Modell mit der Modellformel <code>y2 ~ g</code>. Die Ergebnisse sind in <a href="100-Statistiken-berichten.html#tbl-m1-params" class="quarto-xref">Tabelle&nbsp;<span>13.5</span></a> zu sehen.</p>
+<p>Wir berechnen ein lineares Modell mit der Modellformel <code>y2 ~ g</code>.</p>
+<section id="parameterschätzung" class="level4" data-number="12.2.3.1">
+<h4 data-number="12.2.3.1" class="anchored" data-anchor-id="parameterschätzung"><span class="header-section-number">12.2.3.1</span> Parameterschätzung</h4>
+<p>Die Ergebnisse unseres Modells <code>m_bringtnixtin</code> sind in <a href="100-Statistiken-berichten.html#tbl-m1-params" class="quarto-xref">Tabelle&nbsp;<span>13.5</span></a> zu sehen.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>m_bringtnixtin <span class="ot">&lt;-</span> <span class="fu">stan_glm</span>(y2 <span class="sc">~</span> g, <span class="at">data =</span> d_bringtnixtin, <span class="at">refresh =</span> <span class="dv">0</span>, <span class="at">seed =</span> <span class="dv">42</span>)</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">parameters</span>(m_bringtnixtin)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -645,7 +647,23 @@ Tabelle&nbsp;12.2: Parameter des Modells m_bringtnixtin
 </figure>
 </div>
 </div>
-<p>Der Gruppenunterschied wird auf das -0.77 geschätzt; das ist der <em>Punktschätzer</em> der UV <code>g</code>. Wenn wir nur eine Zahl nennen dürften zu unserem Wissen zum Effekt von <code>g</code>, so wäre das unsere Zahl. Die Grenzen eines 95%-CI für die UV liegen bei -1.56 bzw. 0.02; diese beiden Werten markieren die Grenzen des <em>Intervallschätzers.</em> Dieser Bereich enthält die Null, vgl. <a href="#fig-m1-params" class="quarto-xref">Abbildung&nbsp;<span>12.5</span></a>. Daher kann nicht ausgeschlossen werden, dass Bringtnixtin <em>nix</em> bringt. Anders gesagt: Die Nullhypothese kann nicht verworfen werden.</p>
+<p>Der Gruppenunterschied wird auf das -0.77 geschätzt; das ist der <em>Punktschätzer</em> der UV <code>g</code>. Wenn wir nur eine Zahl nennen dürften zu unserem Wissen zum Effekt von <code>g</code>, so wäre das unsere Zahl. Die Grenzen eines 95%-CI für die UV liegen bei -1.56 bzw. 0.02; diese beiden Werten markieren die Grenzen des <em>Intervallschätzers.</em> Dieser Bereich enthält die Null, vgl. <a href="#fig-m1-params" class="quarto-xref">Abbildung&nbsp;<span>12.5</span></a>. Daher kann nicht ausgeschlossen werden, dass Bringtnixtin <em>nix</em> bringt. Anders gesagt: Die (strenge) Nullhypothese kann <em>nicht</em> verworfen werden. Der Wert Null ist ein plausibler Wert für den Parameter, da er im 95%-CI enthalten ist.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hinweis
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<ul>
+<li>Ist der Wert Null NICHT im 95%-Schätzintervall enthalten, so heißt das, dass die Null(hypothese) verworfen werden.</li>
+<li>Ist der Wert Null im 95%-Schätzintervall enthalten, so heißt das, dass die Null(hypothese) NICHT verworfen werden. <span class="math inline">\(\square\)</span></li>
+</ul>
+</div>
+</div>
 <p>Die Punkt- und Intervallschätzer (95%-ETI) für Achsenabschnitt und Regressiongewicht von <code>g</code> sind in <a href="#fig-m1-params" class="quarto-xref">Abbildung&nbsp;<span>12.5</span></a> visualisiert.</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -662,6 +680,11 @@ Hinweis
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">parameters</span>(m_bringtnixtin) <span class="sc">%&gt;%</span> <span class="fu">plot</span>(<span class="at">show_intercept =</span> <span class="cn">TRUE</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">parameters</span>(m_bringtnixtin) <span class="sc">%&gt;%</span> <span class="fu">plot</span>(<span class="at">show_intercept =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_rect</span>(<span class="fu">aes</span>(<span class="at">xmin =</span> <span class="sc">-</span>.<span class="dv">13</span>, <span class="at">xmax =</span> <span class="dv">0</span><span class="fl">+.13</span>, <span class="at">ymin =</span> <span class="sc">-</span><span class="cn">Inf</span>, <span class="at">ymax =</span> <span class="cn">Inf</span>), </span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>              <span class="at">fill =</span> <span class="st">"lightblue"</span>, <span class="at">alpha =</span> <span class="fl">0.2</span>, <span class="at">color =</span> <span class="cn">NA</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-m1-params" class="quarto-figure quarto-figure-center anchored" width="672">
 <figure class="quarto-float quarto-float-fig figure">
@@ -669,7 +692,7 @@ Hinweis
 <img src="090-Modellieren_files/figure-html/fig-m1-params-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-m1-params-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;12.5: Parameter des Modells <code>m_bringtnixtin (95%-ETI)</code>
+Abbildung&nbsp;12.5: Parameter des Modells <code>m_bringtnixtin (95%-ETI)</code>; der ROPE ist als vertikaler blauer Balken markiert
 </figcaption>
 </figure>
 </div>
@@ -681,8 +704,11 @@ Abbildung&nbsp;12.5: Parameter des Modells <code>m_bringtnixtin (95%-ETI)</code>
 <blockquote class="blockquote">
 <p>👩‍🏫 Herr Professor Sauer, auch ein negatives Ergebnis bringt die Wissenschaft weiter.</p>
 </blockquote>
-<p>Mit dem Rope-Verfahren kann man testen, ob ein Bereich <em>um die Null herum</em>, also “Null plus-minus ein bisschen” im Hauptbereich im Hauptbereich (95%-KI) enthalten ist.</p>
-<p>Testen wir eine Nullhypothese mit dem ROPE-Verfahren: <code>rope(m_bringtnixtin)</code>, s. <a href="#tbl-m1-rope" class="quarto-xref">Tabelle&nbsp;<span>12.3</span></a> und <a href="#fig-m1-rope" class="quarto-xref">Abbildung&nbsp;<span>12.6</span></a>.</p>
+</section>
+<section id="praktisch-null-hypothese-rope" class="level4" data-number="12.2.3.2">
+<h4 data-number="12.2.3.2" class="anchored" data-anchor-id="praktisch-null-hypothese-rope"><span class="header-section-number">12.2.3.2</span> Praktisch-Null-Hypothese (ROPE)</h4>
+<p>Mit dem ROPE-Verfahren kann man eine “Praktisch-Null-Hypothese” testen, also ob ein Bereich <em>um die Null herum</em>, also “Null plus-minus ein bisschen” im Hauptbereich im Hauptbereich (95%-KI) enthalten ist.</p>
+<p>In R geht das so: <code>rope(m_bringtnixtin)</code>, s. <a href="#tbl-m1-rope" class="quarto-xref">Tabelle&nbsp;<span>12.3</span></a> und <a href="#fig-m1-rope" class="quarto-xref">Abbildung&nbsp;<span>12.6</span></a>.</p>
 <div class="cell">
 <div id="tbl-m1-rope" class="cell anchored">
 <figure class="quarto-float quarto-float-tbl figure">
@@ -738,8 +764,16 @@ Tabelle&nbsp;12.3: ROPE für Modell m_bringtnixtin
 </figure>
 </div>
 </div>
+<p><a href="#tbl-m1-rope" class="quarto-xref">Tabelle&nbsp;<span>12.3</span></a> zeigt uns, dass 3% des 95%-HDIs im ROPE-Bereich liegt. Das ist nicht viel; aber streng genommen heißt das als Fazit:</p>
+<blockquote class="blockquote">
+<p>Wir können nicht ausschließen, dass der Effekt von <code>g</code> ein praktisch unbedeutsamen Wert hat, also sehr klein und nahe der Null ist. Diese Wahrscheinlichkeit ist allerdings nicht hoch. Es ist somit keine klare Entscheidung möglich.</p>
+</blockquote>
+<p>Das gleiche Ergebnis zeigt uns anschaulicher <a href="#fig-m1-rope" class="quarto-xref">Abbildung&nbsp;<span>12.6</span></a>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">rope</span>(m_bringtnixtin)) <span class="sc">+</span> <span class="fu">scale_fill_okabeito</span>()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rope</span>(m_bringtnixtin) <span class="sc">%&gt;%</span> <span class="fu">plot</span>()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">rope</span>(m_bringtnixtin)) <span class="sc">+</span> <span class="fu">scale_fill_okabeito</span>() </span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-m1-rope" class="quarto-figure quarto-figure-center anchored" width="672">
 <figure class="quarto-float quarto-float-fig figure">
@@ -778,20 +812,24 @@ Hinweis
 <blockquote class="blockquote">
 <p>👩‍🏫 Herr Professor Sauer, wir müssen erst einmal in Ruhe die Studie replizieren. Eine Schwalbe macht noch keinen Frühling.</p>
 </blockquote>
-<p>Berechnen wir abschließend noch eine standardisierte Effektstärke, <span class="math inline">\(R²\)</span>.</p>
+</section>
+<section id="modellgüte" class="level4" data-number="12.2.3.3">
+<h4 data-number="12.2.3.3" class="anchored" data-anchor-id="modellgüte"><span class="header-section-number">12.2.3.3</span> Modellgüte</h4>
+<p>Berechnen wir abschließend noch eine standardisierte Effektstärke der Modellgüte, <span class="math inline">\(R²\)</span>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">r2</span>(m_bringtnixtin)</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="do">## # Bayesian R2 with Compatibility Interval</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="do">##   Conditional R2: 0.089 (95% CI [4.766e-09, 0.251])</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">r2</span>(m_bringtnixtin)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="do">## # Bayesian R2 with Compatibility Interval</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="do">##   Conditional R2: 0.089 (95% CI [4.766e-09, 0.251])</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Also etwa 9% erklärte Varianz. Aber ist das viel oder wenig? Fragen wir Herr Cohen, der hat sich dazu mal Gedanken gemacht.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">interpret_r2</span>(.<span class="dv">09</span>)</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] "weak"</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="do">## (Rules: cohen1988)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">interpret_r2</span>(.<span class="dv">09</span>)</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] "weak"</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="do">## (Rules: cohen1988)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Nach dieser Einschätzung ist der Effekt von <code>g</code> also schwach.</p>
+</section>
 </section>
 </section>
 <section id="vorher-nachher-messung-1-between-variable" class="level2" data-number="12.3">
@@ -809,7 +847,7 @@ Hinweis
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Eine Vorher-Nachher-Messung hat den Verteil, dass sie - im Gegensatz zur Nur-Nachher-Messung - unterschiedliche Ausgangswerte in der AV herausrechnet. Bei großen Gruppen wird sich bei einer randomisierten Zuweisung zu den Gruppen der Ausgangswert der AV angleichen. Bei nicht so großen Gruppen kann aber auch bei Randomisierung ein - mitunter erheblicher - Unterschied zwischen den Gruppen verbleiben. Findet man bei der Post-Messung einen Effekt, so kann es sein, dass dieser nicht auf die Intervention beruht, sondern auf die von vornherein vorhandenen Unterschieden zwischen den Gruppen.<span class="math inline">\(\square\)</span></p>
+<p>Eine Vorher-Nachher-Messung hat den Verteil, dass sie - im Gegensatz zur Nur-Nachher-Messung - unterschiedliche Ausgangswerte in der AV herausrechnet. Damit kommt man oft zu belastbareren, also besseren, Ergebnissen. Bei großen Gruppen wird sich bei einer randomisierten Zuweisung zu den Gruppen der Ausgangswert der AV angleichen. Bei nicht so großen Gruppen kann aber auch bei Randomisierung ein - mitunter erheblicher - Unterschied zwischen den Gruppen verbleiben. Findet man bei der Post-Messung einen Effekt, so kann es sein, dass dieser nicht auf die Intervention beruht, sondern auf die von vornherein vorhandenen Unterschieden zwischen den Gruppen.<span class="math inline">\(\square\)</span></p>
 </div>
 </div>
 <div id="callout-note">
@@ -859,9 +897,9 @@ Abbildung&nbsp;12.8: DAG für der Bringtnixtin-Studie
 <h3 data-number="12.3.2" class="anchored" data-anchor-id="deskriptive-analyse-1"><span class="header-section-number">12.3.2</span> Deskriptive Analyse</h3>
 <p>Eine einfache (und sinnvolle) Art, solche Studiendesigns auszuwerten ist die Bildung einer Differenz-Variable<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>. Diese Differenzvariable gibt die Veränderung der fluiden Intelligenz durch die Intervention an. Anders gesagt: Die Differenz ist die IQ-Wert einer Person <em>nach</em> der Intervention minus dem IQ-Wert <em>vor</em> der Intervention: <span class="math inline">\(d = y_2 - y_1\)</span>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>d_bringtnixtin <span class="ot">&lt;-</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  d_bringtnixtin <span class="sc">%&gt;%</span> </span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">d =</span> y2 <span class="sc">-</span> y1)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>d_bringtnixtin <span class="ot">&lt;-</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  d_bringtnixtin <span class="sc">%&gt;%</span> </span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">d =</span> y2 <span class="sc">-</span> y1)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Schauen wir uns die ersten paar d-Werte für jede der beiden Gruppen (<code>g=0</code> bzw. <code>g=1</code>) an:</p>
 <div class="cell">
@@ -926,17 +964,17 @@ Abbildung&nbsp;12.8: DAG für der Bringtnixtin-Studie
 <!-- Puh! Das Bringtnixtin scheint die IQ zu *verringern*, zumindest in einigen Fällen. -->
 <p>Vielleicht ist es anschaulicher, wenn wir die Gruppe <code>0</code> in den Text <code>Kontrollgruppe</code> umbenennen und <code>1</code> in <code>Experimentalgruppe</code>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>d_bringtnixtin <span class="ot">&lt;-</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  d_bringtnixtin <span class="sc">%&gt;%</span> </span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">g_text =</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>           <span class="fu">case_when</span>(g <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"Kontrollgruppe"</span>,</span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>                     g <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">"Experimentalgruppe"</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>d_bringtnixtin <span class="ot">&lt;-</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  d_bringtnixtin <span class="sc">%&gt;%</span> </span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">g_text =</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>           <span class="fu">case_when</span>(g <span class="sc">==</span> <span class="dv">0</span> <span class="sc">~</span> <span class="st">"Kontrollgruppe"</span>,</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>                     g <span class="sc">==</span> <span class="dv">1</span> <span class="sc">~</span> <span class="st">"Experimentalgruppe"</span>))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Hier sind die Mittelwerte für jede der beiden Gruppen:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>d_bringtnixtin <span class="sc">%&gt;%</span> </span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(g_text) <span class="sc">%&gt;%</span></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">d =</span> <span class="fu">mean</span>(d))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>d_bringtnixtin <span class="sc">%&gt;%</span> </span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(g_text) <span class="sc">%&gt;%</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">d =</span> <span class="fu">mean</span>(d))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
 <div class="cell-output-display">
@@ -963,12 +1001,12 @@ Abbildung&nbsp;12.8: DAG für der Bringtnixtin-Studie
 </div>
 <p>Die deskriptiven Kennwerte sind in <a href="#fig-bringtnixtin-within-desk" class="quarto-xref">Abbildung&nbsp;<span>12.9</span></a> dargestellt.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggbetweenstats</span>(</span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> d_bringtnixtin,</span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> g_text,</span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> d,</span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">results.subtitle =</span> <span class="cn">FALSE</span>  <span class="co"># keine Statistiken zeigen</span></span>
-<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggbetweenstats</span>(</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> d_bringtnixtin,</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> g_text,</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> d,</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">results.subtitle =</span> <span class="cn">FALSE</span>  <span class="co"># keine Statistiken zeigen</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-bringtnixtin-within-desk" class="quarto-figure quarto-figure-center anchored" width="672">
 <figure class="quarto-float quarto-float-fig figure">
@@ -987,8 +1025,8 @@ Abbildung&nbsp;12.9: Veränderung der fluiden Intelligenz (d) in Abhängigkeit d
 <h3 data-number="12.3.3" class="anchored" data-anchor-id="modellierung-1"><span class="header-section-number">12.3.3</span> Modellierung</h3>
 <p>Wir modellieren (in <code>m_bringtnixtin2</code>) jetzt die <em>Veränderung</em> <code>d = y2 - y1</code> als AV; UV ist wieder <code>g</code>, s. <a href="#tbl-m-bringtnixtin2-params" class="quarto-xref">Tabelle&nbsp;<span>12.4</span></a>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>m_bringtnixtin2 <span class="ot">&lt;-</span> <span class="fu">stan_glm</span>(d <span class="sc">~</span> g, <span class="at">data =</span> d_bringtnixtin, <span class="at">refresh =</span> <span class="dv">0</span>, <span class="at">seed =</span> <span class="dv">42</span>)</span>
-<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">parameters</span>(m_bringtnixtin2)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>m_bringtnixtin2 <span class="ot">&lt;-</span> <span class="fu">stan_glm</span>(d <span class="sc">~</span> g, <span class="at">data =</span> d_bringtnixtin, <span class="at">refresh =</span> <span class="dv">0</span>, <span class="at">seed =</span> <span class="dv">42</span>)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="fu">parameters</span>(m_bringtnixtin2)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
 <div id="tbl-m-bringtnixtin2-params" class="cell anchored">
@@ -1047,7 +1085,9 @@ Tabelle&nbsp;12.4: Parameter von <code>m_bringtnixtin2</code>
 </div>
 <p><a href="#fig-bringtnixtin2-params" class="quarto-xref">Abbildung&nbsp;<span>12.10</span></a> zeigt die Parameterwerte für <code>m_bringtnixtin2</code>,</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">parameters</span>(m_bringtnixtin2))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">parameters</span>(m_bringtnixtin2)) <span class="sc">+</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_rect</span>(<span class="fu">aes</span>(<span class="at">xmin =</span> <span class="sc">-</span>.<span class="dv">023</span>, <span class="at">xmax =</span> <span class="dv">0</span><span class="fl">+.023</span>, <span class="at">ymin =</span> <span class="sc">-</span><span class="cn">Inf</span>, <span class="at">ymax =</span> <span class="cn">Inf</span>), </span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>              <span class="at">fill =</span> <span class="st">"lightblue"</span>, <span class="at">alpha =</span> <span class="fl">0.2</span>, <span class="at">color =</span> <span class="cn">NA</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-bringtnixtin2-params" class="quarto-figure quarto-figure-center anchored" width="672">
 <figure class="quarto-float quarto-float-fig figure">
@@ -1055,13 +1095,40 @@ Tabelle&nbsp;12.4: Parameter von <code>m_bringtnixtin2</code>
 <img src="090-Modellieren_files/figure-html/fig-bringtnixtin2-params-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bringtnixtin2-params-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;12.10: Parameterwerte von m_bringtnixtin2 (Intercept ist nicht dargestellt), 95%-ETI; die Null ist nicht enthalten, der Mittelwert ist negativ.
+Abbildung&nbsp;12.10: Parameterwerte von m_bringtnixtin2 (Intercept ist nicht dargestellt), 95%-ETI; die Null ist nicht enthalten, der Mittelwert ist negativ. ROPE ist als blaues Balken eingezeichnet. Wir können die exakte und die praktische Nullhypothese ausschließen.
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
 <p>Wie man den Parameterwerten entnehmen kann, ist sich das Modell sehr sicher, dass der Effekt von Bringtnixtin <em>negativ</em> ist. <!-- ist sich das Modell nicht sicher, welche Richtung der Effekt von Bringtnixtin hat. --></p>
+<p>Testen wir noch die Praktisch-Null-Hypothese (für den Effekt von <code>g</code> auf <code>d</code>) mit dem ROPE-Verfahern:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rope</span>(m_bringtnixtin2)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["Parameter"],"name":[1],"type":["chr"],"align":["left"]},{"label":["CI"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["ROPE_low"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["ROPE_high"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["ROPE_Percentage"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["Effects"],"name":[6],"type":["chr"],"align":["left"]},{"label":["Component"],"name":[7],"type":["chr"],"align":["left"]}],"data":[{"1":"(Intercept)","2":"0.95","3":"-0.02377655","4":"0.02377655","5":"0.4607895","6":"fixed","7":"conditional","_rn_":"1"},{"1":"g","2":"0.95","3":"-0.02377655","4":"0.02377655","5":"0.0000000","6":"fixed","7":"conditional","_rn_":"2"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+<p>Das Ergebnis zeigt uns, dass wir die Praktisch-Null-Hypothese ausschließen können: Null Prozent des 95%-HDI liegt im ROPE.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(<span class="fu">rope</span>(m_bringtnixtin2)) <span class="sc">+</span> <span class="fu">scale_fill_okabeito</span>()</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-rope-m_bringtnixtin2" class="quarto-figure quarto-figure-center anchored" width="672">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-rope-m_bringtnixtin2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="090-Modellieren_files/figure-html/fig-rope-m_bringtnixtin2-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rope-m_bringtnixtin2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;12.11: 95%-HDI und ROPE überlappt nicht: Wir verwerfen die ROPE Hypothese
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
 </section>
 </section>
 <section id="beobachtungsstudien" class="level2" data-number="12.4">
@@ -1082,7 +1149,7 @@ Abbildung&nbsp;12.10: Parameterwerte von m_bringtnixtin2 (Intercept ist nicht da
 </blockquote>
 <p>Die zugehörige statistische Hypothese kann man so formulieren: <span class="math inline">\(\bar{d} \ne 0\)</span>, wobei <span class="math inline">\(d = y_1 - y_2\)</span>. <span class="math inline">\(d\)</span> misst also den Unterschied der Behaltensleistung von animierten und statischen Diagrammen, wobei positive Werte zugunsten von statischen Diagrammen sprechen.</p>
 <p>Die Modellformel lautet: <code>d ~ 1</code>, das ist ein <em>Intercept-Modell</em>, also ein Modell ohne Prädiktor. Uns interessiert, ob die Variable <code>d</code> im Mittelwert ungleich Null ist oder positiv (zugunsten statischer Diagramme) oder negativ (Behaltensleistung höher bei animierten Diagrammen).</p>
-<p>Der Ablauf der Studie (aus Sicht der Probandis) ist in <a href="#fig-diagrammart-flow" class="quarto-xref">Abbildung&nbsp;<span>12.11</span></a> dargestellt.</p>
+<p>Der Ablauf der Studie (aus Sicht der Probandis) ist in <a href="#fig-diagrammart-flow" class="quarto-xref">Abbildung&nbsp;<span>12.12</span></a> dargestellt.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-diagrammart-flow" class="quarto-figure quarto-figure-center anchored">
@@ -1095,13 +1162,13 @@ Abbildung&nbsp;12.10: Parameterwerte von m_bringtnixtin2 (Intercept ist nicht da
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-diagrammart-flow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;12.11: Ablauf der Studie zur Behaltensleistung y2 in Abhängigkeit der Visualisierungsart V (Within-Variable)
+Abbildung&nbsp;12.12: Ablauf der Studie zur Behaltensleistung y2 in Abhängigkeit der Visualisierungsart V (Within-Variable)
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>Der DAG des Experiments ist in <a href="#fig-diagrammarten-dag" class="quarto-xref">Abbildung&nbsp;<span>12.12</span></a> dargestellt.</p>
+<p>Der DAG des Experiments ist in <a href="#fig-diagrammarten-dag" class="quarto-xref">Abbildung&nbsp;<span>12.13</span></a> dargestellt.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-diagrammarten-dag" class="quarto-figure quarto-figure-center anchored" width="100%">
@@ -1110,7 +1177,7 @@ Abbildung&nbsp;12.11: Ablauf der Studie zur Behaltensleistung y2 in Abhängigkei
 <img src="090-Modellieren_files/figure-html/fig-diagrammarten-dag-1.png" class="img-fluid figure-img" style="width:100.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-diagrammarten-dag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;12.12: DAG für die Studie zur Behaltensleistung y2 in Abhängigkeit des Visualiserungstyp V
+Abbildung&nbsp;12.13: DAG für die Studie zur Behaltensleistung y2 in Abhängigkeit des Visualiserungstyp V
 </figcaption>
 </figure>
 </div>
@@ -1121,11 +1188,11 @@ Abbildung&nbsp;12.12: DAG für die Studie zur Behaltensleistung y2 in Abhängigk
 <h3 data-number="12.5.2" class="anchored" data-anchor-id="deskriptive-analyse-2"><span class="header-section-number">12.5.2</span> Deskriptive Analyse</h3>
 <p>Hier sind einige Spieldaten:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>d_within <span class="ot">&lt;-</span> </span>
-<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/sebastiansauer/Lehre/main/data/withindesign.csv"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(y3, g)) <span class="co"># diese beiden Variablen ignorieren wir für den Augenblick</span></span>
-<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(d_within)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>d_within <span class="ot">&lt;-</span> </span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/sebastiansauer/Lehre/main/data/withindesign.csv"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(y3, g)) <span class="co"># diese beiden Variablen ignorieren wir für den Augenblick</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(d_within)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -1134,7 +1201,7 @@ Abbildung&nbsp;12.12: DAG für die Studie zur Behaltensleistung y2 in Abhängigk
 </div>
 </div>
 </div>
-<p><a href="#dnldts20332" onclick="fetch('data:text/csv;base64,aWQseTEseTIseTMsZwoxLDcsOCw5LEEKMiw3LDcsMTAsQQozLDQsOSw5LEEKNCw3LDQsOSxBCjUsNiw3LDgsQQo2LDUsNCw5LEEKNyw2LDUsMTAsQQo4LDMsNywxMCxBCjksNiw0LDEwLEEKMTAsNiw3LDEwLEEKMTEsNSw4LDksQQoxMiw2LDgsMTAsQQoxMyw3LDcsMTAsQQoxNCw0LDYsNyxBCjE1LDUsOSw4LEEKMTYsNyw2LDksQQoxNyw4LDYsMTAsQQoxOCwzLDgsOSxBCjE5LDUsOCw4LEEKMjAsNSw3LDksQQoyMSw3LDYsOSxCCjIyLDMsNCwxMCxCCjIzLDgsNiwxMCxCCjI0LDgsNyw5LEIKMjUsMyw2LDcsQgoyNiw1LDgsNyxCCjI3LDUsOCw4LEIKMjgsNyw2LDksQgoyOSw1LDYsOSxCCjMwLDcsOCwxMCxCCjMxLDYsOSw5LEIKMzIsNiw5LDgsQgozMyw1LDgsOCxCCjM0LDYsNyw5LEIKMzUsMSw4LDksQgozNiw3LDYsOSxCCjM3LDEsMTAsMTAsQgozOCw0LDgsOSxCCjM5LDcsNyw5LEIKNDAsNSwxMCw4LEIK').then(res => res.blob()).then(blob => {
+<p><a href="#dnldts56406" onclick="fetch('data:text/csv;base64,aWQseTEseTIseTMsZwoxLDcsOCw5LEEKMiw3LDcsMTAsQQozLDQsOSw5LEEKNCw3LDQsOSxBCjUsNiw3LDgsQQo2LDUsNCw5LEEKNyw2LDUsMTAsQQo4LDMsNywxMCxBCjksNiw0LDEwLEEKMTAsNiw3LDEwLEEKMTEsNSw4LDksQQoxMiw2LDgsMTAsQQoxMyw3LDcsMTAsQQoxNCw0LDYsNyxBCjE1LDUsOSw4LEEKMTYsNyw2LDksQQoxNyw4LDYsMTAsQQoxOCwzLDgsOSxBCjE5LDUsOCw4LEEKMjAsNSw3LDksQQoyMSw3LDYsOSxCCjIyLDMsNCwxMCxCCjIzLDgsNiwxMCxCCjI0LDgsNyw5LEIKMjUsMyw2LDcsQgoyNiw1LDgsNyxCCjI3LDUsOCw4LEIKMjgsNyw2LDksQgoyOSw1LDYsOSxCCjMwLDcsOCwxMCxCCjMxLDYsOSw5LEIKMzIsNiw5LDgsQgozMyw1LDgsOCxCCjM0LDYsNyw5LEIKMzUsMSw4LDksQgozNiw3LDYsOSxCCjM3LDEsMTAsMTAsQgozOCw0LDgsOSxCCjM5LDcsNyw5LEIKNDAsNSwxMCw4LEIK').then(res => res.blob()).then(blob => {
       const downloadURL = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       document.body.appendChild(a);
@@ -1142,14 +1209,14 @@ Abbildung&nbsp;12.12: DAG für die Studie zur Behaltensleistung y2 in Abhängigk
       a.download = 'withindesign.csv.csv'; a.click();
       window.URL.revokeObjectURL(downloadURL);
       document.body.removeChild(a);
-        });"><button class="btn btn-default downloadthis  " id="dnldts20332"><i class="bi bi-download"></i> Download </button></a></p>
+        });"><button class="btn btn-default downloadthis  " id="dnldts56406"><i class="bi bi-download"></i> Download </button></a></p>
 <p>Wir berechnen <code>d</code>, was die zentrale Variable der Forschungsfrage ist.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>d_within <span class="ot">&lt;-</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  d_within <span class="sc">%&gt;%</span> </span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">d =</span> y1 <span class="sc">-</span> y2)</span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(d_within)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>d_within <span class="ot">&lt;-</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  d_within <span class="sc">%&gt;%</span> </span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">d =</span> y1 <span class="sc">-</span> y2)</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(d_within)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -1158,12 +1225,12 @@ Abbildung&nbsp;12.12: DAG für die Studie zur Behaltensleistung y2 in Abhängigk
 </div>
 </div>
 </div>
-<p>Es klingt trivial, aber man muss sich ein Bild von den Daten (hier <code>d</code>) machen, wortwörtlich, s. <a href="#fig-d1" class="quarto-xref">Abbildung&nbsp;<span>12.13</span></a>.</p>
+<p>Es klingt trivial, aber man muss sich ein Bild von den Daten (hier <code>d</code>) machen, wortwörtlich, s. <a href="#fig-d1" class="quarto-xref">Abbildung&nbsp;<span>12.14</span></a>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gghistostats</span>(d_within,</span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>             <span class="at">x =</span> d,</span>
-<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>             <span class="at">results.subtitle =</span> <span class="cn">FALSE</span>  <span class="co"># verzichte auf zusätzliche Statistiken</span></span>
-<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>             )</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">gghistostats</span>(d_within,</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>             <span class="at">x =</span> d,</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>             <span class="at">results.subtitle =</span> <span class="cn">FALSE</span>  <span class="co"># verzichte auf zusätzliche Statistiken</span></span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>             )</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-d1" class="quarto-figure quarto-figure-center anchored" width="672">
 <figure class="quarto-float quarto-float-fig figure">
@@ -1171,7 +1238,7 @@ Abbildung&nbsp;12.12: DAG für die Studie zur Behaltensleistung y2 in Abhängigk
 <img src="090-Modellieren_files/figure-html/fig-d1-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-d1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;12.13: Die Verteilung von d: Die Behaltensleistung ist im Mittel besser für animierte Diagramme (in diesen Daten)
+Abbildung&nbsp;12.14: Die Verteilung von d: Die Behaltensleistung ist im Mittel besser für animierte Diagramme (in diesen Daten)
 </figcaption>
 </figure>
 </div>
@@ -1180,8 +1247,8 @@ Abbildung&nbsp;12.13: Die Verteilung von d: Die Behaltensleistung ist im Mittel 
 <p>Da <code>d</code> im Mittel negativ ist, ist der Mittelwert von <code>y2</code> (animiert) höher als der von <code>y1</code> (statisch).</p>
 <p>Lassen wir uns die deskriptiven Kennwerte ausgeben, s. <a href="#tbl-d1-desk" class="quarto-xref">Tabelle&nbsp;<span>12.5</span></a>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>d_within <span class="sc">%&gt;%</span> </span>
-<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">describe_distribution</span>(d)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>d_within <span class="sc">%&gt;%</span> </span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">describe_distribution</span>(d)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
 <div id="tbl-d1-desk" class="cell anchored">
@@ -1237,13 +1304,13 @@ Tabelle&nbsp;12.5: Statistiken für <code>d</code>
 </div>
 <p>Um die Daten noch anders visualisieren zu können, formen wir sie ins “lange Format” um.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>d_long <span class="ot">&lt;-</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  d_within <span class="sc">%&gt;%</span> </span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(y1, y2), <span class="at">names_to =</span> <span class="st">"time"</span>, <span class="at">values_to =</span> <span class="st">"y"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>d_long <span class="ot">&lt;-</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  d_within <span class="sc">%&gt;%</span> </span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(y1, y2), <span class="at">names_to =</span> <span class="st">"time"</span>, <span class="at">values_to =</span> <span class="st">"y"</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Hier ist ein Auszug aus der Tabelle:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(d_long)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(d_long)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -1252,14 +1319,14 @@ Tabelle&nbsp;12.5: Statistiken für <code>d</code>
 </div>
 </div>
 </div>
-<p>Visualisieren wir uns die Daten, s. <a href="#fig-d2" class="quarto-xref">Abbildung&nbsp;<span>12.14</span></a>.</p>
+<p>Visualisieren wir uns die Daten, s. <a href="#fig-d2" class="quarto-xref">Abbildung&nbsp;<span>12.15</span></a>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggwithinstats</span>(</span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> d_long,</span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> time,</span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> y,</span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">results.subtitle =</span> <span class="cn">FALSE</span>  <span class="co"># verzichte auf zusätzliche Statistiken</span></span>
-<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggwithinstats</span>(</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">data =</span> d_long,</span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> time,</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> y,</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">results.subtitle =</span> <span class="cn">FALSE</span>  <span class="co"># verzichte auf zusätzliche Statistiken</span></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-d2" class="quarto-figure quarto-figure-center anchored" width="672">
 <figure class="quarto-float quarto-float-fig figure">
@@ -1267,7 +1334,7 @@ Tabelle&nbsp;12.5: Statistiken für <code>d</code>
 <img src="090-Modellieren_files/figure-html/fig-d2-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-d2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;12.14: Der Unterschied in der Behaltensleistung pro Versuchsperson; im Durchschnitt ist der Wert bei y2 höher als bei y1
+Abbildung&nbsp;12.15: Der Unterschied in der Behaltensleistung pro Versuchsperson; im Durchschnitt ist der Wert bei y2 höher als bei y1
 </figcaption>
 </figure>
 </div>
@@ -1278,8 +1345,8 @@ Abbildung&nbsp;12.14: Der Unterschied in der Behaltensleistung pro Versuchsperso
 <h3 data-number="12.5.3" class="anchored" data-anchor-id="inferenzanalyse"><span class="header-section-number">12.5.3</span> Inferenzanalyse</h3>
 <p>Wir berechnen das Modell (<code>m_within</code>),s. <a href="#tbl-d2-params" class="quarto-xref">Tabelle&nbsp;<span>12.6</span></a>:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>m_within <span class="ot">&lt;-</span> <span class="fu">stan_glm</span>(d <span class="sc">~</span> <span class="dv">1</span>, <span class="at">data =</span> d_within, <span class="at">refresh =</span> <span class="dv">0</span>, <span class="at">seed =</span> <span class="dv">42</span>)</span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a><span class="fu">parameters</span>(m_within)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>m_within <span class="ot">&lt;-</span> <span class="fu">stan_glm</span>(d <span class="sc">~</span> <span class="dv">1</span>, <span class="at">data =</span> d_within, <span class="at">refresh =</span> <span class="dv">0</span>, <span class="at">seed =</span> <span class="dv">42</span>)</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="fu">parameters</span>(m_within)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
 <div id="tbl-d2-params" class="cell anchored">
@@ -1327,9 +1394,9 @@ Tabelle&nbsp;12.6: Modellparameter von m_within
 </figure>
 </div>
 </div>
-<p>Hier ist eine Visualisierung des 95%-ETI des Unterschieds (<code>d</code>) zwischen den beiden Bedingungen (<a href="#fig-m-within-params" class="quarto-xref">Abbildung&nbsp;<span>12.15</span></a>).</p>
+<p>Hier ist eine Visualisierung des 95%-ETI des Unterschieds (<code>d</code>) zwischen den beiden Bedingungen (<a href="#fig-m-within-params" class="quarto-xref">Abbildung&nbsp;<span>12.16</span></a>).</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">parameters</span>(m_within) <span class="sc">%&gt;%</span> <span class="fu">plot</span>(<span class="at">show_intercept =</span> <span class="cn">TRUE</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">parameters</span>(m_within) <span class="sc">%&gt;%</span> <span class="fu">plot</span>(<span class="at">show_intercept =</span> <span class="cn">TRUE</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-m-within-params" class="quarto-figure quarto-figure-center anchored" width="672">
 <figure class="quarto-float quarto-float-fig figure">
@@ -1337,7 +1404,7 @@ Tabelle&nbsp;12.6: Modellparameter von m_within
 <img src="090-Modellieren_files/figure-html/fig-m-within-params-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-m-within-params-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;12.15: 95%-CI für d (Achsenabschnitt mit Modell m_within)
+Abbildung&nbsp;12.16: 95%-CI für d (Achsenabschnitt mit Modell m_within)
 </figcaption>
 </figure>
 </div>
@@ -1371,7 +1438,7 @@ Hinweis
 <blockquote class="blockquote">
 <p>Hat die Diagrammart einen Einfluss auf die Behaltensleistung? Anders gesagt: Unterscheiden sich die Diagrammarten in ihrem Einfluss auf die Behaltensleistung? Dabei kontrollieren wir die Reihenfolge.</p>
 </blockquote>
-<p>Forschungspraktisch bedeutet das, dass es zwei Gruppen, <code>g1</code> und <code>g2</code> in diesem Experiment gibt. Diese beiden Gruppen definieren eine between-Variable, <code>g</code>, die die Reihenfolge der Darbietung kontrolliert, s. <a href="#fig-within2-flow" class="quarto-xref">Abbildung&nbsp;<span>12.16</span></a>. Die Diagrammart <code>D</code> ist auch eine UV, aber als Within-Variable konzipiert.</p>
+<p>Forschungspraktisch bedeutet das, dass es zwei Gruppen, <code>g1</code> und <code>g2</code> in diesem Experiment gibt. Diese beiden Gruppen definieren eine between-Variable, <code>g</code>, die die Reihenfolge der Darbietung kontrolliert, s. <a href="#fig-within2-flow" class="quarto-xref">Abbildung&nbsp;<span>12.17</span></a>. Die Diagrammart <code>D</code> ist auch eine UV, aber als Within-Variable konzipiert.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-within2-flow" class="quarto-figure quarto-figure-center anchored">
@@ -1391,7 +1458,7 @@ Hinweis
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-within2-flow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;12.16: Ablaufdiagramm für die Studie mit der Modellgleichung mit einem Within- und einem Between-Faktor
+Abbildung&nbsp;12.17: Ablaufdiagramm für die Studie mit der Modellgleichung mit einem Within- und einem Between-Faktor
 </figcaption>
 </figure>
 </div>
@@ -1402,8 +1469,8 @@ Abbildung&nbsp;12.16: Ablaufdiagramm für die Studie mit der Modellgleichung mit
 <li>H1: <span class="math inline">\(\bar{d} &lt; 0\)</span>, mit <span class="math inline">\(d = y_1 - y_2\)</span>: Die mittlere Behaltensleistung ist in der Bedingung <em>animiert</em> höher als in der Bedingung <em>statisch</em>.</li>
 <li>H2: <span class="math inline">\(\bar{d}_{g.1} = \bar{d}_{g.2}\)</span>: Der Unterschied in der Behaltensleistung zwischen den zwei Bedingung unterscheidet sich nicht von der Reihenfolge der Darbietung.</li>
 </ol>
-<p>Die Modellformel lautet: <code>y ~ 1 + g</code>. Das kann man synonym so schreiben: <code>y ~ g</code>. <code>y</code> meint die Behaltensleistung; statisch erfassen wir den <em>Effekt</em> auf <code>y</code> anhand des Differenzmaßes <code>d</code>.</p>
-<p>Der DAG des Experiments ist in <a href="#fig-within2-dag" class="quarto-xref">Abbildung&nbsp;<span>12.17</span></a> dargestellt.</p>
+<p>Die Modellformel lautet: <code>y ~ 1 + g</code>. Das kann man synonym so schreiben: <code>y ~ g</code>. Dabei meint <code>y</code> meint die Behaltensleistung; statistisch erfassen wir den <em>Effekt</em> auf <code>y</code> anhand des Differenzmaßes <code>d</code>.</p>
+<p>Der DAG des Experiments ist in <a href="#fig-within2-dag" class="quarto-xref">Abbildung&nbsp;<span>12.18</span></a> dargestellt.</p>
 <div class="cell">
 <div class="cell-output-display">
 <div id="fig-within2-dag" class="quarto-figure quarto-figure-center anchored" width="100%">
@@ -1412,7 +1479,7 @@ Abbildung&nbsp;12.16: Ablaufdiagramm für die Studie mit der Modellgleichung mit
 <img src="090-Modellieren_files/figure-html/fig-within2-dag-1.png" class="img-fluid figure-img" style="width:100.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-within2-dag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;12.17: DAG für die Studie mit der Modellgleichung mit einem Within- und einem Between-Faktor. Es wird kein Effekt für g erwartet (daher kein Pfeil von g auf y), wohl aber ein Effekt für V
+Abbildung&nbsp;12.18: DAG für die Studie mit der Modellgleichung mit einem Within- und einem Between-Faktor. Es wird kein Effekt für g erwartet (daher kein Pfeil von g auf y), wohl aber ein Effekt für V
 </figcaption>
 </figure>
 </div>
@@ -1423,11 +1490,11 @@ Abbildung&nbsp;12.17: DAG für die Studie mit der Modellgleichung mit einem With
 <h3 data-number="12.6.2" class="anchored" data-anchor-id="deskriptive-analyse-3"><span class="header-section-number">12.6.2</span> Deskriptive Analyse</h3>
 <p>Hier sind einige Spieldaten:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>d_within <span class="ot">&lt;-</span> </span>
-<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/sebastiansauer/Lehre/main/data/withindesign.csv"</span>) <span class="sc">%&gt;%</span> </span>
-<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(y3)) <span class="co"># die  Variable `y3` ignorieren wir für den Augenblick</span></span>
-<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(d_within)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>d_within <span class="ot">&lt;-</span> </span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/sebastiansauer/Lehre/main/data/withindesign.csv"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="fu">c</span>(y3)) <span class="co"># die  Variable `y3` ignorieren wir für den Augenblick</span></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(d_within)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -1438,11 +1505,11 @@ Abbildung&nbsp;12.17: DAG für die Studie mit der Modellgleichung mit einem With
 </div>
 <p>Wir berechnen <code>d</code>, der Unterschied zwischen den beiden Bedingungen:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>d_within <span class="ot">&lt;-</span></span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>  d_within <span class="sc">%&gt;%</span> </span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">d =</span> y1 <span class="sc">-</span> y2)</span>
-<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(d_within)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>d_within <span class="ot">&lt;-</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  d_within <span class="sc">%&gt;%</span> </span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">d =</span> y1 <span class="sc">-</span> y2)</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(d_within)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -1451,14 +1518,14 @@ Abbildung&nbsp;12.17: DAG für die Studie mit der Modellgleichung mit einem With
 </div>
 </div>
 </div>
-<p>Betrachten wir den Unterschied von <code>d</code> zwischen den Gruppen (H2), s. <a href="#fig-d-within2" class="quarto-xref">Abbildung&nbsp;<span>12.18</span></a>.</p>
+<p>Betrachten wir den Unterschied von <code>d</code> zwischen den Gruppen (H2), s. <a href="#fig-d-within2" class="quarto-xref">Abbildung&nbsp;<span>12.19</span></a>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggbetweenstats</span>(</span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>  d_within,</span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> g,</span>
-<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> d,</span>
-<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">results.subtitle =</span> <span class="cn">FALSE</span></span>
-<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggbetweenstats</span>(</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>  d_within,</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">x =</span> g,</span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">y =</span> d,</span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">results.subtitle =</span> <span class="cn">FALSE</span></span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-d-within2" class="quarto-figure quarto-figure-center anchored" width="672">
 <figure class="quarto-float quarto-float-fig figure">
@@ -1466,19 +1533,19 @@ Abbildung&nbsp;12.17: DAG für die Studie mit der Modellgleichung mit einem With
 <img src="090-Modellieren_files/figure-html/fig-d-within2-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-d-within2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;12.18: Der Unterschied der Behaltensleistung (d) in Abhängigkeit von der Reihenfolge der Darbietung
+Abbildung&nbsp;12.19: Der Unterschied der Behaltensleistung (d) in Abhängigkeit von der Reihenfolge der Darbietung
 </figcaption>
 </figure>
 </div>
 </div>
 </div>
-<p>Es gibt einen gewissen Unterschied zwischen den beiden Reihenfolgen (A und B) wie <a href="#fig-d-within2" class="quarto-xref">Abbildung&nbsp;<span>12.18</span></a> zeigt; die Reihenfolge könnte also einen Einfluss auf <code>d</code> haben. Aber wir müssen inferenzstatistisch prüfen, wie groß der Einfluss ist.</p>
+<p>Es gibt einen gewissen Unterschied zwischen den beiden Reihenfolgen (A und B) wie <a href="#fig-d-within2" class="quarto-xref">Abbildung&nbsp;<span>12.19</span></a> zeigt; die Reihenfolge könnte also einen Einfluss auf <code>d</code> haben. Aber wir müssen inferenzstatistisch prüfen, wie groß der Einfluss ist.</p>
 </section>
 <section id="inferenzanalyse-1" class="level3" data-number="12.6.3">
 <h3 data-number="12.6.3" class="anchored" data-anchor-id="inferenzanalyse-1"><span class="header-section-number">12.6.3</span> Inferenzanalyse</h3>
 <p>Berechnen wir <code>m_within2</code>, das nicht nur den Intercept prüft (wie <code>m_within1</code>), sondern auch zusätzlich den Effekt der Reihenfolge (<code>g</code>), vgl. <a href="#tbl-m_within2-params" class="quarto-xref">Tabelle&nbsp;<span>12.7</span></a>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>m_within2 <span class="ot">&lt;-</span> <span class="fu">stan_glm</span>(d <span class="sc">~</span> g, <span class="at">data =</span> d_within, <span class="at">refresh =</span> <span class="dv">0</span>, <span class="at">seed =</span> <span class="dv">42</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>m_within2 <span class="ot">&lt;-</span> <span class="fu">stan_glm</span>(d <span class="sc">~</span> g, <span class="at">data =</span> d_within, <span class="at">refresh =</span> <span class="dv">0</span>, <span class="at">seed =</span> <span class="dv">42</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
 <div id="tbl-m_within2-params" class="cell anchored">
@@ -1559,10 +1626,10 @@ Tabelle&nbsp;12.7: Modellparameter von m_within2
 <h3 data-number="12.7.3" class="anchored" data-anchor-id="deskriptive-analyse-4"><span class="header-section-number">12.7.3</span> Deskriptive Analyse</h3>
 <p>Hier sind einige Spieldaten:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>d_within <span class="ot">&lt;-</span> </span>
-<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/sebastiansauer/Lehre/main/data/withindesign.csv"</span>)</span>
-<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(d_within)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>d_within <span class="ot">&lt;-</span> </span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_csv</span>(<span class="st">"https://raw.githubusercontent.com/sebastiansauer/Lehre/main/data/withindesign.csv"</span>)</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(d_within)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -1573,11 +1640,11 @@ Tabelle&nbsp;12.7: Modellparameter von m_within2
 </div>
 <p>Hier benötigen wir die Daten in Langform:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>d_long <span class="ot">&lt;-</span></span>
-<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  d_within <span class="sc">%&gt;%</span> </span>
-<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> y1<span class="sc">:</span>y3, <span class="at">names_to =</span> <span class="st">"time"</span>, <span class="at">values_to =</span> <span class="st">"y"</span>)</span>
-<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(d_long)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>d_long <span class="ot">&lt;-</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>  d_within <span class="sc">%&gt;%</span> </span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> y1<span class="sc">:</span>y3, <span class="at">names_to =</span> <span class="st">"time"</span>, <span class="at">values_to =</span> <span class="st">"y"</span>)</span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(d_long)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -1586,20 +1653,20 @@ Tabelle&nbsp;12.7: Modellparameter von m_within2
 </div>
 </div>
 </div>
-<p>Es hilft (wie meistens), sich die Daten zu visualisieren, s. <a href="#fig-within-y3" class="quarto-xref">Abbildung&nbsp;<span>12.19</span></a>.</p>
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>p_y123_a <span class="ot">&lt;-</span></span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>  d_long <span class="sc">%&gt;%</span> </span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> time, <span class="at">y =</span> y)) <span class="sc">+</span></span>
-<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> .<span class="dv">2</span>)</span>
-<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>p_y123_b <span class="ot">&lt;-</span></span>
-<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggwithinstats</span>(d_long, </span>
-<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a>                <span class="at">x =</span> time,</span>
-<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a>                <span class="at">y =</span> y,</span>
-<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a>                <span class="at">results.subtitle =</span> <span class="cn">FALSE</span>)</span>
-<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-12"><a href="#cb32-12" aria-hidden="true" tabindex="-1"></a>p_y123_a</span>
-<span id="cb32-13"><a href="#cb32-13" aria-hidden="true" tabindex="-1"></a>p_y123_b</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Es hilft (wie meistens), sich die Daten zu visualisieren, s. <a href="#fig-within-y3" class="quarto-xref">Abbildung&nbsp;<span>12.20</span></a>.</p>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>p_y123_a <span class="ot">&lt;-</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>  d_long <span class="sc">%&gt;%</span> </span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> time, <span class="at">y =</span> y)) <span class="sc">+</span></span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_jitter</span>(<span class="at">width =</span> .<span class="dv">2</span>)</span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a>p_y123_b <span class="ot">&lt;-</span></span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggwithinstats</span>(d_long, </span>
+<span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a>                <span class="at">x =</span> time,</span>
+<span id="cb36-9"><a href="#cb36-9" aria-hidden="true" tabindex="-1"></a>                <span class="at">y =</span> y,</span>
+<span id="cb36-10"><a href="#cb36-10" aria-hidden="true" tabindex="-1"></a>                <span class="at">results.subtitle =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb36-11"><a href="#cb36-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-12"><a href="#cb36-12" aria-hidden="true" tabindex="-1"></a>p_y123_a</span>
+<span id="cb36-13"><a href="#cb36-13" aria-hidden="true" tabindex="-1"></a>p_y123_b</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div id="fig-within-y3" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-within-y3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1631,16 +1698,16 @@ Tabelle&nbsp;12.7: Modellparameter von m_within2
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-within-y3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;12.19: Messwerte (y) in Abhängigkeit vom Messzeitpunkt (t1, t2, t3)
+Abbildung&nbsp;12.20: Messwerte (y) in Abhängigkeit vom Messzeitpunkt (t1, t2, t3)
 </figcaption>
 </figure>
 </div>
 <p>Berechnen wir die Mittelwerte von <code>y</code> pro Messzeitpunkte sowie die Veränderung von t1 zu t2 bzw. von t2 zu t3, s. <a href="#tbl-d123" class="quarto-xref">Tabelle&nbsp;<span>12.8</span></a>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>d_long <span class="sc">%&gt;%</span> </span>
-<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(time) <span class="sc">%&gt;%</span> </span>
-<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">y_mean =</span> <span class="fu">mean</span>(y)) <span class="sc">%&gt;%</span> </span>
-<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">d =</span> y_mean <span class="sc">-</span> <span class="fu">lag</span>(y_mean))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>d_long <span class="sc">%&gt;%</span> </span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(time) <span class="sc">%&gt;%</span> </span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">y_mean =</span> <span class="fu">mean</span>(y)) <span class="sc">%&gt;%</span> </span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">d =</span> y_mean <span class="sc">-</span> <span class="fu">lag</span>(y_mean))</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
 <div id="tbl-d123" class="cell anchored">
@@ -1685,70 +1752,70 @@ Tabelle&nbsp;12.8: Mittelwerte von <code>y</code> pro Messzeitpunkte (<code>y_me
 <section id="inferenzanalyse-2" class="level3" data-number="12.7.4">
 <h3 data-number="12.7.4" class="anchored" data-anchor-id="inferenzanalyse-2"><span class="header-section-number">12.7.4</span> Inferenzanalyse</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>m_within3 <span class="ot">&lt;-</span> <span class="fu">stan_lmer</span>(y <span class="sc">~</span> <span class="dv">1</span> <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> time), <span class="at">data =</span> d_long, <span class="at">refresh =</span> <span class="dv">0</span>)</span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(m_within3)</span>
-<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
-<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Model Info:</span></span>
-<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="do">##  function:     stan_lmer</span></span>
-<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a><span class="do">##  family:       gaussian [identity]</span></span>
-<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a><span class="do">##  formula:      y ~ 1 + (1 | time)</span></span>
-<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a><span class="do">##  algorithm:    sampling</span></span>
-<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a><span class="do">##  sample:       4000 (posterior sample size)</span></span>
-<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a><span class="do">##  priors:       see help('prior_summary')</span></span>
-<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a><span class="do">##  observations: 120</span></span>
-<span id="cb34-12"><a href="#cb34-12" aria-hidden="true" tabindex="-1"></a><span class="do">##  groups:       time (3)</span></span>
-<span id="cb34-13"><a href="#cb34-13" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
-<span id="cb34-14"><a href="#cb34-14" aria-hidden="true" tabindex="-1"></a><span class="do">## Estimates:</span></span>
-<span id="cb34-15"><a href="#cb34-15" aria-hidden="true" tabindex="-1"></a><span class="do">##                                       mean   sd   10%   50%   90%</span></span>
-<span id="cb34-16"><a href="#cb34-16" aria-hidden="true" tabindex="-1"></a><span class="do">## (Intercept)                          7.2    1.2  5.8   7.2   8.5 </span></span>
-<span id="cb34-17"><a href="#cb34-17" aria-hidden="true" tabindex="-1"></a><span class="do">## b[(Intercept) time:y1]              -1.7    1.2 -3.0  -1.7  -0.3 </span></span>
-<span id="cb34-18"><a href="#cb34-18" aria-hidden="true" tabindex="-1"></a><span class="do">## b[(Intercept) time:y2]              -0.1    1.2 -1.5  -0.1   1.3 </span></span>
-<span id="cb34-19"><a href="#cb34-19" aria-hidden="true" tabindex="-1"></a><span class="do">## b[(Intercept) time:y3]               1.8    1.2  0.4   1.8   3.2 </span></span>
-<span id="cb34-20"><a href="#cb34-20" aria-hidden="true" tabindex="-1"></a><span class="do">## sigma                                1.5    0.1  1.3   1.4   1.6 </span></span>
-<span id="cb34-21"><a href="#cb34-21" aria-hidden="true" tabindex="-1"></a><span class="do">## Sigma[time:(Intercept),(Intercept)]  4.7    5.1  1.1   3.1  10.2 </span></span>
-<span id="cb34-22"><a href="#cb34-22" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
-<span id="cb34-23"><a href="#cb34-23" aria-hidden="true" tabindex="-1"></a><span class="do">## Fit Diagnostics:</span></span>
-<span id="cb34-24"><a href="#cb34-24" aria-hidden="true" tabindex="-1"></a><span class="do">##            mean   sd   10%   50%   90%</span></span>
-<span id="cb34-25"><a href="#cb34-25" aria-hidden="true" tabindex="-1"></a><span class="do">## mean_PPD 7.2    0.2  6.9   7.2   7.4  </span></span>
-<span id="cb34-26"><a href="#cb34-26" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
-<span id="cb34-27"><a href="#cb34-27" aria-hidden="true" tabindex="-1"></a><span class="do">## The mean_ppd is the sample average posterior predictive distribution of the outcome variable (for details see help('summary.stanreg')).</span></span>
-<span id="cb34-28"><a href="#cb34-28" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
-<span id="cb34-29"><a href="#cb34-29" aria-hidden="true" tabindex="-1"></a><span class="do">## MCMC diagnostics</span></span>
-<span id="cb34-30"><a href="#cb34-30" aria-hidden="true" tabindex="-1"></a><span class="do">##                                     mcse Rhat n_eff</span></span>
-<span id="cb34-31"><a href="#cb34-31" aria-hidden="true" tabindex="-1"></a><span class="do">## (Intercept)                         0.0  1.0  1181 </span></span>
-<span id="cb34-32"><a href="#cb34-32" aria-hidden="true" tabindex="-1"></a><span class="do">## b[(Intercept) time:y1]              0.0  1.0  1201 </span></span>
-<span id="cb34-33"><a href="#cb34-33" aria-hidden="true" tabindex="-1"></a><span class="do">## b[(Intercept) time:y2]              0.0  1.0  1225 </span></span>
-<span id="cb34-34"><a href="#cb34-34" aria-hidden="true" tabindex="-1"></a><span class="do">## b[(Intercept) time:y3]              0.0  1.0  1179 </span></span>
-<span id="cb34-35"><a href="#cb34-35" aria-hidden="true" tabindex="-1"></a><span class="do">## sigma                               0.0  1.0  2953 </span></span>
-<span id="cb34-36"><a href="#cb34-36" aria-hidden="true" tabindex="-1"></a><span class="do">## Sigma[time:(Intercept),(Intercept)] 0.1  1.0  1501 </span></span>
-<span id="cb34-37"><a href="#cb34-37" aria-hidden="true" tabindex="-1"></a><span class="do">## mean_PPD                            0.0  1.0  3725 </span></span>
-<span id="cb34-38"><a href="#cb34-38" aria-hidden="true" tabindex="-1"></a><span class="do">## log-posterior                       0.1  1.0  1078 </span></span>
-<span id="cb34-39"><a href="#cb34-39" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
-<span id="cb34-40"><a href="#cb34-40" aria-hidden="true" tabindex="-1"></a><span class="do">## For each parameter, mcse is Monte Carlo standard error, n_eff is a crude measure of effective sample size, and Rhat is the potential scale reduction factor on split chains (at convergence Rhat=1).</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>m_within3 <span class="ot">&lt;-</span> <span class="fu">stan_lmer</span>(y <span class="sc">~</span> <span class="dv">1</span> <span class="sc">+</span> (<span class="dv">1</span> <span class="sc">|</span> time), <span class="at">data =</span> d_long, <span class="at">refresh =</span> <span class="dv">0</span>)</span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(m_within3)</span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a><span class="do">## Model Info:</span></span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a><span class="do">##  function:     stan_lmer</span></span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a><span class="do">##  family:       gaussian [identity]</span></span>
+<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a><span class="do">##  formula:      y ~ 1 + (1 | time)</span></span>
+<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a><span class="do">##  algorithm:    sampling</span></span>
+<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a><span class="do">##  sample:       4000 (posterior sample size)</span></span>
+<span id="cb38-10"><a href="#cb38-10" aria-hidden="true" tabindex="-1"></a><span class="do">##  priors:       see help('prior_summary')</span></span>
+<span id="cb38-11"><a href="#cb38-11" aria-hidden="true" tabindex="-1"></a><span class="do">##  observations: 120</span></span>
+<span id="cb38-12"><a href="#cb38-12" aria-hidden="true" tabindex="-1"></a><span class="do">##  groups:       time (3)</span></span>
+<span id="cb38-13"><a href="#cb38-13" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
+<span id="cb38-14"><a href="#cb38-14" aria-hidden="true" tabindex="-1"></a><span class="do">## Estimates:</span></span>
+<span id="cb38-15"><a href="#cb38-15" aria-hidden="true" tabindex="-1"></a><span class="do">##                                       mean   sd   10%   50%   90%</span></span>
+<span id="cb38-16"><a href="#cb38-16" aria-hidden="true" tabindex="-1"></a><span class="do">## (Intercept)                          7.2    1.2  5.8   7.2   8.5 </span></span>
+<span id="cb38-17"><a href="#cb38-17" aria-hidden="true" tabindex="-1"></a><span class="do">## b[(Intercept) time:y1]              -1.7    1.2 -3.0  -1.7  -0.3 </span></span>
+<span id="cb38-18"><a href="#cb38-18" aria-hidden="true" tabindex="-1"></a><span class="do">## b[(Intercept) time:y2]              -0.1    1.2 -1.5  -0.1   1.3 </span></span>
+<span id="cb38-19"><a href="#cb38-19" aria-hidden="true" tabindex="-1"></a><span class="do">## b[(Intercept) time:y3]               1.8    1.2  0.4   1.8   3.2 </span></span>
+<span id="cb38-20"><a href="#cb38-20" aria-hidden="true" tabindex="-1"></a><span class="do">## sigma                                1.5    0.1  1.3   1.4   1.6 </span></span>
+<span id="cb38-21"><a href="#cb38-21" aria-hidden="true" tabindex="-1"></a><span class="do">## Sigma[time:(Intercept),(Intercept)]  4.7    5.1  1.1   3.1  10.2 </span></span>
+<span id="cb38-22"><a href="#cb38-22" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
+<span id="cb38-23"><a href="#cb38-23" aria-hidden="true" tabindex="-1"></a><span class="do">## Fit Diagnostics:</span></span>
+<span id="cb38-24"><a href="#cb38-24" aria-hidden="true" tabindex="-1"></a><span class="do">##            mean   sd   10%   50%   90%</span></span>
+<span id="cb38-25"><a href="#cb38-25" aria-hidden="true" tabindex="-1"></a><span class="do">## mean_PPD 7.2    0.2  6.9   7.2   7.4  </span></span>
+<span id="cb38-26"><a href="#cb38-26" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
+<span id="cb38-27"><a href="#cb38-27" aria-hidden="true" tabindex="-1"></a><span class="do">## The mean_ppd is the sample average posterior predictive distribution of the outcome variable (for details see help('summary.stanreg')).</span></span>
+<span id="cb38-28"><a href="#cb38-28" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
+<span id="cb38-29"><a href="#cb38-29" aria-hidden="true" tabindex="-1"></a><span class="do">## MCMC diagnostics</span></span>
+<span id="cb38-30"><a href="#cb38-30" aria-hidden="true" tabindex="-1"></a><span class="do">##                                     mcse Rhat n_eff</span></span>
+<span id="cb38-31"><a href="#cb38-31" aria-hidden="true" tabindex="-1"></a><span class="do">## (Intercept)                         0.0  1.0  1181 </span></span>
+<span id="cb38-32"><a href="#cb38-32" aria-hidden="true" tabindex="-1"></a><span class="do">## b[(Intercept) time:y1]              0.0  1.0  1201 </span></span>
+<span id="cb38-33"><a href="#cb38-33" aria-hidden="true" tabindex="-1"></a><span class="do">## b[(Intercept) time:y2]              0.0  1.0  1225 </span></span>
+<span id="cb38-34"><a href="#cb38-34" aria-hidden="true" tabindex="-1"></a><span class="do">## b[(Intercept) time:y3]              0.0  1.0  1179 </span></span>
+<span id="cb38-35"><a href="#cb38-35" aria-hidden="true" tabindex="-1"></a><span class="do">## sigma                               0.0  1.0  2953 </span></span>
+<span id="cb38-36"><a href="#cb38-36" aria-hidden="true" tabindex="-1"></a><span class="do">## Sigma[time:(Intercept),(Intercept)] 0.1  1.0  1501 </span></span>
+<span id="cb38-37"><a href="#cb38-37" aria-hidden="true" tabindex="-1"></a><span class="do">## mean_PPD                            0.0  1.0  3725 </span></span>
+<span id="cb38-38"><a href="#cb38-38" aria-hidden="true" tabindex="-1"></a><span class="do">## log-posterior                       0.1  1.0  1078 </span></span>
+<span id="cb38-39"><a href="#cb38-39" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
+<span id="cb38-40"><a href="#cb38-40" aria-hidden="true" tabindex="-1"></a><span class="do">## For each parameter, mcse is Monte Carlo standard error, n_eff is a crude measure of effective sample size, and Rhat is the potential scale reduction factor on split chains (at convergence Rhat=1).</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Die Schreibweise <code>(1 | time)</code> soll sagen, dass die Messwerte innerhalb von <code>time</code> verschachtelt sind und variieren. Die <code>1</code> sagt, dass es sich bei der variierenden Größe um den Intercept handelt, nicht um eine UV.</p>
 <p>Ein “fixer” Effekt ist ein Effekt, für den kein Pooling stattfindet, das ist hier der Intercept.</p>
 <p>Nur die festen (<em>fixed</em>) Effekte kann man sich so ausgeben lassen:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="fu">fixef</span>(m_within3)</span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="do">## (Intercept) </span></span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="do">##    7.166984</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">fixef</span>(m_within3)</span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="do">## (Intercept) </span></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="do">##    7.166984</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Im Durchschnitt werden ca. 7.1 Fragen richtig beantwortet (Gesamtmittel); das ist die Information die der Punktschätzer des Intercepts bietet.</p>
 <p>Nur die Random-Effekte kann man sich so ausgeben lassen:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ranef</span>(m_within3)</span>
-<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="do">## $time</span></span>
-<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="do">##    (Intercept)</span></span>
-<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a><span class="do">## y1   -1.672117</span></span>
-<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a><span class="do">## y2   -0.123990</span></span>
-<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a><span class="do">## y3    1.760269</span></span>
-<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
-<span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a><span class="do">## with conditional variances for "time"</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ranef</span>(m_within3)</span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="do">## $time</span></span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="do">##    (Intercept)</span></span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a><span class="do">## y1   -1.672117</span></span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a><span class="do">## y2   -0.123990</span></span>
+<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a><span class="do">## y3    1.760269</span></span>
+<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a><span class="do">## </span></span>
+<span id="cb40-8"><a href="#cb40-8" aria-hidden="true" tabindex="-1"></a><span class="do">## with conditional variances for "time"</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Das sind jeweils die Abweichungen der Gruppenmittelwerte (y1, y2, y3) vom Gesamtmittel. Die Random-Effekte kann man sich visualisieren lassen, s. <a href="#fig-randef-m3" class="quarto-xref">Abbildung&nbsp;<span>12.20</span></a>.</p>
+<p>Das sind jeweils die Abweichungen der Gruppenmittelwerte (y1, y2, y3) vom Gesamtmittel. Die Random-Effekte kann man sich visualisieren lassen, s. <a href="#fig-randef-m3" class="quarto-xref">Abbildung&nbsp;<span>12.21</span></a>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(m_within3)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(m_within3)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-randef-m3" class="quarto-figure quarto-figure-center anchored" width="672">
 <figure class="quarto-float quarto-float-fig figure">
@@ -1756,7 +1823,7 @@ Tabelle&nbsp;12.8: Mittelwerte von <code>y</code> pro Messzeitpunkte (<code>y_me
 <img src="090-Modellieren_files/figure-html/fig-randef-m3-1.png" class="img-fluid figure-img" width="672">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-randef-m3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;12.20: 95%-CI der Random-Effekte von <code>m_within3</code>
+Abbildung&nbsp;12.21: 95%-CI der Random-Effekte von <code>m_within3</code>
 </figcaption>
 </figure>
 </div>

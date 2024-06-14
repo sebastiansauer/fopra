@@ -394,7 +394,7 @@ window.Quarto = {
 </section>
 <section id="position-im-lernpfad" class="level3" data-number="11.1.2">
 <h3 data-number="11.1.2" class="anchored" data-anchor-id="position-im-lernpfad"><span class="header-section-number">11.1.2</span> Position im Lernpfad</h3>
-<p>Sie befinden sich im Abschnitt “Auswertung” in <a href="#fig-ueberblick" class="quarto-xref">Abbildung&nbsp;<span class="quarto-unresolved-ref">fig-ueberblick</span></a>. Behalten Sie Ihren Fortschritt im Projektplan im Blick, s. <a href="#fig-projektplan" class="quarto-xref">Abbildung&nbsp;<span class="quarto-unresolved-ref">fig-projektplan</span></a>.</p>
+<p>Sie befinden sich im Abschnitt “Auswertung” in <a href="index.html#fig-ueberblick" class="quarto-xref">Abbildung&nbsp;<span>1.2</span></a>. Behalten Sie Ihren Fortschritt im Projektplan im Blick, s. <a href="index.html#fig-projektplan" class="quarto-xref">Abbildung&nbsp;<span>1.3</span></a>.</p>
 </section>
 <section id="benötigte-r-pakete-und-daten" class="level3" data-number="11.1.3">
 <h3 data-number="11.1.3" class="anchored" data-anchor-id="benötigte-r-pakete-und-daten"><span class="header-section-number">11.1.3</span> Benötigte R-Pakete und Daten<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></h3>
@@ -441,7 +441,7 @@ window.Quarto = {
 <div id="exm-bind-rows" class="theorem example">
 <p><span class="theorem-title"><strong>Beispiel 11.1 </strong></span><em>Jede Versuchsperson</em> Ihrer Studie hat zwei (oder mehrere) Fragebögen ausgefüllt. In Datensatz A finden sich die ersten paar Variablen und in Datensatz B die restlichen Variablen. Aber in beiden Datensätzen kommen alle Personen vor. <span class="math inline">\(\square\)</span></p>
 </div>
-<p><a href="#fig-bind-rows" class="quarto-xref">Abbildung&nbsp;<span class="quarto-unresolved-ref">fig-bind-rows</span></a> veranschaulicht das zeilenweise Zusammenführen.</p>
+<p><a href="#fig-bind-rows" class="quarto-xref">Abbildung&nbsp;<span>11.1</span></a> veranschaulicht das zeilenweise Zusammenführen.</p>
 <div id="fig-bind-rows" class="quarto-figure quarto-figure-center anchored" width="50%">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-bind-rows-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -452,8 +452,8 @@ Abbildung&nbsp;11.1: Tabellen zeilenweise zusammenführen
 </figcaption>
 </figure>
 </div>
-<p>Etwas ausführlicher ist der Sachverhalt im Listing <a href="#lst-bind-rows" class="quarto-xref">Listing&nbsp;<span class="quarto-unresolved-ref">lst-bind-rows</span></a> dargestellt.</p>
-<p>Sagen wir, wir haben zwei Tabellen, die wir “untereinander” (also zeilenweise) “zusammenkleben” möchten. Dann hilft uns <code>bind_rows()</code>.</p>
+<p>Etwas ausführlicher ist der Sachverhalt im Listing <a href="#lst-bind-rows" class="quarto-xref">Listing&nbsp;<span>11.1</span></a> dargestellt.</p>
+<p>Sagen wir, wir haben zwei Tabellen, die wir “untereinander” (also zeilenweise) “zusammenkleben” möchten. Dann hilft uns <code>bind_rows()</code> (aus <code>tidyverse</code>).</p>
 <div id="lst-bind-rows" class="listing">
 <figure class="quarto-float quarto-float-lst figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst quarto-uncaptioned" id="lst-bind-rows-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -461,12 +461,12 @@ Listing&nbsp;11.1
 </figcaption>
 <div aria-describedby="lst-bind-rows-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>tab1 <span class="ot">&lt;-</span> mtcars <span class="sc">%&gt;%</span> <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">16</span>)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>tab2 <span class="ot">&lt;-</span> mtcars <span class="sc">%&gt;%</span> <span class="fu">slice</span>(<span class="dv">17</span><span class="sc">:</span><span class="dv">32</span>)</span>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>tab1 <span class="ot">&lt;-</span> mtcars <span class="sc">%&gt;%</span> <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">16</span>)  <span class="co"># Datensatz 1</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>tab2 <span class="ot">&lt;-</span> mtcars <span class="sc">%&gt;%</span> <span class="fu">slice</span>(<span class="dv">17</span><span class="sc">:</span><span class="dv">32</span>)  <span class="co"># Datensatz 2</span></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>mtcars_gesamt <span class="ot">&lt;-</span></span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  tab1 <span class="sc">%&gt;%</span> </span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_rows</span>(tab2)  <span class="co"># aus `tidyverse`</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>mtcars_gesamt <span class="ot">&lt;-</span>  <span class="co"># Datensatz gesamt ist</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  tab1 <span class="sc">%&gt;%</span>    <span class="co"># Datensatz 1 </span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">bind_rows</span>(tab2)  <span class="co"># und angebunden Datensatz 2 </span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </figure>
@@ -477,7 +477,7 @@ Listing&nbsp;11.1
 <div id="exm-bind-cols" class="theorem example">
 <p><span class="theorem-title"><strong>Beispiel 11.2 </strong></span><em>In jeder Gruppe</em> Ihrer Studie wurde ein anderer Fragebogen ausgefüllt (z. B. weil Sie unterschiedliche experimentelle Gruppen untersucht haben). Sie haben also zwei Datensätze mit unterschiedlichen Personen (nämlich in Datensatz A die Personen der Gruppe A und in Datensatz B die Personen der Gruppe B). Aber in jedem Datensatz finden sich die gleichen Variablen. <span class="math inline">\(\square\)</span></p>
 </div>
-<p><a href="#fig-bind-cols" class="quarto-xref">Abbildung&nbsp;<span class="quarto-unresolved-ref">fig-bind-cols</span></a> veranschaulicht das spaltenweise Zusammenführen von Tabellen.</p>
+<p><a href="#fig-bind-cols" class="quarto-xref">Abbildung&nbsp;<span>11.2</span></a> veranschaulicht das spaltenweise Zusammenführen von Tabellen.</p>
 <div id="fig-bind-cols" class="quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-bind-cols-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -488,7 +488,7 @@ Abbildung&nbsp;11.2: Tabellen spaltenweise zusammenführen
 </figcaption>
 </figure>
 </div>
-<p>Sagen wir, wir haben zwei Tabellen, die wir “hintereinander kleben” möchten, also spaltenweise zusammenführen möchten, s. <a href="#lst-bind-cols" class="quarto-xref">Listing&nbsp;<span class="quarto-unresolved-ref">lst-bind-cols</span></a>.</p>
+<p>Sagen wir, wir haben zwei Tabellen, die wir “hintereinander kleben” möchten, also spaltenweise zusammenführen möchten, s. <a href="#lst-bind-cols" class="quarto-xref">Listing&nbsp;<span>11.2</span></a>.</p>
 <div id="lst-bind-cols" class="listing">
 <figure class="quarto-float quarto-float-lst figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst quarto-uncaptioned" id="lst-bind-cols-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -523,7 +523,7 @@ Vorsicht
 </section>
 <section id="spaltenweises-zusammenführen-2" class="level4" data-number="11.2.1.3">
 <h4 data-number="11.2.1.3" class="anchored" data-anchor-id="spaltenweises-zusammenführen-2"><span class="header-section-number">11.2.1.3</span> Spaltenweises Zusammenführen 2</h4>
-<p><a href="#fig-full-join" class="quarto-xref">Abbildung&nbsp;<span class="quarto-unresolved-ref">fig-full-join</span></a> veranschaulicht das spaltenweise Zusammenführen, wenn die Sortierung der Tabellen nicht übereinstimmt.</p>
+<p><a href="#fig-full-join" class="quarto-xref">Abbildung&nbsp;<span>11.3</span></a> veranschaulicht das spaltenweise Zusammenführen, wenn die Sortierung der Tabellen nicht übereinstimmt.</p>
 <div id="def-join" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 11.1 (Join zweier Tabellen) </strong></span>Das spaltenweise Zusammenführen zweier Tabellen unter der Beachtung der Sortierung nennt man einen “Join”. Genauer gesagt versteht man unter “Sortierung” die Beachtung der Werte einer ID-Spalte (auch “Key-Spalte”) genannt. <span class="math inline">\(\square\)</span></p>
 </div>
@@ -561,8 +561,8 @@ Abbildung&nbsp;11.3: Das “Joinen” zweier Tabellen
 </div>
 <p>Der Einfachheit halber erzeugen wir uns eine einfache Tabelle, mit ein paar Spalten, die <em>als Text</em> formatierte Zahlen enthalten:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">i01 =</span> <span class="fu">c</span>(<span class="st">"1"</span>, <span class="st">"3"</span>, <span class="st">"4"</span>),  <span class="co"># von 1 bis 4</span></span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>            <span class="at">i02 =</span> <span class="fu">c</span>(<span class="st">"-2"</span>, <span class="st">"+3"</span>, <span class="st">"-1"</span>),  <span class="co"># von -3 bis -3</span></span>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>d <span class="ot">&lt;-</span> <span class="fu">tibble</span>(<span class="at">i01 =</span> <span class="fu">c</span>(<span class="st">"1"</span>, <span class="st">"3"</span>, <span class="st">"4"</span>),  <span class="co"># von 1 bis 4 als Text formatiert</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>            <span class="at">i02 =</span> <span class="fu">c</span>(<span class="st">"-2"</span>, <span class="st">"+3"</span>, <span class="st">"-1"</span>),  <span class="co"># von -3 bis -3 als Text formatiert</span></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>            <span class="at">i03 =</span> <span class="fu">factor</span>(<span class="fu">c</span>(<span class="st">"-2"</span>, <span class="st">"+2"</span>, <span class="st">"-1"</span>)))  <span class="co"># als Faktorvariable formatiert</span></span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>d</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -1072,7 +1072,7 @@ Hinweis
 </div>
 </div>
 </div>
-<p>Der Wert von <code>extra_sum</code> berechnet sich jeweils als Summe der drei Itemwerte. Mit dem Mittelwert verhält es sich analog (s. <a href="#tbl-extra-score-mean" class="quarto-xref">Tabelle&nbsp;<span class="quarto-unresolved-ref">tbl-extra-score-mean</span></a>).</p>
+<p>Der Wert von <code>extra_sum</code> berechnet sich jeweils als Summe der drei Itemwerte. Mit dem Mittelwert verhält es sich analog (s. <a href="#tbl-extra-score-mean" class="quarto-xref">Tabelle&nbsp;<span>11.1</span></a>).</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>extra_bsp <span class="ot">&lt;-</span> extra_bsp <span class="sc">%&gt;%</span></span>
 <span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">extra_mean =</span> extra_sum <span class="sc">/</span> <span class="dv">3</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
