@@ -147,281 +147,23 @@ In @sec-schreiben finden Sie Vorschläge zum Gliedern Ihres Berichts. $\square$
 :::
 
 
-## Theorieteil
 
 
-### Testen oder Schätzen?
 
-Am Ende des Theorieteils bietet es sich an,
-die Hypothesen oder die Forschungsfrage zu spezifizieren.
-Sie können sich für eines von beiden entscheiden oder auch beides angehen.
 
-In der bisherigen Literatur (in der Psychologie) werden zumeist Hypothesen getestet,
-nach dem Motto "jo, unsere Vermutung scheint zu stimmen!" oder "nein, das Zeugs taugt nix!".
-Das Problem ist, dass solches Denken etwas simpel ist, Schwarz-Weiß eben. 
-Außerdem sind Nullhypothesen streng genommen immer falsch,
-weswegen es eigentlich keinen Sinn macht, sie zu untersuchen.
-Aber dafür ist das Schwarz-Weiß-Denken schön einfach.
 
-Parameterschätzung fragt nicht *ob*, sondern *wieviel*. 
-Nicht viel komplizierter, aber nuancierter.
-Außerdem enthält das Parameterschätzen auch das Hypothesentesten:
-Ist die Null im Schätz-Intervall nicht enthalten,
-so kann man die Null-Hypothese ausschließen.
 
-
-
-
-### Modell definieren
-
-Es bietet sich auch an, ein Modell mit einem Pfaddiagramm bzw. DAG zu visualisieren,
-z.B. so, s. @fig-dagmodell1.
-
-
-```{r out.width = "100%", fig.asp = .5}
-#| label: fig-dagmodell1
-#| fig-cap: Beispielhafter DAG
-#| echo: false
-library(dagitty)
-
-mein_dag <- 'dag {
-A [pos="-2.200,-1.520"]
-B [pos="1.400,-1.460"]
-D [outcome,pos="1.400,1.621"]
-E [exposure,pos="-2.200,1.597"]
-Z [pos="-0.300,-0.082"]
-A -> E
-A -> Z [pos="-0.791,-1.045"]
-B -> D
-B -> Z [pos="0.680,-0.496"]
-E -> D
-}'
-
-
-mein_modell <- "dag{
-lern -> erfolg
-mot -> erfolg
-mot -> lern
-}"
-
-plot(graphLayout(mein_modell))
-```
-
-
-Dabei steht `lern` für "Lernzeit in Stunden",
-`mot` für "Motivation" und `lern` für "Lernerfolg".
-Die Operationalisierung der Variablen sollten im Methodenteil genauer beschrieben sein.
-
-Übrigens: R-Quellcode sollte *nicht* im Hauptteil eines wissenschaftlichen Berichts stehen,
-verbannen Sie ihn in den Anhang (es sei denn, der Quellcode bzw. die Entwicklung von Syntax ist Gegenstand der Arbeit).
-
-Außerdem macht es Sinn, 
-das Modell formal zu spezifizieren,
-etwa so:
-
-
-
-
-
-$$
-\begin{aligned}
-\text{erfolg} &\sim N(\mu_i, \sigma) \qquad \text{Likelihood} \\
-\mu_i &= \beta_0 + \beta_1 \text{lern} + \beta_2 \text{mot} \qquad \text{lineares Modell} \\
-\beta_0 &\sim N(0, 2.5)  \qquad \text{Prior Achsenabschnitt} \\
-\beta_1 &\sim N(0, 2.5)  \qquad \text{Prior Regressiongewicht lern} \\
-\beta_2 &\sim N(0, 2.5)  \qquad \text{Prior Regressiongewicht mot} \\
-\sigma &\sim Exp(1) \qquad \text{Prior Streuung} \\
-\end{aligned}
-$$
-
-
-
-Wenn Sie das Modell mit STAN berechnen, also vermittelt über z.B. `rstanarm`,
-dann wählt `stan_glm()` für Sie folgende Priori-Werte:
-
-- $\beta$s: Normalverteilt mit Mittelwert 0 und SD 2.5
-- $\sigma$: Exponentialverteilt mit Streckung 1
-
-Die $\beta$s sind am einfachsten als z-Werte zu verstehen:
-Grob übersetzt sagt `rstanarm` "Mei, ich geh davon aus, dass der Effekt vermutlich 2.5-SD-Einheiten
-um den Mittelwert rum liegt, könnten auch etwas mehr sein, aber mehr als 5-SD-Einheiten sind schon echt unwahrscheinlich".
-Das nennt man einen "schwach informativen Prior":
-der erlaubt viel, aber den größten Quatsch schließt er aus.
-
-Praktischerweise müssten sie nicht mal ihre Variablen z-tranformieren (aber Sie können ohne Schaden!),
-denn `rstanarm` macht das für Sie.
-
-
-Tipp: Geben Sie an, dass Sie die Standardwerte (Voreinstellung) der von Ihnen verwendeten Software (wie `rstanarm`) verwendet haben.
-Zitieren Sie möglichst die Software (in der verwendeten Version) und reichen Sie die Syntax ein.
-
-Mehr zu Prioris bei `rstanarm` findet sich [hier](https://mc-stan.org/rstanarm/articles/priors.html).
-
-Mit `prior_summary(mein_model)` bekommt man einen Überblick über die Prioriwerte,
-die im Modell `mein_modell` verwendet wurden.
-
-
-Es macht Sinn, zu begründen, warum sie das Modell so gewählt haben,
-wie sie es gewählt haben.
-Wenn Sie eine Normalverteilung für die Priori-Verteilungen wählen,
-haben Sie Argumentationslinien: epistemologisch und ontologisch.
-Epistemologisch können Sie argumentieren, dass die Normalverteilung die Entropie maximiert,
-also die Verteilung mit den wenigsten Vorannahmen ist, wenn man davon ausgeht,
-dass die gesuchte Verteilung über eine endliche Varianz und einen endlichen Mittelwert verfügt.
-Ontologisch können Sie argumentieren, dass z.B. Körpergröße (innerhalb eines Geschlechts zumindest)
-hinreichend normalverteilt ist.
-
-Die Begründung für das lineare Modelle erschließt sich aus der Theorie,
-nämlich dass z.B. die gewählten UV den gesuchten Effekt gut beschreiben.
-
-
-
-#### Kausal- vs. Korrelationsmodell
-
-
-Sie wollten weiterhin angeben,
-ob Ihre Forschungsfrage ein kausales Modell annimmt oder ein deskiptives (korrelatives).
-Bei einem kausalen Modell sollen dann die Pfeile Wirkungsrichtungen, 
-also Ursache-Wirkungs-Beziehungen angeben.
-
-
-Auch wenn ihre Studie nicht die "Kraft" hat,
-Kausalbeziehungen (in Gänze) aufzudecken,
-ist es trotzdem meistens sinnvoll,
-ein Kausalmodell aufzustellen,
-da Theorien (und Praxis) meist an Kausalbeziehungen interessiert sind,
-und an Korrelationsbeziehungen wenig(er).
-
-Viele wissenschaftliche Studien haben ein kausales Erkenntnisziel,
-nicht ein deskriptives.
-
-
-#### Hypothesen testen
-
-Das Testen der Hypothese ist eine Umsetzung der Idee,
-eine Behauptung einer empirisch-rationalen Prüfung zu unterziehen.
-
-
-Es bietet sich an, eine Hypothese zu wählen,
-wenn der Stand der Theorie dies erlaubt,
-idealerweise mehr als nur eine Null-Effekt-Hypothese, 
-etwas $\beta=0$.
-Dass nämlich ein Effekt *exakt* Null ist,
-erscheint für die meisten Situationen der Sozialwissenschaften reichlich unplausibel.
-
-Sie sollten die Hypothese zuerst als Aussage formulieren,
-aber danach möglichst mit mathematischen Symbolen präzisieren ("statistische Hypothesen").
-
-Hier sind Beispiele für statistische Hypothesen:
-
-- $H: \mu > 0$
-- $H: \mu = 0$
-- $H: \mu \ne 0$
-- $H: \beta > 0$
-- $H: d > 0$
-- $H: R^2 > 0$
-
-
-
-
-Dabei meint $\beta$ ein Regressiongewicht,
-$d$ eine Differenz (zweier Gruppen) und 
-$R^2$ die erklärte Varianz eines Modells.
-
-$R^2$ als Kennzahl einer Hypothese ist interessant,
-weil es Ihnen erlaubt, ein ganzes Modell als Hypothese zu formulieren.
-Also "Verbundhypothesen" aufzustellen, die mehr als eine oder zwei Variablen umfassen.
-
-
-Möchten Sie eine Hypothese zu einem Parameter testen,
-der einen Nullwert beinhaltet, bietet sich das ROPE-Verfahren an, vgl. @kruschke_rejecting_2018.
-
-
-
-#### Parameterschätzung
-
-
-Bei einer Parameterschätzung formulieren Sie ein Modell,
-genau wie beim Hypothesen testen, nur eben ohne Hypothesen.
-Es geht Ihnen dann nicht um die Frage, *ob* irgend ein Sachverhalt der Fall ist (das ist Hypothesen prüfen).
-Stattdessen interessieren Sie sich für die Frage, *wie sehr* etwas der Fall ist:
-
-- "Wie stark ist der Zusammenhang von Lernzeit und Prüfungserfolg?"
-- "Um wie viele Sekunden parken Frauen im Schnitt schneller ein als Männer?"
-- "Wie groß ist der statistische Effekt eines Sportwagens auf einem männlichen Profilbild beim Online-Dating?"
-
-Auch hier ist es erlaubt und sinnvoll, eine sprachliche Frage, die oft vage ist,
-schon aufgrund der natürlichen Ambuität der Sprache, mit Hilfe mathematischer Notation zu präzisieren:
-
-- "Der Zusammenhang $\beta$ ist definiert als das Regressiongewicht der Variable `lern` im Modell `m1`.
-- "Operationalisiert wurde die Einparkgeschwindigkeit als die Dauer der Durchführung in Sekunden nach Instruktion wie im Abschnitt XYZ beschrieben. Unser Modell (`m1`) schätzte den Parameter `s`.
-- "Der statistische Effekt ist definiert als das Regressiongewicht der experimentellen Bedingung (binäre Variable `group`) im Modell `m1`.
-
-Geben Sie weiter an, welches Intervall Sie berichten, z.B. "Die Parameterschätzungen werden anhand eines 95%-HDI berichtet".
-
-Auch wenn Sie eine Hypothese testen, sollten Sie Bereichsschätzungen für die Parameter vornehmen,
-also Schätzbereiche aus der Posteriori-Verteilung berichten.
-
-
-## Methodenteil
-
-### Analyse
-
-#### Bayes erklären
-
-1. Erklären Sie, warum Sie eine Bayes-Analyse verwenden und nicht eine frequentistische.
-Eine ehrliche Antwort wäre zwar, "mein Dozent wollte es so, was bleibt mir groß übrig",
-aber es gibt (vermutlich?!) auch fachliche Gründe (z.B.: Eine Priori-Annahme zur Wahrscheinlichkeit eines Parameters wird durch Daten zu einer Wahrscheinlichkeit verschoben).
-Die sollten sie anführen.
-
-2. Erklären, was eine Bayes-Analyse ist. (Man bekommt Wahrscheinlichkeiten für Hypothesen, was man beim Frequentismus nicht bekommt.)
-
-3. Führen Sie an, ob Sie an einer Parameterschätzung oder einer Hypothesentestung interessiert sind. Die Parameterschätzung ist oft zu bevorzugen, da informationsreicher.
-
-Bayes-Statistiken sollten Sie im kurz erläutern,
-da sie vielen Lesis nicht so gut vertraut sein wird.
-
-Sie können z.B. bei @kruschke_rejecting_2018" die Grundlagen des ROPE-Konzepts nachlesen.
-Vielleicht findet sich ja auch in Ihrem Statistik-Skript etwas Passendes?
-
-
-#### ROPE
-
-Kurz gesagt wird beim ROPE geprüft, welcher Anteil des Posteriori-Intervalls zu einem Bereich "vernachlässigbar kleiner" Parameterwerte bewegt. 
-Die folgende Abbildung illustriert ein Rope für die Forschungsfrage "Wie stark ist der Effekt der Zylinderzahl auf den Spritverbrauch?";
-genauer gesagt ist die Posteriori-Verteilung für den (Regressions-)Effekt, $\beta$, des Parameters `cyl` gezeigt.
-Wie man sieht, ist die Posteriori-Verteilung (glockenförmige Verteilung) komplett außerhalb des
-Bereichs "sehr kleiner" Werte (ROPE; blaues Rechteck rechts).
-Wir resümieren: "Es ist auszuschließen, dass der Effekt der Variable Zylinder auf den Spritverbrauch praktisch Null (sehr klein) ist". 
-
-Wenn man die Null bzw. den Nullbereich (ROPE) eines Parameters ausschließt,
-nennt man das Ergebnis bzw. den Effekt auch "signifikant" (leider ein häufig missbrauchter und missverstandener Begriff).
-Unser Effekt in diesem Beispiel ist also signifikant (nach dieser Definition).
-Besser ist es aber, wenn Sie den Begriff vermeiden,
-und stattdessen davon sprechen, dass Sie einen Effekt gefunden haben (oder nicht oder dass eine unklare Ergebnislage vorliegt).
-Haben Sie einen Effekt gefunden, so heißt das synonym, dass die Nullhypothese ausgeschlossen ist (falsifiziert ist),
-natürlich immer auf Basis des vorliegenden Modells bzw. der vorliegenden Daten.
-
-
-```{r echo = FALSE}
-library(easystats)
-library(rstanarm)
-m1 <- stan_glm(mpg ~ cyl, data = mtcars, refresh = 0, seed = 42)
-
-plot(rope(m1))
-```
-
-
-
-
-
-
-## Ergebnisteil
+## Statistiken berichten im Ergebnisteil {#sec-statistik-ergebnisteil}
 
 :::{.callout-note}
-Einen Gliederungsvorschlag für Ihren Ergebnisteil finden Sie in @sec-ergebnisteil. $\square$
+Einen Gliederungsvorschlag für Ihren Ergebnisteil finden Sie in @sec-ergebnisteil. Dort finden Sie z.B. auch Hinweise zur Gestaltung von Abbildungen, s. @sec-abbildungen. $\square$
 :::
 
+
+### Datenaufbereitung
+
+Falls Sie die Daten aufbereiten mussten in einem Maße, dass übliche, notwendige Operationen übersteigt, sollten Sie kurz berichten, was Sie getan haben. Wenn Sie lediglich die Daten mit Operationen wie Scores berechnet oder Variablen zentriert aufbereitet haben, müssen Sie nichts weiter berichten. 
+Sie sollten dabei keine Syntax (z.B. R-Code) aufführen; dafür ist ggf. Platz im Anhang.
 
 ### Deskriptive Statistik
 
@@ -639,6 +381,11 @@ Es erlaubt uns zu sagen, dass der Unterschied im Spritverbrauch zwischen 3.6 und
 laut dem Modell.
 Der Schalter `prob` erlaubt, andere CI-Breiten, z.B. 97% zu wählen.
 
+
+Formulierungsvorschlag:
+
+>    Der statistische Effekt der Schaltung auf den Spritverbrauch wurde vom Modell auf 7.21 geschätzt, 95%-PI [3.72, 10.70]. Da die Null nicht im Intervall liegt, kann die Nullhypothese ausgeschlossen werden.
+
 Ein HDI bekommen Sie, wenn Sie bei `ci_method` den Wert `"hdi` wählen;
 oder wenn Sie gleich den Befehl `hdi(m1)` ausführen, s. @tbl-m1-params2.
 
@@ -672,23 +419,7 @@ tbl_regression(m1)
 
 Den Punktschätzer (`Median`) zum Unterschied für die Gruppen (Automatik vs. Schaltgetriebe) hat uns die Funktion `parameters()` auch geliefert. Der Unterschied zwischen den beiden Gruppen liegt laut Modell bei ca. 7.2 Meilen.
 
-Im Bericht könnte man z.B. schreiben:
 
-*Formulierungsvorschlag*
-
->    Der Unterschied im Spritverbrauch zwischen den beiden Gruppen (Automatik vs. Schaltgetriebe) wurde auf 7.2 Meilen geschätzt, 95% PI [3.7, 11.0]. 
-
-
-
-
-
-Weiter macht es Sinn zu überlegen, ob Sie den Effekt für "klein" oder "groß" halten.
-Das ist eine subjektive Frage, die Sie am besten auf Basis theoretischer (nicht statistischer) Überlegungen
-entscheiden.
-Am besten Sie erwähnen im Methodenteil, was Sie als "kleinen" und "großen" Effekt einschätzen.
-So könnten Sie argumentieren, dass ein Unterschied von 1 Meile "klein" ist und 5 Meilen "groß".
-Demnach sprechen unsere Ergebnisse deutlich gegen einen kleinen Effekt und 
-sind gut mit einem "großen" Effekt kompatibel.
 
 
 Es bietet sich an, die Parameter-Schätzbereiche zu visualisieren.
@@ -826,7 +557,19 @@ Das ROPE ist eine nette Sache: Man kann eine "Praktischnullhypothese" testen.
 die Informationen eines ROPE aber noch mehr.
 
 
-### Standardisierte Effektstärke
+####  Effektstärke
+
+
+
+
+
+Weiter macht es Sinn zu überlegen, ob Sie den Effekt für "klein" oder "groß" halten.
+Das ist eine subjektive Frage, die Sie am besten auf Basis theoretischer (nicht statistischer) Überlegungen
+entscheiden.
+Am besten Sie erwähnen im Methodenteil, was Sie als "kleinen" und "großen" Effekt einschätzen.
+So könnten Sie argumentieren (auf Basis theoretischer Überlegungen), dass ein Unterschied von 1 Meile "klein" ist und 5 Meilen "groß".
+Demnach sprechen die Ergebnisse von `m1` deutlich gegen einen kleinen Effekt und sind gut mit einem "großen" Effekt kompatibel.
+
 
 Vergleicht man Gruppen und ist z.B. die AV wenig anschaulich (etwa ein Summenscore),
 so bietet es sich, standardisierte Maße des Gruppenunterschieds anzugeben.
@@ -862,22 +605,15 @@ hdi(m1_R2) %>% print_md()
 ```
 
 
-## Diskussion
-
-
-Im Diskussionsteil fasst man die zentralen Ergebnisse zusammen und interpretiert sie.
-Danach schließt sich eine Kritik der Ergebnisse (oder vielmehr des Vorgehens) an.
-
-Ob man eine Hypothese "annimmt" oder "verwirft", sollte
-nicht von einer einzelnen Zahl abhängig sein.
-Vielmehr ist es keine Schwarz-Weiß-,
-sondern eine Grauton-Entscheidung mit mehreren Einflussgrößen,
-wie Präzision der Schätzung, Effektstärke, Stichprobengröße, Güte der Daten, Stärke des Versuchsplans, Generalisierbarkeit,
-um nur einige wichtige zu nennen.
-
-
 
 ## Tipps
+
+
+### Schauen Sie sich Bachelorarbeiten an
+
+Im Netz findet man eine Reihe von Abschlussarbeiten, auch aus der (Wirtschafts-/Medien-)Psychologie. In @sec-beispiele-projektarbeiten finden Sie Anregungen dazu.
+
+
 
 ### Diagramme exportieren
 
@@ -903,7 +639,7 @@ In Word sollten Sie es händisch durch den Glyphen (das Zeichen) "±" ersetzen.^
 
 
 
-#### R-Paket `report`
+### R-Paket `report`
 
 Vielleicht ist das R-Paket `report` für Sie nützlich. Ich bin nicht ganz sicher,
 denn das Paket ist noch sehr neu und berichtet recht viel Informationen.

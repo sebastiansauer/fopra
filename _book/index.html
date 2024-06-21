@@ -71,15 +71,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Suchen"
   }
 }</script>
-<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet">
-<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
-<script src="site_libs/d3-3.3.8/d3.min.js"></script>
-<script src="site_libs/dagre-0.4.0/dagre-d3.min.js"></script>
-<link href="site_libs/mermaid-0.3.0/dist/mermaid.css" rel="stylesheet">
-<script src="site_libs/mermaid-0.3.0/dist/mermaid.slim.min.js"></script>
-<link href="site_libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet">
-<script src="site_libs/chromatography-0.1/chromatography.js"></script>
-<script src="site_libs/DiagrammeR-binding-1.0.11/DiagrammeR.js"></script>
 <link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
 <script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script>
 
@@ -539,18 +530,15 @@ Tabelle&nbsp;1.1: Grober Zeitplan für Ihre empirische Projektrarbeit
 <p>Es können nur grobe Richtwerte angegeben werden, da die Zeiten je nach Thema, Person und Rahmenbedingungen variieren. Es bietet sich an, die Ergebnisse jedes Arbeitsschrittes in Rohform zu strukturieren und zu dokumentieren, so dass während der Berichtlegung nur noch ein Zusammenschreiben stattfindet.</p>
 <p>Tatsächlich ist ein großer Teil der Arbeit lesen und sich Gedanken machen - nicht schreiben. Denn sobald man weiß, was man schreiben soll, schreibt’s sich auch schnell. Andernfalls ist es eine Qual. 🙅‍♀️ Don’t do it.</p>
 <p><a href="#fig-projektplan" class="quarto-xref">Abbildung&nbsp;<span>1.3</span></a> gibt Ihnen eine Orientierung, welchen Zeitanteil Sie für die einzelnen, wesentlichen Arbeitsschritte bei der Durchführung Ihrer Studie (bzw. der Dokumentation dazu) Sie einplanen sollten.</p>
-<div class="cell">
-<div id="fig-projektplan" class="cell-output-display quarto-figure quarto-figure-center anchored">
+<div id="fig-projektplan" class="quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-projektplan-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="DiagrammeR html-widget html-fill-item" id="htmlwidget-fc9a6570c98281e1c017" style="width:100%;height:464px;"></div>
-<script type="application/json" data-for="htmlwidget-fc9a6570c98281e1c017">{"x":{"diagram":"\ngantt\ndateFormat  YYYY-MM-DD\ntitle Projektplan Forschungsprojekt\n\nsection Theorie\nThemenwahl                    :               first_1,    2024-03-13, 21d\nEinlesen                      :               first_2,    2024-03-20, 28d\nTheorie schreiben             :               first_3,    2024-03-27, 21d\n\nsection Empirie\nStudiendesign                 :               import_1,   after first_3, 14d\nMessinstrumente               :               import_2,   after import_1, 7d\nStichprobe                    :               import_3,   after import_2, 7d\nMethode schreiben             :               import_4,   2024-05-01, 14d\nErheben                       :               import_5,   after import_4, 14d\nAuswerten                     :               import_6,   2024-05-22, 14d\n\nsection Abschluss\nSchreiben                     :               extras_1,   2024-05-29, 14d\nFinalisieren                  :               extras_2,   after extras_1, 7d\n\n"},"evals":[],"jsHooks":[]}</script>
+<img src="img/projektplan.png" id="fig-projektplan" class="img-fluid figure-img">
 </div>
-<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-projektplan-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;1.3: Projektplan
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-projektplan-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;1.3
 </figcaption>
 </figure>
-</div>
 </div>
 <p>Dieser Plan geht von ca. 15 Wochen Laufzeit (in tutto) aus mit Beginn in KW 11 (<code>w.11</code>) und Ende in KW 24 (<code>w.24</code>); passen Sie den Plan ggf. auf Ihre Projektlaufzeit an.</p>
 <div class="callout callout-style-default callout-caution callout-titled">
@@ -616,7 +604,7 @@ Vorsicht vor Aufschieberitis
 <section id="reproduzierbarkeit" class="level2" data-number="1.8">
 <h2 data-number="1.8" class="anchored" data-anchor-id="reproduzierbarkeit"><span class="header-section-number">1.8</span> Reproduzierbarkeit</h2>
 <p>Hier sind einige technische Details zur Reproduzierbarkeit des Buchs.</p>
-<p>Dieses Dokument wurde erzeugt am/um 2024-06-02 21:48:13.933433.</p>
+<p>Dieses Dokument wurde erzeugt am/um 2024-06-21 22:16:41.219734.</p>
 <p>Die verwendeten R-Pakete sind mit <a href="https://rstudio.github.io/renv/">renv</a> dokumentiert.</p>
 <p>Der Quellcode ist in <a href="https://github.com/sebastiansauer/fopra">diesem Github-Repo</a> dokumentiert.</p>
 

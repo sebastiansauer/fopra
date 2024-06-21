@@ -302,10 +302,15 @@ parameters(m_bringtnixtin) %>% plot(show_intercept = TRUE) +
 
 #### Praktisch-Null-Hypothese (ROPE)
 
+:::{#def-rope}
+### Praktisch-Null-Hypothese (ROPE)
+Kurz gesagt wird beim ROPE geprüft, welcher Anteil des Posteriori-Intervalls zu einem Bereich "vernachlässigbar kleiner" Parameterwerte bewegt [@kruschke_rejecting_2018]. $\square$
+:::
+
 Mit dem ROPE-Verfahren kann man eine "Praktisch-Null-Hypothese" testen, 
 also ob ein Bereich *um die Null herum*, also "Null plus-minus ein bisschen" im Hauptbereich im Hauptbereich (95%-KI) enthalten ist.
 
-In R geht das so: `rope(m_bringtnixtin)`, s. @tbl-m1-rope und @fig-m1-rope.
+Schauen wir uns die Umsetzung in R anhand des Beispiels zu *Bringtnixtin* an: `rope(m_bringtnixtin)`, s. @tbl-m1-rope und @fig-m1-rope.
 
 
 
@@ -376,6 +381,49 @@ Aber eine kleine Chance, dass der Effekt von `g` doch (ungefähr) Null oder soga
 >   👨‍🏫 Frau Professor Lustig, oh je! Unser Wirkstoff Bringtnixtin bringt anscheinend gar nix!
 
 >   👩‍🏫 Herr Professor Sauer, wir müssen erst einmal in Ruhe die Studie replizieren. Eine Schwalbe macht noch keinen Frühling.
+
+
+
+
+
+
+
+
+:::{#exm-mtcars-rope}
+#### Hat die Zylinderzahl einen Praktisch-Null-Effekt auf den Spritverbrauch?
+
+ 
+@fig-mpg-rope illustriert ein Rope für die Forschungsfrage "Hat die Zylinderzahl einen Praktisch-Null-Effekt auf den Spritverbrauch". Anders formuliert "Ist der Effekt der Zylinderzahl (auf den Spritverbrauch) vernachlässigbar klein?"
+Genauer gesagt ist die Posteriori-Verteilung für den (Regressions-)Effekt, $\beta$, des Parameters `cyl` gezeigt (Datensatz `mtcars`).
+Wie man sieht, ist die Posteriori-Verteilung (roter Bereich; glockenförmige Verteilung) komplett außerhalb des
+Bereichs "sehr kleiner" Werte (ROPE; blaues Rechteck rechts).
+Wir resümieren: "Es ist auszuschließen, dass der Effekt der Variable Zylinder auf den Spritverbrauch praktisch Null (sehr klein) ist". $\square$
+:::
+
+
+
+
+```{r echo = FALSE}
+#| label: fig-mpg-rope
+#| fig-cap: "ROPE (blauer Balken) und 95%-KI (roter Bereich) überlappen sich nicht: Die ROPE-Hypothese wird verworfen."
+library(easystats)
+library(rstanarm)
+m1 <- stan_glm(mpg ~ cyl, data = mtcars, refresh = 0, seed = 42)
+
+plot(rope(m1))
+```
+
+
+
+
+Wenn man die Null bzw. den Nullbereich (ROPE) eines Parameters ausschließt,
+nennt man das Ergebnis bzw. den Effekt auch "signifikant" (leider ein häufig missbrauchter und missverstandener Begriff).
+Unser Effekt in diesem Beispiel ist also signifikant (nach dieser Definition).
+Besser ist es aber, wenn Sie den Begriff vermeiden,
+und stattdessen davon sprechen, dass Sie einen Effekt gefunden haben (oder nicht oder dass eine unklare Ergebnislage vorliegt).
+Haben Sie einen Effekt gefunden, so heißt das synonym, dass die Nullhypothese ausgeschlossen ist (falsifiziert ist),
+natürlich immer auf Basis des vorliegenden Modells bzw. der vorliegenden Daten.
+
 
 
 #### Modellgüte

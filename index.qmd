@@ -140,9 +140,12 @@ Tatsächlich ist ein großer Teil der Arbeit lesen und sich Gedanken machen - ni
 @fig-projektplan gibt Ihnen eine  Orientierung, welchen Zeitanteil Sie für die einzelnen, wesentlichen Arbeitsschritte bei der Durchführung Ihrer Studie (bzw. der Dokumentation dazu) Sie einplanen sollten.
 
 
+![](img/projektplan.png){#fig-projektplan}  
+
 
 ```{r}
 #| echo: false
+#| eval: false
 #| fig-cap: "Projektplan"
 #| label: fig-projektplan
 library(DiagrammeR)

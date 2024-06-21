@@ -784,16 +784,132 @@ Abbildung&nbsp;4.6: Die Bestandteile des Theorieteils
 <li>Der kausale Zusammenhang beider Konstrukte</li>
 </ol>
 <p>Eine Gliederung könnte so aussehen:</p>
-<ol type="1">
-<li>Achtsamkeit 1.1 Historisch-theoretische Entwicklung des Konzepts Achtsamkeit 1.2 Definitionen 1.3 Abgrenzungen zu benachbarten Konstrukten 1.4 Kontexte 1.5 Diagnostik</li>
-<li>Wirkforschung 2.1 Definitionen 2.2 Entspannungsreaktion 2.3 Reperceving 2.4 Desidentifikation 2.5 Erfahrungsaussetzung</li>
-<li>Affektive Reaktivität 3.1 BIS-/BAS-Konzept 3.2 Buddhistische Psychologie 3.3 Verwandte Konstrukte</li>
-<li>Bewertung des Forschungsstands</li>
-<li>Hypothesen</li>
-</ol>
+<pre><code>1. Achtsamkeit
+  1.1 Historisch-theoretische Entwicklung des Konzepts Achtsamkeit
+  1.2 Definitionen
+  1.3 Abgrenzungen zu benachbarten Konstrukten
+  1.4 Kontexte
+  1.5 Diagnostik
+2. Wirkforschung
+  2.1 Definitionen
+  2.2 Entspannungsreaktion
+  2.3 Reperceving
+  2.4 Desidentifikation
+  2.5 Erfahrungsaussetzung
+3. Affektive Reaktivität
+  3.1 BIS-/BAS-Konzept
+  3.2 Buddhistische Psychologie
+  3.3 Verwandte Konstrukte
+4. Bewertung des Forschungsstands
+5. Hypothesen</code></pre>
 <p><span class="math inline">\(\square\)</span></p>
 </div>
 <p>Da den Hypothesen eine hohe Bedeutung zukommt, sollten Sie im Text gut auffindbar sein, z. B. in einem eigenen Abschnitt oder optisch vom übrigen Textfluss hervorgehoben.</p>
+<section id="testen-oder-schätzen" class="level4" data-number="4.3.5.1">
+<h4 data-number="4.3.5.1" class="anchored" data-anchor-id="testen-oder-schätzen"><span class="header-section-number">4.3.5.1</span> Testen oder Schätzen?</h4>
+<p>Am Ende des Theorieteils bietet es sich an, die Hypothesen oder die Forschungsfrage zu spezifizieren. Sie können sich für eines von beiden entscheiden oder auch beides angehen.</p>
+<p>In der bisherigen Literatur (in der Psychologie) werden zumeist Hypothesen getestet, nach dem Motto “jo, unsere Vermutung scheint zu stimmen!” oder “nein, das Zeugs taugt nix!”. Das Problem ist, dass solches Denken etwas simpel ist, Schwarz-Weiß eben. Außerdem sind Nullhypothesen streng genommen immer falsch, weswegen es eigentlich keinen Sinn macht, sie zu untersuchen. Aber dafür ist das Schwarz-Weiß-Denken schön einfach. Eine (aus Sicht verschiedener Statistiker) bessere Methode ist es, “Praktisch-Null-Hypothesen” zu testen. Dabei testet man nicht, ob der Parameterwert <em>exakt</em> Null ist (0,00000000…), sondern <em>ungefähr</em> Null, also vielleicht z. B. von -0.1 bis 0.1. Den Bereich von Werten, die praktisch bedeutungslos klein bzw. bedeutungslos sind, bezeichnen wir als “praktisch Null”. Eine technische Umsetzung ist das ROPE-Konzept.</p>
+<p>Parameterschätzung fragt nicht <em>ob</em>, sondern <em>wieviel</em>. Nicht viel komplizierter, aber nuancierter. Außerdem enthält das Parameterschätzen auch das Hypothesentesten: Ist die Null im Schätz-Intervall nicht enthalten, so kann man die Null-Hypothese ausschließen.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tipp
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Am besten Sie machen beides: Hypothesen testen und Parameter schätzen. Einfach umsetzen lässt sich das, wenn Sie sich den Schätzbereich plausibler Parameterwerte ausgeben lassen (z. B. das 95%-KI der Posteriori-Verteilung). Liegt der Wert Null außerhalb dieses Intervalls, so können Sie die Nullhypothese offensichtlich ausschließen. Liegt die Null innerhalb des Intervalls, so können Sie sie nicht ausschließen. <span class="math inline">\(\square\)</span></p>
+</div>
+</div>
+</section>
+<section id="kausal--vs.-korrelationsmodell" class="level4" data-number="4.3.5.2">
+<h4 data-number="4.3.5.2" class="anchored" data-anchor-id="kausal--vs.-korrelationsmodell"><span class="header-section-number">4.3.5.2</span> Kausal- vs.&nbsp;Korrelationsmodell</h4>
+<p>Sie wollten weiterhin angeben, ob Ihre Forschungsfrage ein kausales Modell annimmt oder ein deskriptives (korrelatives). Bei einem kausalen Modell sollen dann die Pfeile Wirkungsrichtungen, also Ursache-Wirkungs-Beziehungen angeben.</p>
+<p>Auch wenn ihre Studie nicht die “Kraft” hat, Kausalbeziehungen (in Gänze) aufzudecken, ist es trotzdem meistens sinnvoll, ein Kausalmodell aufzustellen, da Theorien (und Praxis) meist an Kausalbeziehungen interessiert sind, und an Korrelationsbeziehungen wenig(er).</p>
+<p>Viele wissenschaftliche Studien haben ein kausales Erkenntnisziel, nicht ein deskriptives.</p>
+</section>
+<section id="kausalmodell-definieren" class="level4" data-number="4.3.5.3">
+<h4 data-number="4.3.5.3" class="anchored" data-anchor-id="kausalmodell-definieren"><span class="header-section-number">4.3.5.3</span> Kausalmodell definieren</h4>
+<p>Hat Ihr Studie ein <em>Erklärungsziel</em>, also ein kausales Erkenntnisziel, so bietet sich an, Ihr Kausalmodell mit einem Pfaddiagramm bzw. <em>DAG</em> zu visualisieren, z. B. so, s. <a href="#fig-dagmodell1" class="quarto-xref">Abbildung&nbsp;<span>4.7</span></a>.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-dagmodell1" class="quarto-figure quarto-figure-center anchored" width="100%">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-dagmodell1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="030-Schreiben_files/figure-html/fig-dagmodell1-1.png" class="img-fluid figure-img" style="width:100.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-dagmodell1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;4.7: Beispielhafter DAG
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Dabei steht <code>lern</code> für “Lernzeit in Stunden”, <code>mot</code> für “Motivation” und <code>lern</code> für “Lernerfolg”. Die Operationalisierung der Variablen sollten im Methodenteil genauer beschrieben sein.</p>
+<p>Außerdem macht es Sinn, das Modell formal zu spezifizieren, etwa so:</p>
+<p><span class="math display">\[
+\begin{aligned}
+\text{erfolg} &amp;\sim N(\mu_i, \sigma) \qquad \text{Likelihood} \\
+\mu_i &amp;= \beta_0 + \beta_1 \text{lern} + \beta_2 \text{mot} \qquad \text{lineares Modell} \\
+\beta_0 &amp;\sim N(0, 2.5)  \qquad \text{Prior Achsenabschnitt} \\
+\beta_1 &amp;\sim N(0, 2.5)  \qquad \text{Prior Regressiongewicht lern} \\
+\beta_2 &amp;\sim N(0, 2.5)  \qquad \text{Prior Regressiongewicht mot} \\
+\sigma &amp;\sim Exp(1) \qquad \text{Prior Streuung} \\
+\end{aligned}
+\]</span></p>
+<p>Wenn Sie das Modell mit STAN berechnen, also vermittelt über z. B. <code>rstanarm</code>, dann wählt <code>stan_glm()</code> für Sie folgende Priori-Werte:</p>
+<ul>
+<li><span class="math inline">\(\beta\)</span>s: Normalverteilt mit Mittelwert 0 und SD 2.5</li>
+<li><span class="math inline">\(\sigma\)</span>: Exponentialverteilt mit Streckung 1</li>
+</ul>
+<p>Die <span class="math inline">\(\beta\)</span>s sind am einfachsten als z-Werte zu verstehen: Grob übersetzt sagt <code>rstanarm</code> “Mei, ich geh davon aus, dass der Effekt vermutlich 2.5-SD-Einheiten um den Mittelwert rum liegt, könnten auch etwas mehr sein, aber mehr als 5-SD-Einheiten sind schon echt unwahrscheinlich”. Das nennt man einen “schwach informativen Prior”: der erlaubt viel, aber den größten Quatsch schließt er aus.</p>
+<p>Praktischerweise müssten sie nicht mal ihre Variablen z-tranformieren (aber Sie können ohne Schaden!), denn <code>rstanarm</code> macht das für Sie.</p>
+<p>Tipp: Geben Sie an, dass Sie die Standardwerte (Voreinstellung) der von Ihnen verwendeten Software (wie <code>rstanarm</code>) verwendet haben. Zitieren Sie möglichst die Software (in der verwendeten Version) und reichen Sie die Syntax ein.</p>
+<p>Mehr zu Prioris bei <code>rstanarm</code> findet sich <a href="https://mc-stan.org/rstanarm/articles/priors.html">hier</a>.</p>
+<p>Mit <code>prior_summary(mein_model)</code> bekommt man einen Überblick über die Prioriwerte, die im Modell <code>mein_modell</code> verwendet wurden.</p>
+<p>Es macht Sinn, zu begründen, warum sie das Modell so gewählt haben, wie sie es gewählt haben. Wenn Sie eine Normalverteilung für die Priori-Verteilungen wählen, haben Sie Argumentationslinien: epistemologisch und ontologisch. Epistemologisch können Sie argumentieren, dass die Normalverteilung die Entropie maximiert, also die Verteilung mit den wenigsten Vorannahmen ist, wenn man davon ausgeht, dass die gesuchte Verteilung über eine endliche Varianz und einen endlichen Mittelwert verfügt. Ontologisch können Sie argumentieren, dass z. B. Körpergröße (innerhalb eines Geschlechts zumindest) hinreichend normalverteilt ist.</p>
+<p>Die Begründung für das lineare Modelle erschließt sich aus der Theorie, nämlich dass z. B. die gewählten UV den gesuchten Effekt gut beschreiben.</p>
+</section>
+<section id="hypothesen-testen" class="level4" data-number="4.3.5.4">
+<h4 data-number="4.3.5.4" class="anchored" data-anchor-id="hypothesen-testen"><span class="header-section-number">4.3.5.4</span> Hypothesen testen</h4>
+<p>Das Testen der Hypothese ist eine Umsetzung der Idee, eine Behauptung einer empirisch-rationalen Prüfung zu unterziehen.</p>
+<p>Es bietet sich an, eine Hypothese zu wählen, wenn der Stand der Theorie dies erlaubt, idealerweise mehr als nur eine Null-Effekt-Hypothese, etwas <span class="math inline">\(\beta=0\)</span>. Dass nämlich ein Effekt <em>exakt</em> Null ist, erscheint für die meisten Situationen der Sozialwissenschaften reichlich unplausibel.</p>
+<p>Sie sollten die Hypothese zuerst als Aussage formulieren, aber danach möglichst mit mathematischen Symbolen präzisieren (“statistische Hypothesen”).</p>
+<p>Hier sind Beispiele für statistische Hypothesen:</p>
+<ul>
+<li><span class="math inline">\(H: \mu &gt; 0\)</span></li>
+<li><span class="math inline">\(H: \mu = 0\)</span></li>
+<li><span class="math inline">\(H: \mu \ne 0\)</span></li>
+<li><span class="math inline">\(H: \beta &gt; 0\)</span></li>
+<li><span class="math inline">\(H: d &gt; 0\)</span></li>
+<li><span class="math inline">\(H: R^2 &gt; 0\)</span></li>
+<li><span class="math inline">\(H: \mu &gt; 42\)</span></li>
+<li><span class="math inline">\(H: 2.71 &lt; \mu &lt; 3.14\)</span></li>
+</ul>
+<p>Dabei meint <span class="math inline">\(\beta\)</span> ein Regressiongewicht, <span class="math inline">\(d\)</span> eine Differenz (zweier Gruppen) und <span class="math inline">\(R^2\)</span> die erklärte Varianz eines Modells.</p>
+<p><span class="math inline">\(R^2\)</span> als Kennzahl einer Hypothese ist interessant, weil es Ihnen erlaubt, ein ganzes Modell als Hypothese zu formulieren. Also “Verbundhypothesen” aufzustellen, die mehr als eine oder zwei Variablen umfassen.</p>
+<p>Möchten Sie eine Hypothese zu einem Parameter testen, der einen Nullwert beinhaltet, bietet sich das ROPE-Verfahren an, vgl. <span class="citation" data-cites="kruschke_rejecting_2018">Kruschke (<a href="130-references.html#ref-kruschke_rejecting_2018" role="doc-biblioref">2018</a>)</span>.</p>
+</section>
+<section id="parameterschätzung" class="level4" data-number="4.3.5.5">
+<h4 data-number="4.3.5.5" class="anchored" data-anchor-id="parameterschätzung"><span class="header-section-number">4.3.5.5</span> Parameterschätzung</h4>
+<p>Bei einer Parameterschätzung formulieren Sie ein Modell, genau wie beim Hypothesen testen, nur eben ohne Hypothesen. Es geht Ihnen dann nicht um die Frage, <em>ob</em> irgend ein Sachverhalt der Fall ist (das ist Hypothesen prüfen). Stattdessen interessieren Sie sich für die Frage, <em>wie sehr</em> etwas der Fall ist:</p>
+<ul>
+<li>“Wie stark ist der Zusammenhang von Lernzeit und Prüfungserfolg?”</li>
+<li>“Um wie viele Sekunden parken Frauen im Schnitt schneller ein als Männer?”</li>
+<li>“Wie groß ist der statistische Effekt eines Sportwagens auf einem männlichen Profilbild beim Online-Dating?”</li>
+</ul>
+<p>Auch hier ist es erlaubt und sinnvoll, eine sprachliche Frage, die oft vage ist, schon aufgrund der natürlichen Ambuität der Sprache, mit Hilfe mathematischer Notation zu präzisieren:</p>
+<ul>
+<li>“Der Zusammenhang <span class="math inline">\(\beta\)</span> ist definiert als das Regressiongewicht der Variable <code>lern</code> im Modell <code>m1</code>.</li>
+<li>“Operationalisiert wurde die Einparkgeschwindigkeit als die Dauer der Durchführung in Sekunden nach Instruktion wie im Abschnitt XYZ beschrieben. Unser Modell (<code>m1</code>) schätzte den Parameter <code>s</code>.</li>
+<li>“Der statistische Effekt ist definiert als das Regressiongewicht der experimentellen Bedingung (binäre Variable <code>group</code>) im Modell <code>m1</code>.</li>
+</ul>
+<p>Geben Sie weiter an, welches Intervall Sie berichten, z. B. “Die Parameterschätzungen werden anhand eines 95%-HDI berichtet”.</p>
+<p>Auch wenn Sie eine Hypothese testen, sollten Sie Bereichsschätzungen für die Parameter vornehmen, also Schätzbereiche aus der Posteriori-Verteilung berichten.</p>
+<p>In R lässt sich das leicht anhand des Befehls <code>parameters</code> umsetzen, s. <a href="090-Modellieren.html" class="quarto-xref"><span>Kapitel&nbsp;12</span></a>.</p>
+</section>
 </section>
 <section id="methodenteil" class="level3" data-number="4.3.6">
 <h3 data-number="4.3.6" class="anchored" data-anchor-id="methodenteil"><span class="header-section-number">4.3.6</span> Methodenteil</h3>
@@ -826,9 +942,11 @@ Abbildung&nbsp;4.6: Die Bestandteile des Theorieteils
 <section id="analyse" class="level4" data-number="4.3.6.4">
 <h4 data-number="4.3.6.4" class="anchored" data-anchor-id="analyse"><span class="header-section-number">4.3.6.4</span> Analyse</h4>
 <ul>
-<li>Verwendete Analyse-<em>Software</em> (idealerweise mit Versionsnummer) wie R^[RStudio ist nur eine Benutzeroberfläche und daher irrelevant für die Ergebnisse) und (idealerweise) die R-Pakete</li>
+<li>Skizzierung der <em>Analyse</em> in Bezug auf das statistische Vorgehen (wie z. B. Bayes-Methode, ggf. mit ROPE <span class="citation" data-cites="kruschke_rejecting_2018">(<a href="130-references.html#ref-kruschke_rejecting_2018" role="doc-biblioref">Kruschke 2018</a>)</span> oder Hinweise auf das Signifikanzniveau bei einer frequentistischen Analyse)</li>
+<li>Erklären Sie (kurz), warum Sie sich für Bayes oder ggf. für die Frequentistische Methode entschieden haben<a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a></li>
+<li>Führen Sie (kurz) an, ob Sie an einer Parameterschätzung oder einer Hypothesentestung interessiert sind oder an beidem</li>
+<li>Verwendete Analyse-<em>Software</em> (idealerweise mit Versionsnummer) wie R<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> und (idealerweise) die R-Pakete</li>
 <li>Software, die zur Reproduzierbarkeit nicht von Relevanz ist, braucht nicht angegeben zu werden (z. B. Word oder RStudio)</li>
-<li>Skizzierung der <em>Analyse</em> in Bezug auf das statistische Vorgehen (wie z. B. Bayes-Methoden auf Basis von Stan oder Hinweise auf das Signifikanzniveau bei einer frequentistischen Analyse)</li>
 </ul>
 </section>
 </section>
@@ -838,27 +956,29 @@ Abbildung&nbsp;4.6: Die Bestandteile des Theorieteils
 <p>Handlungen werden in der 1. Vergangenheit beschrieben („Es fand sich ein Unterschied …“); überdauernde Tatsachen hingegen in der Gegenwart („Dieser Wert ist statistisch signifikant“). Im Ergebnisteil soll man keine Interpretationen oder Bewertungen anführen, sondern lediglich so objektiv wie möglich Tatschen (Fakten) berichten. In quantitativen Arbeiten findet man naturgemäß oft viele Statistiken. Wer hätt’s gedacht. Berichtet man ein Ergebnis mit wenig Zahlenmaterial, so gibt man die Zahlen im Text wieder; größere Mengen sind übersichtlicher in Tabellen dargestellt. Sehr große Zahlenmengen sind besser im Anhang aufgehoben. Häufig kann man quantitative Daten gut in Diagrammen darstellen. Man beachte die Vorgaben der APA zur Darstellung von Statistiken. Fügen Sie keine R-Syntax ein (schon gar nicht als Screenshot); nutzen Sie für Syntax den Anhang. Technische Details wie das Aufbereiten von Daten (z. B. Umbenennen von Variablen oder ihren Ausprägungen) sollen nicht im Ergebnisteil (en Detail) aufgeführt werden, höchstens kursorisch mit Verweis auf die Syntax (die an geeigneter Stelle dokumentiert ist).</p>
 <p>Sie können Ihren Ergebnisteil in folgende Abschnitte gliedern:</p>
 <ol type="1">
+<li>Falls Sie aufwändige Schritte zur Aufbereitung der Daten unternommen haben, sollten Sie kurz darüber berichten. Sparen Sie sich aber die Details (und den R-Code) für den (elektronischen) Anhang auf.</li>
 <li>Allgemeine <em>deskriptive</em> Ergebnisse (noch nicht auf Hypothesen bezogen): Hier könnten Sie z. B. die Mittelwerte und Streuungen pro Gruppe berichten oder die Korrelationen der Variablen untereinander.</li>
 <li>Zentrale Ergebnisse pro <em>Hypothese</em>/für das Modell: Berichten der verwendeten Verfahren und der Statistiken zu den zentralen Ergebnissen.</li>
 <li>Ggf. sonstige <em>explorative</em> Ergebnisse: Ergebnisse also, die Sie nicht erwartet haben (d.h. nicht in den Hypothesen formuliert waren)</li>
 </ol>
 <pre><code>4 Ergebnisteil
 
-4.1 Deksriptive Ergebnisse
-4.2 Modellierung und Inferenzstatistik
-4.3 Explorative Befunde</code></pre>
+(4.1 Datenaufbereitung)
+4.2 Deskriptive Ergebnisse
+4.3 Modellierung und Inferenzstatistik
+4.4 Explorative Befunde</code></pre>
 <p>Im Ergebnisteil berichten Sie die Ergebnisse Ihrer empirischer Studie, statistische Kennzahlen in den meisten Fällen. Es gibt drei Formate, Statistiken zu berichten: im Text, in einer Tabelle, mit einer Abbildung.</p>
 <section id="sec-formatierung-tabellen" class="level4" data-number="4.3.7.1">
 <h4 data-number="4.3.7.1" class="anchored" data-anchor-id="sec-formatierung-tabellen"><span class="header-section-number">4.3.7.1</span> Formatierung von Tabellen</h4>
 <p>Eine kleine Menge an Zahlen (z. B. fünf) kann konziser im Text berichtet werden. Größere Mengen an Zahlen sollten in Tabellen berichtet werden.</p>
-<p>Ein Beispiel für eine Tabelle zur Untersuchung von Korrelation, die nach APA (V7) formatiert ist, zeigt <a href="#fig-corr1" class="quarto-xref">Abbildung&nbsp;<span>4.7</span></a>.</p>
+<p>Ein Beispiel für eine Tabelle zur Untersuchung von Korrelation, die nach APA (V7) formatiert ist, zeigt <a href="#fig-corr1" class="quarto-xref">Abbildung&nbsp;<span>4.8</span></a>.</p>
 <div id="fig-corr1" class="quarto-figure quarto-figure-center anchored" width="50%">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-corr1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="img/tab-corr.jpg" class="img-fluid figure-img" style="width:50.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-corr1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;4.7: Ein Beispiel für eine Korrelationstabelle, formatiert nach APA7
+Abbildung&nbsp;4.8: Ein Beispiel für eine Korrelationstabelle, formatiert nach APA7
 </figcaption>
 </figure>
 </div>
@@ -866,23 +986,23 @@ Abbildung&nbsp;4.7: Ein Beispiel für eine Korrelationstabelle, formatiert nach 
 <p>Die APA (v7) empfiehlt, die Einträge der Spalten i.d.R. zu zentrieren; eine Ausnahme ist die linke Spalte, deren Einträge linksbündig sein sollen. Außerdem sollten die Tabellen keine “Gitterstäbe” (vertikale Linien) aufweisen und auch nur drei horizontale Linienn, s. #fig-corr1 als Beispiel.</p>
 <p>Zentral bei der Gestaltung von Tabellen sind drei Prinzipien: 1) Übersichtlichkeit, 2) Konsistenz und 3) Ehrlichkeit.</p>
 <p>Man kann solche Tabellen von “Hand” erstellen, oder man nutzt Hilfen wie z. B. das <a href="https://dstanley4.github.io/apaTables/index.html">R-Paket <code>apaTables</code></a>, welche Tabellen im APA-Format erstellt und in Word exportiert.</p>
-<p>Betrachten wir ein Beispiel anhand des Datensatzes <code>mtcars</code><a href="#fn4" class="footnote-ref" id="fnref4" role="doc-noteref"><sup>4</sup></a>, wie man mit <code>apaTables</code> eine Korrelationstabelle erstellt.</p>
+<p>Betrachten wir ein Beispiel anhand des Datensatzes <code>mtcars</code><a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>, wie man mit <code>apaTables</code> eine Korrelationstabelle erstellt.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(apaTables)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(mtcars)</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">apa.cor.table</span>(mtcars, <span class="at">filename =</span> <span class="st">"apa_cor_tab_mtcars.doc"</span>, <span class="at">table.number =</span> <span class="dv">2</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(apaTables)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(mtcars)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">apa.cor.table</span>(mtcars, <span class="at">filename =</span> <span class="st">"apa_cor_tab_mtcars.doc"</span>, <span class="at">table.number =</span> <span class="dv">2</span>)</span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div id="exr-tab-apa" class="theorem exercise">
 <p><span class="theorem-title"><strong>Übungsaufgabe 4.3 (Merkmale eine Tabelle nach APA7) </strong></span>Betrachten Sie <a href="https://apastyle.apa.org/style-grammar-guidelines/tables-figures/sample-tables#correlation">dieses Beispiel</a> für eine Tabelle! Arbeiten Sie die wesentlichen Merkmale der Formatierung heraus.<span class="math inline">\(\square\)</span></p>
 </div>
-<p>Aber was sind die Bestandteile des APA-Formats? Schauen Sie sich dazu <a href="#fig-tab-apa" class="quarto-xref">Abbildung&nbsp;<span>4.8</span></a> an, in der Abbildung sind wesentliche Merkmale des APA-Formats hervorgehoben.</p>
+<p>Aber was sind die Bestandteile des APA-Formats? Schauen Sie sich dazu <a href="#fig-tab-apa" class="quarto-xref">Abbildung&nbsp;<span>4.9</span></a> an, in der Abbildung sind wesentliche Merkmale des APA-Formats hervorgehoben.</p>
 <div id="fig-tab-apa" class="quarto-figure quarto-figure-center anchored" width="50%">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-tab-apa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="img/tab-apa.jpg" class="img-fluid figure-img" style="width:50.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-tab-apa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;4.8: Beispiel für eine APA-Tabelle
+Abbildung&nbsp;4.9: Beispiel für eine APA-Tabelle
 </figcaption>
 </figure>
 </div>
@@ -913,11 +1033,24 @@ Häufiger Fehler
 <p>Tabellen sollten nie als Screenshot in einen Bericht eingefügt werden. Häufig leider die optische Qualität (pixelig) und es ist nicht möglich, Werte aus der Tabelle zu kopieren.<span class="math inline">\(\square\)</span></p>
 </div>
 </div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hinweis
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Formulierungsvorschläge für Ihren Ergebnisteil finden Sie in <a href="100-Statistiken-berichten.html#sec-statistik-ergebnisteil" class="quarto-xref"><span>Kapitel&nbsp;13.5</span></a>. <span class="math inline">\(\square\)</span></p>
+</div>
+</div>
 </section>
-<section id="abbildungen" class="level4" data-number="4.3.7.2">
-<h4 data-number="4.3.7.2" class="anchored" data-anchor-id="abbildungen"><span class="header-section-number">4.3.7.2</span> Abbildungen</h4>
-<p>Abbildungen sollten nur verwendet werden, wenn sie einen Mehrwert bieten.<a href="#fn5" class="footnote-ref" id="fnref5" role="doc-noteref"><sup>5</sup></a> Für eine einzelne Zahl oder für wenige Zahlen lohnt sich meist eine Abbildung nicht; es reicht, die Zahlen im Text anzuführen.</p>
-<p>Nach APA7 steht die Nummer der Abbildung über der Abbildung, z. B. “Abbildung 1”; es folgt kein Punkt. In der nächsten Zeile steht der Titel der Abbildung, wiederum ohne Punkt am Ende. Wichtig ist, dass die Abbildung für sich selbst genommen verständlich ist. Farben können verwendet werden, soweit nützlich, aber sollten idealerweise auch im Schwarz-Weiß-Druck erkennbar sein. Hilfreich ist es zudem, wenn die Ungewissheit in den Kennzahlen durch Fehlerbalken verdeutlicht ist. <a href="#fig-apa" class="quarto-xref">Abbildung&nbsp;<span>4.9</span></a> verdeutlicht diese Aspekte der Formatierung einer Abbildung (in englischer Sprache in diesem Fall).</p>
+<section id="sec-abbildungen" class="level4" data-number="4.3.7.2">
+<h4 data-number="4.3.7.2" class="anchored" data-anchor-id="sec-abbildungen"><span class="header-section-number">4.3.7.2</span> Abbildungen</h4>
+<p>Abbildungen sollten nur verwendet werden, wenn sie einen Mehrwert bieten.<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a> Für eine einzelne Zahl oder für wenige Zahlen lohnt sich meist eine Abbildung nicht; es reicht, die Zahlen im Text anzuführen.</p>
+<p>Nach APA7 steht die Nummer der Abbildung über der Abbildung, z. B. “Abbildung 1”; es folgt kein Punkt. In der nächsten Zeile steht der Titel der Abbildung, wiederum ohne Punkt am Ende. Wichtig ist, dass die Abbildung für sich selbst genommen verständlich ist. Farben können verwendet werden, soweit nützlich, aber sollten idealerweise auch im Schwarz-Weiß-Druck erkennbar sein. Hilfreich ist es zudem, wenn die Ungewissheit in den Kennzahlen durch Fehlerbalken verdeutlicht ist. <a href="#fig-apa" class="quarto-xref">Abbildung&nbsp;<span>4.10</span></a> verdeutlicht diese Aspekte der Formatierung einer Abbildung (in englischer Sprache in diesem Fall).</p>
 <div id="fig-apa" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-apa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -949,12 +1082,12 @@ Häufiger Fehler
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-apa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;4.9: Beispiel-Datendiagramme formatiert nach APA
+Abbildung&nbsp;4.10: Beispiel-Datendiagramme formatiert nach APA
 </figcaption>
 </figure>
 </div>
 <p><a href="https://apastyle.apa.org/style-grammar-guidelines/tables-figures/sample-figures#bar">Quelle der Abbildung</a>, <a href="https://psycnet.apa.org/doiLanding?doi=10.1037%2Fxhp0000553">Urspüngliche Quelle der Abbildung</a></p>
-<p>Eine nützliche Hilfe zur Erstellung von hochwertigen Diagrammen sind die R-Pakete <a href="https://rpkgs.datanovia.com/ggpubr/index.html">ggpubr</a> und <a href="https://indrajeetpatil.github.io/ggstatsplot/">ggstatsplot</a>, s. <a href="#fig-ggpubr-ggstatsplot" class="quarto-xref">Abbildung&nbsp;<span>4.10</span></a>.</p>
+<p>Eine nützliche Hilfe zur Erstellung von hochwertigen Diagrammen sind die R-Pakete <a href="https://rpkgs.datanovia.com/ggpubr/index.html">ggpubr</a> und <a href="https://indrajeetpatil.github.io/ggstatsplot/">ggstatsplot</a>, s. <a href="#fig-ggpubr-ggstatsplot" class="quarto-xref">Abbildung&nbsp;<span>4.11</span></a>.</p>
 <div id="fig-ggpubr-ggstatsplot" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-ggpubr-ggstatsplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -986,15 +1119,19 @@ Abbildung&nbsp;4.9: Beispiel-Datendiagramme formatiert nach APA
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-ggpubr-ggstatsplot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;4.10: R-Pakete zur Erstellung hochwertiger Diagramme
+Abbildung&nbsp;4.11: R-Pakete zur Erstellung hochwertiger Diagramme
 </figcaption>
 </figure>
 </div>
-<p>Die Nummer der Abbildung fügen Sie von “Hand” hinzu (z. B. in Word). Zu beachten ist, dass die Statistiken in <a href="#fig-ggstatsplot1" class="quarto-xref">Abbildung&nbsp;<span>4.10 (b)</span></a> laut APA als Anmerkung unter der Abbildung gestellt werden müssen, vgl. <a href="#fig-apa-format" class="quarto-xref">Abbildung&nbsp;<span>4.9 (a)</span></a>. Weitere Hinweise finden Sie <a href="https://apastyle.apa.org/style-grammar-guidelines/tables-figures/figures">hier</a>.</p>
+<p>Die Nummer der Abbildung fügen Sie von “Hand” hinzu (z. B. in Word). Zu beachten ist, dass die Statistiken in <a href="#fig-ggstatsplot1" class="quarto-xref">Abbildung&nbsp;<span>4.11 (b)</span></a> laut APA als Anmerkung unter der Abbildung gestellt werden müssen, vgl. <a href="#fig-apa-format" class="quarto-xref">Abbildung&nbsp;<span>4.10 (a)</span></a>. Weitere Hinweise finden Sie <a href="https://apastyle.apa.org/style-grammar-guidelines/tables-figures/figures">hier</a>.</p>
 </section>
 <section id="statistik-im-text" class="level4" data-number="4.3.7.3">
 <h4 data-number="4.3.7.3" class="anchored" data-anchor-id="statistik-im-text"><span class="header-section-number">4.3.7.3</span> Statistik im Text</h4>
 <p>Dazu später mehr, s. Kapitel zum Berichten von Ergebnissen, <a href="100-Statistiken-berichten.html" class="quarto-xref"><span>Kapitel&nbsp;13</span></a>.</p>
+</section>
+<section id="sonstiges" class="level4" data-number="4.3.7.4">
+<h4 data-number="4.3.7.4" class="anchored" data-anchor-id="sonstiges"><span class="header-section-number">4.3.7.4</span> Sonstiges</h4>
+<p>Übrigens: R-Quellcode sollte <em>nicht</em> im Hauptteil eines wissenschaftlichen Berichts stehen, verbannen Sie ihn in den Anhang (es sei denn, der Quellcode bzw. die Entwicklung von Syntax ist Gegenstand der Arbeit).</p>
 </section>
 </section>
 <section id="diskussion" class="level3" data-number="4.3.8">
@@ -1020,7 +1157,16 @@ Hinweis
 </section>
 <section id="anhang" class="level3" data-number="4.3.10">
 <h3 data-number="4.3.10" class="anchored" data-anchor-id="anhang"><span class="header-section-number">4.3.10</span> Anhang</h3>
-<p>Im Anhang stehen Details zu Ihrer Studie. Die einzelnen Teile des Anhangs werden durchnummeriert. Alle Inhalte des Anhangs müssen im Haupttext referenziert werden („Der Interviewleitfaden findet sich im Anhang B“.) und vice versa. Typische Inhalte des Anhangs sind: Details zu Messinstrumenten, Interviewleitfäden oder Stimuli, weiterführende Statistiken, Syntax oder Probandeninformationen. Sofern verfügbar, können Sie anstelle z. B. Ihres Fragebogens die URL zu Ihrem Fragebogen einfügen. In ähnlicher Manier sollten Sie Ihre Daten keinesfalls (schon gar nicht per Screenshot) in den Anhang einfügen. Verweisen Sie stattdessen im Anhang auf die entsprechende Datei (achten Sie auf prägnante Dateinamen und zugängliche Formate wie CSV). Die ehrenwörtliche Erklärung steht ebenfalls im Anhang. Eine Funktion des Anhangs ist es, die Informationen, die zur Reproduktion der Studie nötig sind, im Detail vorzuhalten. Auch wenn Sie im Anhang “nur” auf Dateien verweisen, sollte im Anhang aufgeführt sein, welche weiterführenden Informationen dem Haupttext beigefügt sind.</p>
+<p>Im Anhang stehen Details zu Ihrer Studie. Die einzelnen Teile des Anhangs werden durchnummeriert. Alle Inhalte des Anhangs müssen im Haupttext referenziert werden („Der Interviewleitfaden findet sich im Anhang B“.) und vice versa. Typische Inhalte des Anhangs sind:</p>
+<ul>
+<li>Details zu Messinstrumenten,</li>
+<li>Interviewleitfäden oder Stimuli,</li>
+<li>weiterführende Statistiken,</li>
+<li>Syntax oder Probandeninformationen.</li>
+<li>Daten.</li>
+</ul>
+<p>Es ist vollkommen in Ordnung, im Anhang auf eine Datei zu verweisen. Sofern verfügbar, können Sie anstelle z. B. Ihres Fragebogens die URL zu Ihrem Fragebogen einfügen. In ähnlicher Manier sollten Sie Ihre Daten keinesfalls (schon gar nicht per Screenshot) in den Anhang einfügen. Verweisen Sie stattdessen im Anhang auf die entsprechende Datei (achten Sie auf prägnante Dateinamen und zugängliche Formate wie CSV). Die ehrenwörtliche Erklärung steht ebenfalls im Anhang.</p>
+<p>Eine Funktion des Anhangs ist es, die Informationen, die zur Reproduktion der Studie nötig sind, im Detail vorzuhalten. Auch wenn Sie im Anhang “nur” auf Dateien verweisen, sollte im Anhang aufgeführt sein, welche weiterführenden Informationen dem Haupttext beigefügt sind.</p>
 </section>
 </section>
 <section id="schreibstil" class="level2" data-number="4.4">
@@ -1088,7 +1234,7 @@ Hinweis
 <p><span class="theorem-title"><strong>Definition 4.1 (Schwafel (Geschwurbel)) </strong></span>Schwafeln ist eine wortreiche und/oder wenig präzise Darstellung mit wenig Information. <span class="math inline">\(\square\)</span></p>
 </div>
 <div id="exm-schwafel" class="theorem example">
-<p><span class="theorem-title"><strong>Beispiel 4.6 (Beispiele für Schwafel aus studentischer Feder<a href="#fn6" class="footnote-ref" id="fnref6" role="doc-noteref"><sup>6</sup></a>) </strong></span>&nbsp;</p>
+<p><span class="theorem-title"><strong>Beispiel 4.6 (Beispiele für Schwafel aus studentischer Feder<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>) </strong></span>&nbsp;</p>
 <ol type="1">
 <li>Beispiel</li>
 </ol>
@@ -1221,7 +1367,7 @@ Hinweis
 <ul>
 <li>Nach Meinung/Auffassung von Müller ist …</li>
 <li>Meier vertritt dabei die Position …</li>
-<li>So akzentuiert der Autor<a href="#fn7" class="footnote-ref" id="fnref7" role="doc-noteref"><sup>7</sup></a>, dass … -…, so der Autor, …</li>
+<li>So akzentuiert der Autor<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a>, dass … -…, so der Autor, …</li>
 <li>Dieser Umstand sei …</li>
 <li>Der Autor betont nach hier vertretener Auffassung zu Recht die Perspektive, dass …, denn … - - Ohne dies zu begründen, stellt der Autor die These auf, dass …</li>
 <li>Allerdings verzichtet der Autor darauf, zu explizieren, dass …</li>
@@ -1267,7 +1413,7 @@ Hinweis
 <h4 data-number="4.5.1.1" class="anchored" data-anchor-id="richtlinien"><span class="header-section-number">4.5.1.1</span> Richtlinien</h4>
 <p>Solange Sie keine anders lautenden Vorgaben von Ihrer Betreuungsperson haben, können Sie sich an diesen Richtlinien orientieren.</p>
 <ol type="1">
-<li>Verwenden Sie die <em>Format-Vorgaben der APA</em> (aktuelle Version)<a href="#fn8" class="footnote-ref" id="fnref8" role="doc-noteref"><sup>8</sup></a>, um Zitationen, Tabellen und Abbildungen zu formatieren.</li>
+<li>Verwenden Sie die <em>Format-Vorgaben der APA</em> (aktuelle Version)<a href="#fn10" class="footnote-ref" id="fnref10" role="doc-noteref"><sup>10</sup></a>, um Zitationen, Tabellen und Abbildungen zu formatieren.</li>
 <li><em>Fließtext</em> (in längeren Print-Dokumenten wie einer Seminararbeit) ist <em>mit Serifentext</em> zu schreiben; Überschriften können serifenlos gesetzt sein.</li>
 <li><em>Fließtext</em> soll in <em>11 Punkt Schriftgröße</em> gesetzt sein.</li>
 <li>Der Text kann linksbündig oder im <em>Blocksatz</em> gesetzt sein.</li>
@@ -1285,7 +1431,7 @@ Hinweis
 </section>
 <section id="seitenränder-und-satzspiegel" class="level4" data-number="4.5.1.2">
 <h4 data-number="4.5.1.2" class="anchored" data-anchor-id="seitenränder-und-satzspiegel"><span class="header-section-number">4.5.1.2</span> Seitenränder und Satzspiegel</h4>
-<p>Seitenränder, Satzspiegel und andere typografische Elemente sind zumeist nur für paginierte Dokumenten relevant, Dokumente also, die auf einem Blatt Papier gedruckt werden soll. Typische paginierte Dokumenttypen sind Word- oder PDF-Dokumente. Elektronische Dokumente sind dagegen in aller Regel nicht paginiert, also nicht auf physikalische (Papier-)Blätter eines festen Formats zugeschnitten. Das typische elektronische Format für Text sind Webseiten (HTML-Dokumente). Will man einen Text nicht primär in Papierform lesen, so bieten sich elektronische Dokumente an, da diese komfortabler auf Bildschirmen zu lesen sind. Z. B. kann man die Schriftgröße auf die Größe des Displays einstellen. Das ist praktisch, da Displaygrößen enorm schwanken. Mit paginierten Dokumenten kann man das Layout hingegen nicht auf ein Display anpassen.<a href="#fn9" class="footnote-ref" id="fnref9" role="doc-noteref"><sup>9</sup></a></p>
+<p>Seitenränder, Satzspiegel und andere typografische Elemente sind zumeist nur für paginierte Dokumenten relevant, Dokumente also, die auf einem Blatt Papier gedruckt werden soll. Typische paginierte Dokumenttypen sind Word- oder PDF-Dokumente. Elektronische Dokumente sind dagegen in aller Regel nicht paginiert, also nicht auf physikalische (Papier-)Blätter eines festen Formats zugeschnitten. Das typische elektronische Format für Text sind Webseiten (HTML-Dokumente). Will man einen Text nicht primär in Papierform lesen, so bieten sich elektronische Dokumente an, da diese komfortabler auf Bildschirmen zu lesen sind. Z. B. kann man die Schriftgröße auf die Größe des Displays einstellen. Das ist praktisch, da Displaygrößen enorm schwanken. Mit paginierten Dokumenten kann man das Layout hingegen nicht auf ein Display anpassen.<a href="#fn11" class="footnote-ref" id="fnref11" role="doc-noteref"><sup>11</sup></a></p>
 <div id="def-typografie" class="theorem definition">
 <p><span class="theorem-title"><strong>Definition 4.2 (Typografie) </strong></span>Die Typografie ist die Lehre der ästhetischen und funktionalen Gestaltung der Gestaltung von Schriftwerken z. B. des Satzspiegels, der Buchstaben, Satzzeichen und Schriften <span class="citation" data-cites="gulbins_mut_2000">(<a href="130-references.html#ref-gulbins_mut_2000" role="doc-biblioref">Gulbins und Kahrmann 2000</a>)</span>.<span class="math inline">\(\square\)</span></p>
 </div>
@@ -1293,25 +1439,25 @@ Hinweis
 <p><span class="theorem-title"><strong>Definition 4.3 (Satzspiegel) </strong></span>Der Satzspiegel definiert die Nutzfläche einer Seite (im Gegensatz zum Gesamtplatz und leerem Platz).<span class="math inline">\(\square\)</span></p>
 </div>
 <p>Ein Satzspiegel wird dann als ästhetisch empfunden, wenn sich (selbst-)ähnliche Proportionen wiederfinden. Die Länge einer Zeile sollte sich nach der optimalen Lesbarkeit ausrichten, für die ca. 65 Zeichen angenommen werden. Papierseiten nach Din-Normen haben ein Seitenverhältnis von ca. 1:1.4. Ein Satzspiegel im gleichen Verhältnis ist ästhetisch. Ein weiterer klassischer Satzspiegel ist nach dem Goldenen Schnitt aufgebaut.</p>
-<p><a href="#fig-seitenrand" class="quarto-xref">Abbildung&nbsp;<span>4.11</span></a> stellt die Namen der “Seitenränder”, der sog. <em>Stege</em> vor.</p>
+<p><a href="#fig-seitenrand" class="quarto-xref">Abbildung&nbsp;<span>4.12</span></a> stellt die Namen der “Seitenränder”, der sog. <em>Stege</em> vor.</p>
 <div id="fig-seitenrand" class="quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-seitenrand-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="img/seitenrand.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-seitenrand-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;4.11: Die Bezeichnung der Stege eines Druckseite, die u.a. die Seitenränder definieren
+Abbildung&nbsp;4.12: Die Bezeichnung der Stege eines Druckseite, die u.a. die Seitenränder definieren
 </figcaption>
 </figure>
 </div>
-<p>Eine mögliche (und optisch ansprechende) Aufteilung der Seite ist die <em>Rasterteilung</em>, s. <a href="#fig-raster" class="quarto-xref">Abbildung&nbsp;<span>4.12</span></a>. Üblich sind 9 x 9 Felder, die sog. <em>Neunerteilung</em>. Diese Aufteilung liefert fast die gleichen Maßstäbe wie eine Aufteilung nach dem Goldenen Schnitt. Eine A4-Seite hat folgende Maße: 210mm x 297mm (21cm x 29,7cm). Bei der Neuneraufteilung hat ein Feld also folgend Größe: 23mm x 33mm (2,33cm x 3,3cm).</p>
+<p>Eine mögliche (und optisch ansprechende) Aufteilung der Seite ist die <em>Rasterteilung</em>, s. <a href="#fig-raster" class="quarto-xref">Abbildung&nbsp;<span>4.13</span></a>. Üblich sind 9 x 9 Felder, die sog. <em>Neunerteilung</em>. Diese Aufteilung liefert fast die gleichen Maßstäbe wie eine Aufteilung nach dem Goldenen Schnitt. Eine A4-Seite hat folgende Maße: 210mm x 297mm (21cm x 29,7cm). Bei der Neuneraufteilung hat ein Feld also folgend Größe: 23mm x 33mm (2,33cm x 3,3cm).</p>
 <div id="fig-raster" class="quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-raster-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="img/neunerteilung.png" class="img-fluid figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-raster-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;4.12: Die Neunerteilung: Eine typografisch ansprechende Gestaltung des Satzspiegels
+Abbildung&nbsp;4.13: Die Neunerteilung: Eine typografisch ansprechende Gestaltung des Satzspiegels
 </figcaption>
 </figure>
 </div>
@@ -1450,6 +1596,9 @@ Heesen, Bernd. 2021. <em>Wissenschaftliches Arbeiten: Methodenwissen für Wirtsc
 <div id="ref-Kornmeier" class="csl-entry" role="listitem">
 Kornmeier, Martin. 2013. <em>Wissenschaftlich Schreiben Leicht Gemacht</em>. 6. Aufl. <span>Bern</span>: <span>Haupt-Verlag</span>.
 </div>
+<div id="ref-kruschke_rejecting_2018" class="csl-entry" role="listitem">
+Kruschke, John K. 2018. <span>„Rejecting or <span>Accepting Parameter Values</span> in <span>Bayesian Estimation</span>“</span>. <em>Advances in Methods and Practices in Psychological Science</em> 1 (2): 270–80. <a href="https://doi.org/10.1177/2515245918771304">https://doi.org/10.1177/2515245918771304</a>.
+</div>
 <div id="ref-peters_schreiben_2019" class="csl-entry" role="listitem">
 Peters, Jan H, und Tobias Dörfler. 2019. <em>Schreiben und Gestalten von Abschlussarbeiten in der Psychologie und den Sozialwissenschaften</em>. <a href="https://www.pearson-studium.de/drm/reader/nu/code/uesgvaaidpsy">https://www.pearson-studium.de/drm/reader/nu/code/uesgvaaidpsy</a>.
 </div>
@@ -1464,12 +1613,14 @@ Theisen, Manuel René. 2021. <em>Wissenschaftliches Arbeiten: erfolgreich bei Ba
 <li id="fn1"><p>Ablaufdiagramme, DAGs, Schemata oder andere Nicht-Daten-Diagramme kann man z. B. mit einem Zeichenprogramm erstellen.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn2"><p>Man kann Ihre Analyse nachrechnen und kommt zum gleichen Ergebnis<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 <li id="fn3"><p>Man weiß, wie man Ihre Studie wiederholen könnte<a href="#fnref3" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn4"><p>schon in R fest eingebaut, mit dem Befehl <code>data(mtcars)</code> können Sie den Datensatz “aktivieren”.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn5"><p>Bilder von lachenden Modells, die sich die Hände schütteln, haben in der Regel keinen Platz in wissenschaftlichen Berichten. Falls aber doch Photos ergänzt werden sollten, so sind (u.a.) unbedingt die Urheberrechte zu beachten. Hier sind einige Quellen für Bilder/Photos mit (teilweise) permissiven Nutzungsbedinungen: <a href="https://pixabay.com/service/license-summary/">Pixabay</a>, <a href="https://unsplash.com/plus/license">Unsplash</a>, <a href="https://www.flickr.com/creativecommons/">Flickr</a> oder <a href="https://commons.wikimedia.org/wiki/Category:Images">Wikimedia</a><a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn6"><p>Das heißt nicht, das Profs nicht auch Schwafeln würden – vermutlich sogar mehr!<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn7"><p>Damit sind nicht Sie gemeint, als Autor:in einer studentischen Arbeit, sondern der Mann, der den Text geschrieben hat, den Sie gerade zitieren<a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn8"><p>V7<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
-<li id="fn9"><p>Es gibt ein paar Versuche, wie Adobes “Liquid Mode”, paginierte Formate auf nicht-paginierte umzuwandeln.<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Eine ehrliche Antwort wäre zwar, “mein Dozent wollte es so, was bleibt mir groß übrig”, aber es gibt (vermutlich?!) auch fachliche Gründe (z. B.: Eine Priori-Annahme zur Wahrscheinlichkeit eines Parameters wird durch Daten zu einer Wahrscheinlichkeit verschoben). Die sollten sie anführen.<a href="#fnref4" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn5"><p>RStudio ist nur eine Benutzeroberfläche und daher irrelevant für die Ergebnisse<a href="#fnref5" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn6"><p>schon in R fest eingebaut, mit dem Befehl <code>data(mtcars)</code> können Sie den Datensatz “aktivieren”.<a href="#fnref6" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn7"><p>Bilder von lachenden Modells, die sich die Hände schütteln, haben in der Regel keinen Platz in wissenschaftlichen Berichten. Falls aber doch Photos ergänzt werden sollten, so sind (u.a.) unbedingt die Urheberrechte zu beachten. Hier sind einige Quellen für Bilder/Photos mit (teilweise) permissiven Nutzungsbedinungen: <a href="https://pixabay.com/service/license-summary/">Pixabay</a>, <a href="https://unsplash.com/plus/license">Unsplash</a>, <a href="https://www.flickr.com/creativecommons/">Flickr</a> oder <a href="https://commons.wikimedia.org/wiki/Category:Images">Wikimedia</a><a href="#fnref7" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn8"><p>Das heißt nicht, das Profs nicht auch Schwafeln würden – vermutlich sogar mehr!<a href="#fnref8" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn9"><p>Damit sind nicht Sie gemeint, als Autor:in einer studentischen Arbeit, sondern der Mann, der den Text geschrieben hat, den Sie gerade zitieren<a href="#fnref9" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn10"><p>V7<a href="#fnref10" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn11"><p>Es gibt ein paar Versuche, wie Adobes “Liquid Mode”, paginierte Formate auf nicht-paginierte umzuwandeln.<a href="#fnref11" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
 </ol>
 </aside>
 
