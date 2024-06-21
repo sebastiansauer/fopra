@@ -142,6 +142,11 @@ Grundlegende Prinzipien des Berichtens von Statistiken sind:
 5. Lauter: Alle relevanten Ergebnisse werden offengelegt.
 
 
+:::{.callout-note}
+In @sec-schreiben finden Sie Vorschläge zum Gliedern Ihres Berichts. $\square$
+:::
+
+
 ## Theorieteil
 
 
@@ -159,7 +164,7 @@ weswegen es eigentlich keinen Sinn macht, sie zu untersuchen.
 Aber dafür ist das Schwarz-Weiß-Denken schön einfach.
 
 Parameterschätzung fragt nicht *ob*, sondern *wieviel*. 
-Nicht viel komplizierter, aber viel nuancierter; (eigentlich) besser.
+Nicht viel komplizierter, aber nuancierter.
 Außerdem enthält das Parameterschätzen auch das Hypothesentesten:
 Ist die Null im Schätz-Intervall nicht enthalten,
 so kann man die Null-Hypothese ausschließen.
@@ -176,6 +181,7 @@ z.B. so, s. @fig-dagmodell1.
 ```{r out.width = "100%", fig.asp = .5}
 #| label: fig-dagmodell1
 #| fig-cap: Beispielhafter DAG
+#| echo: false
 library(dagitty)
 
 mein_dag <- 'dag {
@@ -412,6 +418,11 @@ plot(rope(m1))
 
 ## Ergebnisteil
 
+:::{.callout-note}
+Einen Gliederungsvorschlag für Ihren Ergebnisteil finden Sie in @sec-ergebnisteil. $\square$
+:::
+
+
 ### Deskriptive Statistik
 
 #### Was soll ich schreiben?
@@ -569,26 +580,11 @@ summary(meine_cor_tab) %>%
 
 Vergessen Sie nicht, das Tabellen (genau wie Abbildungen) im Text zu referenzieren sind.
 
-### Diagramme exportieren
 
-Diagramme, die Sie mit `ggplot` erstellt haben, können Sie z.B. mit dem Befehl [`ggsave`](https://ggplot2.tidyverse.org/reference/ggsave.html) in eine Datei speichern (z.B. im Format PNG oder PDF).
+:::{.callout-note}
+Weitere Hinweise zur Gestaltung von Tabellen finden Sie in @sec-formatierung-tabellen. $\square$
+:::
 
-
-
-Interessant könnte für Sie auch das Paket `qwraps2` sein, 
-das u.a. einen Formulierungsvorschlag erstellt,
-wie man Statistiken im Fließtext anführt.
-Betrachten wir ein Beispiel mit `mtcars`.
-Sagen wir, wir möchten den mittleren Spritverbrauch berichten.
-
-```{r}
-library(qwraps2)
-
-mean_sd(mtcars$mpg)
-```
-
-Das Zeichen `$\\pm$` steht für "Plus-Minus" ± (im Formelmodus).
-In Word sollten Sie es händisch durch den Glyphen (das Zeichen) "±" ersetzen.^[In Markdown-Formaten mit Quarto etc. wird es automatisch ersetzt durch das Plus-Minus-Zeichen.]
 
 
 ### Inferenzstatistik
@@ -600,11 +596,11 @@ Es empfiehlt sich, die Modellgleichung inkl. Prior-Spezifiaktion aufzuführen.
 Für jede Hypothese müssen Sie die zentralen Ergebnisse berichten.
 Die Hypothesen beziehen sich auf Populationen, 
 also benötigen wir Inferenzstatistik.
-In der frequentistischen Statistik finden hier Statistiken wie der p-Wert und
+In der frequentistischen Statistik finden hier Statistiken wie der *p*-Wert und
 das (frequentistische) Konfidenzintervall Verwendung.
 In einer Bayes-Analyse ist die Posteriori-Verteilung der Dreh- und Angelpunkt der Ergebnisse.
 
-Die Post-Verteilung gibt an, wie wahrscheinlich ein bestimmter Parameterwert jetzt ist,
+Zur Erinnerung: Die Post-Verteilung gibt an, wie wahrscheinlich ein bestimmter Parameterwert jetzt ist,
 nachdem die Daten bekannt sind.
 
 
@@ -615,6 +611,10 @@ Die Syntax ist sehr ähnlich.
 
 
 #### Umsetzung in R
+
+:::{.callout-note}
+Detailliertere Hinweise zur Modellierung finden Sie @sec-modellieren. $\square$
+:::
 
 Sie können eine Posteriori-Verteilung z.B. für ihr Modell berechnen:
 
@@ -738,7 +738,7 @@ plot(hdi(m1)) +
 
 
 
-### ROPE
+#### ROPE
 
 Testen Sie eine Hypothese, die einen "praktischen Nullwert" ausschließen möchte, so bietet sich das ROPE-Verfahren an.
 
@@ -826,7 +826,7 @@ Das ROPE ist eine nette Sache: Man kann eine "Praktischnullhypothese" testen.
 die Informationen eines ROPE aber noch mehr.
 
 
-#### Standardisierte Effektstärke
+### Standardisierte Effektstärke
 
 Vergleicht man Gruppen und ist z.B. die AV wenig anschaulich (etwa ein Summenscore),
 so bietet es sich, standardisierte Maße des Gruppenunterschieds anzugeben.
@@ -862,6 +862,46 @@ hdi(m1_R2) %>% print_md()
 ```
 
 
+## Diskussion
+
+
+Im Diskussionsteil fasst man die zentralen Ergebnisse zusammen und interpretiert sie.
+Danach schließt sich eine Kritik der Ergebnisse (oder vielmehr des Vorgehens) an.
+
+Ob man eine Hypothese "annimmt" oder "verwirft", sollte
+nicht von einer einzelnen Zahl abhängig sein.
+Vielmehr ist es keine Schwarz-Weiß-,
+sondern eine Grauton-Entscheidung mit mehreren Einflussgrößen,
+wie Präzision der Schätzung, Effektstärke, Stichprobengröße, Güte der Daten, Stärke des Versuchsplans, Generalisierbarkeit,
+um nur einige wichtige zu nennen.
+
+
+
+## Tipps
+
+### Diagramme exportieren
+
+Diagramme, die Sie mit `ggplot` erstellt haben, können Sie z.B. mit dem Befehl [`ggsave`](https://ggplot2.tidyverse.org/reference/ggsave.html) in eine Datei speichern (z.B. im Format PNG oder PDF).
+
+
+
+Interessant könnte für Sie auch das Paket `qwraps2` sein, 
+das u.a. einen Formulierungsvorschlag erstellt,
+wie man Statistiken im Fließtext anführt.
+Betrachten wir ein Beispiel mit `mtcars`.
+Sagen wir, wir möchten den mittleren Spritverbrauch berichten.
+
+```{r}
+library(qwraps2)
+
+mean_sd(mtcars$mpg)
+```
+
+Das Zeichen `$\\pm$` steht für "Plus-Minus" ± (im Formelmodus).
+In Word sollten Sie es händisch durch den Glyphen (das Zeichen) "±" ersetzen.^[In Markdown-Formaten mit Quarto etc. wird es automatisch ersetzt durch das Plus-Minus-Zeichen.]
+
+
+
 
 #### R-Paket `report`
 
@@ -893,21 +933,6 @@ report(m1)
 Wenn Ihnen einige Statistiken nicht geläufig sind, ignorieren Sie sich einfach
 oder lesen Sie sie nach.
  
-## Diskussion
-
-
-Im Diskussionsteil fasst man die zentralen Ergebnisse zusammen und interpretiert sie.
-Danach schließt sich eine Kritik der Ergebnisse (oder vielmehr des Vorgehens) an.
-
-Ob man eine Hypothese "annimmt" oder "verwirft", sollte
-nicht von einer einzelnen Zahl abhängig sein.
-Vielmehr ist es keine Schwarz-Weiß-,
-sondern eine Grauton-Entscheidung mit mehreren Einflussgrößen,
-wie Präzision der Schätzung, Effektstärke, Stichprobengröße, Güte der Daten, Stärke des Versuchsplans, Generalisierbarkeit,
-um nur einige wichtige zu nennen.
-
-
-
 
 ## Reproduzierbarkeit
 

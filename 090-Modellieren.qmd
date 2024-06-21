@@ -1,4 +1,4 @@
-# Auswerten: Modellieren
+# Auswerten: Modellieren {#sec-modellieren}
 
 
 ```{r}
@@ -321,7 +321,7 @@ rope(m_bringtnixtin) %>% print_md()
 Das ist nicht viel; aber streng genommen heißt das als Fazit:
 
 >    Wir können nicht ausschließen, dass der Effekt von `g` ein praktisch unbedeutsamen Wert hat,
-also sehr klein und nahe der Null ist. Diese Wahrscheinlichkeit ist allerdings nicht hoch. Es ist somit keine klare Entscheidung möglich.
+also sehr klein und nahe der Null ist. Diese Wahrscheinlichkeit ist allerdings nicht hoch. Es ist somit *keine* klare Entscheidung möglich.
 
 Ist man sich nicht sicher, wie der ROPE-Wert zu interpretieren ist,
 kann man auch R fragen:
