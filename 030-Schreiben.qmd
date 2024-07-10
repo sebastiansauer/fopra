@@ -211,8 +211,23 @@ Die Titelseite beinhaltet ...
 ::::
 
 
-Der Titel ist das Wichtigste; stellen Sie ihn in den Fokus: groß, zentral platziert mit Platz außen herum; das Zweitwichtigste ist Ihr Name. 
+Der Titel ist das Wichtigste; stellen Sie ihn in den Fokus: 
+groß, zentral platziert mit Platz außen herum; das Zweitwichtigste ist Ihr Name. 
 Stellen Sie alles andere in den Hintergrund.
+@fig-titelseite-pos-neg gibt ein Beispiel für eine gute und eine schlecht(er) formatierte Titelseite.
+
+
+
+
+
+:::{#fig-titelseite-pos-neg layout-ncol=2}
+
+![](img/deckblatt-pos.png){#fig-deckblatt-pos}
+
+![](img/deckblatt-neg.png){#fig-deckblatt-neg}
+
+Beispiel für eine gut bzw. schlecht formatierte Titelseite
+:::
 
 
 ### Abstract
