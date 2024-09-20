@@ -128,7 +128,7 @@ Dann hilft uns `bind_rows()`.
 
 :::{#lst-bind-rows}
 
-```{r}
+```{r bind-rows}
 tab1 <- mtcars %>% slice(1:16)
 tab2 <- mtcars %>% slice(17:32)
 
@@ -144,7 +144,9 @@ mtcars_gesamt <-
 
 
 :::{#exm-bind-cols}
-*In jeder Gruppe* Ihrer Studie wurde ein anderer Fragebogen ausgefüllt (z.B. weil Sie unterschiedliche experimentelle Gruppen untersucht haben). Sie haben also zwei Datensätze mit unterschiedlichen Personen (nämlich in Datensatz A die Personen der Gruppe A und in Datensatz B die Personen der Gruppe B). Aber in jedem Datensatz finden sich die gleichen Variablen. $\square$
+*In jeder Gruppe* Ihrer Studie wurde ein anderer Fragebogen ausgefüllt (z.B. weil Sie unterschiedliche experimentelle Gruppen untersucht haben). 
+Sie haben also zwei Datensätze mit unterschiedlichen Personen (nämlich in Datensatz A die Personen der Gruppe A und in Datensatz B die Personen der Gruppe B). 
+Aber in jedem Datensatz finden sich die gleichen Variablen. $\square$
 :::
 
 
@@ -155,12 +157,13 @@ mtcars_gesamt <-
 
 
 
-Sagen wir, wir haben zwei Tabellen, die wir "hintereinander kleben" möchten, also spaltenweise zusammenführen möchten, s. @lst-bind-cols.
+Sagen wir, wir haben zwei Tabellen, die wir "hintereinander kleben" möchten, 
+also spaltenweise zusammenführen möchten, s. @lst-bind-cols.
 
 
 :::{#lst-bind-cols}
 
-```{r}
+```{r bind-cols}
 tab1 <- mtcars %>% select(1:5)
 tab2 <- mtcars %>% select(6:11)
 
@@ -335,17 +338,82 @@ d %>%
 Natürlich müssen Sie `across` nicht verwenden; Sie können auch "von Hand" die Spalten einzeln beatmen und jeweils (pro Spalte) `as.character` und `parse_number` anwenden.
 
 
+### Spaltennamen ändern
+
+Einige Umfrage-Tools geben als Spaltennamen den entsprechenden Frage- bzw. Itemtext an.
+Schauen Sie sich mal den Datensatz `umfrage_lange_spaltennamen.csv` an.
 
 
-### Items umkodieren
+```{r doofe-spaltennamen}
+#| echo: false
 
-In Fragebogen werden immer wieder Items *negativ* kodiert. Das bedeutet, dass sie gegenteilig zum messenden Konstrukt formuliert sind. Ist das Konstrukt Extraversion, so würde ein negatives Item im Sinne von Introversion kodiert sein. Ein Beispiel-Item für negative Kodierung wäre: "Ich bin ein Couch-Potato" oder "Ich bleibe am liebsten alleine zuhause."
+umfrage_lange_spaltennamen <- tibble::tribble(
+      ~`Was.ist.Ihr.Geschlecht?`, ~`Wie.alt.sind.Sie?`,  ~Ich.habe.viele.Freunde., ~Ich.stehe.gerne.im.Rampenlicht.,
+                          "Frau",                  23L, "stimme voll und ganz zu",                               NA,
+                          "Mann",                  42L,          "stimme eher zu",                 "stimme eher zu",
+                        "divers",                  73L,     "stimm eher nicht zu",        "stimme voll und ganz zu"
+      ) 
+  
+umfrage_lange_spaltennamen  |> 
+  gt::gt()
+```
 
-Zuerst müssen wir die Anzahl der Antwortstufen wissen; diese Information findet sich in der Dokumentation der Skala (im "Manual" auch "Testdokumentation" oder "Benutzerhandbuch" genannt). Natürlich kann man prüfen, welche Antwortstufen die Respondenten gefunden haben, aber man wäre nicht sicher, ob auch alle möglichen Antworten ausgeschöpft wurden.
 
-Im vorliegenden Fall ist der Dokumentation des Instruments zu entnehmen, dass jedes Item vier Antwortstufen (Likertformat) aufweist. Likert-skalierte Items zeichnen sich dadurch aus, dass sie so formuliert sind, dass höhere Werte in der Antwortstufe mit höherer Ausprägung des zu messenden Konstrukts einher gehen.  
 
-Beim Umkodieren wird das Item "auf den Kopf gestellt": Der höchste Wert wird der kleinste, der zwei kleinste wird der zweitgrößte und so weiter. Im Schema sieht dies so aus:
+{{< downloadthis data/umfrage_lange_spaltennamen.csv dname=umfrage_lange_spaltennamen >}}
+
+Solche langen Spaltennamen sind unpraktisch 
+(und folgen nicht den R-Vorschriften für "brave" Spaltennamen -- Ärger ist vorprogrammiert).
+Lieber wären uns sicherlich solche Spaltennamen:
+
+
+```{r nette-spaltennamen}
+#| echo: false
+tibble::tribble(
+  ~geschlecht, ~alter,           ~extraversion01,           ~extraversion02,
+       "Frau",    23L, "stimme voll und ganz zu",                        NA,
+       "Mann",    42L,          "stimme eher zu",          "stimme eher zu",
+     "divers",    73L,     "stimm eher nicht zu", "stimme voll und ganz zu"
+  ) |> 
+  gt::gt()
+```
+
+Eine Möglichkeit, die Spaltennamen in Ihrem Datensatz `umfrage_lange_spaltennamen` zu ändern, 
+ist diese:
+
+```{r rename-items}
+# Wir definieren die neuen Spaltennamen:
+meine_schoenen_spaltennamen <- 
+  c("geschlecht",
+    "alter",
+    "extraversion01",
+    "extraversion02"
+  )
+
+
+# Und ändern dann die alten Spaltennamen:
+names(umfrage_lange_spaltennamen) <-
+  meine_schoenen_spaltennamen
+```
+
+
+
+### Items umpolen
+
+In Fragebogen kommt es vor, dass einzelne Items *negativ* kodiert sind. 
+Das bedeutet, dass sie gegenteilig zum messenden Konstrukt formuliert sind. 
+Ist das Konstrukt *Extraversion*, so würde ein negatives Item im Sinne von *Introversion* kodiert sein. Ein Beispiel-Item für negative Kodierung bei Extraversion wäre: "Ich bin ein Couch-Potato" oder "Ich bleibe am liebsten alleine zuhause."
+
+Zuerst müssen wir die Anzahl der Antwortstufen wissen; diese Information findet sich in der Dokumentation der Skala (im "Manual" auch "Testdokumentation" oder "Benutzerhandbuch" genannt). 
+Natürlich kann man prüfen, welche Antwortstufen die Respondenten gefunden haben, aber man wäre nicht sicher, 
+ob auch alle möglichen Antworten ausgeschöpft wurden.
+
+Im vorliegenden Fall ist der Dokumentation des Instruments zu entnehmen, 
+dass jedes Item vier Antwortstufen (Likertformat) aufweist. 
+Likert-skalierte Items zeichnen sich dadurch aus, dass sie so formuliert sind, 
+dass höhere Werte in der Antwortstufe mit höherer Ausprägung des zu messenden Konstrukts einher gehen.  
+
+Beim Umpolen wird das Item "auf den Kopf gestellt" oder "umgedreht": Der höchste Wert wird der kleinste, der zwei kleinste wird der zweitgrößte und so weiter. Im Schema sieht dies so aus:
   
   
 ```
@@ -382,10 +450,11 @@ Diese Rechenmethode funktioniert aber nur, wenn z.B. bei vier Antwortstufen die 
 
 
 
-### Item-Labels in Zahlen umwandeln
+### Item-Werte in Zahlen umwandeln
 
 
-Eine ähnliche Sache wie das Umpolen von Items ist folgende Situation: Ihre Umfrage-Software spuckt als Item-Antworten die "Ankertexte" oder "Itemlabels" aus wie *stimme überhaupt nicht zu* oder *stimme voll und ganz zu*.
+Eine ähnliche Sache wie das Umpolen von Items ist folgende Situation: 
+Ihre Umfrage-Software spuckt als Item-Antworten die "Ankertexte" oder "Itemlabels" aus wie *stimme überhaupt nicht zu* oder *stimme voll und ganz zu*.
 Da man bekanntlich (höchstens) mit Zahlen aber nicht mit Texten rechnen kann,
 möchten Sie diese Itemlabels in Zahlen umwandeln.
 Das sieht dann ähnlich zu folgendem Wenn-Dann-Regel-Schema aus:
@@ -727,10 +796,12 @@ extra3 <-
 
 In der Psychometrie werden komplexe Konstrukte wie etwa das Persönlichkeitsmerkmal Extraversion anhand mehrerer Indikatoren (meistens Items eines Fragebogens) gemessen. 
 Um zu einem Personenwert für Extraversion zu gelangen, werden die Itemwerte im einfachsten Fall summiert. Alternativ kann man auch einen Mittelwert bilden. 
-Dieses Aggregieren bietet den Vorteil, dass sich Messfehler (möglicherweise) herausmitteln. 
-Außerdem versucht man so abzubilden, dass Extraversion aus mehreren unterschiedlichen Facetten besteht, die nicht mit einem einzelnen Item, sondern über mehrere unterschiedliche Items, 
+Dieses Aggregieren bietet den Vorteil, 
+dass sich Messfehler (möglicherweise) herausmitteln. 
+Außerdem versucht man so abzubilden, dass Extraversion aus mehreren unterschiedlichen Facetten besteht,
+die nicht mit einem einzelnen Item, sondern über mehrere unterschiedliche Items, 
 erfasst werden. Viele Psychometriker sind skeptisch, wenn man versuchen würde, 
-Extraversion mit der Frage "Wie extrovertiert sind Sie?" zu erfassen. 
+Extraversion mit einer einzelnen Frage, z.B. "Wie extrovertiert sind Sie?" zu erfassen. 
 Ihre Bedenken sind, dass Menschen die vielen Facetten von Extraversion nicht im Arbeitsgedächtnis vorhalten können. 
 Fragt man hingegen nur einen kleinen Aspekt von Extraversion ab, trägt man der Breite des Konstrukts nicht Rechnung.
 
