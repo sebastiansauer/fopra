@@ -1,4 +1,4 @@
-# Schreiben
+# Schreiben {#sec-schreiben}
 
 
 <!-- TODO: Dieses Kapitel lieber an den Schluss pakcen: Zu Beginn ist es wichtiger, -->
@@ -25,9 +25,9 @@ theme_set(theme_minimal())
 ### Lernziele
 
 
-- Sie wissen, wie man einen Theorieteil aufbauert.
+- Sie wissen, wie man einen Theorieteil aufbauet.
 - Sie wissen, wie man eine Forschungsarbeit gliedern kann.
-- Sie kennen die Prinzipien des wissenschaftlichens Schreibstils.
+- Sie kennen die Prinzipien des wissenschaftlichen Schreibstils.
 
 
 ### Position im Lernpfad
@@ -103,7 +103,7 @@ sondern das Unterstützen beim Denken.
 
 
 
-### Gliederung einer Forschungsarbeit
+### Gliederung einer Forschungsarbeit {#sec-gliederung}
 
 Wie bei vielen Dingen des wirklichen Lebens, so gibt es auch für eine Gliederung einer wissenschaftlichen Arbeit nicht nur eine Lösung.
 Das bedeutet aber nicht, dass jede Lösung gleich gut wäre (wie im wirklichen Leben auch).
@@ -120,7 +120,7 @@ Für eine empirische, quantitative Arbeit in z.B. der Psychologie ist folgende G
 3. Methode
   - Alles empirisches "Handwerkszeug", das man braucht, um die Studie nachzuvollziehen (reproduzieren)
 4. Ergebnisse
-  - deskriptive Ergebnisse
+  - Deskriptive Ergebnisse
   - Modellierung und Inferenzstatistik
   - sonstige (explorative) Befunde
 5. Diskussion
@@ -375,6 +375,7 @@ Bei dieser Fragestellung sollten Sie drei Aspekte im Theorieteil erörtern:
 
 Eine Gliederung könnte so aussehen:
 
+```
 1. Achtsamkeit
   1.1 Historisch-theoretische Entwicklung des Konzepts Achtsamkeit
   1.2 Definitionen
@@ -393,12 +394,236 @@ Eine Gliederung könnte so aussehen:
   3.3 Verwandte Konstrukte
 4. Bewertung des Forschungsstands
 5. Hypothesen
+```
 
 $\square$
 :::
 
 Da den Hypothesen eine hohe Bedeutung zukommt, sollten Sie im Text gut auffindbar sein, z.B. in einem eigenen Abschnitt oder optisch vom übrigen Textfluss hervorgehoben.
 
+
+#### Testen oder Schätzen?
+
+Am Ende des Theorieteils bietet es sich an,
+die Hypothesen oder die Forschungsfrage zu spezifizieren.
+Sie können sich für eines von beiden entscheiden oder auch beides angehen.
+
+In der bisherigen Literatur (in der Psychologie) werden zumeist Hypothesen getestet,
+nach dem Motto "jo, unsere Vermutung scheint zu stimmen!" oder "nein, das Zeugs taugt nix!".
+Das Problem ist, dass solches Denken etwas simpel ist, Schwarz-Weiß eben. 
+Außerdem sind Nullhypothesen streng genommen immer falsch,
+weswegen es eigentlich keinen Sinn macht, sie zu untersuchen.
+Aber dafür ist das Schwarz-Weiß-Denken schön einfach.
+Eine (aus Sicht verschiedener Statistiker) bessere Methode ist es, "Praktisch-Null-Hypothesen" zu testen.
+Dabei testet man nicht, ob der Parameterwert *exakt* Null ist (0,00000000...), sondern *ungefähr* Null, also vielleicht z.B. von -0.1 bis 0.1. Den Bereich von Werten, die praktisch bedeutungslos klein bzw. bedeutungslos sind, bezeichnen wir als "praktisch Null".
+Eine technische Umsetzung ist das ROPE-Konzept.
+
+Parameterschätzung fragt nicht *ob*, sondern *wieviel*. 
+Nicht viel komplizierter, aber nuancierter.
+Außerdem enthält das Parameterschätzen auch das Hypothesentesten:
+Ist die Null im Schätz-Intervall nicht enthalten,
+so kann man die Null-Hypothese ausschließen.
+
+
+:::{.callout-tip}
+Am besten Sie machen beides: Hypothesen testen und Parameter schätzen. Einfach umsetzen lässt sich das, wenn Sie sich den Schätzbereich plausibler Parameterwerte ausgeben lassen (z.B. das 95%-KI der Posteriori-Verteilung). Liegt der Wert Null außerhalb dieses Intervalls, so können Sie die Nullhypothese offensichtlich ausschließen. Liegt die Null innerhalb des Intervalls, so können Sie sie nicht ausschließen. $\square$
+:::
+
+
+
+#### Kausal- vs. Korrelationsmodell
+
+
+Sie wollten weiterhin angeben,
+ob Ihre Forschungsfrage ein kausales Modell annimmt oder ein deskriptives (korrelatives).
+Bei einem kausalen Modell sollen dann die Pfeile Wirkungsrichtungen, 
+also Ursache-Wirkungs-Beziehungen angeben.
+
+
+Auch wenn ihre Studie nicht die "Kraft" hat,
+Kausalbeziehungen (in Gänze) aufzudecken,
+ist es trotzdem meistens sinnvoll,
+ein Kausalmodell aufzustellen,
+da Theorien (und Praxis) meist an Kausalbeziehungen interessiert sind,
+und an Korrelationsbeziehungen wenig(er).
+
+Viele wissenschaftliche Studien haben ein kausales Erkenntnisziel,
+nicht ein deskriptives.
+
+
+#### Kausalmodell definieren
+
+Hat Ihr Studie ein *Erklärungsziel*, also ein kausales Erkenntnisziel, 
+so bietet sich an, Ihr Kausalmodell mit einem Pfaddiagramm bzw. *DAG* zu visualisieren,
+z.B. so, s. @fig-dagmodell1.
+
+
+```{r out.width = "100%", fig.asp = .5}
+#| label: fig-dagmodell1
+#| fig-cap: Beispielhafter DAG
+#| echo: false
+library(dagitty)
+
+mein_dag <- 'dag {
+A [pos="-2.200,-1.520"]
+B [pos="1.400,-1.460"]
+D [outcome,pos="1.400,1.621"]
+E [exposure,pos="-2.200,1.597"]
+Z [pos="-0.300,-0.082"]
+A -> E
+A -> Z [pos="-0.791,-1.045"]
+B -> D
+B -> Z [pos="0.680,-0.496"]
+E -> D
+}'
+
+
+mein_modell <- "dag{
+lern -> erfolg
+mot -> erfolg
+mot -> lern
+}"
+
+plot(graphLayout(mein_modell))
+```
+
+
+Dabei steht `lern` für "Lernzeit in Stunden",
+`mot` für "Motivation" und `lern` für "Lernerfolg".
+Die Operationalisierung der Variablen sollten im Methodenteil genauer beschrieben sein.
+
+
+
+Außerdem macht es Sinn, 
+das Modell formal zu spezifizieren,
+etwa so:
+
+
+
+
+
+$$
+\begin{aligned}
+\text{erfolg} &\sim N(\mu_i, \sigma) \qquad \text{Likelihood} \\
+\mu_i &= \beta_0 + \beta_1 \text{lern} + \beta_2 \text{mot} \qquad \text{lineares Modell} \\
+\beta_0 &\sim N(0, 2.5)  \qquad \text{Prior Achsenabschnitt} \\
+\beta_1 &\sim N(0, 2.5)  \qquad \text{Prior Regressiongewicht lern} \\
+\beta_2 &\sim N(0, 2.5)  \qquad \text{Prior Regressiongewicht mot} \\
+\sigma &\sim Exp(1) \qquad \text{Prior Streuung} \\
+\end{aligned}
+$$
+
+
+
+Wenn Sie das Modell mit STAN berechnen, also vermittelt über z.B. `rstanarm`,
+dann wählt `stan_glm()` für Sie folgende Priori-Werte:
+
+- $\beta$s: Normalverteilt mit Mittelwert 0 und SD 2.5
+- $\sigma$: Exponentialverteilt mit Streckung 1
+
+Die $\beta$s sind am einfachsten als z-Werte zu verstehen:
+Grob übersetzt sagt `rstanarm` "Mei, ich geh davon aus, dass der Effekt vermutlich 2.5-SD-Einheiten
+um den Mittelwert rum liegt, könnten auch etwas mehr sein, aber mehr als 5-SD-Einheiten sind schon echt unwahrscheinlich".
+Das nennt man einen "schwach informativen Prior":
+der erlaubt viel, aber den größten Quatsch schließt er aus.
+
+Praktischerweise müssten sie nicht mal ihre Variablen z-tranformieren (aber Sie können ohne Schaden!),
+denn `rstanarm` macht das für Sie.
+
+
+Tipp: Geben Sie an, dass Sie die Standardwerte (Voreinstellung) der von Ihnen verwendeten Software (wie `rstanarm`) verwendet haben.
+Zitieren Sie möglichst die Software (in der verwendeten Version) und reichen Sie die Syntax ein.
+
+Mehr zu Prioris bei `rstanarm` findet sich [hier](https://mc-stan.org/rstanarm/articles/priors.html).
+
+Mit `prior_summary(mein_model)` bekommt man einen Überblick über die Prioriwerte,
+die im Modell `mein_modell` verwendet wurden.
+
+
+Es macht Sinn, zu begründen, warum sie das Modell so gewählt haben,
+wie sie es gewählt haben.
+Wenn Sie eine Normalverteilung für die Priori-Verteilungen wählen,
+haben Sie Argumentationslinien: epistemologisch und ontologisch.
+Epistemologisch können Sie argumentieren, dass die Normalverteilung die Entropie maximiert,
+also die Verteilung mit den wenigsten Vorannahmen ist, wenn man davon ausgeht,
+dass die gesuchte Verteilung über eine endliche Varianz und einen endlichen Mittelwert verfügt.
+Ontologisch können Sie argumentieren, dass z.B. Körpergröße (innerhalb eines Geschlechts zumindest)
+hinreichend normalverteilt ist.
+
+Die Begründung für das lineare Modelle erschließt sich aus der Theorie,
+nämlich dass z.B. die gewählten UV den gesuchten Effekt gut beschreiben.
+
+
+
+
+#### Hypothesen testen
+
+Das Testen der Hypothese ist eine Umsetzung der Idee,
+eine Behauptung einer empirisch-rationalen Prüfung zu unterziehen.
+
+
+Es bietet sich an, eine Hypothese zu wählen,
+wenn der Stand der Theorie dies erlaubt,
+idealerweise mehr als nur eine Null-Effekt-Hypothese, 
+etwas $\beta=0$.
+Dass nämlich ein Effekt *exakt* Null ist,
+erscheint für die meisten Situationen der Sozialwissenschaften reichlich unplausibel.
+
+Sie sollten die Hypothese zuerst als Aussage formulieren,
+aber danach möglichst mit mathematischen Symbolen präzisieren ("statistische Hypothesen").
+
+Hier sind Beispiele für statistische Hypothesen:
+
+- $H: \mu > 0$
+- $H: \mu = 0$
+- $H: \mu \ne 0$
+- $H: \beta > 0$
+- $H: d > 0$
+- $H: R^2 > 0$
+- $H: \mu > 42$
+- $H: 2.71 < \mu < 3.14$
+
+
+
+Dabei meint $\beta$ ein Regressiongewicht,
+$d$ eine Differenz (zweier Gruppen) und 
+$R^2$ die erklärte Varianz eines Modells.
+
+$R^2$ als Kennzahl einer Hypothese ist interessant,
+weil es Ihnen erlaubt, ein ganzes Modell als Hypothese zu formulieren.
+Also "Verbundhypothesen" aufzustellen, die mehr als eine oder zwei Variablen umfassen.
+
+
+Möchten Sie eine Hypothese zu einem Parameter testen,
+der einen Nullwert beinhaltet, bietet sich das ROPE-Verfahren an, vgl. @kruschke_rejecting_2018.
+
+
+
+#### Parameterschätzung
+
+
+Bei einer Parameterschätzung formulieren Sie ein Modell,
+genau wie beim Hypothesen testen, nur eben ohne Hypothesen.
+Es geht Ihnen dann nicht um die Frage, *ob* irgend ein Sachverhalt der Fall ist (das ist Hypothesen prüfen).
+Stattdessen interessieren Sie sich für die Frage, *wie sehr* etwas der Fall ist:
+
+- "Wie stark ist der Zusammenhang von Lernzeit und Prüfungserfolg?"
+- "Um wie viele Sekunden parken Frauen im Schnitt schneller ein als Männer?"
+- "Wie groß ist der statistische Effekt eines Sportwagens auf einem männlichen Profilbild beim Online-Dating?"
+
+Auch hier ist es erlaubt und sinnvoll, eine sprachliche Frage, die oft vage ist,
+schon aufgrund der natürlichen Ambuität der Sprache, mit Hilfe mathematischer Notation zu präzisieren:
+
+- "Der Zusammenhang $\beta$ ist definiert als das Regressiongewicht der Variable `lern` im Modell `m1`.
+- "Operationalisiert wurde die Einparkgeschwindigkeit als die Dauer der Durchführung in Sekunden nach Instruktion wie im Abschnitt XYZ beschrieben. Unser Modell (`m1`) schätzte den Parameter `s`.
+- "Der statistische Effekt ist definiert als das Regressiongewicht der experimentellen Bedingung (binäre Variable `group`) im Modell `m1`.
+
+Geben Sie weiter an, welches Intervall Sie berichten, z.B. "Die Parameterschätzungen werden anhand eines 95%-HDI berichtet".
+
+Auch wenn Sie eine Hypothese testen, sollten Sie Bereichsschätzungen für die Parameter vornehmen,
+also Schätzbereiche aus der Posteriori-Verteilung berichten.
+
+In R lässt sich das leicht anhand des Befehls `parameters` umsetzen, s. @sec-modellieren.
 
 ### Methodenteil
 
@@ -437,44 +662,68 @@ Folgende Unterkapitel bieten sich an:
 
 #### Analyse
 
-- Verwendete Analyse-*Software* (idealerweise mit Versionsnummer) wie R^[RStudio ist nur eine Benutzeroberfläche und daher irrelevant für die Ergebnisse) und (idealerweise) die R-Pakete
+- Skizzierung der *Analyse* in Bezug auf das statistische Vorgehen (wie z.B. Bayes-Methode, ggf. mit ROPE [@kruschke_rejecting_2018] oder Hinweise auf das Signifikanzniveau bei einer frequentistischen Analyse)
+- Erklären Sie (kurz), warum Sie sich für Bayes oder ggf. für die Frequentistische Methode entschieden haben^[Eine ehrliche Antwort wäre zwar, "mein Dozent wollte es so, was bleibt mir groß übrig",
+aber es gibt (vermutlich?!) auch fachliche Gründe (z.B.: Eine Priori-Annahme zur Wahrscheinlichkeit eines Parameters wird durch Daten zu einer Wahrscheinlichkeit verschoben).
+Die sollten sie anführen.]
+- Führen Sie (kurz) an, ob Sie an einer Parameterschätzung oder einer Hypothesentestung interessiert sind oder an beidem
+- Verwendete Analyse-*Software* (idealerweise mit Versionsnummer) wie R^[RStudio ist nur eine Benutzeroberfläche und daher irrelevant für die Ergebnisse] und (idealerweise) die R-Pakete
 - Software, die zur Reproduzierbarkeit nicht von Relevanz ist, braucht nicht angegeben zu werden (z.B. Word oder RStudio)
-- Skizzierung der *Analyse* in Bezug auf das statistische Vorgehen (wie z.B. Bayes-Methoden auf Basis von Stan oder Hinweise auf das Signifikanzniveau bei einer frequentistischen Analyse)
 
 
-### Ergebnisteil
+
+
+### Ergebnisteil {#sec-ergebnisteil}
 
 Im Ergebnisteil stehen die Fakten, keine Meinungen.
-Erst in der Diskussion wird erörtert, was die Ergebnisse bedeuten, wie stichhaltig sie sind etc. Anders gesagt: Im Ergebnisteil bespricht man die Ergebnisse. In der Diskussion spricht man *über* die (bzw. die Bedeutung der) Ergebnisse. 
-Insofern spricht man in der Diskussion über "Meinungen", besser gesagt, man interpretiert die Untersuchungsergebnisse, man ordnet sie in in die Literatur ein, überlegt ihre Implikationen und inwieweit sie die Forschungsfrage beantworten.
+Erst in der Diskussion wird erörtert, was die Ergebnisse bedeuten, wie stichhaltig sie sind etc. 
+Anders gesagt: Im Ergebnisteil spricht man *von* den Ergebnissen. 
+In der Diskussion spricht man *über* die (bzw. die Bedeutung der) Ergebnisse. 
+Insofern spricht man in der Diskussion über "Meinungen", 
+besser gesagt, man interpretiert die Untersuchungsergebnisse, 
+man ordnet sie in in die Literatur ein, überlegt ihre Implikationen und inwieweit sie die Forschungsfrage beantworten.
 In quantitativen Studien werden primär die Ergebnisse zu den Hypothesen bzw. den Forschungsfragen berichtet (sofern es keine explorative Arbeit ist). 
 Hierbei bietet es sich an, zuerst einfache (deskriptive) Ergebnisse zu berichten und danach komplexere (z.B. von multiplen Regressionen). 
 
-Handlungen werden in der 1. Vergangenheit beschrieben („Es fand sich ein Unterschied …“); überdauernde Tatsachen hingegen in der Gegenwart („Dieser Wert ist statistisch signifikant“).
+Handlungen werden in der 1. Vergangenheit beschrieben („Es fand sich ein Unterschied …“); 
+überdauernde Tatsachen hingegen in der Gegenwart („Dieser Wert ist statistisch signifikant“).
 Im Ergebnisteil soll man keine Interpretationen oder Bewertungen anführen, 
 sondern lediglich so objektiv wie möglich Tatschen (Fakten) berichten.
 In quantitativen Arbeiten findet man naturgemäß oft viele Statistiken. 
 Wer hätt’s gedacht.
-Berichtet man ein Ergebnis mit wenig Zahlenmaterial, so gibt man die Zahlen im Text wieder; größere Mengen sind übersichtlicher in Tabellen dargestellt. 
+Berichtet man ein Ergebnis mit wenig Zahlenmaterial, 
+so gibt man die Zahlen im Text wieder; größere Mengen sind übersichtlicher in Tabellen dargestellt. 
 Sehr große Zahlenmengen sind besser im Anhang aufgehoben. 
-Häufig kann man quantitative Daten gut in Diagrammen darstellen. Man beachte die Vorgaben der APA zur Darstellung von Statistiken.
+Häufig kann man quantitative Daten gut in Diagrammen darstellen. 
+Man beachte die Vorgaben der APA zur Darstellung von Statistiken.
 Fügen Sie keine R-Syntax ein (schon gar nicht als Screenshot); nutzen Sie für Syntax den Anhang.
 Technische Details wie das Aufbereiten von Daten (z.B. Umbenennen von Variablen oder ihren Ausprägungen) sollen nicht im Ergebnisteil (en Detail) aufgeführt werden, höchstens kursorisch mit Verweis auf die Syntax (die an geeigneter Stelle dokumentiert ist).
 
 
 
-So können Sie Ihren Ergebnisteil gliedern:
+Sie können Ihren Ergebnisteil in folgende Abschnitte gliedern:
 
 
+1. Falls Sie aufwändige Schritte zur Aufbereitung der Daten unternommen haben, sollten Sie kurz darüber berichten. Sparen Sie sich aber die Details (und den R-Code) für den (elektronischen) Anhang auf.
 1. Allgemeine *deskriptive* Ergebnisse (noch nicht auf Hypothesen bezogen): Hier könnten Sie z.B. die Mittelwerte und Streuungen pro Gruppe berichten oder die Korrelationen der Variablen untereinander.
 2. Zentrale Ergebnisse pro *Hypothese*/für das Modell: Berichten der verwendeten Verfahren und der Statistiken zu den zentralen Ergebnissen.
 3. Ggf. sonstige *explorative* Ergebnisse: Ergebnisse also, die Sie nicht erwartet haben (d.h. nicht in den Hypothesen formuliert waren)
 
 
+```
+4 Ergebnisteil
+
+(4.1 Datenaufbereitung)
+4.2 Deskriptive Ergebnisse
+4.3 Modellierung und Inferenzstatistik
+4.4 Explorative Befunde
+``` 
+
+
 Im Ergebnisteil berichten Sie die Ergebnisse Ihrer empirischer Studie, statistische Kennzahlen in den meisten Fällen.
 Es gibt drei Formate, Statistiken zu berichten: im Text, in einer Tabelle, mit einer Abbildung.
 
-#### Formatierung von Tabellen
+#### Formatierung von Tabellen {#sec-formatierung-tabellen}
 
 Eine kleine Menge an Zahlen (z.B. fünf) kann konziser im Text berichtet werden.
 Größere Mengen an Zahlen sollten in Tabellen berichtet werden.
@@ -507,7 +756,7 @@ apa.cor.table(mtcars, filename = "apa_cor_tab_mtcars.doc", table.number = 2)
 
 
 :::{#exr-tab-apa}
-## Merkmale eine Tabelle nach APA7
+### Merkmale eine Tabelle nach APA7
 
 Betrachten Sie [dieses Beispiel](https://apastyle.apa.org/style-grammar-guidelines/tables-figures/sample-tables#correlation) für eine Tabelle! 
 Arbeiten Sie die wesentlichen Merkmale der Formatierung heraus.$\square$
@@ -534,7 +783,12 @@ Häufig leider die optische Qualität (pixelig) und es ist nicht möglich, Werte
 ::::
 
 
-#### Abbildungen
+:::{.callout-note}
+Formulierungsvorschläge für Ihren Ergebnisteil finden Sie in @sec-statistik-ergebnisteil. $\square$
+:::
+
+
+#### Abbildungen {#sec-abbildungen}
 
 Abbildungen sollten nur verwendet werden, wenn sie einen Mehrwert bieten.^[Bilder von lachenden Modells, die sich die Hände schütteln, haben in der Regel keinen Platz in wissenschaftlichen Berichten. Falls aber doch Photos ergänzt werden sollten, so sind (u.a.) unbedingt die Urheberrechte zu beachten. Hier sind einige Quellen für Bilder/Photos mit (teilweise) permissiven Nutzungsbedinungen: [Pixabay](https://pixabay.com/service/license-summary/), [Unsplash](https://unsplash.com/plus/license), [Flickr](https://www.flickr.com/creativecommons/) oder [Wikimedia](https://commons.wikimedia.org/wiki/Category:Images)]
 Für eine einzelne Zahl oder für wenige Zahlen lohnt sich meist eine Abbildung nicht; es reicht, die Zahlen im Text anzuführen.
@@ -580,6 +834,12 @@ Zu beachten ist, dass die Statistiken in @fig-ggstatsplot1 laut APA als Anmerkun
 Dazu später mehr, s. Kapitel zum Berichten von Ergebnissen, @sec-reportstats.
 
 
+#### Sonstiges
+
+Übrigens: R-Quellcode sollte *nicht* im Hauptteil eines wissenschaftlichen Berichts stehen,
+verbannen Sie ihn in den Anhang (es sei denn, der Quellcode bzw. die Entwicklung von Syntax ist Gegenstand der Arbeit).
+
+
 ### Diskussion
 
 Die Diskussion beinhaltet den Kommentar des Autors (neutral formuliert) zu seinen Ergebnissen im Bezug zum in der Einleitung beschriebenen aktuellen theoretischem und empirischem Wissensstand.
@@ -617,11 +877,20 @@ Nutzen Sie sie reichlich.$\square$
 Im Anhang stehen Details zu Ihrer Studie.
 Die einzelnen Teile des Anhangs werden durchnummeriert.
 Alle Inhalte des Anhangs müssen im Haupttext referenziert werden („Der Interviewleitfaden findet sich im Anhang B“.) und vice versa.
-Typische Inhalte des Anhangs sind: Details zu Messinstrumenten, Interviewleitfäden oder Stimuli, weiterführende Statistiken, Syntax oder Probandeninformationen.
+Typische Inhalte des Anhangs sind: 
+
+- Details zu Messinstrumenten, 
+- Interviewleitfäden oder Stimuli, 
+- weiterführende Statistiken, 
+- Syntax oder Probandeninformationen.
+- Daten.
+
+Es ist vollkommen in Ordnung, im Anhang auf eine Datei zu verweisen.
 Sofern verfügbar, können Sie anstelle z.B. Ihres Fragebogens die URL zu Ihrem Fragebogen einfügen.
 In ähnlicher Manier sollten Sie Ihre Daten keinesfalls (schon gar nicht per Screenshot) in den Anhang einfügen.
 Verweisen Sie stattdessen im Anhang auf die entsprechende Datei (achten Sie auf prägnante Dateinamen und zugängliche Formate wie CSV).
 Die ehrenwörtliche Erklärung steht ebenfalls im Anhang.
+
 Eine Funktion des Anhangs ist es, die Informationen, die zur Reproduktion der Studie nötig sind, im Detail vorzuhalten.
 Auch wenn Sie im Anhang "nur" auf Dateien verweisen, sollte im Anhang aufgeführt sein, welche weiterführenden Informationen dem Haupttext beigefügt sind.
 

@@ -42,12 +42,12 @@ Wenn Sie es mir nicht glauben, werfen Sie einen Blick auf @fig-ueberblick und @f
 
 
 
-## Zum Einstieg
+<!-- ## Zum Einstieg -->
 
 
-🤔 ✅  ❓   Quiz!
+<!-- 🤔 ✅  ❓   Quiz! -->
 
-[Quiz: Prognosefähigkeit psychologischer Effekte](https://antworte.jetzt/quiz/Prognosef%C3%A4higkeit%20psychologischer%20Effekte%20%20%20%20(Projekt-Team:%20Dr.%20Stephanie%20Lichtenfeld,%20Dr.%20Vanessa%20B%C3%BCchner%20&%20M.Sc.%20Caroline%20Zygar%20mit%20gro%C3%9Fer%20Unterst%C3%BCtzung%20von%20B.Sc.%20Larissa%20Sust))
+<!-- [Quiz: Prognosefähigkeit psychologischer Effekte](https://antworte.jetzt/quiz/Prognosef%C3%A4higkeit%20psychologischer%20Effekte%20%20%20%20(Projekt-Team:%20Dr.%20Stephanie%20Lichtenfeld,%20Dr.%20Vanessa%20B%C3%BCchner%20&%20M.Sc.%20Caroline%20Zygar%20mit%20gro%C3%9Fer%20Unterst%C3%BCtzung%20von%20B.Sc.%20Larissa%20Sust)) -->
 
 ## Wissenschaft zum Anschauen
 
@@ -150,7 +150,8 @@ Lesen Sie eine studentische Forschungsarbeit quer und präsentieren Sie die wese
 :::{#def-science}
 ### Wissenschaft
 
-Wissenschaft ist ein systematisches Unterfangen, das Wissen erzeugt und organisiert, primär in Form von testbaren Erklärungen von Vorhersagen über das Universum.$\square$
+Wissenschaft ist ein systematisches Unterfangen, das Wissen erzeugt und organisiert, 
+primär in Form von testbaren Erklärungen über beobachtbare Phänomne. $\square$
 :::
 
 
@@ -168,11 +169,13 @@ Allerdings sollten die Erkärungsansätze so einfach wie möglich sein (und so k
 
 :::{#def-theorie}
 ### Theorie
-Die Wissenschaft organisiert ihr Wissen (auch) in Theorien. Theorien sind ein Bündel von Aussagen. Diese Aussagen sind 
+Die Wissenschaft organisiert ihr Wissen (auch) in Theorien. 
+Theorien sind ein Bündel von Aussagen. Diese Aussagen sind 
 
 - aufeinander bezogen
 - widerspruchsfrei
-- prüfbar$\square$
+- häufig Kausalaussagen
+- prüfbar $\square$
 :::
 
 
@@ -380,9 +383,10 @@ Habe den Mut, dich deines eigenen Verstandes zu bedienen! Das Motto Kants fasst 
 :::{#def-repro}
 ### Reproduzierbarkeit
 
-Reproduzierbarkeit ("Wiederholbarkeit") ist das Vermögen, eine Analyse durch Dritte zu wiederholen und zu einem ähnlichen (gleichen) Ergebnis wie in der ursprünglichen Analyse zu bekommen. Es handelt sich um ein Kernkriterium für wissenschaftliche Qualität. $\square$
+Reproduzierbarkeit ("Wiederholbarkeit") ist das Vermögen, eine Analyse durch Dritte zu wiederholen und zu einem ähnlichen (gleichen) Ergebnis wie in der ursprünglichen Analyse zu bekommen.  $\square$
 :::
 
+Es handelt sich um ein Kernkriterium für wissenschaftliche Qualität.
 
 Wenn ein Befund nicht reproduzierbar ist, ist es dann echtes Wissen?
 
@@ -398,7 +402,7 @@ Wenn ein Befund nicht reproduzierbar ist, ist es dann echtes Wissen?
 
 @fig-prozess-wiss stellt eine mögliche Gliederung des Prozesses der Forschung dar.
 
-![Ein Prozess von Wissenschaft](img/science-process.jpg){#fig-prozess-wiss}
+![Ein Prozess von Forschung](img/science-process.jpg){#fig-prozess-wiss}
 
 
 

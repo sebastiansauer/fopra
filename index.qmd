@@ -49,8 +49,8 @@ Kurz gesagt: Sie lernen, eine echte, eigene Studie zu erstellen.$\square$
 ### Was lerne ich hier und wozu ist das gut?
 
 
-Ein Forschungprojekt ist das vielleicht schönste Projekt in Ihrem Studiengang: E
-s vereint echtes Problemlösen mit Kreativität und wohl fundierter Analyse. 
+Ein Forschungprojekt ist das vielleicht schönste Projekt in Ihrem Studiengang: 
+Es vereint echtes Problemlösen mit Kreativität und wohl fundierter Analyse. 
 Sie haben viele Freiheitsgrade: Führen Sie eine echte Studie durch, unterstützt von den Dozentis und nach Ihren Vorstellungen. 
 Jedes Mal erlebt man als Dozenti aufs Neue studentische Studien, die begeistern. Um nur ein Beispiel zu nennen: 
 Vor einiger Zeit zeigt eine Gruppe, dass es sich lohnt, Follower bei Instagram zu kaufen -- die Anzahl der Likes steigt überproportional an. 
@@ -115,6 +115,7 @@ Wie lange dauert es von "Start" bis "Ziel"?
 #| echo: false
 #| tbl-cap: "Grober Zeitplan für Ihre empirische Projektrarbeit"
 #| label: tbl-zeitplan
+#| out-width: 100%
 
 d <- tibble::tribble(
   ~Nr, ~Arbeitsschritt, ~Zeitbedarf, ~Kommentar,
@@ -139,9 +140,12 @@ Tatsächlich ist ein großer Teil der Arbeit lesen und sich Gedanken machen - ni
 @fig-projektplan gibt Ihnen eine  Orientierung, welchen Zeitanteil Sie für die einzelnen, wesentlichen Arbeitsschritte bei der Durchführung Ihrer Studie (bzw. der Dokumentation dazu) Sie einplanen sollten.
 
 
+![](img/projektplan.png){#fig-projektplan}  
+
 
 ```{r}
 #| echo: false
+#| eval: false
 #| fig-cap: "Projektplan"
 #| label: fig-projektplan
 library(DiagrammeR)
@@ -205,10 +209,7 @@ Hinweise zu Software zum gemeinsamen Bearbeiten von Dokumenten und Lernstrategie
 
 ## Hinweise zum Unterricht
 
-
-### Didaktik
-
-
+[Hier](https://hinweisbuch.netlify.app/) finden Sie allgemein Hinweise zu diesem Modul.
 
 [Hier](https://hinweisbuch.netlify.app/hinweise-didaktik-frame) finden Sie didaktische Hinweise zu diesem Modul.
 
@@ -232,7 +233,7 @@ Hinweise zu Software zum gemeinsamen Bearbeiten von Dokumenten und Lernstrategie
 
 
 
-### Organisatorische Hinweise
+
 
 
 
@@ -275,26 +276,16 @@ Dieses Dokument entstand mit Unterstützung vieler Kolleginnen und Kollegen, vor
 
 
 
-## Technische Details
-
-
-### Quelltext
-
-Der Quelltext dieses Buchs ist [hier](https://fopro.netlify.app/) zugänglich.
 
 
 
-
-### Reproduzierbarkeit
+## Reproduzierbarkeit
 
 Hier sind einige technische Details zur Reproduzierbarkeit des Buchs. 
 
 Dieses Dokument wurde erzeugt am/um `r Sys.time()`.
 
+Die verwendeten R-Pakete sind mit [renv](https://rstudio.github.io/renv/) dokumentiert.
 
-```{r}
-#| echo: false
-#| eval: !expr knitr:::is_html_output()
-sessioninfo::session_info()
-```
+Der Quellcode ist in [diesem Github-Repo](https://github.com/sebastiansauer/fopra) dokumentiert.
 

@@ -1,0 +1,10 @@
+_book/
+_extensions/
+_freeze/
+*_cache/
+*_files/
+Material/
+Skript-Folien/
+Aufgaben/
+data/
+img/

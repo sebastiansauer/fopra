@@ -18,9 +18,9 @@ theme_set(theme_minimal())
 
 ### Lernziele
 
-- Sie können die typischen Schritte einer Datenanalyse (von Forschungsdaten der Psychologie) benennen.
-- Sie können grundlegende Forschungsdesigns auswerten (mit R).
-- Sie können Grenzen Ihrer Auswertungsmethodik nennen.
+- Sie können die typischen Schritte einer Datenanalyse (von Forschungsdaten z.B. aus der Psychologie) benennen.
+- Sie können den Unterschied zwischen Deskriptiv- und Inferenzstatistik benennen.
+- Sie können die Relevanz von Reproduzierbarkeit erläutern.
 
 
 
@@ -33,7 +33,7 @@ Behalten Sie Ihren Fortschritt im Projektplan im Blick, s. @fig-projektplan.
 
 ### Benötigte R-Pakete und Daten
 
-In diesem Kapitel benötigen Sie die folgenden R-Pakete und Datensätze.
+In diesem Kapitel benötigen Sie die folgenden R-Pakete:
 
 ```{r}
 #| messagen: false
@@ -42,6 +42,8 @@ library(easystats)
 ```
 
 
+Wir arbeiten mit dem Datensatz `extra`, aus dem Paket [pradadata](https://sebastiansauer.github.io/pradadata/). in dem Datensatz werden Korrelate zum Persönlichkeitsmerkmal Extraversion untersucht.
+Ein Codebook findet sich [hier](https://sebastiansauer.github.io/pradadata/reference/extra.html).
 
  
 ```{r load-extra-web, eval = TRUE}
@@ -59,16 +61,16 @@ Anstelle der Funktion `data_read` könnten Sie auch `read_csv` (Tidyverse) oder 
 Mühsam haben Sie Ihre Studie geplant, minutiös den Versuchsplan ausgeheckt, pedantisch die Messinstrumente bestimmt.
 Dann! Die Datenerhebung! Versuchspersonen, manche nervig, manche freundlich.
 Ist Forschung denn so anstrengend?
-Endlich! Geschafft - die Daten sind im Sack, sozusagen.
+Endlich! Geschafft -- die Daten sind im Sack, sozusagen.
 Die Datenerhebung ist abgeschlossen.
 Was jetzt?
 
 
 ### Wozu ist das gut?
 
-Würden Sie einem Medikament trauen, von dem es heißt, das Forschungsteam hatten keinen Bock, Statistik ist zu stressig, aber sie hätten da so ein Gefühl, könnte schon was bringen, die Pille, immer rein damit.
+Würden Sie einem Medikament trauen, von dem es heißt, das Forschungsteam hatten keinen Bock, Statistik ist zu stressig, aber die Typen aus dem Forschungsteam hätten da so ein Gefühl, könnte schon was bringen, die Pille, immer rein damit.
 Was?! Sie zögern sich das Medikament einzuwerfen?
-Sie hätten es lieber genauer, sicherer, belastbarer? Es ginge schließlich um ihre Gesundheit?
+Sie wüssten es lieber genauer, sicherer, belastbarer? Es ginge schließlich um ihre Gesundheit?
 
 Also gut, Sie haben es so gewollt: Gehen Sie geradeaus weiter zur Statistik.
 
@@ -76,6 +78,10 @@ Also gut, Sie haben es so gewollt: Gehen Sie geradeaus weiter zur Statistik.
 
 ### Über 7 Brücken musst du gehen: Die Schritte der Datenanalyse
 
+
+@fig-sieben-bruecken stellt die typischen Schritte ("Brücken") der Datenanalyse dar.
+
+:::{#fig-sieben-bruecken fig-align="center"}
 
  
 ```{mermaid}
@@ -89,6 +95,9 @@ flowchart TD
   Ü --> A
 ```
 
+Die sieben ~~Siegel~~ Brücken der Datenanalyse
+
+:::
 
 
 
@@ -97,7 +106,7 @@ In etwas mehr Detail sieht der Fortgang Ihrer Datenanalyse so aus:
 
 1. *Einlesen und Aufbereiten*: Nachdem Sie die Daten in R importiert haben, bereiten Sie sie auf. Das klingt läppisch, langweilig fast und nicht so cool wie Modellieren. Schon richtig. Fakt ist aber, dass dieser Teil der Analyse häufig ein Großteil  der Zeit benötigt. Wahr ist: Das Daten aufbereiten ist enorm wichtig. Typische Beispiele für solche Tätigkeiten sind das Behandeln fehlender Werte, das Umformen von Tabellen und das Zähmen von Extremwerten
 
-2. *Zusammenfassen*: Nachdem Sie die in Ordnung gebracht haben, fassen Sie sie zusammen, um zentrale Trends zu versethen. Praktisch gesprochen berechnen Sie Maße der Lage, der Streuung und des Zusammenhangs.
+2. *Zusammenfassen*: Nachdem Sie die in Ordnung gebracht haben, fassen Sie sie zusammen, um zentrale Trends zu verstehen. Praktisch gesprochen berechnen Sie Maße der Lage, der Streuung und des Zusammenhangs.
 
 3. *Visualisieren*: Der Mensch ist halt ein Augentier. So ein schönes Diagramm macht einfach was her und besticht auch den strengsten Gutachter.
 
@@ -105,7 +114,7 @@ In etwas mehr Detail sieht der Fortgang Ihrer Datenanalyse so aus:
 
 4. *Interpretieren*: So ein Modell bzw. die entsprechende Funktion in R spuckt einige Zahlen aus. Aber was sagt uns das jetzt? Das würden Sie auch gerne wissen? Prima! Finden wir es zusammen raus.
 
-5. *Kritisieren*: Jetzt müssen Sie stark sein. Keine Analyse ist perfekt. Keine Studie ist abschließend. Niemand hat den goldenen Gral gefunden. Okay, aber bisher haben Sie sich auch noch nicht an der Sache versucht! Jedenfalls bricht niemanden ein Zacken aus der Krone, wenn man aufzeigt, wo noch Forschungslücken sind, auch nach der eigenen Studie. Oder sogar, welche Schwächen die eigene Studie bzw. Analyse hat und was man beim nächsten Mal noch berücksichtigen könnte.
+5. *Kritisieren*: Jetzt müssen Sie stark sein. Keine Analyse ist perfekt. Keine Studie ist abschließend. Niemand hat bislang den goldenen Gral gefunden. Okay, aber bisher haben Sie sich auch noch nicht an der Sache versucht! Jedenfalls bricht niemanden ein Zacken aus der Krone, wenn man aufzeigt, wo noch Forschungslücken sind, auch nach der eigenen Studie. Oder sogar, welche Schwächen die eigene Studie bzw. Analyse hat und was man beim nächsten Mal noch besser machen könnte.
 
 6. *Amüsieren*: So, irgendwann ist auch gut. Jetzt belohnen Sie sich mal für die ganze harte Arbeit des Studierens.
 
@@ -153,10 +162,10 @@ damit man sie gut in R importieren kann, bzw. gut damit weiterarbeiten kann?
 
 Im Überblick sollten Sie auf Folgendes achten:
 
-- Wenn Sie händisch Daten eintragen, hacken Sie das einfach in Excel sein.
+- Wenn Sie händisch Daten eintragen, hacken Sie das einfach in Excel o.Ä. sein.
 - CSV-Dateien bieten sich als Datenformat an.
 - Alternativ kann man auch Excel-Dateien in R importieren.
-- Es muss genau eine Kopfzeile geben.
+- Es muss genau *eine* Kopfzeile geben.
 - Es darf keine Lücken geben (leere Zeilen oder Spalten oder Zellen).
 - Vermeiden Sie Umlaute und Leerzeichen in den Variablennamen.
 - Die Daten sollten dem Prinzip von "tidy data" folgen.
@@ -195,9 +204,9 @@ Hier sehen Sie im Überblick die Schritte, die in vielen Fällen sinnvoll sind, 
 2. Explorative Analyse
     1. Daten zusammenfassen (zentrale Tendenz, Streuung, Zusammenhang)
     2. Daten visualisieren
-3. Modellierung
+3. Modellierung und Inferenzstatistik
     1. Modell berechnen
-    2. Parameter berichten (Punkt- und Intervallschätzer)
+    2. Parameter berichten (Punkt- und Intervallschätzer) und ggf. visualisieren
     3. Parameter visualisieren
     4. Nullhypothesen testen (z.B. ROPE)
     5. Modellgüte berichten (z.B. R-Quadrat)
@@ -223,6 +232,119 @@ Das Kursbuch [Start:Bayes!](https://start-bayes.netlify.app/) stellt einen Einst
 
 [Hier](https://sebastiansauer.github.io/umfragen-auswerten/index.html) finden Sie (m)eine Anleitung zur Auswertung von Umfragedaten.
 
+
+
+## Überblick zur Statistik
+
+### Deskriptiv- vs. Inferenzstatistik
+
+@fig-inf1 und @fig-inf2 geben einen Überblick zum Unterschied von Deskriptiv- und Inferenzstatistik.
+
+
+
+![Deskriptiv- vs. Inferenzstatistik](img/desk-inf.jpg){#fig-inf1 width=70% fig-align="center"}
+
+
+
+![Inferenzstatistik schätzt die (Un-)Genauigkeit der Kennwerte der Deskriptivstatatistik](img/desk-inf-fans.jpg){#fig-inf2 width=70% fig-align="center"}
+
+
+
+### Deskriptivstatistik
+
+
+Typische Kennwerte der Deskriptivstatistik sind:
+
+- Arithmetisches Mittel
+- Standardabweichung
+- Anteil
+- Korrelation
+- Regressionskoeffizienten
+
+
+
+
+@fig-scatter-interactive zeigt interaktive Beispiele für einen Kennwert des Deskriptivstatistik: (lineare) Korrelation^[Quelle: <https://observablehq.com/d/bb7ad3ecfb1ac2a6>]. 
+
+
+
+:::{#fig-scatter-interactive}
+
+::: {.figure-content}
+
+
+
+{{< include children/scatterplot-interactive.qmd >}}
+
+
+
+:::
+
+Interaktives Beispiel für Zusammenhangsdiagramme.
+
+:::
+
+
+
+### Inferenzstatistik
+
+@fig-samples-for-inference veranschautlicht die Daaseinsberechtigung der Inferenzstatistik: 
+Eine einzelne Stichprobe schätzt den Mittelwert der Population (mu) ungenau (je kleiner die Stichprobe, desto ungenauer, ceteris paribus). 
+Daher brauchen wir eine Angabe, wie (un)genau unser Mittelwert wohl den "wahren" Mittelwert der Population (mu) schätzt. 
+Genau das macht die Inferenzstatistik!
+
+
+
+```{r}
+#| echo: false
+#| warning: false
+#| label: fig-samples-for-inference 
+#| fig-cap: "Inferenzstatistik veranschaulicht: Einzelne Stichproben schätzen den Mittelwert der Populationswert (mu) nur ungenau. Daher brauchen eine Quantifizierung der Schätz(un)genauigkeit des Mittelwerts der Population."
+source("img/samples-for-inference.R")
+p_infence_with_samples
+```
+
+
+
+### Modellieren
+
+
+:::{#def-model}
+### Modell
+Ein Modell ist ein vereinfachtes Abbild der Wirklichkeit.$\square$
+:::
+
+Der Nutzen eines Modells ist, einen (übermäßig) komplexen Sachverhalt zu vereinfachen oder überhaupt erst handhabbar zu machen.
+Man versucht zu vereinfachen, ohne Wesentliches wegzulassen. 
+Der Speck muss weg, sozusagen. Das Wesentliche bleibt.
+
+Auf die Statistik bezogen heißt das,
+dass man einen Datensatz dabei so zusammenfasst,
+damit man das Wesentliche erkennt.
+Was ist das "Wesentliche"? Oft interessiert man sich für die Ursachen eines Phänomens. 
+Etwa: "Wie kommt es bloß, dass ich ohne zu lernen die Klausur so gut bestanden habe?"^[Das ist natürlich nur ein fiktives, komplett unrealistisches Beispiel, das auch unklaren Ursachen den Weg auf diese Seite gefunden hat.]
+Noch allgemeiner ist man dabei häufig am Zusammenhang von `X ` und `Y` interessiert, s. @fig-xy, die ein Sinnbild von statistischen Modellen widergibt.
+
+
+
+
+
+:::{#fig-xy fig-align="center"}
+
+
+```{mermaid}
+flowchart LR
+X --> Y
+
+
+X1 --> Y2
+X2 --> Y2
+```
+
+oben: Sinnbild eines statistischen Modells; unten: Sinnbild eines statistischen Modells, mit zwei Inputvariablen ("Ursachen")
+
+
+:::
 
 
 
@@ -282,10 +404,15 @@ Im Folgenden sind die Vorteile der oben genannten klickbasierten Software-Progra
 
 
 
+## Deskriptivstatistik in der Praxis
 
-## Daten zusammenfassen (deskriptive Analyse)
+:::{.callout-important}
+Die Deskriptivstatistik fasst eine Datenreihe zu einer Kennzahl zusammen. Der Nutzen liegt im Überblick, den man so gewinnt. 
+:::
 
-Damit es einfach bleibt, begrenzen wir uns auf ein paar Variablen.
+
+Wir analysieren den Datensatz `extra`.
+Damit es einfach bleibt, begrenzen wir uns im Folgenden auf ein paar Variablen. 
 
 Sagen wir, 
 das sind die Variablen, die uns interessieren:
@@ -303,18 +430,49 @@ extra_corr_names
 
 ### Deskriptive Ergebnisse für metrische Variablen 
 
-Sie können deskriptive Ergebnisse (Ihrer relevanten Variablen) für *metrische* Variablen z.B. so darstellen.
+Sie können deskriptive Ergebnisse (Ihrer relevanten Variablen) für *metrische* Variablen z.B. so darstellen, s. @lst-desk1.
+
+
+:::{#lst-desk1}
 
 
 ```{r}
+#| eval: false
 extra %>% 
   select(any_of(extra_corr_names)) %>% 
-  describe_distribution() %>% 
+  describe_distribution()  # aus `easystats`
+```
+
+Deskriptive Statistik mit Hilfe des R-Pakets `easystats` 
+
+:::
+
+
+
+```{r}
+#| echo: false
+extra %>% 
+  select(any_of(extra_corr_names)) %>% 
+  describe_distribution() %>%  # aus `easystats`
   kable(digits = 2)
 ```
 
 
-`kable()` macht aus dem drögen Output in der R-Konsole eine schicke HTML-Tabelle^[funktioniert auch in Word und PDF], wenn man das Quarto-Dokument rendert.
+Übersetzen wir @lst-desk1 vom Errischen ins Deutsche:
+
+1. Hey R,
+2. nimm die Tabelle `extra` ... und dann
+3. wähle jede Variable, die ich im Vektor `extra_corr_names` angegeben habe ... und dann
+4. beschreibe die Verteilung (jeweils, also für jede Variable) ... und dann
+5. mache aus der drögen Tabelle eine schicke. Fertig!
+
+
+
+
+
+
+
+`kable()` macht aus dem drögen Output in der R-Konsole eine schicke HTML-Tabelle^[funktioniert auch mit Word und PDF als Ausgabeformat], wenn man das Quarto-Dokument rendert.
 
 Statt `select(any_of(extra_corr_names))` könnten Sie natürlich auch schreiben `select(n_facebook_friends, ...)`, wobei Sie für die drei Punkte alle Variablen von Interesse nennen würden.
 
@@ -347,23 +505,35 @@ Etwas schicker sieht es aus mit `data_tabulate` aus `easystats`:
 
 ```{r}
 extra |> 
-  select(sex, smoker) |> 
+  select(sex) |> 
   #drop_na() |>  ggf. ohne fehlende Werte
   data_tabulate()
 ```
 
-Wir können uns auch die *bi*variaten Häufigkeiten ausgeben lassen.
+#### Bivariate Häufigkeiten
+
+Wir können uns auch die *bi*variaten Häufigkeiten ausgeben lassen:
+Betrachten wir die Geschlechtsverteilung bei Menschen, die (nicht) jünger als 20 Jahre sind:
 
 ```{r}
+#| eval: false
 extra |> 
-  drop_na(sex, smoker) |>  # fehlende Werte entfernt
-  group_by(sex) |> 
-  data_tabulate("smoker")
+  drop_na(sex, age) |>  # fehlende Werte entfernt
+  group_by(age > 20) |> 
+  data_tabulate(sex)
 ```
 
 
 
 
+```{r}
+#| echo: false
+extra |> 
+  drop_na(sex, age) |>  # fehlende Werte entfernt
+  group_by(age > 20) |> 
+  data_tabulate(sex) |> 
+  print_md()
+```
 
 
 ### Korrelationen darstellen
@@ -377,8 +547,8 @@ darzustellen.
 #### Korrelationsmatrix
 
 
-
 ```{r}
+#| echo: false
 extra %>% 
   select(any_of(extra_corr_names)) %>%  
   correlation() %>% 
@@ -387,8 +557,18 @@ extra %>%
 ```
 
 
+
+```{r}
+#| eval: false
+extra %>% 
+  select(any_of(extra_corr_names)) %>%  
+  correlation() %>% 
+  summary() 
+```
+
+
 Sie möchten das Ergebnis als normalen R-Dataframe? 
-Sie haben keine Lust auf dieses Rumgetue, sondern wollen das lieber als selber gerade ziehen.
+Sie haben keine Lust auf dieses Rumgetue, sondern wollen das lieber als selber geradeziehen.
 Also gut:
 
 

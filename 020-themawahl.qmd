@@ -313,7 +313,13 @@ S-->Sc-->Sa-->Le-->E
 ```
 
 
-Die Anzahl der Suchmaschinen bzw. Datenbanken bzw. (AI-)Suchdienste wächst und schwankt, so dass es schwierig ist, einen umfassenden Überblick zu geben. @tbl-suchdienste versucht einen Überblick zu geben.
+Die Anzahl der Suchmaschinen bzw. Datenbanken bzw. (AI-)Suchdienste wächst und schwankt, so dass es schwierig ist, einen umfassenden Überblick zu geben. @tbl-suchdienste versucht, einen Überblick zu geben. 
+Zu beachten ist, dass die Zahl der Zitationen angebeben sind, also der Metadaten von Forschungsartikeln.
+Die Suchmaschinen haben Zugriff auf den Volltext einer Teil der Zitationen.
+Das bedeutet aber nicht, dass man über die Suchmaschinen Volltextzugriff bekommen kann.
+Bei "geschützten" (paywalled) Artikeln ist diese nur mit Bezahlzugang möglich.
+Mit etwas Glück hat Ihre Bib Zugang zum betreffenden Artikel.
+
 
 
 
@@ -329,6 +335,9 @@ Die Anzahl der Suchmaschinen bzw. Datenbanken bzw. (AI-)Suchdienste wächst und 
 | 8   	| [elicit](https://elicit.com/)                                           	| ja    	| Ought/Elicit (non-profit?)      	| 200M   	|
 | 9   	| [Research Gate](https://www.researchgate.net/)                          	| ja    	| Research Gate (?)               	| 160M?  	|
 | 10  	| [Perplexity](https://www.perplexity.ai/)                                	| ja    	| Perplexity AI (Google Spin-Off) 	| 200M   	|
+| 11    | [SciSpace](https://scispace.com/)                                         | ja      | ?                                 | 200M+   |
+
+
 
 : Suchdienste für wissenschaftliche Werke {#tbl-suchdienste}
 
