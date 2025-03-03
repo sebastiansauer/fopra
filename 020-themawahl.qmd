@@ -52,14 +52,14 @@ d <- tibble(
 
 ggplot() +
   xlim(-1, 20) +
-  ylim(-10, 200) +
+  # ylim(-50, 200) +
   geom_function(fun = function(x) exp(x)) +
   geom_label(data = d, aes(x = x, y = y, label = text)) +
   labs(x = "",
        y = "Exaktheit",
        caption = "O-Hypothese: Operationalisierte Hypothese") +
   scale_x_continuous(labels = NULL) +
-  expand_limits(x = 6) +
+  expand_limits(x = 6, y = -20) +
   scale_y_continuous(breaks = NULL) +
   theme_minimal()
 ```
@@ -313,7 +313,7 @@ S-->Sc-->Sa-->Le-->E
 ```
 
 
-Die Anzahl der Suchmaschinen bzw. Datenbanken bzw. (AI-)Suchdienste wächst und schwankt, so dass es schwierig ist, einen umfassenden Überblick zu geben. @tbl-suchdienste versucht, einen Überblick zu geben. 
+Die Anzahl der Suchmaschinen bzw. Datenbanken bzw. (AI-)Suchdienste wächst und schwankt, so dass es schwierig ist, einen umfassenden Überblick zu geben. @tbl-suchdienste versucht, einen Überblick über einige empfehlenswerte Dienste zu geben. 
 Zu beachten ist, dass die Zahl der Zitationen angebeben sind, also der Metadaten von Forschungsartikeln.
 Die Suchmaschinen haben Zugriff auf den Volltext einer Teil der Zitationen.
 Das bedeutet aber nicht, dass man über die Suchmaschinen Volltextzugriff bekommen kann.
@@ -326,15 +326,15 @@ Mit etwas Glück hat Ihre Bib Zugang zum betreffenden Artikel.
 | Nr. 	| Name                                                                    	| offen 	| Anbieter                        	| Umfang 	|
 |-----	|-------------------------------------------------------------------------	|-------	|---------------------------------	|--------	|
 | 1   	| [Google Scholar](https://scholar.google.com)                            	| ja    	| Google                          	| 200M   	|
-| 2   	| [Web of Science](https://access.clarivate.com)                          	| nein  	| Clarivate                       	| 136M   	|
-| 3   	| [Scopus](https://www.scopus.com/)                                       	| nein  	| Elsevier                        	| 82M    	|
-| 4   	| [Base](https://www.base-search.net/)                                    	| ja    	| Bielefeld University            	| 227M   	|
-| 5   	| [Core](https://core.ac.uk/)                                             	| ja    	| CORE (non-profit)               	| 136M   	|
-| 6   	| [Semantic Scholar](https://core.ac.uk/https://www.semanticscholar.org/) 	| ja    	| Allen Institute for AI          	| 200M   	|
-| 7   	| [Refseek](https://www.refseek.com/)                                     	| ja    	| refseek?                        	| 1000M  	|
+<!-- | 2   	| [Web of Science](https://access.clarivate.com)                          	| nein  	| Clarivate                       	| 136M   	| -->
+<!-- | 3   	| [Scopus](https://www.scopus.com/)                                       	| nein  	| Elsevier                        	| 82M    	| -->
+<!-- | 4   	| [Base](https://www.base-search.net/)                                    	| ja    	| Bielefeld University            	| 400M+  	| -->
+<!-- | 5   	| [Core](https://core.ac.uk/)                                             	| ja    	| CORE (non-profit)               	| 300+   	| -->
+<!-- | 6   	| [Semantic Scholar](https://www.semanticscholar.org/)                    	| ja    	| Allen Institute for AI          	| 200M   	| -->
+<!-- | 7   	| [Refseek](https://www.refseek.com/)                                     	| ja    	| refseek?                        	| 1000M  	| -->
 | 8   	| [elicit](https://elicit.com/)                                           	| ja    	| Ought/Elicit (non-profit?)      	| 200M   	|
 | 9   	| [Research Gate](https://www.researchgate.net/)                          	| ja    	| Research Gate (?)               	| 160M?  	|
-| 10  	| [Perplexity](https://www.perplexity.ai/)                                	| ja    	| Perplexity AI (Google Spin-Off) 	| 200M   	|
+<!-- | 10  	| [Perplexity](https://www.perplexity.ai/)                                	| ja    	| Perplexity AI (Google Spin-Off) 	| 200M   	| -->
 | 11    | [SciSpace](https://scispace.com/)                                         | ja      | ?                                 | 200M+   |
 
 
@@ -348,7 +348,7 @@ Das wiederum heißt:
 
 1. ✅ Die Zitierinformationen  sind  zugänglich
 2.  ✅ Die Always-Open-Acces-Elemente sind zugänglich
-3. 🙅‍♀️   Der Volltext ist nicht notwendig zugänglich
+3. 🙅‍♀️   Der Volltext ist nicht immer  zugänglich
 
 
 

@@ -39,6 +39,12 @@ Wenn Sie es mir nicht glauben, werfen Sie einen Blick auf @fig-ueberblick und @f
 
 
 
+### Folienskript
+
+
+Das Folienskript zu diesem Kapitel finden Sie [hier](https://sebastiansauer.github.io/fopra-slides/thema02.html#/title-slide).
+
+
 
 
 
@@ -84,6 +90,8 @@ d <- tribble(
   "Hauptergebnis",
   "Stichprobengröße",
   "Studienablauf",
+  "Stärkster Aspekt",
+  "Schwächster Aspekt",
   "Interessant ist ...",
   "Ansatzpunkt für weitere Studien..."
 ) %>% 
@@ -126,11 +134,47 @@ Tipp: Lassen Sie sich ähnliche Bücher wie in @exm-popscience vorschlagen, wenn
 
 Auf der Seite [des Instituts für Wirtschaftspsychologie (iwp) der FOM Hochschule](https://www.fom.de/forschung/institute/iwp-institut-fuer-wirtschaftspsychologie/publikationen/iwp-schriftenreihe.html) finden Sie eine Auswahl an insgesamt gut aufbereiteten psychologischen Studien aus studentischer Feder.
 
+Empfehlenswert ist z.B. die Arbeit zum Thema [Selbstwirksamkeit, Selbstregulation und Prokrastination – Überprüfung eines Mediationsmodells](https://forschung.fom.de/fileadmin/fom/forschung/iwp/Schriftenreihe/FOM-Forschung-iwp-Schriftenreihe-Band-11-Schuhmacher-Beatrice-Prokastination-2022.pdf). Die Arbeit ist frei im Netz verfügbar.
+
+
 
 :::{#exr-iwp}
 ### Einblick in studentische Forschung
-Lesen Sie eine studentische Forschungsarbeit quer und präsentieren Sie die wesentlichen Ergebnisse! Nutzen Sie @tbl-studienprofil zur Gliederung Ihrer Analyse.
+Fassen Sie eine studentische Forschungsarbeit mit Hilfe einer KI zusammen und präsentieren Sie die wesentlichen Ergebnisse! Nutzen Sie @tbl-studienprofil zur Gliederung Ihrer Analyse. Wichtig: Versuchen Sie die Stichhaltigkeit der Antworten der KI nachzuprüfen.
+
+Teilen Sie sich dabei in Gruppen auf; jede Gruppe nutzt eine andere KI:
+
+a. [Custom GPT: AskYourPDF Research Assistant](https://chatgp(t.com/g/g-UfFxTDMxq-askyourpdf-research-assistant)
+b. [SciSpace](https://scispace.com/)
+c. [Gemini](https://gemini.google.com/app)
+d. [ChatPDF](https://www.chatpdf.com/)
+e. [Google Notebook LM](https://notebooklm.google.com/) $\square$
 :::
+
+
+:::{#exr-summ-ai}
+### KI zur Textzusammenfassung
+Es gibt eine Reihe von KI-Tools, die Texte für Sie zusammenfassen.
+Dabei stellt sich naturgemäß die Frage, wie gut bzw. zuverlässig diese Dienste arbeiten?
+
+Vergleichen Sie die Güte der Zusammenfassung verschiedener KI-Dienste.
+Wichtig: Lesen Sie den Text in Auszügen auch selber, um so herauszufinden,
+ob nicht vielleicht alle KI-Dienste einen Sachverhalt nur ungenau treffen.
+
+Vergleichen Sie die folgenden KI-Dienste:
+
+a. [Custom GPT: AskYourPDF Research Assistant](https://chatgpt(t.com/g/g-UfFxTDMxq-askyourpdf-research-assistant)
+b. [SciSpace](https://scispace.com/)
+c. [Gemini](https://gemini.google.com/app)
+d. [ChatPDF](https://www.chatpdf.com/)
+e. [Google Notebook LM](https://notebooklm.google.com/)
+
+
+Schreiben Sie Ihre Erfahrungen auf [dieser Schreibwand](https://padlet.com/profsebastiansauer/tldr-ki-tools-zur-textzusammenfassung-nhsg6h0jozlay9j0) zusammen.
+
+
+
+
 
 
 

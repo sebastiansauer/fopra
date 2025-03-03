@@ -44,9 +44,7 @@ book:
     search: true
   # google-analytics:
   navbar: false
-  repo-url: https://github.com/sebastiansauer/statistik1
-  repo-actions: [issue]
- # page-footer: "footer test"
+
 
 
 
@@ -90,7 +88,7 @@ book:
 
 
 bibliography: library-ses.bib
-csl: apa7.cvsl
+csl: apa7.csl
 
 editor: source
 keep-md: false
