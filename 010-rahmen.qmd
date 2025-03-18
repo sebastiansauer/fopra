@@ -144,7 +144,7 @@ Empfehlenswert ist z.B. die Arbeit zum Thema [Selbstwirksamkeit, Selbstregulatio
 ### Einblick in studentische Forschung
 Fassen Sie eine studentische Forschungsarbeit mit Hilfe einer KI zusammen und präsentieren Sie die wesentlichen Ergebnisse! Nutzen Sie @tbl-studienprofil zur Gliederung Ihrer Analyse. Wichtig: Versuchen Sie die Stichhaltigkeit der Antworten der KI nachzuprüfen.
 
-Teilen Sie sich dabei in Gruppen auf; jede Gruppe nutzt eine andere KI, s. @tbl-ki-summ-pdf. $\square$
+Teilen Sie sich dabei in Gruppen auf; nutzen Sie verschiedene KI-Dienste, s. @tbl-ki-summ-pdf. $\square$
 :::
 
 | Nr 	| Name                                                                                                         	|
@@ -159,7 +159,7 @@ Teilen Sie sich dabei in Gruppen auf; jede Gruppe nutzt eine andere KI, s. @tbl-
 
 
 
-: KD-Dienste zur Textzusammenfassung (Auswahl){#tbl-ki-summ-pdf .striped .hover}
+: KD-Dienste zur Textzusammenfassung {#tbl-ki-summ-pdf .striped .hover}
 
 
 :::{#exr-summ-ai}
