@@ -23,6 +23,8 @@ This image and their code are taken from the [phantastic Spiro R package](https:
 - Sie können einige Beispiele von psychologischen Studien nennen und einige Informationen zu diesen Studien wiedergeben.
 - Sie können Definitionsbestandteile für Wissenschaft nennen und diskutieren.
 - Sie können die drei Schlussarten der Wissenschaft erläutern und mit Beispielen verdeutlichen.
+- Sie können KI-Tools nutzen, um wissenschaftliche Texte zusammenzufassen und zu interpretieren.
+- Sie können den Nutzen der Wissenschaft für die Gesellschaft erläutern und mit Beispielen versehen.
 
 
 
@@ -392,17 +394,17 @@ Beispiele für die einzelnen Zielarten:
 ### Ich will kein Wissenschaftler werden!
 
 
-:::{exm-job}
+:::{.exm-job}
 ### Unternehmensberatung und Wissenschaft
 Toni arbeitet bei einer Unternehmensberatung. Um als Unternehmensberater zu arbeiten, braucht es wissenschaftliches Denken, sagt Toni. Sie arbeitete erst als Wissenschaftlerin, jetzt in der Unternehmensberatung.
 
 
-Arbeitweisen in beiden Feldern:
+Arbeitsweisen in beiden Feldern:
 
 - Evidenzbasiertes Vorgehen: Zahlen, Daten, Fakten
 - Systematisches Vorgehen: Hohe Qualitätsstandards bei den Kernprozessen
-- Annahmen und Ideen testen: Nicht glauben, sondern vüberprüfen
-- Gute Schätzungen erstellen: "Tacheles reden"$\square$
+- Annahmen und Ideen testen: Nicht glauben, sondern überprüfen
+- Gute Schätzungen erstellen: "Tacheles reden" $\square$
 :::
 
 ### Wissenschaft im Alltag
