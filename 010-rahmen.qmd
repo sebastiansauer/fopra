@@ -152,6 +152,9 @@ Teilen Sie sich dabei in Gruppen auf; jede Gruppe nutzt eine andere KI, s. @tbl-
 | 3  	| [Gemini](https://gemini.google.com/app)                                                                      	|
 | 4  	| [ChatPDF](https://www.chatpdf.com/)                                                                          	|
 | 5  	| [Google Notebook LM](https://notebooklm.google.com/)                                                          |
+| ?   | ...                                                                                                           |
+
+
 
 
 : KD-Dienste zur Textzusammenfassung (Auswahl){#tbl-ki-summ-pdf .striped .hover}
@@ -172,6 +175,22 @@ Schreiben Sie Ihre Erfahrungen auf [dieser Schreibwand](https://padlet.com/profs
 :::
 
 
+Reiner Text ist für eine KI einfacher zu verarbeiten als ein PDF.
+Daher kann es Ihre Ergebnisse verbessern, wenn Sie einer KI nicht ein PDF zum Zusammenfassen geben (besonders, wenn es sehr lang ist), sondern eine Textdatei, die eben nur den zusammenfassenden Text enthält, s. @lst-extract-pdf.
+
+
+```{r}
+#| lst-label: lst-extract-pdf
+#| lst-cap: "So kann man Text aus einem PDF extrahieren."
+#| eval: false
+library(pdftools)  # ggf. vorab installieren
+
+# Text aus PDF extrhaieren:
+pdf_text <- pdf_text('https://raw.githubusercontent.com/sebastiansauer/fopra/main/pdf/02.pdf')
+
+# Text in Textdatei speichern:
+writeLines(pdf_text, "Material/text_aus_kapitel2.txt")
+```
 
 
 

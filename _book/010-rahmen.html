@@ -19,6 +19,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -514,13 +548,10 @@ Tabelle&nbsp;2.1: Vorlage zur Erstellung eines Studienprofils
 <p>Empfehlenswert ist z. B. die Arbeit zum Thema <a href="https://forschung.fom.de/fileadmin/fom/forschung/iwp/Schriftenreihe/FOM-Forschung-iwp-Schriftenreihe-Band-11-Schuhmacher-Beatrice-Prokastination-2022.pdf">Selbstwirksamkeit, Selbstregulation und Prokrastination – Überprüfung eines Mediationsmodells</a>. Die Arbeit ist frei im Netz verfügbar.</p>
 <div id="exr-iwp" class="theorem exercise">
 <p><span class="theorem-title"><strong>Übungsaufgabe 2.3 (Einblick in studentische Forschung)</strong></span> Fassen Sie eine studentische Forschungsarbeit mit Hilfe einer KI zusammen und präsentieren Sie die wesentlichen Ergebnisse! Nutzen Sie <a href="#tbl-studienprofil" class="quarto-xref">Tabelle&nbsp;<span>2.1</span></a> zur Gliederung Ihrer Analyse. Wichtig: Versuchen Sie die Stichhaltigkeit der Antworten der KI nachzuprüfen.</p>
-<p>Teilen Sie sich dabei in Gruppen auf; jede Gruppe nutzt eine andere KI, s. <a href="#tbl-ki-summ-pdf" class="quarto-xref">Tabelle&nbsp;<span>2.2</span></a>. <span class="math inline">\(\square\)</span></p>
+<p>Teilen Sie sich dabei in Gruppen auf; jede Gruppe nutzt eine andere KI, s. <span class="quarto-unresolved-ref">?tbl-ki-summ-pdf</span>. <span class="math inline">\(\square\)</span></p>
 </div>
-<div id="tbl-ki-summ-pdf" class="striped hover quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-ki-summ-pdf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Tabelle&nbsp;2.2: KD-Dienste zur Textzusammenfassung
-</figcaption><div aria-describedby="tbl-ki-summ-pdf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<table class="table-striped table-hover caption-top table">
+<table class="caption-top table">
+<caption>KD-Dienste zur Textzusammenfassung (Auswahl){#tbl-ki-summ-pdf .striped .hover}</caption>
 <thead><tr class="header">
 <th>Nr</th>
 <th>Name</th>
@@ -546,23 +577,41 @@ Tabelle&nbsp;2.2: KD-Dienste zur Textzusammenfassung
 <td>5</td>
 <td><a href="https://notebooklm.google.com/">Google Notebook LM</a></td>
 </tr>
+<tr class="even">
+<td>?</td>
+<td>…</td>
+</tr>
 </tbody>
 </table>
-</div>
-</figure>
-</div>
 <div id="exr-summ-ai" class="theorem exercise">
 <p><span class="theorem-title"><strong>Übungsaufgabe 2.4 (KI zur Textzusammenfassung)</strong></span> Es gibt eine Reihe von KI-Tools, die Texte für Sie zusammenfassen. Dabei stellt sich naturgemäß die Frage, wie gut bzw. zuverlässig diese Dienste arbeiten?</p>
 <p>Vergleichen Sie die Güte der Zusammenfassung verschiedener KI-Dienste. Wichtig: Lesen Sie den Text in Auszügen auch selber, um so herauszufinden, ob nicht vielleicht alle KI-Dienste einen Sachverhalt nur ungenau treffen.</p>
-<p>Vergleichen Sie die dabei verschiedenen KI-Dienste, s. <a href="#tbl-ki-summ-pdf" class="quarto-xref">Tabelle&nbsp;<span>2.2</span></a>.</p>
+<p>Vergleichen Sie die dabei verschiedenen KI-Dienste, s. <span class="quarto-unresolved-ref">?tbl-ki-summ-pdf</span>.</p>
 <p>Schreiben Sie Ihre Erfahrungen auf <a href="https://padlet.com/profsebastiansauer/tldr-ki-tools-zur-textzusammenfassung-nhsg6h0jozlay9j0">dieser Schreibwand</a> zusammen. <span class="math inline">\(\square\)</span></p>
+</div>
+<p>Reiner Text ist für eine KI einfacher zu verarbeiten als ein PDF. Daher kann es Ihre Ergebnisse verbessern, wenn Sie einer KI nicht ein PDF zum Zusammenfassen geben (besonders, wenn es sehr lang ist), sondern eine Textdatei, die eben nur den zusammenfassenden Text enthält, s. <a href="#lst-extract-pdf" class="quarto-xref">Listing&nbsp;<span>2.1</span></a>.</p>
+<div class="cell">
+<div id="lst-extract-pdf" class="r cell-code listing quarto-float quarto-figure quarto-figure-left anchored">
+<figure class="quarto-float quarto-float-lst figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-lst" id="lst-extract-pdf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Listing&nbsp;2.1: So kann man Text aus einem PDF extrahieren.
+</figcaption><div aria-describedby="lst-extract-pdf-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="sourceCode" id="lst-extract-pdf"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ropensci.r-universe.dev/pdftools">pdftools</a></span><span class="op">)</span>  <span class="co"># ggf. vorab installieren</span></span>
+<span></span>
+<span><span class="co"># Text aus PDF extrhaieren:</span></span>
+<span><span class="va">pdf_text</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://docs.ropensci.org/pdftools//reference/pdftools.html">pdf_text</a></span><span class="op">(</span><span class="st">'https://raw.githubusercontent.com/sebastiansauer/fopra/main/pdf/02.pdf'</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Text in Textdatei speichern:</span></span>
+<span><span class="fu"><a href="https://rdrr.io/r/base/writeLines.html">writeLines</a></span><span class="op">(</span><span class="va">pdf_text</span>, <span class="st">"Material/text_aus_kapitel2.txt"</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</figure>
+</div>
 </div>
 </section></section><section id="was-ist-wissenschaft" class="level2" data-number="2.3"><h2 data-number="2.3" class="anchored" data-anchor-id="was-ist-wissenschaft">
 <span class="header-section-number">2.3</span> Was ist Wissenschaft?</h2>
 <section id="definitionsversuche" class="level3" data-number="2.3.1"><h3 data-number="2.3.1" class="anchored" data-anchor-id="definitionsversuche">
 <span class="header-section-number">2.3.1</span> Definitionsversuche</h3>
 <div id="def-science" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 2.1 (Wissenschaft)</strong></span> Wissenschaft ist ein systematisches Unterfangen, das Wissen erzeugt und organisiert, primär in Form von testbaren Erklärungen über beobachtbare Phänomne. <span class="math inline">\(\square\)</span></p>
+<p><span class="theorem-title"><strong>Definition 2.1 (Wissenschaft)</strong></span> Wissenschaft ist ein systematisches Unterfangen, das Wissen erzeugt und organisiert, primär in Form von testbaren Erklärungen über beobachtbare Phänomene. <span class="math inline">\(\square\)</span></p>
 </div>
 <p>Disziplinen, die wissenschaftliche Erkenntnisse zur Lösung praktischer Probleme nutzen (wie Medizin oder Wirtschaftspsychologie), nennt man auch angewandte Wissenschaft; Wissenschaftszweige mit weniger (direktem) Anwendungsbezug nennt man Grundlagenwissenschaft.</p>
 <p>Aspekte der Wissenschaft, die die Erzeugung von Wissen in den Vordergrund stellen, nennt man Forschung.</p>
@@ -641,11 +690,11 @@ Tabelle&nbsp;2.2: KD-Dienste zur Textzusammenfassung
 <p>Modelle ermöglichen damit die Beschreibung, Erklärung und Vorhersage von Phänomen (und damit auch die Einflussnahme). Modelle sind ähnlich zu Theorien, aber meist kleiner gefasst und die Analogie oder Metapher steht im Vordergrund.</p>
 </section><section id="beispiele-für-wissenschaften" class="level3 {exm-sciences-types}" data-number="2.3.5"><h3 data-number="2.3.5" class="anchored" data-anchor-id="beispiele-für-wissenschaften">
 <span class="header-section-number">2.3.5</span> Beispiele für Wissenschaften</h3>
-<p><a href="#tbl-sciences" class="quarto-xref">Tabelle&nbsp;<span>2.3</span></a> stellt Beispiele vor für Wissenschaften und ihre Einordnung.</p>
+<p><a href="#tbl-sciences" class="quarto-xref">Tabelle&nbsp;<span>2.2</span></a> stellt Beispiele vor für Wissenschaften und ihre Einordnung.</p>
 <div class="cell">
 <div id="tbl-sciences" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-sciences-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Tabelle&nbsp;2.3: Beispiele für Wissenschaften und ihre Einordnung
+Tabelle&nbsp;2.2: Beispiele für Wissenschaften und ihre Einordnung
 </figcaption><div aria-describedby="tbl-sciences-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
 <table class="do-not-create-environment cell caption-top table table-sm table-striped small">
