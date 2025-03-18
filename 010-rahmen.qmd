@@ -73,7 +73,9 @@ Grund genug, dass wir uns einmal mit solchen Magazinen beschäftigen.
 
 :::{#exr-inmind}
 #### Erarbeiten Sie eine Studie aus einem Wissenschaftsmagazin!
-Suchen Sie sich eine Studie aus einem Wissenchaftsmagazin und arbeiten Sie die Kernaspekte heraus. Erarbeiten Sie ein Profil der Studie. Orientieren Sie sich an dem Leitfaden aus @tbl-studienprofil.
+Suchen Sie sich eine Studie aus einem Wissenchaftsmagazin und arbeiten Sie die Kernaspekte heraus. 
+Erarbeiten Sie ein Profil der Studie. Orientieren Sie sich an dem Leitfaden aus @tbl-studienprofil.
+Sie können [dieses Dateigerüst](https://docs.google.com/document/d/19JLtjAH4A5CSguCyLffWau9Bvf5VcpQ-GPqBxrZITJ4/edit?usp=sharing) verwenden, um Ihre Ergebnisse aufzuschreiben.
 :::
 
 
@@ -85,8 +87,8 @@ Suchen Sie sich eine Studie aus einem Wissenchaftsmagazin und arbeiten Sie die K
 d <- tribble(
   ~Kriterium,
   "Forschungsfrage",
-  "Ursache",
-  "Wirkung",
+  "Ursache (UV)",
+  "Wirkung (AV)",
   "Hauptergebnis",
   "Stichprobengröße",
   "Studienablauf",
@@ -102,7 +104,7 @@ kable(d)
 ```
 
 Ein Studienprofil wie in @tbl-studienprofil passt nicht auf jede Studie, aber auf viele. 
-Modifizieren Sie ggf. das Studienprofil, so dass es zu Ihrer Studie passt.
+Modifizieren Sie ggf. die Vorlage des Studienprofils, so dass es zu Ihrer Studie passt.
 
 
 
@@ -146,7 +148,7 @@ Teilen Sie sich dabei in Gruppen auf; jede Gruppe nutzt eine andere KI, s. @tbl-
 :::
 
 | Nr 	| Name                                                                                                         	|
-|----	|--------------------------------------------------------------------------------------------------------------	|
+|:---	|:--------------------------------------------------------------------------------------------------------------|
 | 1  	| [Custom GPT: AskYourPDF Research Assistant](https://chatgpt.com/g/g-UfFxTDMxq-askyourpdf-research-assistant) 	|
 | 2  	| [SciSpace](https://scispace.com/)                                                                            	|
 | 3  	| [Gemini](https://gemini.google.com/app)                                                                      	|
