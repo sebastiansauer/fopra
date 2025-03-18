@@ -179,20 +179,26 @@ Schreiben Sie Ihre Erfahrungen auf [dieser Schreibwand](https://padlet.com/profs
 :::
 
 
+:::{#exr-text-extract}
+### Text aus PDF extrahieren
 Reiner Text ist für eine KI einfacher zu verarbeiten als ein PDF.
-Daher kann es Ihre Ergebnisse verbessern, wenn Sie einer KI nicht ein PDF zum Zusammenfassen geben (besonders, wenn es sehr lang ist), sondern eine Textdatei, die eben nur den zusammenfassenden Text enthält, s. @lst-extract-pdf.
+Daher kann es Ihre Ergebnisse verbessern, wenn Sie einer KI nicht ein PDF zum Zusammenfassen geben (besonders, wenn es sehr lang ist), sondern eine Textdatei, die eben nur den zusammenfassenden Text enthält, s. @lst-extract-pdf. Teilweise haben KI-Dienste auch Obergrenzen für Textmengen,
+die mit einer Textdatei besser steuerbar sind, als mit einer PDF-Datei.
 
+Extrahieren Sie den Text aus einer wissenschaftlichen Arbeit in eine Textdatei.
+Überprüfen Sie dann, ob und inwiefern ein bestimmter KI-Dienst damit besser zurecht kommt. $\square$
+:::
 
 ```{r}
 #| lst-label: lst-extract-pdf
 #| lst-cap: "So kann man Text aus einem PDF extrahieren."
 #| eval: false
-library(pdftools)  # ggf. vorab installieren
+library(pdftools)  # ggf. das Paket vorab installieren
 
-# Text aus PDF extrhaieren:
+# Text aus PDF extrahieren; hier geben Sie IHREN Pfad an:
 pdf_text <- pdf_text('https://raw.githubusercontent.com/sebastiansauer/fopra/main/pdf/02.pdf')
 
-# Text in Textdatei speichern:
+# Text in einer beliebigen Textdatei speichern:
 writeLines(pdf_text, "Material/text_aus_kapitel2.txt")
 ```
 
