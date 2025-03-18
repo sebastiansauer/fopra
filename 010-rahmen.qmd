@@ -142,14 +142,19 @@ Empfehlenswert ist z.B. die Arbeit zum Thema [Selbstwirksamkeit, Selbstregulatio
 ### Einblick in studentische Forschung
 Fassen Sie eine studentische Forschungsarbeit mit Hilfe einer KI zusammen und präsentieren Sie die wesentlichen Ergebnisse! Nutzen Sie @tbl-studienprofil zur Gliederung Ihrer Analyse. Wichtig: Versuchen Sie die Stichhaltigkeit der Antworten der KI nachzuprüfen.
 
-Teilen Sie sich dabei in Gruppen auf; jede Gruppe nutzt eine andere KI:
-
-a. [Custom GPT: AskYourPDF Research Assistant](https://chatgp(t.com/g/g-UfFxTDMxq-askyourpdf-research-assistant)
-b. [SciSpace](https://scispace.com/)
-c. [Gemini](https://gemini.google.com/app)
-d. [ChatPDF](https://www.chatpdf.com/)
-e. [Google Notebook LM](https://notebooklm.google.com/) $\square$
+Teilen Sie sich dabei in Gruppen auf; jede Gruppe nutzt eine andere KI, s. @tbl-ki-summ-pdf. $\square$
 :::
+
+| Nr 	| Name                                                                                                         	|
+|----	|--------------------------------------------------------------------------------------------------------------	|
+| 1  	| [Custom GPT: AskYourPDF Research Assistant](https://chatgpt.com/g/g-UfFxTDMxq-askyourpdf-research-assistant) 	|
+| 2  	| [SciSpace](https://scispace.com/)                                                                            	|
+| 3  	| [Gemini](https://gemini.google.com/app)                                                                      	|
+| 4  	| [ChatPDF](https://www.chatpdf.com/)                                                                          	|
+| 5  	| [Google Notebook LM](https://notebooklm.google.com/)                                                          |
+
+
+: KD-Dienste zur Textzusammenfassung (Auswahl){#tbl-ki-summ-pdf .striped .hover}
 
 
 :::{#exr-summ-ai}
@@ -161,16 +166,10 @@ Vergleichen Sie die Güte der Zusammenfassung verschiedener KI-Dienste.
 Wichtig: Lesen Sie den Text in Auszügen auch selber, um so herauszufinden,
 ob nicht vielleicht alle KI-Dienste einen Sachverhalt nur ungenau treffen.
 
-Vergleichen Sie die folgenden KI-Dienste:
+Vergleichen Sie die dabei verschiedenen KI-Dienste, s. @tbl-ki-summ-pdf.
 
-a. [Custom GPT: AskYourPDF Research Assistant](https://chatgpt(t.com/g/g-UfFxTDMxq-askyourpdf-research-assistant)
-b. [SciSpace](https://scispace.com/)
-c. [Gemini](https://gemini.google.com/app)
-d. [ChatPDF](https://www.chatpdf.com/)
-e. [Google Notebook LM](https://notebooklm.google.com/)
-
-
-Schreiben Sie Ihre Erfahrungen auf [dieser Schreibwand](https://padlet.com/profsebastiansauer/tldr-ki-tools-zur-textzusammenfassung-nhsg6h0jozlay9j0) zusammen.
+Schreiben Sie Ihre Erfahrungen auf [dieser Schreibwand](https://padlet.com/profsebastiansauer/tldr-ki-tools-zur-textzusammenfassung-nhsg6h0jozlay9j0) zusammen. $\square$
+:::
 
 
 

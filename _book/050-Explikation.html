@@ -4,6 +4,8 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.6.31">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<meta name="keywords" content="Versuchsplanung, Statistik, R, Datenanalyse, Psychologie, Forschung">
+<meta name="description" content="“Planung, Erhebung, Auswertung und Berichtlegung quantitativer psychologischer Studien: Ein Kurs für Anfänger”">
 <title>6&nbsp; Erklären – Forschungsprojekt</title>
 <style>
 code{white-space: pre-wrap;}
@@ -359,6 +361,12 @@ window.Quarto = {
   </div>
   
 
+<div>
+  <div class="keywords">
+    <div class="block-title">Schlüsselwörter</div>
+    <p>Versuchsplanung, Statistik, R, Datenanalyse, Psychologie, Forschung</p>
+  </div>
+</div>
 
 </header><section id="lernsteuerung" class="level2" data-number="6.1"><h2 data-number="6.1" class="anchored" data-anchor-id="lernsteuerung">
 <span class="header-section-number">6.1</span> Lernsteuerung</h2>
@@ -383,7 +391,7 @@ window.Quarto = {
 <p><span class="theorem-title"><strong>Definition 6.1 (Explikation)</strong></span> Unter Explikation versteht man das Erkenntnis des Erklärens eines wissenschaftlich untersuchten Sachverhalts. In den meisten Fällen ist damit das Identifizieren einer (oder mehrerer) Ursachen eines Phänomens gemeint. In diesem Sinne kann man sagern: Hat man eine oder gar alle Ursachen eines Phänomens erkannt, so hat man das Phänomen “erklärt”.<span class="math inline">\(\square\)</span></p>
 </div>
 <div id="exm-explikation" class="theorem example">
-<p><span class="theorem-title"><strong>Beispiel 6.1 (Explikation)</strong></span> Eine Hauptursache der “Seefahrerkrankheit” Skorbut ist Vitaminmangel <span class="citation" data-cites="pearl_book_2018">(<a href="130-references.html#ref-pearl_book_2018" role="doc-biblioref">Pearl und Mackenzie 2018</a>)</span>. Eine Ursache von Aggression ist Frustration <span class="citation" data-cites="jonas_sozialpsychologie_2014">(<a href="130-references.html#ref-jonas_sozialpsychologie_2014" role="doc-biblioref">Jonas, Stroebe, und Hewstone 2014</a>)</span>. <em>Social Proof</em> (soziale Bewährtheit) ist eine Ursache, so <span class="citation" data-cites="cialdini_psychologie_2017">Cialdini (<a href="130-references.html#ref-cialdini_psychologie_2017" role="doc-biblioref">2017</a>)</span>, der Entscheidungsbildung in eine gewisse Richtung.<span class="math inline">\(\square\)</span></p>
+<p><span class="theorem-title"><strong>Beispiel 6.1 (Explikation)</strong></span> Eine Hauptursache der “Seefahrerkrankheit” Skorbut ist Vitaminmangel <span class="citation" data-cites="pearl_book_2018">(<a href="130-references.html#ref-pearl_book_2018" role="doc-biblioref">Pearl &amp; Mackenzie, 2018</a>)</span>. Eine Ursache von Aggression ist Frustration <span class="citation" data-cites="jonas_sozialpsychologie_2014">(<a href="130-references.html#ref-jonas_sozialpsychologie_2014" role="doc-biblioref">Jonas et al., 2014</a>)</span>. <em>Social Proof</em> (soziale Bewährtheit) ist eine Ursache, so <span class="citation" data-cites="cialdini_psychologie_2017">Cialdini (<a href="130-references.html#ref-cialdini_psychologie_2017" role="doc-biblioref">2017</a>)</span>, der Entscheidungsbildung in eine gewisse Richtung.<span class="math inline">\(\square\)</span></p>
 </div>
 </section><section id="nicht-schauen-sondern-machen" class="level3" data-number="6.2.2"><h3 data-number="6.2.2" class="anchored" data-anchor-id="nicht-schauen-sondern-machen">
 <span class="header-section-number">6.2.2</span> Nicht schauen, sondern machen</h3>
@@ -396,7 +404,7 @@ window.Quarto = {
 <p><span class="theorem-title"><strong>Definition 6.3 (Beobachtungsstudie)</strong></span> Nicht-Interventionelle bezeichnet man auch als <em>Beobachtungsstudien</em>, da man “nichts macht”, im Sinne von keine Ausprägungen von Variablen aktiv ändert, sondern nur beobachtet bzw. den Wert der (interessierenden) Variablen misst.<span class="math inline">\(\square\)</span></p>
 </div>
 <div id="def-treatment" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 6.4 (Treatment)</strong></span> Ein Treatment (synonym: Intervention) nennt man die Behandlung, die eine Gruppe von Versuchsteilnehmis im Rahmen einer Studie erfährt <span class="citation" data-cites="reichardt_quasi-experimentation_2019">(<a href="130-references.html#ref-reichardt_quasi-experimentation_2019" role="doc-biblioref">Reichardt 2019</a>)</span>.<span class="math inline">\(\square\)</span></p>
+<p><span class="theorem-title"><strong>Definition 6.4 (Treatment)</strong></span> Ein Treatment (synonym: Intervention) nennt man die Behandlung, die eine Gruppe von Versuchsteilnehmis im Rahmen einer Studie erfährt <span class="citation" data-cites="reichardt_quasi-experimentation_2019">(<a href="130-references.html#ref-reichardt_quasi-experimentation_2019" role="doc-biblioref">Reichardt, 2019</a>)</span>.<span class="math inline">\(\square\)</span></p>
 </div>
 <div id="exm-ibu" class="theorem example">
 <p><span class="theorem-title"><strong>Beispiel 6.2 (Ibuprofen und Kopfschmerz)</strong></span> Eine Interventionsstudie wird verwendet, um den Effekt von Ibuprofen auf (die Reduktion von) akutem Kopfschmerz zu untersuchen. Dafür werden zwei Gruppen von Versuchspersonen unterschieden: Solche, die Ibuprofen als Treatment verabreicht bekommen, und solche, die nur ein “Scheinmedikament” (Placebo) in Form einer “Zuckerpille” verabreicht bekommen, vgl. <a href="#fig-ablauf-interv" class="quarto-xref">Abbildung&nbsp;<span>6.1</span></a>.<span class="math inline">\(\square\)</span></p>
@@ -428,7 +436,7 @@ Abbildung&nbsp;6.1: Einfaches Schema des Ablaufs einer Interventionsstudie
 <section id="definition" class="level3" data-number="6.3.1"><h3 data-number="6.3.1" class="anchored" data-anchor-id="definition">
 <span class="header-section-number">6.3.1</span> Definition</h3>
 <div id="def-effekt" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 6.6 (Effekt)</strong></span> Ein Effekt (eines Treatments <span class="math inline">\(T\)</span>) ist hier definiert als der Unterschied im beobachteten (gemessenen) Ergebnis zwischen was passiert ist, nachdem das Treatment verabreicht wurde und was passiert wäre, wenn stattdessen eine andere Intervention verabreicht worden wäre, unter der Annahme, dass sonst alles andere gleich gewesen wäre<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> <span class="citation" data-cites="reichardt_quasi-experimentation_2019">(<a href="130-references.html#ref-reichardt_quasi-experimentation_2019" role="doc-biblioref">Reichardt 2019</a>)</span>.<span class="math inline">\(\square\)</span></p>
+<p><span class="theorem-title"><strong>Definition 6.6 (Effekt)</strong></span> Ein Effekt (eines Treatments <span class="math inline">\(T\)</span>) ist hier definiert als der Unterschied im beobachteten (gemessenen) Ergebnis zwischen was passiert ist, nachdem das Treatment verabreicht wurde und was passiert wäre, wenn stattdessen eine andere Intervention verabreicht worden wäre, unter der Annahme, dass sonst alles andere gleich gewesen wäre<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a> <span class="citation" data-cites="reichardt_quasi-experimentation_2019">(<a href="130-references.html#ref-reichardt_quasi-experimentation_2019" role="doc-biblioref">Reichardt, 2019</a>)</span>.<span class="math inline">\(\square\)</span></p>
 </div>
 <div id="exm-kopfweh" class="theorem example">
 <p><span class="theorem-title"><strong>Beispiel 6.3</strong></span> Den Effekt des Ibuprofens (Treatment) auf den Kopfschmerz bezeichnen wir als <span class="math inline">\(Y(1)\)</span>. Den Effekt der Gruppe ohne Treatment auf den Kopfschmerz bezeichnen wir als <span class="math inline">\(Y(0)\)</span>.<span class="math inline">\(\square\)</span></p>
@@ -1046,35 +1054,35 @@ Abbildung&nbsp;6.9: Zwei-Gruppen-Vorher-Nachher-Messung-Design
 <p>Bei der Kovarianzanalyse, ein Auswertungsansatz, kein Forschungsdesign, misst man neben der UV noch andere Variablen, die man kontrollieren möchte. Deren Einfluss wird nach der Datenerhebung statistisch kontrolliert, “herausgerechnet”.</p>
 </section></section><section id="weiterführende-literatur" class="level2" data-number="6.9"><h2 data-number="6.9" class="anchored" data-anchor-id="weiterführende-literatur">
 <span class="header-section-number">6.9</span> Weiterführende Literatur</h2>
-<p>Bei <span class="citation" data-cites="reichardt_quasi-experimentation_2019">Reichardt (<a href="130-references.html#ref-reichardt_quasi-experimentation_2019" role="doc-biblioref">2019</a>)</span> findet sich eine umfassende Erläuterung des Handwerks der interventionellen Forschung. Ein Klassiker ist <span class="citation" data-cites="Bortz2006">Bortz und Döring (<a href="130-references.html#ref-Bortz2006" role="doc-biblioref">2006</a>)</span>, in dem sich viel Essenzielles zur Versuchsplanung findet. Einen zugänglichen Einstieg (allerdings auf englischer Sprache), der kostenlos und frei verfügbar ist, bieten <span class="citation" data-cites="jhangiani_research_2019">Jhangiani, Chiang, und Cuttler (<a href="130-references.html#ref-jhangiani_research_2019" role="doc-biblioref">2019</a>)</span>. Recht nützlich ist auch der Überblick von <span class="citation" data-cites="peters_planen_2019">Peters und Dörfler (<a href="130-references.html#ref-peters_planen_2019" role="doc-biblioref">2019</a>)</span>.</p>
+<p>Bei <span class="citation" data-cites="reichardt_quasi-experimentation_2019">Reichardt (<a href="130-references.html#ref-reichardt_quasi-experimentation_2019" role="doc-biblioref">2019</a>)</span> findet sich eine umfassende Erläuterung des Handwerks der interventionellen Forschung. Ein Klassiker ist <span class="citation" data-cites="Bortz2006">Bortz &amp; Döring (<a href="130-references.html#ref-Bortz2006" role="doc-biblioref">2006</a>)</span>, in dem sich viel Essenzielles zur Versuchsplanung findet. Einen zugänglichen Einstieg (allerdings auf englischer Sprache), der kostenlos und frei verfügbar ist, bieten <span class="citation" data-cites="jhangiani_research_2019">Jhangiani et al. (<a href="130-references.html#ref-jhangiani_research_2019" role="doc-biblioref">2019</a>)</span>. Recht nützlich ist auch der Überblick von <span class="citation" data-cites="peters_planen_2019">Peters &amp; Dörfler (<a href="130-references.html#ref-peters_planen_2019" role="doc-biblioref">2019</a>)</span>.</p>
 
 
 </section>
 </div>
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list" style="display: none">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
 <div id="ref-Bortz2006" class="csl-entry" role="listitem">
-Bortz, Jürgen, und Nicola Döring. 2006. <em>Forschungsmethoden Und <span>Evaluation</span>: Für <span>Human-</span> Und <span>Sozialwissenschaftler</span></em>. 4. Auflage. <span>Berlin</span>: <span>Springer</span>. <a href="https://link.springer.com/book/10.1007/978-3-540-33306-7">https://link.springer.com/book/10.1007/978-3-540-33306-7</a>.
+Bortz, J., &amp; Döring, N. (2006). <em>Forschungsmethoden Und <span>Evaluation</span>: Für <span>Human-</span> Und <span>Sozialwissenschaftler</span></em> (4. Auflage). <span>Springer</span>. <a href="https://link.springer.com/book/10.1007/978-3-540-33306-7">https://link.springer.com/book/10.1007/978-3-540-33306-7</a>
 </div>
 <div id="ref-cialdini_psychologie_2017" class="csl-entry" role="listitem">
-Cialdini, Robert B. 2017. <em>Die Psychologie des Überzeugens: wie Sie sich selbst und Ihren Mitmenschen auf die Schliche kommen</em>. Übersetzt von Matthias Wengenroth. 8., unveränderte Auflage. <span>Bern</span>: <span>Hogrefe</span>.
+Cialdini, R. B. (2017). <em>Die Psychologie des Überzeugens: wie Sie sich selbst und Ihren Mitmenschen auf die Schliche kommen</em> (M. Wengenroth, Übers.; 8., unveränderte Auflage). <span>Hogrefe</span>.
 </div>
 <div id="ref-jhangiani_research_2019" class="csl-entry" role="listitem">
-Jhangiani, Rajiv S, Jhangiani, I-Chant A Chiang, und Dana C Cuttler Leighton. 2019. <em>Research <span>Methods</span> in <span>Psychology</span></em>.
+Jhangiani, R. S., Jhangiani, Chiang, I.-C. A., &amp; Cuttler, D. C., Leighton. (2019). <em>Research <span>Methods</span> in <span>Psychology</span></em>.
 </div>
 <div id="ref-jonas_sozialpsychologie_2014" class="csl-entry" role="listitem">
-Jonas, Klaus, Wolfgang Stroebe, und Miles Hewstone, Hrsg. 2014. <em>Sozialpsychologie</em>. Springer-Lehrbuch. <span>Berlin, Heidelberg</span>: <span>Springer Berlin Heidelberg</span>. <a href="https://doi.org/10.1007/978-3-642-41091-8">https://doi.org/10.1007/978-3-642-41091-8</a>.
+Jonas, K., Stroebe, W., &amp; Hewstone, M. (Hrsg.). (2014). <em>Sozialpsychologie</em>. <span>Springer Berlin Heidelberg</span>. <a href="https://doi.org/10.1007/978-3-642-41091-8">https://doi.org/10.1007/978-3-642-41091-8</a>
 </div>
 <div id="ref-pearl_book_2018" class="csl-entry" role="listitem">
-Pearl, Judea, und Dana Mackenzie. 2018. <em>The Book of Why: The New Science of Cause and Effect</em>. First edition. <span>New York</span>: <span>Basic Books</span>.
+Pearl, J., &amp; Mackenzie, D. (2018). <em>The Book of Why: The New Science of Cause and Effect</em> (First edition). <span>Basic Books</span>.
 </div>
 <div id="ref-peters_planen_2019" class="csl-entry" role="listitem">
-Peters, Jan Hendrik, und Tobias Dörfler. 2019. <em>Planen, Durchführen und Auswerten von Abschlussarbeiten in der Psychologie und den Sozialwissenschaften</em>. <span>Pearson</span>. <a href="https://www.pearson-studium.de/planen-durchfuehren-und-auswerten-von-abschlussarbeiten-in-der-psychologie-und-den-sozialwissenschaften.html">https://www.pearson-studium.de/planen-durchfuehren-und-auswerten-von-abschlussarbeiten-in-der-psychologie-und-den-sozialwissenschaften.html</a>.
+Peters, J. H., &amp; Dörfler, T. (2019). <em>Planen, Durchführen und Auswerten von Abschlussarbeiten in der Psychologie und den Sozialwissenschaften</em>. <span>Pearson</span>. <a href="https://www.pearson-studium.de/planen-durchfuehren-und-auswerten-von-abschlussarbeiten-in-der-psychologie-und-den-sozialwissenschaften.html">https://www.pearson-studium.de/planen-durchfuehren-und-auswerten-von-abschlussarbeiten-in-der-psychologie-und-den-sozialwissenschaften.html</a>
 </div>
 <div id="ref-reichardt_quasi-experimentation_2019" class="csl-entry" role="listitem">
-Reichardt, Charles S. 2019. <em>Quasi-Experimentation: A Guide to Design and Analysis</em>. Methodology in the Social Sciences. <span>New York : London</span>: <span>The Guilford Press</span>.
+Reichardt, C. S. (2019). <em>Quasi-Experimentation: A Guide to Design and Analysis</em>. <span>The Guilford Press</span>.
 </div>
 <div id="ref-Saint-Mont2015" class="csl-entry" role="listitem">
-Saint-Mont, Uwe. 2015. <span>„Randomization <span>Does Not Help Much</span>, <span>Comparability Does</span>“</span>. <em>PLoS ONE</em> 10 (7): e0132102. <a href="https://doi.org/10.1371/journal.pone.0132102">https://doi.org/10.1371/journal.pone.0132102</a>.
+Saint-Mont, U. (2015). Randomization <span>Does Not Help Much</span>, <span>Comparability Does</span>. <em>PLoS ONE</em>, <em>10</em>(7), e0132102. <a href="https://doi.org/10.1371/journal.pone.0132102">https://doi.org/10.1371/journal.pone.0132102</a>
 </div>
 </div>
 </section></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><hr>
