@@ -1,0 +1,2233 @@
+                      Lenka Ďuranová & Kai Externbrink (Hrsg.)
+
+
+Band                   Selbstwirksamkeit, Selbstregulation
+ 11                  und Prokrastination – Überprüfung eines
+                               Mediationsmodells
+                                        ~
+                               Beatrice Schuhmacher
+iwp Schriftenreihe
+
+
+
+
+                       iwp      Institut für Wirtschaftspsychologie
+                                der FOM Hochschule
+                                für Oekonomie & Management
+
+Beatrice Schuhmacher
+
+
+Selbstwirksamkeit, Selbstregulation und Prokrastination – Überprüfung eines Mediationsmodells
+
+
+
+iwp Schriftenreihe der FOM, Band 11
+
+Essen 2022
+
+ISBN (Print) 978-3-89275-262-2           ISSN (Print) 2569-0876
+ISBN (eBook) 978-3-89275-263-9           ISSN (eBook) 2569-0884
+
+Dieses Werk wird herausgegeben vom iwp Institut für Wirtschaftspsychologie
+der FOM Hochschule für Oekonomie & Management gGmbH
+
+
+Die Deutsche Nationalbibliothek verzeichnet diese Publikation in der Deutschen Nationalbibliographie;
+detaillierte bibliographische Daten sind im Internet über http://dnb.d-nb.de abrufbar.
+
+
+
+© 2022 by
+
+
+
+
+MA Akademie Verlags-
+und Druck-Gesellschaft mbH
+Leimkugelstraße 6, 45141 Essen
+info@mav-verlag.de
+
+Das Werk einschließlich seiner
+Teile ist urheberrechtlich geschützt.
+Jede Verwertung außerhalb der
+engen Grenzen des Urhebergeset-
+zes ist ohne Zustimmung der MA
+Akademie Verlags- und Druck-
+Gesellschaft mbH unzulässig und
+strafbar. Das gilt insbesondere für
+Vervielfältigungen, Übersetzungen,
+Mikroverfilmungen und die Ein-
+speicherung und Verarbeitung in
+elektronischen Systemen.
+
+Die Wiedergabe von Gebrauchs-
+namen, Handelsnamen, Warenbe-
+zeichnungen usw. in diesem Werk
+berechtigt auch ohne besondere
+Kennzeichnung nicht zu der Annah-
+me, dass solche Namen im Sinne
+der Warenzeichen- und Marken-
+schutz-Gesetzgebung als frei zu
+betrachten wären und daher von
+jedermann benutzt werden dürfen.
+Oft handelt es sich um gesetzlich
+geschützte eingetragene Waren-
+zeichen, auch wenn sie nicht als
+solche gekennzeichnet sind.
+
+     Selbstwirksamkeit, Selbstregulation und Prokrastination –
+               Überprüfung eines Mediationsmodells
+
+
+
+
+                    Lenka Ďuranová / Kai Externbrink (Hrsg.)
+
+
+                        Beatrice Schuhmacher (Autorin)
+
+
+
+
+Kontakt zur Autorin:
+Beatrice Schuhmacher
+E-Mail: beatrice.schuhmacher@web.de
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:               Prokrastination
+
+
+
+Vorwort
+        Die Prokrastination – umgangssprachlich „Aufschieberitis“ – ist
+bei Studierenden weit verbreitet. Der aktuelle Forschungsstand legt nahe,
+dass sie mit psychischen wie wirtschaftlichen Kosten verbunden ist. Pro-
+krastinierende Studierende leider häufiger unter Prüfungsangst, sind de-
+pressiver und ihr Studienabbruch ist wahrscheinlicher als ohne eine derar-
+tige Verhaltenstendenz. Der starke positive Zusammenhang zwischen aka-
+demischer und beruflicher Prokrastination lässt einen zeitigen Handlungs-
+bedarf innerhalb der Lebensspanne erkennen.
+        Frau Schuhmacher behandelt in ihrer empirischen Abschlussarbeit
+eine wirtschaftspsychologisch bedeutsame Problemstellung, indem sie der
+Ursachenforschung dieses unerwünschten Verhaltens mit einem motivati-
+onspsychologischen Fokus nachgeht. Sie beschäftigt sich mit dem poten-
+ziellen Einfluss der Selbstwirksamkeit auf die Prokrastination von Studie-
+renden und untersucht dabei den vermittelnden Effekt der Selbstregula-
+tion.
+        Ihre Hypothesen werden theoretisch und empirisch abgeleitet und
+multivariat überprüft. Alternativerklärungen und Limitationen sowie An-
+sätze für die zukünftige Forschung werden evidenzbasiert ausgearbeitet.
+Ebenfalls werden praktische Handlungsempfehlungen geboten. Die wis-
+senschaftliche Argumentation wird dabei durch die Nutzung qualitativ
+hochwertiger Literatur (internationale Journalartikel, Meta-Analysen, Re-
+views) gestärkt. Dadurch trägt Frau Schuhmacher zu der pädagogisch-psy-
+chologischen Forschung mit potenziellen Implikationen für die Arbeits-
+und Organisationspsychologie bei.
+
+
+
+
+                                                                        II
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:               Prokrastination
+
+
+
+       Wir freuen uns sehr, mit der Bachelorthesis von Frau Schuhmacher
+unsere Schriftenreihe um einen weiteren wertvollen Beitrag anreichern zu
+können.
+
+
+Essen, im Mai 2022
+
+
+Prof. Dr. Lenka Ďuranová
+Professorin für Wirtschaftspsychologie an der Hochschule Schmalkalden,
+kooptierte Wissenschaftlerin des iwp Institut für Wirtschaftspsychologie
+der FOM Hochschule
+
+
+Prof. Dr. Kai Externbrink
+
+Direktor des iwp Institut für Wirtschaftspsychologie an der FOM Hochschule
+in Dortmund
+
+
+
+
+                                                                       III
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:                    Prokrastination
+
+
+
+Abstract
+        Nachfolgende Forschungsberichte zeigen, dass das Aufschiebever-
+halten bei Studierenden weit verbreitet ist. Dieses Verhalten ist mit Ein-
+schränkungen der Lebensqualität und Problemen bei der Bewältigung von
+Studienanforderungen verbunden. Umso wichtiger ist es, nach möglichen
+Ursachen für die Prokrastination zu suchen. Die nachfolgende Arbeit un-
+tersucht auf Basis des Rubikonmodells von Heckhausen und Gollwitzer
+(1987) den Zusammenhang zwischen Selbstwirksamkeit, Selbstregulation
+und Prokrastination sowie die Mediatorenrolle der Selbstregulation in dem
+Verhältnis zwischen Selbstwirksamkeit und Prokrastination. An einer ano-
+nymisierten, online durchgeführten Querschnittsuntersuchung nahmen N
+= 104 Personen (20–58 Jahre, 72 % weiblich) teil. Die Zielgruppe setzte
+sich aus Studierenden zusammen, die sich zum Zeitpunkt der Befragung
+in einem laufenden und fortgeschrittenen Semester ihres Studiums befan-
+den. Die Ergebnisse, basierend auf dem PROCESS-Makro von Hayes
+(2018), zeigten, dass Selbstwirksamkeit keinen signifikanten Effekt auf
+die Prokrastination hat. Die Mediationsanalyse, die auf Basis des moder-
+nen Ansatzes durchgeführt wurde, zeigte jedoch signifikante Ergebnisse
+von der Selbstwirksamkeit auf die Selbstregulation, sowie von der Selbst-
+regulation auf die Prokrastination. Weiterhin stellte sich ein statistisch sig-
+nifikanter indirekter Effekt der Selbstwirksamkeit auf die Prokrastination
+über die Selbstregulation heraus. Es konnte somit festgestellt werden, dass
+das Verhältnis zwischen Selbstwirksamkeit und Prokrastination durch die
+Selbstregulation mediiert wird. Zukünftige Forschungen sollten mittels
+Längsschnittuntersuchungen im Tagebuchdesign durchgeführt werden.
+Empfehlenswert ist es außerdem, Prokrastination in Gruppen zu untersu-
+chen sowie über die fast ausschließliche Verwendung von Studierenden-
+stichproben hinauszugehen. Weiterhin sollten angenommene Moderatoren
+und weitere Mediatoren berücksichtigt werden.
+       Schlagworte: Selbstwirksamkeit, Selbstregulation, Prokrastination
+
+
+
+
+                                                                            IV
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:                Prokrastination
+
+
+
+Herausgeberschaft
+
+Lenka Ďuranová
+         Lenka Ďuranová ist Professorin für Wirtschaftspsychologie an der
+Hochschule Schmalkalden. Sie hat Abschlüsse in Sprach- und Literatur-
+wissenschaften und Pädagogik bei Verhaltensstörungen an der Prešover
+Universität in der Slowakei sowie in Diplompsychologie an der Goe-
+the-Universität in Frankfurt am Main erworben. Für ihre Promotion an der
+Philipps-Universität in Marburg und der Justus-Liebig-Universität in Gie-
+ßen erhielt sie ein Stipendium der Konrad-Adenauer-Stiftung. Sie verfügt
+über eine Weiterbildung zum systemischen Business Coach. Lenka Ďura-
+nová bringt berufspraktische Erfahrungen aus den Bereichen Unterneh-
+mensberatung, Personalwesen, Marketing und Kunst mit. An der Univer-
+sität Kassel forschte sie am Forschungszentrum für Informationstechnik-
+gestaltung zu Erholung und Wohlbefinden von Mitarbeitenden in der di-
+gitalisierten Arbeitswelt. An der Portland State University absolvierte sie
+einen Forschungsaufenthalt. Zwischen Wintersemester 2013 und Som-
+mersemester 2021 war sie Hochschullehrerin an der FOM. Ihre Schwer-
+punkte in der Lehre sind quantitative Forschungsmethoden, Arbeits-, Or-
+ganisations- und Personalpsychologie. Ehrenamtlich engagiert sie sich als
+Mentorin für Frauen auf ihrem Karriereweg in Wissenschaft und Wirt-
+schaft.
+
+
+Kai Externbrink
+       Kai Externbrink ist seit dem Sommersemester 2015 hauptberuflich
+Lehrender an der FOM Hochschule in Dortmund. Er studierte Psycholo-
+gie an der Ruhr-Universität Bochum mit den Nebenfächern Personalöko-
+nomie und Arbeitsrecht. Hier promovierte er auch zum Thema „Führung
+in Veränderungsprozessen“. Nach dem Studium war er in verschiedenen
+Unternehmensberatungen in London, Frankfurt am Main und Köln tätig.
+
+
+
+                                                                         V
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:                Prokrastination
+
+
+
+Seine Praxistätigkeit umfasst alle Fragen der internationalen Management-
+diagnostik und Führungskräfteentwicklung. Darüber hinaus verfügt er
+über eine Weiterbildung zum systemischen Coach. Parallel zu seiner Be-
+ratungstätigkeit leitete er den Studiengang „International Business Psycho-
+logy“ an der Hochschule Fresenius. Seine Schwerpunkte in Forschung und
+Lehre sind Sozial- und Persönlichkeitspsychologie, Eignungsdiagnostik,
+Führungspsychologie und Forschungsmethoden.
+
+
+
+
+                                                                        VI
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:              Prokrastination
+
+
+
+Autorin
+
+Beatrice Schuhmacher
+       Beatrice Schuhmacher beendete im Oktober 2021 ihr Bachelor of
+Science-Studium in „Betriebswirtschaft & Wirtschaftspsychologie" an der
+FOM Hochschule für Oekonomie & Management am Hochschulzentrum
+in Frankfurt am Main. Seitdem ist sie im Vertrieb eines Versicherungsun-
+ternehmens tätig und strebt ab September 2022 den Master of Science-
+Studiengang in "Business Consulting & Digital Management" an der FOM
+Hochschule für Oekonomie & Management in Frankfurt an.
+
+
+
+
+                                                                     VII
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:                                             Prokrastination
+
+
+
+Inhalt
+
+Abstract ................................................................................................... IV
+Herausgeberschaft .................................................................................... V
+Autorin ................................................................................................... VII
+Abbildungsverzeichnis ............................................................................. X
+Tabellenverzeichnis ................................................................................. XI
+1     Einleitung ........................................................................................... 1
+      1.1 Problemstellung und Zielsetzung ............................................... 2
+      1.2 Beitrag für Wissenschaft und Praxis .......................................... 3
+      1.3 Gang der Arbeit .......................................................................... 3
+2     Theoretischer Hintergrund und empirischer Forschungsstand .......... 5
+      2.1 Prokrastination ............................................................................ 5
+      2.2 Selbstregulation .......................................................................... 8
+      2.3 Selbstwirksamkeit ..................................................................... 10
+      2.4 Das Rubikonmodell .................................................................. 12
+      2.5 Aktueller Forschungsstand ....................................................... 16
+               2.5.1 Selbstwirksamkeit und Prokrastination ......................... 16
+               2.5.2 Selbstregulation und Prokrastination ............................ 17
+               2.5.3 Selbstwirksamkeit und Selbstregulation ....................... 18
+               2.5.4 Selbstwirksamkeit, Selbstregulation und
+                     Prokrastination .............................................................. 19
+      2.6 Ableitung der Hypothesen ........................................................ 19
+
+
+
+
+                                                                                                         VIII
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:                                         Prokrastination
+
+
+
+3   Methode ........................................................................................... 22
+    3.1 Stichprobe ................................................................................. 22
+    3.2 Untersuchungsablauf und -design ............................................ 23
+    3.3 Messinstrumente ....................................................................... 23
+    3.4 Datenaufbereitung und statistische Verfahren .......................... 25
+4   Ergebnisse ........................................................................................ 26
+    4.1 Deskriptivstatistik ..................................................................... 26
+    4.2 Inferenzstatistik ........................................................................ 26
+5   Diskussion ........................................................................................ 30
+    5.1 Zusammenfassung der Ergebnisse und Implikationen der
+        empirischen Hypothesen........................................................... 30
+    5.2 Kritische Würdigung und Empfehlung für zukünftige
+        Forschung ................................................................................. 34
+    5.3 Implikationen für die Praxis ..................................................... 37
+6   Literaturverzeichnis ......................................................................... 39
+
+
+
+
+                                                                                                      IX
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:                                  Prokrastination
+
+
+
+Abbildungsverzeichnis
+
+Abbildung 1.     Schlechte Angewohnheiten der Deutschen (Statista
+                 Research Department, 2011). .......................................... 1
+Abbildung 2.     Prozess der Selbstregulation (eigene Darstellung
+                 nach Althammer & Michel, 2021, S. 4). ......................... 9
+Abbildung 3.     Rubikonmodell (eigene Darstellung nach Höcker
+                 et al., 2017, S. 26).......................................................... 13
+Abbildung 4.     Modell der geplanten Untersuchung. ............................ 21
+Abbildung 5.     Empirisches Modell der Mediationsanalyse ................. 29
+
+
+
+
+                                                                                               X
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:                             Prokrastination
+
+
+
+Tabellenverzeichnis
+
+Tabelle 1.   Mittelwerte (M), Standardabweichungen (SD),
+             Korrelationsmatrix der Untersuchungsvariablen sowie
+             Reliabilitäten der Skalen (Cronbachs α) ............................ 26
+Tabelle 2.   Mediationseffekt der Selbstregulation auf den
+             Zusammenhang zwischen Selbstwirksamkeit und
+             Prokrastination mit Angabe der unstandardisierten
+             Pfadkoeffizienten des totalen, direkten und indirekten
+             Effekts (Anhang M-O) ....................................................... 28
+
+
+
+
+                                                                                        XI
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:               Prokrastination
+
+
+
+1   Einleitung
+
+        Die meisten von uns kennen es: Anstatt notwendige Tätigkeiten
+anzupacken, wie beispielsweise die Vorbereitung der Steuererklärung,
+schieben wir unangenehme Aufgaben und Aktivitäten auf die lange Bank.
+Das Hinausziehen von Handlungen ist kein neues Phänomen. Erste Schil-
+derungen über dieses Verhalten wurden bereits um 800 v. Chr. verzeichnet
+(Steel, 2007). Dies zeigt, dass das Thema des Aufschiebens die Menschen
+bereits seit vielen Jahrhunderten beschäftigt. Viele Personen verschieben
+gelegentlich Aufgaben des täglichen Lebens, wie auch eine Umfrage aus
+dem Jahr 2011 (Abbildung 1) aufzeigt. Hier wird deutlich, dass das Auf-
+schieben von Dingen an Platz 1 der schlechten Angewohnheiten der Deut-
+schen steht. Zugleich dient die Darstellung als Indikator für die Relevanz
+des Forschungsthemas.
+
+
+
+
+Abbildung 1. Schlechte Angewohnheiten der Deutschen (Statista Re-
+search Department, 2011).
+
+        Auch in Zeitungen, Online-Portalen und Universitätsbibliotheken
+sind Ratgeber zu finden, die sich alle mit dem Thema ‚Wie kann ich end-
+lich aufhören, aufzuschieben?‘ beschäftigen. Dementsprechend ist es nicht
+verwunderlich, dass die sogenannte Prokrastination, sprich die wiederholte
+Neigung, die Erledigung von wichtigen Dingen auf einen späteren Zeit-
+punkt zu verlegen (Steel, 2007), in den letzten Jahrzehnten eine erhöhte
+Aufmerksamkeit von Forschenden auf sich gezogen hat (Klingsieck,
+
+                                                                        1
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:                Prokrastination
+
+
+
+2013). Besonders im akademischen Umfeld scheint die Prokrastination ein
+allgegenwärtiges Problem zu sein, das sich durch vermehrte Ablenkungen,
+beispielsweise durch die Nutzung elektronischer Medien, weiter ver-
+schlimmern wird (Steel, 2007). Diese akademische Prokrastination sei un-
+ter Studierenden mit einem Anteil von bis zu 70 % weit verbreitet. In einer
+Umfrage aus dem Jahr 2000 konnte ermittelt werden, dass die Studieren-
+den etwa ein Drittel des Alltags mit Aufschieben statt mit zielführenden
+Tätigkeiten verbringen (Pychyl, Lee, Thibodeau & Blunt, 2000).
+
+
+1.1   Problemstellung und Zielsetzung
+        Untersuchungen zeigen, dass sich das Prokrastinieren im akademi-
+schen Bereich, beispielsweise beim Schreiben von Seminararbeiten, nega-
+tiv auf den allgemeinen Fortschritt im Studium auswirkt, da das Verhalten
+die Qualität, wie z. B. die Lernerfolge im Studium und die Quantität, wie
+z. B. die erreichte Durchschnittsnote, einschränkt (Rakes & Dunn, 2010).
+Dies wiederum führt nicht nur zu negativen Auswirkungen auf die akade-
+mische Leistung, sondern auch zu Beeinträchtigungen des subjektiven
+Wohlbefindens der Studierenden (Klingsieck, Fries, Horz, & Hofer, 2012).
+Aufgrund seiner negativen Auswirkungen wurde das Prokrastinieren im
+akademischen Bereich ausgiebig untersucht, doch die empirischen und
+theoretischen Grundlagen, die es bedarf, um anwendbare Interventionen
+herauszuarbeiten, sind im Vergleich zu anderen psychologischen Phäno-
+menen weniger etabliert, obwohl das Aufschieben häufig vorkommt und
+zu Stress und Krankheit führen kann (Tice & Baumeister, 1997).
+        Bei einem so umfangreichen und potenziell schädlichen Phänomen
+sollten vor allem die Ursachen erörtert werden. Es stellt sich beispiels-
+weise die Frage, ob der Glaube an die eigenen Fähigkeiten, die sogenannte
+Selbstwirksamkeit, seitens der Studierenden allein ursächlich für ein redu-
+ziertes Aufschiebeverhalten ist oder ob Selbstregulierung die Studierenden
+zu einem gezielten Handeln treibt. Ziel dieser Forschungsarbeit ist es, den
+
+
+
+                                                                         2
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:               Prokrastination
+
+
+
+Zusammenhang zwischen Selbstwirksamkeit, Selbstregulation und Pro-
+krastination sowie die Mediatorenrolle der Selbstregulation zwischen
+Selbstwirksamkeit und Prokrastination zu untersuchen.
+
+
+1.2   Beitrag für Wissenschaft und Praxis
+       Wie dargestellt, hat die Prokrastination nicht nur objektive Leis-
+tungseinbußen (schlechte Noten, verspäteter Abschluss), sondern auch ne-
+gative Auswirkungen auf das eigene Wohlbefinden, wie Stressgefühle
+oder auch Depressivität, zur Folge (Höcker, Engberding & Rist, 2017).
+Unter diesen Umständen ist es besonders wichtig, das Aufschiebeverhal-
+ten weiter zu erforschen.
+        In der vorliegenden Forschungsarbeit wird zur Prokrastinationsfor-
+schung beigetragen, indem potenzielle Ursachen aufgedeckt werden. So
+könnte die Selbstregulation eine bedeutende Rolle in der Beziehung zwi-
+schen Selbstwirksamkeit und Prokrastination einnehmen. Daraus resultie-
+rend könnten Interventionen zur Prävention bzw. Verminderung der Pro-
+krastinationstendenz, beispielsweise in Form von Coachingansätzen, er-
+kannt und angewandt werden, um die Selbstwirksamkeit und Selbstregu-
+lation der Studierenden zu verbessern.
+
+
+1.3   Gang der Arbeit
+        Zu Beginn der Arbeit erfolgt, als Basis für die vorliegende Unter-
+suchung, eine theoretische Einführung. Hier wird das Phänomen Prokras-
+tination mittels seiner Merkmale und Erklärungssätze definiert. Im An-
+schluss werden die Begriffe Selbstregulation und Selbstwirksamkeit theo-
+retisch beleuchtet. Daraufhin wird vor dem Hintergrund der zuvor defi-
+nierten Konstrukte das motivationspsychologische Modell von Heckhau-
+sen und Gollwitzer (1987) und dessen einzelne Phasen erläutert. Dem folgt
+eine Übersicht über den aktuellen Forschungsstand zu den Verbindungen
+
+
+
+                                                                        3
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:               Prokrastination
+
+
+
+der untersuchten Variablen. Hieran schließt sich die Ableitung der Hypo-
+thesen an. Das nächste Kapitel umfasst die Methodik inklusive des Ablaufs
+der Untersuchung, des Versuchsmaterials, der Stichprobe und des Unter-
+suchungsdesigns. Anschließend erfolgt die statistische Darstellung der Er-
+gebnisse. Das letzte Kapitel beinhaltet eine Zusammenfassung der zentra-
+len Erkenntnisse, sowie Implikationen der empirischen Hypothesen. Dem
+folgt eine ausführliche ergebnis- und methodenkritische Diskussion und
+daraus resultierend die Empfehlungen für zukünftige Forschung. Ab-
+schließend werden Implikationen für die Praxis vorgestellt.
+
+
+
+
+                                                                        4
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:               Prokrastination
+
+
+
+2     Theoretischer Hintergrund und empirischer Forschungsstand
+
+        Im folgenden Kapital werden zunächst die für diese Arbeit relevan-
+ten Begriffe definiert und genauer erläutert. Dabei spielen insbesondere
+die Bezeichnungen Selbstwirksamkeit, Selbstregulation und Prokrastina-
+tion eine wesentliche Rolle, um am Ende der Forschungsarbeit die For-
+schungsfragen fachgemäß beantworten zu können. Im Anschluss wird mit-
+hilfe des Rubikonmodells von Heckhausen und Gollwitzer (1987) das the-
+oretische Konzept erläutert und der aktuelle Forschungsstand dargestellt.
+Aus diesen theoretischen Überlegungen folgt die Ableitung der For-
+schungshypothesen.
+
+
+2.1    Prokrastination
+         Zunächst ist es wichtig, das Konzept der Prokrastination für die
+vorliegende Arbeit fest zu definieren. Ursprünglich wurde mit dem Verb
+prokrastinieren eine eher positive Verhaltensweise beschrieben. Höcker et
+al. (2017) bezeichnen es als „das reflektierte Aufschieben von schwerwie-
+genden Entscheidungen bis zu einem günstigen Zeitpunkt, der einer Hand-
+lung mehr Erfolg sichert“ (S. 9). Gelegentlich wird es auch heute noch in
+einem positiven Sinne verwendet. Einige Autoren und Autorinnen haben
+sie auch als funktionelle Verzögerung oder Vermeidung von Eile erwähnt
+(Bernstein, 1998; Chu & Choi, 2005). Bernstein (1998) erklärte beispiels-
+weise: „Wenn wir einmal handeln, verlieren wir die Möglichkeit zu war-
+ten, bis neue Informationen vorliegen. Folglich hat das Nichthandeln einen
+Wert. Je unsicherer das Ergebnis, desto größer kann der Wert des Prokras-
+tinierens sein“ (S. 15). Der Schwerpunkt dieser Arbeit liegt jedoch primär
+auf der negativen Form des Zögerns, da diese heutzutage überwiegt (Hö-
+cker et al., 2017).
+       Prokrastination wird als Eigenschaft oder auch Verhaltensdisposi-
+tion definiert, die Ausführung einer Aufgabe und das Treffen von Ent-
+scheidungen auf einen späteren Zeitpunkt aufzuschieben (Milgram, Mey-
+
+
+                                                                        5
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:                 Prokrastination
+
+
+
+Tal & Levison, 1998). Das Aufschieben von Dingen an sich kann absicht-
+lich geplant und eine zielführende Strategie sein (Patrzek, Grunschel, Kö-
+nig & Fries, 2014). Klingsieck (2013) bezeichnet diese Art als strategische
+Verzögerung und betont in ihrer Arbeit, diese von Prokrastination – im
+Sinne auch der hier vorliegenden Forschungsarbeit – zu unterscheiden.
+Strategisches Aufschieben sei hiernach ein Aufschieben von Aufgaben,
+das bewusst und geplant ist und meist eine positive Auswirkung hat. Die
+Prokrastination kann von dieser Art der Planung jedoch unterschieden
+werden, weil die Verzögerung dabei nicht absichtlich geschieht, sondern
+die Umsetzung des eigentlich Geplanten aufgeschoben wird (Van Eerde,
+2003). Allgemein wird die Prokrastination als dysfunktionale Gewohnheit
+angesehen, die mit psychologischen Konsequenzen wie Schuldgefühlen
+oder negativem affektivem Wohlbefinden und dem Rückgang der Leis-
+tungsergebnisse sowie sozialen Konsequenzen wie dem Image der Unzu-
+verlässigkeit einhergeht (Van Eerde, 2003). In einer leistungsorientierten
+Gesellschaft, in der von Menschen erwartet wird, dass diese ihren Ver-
+pflichtungen innerhalb einer bestimmten Zeit nachkommen, kann Prokras-
+tination ein ernsthaftes Problem sein. Steel (2007) definiert die Prokrasti-
+nation als das willentliche und absichtliche Aufschieben einer beabsichtig-
+ten Tätigkeit, obwohl der Person bewusst ist, dass dieses Verhalten nega-
+tive Ergebnisse zur Folge hat. Nach dieser Begriffsbestimmung kann das
+Aufschieben als die freiwillige Verzögerung einer beabsichtigten und not-
+wendigen oder wichtigen Aktivität definiert werden, obwohl mögliche ne-
+gative Konsequenzen erwartet werden, die hinsichtlich der positiven Fol-
+gen überwiegen (Klingsieck, 2013). Ellis und Knaus (1977) betrachten die
+Prokrastination als interaktiven und dysfunktionalen Verhaltensvermei-
+dungsprozess, das Versprechen, die aufgeschobene Angelegenheit später
+zu erhalten (z. B. Abschluss der Seminararbeit im letzten Moment), und
+die Verwendung von Entschuldigungen, um das Aufschieben zu rechtfer-
+tigen und Schuldzuweisungen zu vermeiden. Die beiden Autoren erörtern,
+dass das Aufschiebeverhalten durch den wahrgenommenen Erfolg in letz-
+
+
+
+                                                                          6
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:                Prokrastination
+
+
+
+ter Minute weiter legitimiert wird. Folglich kann der Glaube in diesen An-
+satz verstärkt und dieser als tragfähige Strategie erkannt werden. Höcker
+et al. (2017) bezeichnen das Prokrastinieren als ein erlerntes Verhalten,
+das durch die kurzfristigen Konsequenzen gesteuert wird – so werden ne-
+gative Gefühle und Gedanken verringert und es bleibt mehr Zeit für attrak-
+tivere, erfolgversprechendere Tätigkeiten. Langfristig jedoch sei häufiges
+Aufschieben mit negativen Gefühlen und Gedanken verbunden, wie bei-
+spielsweise Stress oder Versagensangst und Selbstabwertung. Wenn Stu-
+dierende internem negativen Stress, wie z. B. Zeitdruck, Leistungsdruck,
+Nervosität bzw. innerer Unruhe und Selbstzweifel, ausgesetzt sind, suchen
+sie nach kurzfristigen Ablenkungen und schieben Aufgaben, wie z. B. die
+Klausurvorbereitung oder das Schreiben einer Seminararbeit, auf (Eckert,
+Ebert, Lehr, Sieland & Berking, 2018). Dies sei unter anderem dann prä-
+sent, wenn andere Aktivitäten deutlich interessanter sind als das Studium
+oder die Erledigung einer Aufgabe.
+        Aus allen genannten Definitionen geht jedoch hervor, dass Pro-
+krastination ein habituelles Aufschiebeverhalten darstellt und kein aus-
+schließlich einmalig auftretendes, auf bestimmte Ziele fokussiertes Ver-
+halten ist (Ferrari, Johnson & McCown, 1995). Die Prokrastination im
+Sinne der vorliegenden Forschungsarbeit kann zusammenfassend durch
+zwei Merkmale beschrieben werden. Erstens ist das Prokrastinationsver-
+halten dadurch bedingt, dass es sich um ein erlerntes Verhalten handelt,
+bei dem die Person kurzfristig negative Gedanken und Gefühle verringern
+möchte (Höcker et al., 2017). Zweitens zeichnet sich Prokrastination je-
+doch langfristig durch negative Folgen aus, die die positiven Konsequen-
+zen des Aufschiebens überwiegen (Klingsieck, 2013).
+         Zur Beleuchtung der Prokrastination können unterschiedliche the-
+oretische Ansätze betrachtet werden (z. B. differenzial-, motivations-, vo-
+litions- und klinisch-psychologische Ansätze; Klingsieck 2013). Einen all-
+gemeingültigen theoretischen Ansatz zur Erklärung von Prokrastination
+gibt es jedoch bislang nicht. Für die vorliegende Studie wurde, um die Pro-
+
+
+                                                                         7
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:                 Prokrastination
+
+
+
+krastination und deren Ursachen näher zu betrachten, das motivationspsy-
+chologische Modell von Heckhausen und Gollwitzer (1987), das soge-
+nannte Rubikonmodell, ausgewählt. Dieses wird im Anschluss an die Be-
+griffsdefinitionen näher erläutert.
+
+
+2.2   Selbstregulation
+        Selbstregulation ist ein weitgefasster Begriff, der jede Art von Re-
+gulierung des Selbst durch das Individuum bezeichnet (Baumeister &
+Vohs, 2004). Wenn also durch die Nutzung einer psychologischen Fähig-
+keit ein psychologischer Prozess – sei er verhaltensbezogen, motivierend
+oder aufmerksam – in einen gewünschten Zustand gebracht wird, sei dies
+ein Beispiel für Selbstregulierung. Personen, die eine ausgeprägte Selbst-
+regulation aufweisen, sind dementsprechend fähig, ihr eigenes Verhalten
+und die Gefühle zu regulieren, um so beispielsweise mit dem Rauchen auf-
+zuhören. In Bezug auf die Steuerung von Motivations- und Verhaltenspro-
+zessen ist die Selbstregulierung beispielsweise an der Zielsetzung und
+-umsetzung sowie am erfolgreichen Abschluss der zielgerichteten Aktion
+beteiligt (Carver & Scheier, 1998). Folglich ziehen Personen, die über eine
+ausgeprägte Selbstregulierung verfügen, langfristige Erfolge den kurzfris-
+tigen vor und arbeiten disziplinierter auf das gesetzte Ziel hin (Mehl,
+2016).
+       In vielen Methoden wird die Selbstregulation als ein Prozess be-
+zeichnet, der drei Komponenten beinhaltet: Selbstbewertung, Selbstbe-
+obachtung und Selbstverstärkung (Althammer & Michel, 2021; Abbildung
+2).
+
+
+
+
+                                                                          8
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:                 Prokrastination
+
+
+
+
+Abbildung 2. Prozess der Selbstregulation (eigene Darstellung nach Alt-
+hammer & Michel, 2021, S. 4).
+
+        Die Kognition und das Verhalten eines Menschen in den einzelnen
+Phasen werden im Modell zusammenfassend wie folgt beschrieben: Vo-
+raussetzung für eine positive Selbstregulation ist die Beobachtung der ei-
+genen Gedanken, Gefühle und Verhaltensweisen (Althammer & Michel,
+2021). Dies beschreibt die Phase der Selbstbeobachtung, in der es ermög-
+licht wird, den eigenen Fortschritt beim Erreichen des Ziels zu beobachten
+und auch zu bewerten. Die eigene Beobachtung kann motivierend zur Ziel-
+setzung beitragen oder das eigene Verhalten ändern. Bevor es allerdings
+zu einer Reaktion in der Phase der Selbstbeobachtung kommt, kann das
+für wichtig und beeinflussbar gehaltene Verhalten als positiv oder negativ
+beurteilt werden. Dies findet in der Phase der Selbstbewertung statt, in der
+die Individuen ihren eigenen persönlich gesetzten Standard mit fremdem
+oder dem eigenen früheren Verhalten vergleichen (Althammer & Michel,
+2021). Das eigene Verhalten wird dementsprechend so gesteuert, dass die
+Personen sich in der Phase der Selbstverstärkung eigene Anreize setzen
+und auf Grund derer sich selbst motivieren. Eine Erklärung dafür sei, dass
+eigene Verhaltensweisen, die absehbare positive Folgen haben, bevorzugt
+
+                                                                          9
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:               Prokrastination
+
+
+
+gezeigt werden. Hierbei kann es sich um positive affektive Reaktionen bei
+der Erreichung eines gesetzten Ziels handeln, z. B. Zufriedenheit. Aber
+auch explizite Belohnungen wie z. B. Freizeitaktivitäten können als eigens
+gesetzter Anreiz motivierend auf die Zielerreichung wirken. Ergänzend
+kann es auch natürliche Effekte geben, die verstärkend wirken (Althammer
+& Michel, 2021). Eben dann, wenn der Zielzustand seinerseits positive
+Konsequenzen nach sich zieht. Dementsprechend kann beispielsweise ein
+höheres Wohlbefinden durch mehr Erholung nach der Arbeit erreicht wer-
+den.
+         Zusammenfassend ermöglicht die Selbstregulierung es den einzel-
+nen Personen, trotz gegenteiliger innerer oder äußerer Reize, zu handeln
+oder von Handlungen Abstand zu nehmen. Dazu gehört auch die Kontrolle
+der Gedanken, Emotionen und Aufmerksamkeit (Baumann, Kaschel, &
+Kuhl, 2005). Dementsprechend gehören zu den Selbstregulierungskapazi-
+täten die Dispositionen der Handlungskontrolle, d. h. die intuitive Fähig-
+keit, Gefühle und Gedanken zu regulieren und Aufmerksamkeitskontrolle,
+d. h. die Fähigkeit, die Aufmerksamkeit trotz Ablenkungen auf ein be-
+stimmtes Ziel zu richten. Somit sei die Selbstregulierung die eigene Kon-
+trolle, die Menschen über ihre Kognition, ihr Verhalten, ihre Emotionen
+und ihre Motivation haben, indem sie persönliche Strategien anwenden,
+um die von ihnen festgelegten Ziele zu erreichen.
+
+
+2.3   Selbstwirksamkeit
+        Ein weiterer Schlüssel zum Verständnis von Prokrastination kann
+die Selbstwirksamkeit sein. Denn der Grundstein, um erfolgreich zu han-
+deln, ist der Glaube an sich selbst und die eigenen Fähigkeiten (Althammer
+& Michel, 2021). Dementsprechend trauen sich Personen mit ausgepräg-
+tem Selbstwirksamkeitsglauben die Bewältigung von neuen Situationen
+eher zu und handeln selbstbewusster, um ihre Ziele auch angesichts von
+Hindernissen zu erreichen. Die Theorie der Selbstwirksamkeit (Bandura,
+1997) besagt, dass die Ausprägung dessen, wie Personen an sich selbst
+
+                                                                       10
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:              Prokrastination
+
+
+
+glauben, ihre Aufgabenwahl, ihren Aufwand, ihre Ausdauer und ihre Wi-
+derstandsfähigkeit stark beeinflusst. Bandura (1986) beschreibt die Aus-
+prägung der Selbstwirksamkeit einer Person anhand von vier Merkmalen:
+   1. Physiologische Reaktionen auf die Anforderung einer Handlung:
+      Wie beispielsweise das Wahrnehmen und die Deutung der eigenen
+      Körpersignale etwa durch Bewältigung emotionaler Reaktionen
+      wie Herzklopfen oder auch Händezittern bei Konfrontation mit ei-
+      ner beginnenden Handlung oder aber auch eine positive Neuinter-
+      pretation dieser Empfindungen.
+   2. Selbstinstruktionen: Hierbei handelt es sich um die eigenen verba-
+      len Ermutigungen, wie etwa der eigene Zuspruch ‚Ich schaffe
+      das!‘.
+   3. Beobachtung: Die Tatsache wie wir andere Personen dabei be-
+      obachten wie diese eine Aufgabe bewältigen, und dass diese Per-
+      sonen diese Anforderung beginnen, beeinflusst unseren Selbst-
+      wirksamkeitsglauben.
+   4. Persönliche Erfahrung: Laut Bandura (1986) liegt der stärkste Ein-
+      fluss auf die eigene Selbstwirksamkeitsüberzeugung in der eigenen
+      persönlichen Erfahrung bei der Bewältigung von Aufgaben. Diese
+      Erfahrung, eine Aufgabe erfolgreich bewältigt zu haben und sich
+      selbst dadurch als kompetent wahrzunehmen, hat einen maßgebli-
+      chen Einfluss auf den Selbstwirksamkeitsglauben.
+        Schwarzer und Jerusalem (2002) bezeichnen die Selbstwirksam-
+keit als die Gewissheit eines Menschen, neue oder herausfordernde Situa-
+tionen auf Basis eigener Kraft und Qualifikationen erfolgreich durchfüh-
+ren zu können. In diesem Kontext geht es primär um Handlungen, die eine
+gewisse Anstrengung und auch Ausdauer von der Person erfordern und
+somit nicht durch einfache Routine zu bewältigen sind (Schwarzer & Je-
+rusalem, 2002). Dementsprechend hat die Selbstwirksamkeitsüberzeu-
+gung einen Einfluss auf das Handeln und als Konsequenz auch auf die
+Leistung. Weiterhin kann eine stärkere Selbstwirksamkeitsüberzeugung
+
+                                                                      11
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:                 Prokrastination
+
+
+
+die Zielsetzung positiv beeinflussen, noch bevor die eigentliche Handlung
+stattfindet (Schwarzer, 2004). Hiernach setzen sich Personen, die über ein
+höheres Maß an Selbstwirksamkeit verfügen, höhere Ziele als Personen,
+bei denen die eigene Selbstwirksamkeitsüberzeugung geringer ausfällt.
+Die Selbstwirksamkeit wird auch als eine Schlüsselressource betrachtet,
+da sie Menschen dazu befähigt, eigene Ressourcen im Umgang mit Anfor-
+derungen einzusetzen (Hobfoll, 2002). Zudem nimmt die Selbstwirksam-
+keit eine zentrale Rolle im Bereich der Verhaltensänderung ein (Bandura,
+1977a), da sie sich auf die Auswahl von Handlungen (beispielsweise in
+Bezug auf den Schwierigkeitsgrad), die einzubringende Ausdauer und An-
+strengung, trotz möglicher Schwierigkeiten und auftretender Barrieren,
+auswirkt (Dlugosch & Dahl, 2012). Daher spielt sie auch in Interventionen
+eine zentrale Rolle.
+
+
+2.4     Das Rubikonmodell
+        Das Rubikonmodell (Heckhausen & Gollwitzer, 1987) stellt einen
+mehrphasigen Ablauf der Handlungssteuerung dar: Das Konzept gliedert
+sich in verschiedene psychische Prozesse und situative Merkmale, die die
+Bildung und Realisierung von Absichten fördern. Das Rubikonmodell
+kann Personen bei der Erreichung ihrer Ziele oder auch bei von ihnen an-
+gestrebten Verhaltensänderungen unterstützen. Der Prozess gliedert sich
+in folgende vier Schritte (Höcker et al., 2017):
+      1. Schritt: Abwägen – Intentions- beziehungsweise Wunschbildung,
+      2. Schritt: Wollen/Planen – Aufrechterhalten einer Absicht,
+      3. Schritt: Tun/Ausführen – Absicht ausführen, durchhalten, ggf. kor-
+         rigieren,
+      4. Schritt: Ergebnis – Bewertung des Erreichten.
+       Diese Phasen der Absichtsbildung müssen, nach Heckhausen und
+Gollwitzer (1987), für effizientes Handeln logisch und zeitlich aufeinan-
+derfolgend durchlaufen werden (Abbildung 3).
+
+
+                                                                         12
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:               Prokrastination
+
+
+
+
+Abbildung 3. Rubikonmodell (eigene Darstellung nach Höcker et al.,
+2017, S. 26).
+
+        Anhand des Rubikonmodells lassen sich Prokrastinationstenden-
+zen bei Menschen als Störung der Entscheidungs-Handlungs-Sequenz ver-
+stehen. Auch heute steht die Bezeichnung den Rubikon überschreiten da-
+für, sich endgültig auf eine gewagte Handlung einzulassen (Höcker et al.,
+2017). Dabei handelt es sich um eine Metapher, die auf die Überschreitung
+des Flusses Rubikon durch Julius Caesar im Jahr 49 v. Chr. Bezug nimmt
+und das Übertreten einer wichtigen Grenze beschreibt, bei der es, wenn
+man sie übertritt, kein Zurück mehr gibt. Im Rubikonmodell wird, bezogen
+auf die Selbstregulation, dargestellt, dass die Entscheidung für ein be-
+stimmtes Handlungsziel ein kritisches Ereignis für die betroffene Person
+ist, von dem sie nicht mehr ohne persönliche Nachteile abweichen kann
+(Höcker et al., 2017). Wenn es der Person nicht gelingt, eine feste Hand-
+lungsabsicht in die Tat umzusetzen, sei dies mit persönlichem Versagen
+
+
+                                                                       13
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:                 Prokrastination
+
+
+
+verbunden und muss von der Person auch so gewertet werden. Nachfol-
+gend werden die einzelnen Phasen und ihre spezifischen Probleme bei pro-
+krastinierenden Personen erläutert.
+        In der ersten Phase des Abwägens werden die Vor- und Nachteile
+noch nicht realisierter Wünsche wahrgenommen. Hierbei werden die
+Wünschbarkeit wahrscheinlicher Folgen eines Ziels und die Erreichbarkeit
+dessen genau durchdacht (Heckhausen & Gollwitzer, 1987). In Gedanken
+werden einige Ideen, was die Person alles tun könnte gesammelt, wie bei-
+spielsweise joggen, schwimmen oder doch für die bevorstehende Klausur
+lernen. In dieser Phase wird also eine große Anzahl von Wünschen und
+Anliegen produziert. Innerhalb dieser Motivationsphase, in der es um die
+Bildung von Handlungsintentionen geht, spielen auch Selbstwirksamkeits-
+erwartungen eine bedeutende Rolle (Schwarzer, 2004). Dementsprechend
+setzen sich selbstwirksame Personen höhere Ziele als nicht selbstwirksame
+Personen. Das Problem bei Prokrastinierenden ist, dass diese sich länger
+mit alternativen Handlungsmöglichkeiten befassen und sich schwerer mit
+der klaren Absichtsbildung tun (Höcker et al., 2017). Der zum gezielten
+Handeln notwendige Entschluss wird ständig verschoben und es kommt
+somit nicht zur Entscheidung, eine Handlung durchzuführen und bildlich
+gesprochen nicht zum Überschreiten des Rubikon.
+        In der zweiten Phase der Planung und Handlungsvorbereitung
+geht es um die Planung, zu welcher Gelegenheit und mit welchen Mitteln
+die Realisierung des Ziels in Angriff genommen werden soll (Heckhausen
+& Gollwitzer, 1987). Hier sei vom Individuum die Entscheidung zu tref-
+fen, wann, wo und auf welche Art und Weise gehandelt werden soll, damit
+das Erreichen des gewünschten Ziels wahrscheinlich wird. In dieser Phase
+kann die Konkretisierung der Absicht zu einem Vorsatz durch bestimmte
+Bedingungen erschwert werden (Höcker et al., 2017). Das Problem von
+prokrastinierenden Personen sei, dass vorab zu wenige Überlegungen zu
+Initiierung, Durchführung und Beendigung der gewünschten Handlung an-
+gestellt werden oder aber die Planung der Handlung so detailliert und aus-
+giebig betrieben wird, dass sie selbst zu einer alternativen Tätigkeit wird.
+
+                                                                         14
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:               Prokrastination
+
+
+
+Weiterhin sei die Aufgabenvielfalt in Verbindung mit geringer Selbstwirk-
+samkeitsüberzeugung und der Erwartung bei der Handlung zu scheitern
+ein Indiz für negative leistungsbezogene Gefühle. Dies kann zu einer Er-
+höhung der Handlungsschwelle führen, die ohne die Fähigkeit zum Selbst-
+antrieb durch Anstrengungsbereitschaft zur Herabregulierung negativer
+Effekte kaum zu überwinden ist (Höcker et al., 2017).
+        In der dritten Phase der Handlungsausführung wird die geplante
+Handlung ausgeführt. Diese Tätigkeit soll es wahrscheinlich machen, dass
+das Ziel erreicht wird (Heckhausen & Gollwitzer, 1987). Das Ziel bei die-
+ser Phase ist es, das eigene Handeln fokussiert auf das gesetzte Ziel aus-
+zurichten und sich nicht von alternativen Handlungsmöglichkeiten ablen-
+ken zu lassen. Die eigene Handlung muss bei auftretenden Hindernissen
+flexibel an die Umstände und den Verlauf der Handlung angepasst und
+gegen konkurrierende Handlungstendenzen abgeschirmt werden (Höcker
+et al., 2017). Von der handelnden Person seien dazu Kompetenzen der
+Aufmerksamkeitssteuerung und Selbstregulation gefordert. Vor allem bei
+zwischenzeitlich auftretenden inneren oder äußeren Schwierigkeiten wird
+die Absicht im Verlauf der Ausführung schnell aufgegeben. Wenn keine
+korrigierende Selbstüberwachung stattfindet oder Strategien zur Emoti-
+ons-, Impuls- und Aufmerksamkeitskontrolle nicht ausreichend oder gar
+nicht vorhanden sind, ist das Vorhaben schlecht vor alternativen Handlun-
+gen geschützt und es kommt zu Unterbrechungen und dem Zurückfallen
+in das Aufschiebeverhalten (Höcker et al., 2017). Mit dem Phasenüber-
+gang des Abschließens wird die Handlung beendet. Wenn das genaue Ab-
+schlussmerkmal einer Handlung nicht eindeutig definiert wurde, kommt es
+zum verfrühten Abbrechen des Ausführens und somit nicht zum Erreichen
+des eigentlich gesetzten Ziels.
+       In der vierten Phase der Handlungs- und Ergebnisbewertung wird
+das Arbeitsergebnis im Hinblick auf das zuvor gesetzte Ziel beurteilt. Es
+wird geprüft, inwieweit das gesetzte Ziel erreicht wurde und welche Hand-
+lungen ggf. noch auszuführen sind, um den Verlauf der Handlung zu einem
+
+
+                                                                       15
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:                Prokrastination
+
+
+
+Abschluss zu bringen (Heckhausen & Gollwitzer, 1987). Fällt die Beurtei-
+lung der Handlung positiv aus, erleichtert dies künftig die Bildung und
+Umsetzung vergleichbarer Absichten (Höcker et al., 2017). Das Ergebnis
+der Bewertung kann somit auch Einfluss darauf haben, wie in der Zukunft
+Ziele geplant und umgesetzt werden. Das Problem bei Prokrastinierenden
+ist, dass die Leistungsbeurteilung zwar weniger befriedigend ausfällt, die
+gegen Ende enorme Aktivität für die Zielerreichung und das dadurch er-
+langte befriedigende Ergebnis jedoch betont wird (Höcker et al., 2017).
+Mit dem letzten Phasenübergang der Ablösung wird der Prozess abge-
+schlossen. Hier werden eventuelle Unzufriedenheiten aufgrund von Ab-
+weichungen des Geleisteten zur ursprünglichen Intention verarbeitet (Hö-
+cker et al., 2017). Festgestellte Diskrepanzen blieben bei Prokrastinieren-
+den leicht bestehen, weil sie es versäumten, bei Nichterreichen des Ziels
+entweder ihr Anspruchsniveau entsprechend den Handlungsergebnissen
+zu reduzieren oder neue realistische Teilziele zu bilden. Besonders bei ge-
+stressten Aufschiebenden sei die Unfähigkeit zur Auseinandersetzung mit
+dem Handlungsergebnis und der damit verbundenen fehlenden aktiven
+Ablösung der Absicht die Ursache dafür, dass Prokrastinierende zwischen
+Arbeits- und Freizeit kaum noch unterscheiden können.
+
+
+2.5   Aktueller Forschungsstand
+       Im folgenden Kapitel wird der aktuelle Forschungsstand zu den re-
+levanten Variablen aufgezeigt. Erklärend dazu werden die Verbindungen
+zu den jeweiligen Forschungsfragen bzw. -hypothesen aufgezeigt. Darauf
+aufbauend folgt die Ableitung der empirischen Hypothesen.
+
+
+2.5.1 Selbstwirksamkeit und Prokrastination
+       Die Verbindung zwischen Selbstwirksamkeit und Prokrastination
+wurde erstmals von Bandura (1986) behandelt. Er stellte die Hypothese
+auf, dass der Glaube an die eigene Selbstwirksamkeit bei Vorhandensein
+
+
+                                                                        16
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:                Prokrastination
+
+
+
+eines angemessenen Niveaus an Fähigkeiten und Motivation die Aufga-
+beninitiierung und Ausdauer einer Person beeinflusst. Bevor die eigentli-
+che Handlung stattfindet, kann eine stärkere Selbstwirksamkeitsüberzeu-
+gung beispielsweise auch die eigene Zielsetzung positiv beeinflussen
+(Schwarzer & Jerusalem, 2002). Dementsprechend haben die Selbstwirk-
+samkeitsüberzeugungen des Menschen einen Einfluss auf das Verhalten.
+Nicht nur bei der Planung und Vorbereitung einer Aufgabe, sondern auch
+bei der eigentlichen Handlungsdurchführung. In akademischen Umgebun-
+gen ist die Selbstwirksamkeit ein starker Prädiktor für die Leistung, wobei
+die Stärke der Assoziation von der Übereinstimmung mit der jeweiligen
+Aufgabe sowie dem Grad der Spezifität abhängt (Pajares, 1996). Mehrere
+Forschende haben die Beziehung zwischen Selbstwirksamkeit und Pro-
+krastination untersucht. Zum Beispiel haben Ferrari, Parker und Ware
+(1992) eine negative Beziehung zwischen dem Selbstwirksamkeitsglauben
+und dem akademischen Prokrastinieren unter College-Studierenden gefun-
+den. Weitere Forschungen zeigten, dass Selbstwirksamkeit ein starker und
+konsistenter Prädiktor der Prokrastination war (Steel, 2007; Hen & Goro-
+shit, 2014).
+
+
+2.5.2 Selbstregulation und Prokrastination
+        Die Prokrastinationsforschung betrachtet das habituelle Aufschie-
+ben als eine Funktion niedriger Selbstregulierung (Ferrari, 2001; Senécal,
+Koestner & Vallerand, 1995; Steel, 2007). Ferrari (2001) schlug vor, dass
+das wiederholte Aufschieben als „Selbstregulierungsversagen der Leis-
+tung“ (S. 391) angesehen werden kann, bei dem Prokrastinierende ihre
+Funktionsweise in Stresssituationen und unter hoher kognitiver Belastung
+nicht regulieren können. Senécal et al. (1995) fanden heraus, dass die
+Selbstregulierung allein 25 % der Varianz des akademischen Prokrastinie-
+rens erklärt. Wolters (2003) untersuchte das Verhältnis von Prokrastina-
+tion zum selbstregulierten Lernen und stellte fest, dass Selbstregulierung
+der zweitstärkste Prädiktor für habituelles Aufschieben nach akademischer
+
+
+                                                                        17
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:                Prokrastination
+
+
+
+Selbstwirksamkeitsüberzeugung war. Zusammenfassend gibt es eine
+große Menge von Belegen dafür, dass niedrigere Ebenen von selbstregu-
+lativen Verhaltensweisen mit höheren Ebenen der Prokrastination zusam-
+menhängen, und dass Selbstregulierung einer der Schlüssel zum Verständ-
+nis von habituellem Aufschiebeverhalten ist.
+
+
+2.5.3 Selbstwirksamkeit und Selbstregulation
+        Weiterhin wurde der Zusammenhang zwischen Selbstwirksamkeit
+und Selbstregulation untersucht. Selbstwirksamkeit und Selbstregulation
+hängen eng zusammen, da die Fähigkeiten zur Selbstregulation eines Indi-
+viduums von den Selbstwirksamkeitserwartungen beeinflusst werden
+(Althammer & Michel, 2021). Beispielsweise reicht allein die Kenntnis
+über die zur Verfügung stehenden kognitiven und metakognitiven Werk-
+zeuge (Auswahl geeigneter Strategien, Bewertung des eigenen Wissens,
+Selbstkorrektur) nicht aus, um den akademischen Erfolg zu gewährleisten
+(Klassen, Krawchuk & Rajani, 2008). Zusätzlich muss die betroffene Per-
+son das Vertrauen in sich haben, die Selbstregulierungsstrategien auch um-
+zusetzen. Nach Bandura (1993) sorgt der feste Glaube an die eigenen
+Selbstregulierungsstrategien für die benötigte Ausdauer – so kann die
+Kraft, durchzuhalten, die sich aus dem Glauben an die eigenen Fähigkeiten
+zur Selbstregulierung ableitet, auch ein Schlüssel sein, der Prokrastinati-
+onsmuster bestimmt. Darüber hinaus wurde festgestellt, dass die Verbin-
+dung von Selbstwirksamkeitsglauben und Selbstregulation die akademi-
+sche Leistung positiv beeinflusst (Klassen, 2007; Zimmerman, Bandura,
+& Martinez-Pons, 1992). Schwarzer und Jerusalem (2002) bezeichnen die
+Selbstwirksamkeit als „den Schlüssel zur erfolgreichen Selbstregulation“
+(S. 32).
+
+
+
+
+                                                                        18
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:               Prokrastination
+
+
+
+2.5.4 Selbstwirksamkeit, Selbstregulation und Prokrastination
+        Selbstwirksamkeit und Selbstregulation scheinen nicht unbedeu-
+tende Ursachen für die Prokrastinationstendenz zu sein. Die Ergebnisse
+einer Prokrastinationsstudie zeigen, dass die Selbstregulierung als Media-
+tor eine bedeutende Rolle in der Beziehung zwischen Selbstwirksamkeit
+und Prokrastination spielt (Taura, Roslan & Omar, 2014). Die Forschen-
+den untersuchten bei 426 Studierenden die Zusammenhänge zwischen
+Selbstwirksamkeit, Aufgabenwert und Prokrastination sowie die Rolle von
+Selbstregulierungsstrategien in diesen Beziehungen. Die Ergebnisse der
+Studie unterstützen die Theorie des selbstregulierten Lernens, die davon
+ausgeht, dass „selbstregulatorische Aktivitäten Mediatoren zwischen per-
+sönlichen und kontextuellen Merkmalen und tatsächlicher Leistung oder
+Performance sind“ (Pintrich, 2000, S. 453).
+
+
+2.6   Ableitung der Hypothesen
+       Die nachfolgenden Erläuterungen zur Herleitung der empirischen
+Hypothesen beruhen auf dem bereits beschriebenen bisherigen For-
+schungsstand und dem theoretischen Modell der Handlungsphasen, dem
+sogenannten Rubikonmodell (Heckhausen & Gollwitzer, 1987). Laut dem
+Rubikonmodell wird davon ausgegangen, dass erst dann gehandelt wird,
+wenn zuvor verschiedene Phasen der Absichtsbildung erfolgreich absol-
+viert wurden. Es wird aufgezeigt, dass zwischen der tatsächlichen Entste-
+hung einer Absicht und ihrer Verwirklichung gewisse phasenspezifische
+Probleme auftauchen können. Unzureichende Selbstwirksamkeitsüberzeu-
+gung sowie nicht ausreichende Selbstregulation können zu Unterbrechun-
+gen im Verlauf der Handlung und somit zum Zurückfallen in das Aufschie-
+beverhalten führen. In seiner Metaanalyse konnte Steel (2007) bereits ne-
+gative Zusammenhänge zwischen Selbstwirksamkeit und Prokrastination
+sowie zwischen Selbstregulation und Prokrastination belegen. So kann an-
+hand der Theorie der Handlungsphasen von Heckhausen & Gollwitzer
+
+
+
+                                                                       19
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:                Prokrastination
+
+
+
+(1987) und der genannten empirischen Ergebnisse aus dem aktuellen For-
+schungsstand auch in der vorliegenden Studie von einem negativen Zu-
+sammenhang zwischen Selbstwirksamkeit und Prokrastination sowie zwi-
+schen Selbstregulation und Prokrastination ausgegangen werden (Abbil-
+dung 4).
+        Auch Selbstwirksamkeit und Selbstregulation hängen, wie bereits
+dargestellt eng zusammen. Nach dem Modell von Heckhausen und Goll-
+witzer (1987) bedarf es in der Phase des „Wollens und Planes“ eine aus-
+reichende Selbstwirksamkeitsüberzeugung, um in der darauffolgenden
+Phase der „Handlungsausführung“ durch ausreichende Selbstregulation
+konzentriert zu handeln. Daran ist zu erkennen, dass die Fähigkeiten zur
+Selbstregulation von den eigenen Selbstwirksamkeitserwartungen beein-
+flusst werden (Althammer & Michel, 2021). So kann anhand der Theorie
+der Handlungsphasen von Heckhausen und Gollwitzer (1987) sowie der
+genannten empirischen Ergebnisse aus dem aktuellen Forschungsstand
+auch in der vorliegenden Studie von einem positiven Zusammenhang zwi-
+schen Selbstwirksamkeit und Selbstregulation ausgegangen werden (Ab-
+bildung 4).
+         Das Zusammenwirken von Selbstwirksamkeit, Selbstregulation
+und Prokrastination hat, wie bereits im aktuellen Forschungsstand darge-
+stellt, viel Aufmerksamkeit erhalten. So haben sich Taura et al. (2014) mit
+der Mediatorenrolle der Selbstregulation in der Beziehung zwischen
+Selbstwirksamkeit und Prokrastination beschäftigt und konnten hier signi-
+fikante Ergebnisse erzielen. Auch in der vorliegenden Studie kann von ei-
+nem bedeutsamen Mediationseffekt der Selbstregulation, zwischen der
+Selbstwirksamkeit und der Prokrastination, ausgegangen werden (Abbil-
+dung 4).
+       Zusammenfassend werden folgende Hypothesen gebildet.
+       H1: Je höher das Maß an Selbstwirksamkeit, desto niedriger das
+       Maß an Prokrastination.
+
+
+
+                                                                        20
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:              Prokrastination
+
+
+
+       H2: Je höher das Maß an Selbstwirksamkeit, desto höher das Maß
+       an Selbstregulation.
+       H3: Je höher das Maß an Selbstregulation, desto niedriger das Maß
+       an Prokrastination.
+       H4: Das Verhältnis zwischen Selbstwirksamkeit und Prokrastina-
+       tion wird durch die Selbstregulation mediiert.
+
+
+
+
+Abbildung 4. Modell der geplanten Untersuchung.
+
+
+
+
+                                                                      21
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:               Prokrastination
+
+
+
+3     Methode
+
+3.1    Stichprobe
+        Um die benötigte Stichprobengröße zu ermitteln, wurde sich an der
+simulationsbasierten Berechnung nach Fritz und MacKinnon (2007) ori-
+entiert. Dementsprechend wurde, anhand theoretischer und empirischer
+Vorüberlegungen, angenommen, dass in der vorliegenden Studie der Ef-
+fekt der Selbstwirksamkeit auf die Selbstregulation mittelgroß, der Effekt
+der Selbstregulation auf die Prokrastination ebenfalls mittelgroß und die
+Selbstregulation den Effekt der Selbstwirksamkeit auf die Prokrastination
+vermitteln wird. Folglich wurde die minimale Stichprobengröße zur Auf-
+deckung eines mittleren Populationseffektes ermittelt. Bei festgelegten
+Entscheidungsfehlern von α = 5 % und β = 20 % ergab sich eine benötigte
+Mindeststichprobengröße von N = 78. Am Ende der wissenschaftlichen
+Umfrage nahmen N = 163 Personen teil. Nach Abschluss der Befragung
+wurde eine Datensatzbereinigung vorgenommen. Es wurden nur Teilneh-
+mende berücksichtigt, die aktuell studieren. Als weitere Einschränkung
+galt der Fortschritt des Studiums. Studierende, die sich zum Befragungs-
+zeitpunkt im ersten Semester befanden, wurden bei der Datenauswertung
+nicht berücksichtigt. Auf Grund dieser Einschränkung konnte ausge-
+schlossen werden, dass die erste Klausur auch die letzte war. Eine Kausal-
+richtung der interessierenden Variablen konnte so weiterhin angenommen
+werden. Demnach wurden N = 104 bereinigte Datensätze berücksichtigt.
+Die teilnehmenden Personen waren zu 28 % männlich und zu 72 % weib-
+lich. Der Mittelwert des Alters der Teilnehmenden betrug 28.75 Jahre
+(SD = 6.52; Anhang A). Es handelte sich um eine angefallene Stichprobe;
+die akquirierten Teilnehmenden entstammten dem Freundeskreis bzw. der
+eigenen Familie oder waren FOM-Studierende oder Arbeitskollegen und
+Arbeitskolleginnen. Die Stichprobengenerierung erfolgte mithilfe eines
+Fragebogens, der den Teilnehmenden webbasiert über die Plattform SoSci
+Survey zur Verfügung gestellt wurde.
+
+
+
+                                                                       22
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:                   Prokrastination
+
+
+
+3.2   Untersuchungsablauf und -design
+       Es wurde eine quantitative Querschnittsuntersuchung, als Online-
+Feldstudie durchgeführt. Die Probanden und Probandinnen nahmen an ei-
+ner anonymisierten, freiwilligen Onlineumfrage (Anhang B–D) über
+www.soscisurvey.de teil. Die Umfrage war 14 Tage online abrufbar.
+       Durch die Generierung von Hypothesen aus der theoretischen Kon-
+zeptualisierung haben sich eine unabhängige Variable, ein Mediator und
+eine abhängige Variable ergeben. Die unabhängige Variable lautet Selbst-
+wirksamkeit. Die Mediatorvariable ist die Selbstregulation und die abhän-
+gige Variable die Prokrastination.
+        Zu Beginn wurde im Fragebogen die aktuelle Studientätigkeit
+durch die Aufforderung „Bitte geben Sie hier Ihren aktuellen Studienum-
+fang an“ abgefragt. Hierdurch wurde zu Beginn die Zielgruppe der For-
+schungsarbeit selektiert, da bei Angabe keine Studientätigkeit die Teil-
+nahme an der Umfrage beendet wurde. Um Rückschlüsse der Teilnehmen-
+den auf die soziale Erwünschtheit zu minimieren, wurde zuerst die abhän-
+gige Variable abgefragt, dann der Mediator und zuletzt die unabhängige
+Variable. Damit eine Kausalität nachvollzogen werden konnte, wurden die
+Items so modifiziert, dass sich das Ursachen- und Wirkungsschema sowie
+eine zeitliche Abgrenzung herausbildeten. Durch selbstentwickelte In-
+struktionen für die jeweiligen Items wurde die unabhängige Variable dem
+Mediator und dieser der abhängigen Variable vorangestellt. Im Anschluss
+an die Abfrage der interessierenden Variablen, wurden noch einige demo-
+grafische Angaben erfragt.
+
+
+3.3   Messinstrumente
+       Zu Beginn wurde die aktuelle Studientätigkeit mit der Nomi-
+nalskala Vollzeit (1), Teilzeit (2) oder keine Studientätigkeit (3) abgefragt.
+Sofern die Teilnehmenden angaben sich in einem Voll- bzw. Teilzeitstu-
+dium zu befinden, wurden die nachfolgenden Items abgefragt.
+
+
+                                                                           23
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:                 Prokrastination
+
+
+
+        Die Variable Selbstwirksamkeit wurde mittels der Skala zur stu-
+dienspezifischen Selbstwirksamkeit (WIRKSTUD) von Jerusalem und
+Schwarzer (1981) operationalisiert (Anhang E). Das Verfahren kann für
+nichtkommerzielle Forschungszwecke kostenlos eingesetzt werden. Die
+Skala umfasste sieben Items und wurde mittels eines vierstufigen Antwort-
+formates von 1 = trifft gar nicht zu bis 4 = trifft ganz zu erfasst. Um die
+interne Konsistenz zu bestimmen, wurde Cronbachs Alpha für die Sub-
+skala der studentischen Selbstwirksamkeit (insgesamt sieben Fragen) be-
+rechnet. Die interne Konsistenz war hoch (α =.82; Anhang F). Ein Item
+lautete beispielsweise „Im Studium bin ich jederzeit in der Lage, die erfor-
+derlichen Leistungen zu erbringen“. In der Skala Selbstwirksamkeit be-
+fand sich ein Item, das negative Polung aufwies. Dies wurde bei der Aus-
+wertung berücksichtigt, indem eine Umpolung stattfand.
+        Die Variable Selbstregulation wurde mittels der Skala von Schwar-
+zer (1999) operationalisiert (Anhang G). Dieses Erhebungsinstrument darf
+für Forschungszwecke verwendet werden. Die Skala umfasste zehn Items
+und wurde mittels eines vierstufigen Antwortformates von 1 = stimmt nicht
+bis 4 = stimmt genau abgefragt. Um die interne Konsistenz zu bestimmen,
+wurde Cronbachs Alpha für die Subskala der Selbstregulation (insgesamt
+zehn Fragen) berechnet. Die interne Konsistenz war hoch (α =.84; Anhang
+H). Ein Item war beispielweise „Ich kann mich lange Zeit auf eine Sache
+konzentrieren, wenn es nötig ist“. In der Skala Selbstregulation befanden
+sich drei Items, die eine negative Polung aufwiesen und bei der Auswer-
+tung umgepolt wurden.
+       Die Variable Prokrastination wurde mithilfe der deutschen Kurz-
+version der General Procrastination Scale (GPS-K) von Klingsieck und
+Fries (2018) operationalisiert (Anhang I). Die Skala wurde anhand von
+neun Items, die mit Hilfe eines vierstufigen Antwortformates von 1 = sehr
+untypisch bis 4 = sehr typisch abgefragt wurden, erfasst. Um die interne
+Konsistenz zu bestimmen, wurde Cronbachs Alpha für die Subskala der
+Prokrastination (insgesamt neun Fragen) berechnet. Die interne Konsis-
+tenz war exzellent (α = .92; Anhang J). Ein Item war beispielsweise „Ich
+
+                                                                         24
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:                Prokrastination
+
+
+
+erledige Aufgaben immer erst kurz vor dem Abgabetermin“. Die Skala
+Prokrastination beinhaltete vier Items, die negativ gepolt waren und bei
+der Auswertung umgepolt wurden.
+        Im Anschluss wurden den Teilnehmenden noch einige Fragen zu
+demografischen Angaben gestellt. Durch das Item „Bitte geben Sie Ihr Ge-
+schlecht an“ wurde die Variable Geschlecht mithilfe der Nominalskala
+männlich (1), weiblich (2) oder divers (3) abgefragt. Die Angabe des Alters
+der Versuchsteilnehmenden wurde durch die Frage „Wie alt sind Sie?“ (in
+Jahren) ermittelt. Zuletzt wurde durch das Item „In welchem Semester be-
+finden Sie sich?“ der aktuelle Fortschritt des Studiums mit Angabe der Se-
+mesterzahl abgefragt. Die Teilnehmenden konnten wählen zwischen 1 (1),
+2-5 (2), 6-9 (3) oder höheres (4).
+
+
+3.4   Datenaufbereitung und statistische Verfahren
+         Die Datenauswertung fand mittels der Programme IBM SPSS Sta-
+tistics (Version 25) und Microsoft Excel 2013 statt.
+
+
+
+
+                                                                        25
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:                                        Prokrastination
+
+
+
+4     Ergebnisse
+
+4.1     Deskriptivstatistik
+          Die Deskriptivstatistik bezieht sich auf Tabelle 1 (Anhang A & K).
+Tabelle 1.    Mittelwerte (M), Standardabweichungen (SD), Korrelati-
+onsmatrix der Untersuchungsvariablen sowie Reliabilitäten der Skalen
+(Cronbachs α)
+
+ Variablen                         M          SD              1           2            3            4
+ 1 Altera                        28.75       6.52
+ 2 Selbstwirksamkeitb 2.89                   0.62          .00         .82
+ 3 Selbstregulationc              2.76       0.55          .02         .50**       .84
+ 4 Prokrastinationd              2.69        0.79          .08         -.22*       -.46**       .92
+Anmerkungen. a Angabe des Alters als offene Antwortmöglichkeit, b Wertebereich der Variablen
+von 1 (trifft gar nicht zu) bis 4 (trifft oft zu), c Wertebereich der Variablen von 1 (stimmt nicht) bis
+4 (stimmt genau), d Wertebereich der Variablen von 1 (sehr untypisch) bis 4 (sehr typisch); Pear-
+son Korrelation; *p < .05, **p < .01, ***p < .001; N = 104; Cronbachs Alpha wird, sofern ange-
+zeigt, kursiv auf der Hauptdiagonalen angezeigt.
+
+
+
+4.2     Inferenzstatistik
+        Die vorliegende Studie wurde unter Einsatz des modernen Ansat-
+zes (Preacher & Hayes, 2008) in der Mediationsanalyse durchgeführt. Die-
+ser steht im Gegensatz zum häufig verwendeten Ansatz von Baron und
+Kenny (1986) der kausalen Schritte. Die Idee hinter dem modernen Ansatz
+ist, dass hier kein signifikanter Effekt von der Prädiktor- auf die Kriteri-
+umsvariable vorausgesetzt wird, um eine Mediation zu etablieren (Zhao,
+Lynch & Chen, 2010). Daher wurde die Mediationsanalyse mit dem PRO-
+CESS-Makro von Hayes (2018) durchgeführt, das eine lineare Regression
+nach der Methode der kleinsten Quadrate verwendet, um nicht standardi-
+sierte Pfadkoeffizienten des totalen, direkten und indirekten Effekts zu er-
+
+
+
+                                                                                                      26
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:                 Prokrastination
+
+
+
+mitteln. Bootstrapping mit 5.000 Iterationen zusammen mit heteroskeda-
+stizitätskonsistenten Standardfehlern (Davidson & MacKinnon, 1993)
+wurden eingesetzt, um Konfidenzintervalle und Inferenzstatistiken zu be-
+rechnen. Die Effekte wurden als signifikant erachtet, wenn das Konfiden-
+zintervall nicht null einschloss.
+        Eine Mediationsanalyse wurde berechnet, um zu überprüfen, ob
+Selbstwirksamkeit die Prokrastination vorhersagt und ob der direkte Pfad
+durch die Selbstregulation mediiert wird. Zu Beginn wurden die an das
+Verfahren gestellten Voraussetzungen überprüft. Die Mediationsanalyse
+von Hayes (2018) basiert auf linearer Regression. Dementsprechend
+wurde das Verhältnis der Variablen nach visueller Inspektion der Mat-
+rixdiagramme mit LOESS-Glättung als etwa linear beurteilt (Anhang L).
+Durch die Verwendung von Bootstrapping, welches ein robustes Verfah-
+ren ist, war es nicht notwendig, weitere Voraussetzungen bezüglich der
+Verteilungseigenschaften zu überprüfen. Aus diesem Grund wurde auf
+eine Testung auf Normalverteilung der Residuen verzichtet. Durch die je-
+weiligen Instruktionen im Fragebogen wurde eine zeitliche Ordnung der
+Variablen sichergestellt, wodurch das Mediationsmodell der Annahme der
+zeitlichen Präzedenz von Ursache und Wirkung folgt. Selbstwirksamkeit
+als Prädiktor findet vor Selbstregulation statt und Selbstregulation als Me-
+diator vor der abhängigen Variable Prokrastination.
+
+
+
+
+                                                                         27
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:                                    Prokrastination
+
+
+
+Tabelle 2.     Mediationseffekt der Selbstregulation auf den Zusammen-
+hang zwischen Selbstwirksamkeit und Prokrastination mit Angabe der un-
+standardisierten Pfadkoeffizienten des totalen, direkten und indirekten Ef-
+fekts (Anhang M-O)
+
+ Effekt               b                95% KI                 SEb          p
+
+ Total               -.28          [-0.59, -0.02]              .15        .07
+
+ Direkt              -.02           [-0.29, 0.33]              .15        .89
+
+ Indirekt            -.30          [-0.50, -0.14]
+Anmerkungen. Die Mediationsanalyse wurde mit dem PROCESS von Hayes (2018) in SPSS
+durchgeführt. Effekte wurden als signifikant erachtet, wenn das Konfidenzintervall nicht null ein-
+schloss; N = 104.
+
+        Die Ergebnisse der Mediationsanalyse finden sich in Tabelle 2 und
+in Abbildung 5. Hier wurde überprüft, ob die Selbstwirksamkeit die Pro-
+krastination vorhersagt und ob der direkte Pfad durch die Selbstregulation
+mediiert wird. Ein signifikanter totaler Effekt von Selbstwirksamkeit auf
+die Prokrastination konnte nicht festgestellt werden (b = -.28, p = .07; An-
+hang N). Deshalb wird die H1 verworfen und die H0 angenommen. Durch
+den modernen Ansatz nach Preacher und Hayes (2008) wird die Überprü-
+fung des Mediationsmodells fortgeführt und nicht nach der Vorgehens-
+weise von Baron und Kenny (1986) abgebrochen. Unterstützt wird die Ent-
+scheidung durch neuere Forschungsarbeiten, die den Fokus auf die Signi-
+fikanz zwischen den unabhängigen und abhängigen Variablen, sowohl vor
+als auch nach Mediationstests, als ungerechtfertigt erachten und als Folge
+die Theorieentwicklung und -prüfung beeinträchtigen könnten (Rucker,
+Preacher, Tormala & Petty, 2011; MacKinnon, Cheong & Pirlott, 2012).
+Dementsprechend sollte die Aufmerksamkeit in der Mediationsanalyse auf
+die Bewertung der Größe und die Signifikanz indirekter Effekte verlagert
+werden, welche in der vorliegenden Forschungsarbeit berücksichtigt wer-
+den.
+
+
+
+
+                                                                                               28
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:                  Prokrastination
+
+
+
+        Nachdem der Mediator, die Selbstregulation, in das Modell aufge-
+nommen wurde, sagte die Selbstwirksamkeit die Selbstregulation signifi-
+kant vorher (b = .45***, p < .001; Anhang M). Daher wird H2 angenom-
+men und H0 verworfen. Die Selbstregulation als Mediator sagte die Pro-
+krastination signifikant vorher (b = -.68***, p < .001; Anhang N). Dem-
+entsprechend wird H3 angenommen und H0 verworfen. Es ergab sich sta-
+tistisch ein signifikanter indirekter Effekt der Selbstwirksamkeit auf die
+Prokrastination über die Selbstregulation (b = -.30, 95 % KI für b [-0.50, -
+0.14]; Anhang N). Der vollständig standardisierte indirekte Effekt betrug
+-.24 (Anhang O). Es konnte festgestellt werden, dass das Verhältnis zwi-
+schen Selbstwirksamkeit und Prokrastination durch die Selbstregulation
+mediiert wird. Dementsprechend wird H4 angenommen und H0 verworfen.
+
+
+
+
+Abbildung 5. Empirisches Modell der Mediationsanalyse (*p < .05, **p
+< .01, ***p < .001; c = totaler Effekt, c`= direkter Effekt; N = 104; unstan-
+dardisierte Koeffizienten).
+
+
+
+
+                                                                          29
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:               Prokrastination
+
+
+
+5     Diskussion
+
+        Akademische Prokrastination wurde als ein Hindernis für den aka-
+demischen Erfolg von Studierenden gesehen. Forschungsergebnisse legen
+nahe, dass sie mit einem geringeren Maß an Selbstregulierung und akade-
+mischer Selbstwirksamkeit zusammenhängt und als Folge zu einem höhe-
+ren Maß an Angst, Stress und Krankheit führt (Tice & Baumeister, 1997).
+Um anwendbare Interventionen zu entwickeln, bedarf es der Beleuchtung
+möglicher Ursachen des Prokrastinierens. Ziel dieser Arbeit war es, zur
+Ursachenforschung beizutragen, indem die Zusammenhänge von Selbst-
+wirksamkeit, Selbstregulation und Prokrastination untersucht wurden.
+Weiterhin wurde die Mediatorenrolle der Selbstregulation zwischen
+Selbstwirksamkeit und Prokrastination beleuchtet. Im folgenden Abschnitt
+soll eine Zusammenfassung der wichtigsten Ergebnisse der Studie und die
+damit zusammenhängenden Schlussfolgerungen präsentiert werden. Da-
+rauf folgt eine Darstellung der allgemeinen Grenzen dieser Arbeit, die
+Richtungen und Implikationen für zukünftige Forschungen aufzeigen. Ab-
+schließend werden die durch die Studie gewonnenen Implikationen für die
+Praxis vorgestellt.
+
+
+5.1    Zusammenfassung der Ergebnisse und Implikationen der empi-
+       rischen Hypothesen
+       Zusammenfassend lässt sich festhalten, dass sowohl signifikante
+als auch nicht bedeutsame Ergebnisse im Rahmen dieser Forschungsarbeit
+herausgearbeitet wurden. Nachfolgend wird näher auf die einzelnen Hy-
+pothesenergebnisse eingegangen.
+        H1: Je höher das Maß an Selbstwirksamkeit, desto niedriger das
+        Maß an Prokrastination.
+       Bei dieser aufgestellten Hypothese konnten keine signifikanten Er-
+gebnisse erzielt werden. Entgegen den bisherigen Forschungsergebnissen,
+
+
+
+                                                                       30
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:               Prokrastination
+
+
+
+die bedeutsame Effekte der Selbstwirksamkeit auf die Prokrastination fest-
+stellen konnten (z.B. Steel, 2007; Wolters, 2003), zeigten die erhobenen
+Daten in der Forschungsarbeit keine Signifikanz. Dementsprechend
+könnte eine erhöhte Prokrastinationstendenz eine Folge oder vielleicht
+auch eine Ursache niedriger Selbstwirksamkeitserwartungen sein. In einer
+Studie von Kandemir (2014), in der die möglichen Ursachen für akademi-
+sche Prokrastination untersucht wurden, deuten die Ergebnisse darauf hin,
+dass Selbstwirksamkeit in einem bedeutsamen negativen Zusammenhang
+mit Prokrastination steht, jedoch nicht vorhersagbar ist. Denkbar wäre
+auch, dass Prokrastinationserfahrungen in der Vergangenheit dazu führen,
+dass die eigene Erwartung, eine Tätigkeit tatsächlich erfolgreich zu Ende
+zu bringen, sinkt. Diese Erkenntnis stützt sich auf die Annahme nach
+Bandura (1986), der den stärksten Einfluss, auf die eigene Selbstwirksam-
+keitsüberzeugung, in der persönlichen Erfahrung sieht. Zusammenfassend
+ist es sinnvoll anzunehmen, dass beide Konstrukte sich vielmehr gegensei-
+tig beeinflussen und daher eher von einer Interaktion als einer Kausalbe-
+ziehung auszugehen ist.
+       H2: Je höher das Maß an Selbstwirksamkeit, desto höher das Maß
+       an Selbstregulation.
+        Bei dieser aufgestellten Hypothese konnten bedeutsame Ergeb-
+nisse herausgearbeitet werden. Die Selbstwirksamkeit sagte die Selbstre-
+gulation signifikant vorher. Dieses Ergebnis stützt die Annahme, dass die
+Selbstwirksamkeit eine Schlüsselressource für eine erfolgreiche Selbstre-
+gulation darstellt (Schwarzer & Jerusalem, 2002). Ergänzend steht das Er-
+gebnis in Einklang mit den Schlussfolgerungen der Studie von Zim-
+merman et al. (1992), dass die eigenen Selbstwirksamkeitserwartungen die
+selbstregulatorischen Fähigkeiten signifikant beeinflussen. Darüber hinaus
+berichten die Autoren, dass die Selbstwirksamkeitsüberzeugung von Schü-
+lern und Schülerinnen, das Lernen strategisch regulieren zu können, eine
+wichtige Rolle bei der akademischen Selbstmotivation spielt und besagte
+Lernende zuversichtlicher sind, akademische Fächer zu meistern und hö-
+here akademische Leistungen zu erzielen.
+
+                                                                       31
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:                Prokrastination
+
+
+
+       H3: Je höher das Maß an Selbstregulation, desto niedriger das Maß
+       an Prokrastination.
+        Die Ergebnisse stützen Hypothese 3, die besagt, dass Studierende
+mit einem höheren Grad an Selbstregulierung ein geringeres Maß an Pro-
+krastination zeigen. Bei der Datenauswertung der Variablen konnte fest-
+gestellt werden, dass die Selbstregulation die Prokrastination signifikant
+vorhersagte. Dies deutet auf die Notwendigkeit der Selbstregulation zur
+Reduzierung des Prokrastinationsverhaltens bei akademischen Aufgaben
+hin. Die Befunde unterstützen die Ansicht, dass das Aufschieben des Stu-
+diums eine Folge der fehlenden Selbstregulierung ist (Ferrari, 1991; How-
+ell & Watson, 2007; Senécal et al., 1995). Weiterhin steht die Signifikanz
+im Einklang mit der Beobachtung weiterer Studien, dass die Selbstregu-
+lierung ein wichtiges Kriterium ist, die mit dem akademischen Prokrasti-
+nieren in Verbindung steht (Klassen et al., 2008).
+        Das Ergebnis bestätigt, dass Personen, die über ein hohes Maß an
+Selbstregulierung berichten, den Beginn bzw. die Fertigstellung von Auf-
+gaben bei herannahender Frist weniger wahrscheinlich verzögern. Ent-
+sprechend den vorliegenden Erkenntnissen kam Steel (2007) in seiner me-
+taanalytischen Übersichtsarbeit zum Schluss, dass die ultimative Notwen-
+digkeit der Selbstregulierung besteht, indem er Prokrastination als „Quint-
+essenz des Versagens der Selbstregulierung“ (S. 65) beschrieb.
+       H4: Das Verhältnis zwischen Selbstwirksamkeit und Prokrastina-
+       tion wird durch die Selbstregulation mediiert.
+        Im Vorangegangenen wurden signifikante Zusammenhänge zwi-
+schen Selbstwirksamkeit und Selbstregulation sowie zwischen Selbstregu-
+lation und Prokrastination gefunden. Dies spricht dafür, dass es bei der
+Überprüfung der Mediation einen bedeutsamen indirekten Effekt, sprich
+einen Mediationseffekt der Selbstregulation zwischen Selbstwirksamkeit
+und Prokrastination, gibt. Dies konnte nach Überprüfung mittels Signifi-
+kanztest und Ausweis von Konfidenzintervallen für den indirekten Effekt
+über Bootstrapping auch bestätigt werden. Die Ergebnisse zeigen, dass das
+
+                                                                        32
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:                 Prokrastination
+
+
+
+Verhältnis zwischen Selbstwirksamkeit und Prokrastination durch die
+Selbstregulation mediiert wird. Entsprechend den Ergebnissen zeigten
+auch Taura et al. (2014), dass es einen bedeutenden Effekt der Selbstregu-
+lation als Mediator in der Beziehung zwischen Selbstwirksamkeit und Pro-
+krastination gibt. In dieser Studie wurde ergänzend der Aufgabenwert mit-
+berücksichtigt, der als Anreiz für die Durchführung verschiedener Aufga-
+ben beschrieben wurde. Die Autoren und Autorinnen nahmen an, je unan-
+genehmer eine Aufgabe sei, desto wahrscheinlicher wird sie aufgescho-
+ben. Diese Unterscheidung des Aufgabenwertes fand in der vorliegenden
+Studie keine Berücksichtigung.
+        In der vorliegenden Arbeit wurden die Ursachen von Prokrastina-
+tion weiter untersucht. Hierbei ging die vorliegende Studie der Frage nach,
+ob die Selbstwirksamkeit der Studierenden ursächlich für ein reduziertes
+Aufschiebeverhalten ist und ob das Maß der Selbstregulierung über die
+Prokrastinationstendenz entscheidet. Darüber hinaus sollte die Mediato-
+renrolle der Selbstregulation zwischen der Selbstwirksamkeit und der Pro-
+krastination untersucht werden. Die offensichtlichste Schlussfolgerung,
+die sich aus dieser Studie ergibt, ist, dass das Fehlen von oder der Mangel
+an Selbstregulationsfähigkeiten eine bedeutende Ursache bei der Prokras-
+tination unter Studierenden darstellt. Dementsprechend unterstützen die
+Ergebnisse die Aussage, dass die Prokrastination im Kern ein Versagen
+der Selbstregulation darstellt (Steel, 2007). Doch nicht nur die Selbstregu-
+lation beeinflusst die Tendenz, Dinge wiederholt aufzuschieben, so konn-
+ten die Ergebnisse der Studie auch die Bedeutsamkeit der Selbstwirksam-
+keit hervorheben. Es wurde gezeigt, dass der Glaube an die eigenen Fähig-
+keiten der Studierenden bedeutsam für eine erfolgreiche Selbstregulation
+ist und dies als Folge zu einer niedrigeren Prokrastinationstendenz führt.
+Die Erkenntnisse der vorliegenden Untersuchung unterstützen die Theorie
+des selbstregulierten Lernens, die davon ausgeht, dass „selbstregulatori-
+sche Aktivitäten Mediatoren zwischen persönlichen und kontextuellen
+Merkmalen und der tatsächlichen Leistung sind“ (Pintrich, 2000, S. 453).
+
+
+
+                                                                         33
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:                  Prokrastination
+
+
+
+Da die Ergebnisse den vermittelnden Effekt der Selbstregulation in der Be-
+ziehung zwischen Selbstwirksamkeit und Prokrastination belegen, unter-
+streicht dies die Bedeutung der Selbstregulation in der Prokrastinations-
+forschung. Die Resultate aus dieser Studie tragen zum wachsenden Korpus
+an Literatur bei, die nahelegt, dass die Verbesserung von Selbstregulati-
+onsfähigkeiten adaptive Strategien zur Bewältigung von Prokrastination
+ermöglicht.
+
+
+5.2   Kritische Würdigung und Empfehlung für zukünftige For-
+      schung
+      Nachfolgend wird auf verschiedene mögliche Mängel dieser Arbeit
+hingewiesen, die einerseits die Interpretation der Ergebnisse beeinflussen
+können und andererseits für zukünftige Forschung von Interesse sind.
+        Da es sich um eine Querschnittstudie handelt, ist die zeitlichen Prä-
+zedenz von Ursache und Wirkung kritisch zu betrachten. Die Items wurden
+zwar verbal voneinander abgegrenzt, jedoch hintereinander in einem Fra-
+gebogen abgefragt. In der zukünftigen Forschung sollten möglichst Längs-
+schnittstudien eingesetzt werden, um Kausalität zu gewährleisten. Einige
+Autoren und Autorinnen schlagen sogar vor, Mediationsmodelle nur mit
+Längsschnittdaten zu berechnen (Maxwell, Cole & Mitchell, 2011). Er-
+gänzend sollten zur Untersuchung von Prokrastination Tagebuchstudien
+eingesetzt werden (Scher & Ferrari, 2000). Diese Vorgehensweise kann
+deutliche Vorteile haben, beispielsweise das kurze Intervall zwischen Er-
+eignis und Berichterstattung sowie die Möglichkeit, Prozesse im Zeitver-
+lauf zu untersuchen und Phänomene sowohl auf der Zwischen-Personen-
+Ebene, als auch auf der intrapersonellen Ebene zu analysieren (Van Eerde,
+2003).
+       Weitere Einschränkungen der Forschungsarbeit ergaben sich bei
+der Erstellung des Fragebogens. In den Instruktionen wurde nicht angege-
+ben, wie lange die Beantwortung der Fragen in Anspruch nimmt oder bis
+
+
+                                                                          34
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:               Prokrastination
+
+
+
+wann eine Beantwortung des Fragebogens möglich ist. Dies könnte zu ei-
+ner Verminderung der Anzahl von potenziellen Teilnehmenden geführt
+haben. Bei der Beantwortung der Items mussten sich die Studierenden an
+vergangene Situationen erinnern. Retrospektionseffekte könnten die Ant-
+worten verzerrt haben. Eine weitere Einschränkung der durchgeführten
+Studie ist, dass Prokrastination aufgrund ihrer intraindividuellen Natur
+durch Selbstberichte gemessen wird. Die Antworten erfolgten auf Grund-
+lage der subjektiven Wahrnehmung der Teilnehmenden, was ebenfalls auf-
+grund des Retrospektionseffektes zu Verzerrungen der Ergebnisse geführt
+haben könnte. Des Weiteren musste jedes Item beantwortet werden und es
+konnte keine Frage übersprungen werden. Hinsichtlich der angefallenen
+Stichprobe könnte dies die Studierenden im Sinne der sozialen Erwünscht-
+heit beeinflusst haben.
+        Die Forschung im Rahmen dieser Arbeit wurde von einem dispo-
+sitionellen Standpunkt aus durchgeführt. Somit konnte eine mögliche In-
+teraktion mit situativen oder anderen wichtigen Variablen nicht bewertet
+werden. Es ist unklar, inwieweit die gefundenen Effekte auf andere Auf-
+gaben als das Verhalten im Studium (z. B. Lernen, Schreiben einer Semi-
+nararbeit, etc.) und auf andere Populationen als Studierende verallgemei-
+nert werden können. Dementsprechend könnten die Ergebnisse in anderen
+Kontexten anders ausfallen, da die Stichprobe in der vorliegenden Arbeit
+ausschließlich aus Studierenden bestand. Die Prokrastinationsforschung
+muss über das Studium von Einzelkontexten und die fast ausschließliche
+Verwendung von Schülerstichproben hinausgehen, um eine breitere Pa-
+lette von Verhaltensweisen zu erforschen (Steel, 2007).
+       In Anbetracht der Tatsache, dass die Kategorien der Effekte in der
+vorliegenden Forschungsarbeit heterogen sind, ist die Suche nach Mode-
+ratoren wichtig. Blunt und Pychyl (2002) konnten aufzeigen, dass die
+Aversivität von Aufgaben die Prokrastinationstendenz beeinflusst. So soll-
+ten Moderatoren in Form von Aufgabencharakteristika, insbesondere der
+Unterschied zwischen Aufgaben, die zu anspruchsvoll oder nicht an-
+spruchsvoll genug sind, in weiteren Arbeiten mit einbezogen werden. Van
+
+                                                                       35
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:               Prokrastination
+
+
+
+Eerde (2003) schlug beispielsweise vor, den Zusammenhang zwischen
+Prokrastination und Leistung durch Fähigkeiten und Aufgabencharakteris-
+tika wie Autonomie, Schwierigkeit und den Grad, in dem man flexibel und
+anpassungsfähig sein sollte, zu moderieren.
+        Eine weitere Einschränkung dieser Arbeit ist die ausschließliche
+Betrachtung der negativen Form des Aufschiebens. Die Forschenden Chu
+und Choi (2005) betonen, dass nicht alle zögernden Verhaltensweisen ent-
+weder schädlich sind oder zu negativen Konsequenzen führen. Insbeson-
+dere unterschieden sie zwei Arten von Prokrastinierenden: passive und ak-
+tive. Dabei sind die passiven aufschiebenden Personen Prokrastinierende
+im traditionellen Sinne. Diese seien durch ihre handlungsbezogene Unent-
+schlossenheit gelähmt und können Aufgaben nicht rechtzeitig erledigen.
+Im Gegensatz hierzu zeichnen sich aktive Prokrastinierende durch positive
+Verhaltensweisen aus (Chu & Choi, 2005). Sie ziehen es beispielsweise
+vor, unter Druck zu arbeiten und treffen bewusste Entscheidungen, Dinge
+aufzuschieben. Die Ergebnisse der Studie der Forschenden zeigten, dass
+aktive Prokrastinierende zwar im gleichen Maße wie passive zögern, je-
+doch hinsichtlich des Zeiteinsatzes, der Zeitkontrolle und des Selbstwirk-
+samkeitsglaubens den Nichtprokrastinierenden ähnlicher sind als den pas-
+siven Aufschiebern. Dementsprechend sollte zukünftig ein differenzierte-
+res Verständnis des Prokrastinationsverhaltens betont und die Auswirkun-
+gen des Prokrastinierens auf die Ergebnisse von Einzelpersonen neu be-
+wertet werden (Chu & Choi, 2005). Auch in dieser Arbeit wurde das
+Hauptaugenmerk – wie in der gesamten Prokrastinationsforschung über-
+wiegend – auf das einzelne Individuum gelegt. Interessant für weiterfüh-
+rende Forschungen wäre auch die Prokrastination in Gruppen, da Studie-
+renden- und Arbeitsgruppen oft für immer komplexere Aufgaben einge-
+setzt werden (Van Eerde, 2005). Hier sei z. B. für zukünftige Forschungen
+interessant, inwieweit eine Gruppenzugehörigkeit, die Prokrastination ih-
+rer Mitglieder reguliert. Hier könnte zum Beispiel die Versagensangst ei-
+ner der Gründe des Aufschiebeverhaltens sein.
+
+
+
+                                                                       36
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:                  Prokrastination
+
+
+
+5.3   Implikationen für die Praxis
+        Die Ergebnisse dieser Studie haben eine Reihe von wichtigen Impli-
+kationen für die zukünftige Praxis. Unter anderem deutet die Studie darauf
+hin, dass Prokrastination aus schlechter Selbstregulierung resultiert. Demen-
+sprechend wäre in der Praxis die Rolle, die die Selbstregulierung im Zusam-
+menhang mit Prokrastination spielt, für Praktikerinnen und Praktiker, insbe-
+sondere im Bildungsbereich, von großer Hilfe bei Interventionen und der
+Behandlung des Aufschiebeverhaltens. Ein selbstregulativer Rahmen für
+das Coaching wird als umfassender Weg vorgeschlagen, um das akademi-
+sche Prokrastinieren erfolgreich zu behandeln (Sims, 2014). Dementspre-
+chend können beratende Personen oder Psychologen und Psychologinnen,
+die mit prokrastinierenden Studierenden arbeiten, verschiedene Selbstregu-
+lationsstrategien wie Zielsetzung, Selbstüberwachung, Selbsteinschätzung,
+Zeitstrukturierung, Gestaltung von Prioritäten, Aufrechterhaltung der Moti-
+vation und kognitive Umstrukturierungsstrategien in ihre Behandlung ein-
+beziehen. Steel (2007) prognostizierte in seiner Meta-Analyse, dass beson-
+ders im akademischen Umfeld die Prokrastination ein allgegenwärtiges
+Problem sei, welches sich infolge zunehmender Ablenkungsmöglichkeiten
+durch elektronische Medien weiter zuspitzen wird. Auch Ziesat, Rosenthal
+und White (1978) schrieben den Ablenkungsmöglichkeiten eine große Be-
+deutung zu und führten ein Training zur Selbstregulierung von Verhaltens-
+weisen durch. Ziel dieses Trainings war es Prokrastination bei Studierenden
+zu behandeln. Dabei wurde festgestellt, dass das Entfernen von ablenkenden
+Reizen zwar kein Allheilmittel gegen Prokrastination ist (Nordby, Løkken
+& Pfuhl, 2019), aber dennoch Potenzial für die Behandlung hat, wenn es mit
+Sitzungen zu Zeitmanagement und Planung kombiniert wird.
+       Weitere mögliche Behandlungsansätze, um die Selbstregulation zu
+stärken und als Folge die Prokrastinationstendenz zu verringern, können
+auch in der Verbesserung der Selbstwirksamkeit liegen. Die Ergebnisse der
+vorliegenden Studie zeigen, dass ein höheres Maß an Selbstwirksamkeit zu
+einem höheren Maß an Selbstregulation führt, welche sich als Folge positiv
+auf die Prokrastinationstendenz auswirkt. Es wird angenommen, dass die
+
+                                                                          37
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:                  Prokrastination
+
+
+
+Steigerung der Selbstwirksamkeit, über die Selbstregulation, ein Schlüssel
+zur Reduzierung von Prokrastination sein kann (Eckert et al., 2018; Wolters,
+2003). Dementsprechend können sich beispielweise Behandlungsinterven-
+tionen, die sowohl aus einer verhaltensorientierten als auch aus einer kogni-
+tiven Perspektive stammen, im Hinblick auf die Bewältigung von Prokras-
+tination, die Verbesserung der Motivation und die Steigerung der Selbst-
+wirksamkeit für die Praxis bewähren (Rozental & Carlbring, 2014). Denn
+wenn Studierende glauben, dass eine Aufgabe bewältigt werden kann, steigt
+die eigene Motivation sowie die Wahrscheinlichkeit, dass die Handlung
+nicht mehr als unangenehm empfunden wird und als Resultat auch pünktlich
+erledigt, werden kann. Bandura (1997) zeigt ebenfalls diverse Möglichkei-
+ten zur Verbesserung von Selbstwirksamkeit auf. Hierzu zählt er neben po-
+sitivem Feedback während der Handlungsausführung auch die eigene Er-
+fahrung von Erfolgserlebnissen, Beobachtungslernen, eigene verbale Ermu-
+tigung und die empfundene emotionale Erregung. Auch das Tempo in aka-
+demischen Umgebungen macht es für Studierende zu einer Herausforde-
+rung, Schritt zu halten, und einige Nachhilfestunden während des Verlaufs
+des Studiums könnten eine sinnvolle Hilfsmaßnahme für Lernende darstel-
+len, um den Anschluss nicht zu verlieren (Duru & Balkis, 2017).
+        Klingsieck (2013) bezeichnet die zentralen Elemente bei der Be-
+handlung von Prokrastination als die Vermittlung von Selbstmanagement-
+strategien sowie die Umsetzung therapeutischer Strategien zur Bewältigung
+negativer Effekte und Kognition. Die Stärke eines erfolgreichen Anti-Pro-
+krastinationstrainings sehen Höcker et al. (2017) in einem gezielten und
+planvollen Verhaltenstraining, durch konkrete Selbstbeobachtung, Evalua-
+tion, Feedback und Korrektur. In Einklang mit den hier dargestellten Emp-
+fehlungen zur Behandlung von Prokrastination richtet sich das Behand-
+lungsangebot der Prokrastinationsambulanz der Universität Münster an Be-
+troffene und bietet neben Anti-Prokrastinationstrainings, bei denen die Stu-
+dierenden lernen, ihr Arbeitsverhalten gezielt zu beobachten, auch Selbst-
+tests an (Psychotherapie-Ambulanz WWU/ Prokrastinationsambulanz,
+2021).
+
+
+                                                                          38
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:                 Prokrastination
+
+
+
+6   Literaturverzeichnis
+
+Althammer, S. E. & Michel, A. (2021). Interventionen zur Förderung von
+    Selbstwirksamkeit, Selbstregulation und Emotionsregulation. In: A.
+    Michel & A. Hoppe (Hrsg.), Handbuch Gesundheitsförderung bei der
+    Arbeit (S. 1–13). Wiesbaden: Springer. https://doi.org/10.1007/978-3-
+    658-28654-5_6-1
+Bandura, A. (1977a). Self-efficacy: Toward a unifying theory of behav-
+   ioral    change.     Psychological   Review,     84(2),   191–215.
+   https://doi.org/10.1037/0033-295X.84.2.191
+Bandura, A. (1986). Social foundations of thought and action: A social
+   cognitive theory. Englewood Cliffs, N. J.: Prentice-Hall.
+Bandura, A. (1997). Self-efficacy: The exercise of control. New York:
+   Freeman.
+Baron, R. M. & Kenny, D. A. (1986). The moderator–mediator variable
+    distinction in social psychological research: Conceptual, strategic, and
+    statistical considerations. Journal of Personality and Social Psychol-
+    ogy, 51(6), 1173–1182. https://doi.org/10.1037/0022-3514.51.6.1173
+Baumann, N., Kaschel, R. & Kuhl, J. (2005). Striving for unwanted goals:
+   Stress-dependent discrepancies between explicit and implicit achieve-
+   ment motives reduce subjective well-being and increase psychoso-
+   matic symptoms. Journal of Personality and Social Psychology, 89,
+   781–799.
+Baumeister, R. F. & Vohs, K. D. (Eds.). (2004). Handbook of self-regula-
+   tion: Research, theory, and applications. New York: Guilford Press.
+Bernstein, P. (1998). Against the gods: The remarkable story of risk. New
+    York: Wiley.
+
+
+
+
+                                                                         39
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:               Prokrastination
+
+
+
+Blunt, A. K. & Pychyl, T. A. (2000). Task aversiveness and procrastina-
+    tion: A multidimensional approach to task aversiveness across stages
+    of personal projects. Personality and Individual Differences, 28, 153–
+    167.
+Carver, C. S. & Scheier, M. F. (1998). On the self-regulation of behavior.
+    Cambridge, UK: Cambridge University Press.
+Chu, A. H. C. & Choi, J. N. (2005). Rethinking procrastination: Positive
+   effects of ‚active’ procrastination behavior on attitudes and perfor-
+   mance. Journal of Social Psychology, 14, 245–264.
+Davidson, R. & MacKinnon, J. G. (1993). Estimation and Inference in
+   Econometrics. Oxford University Press.
+Diehl, M., Semegon, A. B. & Schwarzer, R. (2006). Assessing attention
+    control in goal pursuit: A component of dispositional self-regulation.
+    Journal of Personality Assessment, 86, 306–317.
+Dlugosch, G. E. & Dahl, C. (2012). Die Rolle der Selbstwirksamkeit und
+    Achtsamkeit bei der Gesundheitsförderung von sozial benachteiligten
+    Menschen – eine Projektdokumentation. Forschung und Praxis der
+    Gesundheitsförderung, 39, 16–20.
+Döring, N. & Bortz, J. (2016). Forschungsmethoden und Evaluation in den
+    Sozial- und Humanwissenschaften (5., vollständig überarbeitete, ak-
+    tualisierte und erweiterte Aufl.). Berlin, Heidelberg: Springer.
+Duru, E. & Balkis, M. (2017). Procrastination, self-esteem, academic per-
+   formance, and well-being: A moderated mediation model. Interna-
+   tional Journal of Educational Psychology, 6(2), 97. https://doi.
+   org/10.17583/ijep.2017.2584
+
+
+
+
+                                                                       40
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:                 Prokrastination
+
+
+
+Eckert, M., Ebert, D. D., Lehr, D., Sieland, B. & Berking, M. (2018). Does
+   SMS-support make a difference? Effectiveness of a two-week online-
+   training to overcome procrastination. A randomized controlled trial.
+   Frontiers in Psychology, 9 (1130). https://doi.org/10.3389/fpsyg.
+   2018.01103
+Ellis, A. & Knaus, W. J. (1977). Overcoming procrastination. New York:
+     Institute for Rational Living.
+Ferrari, J. R. (1991). Compulsive procrastination: some self-reported char-
+    acteristics. Psychological Reports, 68, 455–458. https://doi.org/
+    10.2466/pr0.1991.68.2.455
+Ferrari, J. R. (2001). Procrastination as self-regulation failure of perfor-
+    mance: Effects of cognitive load, self-awareness, and time limits on‚
+    working best under pressure. European Journal of Personality, 15,
+    391–406.
+Ferrari, J. R., Johnson, J. J. & McCown, W. C. (1995). Procrastination
+    and task avoidance: Theory, research, and treatment. New York: Ple-
+    num Press. https://doi.org/10.1007/978-1-4899-0227-6
+Ferrari, J. R., Parker, J. T. & Ware, C. B. (1992). Academic procrastina-
+    tion: Personality correlates with Myers-Brigg types, self-efficacy, and
+    academic locus of control. Journal of Social Behavior and Personal-
+    ity, 7, 595–602.
+Fritz, M. S. & MacKinnon, D. P. (2007). Required sample size to detect
+     the mediated effect. Psychological Science, 18, 233–239. https://
+     doi.org/10.1111/j.1467-9280.2007.01882.x
+Hayes, A. F. (2018). Introduction to mediation, moderation, and condi-
+   tional process analysis: A regression-based approach (2nd ed.). New
+   York: The Guilford Press.
+
+
+
+
+                                                                         41
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:                 Prokrastination
+
+
+
+Heckhausen, H. & Gollwitzer, P. M. (1987). Thought contents and cogni-
+   tive functioning in motivational versus volitional states of mind. Mo-
+   tivation and Emotion, 11, 101–120. http://doi.org/10.1007/BF00
+   992338
+Hen, M. & Goroshit, M. (2014). Academic procrastination, emotional in-
+   telligence, academic self-efficacy, and GPA: A comparison between
+   students with and without learning disabilities. Journal of Learning
+   Disabilities, 47(2), 116–124.
+Hobfoll, S. E. (2002). Social and psychological resources and adaptation.
+   Review of General Psychology, 6(4), 307–324. https://doi.org/10.
+   1037/1089-2680.6.4.307
+Höcker, A., Engberding, M. & Rist, F. (2017). Prokrastination. Ein Ma-
+   nual zur Behandlung des pathologischen Aufschiebens (2., aktuali-
+   sierte und ergänzte Aufl.). Göttingen: Hogrefe. http://doi.org/10.1026/
+   02842-000
+Howell, A. J. & Watson, D. C. (2007). Procrastination: associations with
+   achievement goal orientation and learning strategies. Personality &
+   Individual Differences, 43(1), 167–178.
+Jerusalem, M. & Schwarzer, R. (1981). Selbstwirksamkeit. WIRKSTUD.
+    In R. Schwarzer (Hrsg.), Skalen zur Befindlichkeit und Persönlichkeit
+    (Forschungsbericht 5, S. 24–28). Berlin: Freie Universität, Institut für
+    Psychologie.
+Kandemir, M. (2014). Reasons of academic procrastination: Self-regula-
+   tion, academic self-efficacy, life satisfaction and demographics varia-
+   bles. Social and Behavioral Sciences, 152, 188–193.
+Klassen, R. M. (2007). Using predictions to learn about the self-efficacy
+    of early adolescents with and without learning disabilities. Contempo-
+    rary Educational Psychology, 32, 173–187.
+
+
+
+
+                                                                         42
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:                 Prokrastination
+
+
+
+Klassen, R. M., Krawchuk, L. L. & Rajani, S. (2008). Academic procras-
+    tination of undergraduates: Low self-efficacy to self-regulate predicts
+    higher levels of procrastination. Contemporary Educational Psychol-
+    ogy, 33, 915–931.
+Klingsieck, K. B. (2013). Procrastination: When Good Things Don’t Come
+    to Those Who Wait. European Psychologist, 18(1), 24–34.
+Klingsieck, K. B., Fries, S., Horz, C. & Hofer, M. (2012). Procrastination
+    in a distance university setting. Distance Education, 33, 295–310.
+Klingsieck, K. B. & Fries, S. (2018). Eine Kurzskala der General Procras-
+    tination Scale (GPS-K). Zusammenstellung sozialwissenschaftlicher
+    Items und Skalen (ZIS). https://doi.org/10.6102/zis255
+MacKinnon, D. P., Cheong, J. & Pirlott, A. G. (2012). Statistical mediation
+   analysis. In H. Cooper, P. M. Camic, D. L. Long, A. T. Panter, D.
+   Rindskopf & K. J. Sher (Eds.), APA handbook of research methods in
+   psychology, Research designs: Quantitative, qualitative, neuropsy-
+   chological, and biological (2nd ed., pp. 313–331). Washington, DC:
+   American Psychological Association.
+Maxwell, S. E., Cole, D. A. & Mitchell, M. A. (2011). Bias in Cross-Sec-
+   tional Analyses of Longitudinal Mediation: Partial and Complete Me-
+   diation Under an Autoregressive Model. Multivariate Behavioral Re-
+   search, 46(5), 816–841. https://doi.org/10.1080/00273171.2011.
+   606716
+Mehl, P. J. (2016). Mäßigung. In D. Frey (Hrsg.), Psychologie der Werte
+   (S. 95–101). Berlin, Heidelberg: Springer.
+Milgram, N., Mey-Tal, G. & Levison, Y. (1998). Procrastination general-
+    ized or specific, in college students and their parents. Personality and
+    Individual Differences, 25, 297–316.
+
+
+
+
+                                                                         43
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:                Prokrastination
+
+
+
+Nordby, K., Løkken, R. A. & Pfuhl, G. (2019). Playing a video game is
+   more than mere procrastination. BMC Psychology, 7(33), 1–12.
+   https://doi.org/10.1186/s40359-019-0309-9
+Pajares, F. (1996). Self-efficacy beliefs in academic settings. Review of
+    Educational Research, 66, 543–578.
+Patrzek, J., Grunschel, C., König, N. & Fries, S. (2014). Fragebogen zu
+    Gründen akademischer Prokrastination. Konstruktion und erste Vali-
+    dierung. Diagnostica, 61(4), 184-196. https://doi.org/10.1026/0012-
+    1924/a000121
+Pintrich, P. R. (2000). Multiple goals, multiple pathways: The role of goal
+    orientation in learning and achievement. Journal of Educational Psy-
+    chology, 92, 544–555.
+Preacher, K. J. & Hayes, A. F. (2008). Asymptotic and Resampling Strat-
+    egies for Assessing and Comparing Indirect Effects in Multiple Me-
+    diator Models. Behavior Research Methods, 40, 879–891.
+    http://dx.doi.org/10.3758/BRM.40.3.879
+Psychotherapie-Ambulanz WWU/ Prokrastinationsambulanz, (2021). Be-
+    handlungsangebote der Prokrastinationsambulanz. Verfügbar unter:
+    https://www.uni-muenster.de/Prokrastinationsambulanz/Angebote_
+    Start.html
+Pychyl, T. A., Lee, J. M., Thibodeau, R. & Blunt, A. (2000). Five days of
+    emotion: An experience sampling study of undergraduate student pro-
+    crastination. Journal of Social Behavior and Personality, 15, 239–
+    254.
+Rakes, G. C. & Dunn, K. E. (2010). The impact of online graduate stu-
+   dents’ motivation and self-regulation on academic procrastination.
+   Journal of Interactive Online Learning, 9(1), 78–93.
+
+
+
+
+                                                                        44
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:                Prokrastination
+
+
+
+Rozental, A. & Carlbring, P. (2014). Understanding and Treating Procras-
+   tination: A Review of a Common Self-Regulatory Failure. Psychol-
+   ogy, 5, 1488–1502. http://dx.doi.org/10.4236/psych.2014.513160
+Rucker, D. D., Preacher, K. J., Tormala, Z. L. & Petty, R. E. (2011). Me-
+   diation Analysis in Social Psychology: Current Practices and New
+   Recommendations. Social and Personality Psychology Compass,
+   5(6), 359–371. https://doi.org/10.1111/j.1751-9004.2011.00355.x
+Scher, S. J. & Ferrari, J. R. (2000). The recall of completed and noncom-
+    pleted tasks through daily logs to measure procrastination. In J. R.
+    Ferrari & T. A. Pychyl (Eds.), Procrastination: current issues and new
+    directions (special issue). Journal of Social Behavior and Personality,
+    15, 255–265.
+Schwarzer, R. (1999). Selbstregulation (REG). In R. Schwarzer & M. Je-
+   rusalem (Hrsg.), Skalen zur Erfassung von Lehrer- und Schülermerk-
+   malen. Dokumentation der psychometrischen Verfahren im Rahmen
+   der wissenschaftlichen Begleitung des Modellversuchs Selbstwirk-
+   same Schulen (S. 92–93). Berlin: Freie Universität Berlin.
+Schwarzer, R. (2004). Psychologie des Gesundheitsverhaltens: Einfüh-
+   rung in die Gesundheitspsychologie (3., überarbeitete Aufl.). Göttin-
+   gen: Hogrefe.
+Schwarzer, R. & Jerusalem, M. (2002). Das Konzept der Selbstwirksam-
+   keit. In M. Jerusalem & D. Hopf (Hrsg.), Selbstwirksamkeit und Mo-
+   tivationsprozesse in Bildungsinstitutionen (S. 28–53). Weinheim:
+   Beltz.
+Senécal, C., Koestner, R. & Vallerand, R. J. (1995). Self-regulation and
+    academic procrastination. The Journal of Social Psychology, 135(5),
+    607–619. https://doi.org/10.1080/00224545.1995.9712234
+Sims, C. M. (2014). Self-regulation coaching to alleviate student procras-
+   tination: Addressing the likeability of studying behaviours. Internati-
+   onal Coaching Psychology Review, 9(2), 1750–2764.
+
+                                                                        45
+
+Schriftenreihe des iwp, Nr. 11, Schuhmacher:                Prokrastination
+
+
+
+Statista Research Department (2011). Schlechte Angewohnheiten der
+     Deutschen 2011. Verfügbar unter: https://de.statista.com/statistik/da-
+     ten/studie/188094/umfrage/schlechte-angewohnheiten-der-deutschen
+Steel, P. (2007). The nature of procrastination: A meta-analytic and theo-
+    retical review of quintessential self-regulatory failure. Psychological
+    Bulletin, 133, 65–94.
+Taura, A. A., Roslan, M. C. A. S. & Omar, Z. (2014). Self-Regulation as
+    a Mediator in the Relationship between Self-Efficacy, Task Value and
+    Active Procrastination. International Journal of Humanities and So-
+    cial Science, 4, 9.
+Tice, D. & Baumeister, R. F. (1997). Longitudinal study of procrastination,
+    performance, stress, and health: The cost and benefits of dawdling.
+    Psychological Science, 8, 454–458.
+Van Eerde, W. (2003). A meta-analytically derived nomological network
+   of procrastination. Personality and Individual Differences, 35, 1401–
+   1418.
+Wolters, C. A. (2003). Understanding procrastination from a self-regulated
+   learning perspective. Journal of Educational Psychology, 95, 179–
+   187. https://doi:10.1037/0022-0663.95.1.179
+Zhao, X., Lynch, J. G. & Chen, Q. (2010). Reconsidering Baron and
+   Kenny: Myths and Truths about Mediation Analysis. Journal of Con-
+   sumer Research, 37, 197–206. https://doi.org/10.1086/651257
+Ziesat, H. A., Rosenthal, T. L. & White, G. M. (1978). Behavioral Self-
+    Control in Treating Procrastination of Studying. Psychological Re-
+    ports, 42(1), 59–69. https://doi.org/10.2466/pr0.1978.42.1.59
+Zimmerman, B. J., Bandura, A. & Martinez-Pons, M. (1992). Self-moti-
+   vation for academic attainment: The role of self-efficacy beliefs and
+   personal goal-setting. American Educational Research Journal, 29,
+   663–676.
+
+
+                                                                        46
+
+Folgende Bände sind bisher in dieser Reihe erschienen:
+
+
+Band 1 (2019)
+Lischka, H. M., Sauer, S. & Sülzenbrück, S. (Hrsg.)
+Typisch! Empirische Beiträge zum Einfluss von Stereotypen auf mensch-
+liches Verhalten
+ISSN (Print) 2569-0876 ISSN (eBook) 2569-0884
+
+
+Band 2 (2020)
+Kurzenhäuser-Carstens, S. & Sülzenbrück, S. (Hrsg.)
+Einfluss von appbasiertem Achtsamkeitstraining auf Gesundheit und
+Wohlbefinden von Berufstätigen.
+ISSN 2569-0876 (Print) – ISSN 2569-0884 (eBook) /
+ISBN (Print) 978-3-89275-127-4 – ISBN (eBook) 978-3-89275-128-1
+
+
+Band 3 (2020)
+Sülzenbrück, S. & Sauer, S. (Hrsg.)
+Wege zur empirischen Abschlussarbeit in der Wirtschaftspsychologie.
+ISSN 2569-0876 (Print) – ISSN 2569-0884 (eBook) /
+ISBN (Print) 978-3-89275-139-7 – ISBN (eBook) 978-3-89275-140-3
+
+
+Band 4 (2020)
+Surma, S. & Sülzenbrück, S. (Hrsg.)
+Open Space Büroflächen – moderne Arbeitsform oder Belastungsfaktor?
+ISSN 2569-0876 (Print) – ISSN 2569-0884 (eBook) /
+ISBN (Print) 978-3-89275-166-3 – ISBN (eBook) 978-3-89275-167-0
+
+Band 5 (2021)
+Sülzenbrück, S. & Externbrink, K. (Hrsg.)
+Ethische Führung in der Finanzbranche – eine Mixed-Methods-Studie zur
+Bedeutung ethischer Grundsätze in der Führungspraxis sowie zum Zusam-
+menhang von ethischer Führung und psychologischem Kapital von Ge-
+führten in Banken
+ISSN (Print) 2569-0876 – ISSN (eBook) 2569-0884
+ISBN (Print) 978-3-89275-194-6 – ISBN (eBook) 978-3-89275-195-3
+
+Band 6 (2021)
+Sachse, K. & Sülzenbrück, S. (Hrsg.)
+Qualitative Untersuchung sozialer Kompetenzen im Topsharing und deren
+Berücksichtigung in der Management-Diagnostik
+ISSN (Print) 2569-0876 – ISSN (eBook) 2569-0884
+ISBN (Print) 978-3-89275-200-4 – ISBN (eBook) 978-3-89275-201-1
+
+Band 7 (2021)
+Sandra Sülzenbrück / Kai Externbrink (Hrsg.)
+Eine unzufriedenstellende Organisation bekommt unzufriedenstellende
+Mitarbeitende:
+Konstruktion einer Skala zur inneren Kündigung
+ISSN (Print) 2569-0876 – ISSN (eBook) 2569-0884
+ISBN (Print) 978-3-89275-202-8 – ISBN (eBook) 978-3-89275-203-5
+
+Band 8 (2021)
+Lenka Ďuranová / Sandra Sülzenbrück (Hrsg.)
+Der Zusammenhang zwischen IKT-Anforderungen und Erholungsbedarf:
+Zur potenziell mediierenden und moderierenden Rolle mentalen Abschal-
+tens
+ISSN (Print) 2569-0876 – ISSN (eBook) 2569-0884
+ISBN (Print) 978-3-89275-226-4 – ISBN (eBook) 978-3-89275-227-1
+
+Band 9 (2022)
+Sandra Sülzenbrück / Kai Externbrink (Hrsg.)
+Systemische Führung und Wohlbefinden: Beeinflusst ein Systemischer
+Führungsstil die physische und psychische Gesundheit der Geführten?
+Eine quantitative Untersuchung unter besonderer Berücksichtigung der
+Big Five Persönlichkeitseigenschaften
+ISSN (Print) 2569-0876 – ISSN (eBook) 2569-0884
+ISBN (Print) 978-3-89275-244-8 – ISBN (eBook) 978-3-89275-245-5
+
+Band 10 (2022)
+Lenka Ďuranová / Sandra Sülzenbrück (Hrsg.)
+Ein oder Aus? Auswirkungen der Mehrarbeit durch Technologienutzung
+auf die Erholung und das Wohlbefinden von Beschäftigten
+ISSN (Print) 2569-0876 – ISSN (eBook) 2569-0884
+ISBN (Print) 978-3-89275-248-6 – ISBN (eBook) 978-3-89275-249-3
+
+                                            Forschungsstark und praxisnah:
+
+                                            Deutschlands
+                                            Hochschule
+                                            für Berufstätige
+Raphaela Schmaltz studiert den
+berufsbegleitenden Master-Studiengang
+Taxation am FOM Hochschulzentrum Köln.
+
+
+
+
+Die FOM ist Deutschlands Hochschule für Berufstätige. Sie bietet über 40 Bachelor- und Master-
+Studiengänge, die im Tages- oder Abendstudium berufsbegleitend absolviert werden können
+und Studierende auf aktuelle und künftige Anforderungen der Arbeitswelt vorbereiten.
+
+In einem großen Forschungsbereich mit hochschuleigenen Instituten und KompetenzCentren
+forschen Lehrende – auch mit ihren Studierenden – in den unterschiedlichen Themenfeldern der
+Hochschule, wie zum Beispiel Wirtschaft & Management, Wirtschaftspsychologie, IT-Management
+oder Gesundheit & Soziales. Sie entwickeln im Rahmen nationaler und internationaler Projekte
+gemeinsam mit Partnern aus Wissenschaft und Wirtschaft Lösungen für Problemstellungen der
+betrieblichen Praxis.
+
+Damit ist die FOM eine der forschungsstärksten privaten Hochschulen Deutschlands. Mit ihren
+insgesamt über 2.000 Lehrenden bietet die FOM rund 57.000 Studierenden ein berufsbeglei-
+tendes Präsenzstudium im Hörsaal an einem der 36 FOM Hochschulzentren und ein digitales
+Live-Studium mit Vorlesungen aus den hochmodernen FOM Studios.
+
+
+
+
+Alle Institute und KompetenzCentren unter
+
+fom.de/forschung
+
+                                                           ISBN (Print) 978-3-89275-262-2            ISSN (Print) 2569-0876
+                                                           ISBN (eBook) 978-3-89275-263-9            ISSN (eBook) 2569-0884
+
+
+
+
+                         KCC KompetenzCentrum
+                         für Corporate Social Responsibility
+                         der FOM Hochschule für Oekonomie & Management              iwp     Institut für Wirtschaftspsychologie
+                                                                                            der FOM Hochschule
+                                                                                            für Oekonomie & Management
+
+
+
+
+FOM Hochschule                                                             iwp
+
+FOM. Die Hochschule. Für Berufstätige.                                     Das Institut für Wirtschaftspsychologie (iwp) der
+                                                                           FOM hat sich unter der Leitung von Prof. Dr. habil.
+Mit über 57.000 Studierenden ist die FOM eine der                          Sandra Sülzenbrück und Prof. Dr. Kai Externbrink
+größten Hochschulen Europas und führt seit 1993                            zum Ziel gesetzt, in den vier großen Anwendungs-
+Studiengänge für Berufstätige durch, die einen staat-                      feldern der Wirtschaftspsychologie – Arbeit, Orga-
+lich und international anerkannten Hochschulab-                            nisation, Personal und Konsumenten – empirisch zu
+schluss (Bachelor/Master) erlangen wollen.                                 forschen. Das iwp strebt danach, die gewonnenen
+                                                                           wissenschaftlichen Erkenntnisse für die (Unter-
+Die FOM ist der anwendungsorientierten Forschung                           nehmens-)Praxis sowie die Scientific Community
+verpflichtet und verfolgt das Ziel, adaptionsfähige                        möglichst unmittelbar zugänglich und nutzbar zu
+Lösungen für betriebliche bzw. wirtschaftsnahe oder                        machen. Unter anderem werden folgende Themen
+gesellschaftliche Problemstellungen zu generieren.                         in den Anwendungsfeldern untersucht:
+Dabei spielt die Verzahnung von Forschung und                               Arbeitszufriedenheit, Stress und Erholung,
+Lehre eine große Rolle: Kongruent zu den Master-                               Digitalisierung und die Erfordernisse und Aus-
+programmen sind Institute und KompetenzCentren                                 wirkungen der Entgrenzung des Arbeitens im
+gegründet worden. Sie geben der Hochschule ein                                 Bereich Arbeitspsychologie,
+fachliches Profil und eröffnen sowohl Wissenschaft-                         Organisationsdiagnose und -entwicklung sowie
+lerinnen und Wissenschaftlern als auch engagierten                             Führung im Bereich Organisationspsychologie,
+Studierenden die Gelegenheit, sich aktiv in den For-                        die Entwicklung von psychologischen Testver-
+schungsdiskurs einzubringen.                                                   fahren für Personalpraktiker im Bereich Perso-
+                                                                               nal,
+                                                                            Entscheidungsprozesse bei Käufen und Finan-
+Weitere Informationen finden Sie unter fom.de                                  zentscheidungen sowie der Entwicklung neuer
+                                                                               Messverfahren im Bereich Konsumentenpsy-
+                                                                               chologie.
+
+
+                                                                           Weitere Informationen finden Sie unter fom-iwp.de
+
+
+
+                                       Der Wissenschaftsblog der FOM Hochschule bietet Einblicke in die vielfältigen
+        Der Wissenschaftsblog          Themen, zu denen an der FOM geforscht wird: fom-blog.de
+        der FOM Hochschule
+
