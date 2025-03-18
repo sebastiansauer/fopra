@@ -260,7 +260,7 @@ Zu den (gewünschten^["Desiderata"]) Eigenschaften von Wissenschaft gehören:
 - *Offenheit*: Der Leser muss nicht glauben, sondern kann selber nachprüfen.
 - *Abstraktion*: Eine wissenschaftliche Aussage soll möglichst weite Gültigkeit besitzen, Spezifika von Einzelfällen werden auf zugrundeliegende Konstanzen verallgemeinert
 - *Analyse*: Komplexe Probleme werden soweit als möglich in Einzelaspekte aufgebrochen^[<https://www.savagechickens.com/2021/07/big-question.html>]
-- *Evidenzgründung*: Schlüsse werden auf Basis von Daten (Fakten, Messungen, etc.) gezogen.
+- *Evidenzgründung*: Schlüsse werden auf Basis von Daten (Fakten, Messungen, etc.) gezogen. Dabei wird zwischen Fakt und Schluss (und Meinung) klar unterschieden.
 - *Quellen*: Aussagen werden mit Quellenangaben untermauert.
 
 
@@ -394,7 +394,7 @@ Beispiele für die einzelnen Zielarten:
 ### Ich will kein Wissenschaftler werden!
 
 
-:::{.exm-job}
+:::{#exm-job}
 ### Unternehmensberatung und Wissenschaft
 Toni arbeitet bei einer Unternehmensberatung. Um als Unternehmensberater zu arbeiten, braucht es wissenschaftliches Denken, sagt Toni. Sie arbeitete erst als Wissenschaftlerin, jetzt in der Unternehmensberatung.
 
