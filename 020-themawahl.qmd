@@ -101,13 +101,13 @@ flowchart LR
 ### Forschungsfrage 
 Beachten Sie, dass ein "Thema" keinesfalls ausreichend ist, um eine wissenschaftliche Studie durchzuführen und zu dokumentieren.
 Ein "Thema" als solches ist viel zu unpräzise.
-Was Sie brauchenk ist eine präzise Forschungsfrage.
+Was Sie brauchen ist eine präzise Forschungsfrage.
 
 
 
 :::{#def-forschungsfrage}
 ### Forschungsfrage
-Eine Forschungsfrage definiert die Frage (das Problem), die Sie in Ihrer Arbeit versuchen zu beantworten.$\square$
+Eine Forschungsfrage ist die Frage (das Problem), die Sie in Ihrer Arbeit versuchen zu beantworten.$\square$
 :::
 
 
@@ -124,7 +124,12 @@ flowchart LR
 ```
 
 
-Beachten Sie, dass eine Forschungsfrage nicht so aussehen muss; sie kann auch anders aussehen.
+Beachten Sie, dass eine Forschungsfrage nicht so aussehen muss. 
+Aber häufig sind Forschungsfragen in dieser Struktur aufgebaut.
+
+Die genaue Forschungsfrage muss man nicht zu Beginn seiner wissenschaftlichen Arbeit kennen.
+Das kann man auch gar nicht.
+Vielmehr schält sich die Forschungsfrage im Zuge Ihrer Beschäftigung mit dem Thema heraus.
 
 
 
@@ -230,32 +235,37 @@ Wenn Sie dranbleiben und sich weiter einarbeiten steigt Ihr Verständnis spiralf
 
 
 
-## Literaturrecherche
+## Wissenslandkarte aufbauen
 
 
 ### Ablauf
 
-Sogenannte "Abläufe" wie die Wahl des Themas einer Forschungsarbeit, die Literaturrecherche oder das Schreiben sind in Wahrheit gar keine Abläufe. Es sind eher Kreise, da man die gleichen Tätigkeiten öfters wiederholt.
-Optimistischer ausgedrückt, sind es weder Abläufe noch Kreise, sondern Spiralen, s. @fig-spirale, da sich die Tätigkeiten zwar wiederholen, aber auf höherem oder verfeinertem Niveau.
+Sogenannte "Abläufe" wie die Wahl des Themas einer Forschungsarbeit, 
+die Literaturrecherche oder das Schreiben sind in Wahrheit gar keine Abläufe. 
+Es sind eher Kreise, da man die gleichen Tätigkeiten öfters wiederholt.
+Optimistischer ausgedrückt, sind es weder Abläufe noch Kreise, sondern Spiralen, s
+. @fig-spirale, da sich die Tätigkeiten zwar wiederholen, aber auf höherem oder verfeinertem Niveau.
 
 
-@fig-litsearch stellt die einzelnen Schritte der Literaturrechere im Überblick dar.
+@fig-litsearch stellt die einzelnen Schritte des Wissensaufbau im Überblick dar.
 
 ```{mermaid}
 %%| fig-cap: Der Ablauf der Literaturrecherche
 %%| label: fig-litsearch
 flowchart LR
-Suchen-->Screenen-->Sammeln-->Lesen-->Extrahieren
+Suchen-->Screenen-->Sammeln-->Lesen-->Zusammenfassen-->Suchen
 ```
+
+
 
 
 
 :::{#def-litsearch}
 ### Literaturrecherche
-Die Literaturrecherche ist ein Ablauf, also eine zusammenhänge Folge mehrere Tätigkeitsschitte, mit dem Ziel, ein Literaturwerk (kurz: Werk) oder mehrere für die Forschungsfrage geeignete Werke zu finden. $\square$
+Die Literaturrecherche ist ein Suchprozess mit dem Ziel, ein Literaturwerk (kurz: Werk) oder mehrere für die Forschungsfrage geeignete Werke zu finden. $\square$
 :::
 
-1. *Suchen* ist das Ausfindigmachen geeigneter Literatur. Dazu sucht man meist in einschlägigen wissenschaftlichen Literatur-Datenbanken wie z. B. Google Scholar.
+1. *Suchen* (Literaturrecherce) ist das Ausfindigmachen geeigneter Literatur. Dazu sucht man meist in einschlägigen wissenschaftlichen Literatur-Datenbanken wie z. B. Google Scholar.
 Beim Suchen von muss man unterscheiden zwischen dem Finden von 
 
     a. 🖋️ *Zitierinformationen* wie Autor, Titel, Datum der Veröffentlichung oder ID-Nummer (wie DOI oder ISBN)
@@ -268,11 +278,11 @@ Beim Suchen von muss man unterscheiden zwischen dem Finden von
 
 4. Jetzt folgt das *Lesen*^[Ein eigener Ablauf mit mehreren Schritten] eines geeigneten Werks. 
 
-5. Zentrale Inhalte *extrahiert* man aus dem Werk und hält sie an geeigneter Stelle fest, z. B. als Tag oder Notiz in Zotero.
+5. Zentrale Inhalte *fasst* man aus dem Werk *zusammen* und hält sie an geeigneter Stelle fest, z. B. als Tag oder Notiz in Zotero oder im [Zettelkasten](https://zettelkasten.de/overview/).
 
 
 :::{#def-werk}
-### Was ist "Werk"?
+### Was ist ein "Werk"?
 Unter einem wissenschaftlichen Werk versteht man meist 
 
 - einen Aufsatz 
@@ -282,42 +292,36 @@ Unter einem wissenschaftlichen Werk versteht man meist
 - in den Sozialwissenschaften oft empirischer Natur ist (also Daten untersucht) $\square$
 :::
 
-### Werkzeuge
+### Ablauf
 
-Geeignete (IT-)Werkzeuge für diese Schritte sind in @fig-litsearch-tools dargestellt.
+Der Ablauf einer Literaturrecherche ist in @fig-litsearch-ablauf dargestellt.
 
 
 
 ```{mermaid}
 %%| fig-cap: Der Ablauf der Literaturrecherche
-%%| label: fig-litsearch-tools
+%%| label: fig-litsearch-ablauf
 flowchart LR
-  subgraph S[Suchen]
-    Suchen --- |Datenbank| litdb[Literatur-Liste]
-  end
-  subgraph Sc[Screenen]
-    Screenen --- |AI| lt1[Überblick]
-  end
-  subgraph Sa[Sammeln]
-    Sammeln --- |Datenbank| z1[Literatur-Liste]
-  end
-  subgraph Le[Lesen]
-    Lesen --- |Lesetechnik| lt2[Verständnis]
-  end
-  subgraph E[Extrahieren]
-    Extrahieren --- Notizen
-  end
-    
-S-->Sc-->Sa-->Le-->E
+  Suchen --> Screenen --> Sammeln --> Z[Zusammenfassen] --> Verbinden 
+
 ```
 
+
+1. *Suchen*: Sie finden Literaturquellen, die für Ihre Forschungsfrage relevant sein könnnten.
+2. *Screenen*: Sie verschaffen sich einen Überblick über Passung von Forschungsfrage sowie methodischer Angemessenheit der identifizierten Literaturquellen.
+3. *Sammeln*: Sie halten die Quellenangaben geeigneter Werke in einer Liste fest (in Ihrem Literaturverwaltungsprogramm).
+3. *Zusammmenfassen*: Sie schreiben einen Überblick zum Inhalt der relevanten Literaturquellen. Sie schreiben also das Wesentliche der Quelle zusammen.
+4. *Verbinden*: Sie setzen die zentralen Inhalte der Literaturquellen so miteinander in Bezug, dass Sie eine "Landkarte" von Wissen (inkl. der Quellenangaben) bekommen.
+
+
+### Datenbanken für die Literaturrecherche
 
 Die Anzahl der Suchmaschinen bzw. Datenbanken bzw. (AI-)Suchdienste wächst und schwankt, 
 so dass es schwierig ist, einen umfassenden Überblick zu geben. @tbl-suchdienste versucht, einen Überblick über einige empfehlenswerte Dienste zu geben. 
 Zu beachten ist, dass die Zahl der Zitationen angebeben sind, also der Metadaten von Forschungsartikeln.
 Die Suchmaschinen haben Zugriff auf den Volltext einer Teil der Zitationen.
 Das bedeutet aber nicht, dass man über die Suchmaschinen Volltextzugriff bekommen kann.
-Bei "geschützten" (paywalled) Artikeln ist diese nur mit Bezahlzugang möglich.
+Bei "geschützten" (sog. paywalled) Artikeln ist diese nur mit Bezahlzugang möglich.
 Mit etwas Glück hat Ihre Bib Zugang zum betreffenden Artikel.
 
 
@@ -384,6 +388,59 @@ Um an Volltexte zu gelangen, gibt es verschiedene Wege:
 - Verschiedene (KI-)Suchdienste zeigen an, ob ein Volltext verfügbar ist (z.B. Semantic Scholar).
 - Volltextdienste wie "S c i h u b" werden nicht als legale Quellen angesehen.
 
+
+### Texte zusammenfassen
+
+Ist es wirklich noch zeitgemäß, einen Text zusammenzufassen ("exzerpieren")?
+Schließlich ist das viel Aufwand. 
+Und die KI fasst mir den Text ja null-komma-nix zusammen.
+Wozu also der Aufwand?
+
+Das Problem ist, wenn Sie das Wesentliche eines Textes nicht aufschreiben,
+dann können Sie sich kaum an diesen Inhalt erinnern, wenn Sie es brauchen.
+Nur wenn Sie über schriftliche Notizen verfügen, können Sie auch nach längerer Zeit auf das Wissen zugreifen.
+Es führt also kein Weg an schriftlichen Notizen vorbei.
+
+Außerdem schärft das Schreiben Ihre Gedanken.
+Manche Leute gehen soweit zusagen, dass das Denken erst beim Schreiben passiert.
+Durch das Aufschreiben - immer in eigenen Worten - sind Sie gezwungen,
+den Text zu verstehen.
+
+Wenn Sie einen Text zusammenfassen, vertrauen viele Leute auf Unterstreichen bzw. Anstreichen der relevanten Textstellen.
+Besser ist es aber, sich zu einer wichtigen Textstelle eine Notiz zu machen.
+Diese Notiz kann auf einem Schmierzettel sein oder in einer App oder in einem Notizbuch.
+Wichtig ist aber, dass Sie in eigenen Worten zusammenfassen. 
+Vergessen Sie auch die Quellenangabe nicht,
+da Sie ja zu jedem Gedanken die Quelle angeben müssen.
+
+
+### Wissen verbinden
+
+Aber Notizen alleine nutzen nicht viel.
+Viele Notizen für sich genommen nutzen nicht viel.
+Viele Notizen, ohne Verbindung, sind nur ein Haufen.
+
+Um die Zusammenhänge Ihrer Notizen zu sehen, brauchen Sie, ja: Zusammenhänge zwischen den Notizen.
+
+Sie müssen also Querverweise (Links) zwischen den Notizen schaffen.
+Hashtags den Notizen zuweisen ist ebenfalls nützlich.
+
+Solche Verbindungen erst lassen ein Wissens-Netzwerk oder eine Wissens-Landkarte entstehen.
+Und nur diese Wissenslandkarte ist nützlich. Der Zettelhaufen ist es nicht.
+
+Es gibt verschiedene Apps, die helfen, eine Wissenslandkarte zu erstellen, 
+indem Wissensverbindungen erstellt werden.
+Eine davon heißt [Obsidian](https://obsidian.md/), s. @fig-obsidian1.
+Obsidian hat ein paar Vorzüge:
+
+- kostenfrei
+- speichert Ihre Notizen offline als Textdateien
+- nutzerfreundlich
+
+![Die Oberfläche von Obsidian](img/obsidian1.png)
+
+
+
 ## Lesen
 
 ### Lesen ohne KI?
@@ -422,7 +479,7 @@ Den Zettel nachher wegzuschmeißen, weil Sie später einen besseren Gedanken hat
 %%| fig-cap: "Erst denken, dann skribbeln, dann schreiben"
 flowchart LR
   subgraph V[nicht schreiben, denken]
-    lesen --> skribbeln --> lesen
+    lesen --> skribbeln --> denken --> lesen
   end  
   KP[Kein Plan]  --> V
  
@@ -458,9 +515,10 @@ Lassen Sie uns mal Ihre Tätigkeiten in dieser Phase der Studie zusammenfassen, 
 
 d <- tribble(
   ~Tätigkeit, ~Relevanz,
-  "Lesen", 100,
-  "Denken", 90,
-  "Skribbeln", 80,
+  "Suchen", 100,
+  "Lesen", 90,
+  "Denken", 80,
+  "Skribbeln", 70,
   "Schreiben", 20
 )
 
