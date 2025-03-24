@@ -22,14 +22,19 @@ theme_set(theme_minimal())
 - Sie können Strategien anwenden, um sich eine Forschungsfrage zu erarbeiten.
 - Sie können eine Zeitplanung erstellen für Ihre Projektarbeit.
 - Sie können einen Fachartikel effizient lesen.
-- Sie können eine Sach-, eine operationlisierten Hypothese und statistische Hypothese unterscheiden und jeweils formulieren.
-
+- Sie können eine Sach-, eine operationalisierten Hypothese und statistische Hypothese unterscheiden und jeweils formulieren.
 
 
 ### Position im Lernpfad
 
 Sie befinden sich im Abschnitt "Themawahl" in @fig-ueberblick.
 Behalten Sie Ihren Fortschritt im Projektplan im Blick, s. @fig-projektplan.
+
+
+### Benötigte Software
+
+Für dieses Kapitel benötigen Sie [Zotero](https://www.zotero.org/) und [Obsidian](https://obsidian.md/) (sowie einen Browser).
+
 
 
 ## Vom Thema zur Forschungsfrage
@@ -436,7 +441,8 @@ Obsidian hat ein paar Vorzüge:
 - speichert Ihre Notizen offline als Textdateien
 - nutzerfreundlich
 
-![Die Oberfläche von Obsidian](img/obsidian1.png){#fig-obsidian width=75%}
+![Die Oberfläche von Obsidian](img/obsidian1.png){#fig-obsidian1 width=75%}
+
 
 
 
@@ -499,7 +505,7 @@ Wenn Sie sich fragen, wie Notizen ("Skribbel") aussehen könnten, dann orientier
 
 ![Notiz 3](img/skribbel3.JPG){#fig-notiz3}
 
-geskribbelte Notizen - Eine kurze Verbindung zwischen Gehirn und Hand
+geskribbelte Notizen -- Eine kurze Verbindung zwischen Gehirn und Hand
 :::
 
 
