@@ -245,19 +245,37 @@ die Literaturrecherche oder das Schreiben sind in Wahrheit gar keine Abläufe.
 Es sind eher Kreise, da man die gleichen Tätigkeiten öfters wiederholt.
 Optimistischer ausgedrückt, sind es weder Abläufe noch Kreise, sondern Spiralen, s
 . @fig-spirale, da sich die Tätigkeiten zwar wiederholen, aber auf höherem oder verfeinertem Niveau.
-
-
 @fig-litsearch stellt die einzelnen Schritte des Wissensaufbau im Überblick dar.
 
 ```{mermaid}
-%%| fig-cap: Der Ablauf der Literaturrecherche
+%%| fig-cap: Der Ablauf des Wissensaufbau
 %%| label: fig-litsearch
 flowchart LR
-Suchen-->Screenen-->Sammeln-->Lesen-->Zusammenfassen-->Suchen
+Suchen-->Screenen-->Sammeln-->Lesen-->Zusammenfassen-->Verbinden-->Suchen
 ```
 
 
 
+
+
+
+
+1. *Suchen* (Literaturrecherce) ist das Ausfindigmachen geeigneter Literatur. Dazu sucht man meist in einschlägigen wissenschaftlichen Literatur-Datenbanken wie z. B. Google Scholar. Sie finden Literaturquellen, die für Ihre Forschungsfrage relevant sein könnnten.
+Beim Suchen von muss man unterscheiden zwischen dem Finden von 
+
+    a. 🖋️ *Zitierinformationen* wie Autor, Titel, Datum der Veröffentlichung oder ID-Nummer (wie DOI oder ISBN)
+    b. 📌 *(Always-)Open-Access-Elemente* wie Titel, Abstract und Literaturverzeichnis
+    c. 📖 *Volltexten*, d.h. dem kompletten Text eines Werks
+
+2. Im nächsten Schritt, *Screenen*, sind zumeist die Open-Access-Elemente am wichtigsten, damit man einschätzen kann, ob das Werk geeignet ist. Der Volltext ist an dieser Stelle nicht (unbedingt) nötig. Sie verschaffen sich also einen Überblick über Passung von Forschungsfrage sowie methodischer Angemessenheit der identifizierten Literaturquellen.
+
+3. Geeignete Werke *sammelt* man in einer Liste, z. B. mit dem Literaturprogramm Zotero. Dabei werden pro Werk die Zitierinformationen festgehalten.
+
+4. Jetzt folgt das *Lesen*^[Ein eigener Ablauf mit mehreren Schritten] eines geeigneten Werks. 
+
+5. *Verbinden*: Sie setzen die zentralen Inhalte der Literaturquellen so miteinander in Bezug, dass Sie eine "Landkarte" von Wissen (inkl. der Quellenangaben) bekommen.
+
+6. Zentrale Inhalte *fasst* man aus dem Werk *zusammen* und hält sie an geeigneter Stelle fest, z. B. als Tag oder Notiz in Zotero oder im [Zettelkasten](https://zettelkasten.de/overview/).
 
 
 :::{#def-litsearch}
@@ -265,20 +283,6 @@ Suchen-->Screenen-->Sammeln-->Lesen-->Zusammenfassen-->Suchen
 Die Literaturrecherche ist ein Suchprozess mit dem Ziel, ein Literaturwerk (kurz: Werk) oder mehrere für die Forschungsfrage geeignete Werke zu finden. $\square$
 :::
 
-1. *Suchen* (Literaturrecherce) ist das Ausfindigmachen geeigneter Literatur. Dazu sucht man meist in einschlägigen wissenschaftlichen Literatur-Datenbanken wie z. B. Google Scholar.
-Beim Suchen von muss man unterscheiden zwischen dem Finden von 
-
-    a. 🖋️ *Zitierinformationen* wie Autor, Titel, Datum der Veröffentlichung oder ID-Nummer (wie DOI oder ISBN)
-    b. 📌 *(Always-)Open-Access-Elemente* wie Titel, Abstract und Literaturverzeichnis
-    c. 📖 *Volltexten*, d.h. dem kompletten Text eines Werks
-
-2. Im nächsten Schritt, *Screenen*, sind zumeist die Open-Access-Elemente am wichtigsten, damit man einschätzen kann, ob das Werk geeignet ist. Der Volltext ist an dieser Stelle nicht (unbedingt) nötig.
-
-3. Geeignete Werke *sammelt* man in einer Liste, z. B. mit dem Literaturprogramm Zotero. Dabei werden pro Werk die Zitierinformationen festgehalten.
-
-4. Jetzt folgt das *Lesen*^[Ein eigener Ablauf mit mehreren Schritten] eines geeigneten Werks. 
-
-5. Zentrale Inhalte *fasst* man aus dem Werk *zusammen* und hält sie an geeigneter Stelle fest, z. B. als Tag oder Notiz in Zotero oder im [Zettelkasten](https://zettelkasten.de/overview/).
 
 
 :::{#def-werk}
@@ -292,26 +296,7 @@ Unter einem wissenschaftlichen Werk versteht man meist
 - in den Sozialwissenschaften oft empirischer Natur ist (also Daten untersucht) $\square$
 :::
 
-### Ablauf
 
-Der Ablauf einer Literaturrecherche ist in @fig-litsearch-ablauf dargestellt.
-
-
-
-```{mermaid}
-%%| fig-cap: Der Ablauf der Literaturrecherche
-%%| label: fig-litsearch-ablauf
-flowchart LR
-  Suchen --> Screenen --> Sammeln --> Z[Zusammenfassen] --> Verbinden 
-
-```
-
-
-1. *Suchen*: Sie finden Literaturquellen, die für Ihre Forschungsfrage relevant sein könnnten.
-2. *Screenen*: Sie verschaffen sich einen Überblick über Passung von Forschungsfrage sowie methodischer Angemessenheit der identifizierten Literaturquellen.
-3. *Sammeln*: Sie halten die Quellenangaben geeigneter Werke in einer Liste fest (in Ihrem Literaturverwaltungsprogramm).
-3. *Zusammmenfassen*: Sie schreiben einen Überblick zum Inhalt der relevanten Literaturquellen. Sie schreiben also das Wesentliche der Quelle zusammen.
-4. *Verbinden*: Sie setzen die zentralen Inhalte der Literaturquellen so miteinander in Bezug, dass Sie eine "Landkarte" von Wissen (inkl. der Quellenangaben) bekommen.
 
 
 ### Datenbanken für die Literaturrecherche
@@ -361,9 +346,10 @@ Das wiederum heißt:
 >   Forschungsfrage: Effekt von Achtsamkeit auf Konzentration
 
 Suchen Sie geeignete Literatur (nur Fachartikel) für die Forschungsfrage zu obiger Forschungsfrage:
-Geben Sie eine Liste von 5 hoch relevanten Papers an (am besten nach APA zitiert). 
+Finden Sie 5 hoch relevanten Fachartikel und schreiben Sie eine Zusammenfassung dieser Quellen.
 Sie müssen *keine* Volltexte bereitstellen. 
-Sie müssen die Quellen auch nicht lesen.
+Sie müssen die Quellen auch nicht im Detail lesen;
+es reicht, wenn Sie einen Überblick über diese Quellen haben.
 Arbeiten Sie in Kleingruppen. Nutzen Sie einen (oder mehrere) KI-Dienst; 
 geben Sie an, welche(n) KI-Dienst(e) Sie verwendet haben.
 Schreiben Sie Ihre Ergebnisse in [dieses Dateigerüst](https://docs.google.com/document/d/1ewdihvc-LUgwGCXtWwChNd-ISGbHRgKeNSnB3f4SSv0/edit?usp=sharing). 
@@ -371,6 +357,13 @@ Nutzen Sie einen eigenen Tab für Ihre Gruppe. Geben Sie an, welche (KI-)Dienste
 :::
 
 
+:::{#exr-zotero1}
+### Legen Sie eine offene Zoterogruppe an.
+
+Legen Sie eine offene Zoterogruppe an und füllen Sie diese mit Inhalten (aus @exr-litrecherche); "offen" soll heißen, 
+dass die Inhalte dieser Gruppe öffentlich lesbar sind.
+Arbeiten Sie in Kleingruppen. Teilen Sie dann den Link zur Gruppe im Plenum. $\square$
+:::
 
 
 
@@ -387,6 +380,12 @@ Um an Volltexte zu gelangen, gibt es verschiedene Wege:
 - Verzichten Sie auf diesen Artikel und wählen Sie stattdessen einen *ähnlichen*, auf den Sie einfacher zugreifen können 🤷‍♂️
 - Verschiedene (KI-)Suchdienste zeigen an, ob ein Volltext verfügbar ist (z.B. Semantic Scholar).
 - Volltextdienste wie "S c i h u b" werden nicht als legale Quellen angesehen.
+
+:::{#exr-volltext}
+### Volltexte finden
+
+Versuchen Sie, die Volltexte für Ihre 5 Papers aus @exr-litrecherche zu bekommen. $\square$
+:::
 
 
 ### Texte zusammenfassen
@@ -437,7 +436,7 @@ Obsidian hat ein paar Vorzüge:
 - speichert Ihre Notizen offline als Textdateien
 - nutzerfreundlich
 
-![Die Oberfläche von Obsidian](img/obsidian1.png)
+![Die Oberfläche von Obsidian](img/obsidian1.png){#fig-obsidian width=75%}
 
 
 
@@ -476,10 +475,10 @@ Den Zettel nachher wegzuschmeißen, weil Sie später einen besseren Gedanken hat
 
 ```{mermaid}
 %%| label: fig-nicht-schreiben
-%%| fig-cap: "Erst denken, dann skribbeln, dann schreiben"
+%%| fig-cap: "Erst lesen, dann denken, dann notieren, dann schreiben"
 flowchart LR
   subgraph V[nicht schreiben, denken]
-    lesen --> skribbeln --> denken --> lesen
+    lesen --> notieren --> denken --> lesen
   end  
   KP[Kein Plan]  --> V
  
@@ -617,7 +616,7 @@ Die Methode der "drei Blicke" erlaubt Ihnen, das Wesentliche (oder einen Teil da
 
 1. Sind Kausalaussgen möglich?
 2. Ist die theoretische Basis solide?
-3. Gibt es Ungereimtheiten ([Intransparenz](http://www.sciencecartoonsplus.com/pages/gallery.php), Interessenskonflikte,...)?
+3. Gibt es Ungereimtheiten ([Intransparenz](http://www.sciencecartoonsplus.com/pages/gallery.php), Interessenskonflikte, ...)?
 
 
 
@@ -665,7 +664,7 @@ Bleibt zu hoffen, dass die Zusammenfassung korrekt ist.
 
 Bei [ChatGPT](https://chat.openai.com) kann man z. B. schreiben *tldr: 'Positive' Results Increase Down the Hierarchy of the Sciences*.
 Dann gibt ChatGPT drei Sätze zur Zusammenfassung dieses Artikels. Alternativ könnten Sie auch schreiben: "Fasse folgenden Artikel zusammen:".
-q
+4. *Verbinden*: Sie setzen die zentralen Inhalte der Literaturquellen so miteinander in Bezug, dass Sie eine "Landkarte" von Wissen (inkl. der Quellenangaben) bekommen.ü
 
 Andere Dienste, wie [ChatPDF](https://www.chatpdf.com/), erlauben das Hochladen von PDF-Dokumenten und der Dienst liefert eine Zusammenfassung.
 
