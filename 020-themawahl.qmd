@@ -395,6 +395,19 @@ Versuchen Sie, die Volltexte für Ihre 5 Papers aus @exr-litrecherche zu bekomme
 
 ### Texte zusammenfassen
 
+Beim Zusammenfassen reduzieren Sie einen Text auf die Kernaussage, s. @fig-kern.
+
+
+
+```{r fig-kern, echo = FALSE, engine='tikz', fig.ext='png', out.width="20%", fig.align="center", fig.cap = "Der Kern einer Aussage"}
+\begin{tikzpicture}
+    \draw(0,0) circle (1cm);
+    \fill (0,0) circle (2pt);
+\end{tikzpicture}
+```
+
+
+
 Ist es wirklich noch zeitgemäß, einen Text zusammenzufassen ("exzerpieren")?
 Schließlich ist das viel Aufwand. 
 Und die KI fasst mir den Text ja null-komma-nix zusammen.
@@ -402,7 +415,8 @@ Wozu also der Aufwand?
 
 Das Problem ist, wenn Sie das Wesentliche eines Textes nicht aufschreiben,
 dann können Sie sich kaum an diesen Inhalt erinnern, wenn Sie es brauchen.
-Nur wenn Sie über schriftliche Notizen verfügen, können Sie auch nach längerer Zeit auf das Wissen zugreifen.
+Nur wenn Sie über schriftliche Notizen verfügen, 
+können Sie auch nach längerer Zeit auf das Wissen zugreifen.
 Es führt also kein Weg an schriftlichen Notizen vorbei.
 
 Außerdem schärft das Schreiben Ihre Gedanken.
@@ -444,6 +458,11 @@ Obsidian hat ein paar Vorzüge:
 ![Die Oberfläche von Obsidian](img/obsidian1.png){#fig-obsidian1 width=75%}
 
 
+Notizen schreibt man auf Zetteln (zumindest früher, heute eher auf digitalen Zetteln).
+Die Zettel sammelt man in einem Zettelkasten (zumindest früher, heute eher in einer Datenbank).
+Joschua Meyer erläutert im Video, wie ein (digitaler) Zettelkasten unser Denken und Schreiben in das nächste Level bringen könnte.
+
+{{< video https://www.youtube.com/watch?v=avb6b0nL3NQ >}}
 
 
 ## Lesen
@@ -1123,7 +1142,6 @@ höheres Konfliktpotenzial und eine weniger stabile Teamdynamik aufweisen.
 :::
 
 
-:::{#exr-hyps}
 #### Operationalisierte Hypothese
 
 Bei einer O-Hypothese werden die Fachbegriffe, die die Bestandteile der Hypothese ausmachen in Messgrößen übersetzt. 

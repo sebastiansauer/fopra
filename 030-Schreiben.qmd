@@ -40,7 +40,12 @@ Behalten Sie Ihren Fortschritt im Projektplan im Blick, s. @fig-projektplan.
 Dieses Kapitel gibt eine Einführung in das wissenschaftliche Schreiben. 
 Es empfiehlt sich, einschlägige Literatur zur Vertiefung zu konsultieren.
 
-:::{.exr-wiss-arb-books}
+
+### Benöigte Software
+
+In diesem Kapitel benötigen Sie R (mit RStudio und einigen Paketen, s.u.), Word und Zotero.
+
+:::{#exr-wiss-arb-books}
 
 ### Mindmap zu Büchern des wissenschaftlichen Arbeitens
 
@@ -57,10 +62,10 @@ Sie können ein Buch aus dieser Liste wählen:
 - @Kornmeier
 - @heesen_wissenschaftliches_2021
 - @theisen_wissenschaftliches_2021
-- @peters_schreiben_2019
-
-
+- @peters_schreiben_2019 $\square$
 :::
+
+
 
 ## Gliedern
 
