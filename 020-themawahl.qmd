@@ -1,4 +1,4 @@
-# Thema wählen 
+# Einlesen
 
 
 ```{r}
@@ -23,6 +23,8 @@ theme_set(theme_minimal())
 - Sie können eine Zeitplanung erstellen für Ihre Projektarbeit.
 - Sie können einen Fachartikel effizient lesen.
 - Sie können eine Sach-, eine operationalisierten Hypothese und statistische Hypothese unterscheiden und jeweils formulieren.
+- Sie können Literatur recherchieren.
+- Sie können aus Notizen eine Wissenslandkarte erstellen.
 
 
 ### Position im Lernpfad
@@ -304,7 +306,7 @@ Unter einem wissenschaftlichen Werk versteht man meist
 
 
 
-### Datenbanken für die Literaturrecherche
+### Datenbanken
 
 Die Anzahl der Suchmaschinen bzw. Datenbanken bzw. (AI-)Suchdienste wächst und schwankt, 
 so dass es schwierig ist, einen umfassenden Überblick zu geben. @tbl-suchdienste versucht, einen Überblick über einige empfehlenswerte Dienste zu geben. 
@@ -342,6 +344,19 @@ Das wiederum heißt:
 1. ✅ Die Zitierinformationen  sind  zugänglich
 2.  ✅ Die Always-Open-Acces-Elemente sind zugänglich
 3. 🙅‍♀️   Der Volltext ist nicht immer  zugänglich
+
+
+
+### Literatursoftware
+
+Sie haben also ein super Buch gefunden. Und dann noch einen wichtigen Artikel.
+Und noch einen und noch einen ... Irgendwann müssen Sie Ihre Artikel geordnet einsortieren.
+Dann können Sie sie künftig gut nutzen: Zum einen, indem Sie Wissen aus diesen Literaturstellen zitieren und zum anderen, indem Sie neues Wissen aus den Literaturstellen entwickeln.
+Es gibt gute Software, die Ihre Literatur verwaltet.
+Ich empfehle Ihnen [Zotro](https://www.zotero.org/), s. @fig-zotero.
+
+
+![Zotero](https://www.zotero.org/static/images/home/screenshot-7.0.png){#fig-zotero width=50%}
 
 
 
@@ -432,13 +447,14 @@ Vergessen Sie auch die Quellenangabe nicht,
 da Sie ja zu jedem Gedanken die Quelle angeben müssen.
 
 
-### Wissen verbinden
+## Wissen verbinden
 
-Aber Notizen alleine nutzen nicht viel.
-Viele Notizen für sich genommen nutzen nicht viel.
-Viele Notizen, ohne Verbindung, sind nur ein Haufen.
+Notizen zu Literaturstellen alleine nutzen nicht viel.
+Viele Notizzettel für sich genommen nutzen nicht viel.
+Viele Notizen ("Zettel"), ohne Verbindung, sind nur ein Haufen (von Zetteln).
 
-Um die Zusammenhänge Ihrer Notizen zu sehen, brauchen Sie, ja: Zusammenhänge zwischen den Notizen.
+Um die Zusammenhänge Ihrer Notizen zu sehen, 
+brauchen Sie, ja: Zusammenhänge zwischen den Notizen.
 
 Sie müssen also Querverweise (Links) zwischen den Notizen schaffen.
 Hashtags den Notizen zuweisen ist ebenfalls nützlich.

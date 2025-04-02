@@ -617,15 +617,81 @@ Wie fundiert ist obige Aussage zu "alle zwei Minuten" wohl?
 
 
 
-## Arbeitsmittel
+## KI-Arbeitsmittel
 
-Schauen Sie sich mal diesen Überblick über [KI-Arbeitsmittel für Forschung](https://docs.google.com/document/d/1mb4SWtqyi1iEGCn2uTnHkPHqW3UoQr8b0xv5_81a-4Y/edit) an.
 
 :::{.callout-caution}
 Prüfen Sie, welche KI-Hilfsmittel für Ihre Qualifizierungsarbeit erlaubt sind. 
 Informieren Sie sich, was einen Plagiatsfall darstellt und stellen Sie sicher, keinen Plagiatsfall zu begehen. $\square$
 :::
 
+
+:::{.callout-caution}
+Geben Sie keine personenbezogenen Daten Dritter an eine KI weiter. Auch bei den eigenen personenbezogenen Daten sollten Sie sparsam ein. $\square$
+:::
+
+### Sammlung an KI-Tools
+
+Schauen Sie sich mal diesen Überblick über [KI-Arbeitsmittel für Forschung](https://docs.google.com/document/d/1mb4SWtqyi1iEGCn2uTnHkPHqW3UoQr8b0xv5_81a-4Y/edit) an.
+
+
+
+
+Bei vielen Diensten müssen Sie sich ein Konto anlegen, um den Dienst nutzen zu können.
+Mithilfe eines anonymen EMail-Kontos minimieren Sie die Daten, die Sie preisgeben.
+
+
+### Grundlagen des Promptings
+
+Large-Language-Modelle wie [ChatGPT](https://chatgpt.com/) oder [Google Gemini](https://gemini.google.com/app)
+haben ein Chatbot-Interface. Man spricht das Programm mit einem sog. Prompt an.
+Dabei gilt die Grundregel: Garbage in, garbage out. 
+Anders gesagt: Je besser Ihr Prompt, desto besser die Ausgabe der KI (tendenziell).
+
+KI-Modelle basieren auf umfangreichen Textdatensätzen, 
+was die bessere Leistung bei englischen Prompts erklärt.
+Die KI versucht, die wahrscheinlichsten folgenden Wörter vorherzusagen, 
+wobei der Prompt diese Vorhersage steuert.
+Je spezifischer der Prompt, desto fokussierter die Vorhersage.
+
+
+*1. Spezifität ist entscheidend*
+
+Begründung: KI analysiert Muster in Daten. Vage Anfragen führen zu ungenauen Ergebnissen.
+Umsetzung: Anstatt "Fasse dies zusammen" sollte man präzisieren: "Fasse diesen Artikel zusammen, konzentriere dich auf die Hauptargumente des Autors und erstelle eine Zusammenfassung mit drei Stichpunkten." Ebenso ist es besser, anstelle von "Schreibe Code" zu sagen: "Schreibe eine Python-Funktion, die die Fakultät einer gegebenen ganzen Zahl berechnet."
+
+*2. Kontext ist unerlässlich*
+
+Begründung: KI benötigt ein Verständnis des "Warum" hinter der Anfrage.
+Umsetzung: Zum Beispiel: "Erkläre die Ursachen der Französischen Revolution aus der Perspektive eines Geschichtsprofessors, der zu Gymnasiasten spricht." Oder: "Bestimme anhand eines Datensatzes von Schülernoten und eines Bewertungsrasters die Endnote für jeden Schüler."
+
+*3. Die genaue Angabe des gewünschten Formats ist wesentlich*
+
+Begründung: KI kann verschiedene Ausgabeformate liefern, von Absätzen bis zu Tabellen oder Code.
+Umsetzung: Anfragen wie "Gib eine Liste mit fünf Schlüsselpunkten" oder "Formatiere die Ausgabe als Tabelle mit den Spalten 'Name', 'Datum' und 'Zusammenfassung'" oder "gebe das Ergebniss im JSON Format zurück" führen zu präziseren Ergebnissen.
+
+*4. Beispiele sind hilfreich*
+
+Begründung: KI lernt durch Beispiele.
+Umsetzung: Man kann beispielsweise angeben: "Hier ist ein Beispiel für den gewünschten Stil: [Beispieltext]. Schreibe nun einen ähnlichen Text über [Thema]." Oder man gibt Beispiele für die Eingabe und die gewünschte Ausgabe.
+
+
+*5. Iterative Verfeinerung ist notwendig*
+
+Begründung: Das erste Ergebnis ist selten perfekt.
+Umsetzung: Bei unbefriedigenden Ergebnissen sollte der Prompt angepasst werden, indem man ihn umformuliert, mehr Kontext hinzufügt oder das Format ändert.
+
+
+
+
+
+Praktische Ratschläge:
+
+- Klare Begrenzer (z. B. dreifache Anführungszeichen oder Bindestriche) erleichtern die Trennung von Anweisungen und Kontext.
+- Komplexe Aufgaben sollten in kleinere Prompts unterteilt werden.
+- Experimentieren ist wichtig, da es keine allgemeingültige Methode gibt.
+- Sie können den Bot auch fragen, ob Sie alle nötigen Informationen in Ihrem Prompt übermittelt haben, die der Bot für ein gutes Ergebnis benötigt. 
+- In ähnlicher Form können Sie den Bot auch anweisen, Ihren Prompt zu verbessern.
 
 
 ## Fazit
