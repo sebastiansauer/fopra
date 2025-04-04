@@ -594,7 +594,7 @@ Schalten Sie Ihr Handy aus und stellen Sie sicher, dass Sie nicht gestört werde
 Es gibt (IT-)Tools, die Sie beim Notizen machen unterstützen, etwa [Notion](https://www.notion.so/product/ai), [Zotero](https://www.zotero.org/),  [Zettelkasten](https://zettelkasten.de/introduction/) oder Hipster-Notes (Papier-Notizbücher), s. @fig-leo. $\square$
 :::
 
-![Leonardo da Vinci mochte Notizbücher, Quelle: Wikimedia, Public Domain](img/leo.jpg)
+![Leonardo da Vinci mochte Notizbücher, Quelle: Wikimedia, Public Domain](img/leo.jpg){#fig-leo width=50%}
 
 
 ### So liest man technische Literatur
@@ -1120,7 +1120,7 @@ Je präziser eine Hypothese formuliert ist, desto besser ist die Hypothese  (unt
 :::: {.columns}
 
 :::{.column width="40%"}
-**Gering** präzise
+**Gering** präzise ⬇️😾
 
 Menschen vertrauen KI im generellen weniger, wenn sie in der Vergangenheit schon schlechte Erfahrungen gemacht haben, 
 bzw. wenn sie in der Vergangenheit schon mal falsche Antworten erhalten haben
@@ -1131,7 +1131,7 @@ bzw. wenn sie in der Vergangenheit schon mal falsche Antworten erhalten haben
 :::
 
 ::: {.column width="40%"}
-**Präziser**
+**Präziser** ⬆️😸
 
 Je schlechter die Erfahrungen mit KI, desto geringer das Vertrauen in KI.
 
@@ -1197,21 +1197,32 @@ Häufig werden folgende Koeffizienten in Hypothesen untersucht:  Mittelwerte bzw
 
 
 
+:::{#exr-hyparten}
+### Finden Sie Beispiele für die drei Hypothesenarten!
+
+In @fig-hyp2 haben wir drei Instanzen an (formalen) Arten von Hypothesen kennengelernt:
+Sachhypothesen, operationalisierte Hypothesen, statistische Hypothesen.
+Finden Sie (mindestens) eine Hypothese aus der [Schminkstudie](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0025656) und ordnen Sie sie der passenden Hypothesenart zu.
+Formulieren Sie außerdem die Hypothese in die beiden anderen Hypothesenarten um.
+Wie immer gilt: Treffen Sie Annahmen, wo nötig. $\square$
+:::
 
 
-### Nullhypothesen (H0 ) testen
+### Nullhypothesen (H0) testen
 
 
 Leider sind viele Theorien in den Sozialwissenschaften (aber nicht so sehr in der Physik) zu schwach (unpräzise), um genaue Vorhersagen zu machen.
 Eine totale Sonnenfinsternis für einen bestimmten Tag, zu einer bestimmten Uhrzeit  und an einem bestimmten Ort vorherzusagen, ist eine hoch präzise Hypothese. 
 Man spricht auch von einem hohem empirischen Gehalt.
 
-Vorherzusagen, dass Männer in einem von vielen Kriterien einen höheren Mittelwert aufweisen als Frauen, hat hingegen einen geringen empirischen Gehalt.
+Vorherzusagen, dass Männer in einem von vielen Kriterien einen höheren Mittelwert aufweisen als Frauen, hat hingegen einen vergleichsweise geringen empirischen Gehalt.
 
-Je höher der empirische Gehalt, desto falsifizierbarer die Hypothese (und desto wertvoller die Hypothese^[ceteris paribus, wie so oft]).
+Je höher der empirische Gehalt, desto falsifizierbarer die Hypothese (und desto wertvoller die Hypothese^[ceteris paribus, wie so oft]) und desto wertvoller.
 Je gewagter die Hypothese, desto leichter wäre sie zu falsifizieren, wenn sie falsch sein sollte.
-Eine häufige Form von Hypothesen ist (in geringer entwickelten Wissenschaftszweigen) ist daher die Nullhypothese: Der Unterschied zwischen Gruppe 1 und 2 ist größer als Null. 
-Synonym: Gruppe 1 hat einen höheren Mittelwert als Gruppe 2. In mathematischer Notation: $X_1 > X_2$.
+Eine häufige Form von Hypothesen ist (in geringer entwickelten Wissenschaftszweigen) ist daher die *Nullhypothese*: 
+Der Unterschied (im Mittelwert) zwischen Gruppe 1 und 2 ist gleich *Null*. In mathematischer Notation: $\bar{X_1} = \bar{X_2}$.
+Die Forschungshypothese ist hingegen meist das logische Gegenteil der Nullhypothese: Das also ein Effekt vorliegt, das der Mittelwertsunterschied eben nicht Nulll ist.
+Etwa: Gruppe 1 hat einen höheren Mittelwert als Gruppe 2. In mathematischer Notation: $X_1 > X_2$.
 
 Die *Forschungshypothese* - Ihre Hypothese! -  ist fast immer das *Gegenteil* der Nullhypothese: Meist glaubt man, dass es einen Effekt gibt, dass ein Effekt eben nicht Null ist.
 Man prüft also, ob die Evidenz gegen die Nullhypothese bzw. zugunsten der Forschungshypothese spricht.
@@ -1220,7 +1231,7 @@ Eine (sinnvolle) Variante des Nullhypothesentestens ist das ROPE-Verfahren: Rope
 :::{.callou-note}
 Insgesamt ist das Testen von Nullhypothesen informationsärmer als das Schätzen von Parametern.
 Außerdem ist beim Parameterschätzen die Information, die ein (Null-)Hypothesentest birgt, schon enthalten. 
-Daher ist das Parameterschätzen (oft) dem reinen Hypothesentesten vorzuziehen.$\square$
+Daher ist das Parameterschätzen (oft) dem reinen Hypothesentesten vorzuziehen. $\square$
 :::
 
 
@@ -1229,7 +1240,10 @@ Daher ist das Parameterschätzen (oft) dem reinen Hypothesentesten vorzuziehen.$
 
 
 Häufig wird die Entscheidung über eine Hypothese (Ablehnung, Nicht-Verwerfung als "Quasi-Annahme") anhand es eines *Grenzwertes* oder sog. "kritischen Werts" entschieden.
-Dazu wird häufig der p-Wert verwendet, meist mit dem Grenzwert von 5%:  Studienergebnisse mit p < .05 werden als (statistisch) signifikant bezeichnet und die Hypothese „nicht verworfen“. Praktisch heißt das in diesem Fall meist, man verhält sich so, als ob die Hypothese wahr sei.
+Dazu wird häufig der p-Wert verwendet, meist mit dem Grenzwert von 5%:  Studienergebnisse mit p < .05 werden als (statistisch) signifikant bezeichnet und die wissenschaftliche Hypothese „nicht verworfen“, d.h. nicht abgelehnt.
+Man geht also davon aus, dass die wissenschaftliche Hypothese gilt oder zumindest gelten könnte.
+Umgekehrt sagt man, wenn p < .05 ist, dass man die Nullhypothese verwirft (ablehnt).
+Praktisch heißt das in diesem Fall meist, man verhält sich so, als ob die Hypothese wahr sei.
  Studienergebnisse mit p > .05 werden als „nicht signifikant“ bezeichnet und die Hypothese verworfen. Man geht dann also davon aus, dass die Hypothese falsch ist.
 
 In der *Bayes-Statistik* könnte man analog z. B. prüfen, ob die Post-Verteilung zu 95% oberhalb  der Null liegt. Solches Schwarz-Weiß-Verhalten hat Vor- und Nachteile.
@@ -1245,7 +1259,7 @@ Nicht sinnvoll ist, dass ein Unterschied von 0.1 % zwischen „wahr“ und „fa
 ## Fazit
 
 
-![Gestern stand ich am Abgrund, heute bin ich einen Schritt. weiter](img/nicholas-sampson-IZrEEtu3fkk-unsplash.jpg){width="50%"}
+![Gestern stand ich am Abgrund, heute bin ich einen Schritt weiter. ](img/nicholas-sampson-IZrEEtu3fkk-unsplash.jpg){width="50%"}
 
 Photo by <a href="https://unsplash.com/pt-br/@nicholassampson?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Nicholas Sampson</a> on <a href="https://unsplash.com/photos/IZrEEtu3fkk?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 
