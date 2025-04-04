@@ -152,7 +152,17 @@ Verzichten Sie komplett auf "Alles auf Einmal", auf gleichzeitiges (parallels) A
 
 Wie bei vielen Dingen des wirklichen Lebens, so gibt es auch für eine Gliederung einer wissenschaftlichen Arbeit nicht nur eine Lösung.
 Das bedeutet aber nicht, dass jede Lösung gleich gut wäre (wie im wirklichen Leben auch).
-Für eine empirische, quantitative Arbeit in z.B. der Psychologie ist folgende Gliederung *des Hauptteils* etabliert:
+Für eine empirische, quantitative Arbeit z.B. in der Psychologie ist folgende Gliederung *des Hauptteils* etabliert, s. @fig-gliederung.
+
+
+```{mermaid}
+%%| label: fig-gliederung
+%%| fig-cap: Typische Gliederung
+
+flowchart LR
+  Einleitung --> Theorie --> Methode --> Ergebnisse --> Diskussion
+```
+
 
 
 1. Einleitung

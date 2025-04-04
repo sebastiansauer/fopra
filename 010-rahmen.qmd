@@ -696,7 +696,19 @@ Praktische Ratschläge:
 
 ## Fazit
 
-Vorsicht: Forschung kann süchtig machen, s. [XKCD 1564](https://www.explainxkcd.com/wiki/index.php/1564:_Every_Seven_Seconds).
+>   👺 Wieso solltest du überhaupt noch irgendwas lernen müssen!? Das macht doch alles die KI für dich. Mach dich locker und chill dein Leben!
+
+
+>   🕺 Wenn du nicht mehr kannst als eine KI, warum sollte dich irgendeine Firma einstellen?
+
+
+:::{.callout-important}
+Wir alle müssen uns ständig bemühen, Dinge zu können, die die Maschine (z.B. eine KI) noch nicht kann. Dass Maschinen uns Arbeit abnehmen, ist schon immer so -- das ist der Fortschritt, der uns das Leben komfortabel macht. Dennoch müssen wir, schon im eigenen Interesse, immer daran arbeiten, der Gesellschaft Mehrwert gegenüber Maschinen bieten zu können. $\square$
+:::
+
+
+
+Übrigens: Vorsicht, Forschung kann süchtig machen, s. [XKCD 1564](https://www.explainxkcd.com/wiki/index.php/1564:_Every_Seven_Seconds).
 
 
 ::: {.content-visible unless-format="pdf"}

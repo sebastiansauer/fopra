@@ -591,10 +591,10 @@ Schalten Sie Ihr Handy aus und stellen Sie sicher, dass Sie nicht gestört werde
 
 :::callout-tip
 ### Tools für Notizen
-Es gibt (IT-)Tools, die Sie beim Notizen machen unterstützen, etwa [Notion](https://www.notion.so/product/ai), [Zotero](https://www.zotero.org/),  [Zettelkasten](https://zettelkasten.de/introduction/) oder Hipster-Notes (Papier-Notizbücher), s. fig-leo. $\square$
+Es gibt (IT-)Tools, die Sie beim Notizen machen unterstützen, etwa [Notion](https://www.notion.so/product/ai), [Zotero](https://www.zotero.org/),  [Zettelkasten](https://zettelkasten.de/introduction/) oder Hipster-Notes (Papier-Notizbücher), s. @fig-leo. $\square$
 :::
 
-![Leonardo da Vinci mochte Notizbücher, Quelle: Wikimedia, Public Domain](img/leo.img)
+![Leonardo da Vinci mochte Notizbücher, Quelle: Wikimedia, Public Domain](img/leo.jpg)
 
 
 ### So liest man technische Literatur
@@ -624,7 +624,7 @@ d <- tribble(
   "🥶", "Rest"
 )
 
-kable(d)
+gt::gt(d)
 ```
 
 
@@ -709,15 +709,14 @@ Bei [ChatGPT](https://chat.openai.com) kann man z. B. schreiben *tldr: 'Positive
 Dann gibt ChatGPT drei Sätze zur Zusammenfassung dieses Artikels. Alternativ könnten Sie auch schreiben: "Fasse folgenden Artikel zusammen:".
 4. *Verbinden*: Sie setzen die zentralen Inhalte der Literaturquellen so miteinander in Bezug, dass Sie eine "Landkarte" von Wissen (inkl. der Quellenangaben) bekommen.ü
 
-Andere Dienste, wie [ChatPDF](https://www.chatpdf.com/), erlauben das Hochladen von PDF-Dokumenten und der Dienst liefert eine Zusammenfassung.
+Andere Dienste, wie [ChatPDF](https://www.chatpdf.com/), erlauben das Hochladen von PDF-Dokumenten und der Dienst liefert auf dieser Basis eine Zusammenfassung.
 
 :::callout-caution
-Beachten Sie Datenschutz und Urheberrechte, wenn Sie Texte wie Fachartikel an Dritte weitergeben. 
+Beachten Sie geltendes Recht, wie Datenschutz, Persönlichkeitsrechte und Urheberrechte, wenn Sie Texte wie Fachartikel an Dritte (z.B. ChatGPT) weitergeben. 
 Literatur, die nur  bestimmten Käufern oder Abonnenten zugänglich ist, würde durch Ihr Hochladen unberechtigt an Dritte weitergegeben werden.
 Auch Open-Access-Literatur, die mit dem Zusatz "non-commercial" versehen ist,
 dürfte vermutlich nicht hochgeladen werden.
-Die Rechtsprechung ist noch nicht ausgegoren, da es sich um neue und dynamische Entwicklungen handelt.
-Vermutlich ist aber die Gefahr gering, belangt zu werden. $\square$
+Die Rechtsprechung ist noch nicht ausgegoren, da es sich um neue und dynamische Entwicklungen handelt. $\square$
 :::
 
 
