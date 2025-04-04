@@ -238,14 +238,14 @@ Das führt zu Stress gegen Ende der Projektlaufzeit - und mitunter zu (erheblich
 
 ### Kollaborationssoftware 
 
-Hinweise zu Software zum gemeinsamen Bearbeiten von Dokumenten und Lernstrategien finden Sie [hier](https://hinweisbuch.netlify.app/hinweise-software#kolloboration).
+Hinweise zu Software zum gemeinsamen Bearbeiten von Dokumenten und Lernstrategien finden Sie [hier]https://hinweisbuch.netlify.app/130-hinweise-software#kolloboration).
 
 
 
 ### Weitere Lernhilfen
 
 
-[Hier](https://hinweisbuch.netlify.app/hinweise-lernhilfen-frame) finden Sie einen Überblick über weitere Lernhilfen wie Videos oder Vorlagen.
+[Hier](https://hinweisbuch.netlify.app/160-hinweise-lernhilfen-frame) finden Sie einen Überblick über weitere Lernhilfen wie Videos oder Vorlagen.
 
 
 
@@ -257,9 +257,16 @@ Hinweise zu Software zum gemeinsamen Bearbeiten von Dokumenten und Lernstrategie
 
 ## Hinweise zum Unterricht
 
+Im Live-Unterricht werden Schwerpunkte auf bestimmte Themen gesetzt.
+Im Rahmen Ihrer individuellen Vor- und Nachbereitung des Live-Unterrichts sollten Sie nicht nur die Schwerpunkte des Live-Unterrichts, sondern alle Inhalte des Skripts erarbeiten.
+
+Für die Prüfung wird die komplette Kenntnis der Inhalte des Skripts sowie sonstiger im Unterricht behandelter Themen vorausausgesetzt.
+
+
+
 [Hier](https://hinweisbuch.netlify.app/) finden Sie allgemein Hinweise zu diesem Modul.
 
-[Hier](https://hinweisbuch.netlify.app/hinweise-didaktik-frame) finden Sie didaktische Hinweise zu diesem Modul.
+[Hier](https://hinweisbuch.netlify.app/110-hinweise-didaktik-frame) finden Sie didaktische Hinweise zu diesem Modul.
 
 
 
@@ -320,7 +327,7 @@ Nähere Hinweise zum Autor, Sebastian Sauer, finden Sie [hier](https://sebastian
 
 ## Danke
 
-Dieses Dokument entstand mit Unterstützung vieler Kolleginnen und Kollegen, vor allem aus der FOM Hochschule. Vielen Dank!
+Dieses Dokument entstand mit Unterstützung vieler Kolleginnen und Kollegen. Vielen Dank!
 
 
 

@@ -41,7 +41,7 @@ Dieses Kapitel gibt eine Einführung in das wissenschaftliche Schreiben.
 Es empfiehlt sich, einschlägige Literatur zur Vertiefung zu konsultieren.
 
 
-### Benöigte Software
+### Benötigte Software
 
 In diesem Kapitel benötigen Sie R (mit RStudio und einigen Paketen, s.u.), Word und Zotero.
 
@@ -105,6 +105,46 @@ Man könnte zugespitzt sagen: Der Nutzen des Schreibens ist nicht das Schreiben,
 sondern das Unterstützen beim Denken.
 
 
+### Horror vacui: Die Angst vor dem leeren Blatt
+
+Beim Schreiben ist es nicht unüblich, vor dem "leeren Blatt" zu sitzen,
+und keinen Anfang zu finden: Das Blatt ist leer, bleibt leer und schaut einen noch dazu vorwurfsvoll an. Eine schreiende Stille, gewissermaßen, s. @fig-blatt.
+Es ist offenbar schwer, den Anfang zu finden, wenn man einen Text schreiben will.
+Vielleicht ist auch nicht nur der Anfang schwer, sondern der ganze Weg?
+
+
+
+```{r fig-blatt, echo = FALSE, engine='tikz', fig.ext='png', out.width="20%", fig.align="center", fig.cap = "Die Angst vor dem leeren Blatt"}
+\begin{tikzpicture}
+  \begin{scope}[rotate=5]
+    \fill[white] (0, 0) rectangle (6, 8.5); % standard US letter size in inches
+    \draw[thick] (0, 0) rectangle (6, 8.5); % border of the paper
+  \end{scope}
+\end{tikzpicture}
+```
+
+
+Was ist der Grund für diese Schwierigkeit, dieser "Angst vor dem leeren Blatt"?
+
+Der Grund liegt im Versuch, alle Teilaufgaben des Schreibens auf einmal machen zu wollen.
+Die Teilaufgaben des Schreibens sind:
+
+1. Die zentralen Ideen (z.B. Forschungsfrage) klar haben
+2. Die Gliederung des Textes klar haben
+3. Die Belege und Quellen klar haben
+4. Beispiele und Details parat haben
+5. Die Argumentation muss vorbereitet (klar) sein
+6. Die Formulierungen des Textes müssen treffend, kurz und angenehm formuliert sein
+7. Die Rechtschreibung (inkl. Zeichensetzung) muss korrekt sein
+8. Die Formatierung des Textes muss ansprechend sein
+
+Diese Teilaufgaben alle *gleichzeitig* ableisten zu wollen,
+muss in der Überforderung führen.
+Bei allen Schreibenden.
+Alle Teilaufgaben gleichzeitig anzugehen ist der sichere Weg zum leeren, leer bleibenden Blatt.
+
+Der Weg zum Erfolg besteht darin, diese Teilaufgaben oder Anforderungen des Schreibens nacheinander anzugehen, sie zu *sequenzieren*.
+Verzichten Sie komplett auf "Alles auf Einmal", auf gleichzeitiges (parallels) Arbeiten.
 
 
 
@@ -246,6 +286,7 @@ Der Abstract erscheint nicht in der Gliederung.
 die bedeutsamsten Informationen aller Einzelabschnitte werden so knapp wie möglich, 
 jedoch klar und verständlich dargestellt:
 
+
 -︎ Forschungsfag︎e
 - Theorie 
 - Hypothesen 
@@ -258,18 +299,21 @@ jedoch klar und verständlich dargestellt:
 ### Inhaltsverzeichnis
 
 
-Anhand des Inhaltsverzeichnisses wird bereits viel über den weiteren Verlauf der Arbeit deutlich:  Es gibt eine Übersicht zum Inhalt der Arbeit und sollte entsprechend logisch aufgebaut sein und den Gedankengang der Arbeit widerspiegeln.
+Anhand des Inhaltsverzeichnisses wird bereits viel über den weiteren Verlauf der Arbeit deutlich:  
+Es gibt eine Übersicht zum Inhalt der Arbeit und sollte entsprechend logisch aufgebaut sein und den Gedankengang der Arbeit widerspiegeln.
 Die Gliederung sollte ausführlich, aber auch nicht zu detailliert sein. 
 Dabei hat der Grad der Untergliederung der einzelnen Gliederungspunkte ausgewogen zu sein.
 ︎ Unterpunkte eines Kapitels dürfen übergeordnete Punkte nicht wiederholen.
 Gliederungspunkte dürfen nicht zu 100 % identisch formuliert werden. 
-Gemäß dem Grundsatz der Proportionalität sollten die Hauptkapitel in etwa den gleichen Seitenumfang aufweisen.︎
+Gemäß dem Grundsatz der Proportionalität sollten die Hauptkapitel 
+in etwa den gleichen Seitenumfang aufweisen.︎
 Jede Gliederungsstufe muss mindestens zwei Punkte enthalten. 
 Wird also ein Kapitel 3.2.1 eingeführt, muss es auch ein Kapitel 3.2.2 geben; 
 sollte nach 3.2.1 unmittelbar 3.3 folgen, wird die Logik der Gliederung nicht erfüllt.
  Bei der Formulierung der Gliederungspunkte ist darauf zu achten, entweder keine oder immer Artikel zu verwenden. 
 Der optische Aufbau sollte den logischen Aufbau der Gliederung widerspiegeln z. B. durch räumliche Nähe von zusammengehörigen Abschnitten und Platz zwischen unterschiedlichen Themen. Der optische Eindruck sollte Übersichtlichkeit vermitteln.
-Nutzen Sie Links im Inhaltsverzeichnis, um das Navigieren im (elektronischen) Dokument zu erleichtern.
+Nutzen Sie Links im Inhaltsverzeichnis, 
+um das Navigieren im (elektronischen) Dokument zu erleichtern.
 
 
 :::{#exr-gliederung}

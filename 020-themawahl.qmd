@@ -591,8 +591,10 @@ Schalten Sie Ihr Handy aus und stellen Sie sicher, dass Sie nicht gestört werde
 
 :::callout-tip
 ### Tools für Notizen
-Es gibt (IT-)Tools, die Sie beim Notizen machen unterstützen, etwa [Notion](https://www.notion.so/product/ai), [Zotero](https://www.zotero.org/),  [Zettelkasten](https://zettelkasten.de/introduction/), [notion](https://www.notion.so/help/guides/category/ai) oder schöne Notizbücher. $\square$
+Es gibt (IT-)Tools, die Sie beim Notizen machen unterstützen, etwa [Notion](https://www.notion.so/product/ai), [Zotero](https://www.zotero.org/),  [Zettelkasten](https://zettelkasten.de/introduction/) oder Hipster-Notes (Papier-Notizbücher), s. fig-leo. $\square$
 :::
+
+![Leonardo da Vinci mochte Notizbücher, Quelle: Wikimedia, Public Domain](img/leo.img)
 
 
 ### So liest man technische Literatur
