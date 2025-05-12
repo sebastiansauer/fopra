@@ -37,12 +37,14 @@ In der Regel untersucht Ihre Forschungsfrage eine Kausalfrage.
 Eine Kausalfrage fragt, ob X eine Auswirkung (einen "Effekt") auf Y hat,
 vgl. @sec-taxo und @fig-ziele.
 
-(Nur) wenn man aufgrund des DAGs sagen kann, dass der Effekt der UV (auf die AV) "rein" ist, also nicht von anderen Variablen überlagert wird, ist der Effekt der UV *identifiziert*.
+(Nur) wenn man aufgrund des DAGs sagen kann, dass der Effekt der UV (auf die AV) "rein" ist, 
+also nicht von anderen Variablen überlagert wird, ist der Effekt der UV *identifiziert*.
+
 
 :::{#exm-stoerche}
 Der Effekt von Störchen auf Babies ist nicht identifiziert.
 Der Einfluss von Störchen auf Babies ist konfundiert durch den Einfluss der Umwelt.
-Das heißt, dass der Zusammenhang von Störchen und Babies nicht kausal ist,
+Das heißt, dass der Zusammenhang von Störchen und Babies nicht-kausal ist,
 sondern ein Scheinkorrelation, vgl. @fig-stoerche.$\square$
 :::
 
