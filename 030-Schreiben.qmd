@@ -919,7 +919,7 @@ Das Literaturverzeichnis ist nach den Regeln des verwendeten Zitierstils zu gest
 Das Literaturverzeichnis sollte linksbündig formatiert sein.
 Bei mehrzeiligen Einträgen wird ab der 2. Zeile eingerückt (5-7 Leerzeichen).
 Die Qualität der Quellen ist eine wichtige Beurteilungsgrundlage des Literaturverzeichnisses:
-Bücher wie @Dobelli2011 sind nicht hohes Niveau (aber gut geeignet, um ins Thema einzufinden und sich zu insprieren).
+Bücher wie @Dobelli2011 sind nicht hohes Niveau (aber gut geeignet, um ins Thema einzufinden und sich zu inspirieren).
 kahneman2012schnelles ist hingegen ein akzeptabler (guter) Vertreter eines Buchs aus dem Genre des Popscience.
 Hochwertige Literaturstellen sind zumeist/hauptsächlich Fachartikel oder Review-Artikel.
 Da die meiste (95%?) der relevanten Literatur in Englisch verfasst wird, ist davon auszugehen, dass ein rein deutschsprachiges Literaturverzeichnis den Forschungsstand schlecht (in nicht akzeptabler Weise) abbildet. Daher sollten englischsprachige Artikel reichhaltig verwendet werden.

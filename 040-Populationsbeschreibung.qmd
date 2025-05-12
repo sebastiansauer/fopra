@@ -439,6 +439,31 @@ Die Studie zum World Happiness Report ist ebenfalls ein Beispiel für einen Grup
 
 
 
+## Effektstärke
+
+Was ist ein "großer" Effekt, was ein "kleiner" (oder "mittlerer"?)
+
+Definieren wir als "groß" den Unterschied in mittlerer Körpergröße zwischen einem 6 Jahre alten und einem 7 Jahre alten Mädchen. 
+Beziehen wir uns auf die [typische Körpergrößen von Mädchen dieses Alters](https://cdn.who.int/media/docs/default-source/child-growth/growth-reference-5-19-years/height-for-age-(5-19-years)/sft-hfa-girls-perc-5-19years.pdf?sfvrsn=59b013d8_4).
+
+Mittlere Körpergröße:
+
+- 6.0 Jahre: 115 cm
+- 7.0 Jahre: 121 cm
+
+
+Die SD liegt bei ca. 5.5 cm.
+
+Demnach beträgt der Größenunterschied 6 cm, oder ca. 1 SD-Einheit.
+
+Aus der oben zitierten Größentabelle können wir ablesen:
+
+- 6 Jahre, 6 Monate: 118 cm
+
+Das ist ein Unterschied von 3 cm, oder ca. 1/2 SD-Einheit.
+Nennen wir das einen "mittleren" Effekt.
+
+
 ## Planung der Stichprobengröße
 
 
