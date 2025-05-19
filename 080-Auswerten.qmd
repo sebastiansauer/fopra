@@ -604,9 +604,31 @@ extra |>
 
 ```{r}
 extra |> 
-  drop_na(sex, smoker) |>  # fehlende Werte entfernen
-  count(smoker, sex) |> 
-  ggbarplot(x = "sex", y = "smoker", fill = "smoker")
+  drop_na(age, sex) |>  # fehlende Werte entfernen
+  count(young = age < 20, sex) |>
+  ggbarplot(x = "young", y = "n", fill = "sex")
+```
+
+Eicht man die Höhen der Balken auf 100%,
+so kann man Zusammenhänge gut visualisieren.
+
+```{r}
+extra |> 
+  drop_na(age, sex) |>  # fehlende Werte entfernen
+  count(young = age < 20, sex) |> 
+  ggbarplot(x = "young", y = "n", fill = "sex", 
+            position = position_fill()) +
+  labs(title = "Deutlicher Zusammenhang zwischen Geschlecht und Alter")
+```
+
+
+```{r}
+extra |> 
+  drop_na(n_party, sex) |>  # fehlende Werte entfernen
+  count(party_tiger = n_party > 5, sex) |> 
+  ggbarplot(x = "party_tiger", y = "n", fill = "sex", 
+            position = position_fill()) +
+  labs(title = "Schwacher Zusammenhang zwischen Geschlecht und 'Party_Tiger'")
 ```
 
 
