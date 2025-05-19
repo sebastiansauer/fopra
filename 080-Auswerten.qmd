@@ -39,6 +39,7 @@ In diesem Kapitel benötigen Sie die folgenden R-Pakete:
 #| messagen: false
 library(tidyverse)
 library(easystats)
+library(ggpubr)  # Visualisierung
 ```
 
 
@@ -489,6 +490,47 @@ extra |>
   describe_distribution(extra_mean)
 ```
 
+### Visualisierung von metrischen Variablen
+
+
+#### Univariat
+
+Mit dem R-Paket `ggpubr` kann man ansprechende Visualisierungen erzeugen,
+und zwar ziemlich einfach.
+Mit `help(ggpubr)` bekommen Sie Einblick in die Hilfeseite von [ggpubr](https://rpkgs.datanovia.com/ggpubr/).
+
+```{r}
+gghistogram(extra, x = "extra_mean", add = "mean") +
+  labs(x = "Extraversion (Mittelwert)",
+       y = "Häufigkeit",
+       caption = "Die gestrichelte horizontale Linie zeigt den Mittelwert der Verteilung.")
+```
+
+
+#### Gruppenvergleich
+
+Es gibt verschiedene Methoden, Gruppenunterschiede zu verdeutlichen.
+Man könnte z.B. pro Gruppe ein Histogramm zeigen, das ist recht informationsreich.
+
+```{r}
+extra_no_na <-
+  extra |> 
+  filter(sex == "Frau" | sex == "Mann")
+
+gghistogram(extra_no_na, x = "extra_mean", add = "mean", facet.by = "sex") +
+  labs(x = "Extraversion (Mittelwert)",
+       y = "Häufigkeit",
+       caption = "Die gestrichelte horizontale Linie zeigt den Mittelwert der Verteilung.")
+```
+
+Gerade bei vielen Gruppen kann aber ein Boxplot übersichtlicher sein.
+
+```{r}
+extra_no_na |> 
+  ggboxplot(y = "extra_mean", x = "sex")
+```
+
+
 
 ### Deskriptive Ergebnisse für nominale Variablen 
 
@@ -511,8 +553,27 @@ Etwas schicker sieht es aus mit `data_tabulate` aus `easystats`:
 extra |> 
   select(sex) |> 
   #drop_na() |>  ggf. ohne fehlende Werte
-  data_tabulate()
+  data_tabulate() |> 
+  print_md()  # erstelle eine schicke HTML-Tabelle
 ```
+
+Zur Visualisierung von Häufigkeiten bieten sich Balkendiagramme an.
+Nutzt man `ggpubr` muss man zuerst selber die Anzahl der Werte auszählen (lassen),
+das geht z.B. mit `count`.
+
+```{r}
+extra_no_na |> 
+  count(sex)
+```
+
+```{r}
+extra_no_na |> 
+  count(sex) |> 
+  ggbarplot(x = "sex", y = "n")
+```
+
+
+
 
 #### Bivariate Häufigkeiten
 
@@ -524,7 +585,8 @@ Betrachten wir die Geschlechtsverteilung bei Menschen, die (nicht) jünger als 2
 extra |> 
   drop_na(sex, age) |>  # fehlende Werte entfernt
   group_by(age > 20) |> 
-  data_tabulate(sex)
+  data_tabulate(sex) |> 
+  print_md()  # erstelle eine schicke HTML-Tabelel
 ```
 
 
@@ -537,6 +599,14 @@ extra |>
   group_by(age > 20) |> 
   data_tabulate(sex) |> 
   print_md()
+```
+
+
+```{r}
+extra |> 
+  drop_na(sex, smoker) |>  # fehlende Werte entfernen
+  count(smoker, sex) |> 
+  ggbarplot(x = "sex", y = "smoker", fill = "smoker")
 ```
 
 
@@ -581,7 +651,8 @@ cor_results <-
 extra %>% 
   select(any_of(extra_corr_names)) %>%  
   correlation() %>% 
-  summary()
+  summary() |> 
+  print_md()  # erstelle schicke HTML-Tabelle
 
 cor_results
 ```
