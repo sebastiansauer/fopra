@@ -31,7 +31,7 @@ Behalten Sie Ihren Fortschritt im Projektplan im Blick, s. @fig-projektplan.
 
 
 
-### Benötigte R-Pakete und Daten
+### Benötigte R-Pakete und Daten {#sec-dataneeded}
 
 In diesem Kapitel benötigen Sie die folgenden R-Pakete:
 
@@ -385,6 +385,8 @@ Im Folgenden sind die Vorteile der oben genannten klickbasierten Software-Progra
 - aktuell
 - flachere Lernkurve
 - R-Code integriert
+
+*Beispiele*: [JASP](https://jasp-stats.org/), [Jamovi](https://www.jamovi.org/), [Exploratory](https://exploratory.io/)
 :::
 
 :::{.column}
@@ -396,6 +398,8 @@ Im Folgenden sind die Vorteile der oben genannten klickbasierten Software-Progra
 - aktueller
 - umfassend (klickbasierte Software kann nicht alles, was man braucht)
 - steilere Lernkurve
+
+*Beispiele:* [R](https://www.r-project.org/), [Python](https://www.python.org/)
 :::
 
 ::::
@@ -411,7 +415,7 @@ Die Deskriptivstatistik fasst eine Datenreihe zu einer Kennzahl zusammen. Der Nu
 :::
 
 
-Wir analysieren den Datensatz `extra`.
+Wir analysieren den Datensatz `extra`, s. zu Beginn dieses Kapitels, @sec-dataneeded.
 Damit es einfach bleibt, begrenzen wir uns im Folgenden auf ein paar Variablen. 
 
 Sagen wir, 

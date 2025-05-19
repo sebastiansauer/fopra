@@ -113,9 +113,10 @@ Für Ihre Note zählt alleine, ob Sie sorgfältig gearbeitet haben.$\square$
 
 ## Literaturempfehlung
 
+Einen guten und zugänglichen Einstieg in das Thema bietet @rohrer_thinking_2018.
 @huntington-klein_effect_2022 beschreibt auf anschauliche Weise die Praxis der Versuchsplanung mit einem Schwerpunkt auf die Kausalanalyse. 
 Ein weiteres Plus ist, dass das Buch [frei im Internet zu lesen](https://theeffectbook.net/) ist.
-Tipp: Mit dem Übersetzungtool eines jeden Browers kann man sich das Buch schnell auf Deutsch übersetzen lassen.
+*Tipp*: Mit dem Übersetzungtool eines jeden Browers kann man sich das Buch schnell auf Deutsch übersetzen lassen.
 
 
 ## Aufgaben

@@ -242,16 +242,17 @@ Wenn Sie dranbleiben und sich weiter einarbeiten steigt Ihr Verständnis spiralf
 
 
 
-## Wissenslandkarte aufbauen
+## Literaturrecherche
 
 
 ### Ablauf
 
 Sogenannte "Abläufe" wie die Wahl des Themas einer Forschungsarbeit, 
 die Literaturrecherche oder das Schreiben sind in Wahrheit gar keine Abläufe. 
-Es sind eher Kreise, da man die gleichen Tätigkeiten öfters wiederholt.
-Optimistischer ausgedrückt, sind es weder Abläufe noch Kreise, sondern Spiralen, s
-. @fig-spirale, da sich die Tätigkeiten zwar wiederholen, aber auf höherem oder verfeinertem Niveau.
+Es sind eher *Kreise*, da man die gleichen Tätigkeiten öfters wiederholt.
+Optimistischer ausgedrückt, sind es weder Abläufe noch Kreise, sondern Spiralen, 
+s. @fig-spirale, da sich die Tätigkeiten zwar wiederholen, 
+aber auf höherem oder verfeinertem Niveau.
 @fig-litsearch stellt die einzelnen Schritte des Wissensaufbau im Überblick dar.
 
 ```{mermaid}
@@ -267,7 +268,9 @@ Suchen-->Screenen-->Sammeln-->Lesen-->Zusammenfassen-->Verbinden-->Suchen
 
 
 
-1. *Suchen* (Literaturrecherce) ist das Ausfindigmachen geeigneter Literatur. Dazu sucht man meist in einschlägigen wissenschaftlichen Literatur-Datenbanken wie z. B. Google Scholar. Sie finden Literaturquellen, die für Ihre Forschungsfrage relevant sein könnnten.
+1. *Suchen* ist das Ausfindigmachen geeigneter Literatur. 
+Dazu sucht man meist in einschlägigen wissenschaftlichen Literatur-Datenbanken wie z. B. Google Scholar. 
+Sie finden Literaturquellen, die für Ihre Forschungsfrage relevant sein könnnten.
 Beim Suchen von muss man unterscheiden zwischen dem Finden von 
 
     a. 🖋️ *Zitierinformationen* wie Autor, Titel, Datum der Veröffentlichung oder ID-Nummer (wie DOI oder ISBN)
@@ -408,6 +411,47 @@ Versuchen Sie, die Volltexte für Ihre 5 Papers aus @exr-litrecherche zu bekomme
 :::
 
 
+## Zettelkasten
+
+### Wissen vernetzen mit dem Zettelkasten
+
+Eine Sammlung von Literaturstellen alleine nützt nicht viel.
+Notizen zu Literaturstellen alleine nutzen nicht viel.
+Viele Notizzettel für sich genommen nutzen nicht viel.
+Viele Notizen ("Zettel"), ohne Verbindung, sind nur ein Haufen (von Zetteln).
+
+Um die Zusammenhänge Ihrer Notizen zu sehen, 
+brauchen Sie, ja: Zusammenhänge zwischen den Notizen.
+
+Sie müssen also Querverweise (Links) zwischen den Notizen schaffen.
+Hashtags den Notizen zuweisen ist ebenfalls nützlich.
+
+Solche Verbindungen erst lassen ein Wissens-Netzwerk oder eine Wissens-Landkarte entstehen.
+Und nur diese Wissenslandkarte ist nützlich. Der Zettelhaufen ist es nicht.
+Das Resultat von den verlinkten Notizen (Zetteln) ist, was Niklas Luhmann als "Zettelkasten" bezeichnete.
+@ahrens2017 stellt die Methode des Zettelkastens näher vor -- empfehlenswert.
+
+Es gibt verschiedene Methoden, die helfen, eine Wissenslandkarte (einen Zettelkasten) zu erstellen, 
+indem Wissensverbindungen erstellt werden.
+Eine davon heißt [Obsidian](https://obsidian.md/), s. @fig-obsidian1.
+Obsidian hat ein paar Vorzüge:
+
+- kostenfrei
+- speichert Ihre Notizen offline als Textdateien
+- nutzerfreundlich
+
+![Die Oberfläche von Obsidian](img/obsidian1.png){#fig-obsidian1 width=75%}
+
+
+Notizen schreibt man auf (Papier-)Zetteln (zumindest früher auf Paper, 
+heute eher auf digitalen Zetteln; morgen ist Papier vielleicht wieder in Mode).
+Die Zettel sammelt man in einem (physischen) Zettelkasten (zumindest früher, heute eher in einer Datenbank).
+Joschua Meyer erläutert im Video, wie ein (digitaler) Zettelkasten unser Denken und Schreiben in das nächste Level bringen könnte.
+
+{{< video https://www.youtube.com/watch?v=avb6b0nL3NQ >}}
+
+
+
 ### Texte zusammenfassen
 
 Beim Zusammenfassen reduzieren Sie einen Text auf die Kernaussage, s. @fig-kern.
@@ -447,41 +491,9 @@ Vergessen Sie auch die Quellenangabe nicht,
 da Sie ja zu jedem Gedanken die Quelle angeben müssen.
 
 
-## Wissen verbinden
-
-Notizen zu Literaturstellen alleine nutzen nicht viel.
-Viele Notizzettel für sich genommen nutzen nicht viel.
-Viele Notizen ("Zettel"), ohne Verbindung, sind nur ein Haufen (von Zetteln).
-
-Um die Zusammenhänge Ihrer Notizen zu sehen, 
-brauchen Sie, ja: Zusammenhänge zwischen den Notizen.
-
-Sie müssen also Querverweise (Links) zwischen den Notizen schaffen.
-Hashtags den Notizen zuweisen ist ebenfalls nützlich.
-
-Solche Verbindungen erst lassen ein Wissens-Netzwerk oder eine Wissens-Landkarte entstehen.
-Und nur diese Wissenslandkarte ist nützlich. Der Zettelhaufen ist es nicht.
-
-Es gibt verschiedene Apps, die helfen, eine Wissenslandkarte zu erstellen, 
-indem Wissensverbindungen erstellt werden.
-Eine davon heißt [Obsidian](https://obsidian.md/), s. @fig-obsidian1.
-Obsidian hat ein paar Vorzüge:
-
-- kostenfrei
-- speichert Ihre Notizen offline als Textdateien
-- nutzerfreundlich
-
-![Die Oberfläche von Obsidian](img/obsidian1.png){#fig-obsidian1 width=75%}
 
 
-Notizen schreibt man auf Zetteln (zumindest früher, heute eher auf digitalen Zetteln).
-Die Zettel sammelt man in einem Zettelkasten (zumindest früher, heute eher in einer Datenbank).
-Joschua Meyer erläutert im Video, wie ein (digitaler) Zettelkasten unser Denken und Schreiben in das nächste Level bringen könnte.
-
-{{< video https://www.youtube.com/watch?v=avb6b0nL3NQ >}}
-
-
-## Lesen
+## Lesen 2.0
 
 ### Lesen ohne KI?
 

@@ -137,6 +137,22 @@ tibble::tribble(
 ```
 
 
+Ein typischer Kurs mit 12 Wochen Unterricht (zu jeweils 90 Minuten) hat folgende Themen.
+Die Themen entsprechend jeweils einem Kapitel dieses Buchs.
+
+
+1. Hallo, Forschung
+2. Einlesen: Themenfindung Literaturrecherche
+3. Einlesen: Zettelkasten, Lesen 2.0 und Hypothesen
+4. Wissenschaftliches Schreiben: Gliedern und Aufbau
+5. Wissenschaftliches Schreiben: Schreibstil und Formatierung
+6. Beschreiben und Erklären
+7. Messen und Erheben
+8. Kausalanalyse
+9. Datenaufbereitung
+10. Datenmodellierung: Grundlagen
+11. Datenmodellierung: Typische Designs
+12. Berichten von Statistiken
 
 
 
