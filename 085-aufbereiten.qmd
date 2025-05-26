@@ -52,6 +52,28 @@ extra <- data_read(data_url)  # aus `{easystats}`
 Anstelle von `data_read` könnten Sie auch `read_csv` (Tidyverse) oder `read.csv` (Standard-R) verwenden.
 
 
+
+## Daten aus SoSci Survey exportieren
+
+Unter der Rubrik *Steuerung > Erhobene Daten > Daten herunterladen* können Sie die Daten Ihres Befragungsprojekts herunterladen, s. @fig-sosci1.
+
+![Daten herunterladen von SoSci Survey](img/sosci1.png)
+
+Sie können die Daten in verschiedenen Formaten herunterladen, z.B. Excel oder CSV, die Sie alle in R importieren können. 
+
+*Empfehlenswert* ist es, die Option "Beschriftung der Variablen einfügen" NICHT auszuwählen. 
+Hat man nämlich diese Option gewählt, so erhält man zwei Kopfzeilen.
+Eine "brave" Tabelle hingegen darf nur eine einzelne Kopfzeile haben. 
+Ihr Statistikprogramm (wie R) wird dann mit der Tabelle *nicht* arbeiten können.
+
+Wählt man das CSV-Format, so sollte zusätzlich die Option "Unicode-Unterstützung für nicht-westeuropäische Sprachen (UTF-16 LE)" NICHT ausgewählt sein.
+
+Insgesamt ist das Excel-Format vorzuziehen, wenn man es einfacher haben will.
+Möchte man Robustheit und Reproduzierbarkeit der Daten unterstützen, so bietet sich das CSV-Format an.
+
+
+
+
 ## Typische Schritte beim Daten aufbereiten
 
 
@@ -154,7 +176,7 @@ Aber in jedem Datensatz finden sich die gleichen Variablen. $\square$
 @fig-bind-cols veranschaulicht das spaltenweise Zusammenführen von Tabellen.
 
 
-![Tabellen spaltenweise zusammenführen](img/add-colwise.svg){#fig-bind-cols}
+![Tabellen spaltenweise zusammenführen: "Var1" ist die ID- oder Schlüsselvariable, die bestimmt, welche Zeilen in den verschiedenen Tabellen zusammgengehören.](img/add-colwise.svg){#fig-bind-cols}
 
 
 
