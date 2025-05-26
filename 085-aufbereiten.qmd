@@ -38,6 +38,7 @@ Behalten Sie Ihren Fortschritt im Projektplan im Blick, s. @fig-projektplan.
 #| messagen: false
 library(tidyverse)
 library(easystats)
+library(readxl)  # optional, für XLSX-Import
 ```
 
 
@@ -57,19 +58,33 @@ Anstelle von `data_read` könnten Sie auch `read_csv` (Tidyverse) oder `read.csv
 
 Unter der Rubrik *Steuerung > Erhobene Daten > Daten herunterladen* können Sie die Daten Ihres Befragungsprojekts herunterladen, s. @fig-sosci1.
 
-![Daten herunterladen von SoSci Survey](img/sosci1.png)
+![Daten herunterladen von SoSci Survey](img/sosci1.png){#fig-sosci1 width=75%}
 
 Sie können die Daten in verschiedenen Formaten herunterladen, z.B. Excel oder CSV, die Sie alle in R importieren können. 
 
 *Empfehlenswert* ist es, die Option "Beschriftung der Variablen einfügen" NICHT auszuwählen. 
 Hat man nämlich diese Option gewählt, so erhält man zwei Kopfzeilen.
 Eine "brave" Tabelle hingegen darf nur eine einzelne Kopfzeile haben. 
-Ihr Statistikprogramm (wie R) wird dann mit der Tabelle *nicht* arbeiten können.
+Ihr Statistikprogramm (wie R) wird dann mit der Tabelle *nicht* (ohne Weiteres) arbeiten können,
+s. @tbl-sosci-zweikopf ([Datenquelle](https://github.com/sebastiansauer/fopra/raw/main/data/sosci-beispiel01.xlsx)).^[Man könnte aber z.B. die störende Zeile löschen mit `slice(-1)` -- hier mit der Annahme, dass die störende Zeile die erste nach der Kopfzeile ist.]
 
 Wählt man das CSV-Format, so sollte zusätzlich die Option "Unicode-Unterstützung für nicht-westeuropäische Sprachen (UTF-16 LE)" NICHT ausgewählt sein.
-
 Insgesamt ist das Excel-Format vorzuziehen, wenn man es einfacher haben will.
 Möchte man Robustheit und Reproduzierbarkeit der Daten unterstützen, so bietet sich das CSV-Format an.
+Praktischerweise kann man auch ein Codebook herunterladen.
+
+```{r}
+#| label: tbl-sosci-zweikopf
+#| echo: false
+#| tbl-cap: Ein Datensatz aus SoSci-Survey, der FALSCH eingelesen wurde, mit *zwei* Kopfzeilen.
+
+library(readxl)
+data_path_bad <- "https://github.com/sebastiansauer/fopra/raw/main/data/sosci-beispiel01.xlsx"
+
+sosci1_BAD_DONT_DO_THIS_AT_HOME <- read_xlsx("data/sosci-beispiel01.xlsx")
+sosci1_BAD_DONT_DO_THIS_AT_HOME 
+```
+
 
 
 
@@ -80,6 +95,7 @@ Möchte man Robustheit und Reproduzierbarkeit der Daten unterstützen, so bietet
 
 Häufig sind Daten noch nicht "aufbereitet" und müssen noch "geputzt" oder "aufgeräumt" werden. Dazu gehören Schritte wie
 
+- Daten importieren
 - Datentabellen zusammenführen
 - Daten umkodieren
 - Daten aggregieren
@@ -92,6 +108,30 @@ Häufig sind Daten noch nicht "aufbereitet" und müssen noch "geputzt" oder "auf
 Betrachten wir im Folgenden einige zentrale Aspekte dieser Schritte.
 
 
+### Daten importieren
+
+Sie können verschiedene Datenformate in R importieren; Excel- (.xlsx) oder CSV- (.csv) Formate bieten sich an.
+Dazu sollten Sie die Daten heruntergeladen haben.
+Tipp: Definieren Sie einen RStudio-Projektordner und speichern Sie die Daten in einen Unterordner des Projektordners.
+Importieren Sie dann die Daten in gewohnter Manier,
+z.B. aus einer XLSX- oder als CSV-Datei;  s. @tbl-sosci_good.
+
+```{r}
+data_raw <- read_xlsx("data/sosci-beispiel02.xlsx")  # aus dem Paket `readxl`
+data_raw <- read_csv2("data/sosci-beispiel01.csv")  # aus dem Paket `tidyverse`
+```
+
+
+```{r}
+#| echo: false
+#| label: tbl-sosci_good
+#| tbl-cap: Beispiel für einen Datensatz von Sosci-Survey
+
+
+kable(data_raw)
+```
+
+Eine ausführlichere Erklärung zum Importieren von Daten finden Sie [im Kapitel *Daten einlesen* im Buch *Statistik1*](https://statistik1.netlify.app/020-r).
 
 
 ### Datentabellen zusammenführen
@@ -265,12 +305,10 @@ d <- tibble(i01 = c("1", "3", "4"),  # von 1 bis 4 als Text formatiert
 d
 ```
 
-Für diejenigen, die kompliziert mögen, ist hier noch eine `factor`-Spalte hinzugefügt. 
+Für diejenigen, die es kompliziert mögen, ist hier noch eine `factor`-Spalte hinzugefügt. 
 Erstmal ignorieren.
-
 Stellen Sie sich vor, die Tabelle ist ein Auszug aus Ihrer Umfrage,
-wobei `i01` das erste Item (Frage) Ihres Fragebogens darstellt etc.
-
+wobei `i01` das erste Item (Frage) Ihres Fragebogens darstellt, etc.
 
 Wie kann man R beibringen, 
 dass die fraglichen Spalte `i01` doch "in Wirklichkeit" Zahlen sind und kein Text?
@@ -295,18 +333,18 @@ So würde es *in einigen Fällen* auch gehen:
 d %>% mutate(i01_r = as.numeric(i01))
 ```
 
-Aber wenn `i01` als `factor()` formatiert ist, dann geht es nicht unbedingt.
+Aber wenn `i01` als `factor` formatiert ist, dann funtioniert `as.numeric` nicht unbedingt; `parse_number` hingegen schon.
 
 ```{r}
-d %>% mutate(i02_r = as.numeric(factor(i02)))
+d %>% mutate(i02_KAPUTT = as.numeric(factor(i02)))
 ```
 Hoppla! Die Zahlen passen nicht!
 
-`parse_number()` verlangt als Input `character`,
+`parse_number()` verlangt allerdings als Input `character`,
 so dass Sie ggf. noch von `factor` auf `character` umformatieren müssen.
 
 ```{r}
-d %>% mutate(i03_r = parse_number(as.character(i03)))
+d %>% mutate(i03_IN_ORDNUNG = parse_number(as.character(i03)))
 ```
 
 
