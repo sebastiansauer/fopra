@@ -391,13 +391,15 @@ Arbeiten Sie in Kleingruppen. Teilen Sie dann den Link zur Gruppe im Plenum. $\s
 
 
 
-### Volltext-Zugriff
+### Volltext-Zugriff {#sec-volltext}
 
 Um an Volltexte zu gelangen, gibt es verschiedene Wege:
 
-- *Googeln* nach dem Titel (in Anführungszeichen, damit eine Exakt-Suche ausgeführt wird) plus dem Suchterm "PDF"
-- *Google Scholar* zeigt an, ob ein Volltext zu einem Werk frei zugänglich im Internet ist
-- Melden Sie sich bei Ihrer *Bibliothek* an und prüfen Sie, welche Quellen dort zugänglich sind
+- *Googeln* Sie nach dem Titel (in Anführungszeichen, damit eine Exakt-Suche ausgeführt wird) plus dem Suchterm "PDF".
+- *Google Scholar* zeigt an, ob ein Volltext zu einem Werk frei zugänglich im Internet ist.
+- Melden Sie sich bei Ihrer *Bibliothek* an und prüfen Sie, welche Quellen dort zugänglich sind.
+- Melden Sie sich bei anderen (Hochschul-)Bibliotheken an. Meist kann man kostenlos einen Zugang bekommen. Einige Hochschulen sind sehr gut mit Volltexten ausgestattet. Ein Nachteil ist, dass man als externer Student keinen VPN- (d.h. Fern-)Zugriff bekommt, sondern über dem Campus dieser Hochschule zugreifen muss.
+- Einige Bibliotheken verfügen über eine gute Ausstattung an Fachartikeln und gewähren zusätzlich einen VPN- (d.h. Fern-)Zugriff -- und das kostenfrei. Die [bayerische Staatsbibliothek](https://www.bsb-muenchen.de/) in München ist dafür ein Beispiel. Nachteil: Man muss einmal dort persönlich (mit Personalausweis) erscheinen.
 - Suchen Sie nach einem *Preprint* auf Preprint-Diensten wie Researchgate
 - Schreiben Sie die *Autoren* an.
 - Verzichten Sie auf diesen Artikel und wählen Sie stattdessen einen *ähnlichen*, auf den Sie einfacher zugreifen können 🤷‍♂️

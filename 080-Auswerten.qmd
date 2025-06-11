@@ -194,7 +194,7 @@ Beachten Sie das Prinzip von "tidy data":
 
 
 
-## Checkliste zur Datenanalyse
+## Checkliste zur Datenanalyse {#sec-checkdaten}
 
 Hier sehen Sie im Überblick die Schritte, die in vielen Fällen sinnvoll sind, um Daten auf einem guten Niveau auszuwerten.
 
