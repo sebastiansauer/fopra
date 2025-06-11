@@ -1444,7 +1444,20 @@ Erläutern und demonstrieren Sie folgende Word-Formatierungsfunktionen:
 
 ## IT-Tools
 
-Neben MS Word oder Libe Office kann Google Docs eine sinnvolle Alternative sein, um ihre Arbeit zu verschriftlichen.
+Neben Old-School-Word-Software wie MS *Word* oder Libre Office kann ein Online-Tool* Google Docs* eine sinnvolle Alternative sein, um ihre Arbeit zu verschriftlichen.
+Google Docs bietet ein Zotero-Plugin, was ein Killer-Feature ist.
+Außerdem bieten solche Online-Dienste gute Kolloborationsmöglichkeiten (man kann also gut gemeinsam an einem Paper arbeiten).
+
+Die Cool Kids schreiben Ihre Thesis in Plain Text, d.h. *Markdown.*
+Git(hub) übernimmt dann die Vesionierung und das Backup.
+
+Denken Sie an die IT-Sicherheit: Erstellen Sie regelmäßige Backups von verschiedenen Versionen (Stand gestern, Stand heute, ...) Ihrer Arbeit.
+Markieren Sie die Versionen mit einer fortlaufenden Nummer (`Thesis_v_042`) oder mit Datum/Uhrzeit (`Thesis_2026-06-11_11:08`).
+[Meiden Sie `Thesis_final`](https://phdcomics.com/comics/archive.php?comicid=1531), das klappt sowieso nicht 😂.
+
+
+
+
 
 
 

@@ -616,7 +616,7 @@ ist sich das Modell sehr sicher, dass der Effekt von Bringtnixtin *negativ* ist.
 <!-- ist sich das Modell nicht sicher, welche Richtung der Effekt von Bringtnixtin hat. -->
 
 
-Testen wir noch die Praktisch-Null-Hypothese (für den Effekt von `g` auf `d`) mit dem ROPE-Verfahern:
+Testen wir noch die Praktisch-Null-Hypothese (für den Effekt von `g` auf `d`) mit dem ROPE-Verfahren:
 
 ```{r}
 rope(m_bringtnixtin2)
@@ -631,6 +631,13 @@ Null Prozent des 95%-HDI liegt im ROPE.
 #| fig-cap: "95%-HDI und ROPE überlappt nicht: Wir verwerfen die ROPE Hypothese"
 plot(rope(m_bringtnixtin2)) + scale_fill_okabeito()
 ```
+
+
+
+## Fallstudie
+
+[Hier](https://datenwerk.netlify.app/posts/einsamkeit-modellierung/index.html) ist eine Fallstudie einer studentischen Arbeit vorgestellt,
+in der Einsamkeit experimentell induziert wird und dann der Effekt auf wahrgenommene Einsamkeit untersucht wird (unter anderem).
 
 
 
