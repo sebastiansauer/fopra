@@ -8,7 +8,7 @@ Auf der Seite der [Schriftenreihe des Instituts für Wirtschaftspsychologie (iwp
 Diese Arbeiten können als Vorbilder für Ihren eigenen Bericht dienen.
 
 
-Interessant ist z.B. die Arbeit zum Thema [Selbstwirksamkeit, Selbstregulation und Prokrastination – Überprüfung eines Mediationsmodells](https://forschung.fom.de/fileadmin/fom/forschung/iwp/Schriftenreihe/FOM-Forschung-iwp-Schriftenreihe-Band-11-Schuhmacher-Beatrice-Prokastination-2022.pdf) von @schuhmacher_selbstwirksamkeit_2022. Die Arbeit ist frei im Netz verfügbar.
+Interessant ist z.B. die Arbeit zum Thema [Selbstwirksamkeit, Selbstregulation und Prokrastination – Überprüfung eines Mediationsmodells](https://forschung.fom.de/fileadmin/fom/forschung/iwp/Schriftenreihe/FOM-Forschung-iwp-Schriftenreihe-Band-11-Schuhmacher-Beatrice-Prokastination-2022.pdf) von @schuhmacher2022. Die Arbeit ist frei im Netz verfügbar.
 
 
 :::{callout-tip}
@@ -44,7 +44,7 @@ ANTWORT: Eine gute Lösung wäre eine Mediatoranalyse. UV: `Ind`uktion von Einsa
 
 FRAGE: Wir sind aktuell dabei unsere Datenauswertung auf R zu machen. Bisher haben wir das Datenjudo gemacht (Spalten mit fehlenden Werten entfernt, Items umkodiert, Items zu einem Konstrukt zusammengefasst und den Mittelwert gebildet, Korrelationen  angeschaut,..). Nun haben wir angefangen verschiedene Modelle zu erstellen und kommen nicht wirklich weiter. Wir sind uns aber sehr unsicher, wie wir die Ergebnisse nun interpretieren können. Wenn wir es richtig verstanden haben, kann keines der Modelle unsere  Hypothesen bestätigen. Können Sie uns einen Tipp geben, wie wir noch weiter verfahren können?
 
-ANTWORT: Was Sie bisher gemacht haben, hört sich gut an. Tipps: 1. Setzen Sie die Analysen aus QM2 um, falls Sie das noch nicht gemacht haben. 2. Gehen Sie die Checkliste zur Datnanalyse durch, s. @sec-checkdaten. 3. Schauen Sie sich die Videos auf meinem [YouTube-Kanal](https://www.youtube.com/@sebastiansauerstatistics) an, besonders die Playlists aus @sec-bayesmod. 4. Prüfen Sie, ob Ihre (Regressions-)Modelle zu Ihren Hypothesen bzw. Forschungsfragen passen. 5. Schauen Sie sich die als empfehlenswert ausgestellten Arbeiten an (s. Moodle).
+ANTWORT: Was Sie bisher gemacht haben, hört sich gut an. Tipps: 1. Setzen Sie die Analysen aus QM2 um, falls Sie das noch nicht gemacht haben. 2. Gehen Sie die Checkliste zur Datnanalyse durch, s. @sec-checkdaten. 3. Schauen Sie sich die Videos auf meinem [YouTube-Kanal](https://www.youtube.com/@sebastiansauerstatistics) an, besonders die Playlists aus @sec-bayesmod. 4. Prüfen Sie, ob Ihre (Regressions-)Modelle zu Ihren Hypothesen bzw. Forschungsfragen passen. 5. Schauen Sie sich die als empfehlenswert ausgestellten Arbeiten an (s. Moodle) oder @sec-beispiele-projektarbeiten.
 
 
 

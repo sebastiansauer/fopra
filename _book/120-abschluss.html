@@ -22,7 +22,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-</style>
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -475,6 +495,8 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#sekundärzitate" id="toc-sekundärzitate" class="nav-link" data-scroll-target="#sekundärzitate"><span class="header-section-number">14.2.1</span> Sekundärzitate</a></li>
   <li><a href="#schriftgröße" id="toc-schriftgröße" class="nav-link" data-scroll-target="#schriftgröße"><span class="header-section-number">14.2.2</span> Schriftgröße</a></li>
+  <li><a href="#induktion-von-einsamkeit" id="toc-induktion-von-einsamkeit" class="nav-link" data-scroll-target="#induktion-von-einsamkeit"><span class="header-section-number">14.2.3</span> Induktion von Einsamkeit</a></li>
+  <li><a href="#können-sie-uns-einen-tipp-geben" id="toc-können-sie-uns-einen-tipp-geben" class="nav-link" data-scroll-target="#können-sie-uns-einen-tipp-geben"><span class="header-section-number">14.2.4</span> Können Sie uns einen Tipp geben?</a></li>
   </ul></li>
   <li><a href="#fertig" id="toc-fertig" class="nav-link" data-scroll-target="#fertig"><span class="header-section-number">14.3</span> Fertig</a></li>
   </ul>
@@ -512,7 +534,7 @@ window.Quarto = {
 <section id="sec-beispiele-projektarbeiten" class="level2" data-number="14.1">
 <h2 data-number="14.1" class="anchored" data-anchor-id="sec-beispiele-projektarbeiten"><span class="header-section-number">14.1</span> Beispiele für gute Projektarbeiten</h2>
 <p>Auf der Seite der <a href="https://forschung.fom.de/forschung/institute/iwp/publikationen.html#!acc=iwp-schriftenreihe/accid=18799">Schriftenreihe des Instituts für Wirtschaftspsychologie (iwp) der FOM Hochschule</a> finden Sie eine Auswahl an insgesamt gut aufbereiteten Berichten zu psychologischen Studien – fast alle aus studentischer Feder. Diese Arbeiten können als Vorbilder für Ihren eigenen Bericht dienen.</p>
-<p>Interessant ist z. B. die Arbeit zum Thema <a href="https://forschung.fom.de/fileadmin/fom/forschung/iwp/Schriftenreihe/FOM-Forschung-iwp-Schriftenreihe-Band-11-Schuhmacher-Beatrice-Prokastination-2022.pdf">Selbstwirksamkeit, Selbstregulation und Prokrastination – Überprüfung eines Mediationsmodells</a> von <span class="citation" data-cites="schuhmacher_selbstwirksamkeit_2022">(<a href="130-references.html#ref-schuhmacher_selbstwirksamkeit_2022" role="doc-biblioref"><strong>schuhmacher_selbstwirksamkeit_2022?</strong></a>)</span>. Die Arbeit ist frei im Netz verfügbar.</p>
+<p>Interessant ist z. B. die Arbeit zum Thema <a href="https://forschung.fom.de/fileadmin/fom/forschung/iwp/Schriftenreihe/FOM-Forschung-iwp-Schriftenreihe-Band-11-Schuhmacher-Beatrice-Prokastination-2022.pdf">Selbstwirksamkeit, Selbstregulation und Prokrastination – Überprüfung eines Mediationsmodells</a> von <span class="citation" data-cites="schuhmacher2022">Schuhmacher (<a href="130-references.html#ref-schuhmacher2022" role="doc-biblioref">2022</a>)</span>. Die Arbeit ist frei im Netz verfügbar.</p>
 <div class="{callout-tip}">
 <p>Lernen Sie von anderen, vergleichbaren Arbeiten und nutzen Sie diese als Vorbild. <span class="math inline">\(\square\)</span></p>
 </div>
@@ -529,6 +551,16 @@ window.Quarto = {
 <p>FRAGE: Bezüglich der Formatierung der Seminararbeit: In dem Buch “Schreiben und Gestalten von Abschlussarbeiten”, das Sie uns empfohlen haben, steht Times New Roman in Schriftgröße 12 und mit einem Zeilenabstand von 1,5 als geeigneter Standard. In Ihrem Skript ist zwar ebenfalls eine Serifenschrift, allerdings in Schriftgröße 11 und mit einem Zeilenabstand von 1 - 1,2 vorgegeben. Woran sollte man sich denn eher orientieren?</p>
 <p>ANTWORT: Beides ist in Ordnung, aber mir ist ein Zeilenabstand von 1 - 1.2 lieber als 1.5.</p>
 </section>
+<section id="induktion-von-einsamkeit" class="level3" data-number="14.2.3">
+<h3 data-number="14.2.3" class="anchored" data-anchor-id="induktion-von-einsamkeit"><span class="header-section-number">14.2.3</span> Induktion von Einsamkeit</h3>
+<p>FRAGE: Ein weiterer wichtiger Punkt für uns ist die Frage, ob die Einsamkeit wirklich erfolgreich induziert wurde. Zum Beispiel: Wenn wir ein Modell rechnen mit „Anthropomorphismus“ als abhängiger Variable und „Musik“ und „Geschichte“ als unabhängige Variablen (Hypothese: Je einsamer Probanden sind (nach Geschichte + Musik), desto anthropomorpher nehmen sie den Roboter war), wie wissen wir dann, ob die Einsamkeit wirklich wirkt? Müssen wir vorher ein eigenes Regressionsmodell rechnen, z. B. mit „Loneliness“ aus Fragebogen F2 als AV und „einsame Geschichte“ als UV, um zu prüfen, ob die Induktion funktioniert hat?</p>
+<p>ANTWORT: Eine gute Lösung wäre eine Mediatoranalyse. UV: <code>Ind</code>uktion von Einsamkeit (Musik/Geschichte); Mediator: Einsamkeit (<code>einsam</code>), AV: Anthropomorphe Wahrnehmnung (<code>anthro</code>). Also: <code>Ind -&gt; einsam -&gt; anthro</code>, d.h. <code>uv -&gt; m -&gt; av</code>. Das Thema haben wir nicht im Unterricht behandelt, so dass es ich es nicht erwarte (ich lasse mich aber positiv überraschen). Die nächstbeste Lösung ist, folgende Modelle zu prüfen: <code>uv -&gt; av</code>, <code>uv -&gt; m</code>, <code>m -&gt; av</code> und jeweils auf “Signifikanz” zu prüfen.</p>
+</section>
+<section id="können-sie-uns-einen-tipp-geben" class="level3" data-number="14.2.4">
+<h3 data-number="14.2.4" class="anchored" data-anchor-id="können-sie-uns-einen-tipp-geben"><span class="header-section-number">14.2.4</span> Können Sie uns einen Tipp geben?</h3>
+<p>FRAGE: Wir sind aktuell dabei unsere Datenauswertung auf R zu machen. Bisher haben wir das Datenjudo gemacht (Spalten mit fehlenden Werten entfernt, Items umkodiert, Items zu einem Konstrukt zusammengefasst und den Mittelwert gebildet, Korrelationen angeschaut,..). Nun haben wir angefangen verschiedene Modelle zu erstellen und kommen nicht wirklich weiter. Wir sind uns aber sehr unsicher, wie wir die Ergebnisse nun interpretieren können. Wenn wir es richtig verstanden haben, kann keines der Modelle unsere Hypothesen bestätigen. Können Sie uns einen Tipp geben, wie wir noch weiter verfahren können?</p>
+<p>ANTWORT: Was Sie bisher gemacht haben, hört sich gut an. Tipps: 1. Setzen Sie die Analysen aus QM2 um, falls Sie das noch nicht gemacht haben. 2. Gehen Sie die Checkliste zur Datnanalyse durch, s. <span class="quarto-unresolved-ref">?sec-checkdaten</span>. 3. Schauen Sie sich die Videos auf meinem <a href="https://www.youtube.com/@sebastiansauerstatistics">YouTube-Kanal</a> an, besonders die Playlists aus <span class="quarto-unresolved-ref">?sec-bayesmod</span>. 4. Prüfen Sie, ob Ihre (Regressions-)Modelle zu Ihren Hypothesen bzw. Forschungsfragen passen. 5. Schauen Sie sich die als empfehlenswert ausgestellten Arbeiten an (s. Moodle) oder <a href="#sec-beispiele-projektarbeiten" class="quarto-xref"><span>Kapitel 14.1</span></a>.</p>
+</section>
 </section>
 <section id="fertig" class="level2" data-number="14.3">
 <h2 data-number="14.3" class="anchored" data-anchor-id="fertig"><span class="header-section-number">14.3</span> Fertig</h2>
@@ -536,6 +568,11 @@ window.Quarto = {
 <p><i class="fa-solid fa-award" aria-label="award"></i></p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-schuhmacher2022" class="csl-entry" role="listitem">
+Schuhmacher, B. (2022). <em>Selbstwirksamkeit, Selbstregulation und Prokrastination Überprüfung eines Mediationsmodells</em> (L. Ďuranová &amp; K. Externbrink, Hrsg.; Bd. 11). MA Akademie Verlags- und Druckgesellschaft mbH. <a href="https://forschung.fom.de/fileadmin/fom/forschung/iwp/Schriftenreihe/FOM-Forschung-iwp-Schriftenreihe-Band-11-Schuhmacher-Beatrice-Prokastination-2022.pdf">https://forschung.fom.de/fileadmin/fom/forschung/iwp/Schriftenreihe/FOM-Forschung-iwp-Schriftenreihe-Band-11-Schuhmacher-Beatrice-Prokastination-2022.pdf</a>
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->
