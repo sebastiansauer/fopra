@@ -68,8 +68,26 @@ In einigen Playlists des Autors finden Sie Videos passend zu diesem Kapitel:
 
 ### Überblick
 
-In diesem Kapitel sind die grundlegenden Verfahren zur Modellierung und inferenzstatistischen Absicherung Ihrer Forschungsfragen angerissen.
+In diesem Kapitel sind die grundlegenden Verfahren zur *Modellierung* und *inferenzstatistischen Absicherung* Ihrer Forschungsfragen angerissen.
 Die Darstellung zielt auf ein "so-geht's" ab, nicht auf eine vollständige Darstellung aller Auswertungsmöglichkeiten.
+
+
+*Modellierung* bedeutet, dass Sie Ihre Forschungsfrage(n) bzw. Hypothese(n) in ein *statistisches Modell* überführen.
+Praktisch gesehen heißt das, dass Sie ein Regressionsmodell der Art `AV ~ UV1 + UV2 + ...` aufstellen, s. @sec-overview-stats. 
+
+Welche bzw. wie viele UV sollte man in ein (Regressions-)modell aufnehmen?
+Nehmen Sie alle Variablen auf, von denen Sie annehmen, dass es Ursachen Ihrer AV sind. 
+Berechnen Sie also *nicht* für jede UV ein eigenes Modell, sondern packen Sie alle UV in ein einziges Regressionsmodell -- sofern Sie der Meinung sind, alle UV sind direkte Ursachen der AV.
+Variablen mit anderen kausalen Funktionen, wie Konfundierungs- und Mediatorvariablen, sollten nicht in Ihr Modell aufgenommen werden, mit dem Sie den Effekt der UV auf die AV untersuchen.
+Es ist auch grundsätzlich sinnvoll, zusätzlich erhobenen Variablen, wie soziodemografische Variablen, in Ihr Modell aufzunehmen.
+
+*Inferenzstatistik* ordnet den Hypothesen eine Wahrscheinlichkeit zu und weist Punktschätzern einen Schätzbereich zu, s. @sec-overview-stats. 
+Kurz gesagt: Inferenzstatistik bestimmt die Ungewissheit einer Schätzung.
+
+Praktisch ist nicht viel zu tun für die Inferenzstatistik: Ihr Modellierungsbefehl (wie `stan_glm` oder `lm`) bereitet schon die Inferenzstatistik für Sie vor.
+Mit Befehlen wie `parameters` oder `summary` können Sie Ihrem Modell einfach die inferenzstatistischen Kennwerte entlocken.
+
+
 
 ## 1 between-Variable, nur Nachher-Messung
 

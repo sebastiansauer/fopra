@@ -503,7 +503,7 @@ window.Quarto = {
   <li><a href="#reproduzierbarkeit" id="toc-reproduzierbarkeit" class="nav-link" data-scroll-target="#reproduzierbarkeit"><span class="header-section-number">10.3</span> Reproduzierbarkeit</a></li>
   <li><a href="#codebook" id="toc-codebook" class="nav-link" data-scroll-target="#codebook"><span class="header-section-number">10.4</span> Codebook</a></li>
   <li><a href="#wir-brauchen-brave-daten" id="toc-wir-brauchen-brave-daten" class="nav-link" data-scroll-target="#wir-brauchen-brave-daten"><span class="header-section-number">10.5</span> Wir brauchen brave Daten</a></li>
-  <li><a href="#checkliste-zur-datenanalyse" id="toc-checkliste-zur-datenanalyse" class="nav-link" data-scroll-target="#checkliste-zur-datenanalyse"><span class="header-section-number">10.6</span> Checkliste zur Datenanalyse</a></li>
+  <li><a href="#sec-checkdaten" id="toc-sec-checkdaten" class="nav-link" data-scroll-target="#sec-checkdaten"><span class="header-section-number">10.6</span> Checkliste zur Datenanalyse</a></li>
   <li>
 <a href="#rostl%C3%B6ser" id="toc-rostlöser" class="nav-link" data-scroll-target="#rostl%C3%B6ser"><span class="header-section-number">10.7</span> Rostlöser</a>
   <ul class="collapse">
@@ -513,7 +513,7 @@ window.Quarto = {
   </ul>
 </li>
   <li>
-<a href="#%C3%BCberblick-zur-statistik" id="toc-überblick-zur-statistik" class="nav-link" data-scroll-target="#%C3%BCberblick-zur-statistik"><span class="header-section-number">10.8</span> Überblick zur Statistik</a>
+<a href="#sec-overview-stats" id="toc-sec-overview-stats" class="nav-link" data-scroll-target="#sec-overview-stats"><span class="header-section-number">10.8</span> Überblick zur Statistik</a>
   <ul class="collapse">
 <li><a href="#deskriptiv--vs.-inferenzstatistik" id="toc-deskriptiv--vs.-inferenzstatistik" class="nav-link" data-scroll-target="#deskriptiv--vs.-inferenzstatistik"><span class="header-section-number">10.8.1</span> Deskriptiv- vs.&nbsp;Inferenzstatistik</a></li>
   <li><a href="#deskriptivstatistik" id="toc-deskriptivstatistik" class="nav-link" data-scroll-target="#deskriptivstatistik"><span class="header-section-number">10.8.2</span> Deskriptivstatistik</a></li>
@@ -696,26 +696,29 @@ Tidy Data
 </div>
 </div>
 <p><a href="https://www.tandfonline.com/doi/full/10.1080/00031305.2017.1375989">Hier ist eine gute Quelle</a> für weitere Erläuterung zu diesem Thema.</p>
-</section><section id="checkliste-zur-datenanalyse" class="level2" data-number="10.6"><h2 data-number="10.6" class="anchored" data-anchor-id="checkliste-zur-datenanalyse">
+</section><section id="sec-checkdaten" class="level2" data-number="10.6"><h2 data-number="10.6" class="anchored" data-anchor-id="sec-checkdaten">
 <span class="header-section-number">10.6</span> Checkliste zur Datenanalyse</h2>
 <p>Hier sehen Sie im Überblick die Schritte, die in vielen Fällen sinnvoll sind, um Daten auf einem guten Niveau auszuwerten.</p>
 <ol type="1">
-<li>Vorverarbeitung
+<li>
+<em>Vorverarbeitung</em>
 <ol type="1">
 <li>Importieren</li>
 <li>Aufbereiten (Umkodieren, fehlende Wert versorgen, Transformieren, neue Spalten berechnen)</li>
 </ol>
 </li>
-<li>Explorative Analyse
+<li>
+<em>Explorative Analyse</em>
 <ol type="1">
-<li>Daten zusammenfassen (zentrale Tendenz, Streuung, Zusammenhang)</li>
-<li>Daten visualisieren</li>
+<li>Daten zusammenfassen (zentrale Tendenz, Streuung, Zusammenhang – jeweils für alle UV und AV sowie weiterer potenziell relevanter Variablen)</li>
+<li>Daten visualisieren (Verteilung der UV, AV, gemeinsame Verteilung von UV und AV)</li>
 </ol>
 </li>
-<li>Modellierung und Inferenzstatistik
+<li>
+<em>Modellierung und Inferenzstatistik</em>
 <ol type="1">
-<li>Modell berechnen</li>
-<li>Parameter berichten (Punkt- und Intervallschätzer) und ggf. visualisieren</li>
+<li>Modell berechnen (AV ~ UV1 + UV2 + …)</li>
+<li>Parameter berichten (Punkt- und Intervallschätzer)</li>
 <li>Parameter visualisieren</li>
 <li>Nullhypothesen testen (z. B. ROPE)</li>
 <li>Modellgüte berichten (z. B. R-Quadrat)</li>
@@ -733,7 +736,7 @@ Tidy Data
 </section><section id="wie-man-umfragedaten-auswertet" class="level3" data-number="10.7.3"><h3 data-number="10.7.3" class="anchored" data-anchor-id="wie-man-umfragedaten-auswertet">
 <span class="header-section-number">10.7.3</span> Wie man Umfragedaten auswertet</h3>
 <p><a href="https://sebastiansauer.github.io/umfragen-auswerten/index.html">Hier</a> finden Sie (m)eine Anleitung zur Auswertung von Umfragedaten.</p>
-</section></section><section id="überblick-zur-statistik" class="level2" data-number="10.8"><h2 data-number="10.8" class="anchored" data-anchor-id="überblick-zur-statistik">
+</section></section><section id="sec-overview-stats" class="level2" data-number="10.8"><h2 data-number="10.8" class="anchored" data-anchor-id="sec-overview-stats">
 <span class="header-section-number">10.8</span> Überblick zur Statistik</h2>
 <section id="deskriptiv--vs.-inferenzstatistik" class="level3" data-number="10.8.1"><h3 data-number="10.8.1" class="anchored" data-anchor-id="deskriptiv--vs.-inferenzstatistik">
 <span class="header-section-number">10.8.1</span> Deskriptiv- vs.&nbsp;Inferenzstatistik</h3>
@@ -756,6 +759,7 @@ Abbildung&nbsp;10.4: Inferenzstatistik schätzt die (Un-)Genauigkeit der Kennwer
 </div>
 </section><section id="deskriptivstatistik" class="level3" data-number="10.8.2"><h3 data-number="10.8.2" class="anchored" data-anchor-id="deskriptivstatistik">
 <span class="header-section-number">10.8.2</span> Deskriptivstatistik</h3>
+<p>Berechnen Sie die relevanten Kennwerte der Deskriptivstatistik für alle Variablen Ihrer Hypothesen (bzw. Forschungsfragen). Das beinhaltet sowohl <em>univariate</em> Analysen (d.h. Kennwerte für eine einzelne Variable) als auch <em>bivariate</em> Analysen (d.h. Zusammenhänge von zwei Variablen, also deren “gemeinsame Verteilung”).</p>
 <p>Typische Kennwerte der Deskriptivstatistik sind:</p>
 <ul>
 <li>Arithmetisches Mittel</li>
@@ -1194,7 +1198,7 @@ Listing&nbsp;10.1: Deskriptive Statistik mit Hilfe des R-Pakets <code>easystats<
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
-{"columns":[{"label":["Variable"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Mean"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["SD"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["IQR"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["Min"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["Max"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["Skewness"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["Kurtosis"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["n"],"name":[9],"type":["int"],"align":["right"]},{"label":["n_Missing"],"name":[10],"type":["int"],"align":["right"]},{"label":[".group"],"name":[11],"type":["chr"],"align":["left"]}],"data":[{"1":"extra_mean","2":"2.908705","3":"0.4219142","4":"0.6","5":"1.6","6":"3.9","7":"-0.3380531","8":"-0.1665412","9":"529","10":"0","11":"sex=Frau"},{"1":"extra_mean","2":"2.861772","3":"0.4989651","4":"0.7","5":"1.2","6":"4.0","7":"-0.4812037","8":"-0.2230608","9":"286","10":"0","11":"sex=Mann"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["sex"],"name":[1],"type":["fct"],"align":["left"]},{"label":["Variable"],"name":[2],"type":["chr"],"align":["left"]},{"label":["Mean"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["SD"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["IQR"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["Min"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["Max"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["Skewness"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["Kurtosis"],"name":[9],"type":["dbl"],"align":["right"]},{"label":["n"],"name":[10],"type":["int"],"align":["right"]},{"label":["n_Missing"],"name":[11],"type":["int"],"align":["right"]}],"data":[{"1":"Frau","2":"extra_mean","3":"2.908705","4":"0.4219142","5":"0.6","6":"1.6","7":"3.9","8":"-0.3380531","9":"-0.1665412","10":"529","11":"0"},{"1":"Mann","2":"extra_mean","3":"2.861772","4":"0.4989651","5":"0.7","6":"1.2","7":"4.0","8":"-0.4812037","9":"-0.2230608","10":"286","11":"0"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 </div>
@@ -1211,13 +1215,14 @@ Listing&nbsp;10.1: Deskriptive Statistik mit Hilfe des R-Pakets <code>easystats<
 <span>       caption <span class="op">=</span> <span class="st">"Die gestrichelte horizontale Linie zeigt den Mittelwert der Verteilung."</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="080-Auswerten_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><img src="080-Auswerten_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
 </section><section id="gruppenvergleich" class="level4" data-number="10.10.2.2"><h4 data-number="10.10.2.2" class="anchored" data-anchor-id="gruppenvergleich">
 <span class="header-section-number">10.10.2.2</span> Gruppenvergleich</h4>
+<p>Vergleicht man die Verteilung einer Variablen unterteilt auf die Stufen (Gruppen) einer zweiten Variablen, so untersucht man die <em>gemeinsame Verteilung</em> dieser beiden Variablen.</p>
 <p>Es gibt verschiedene Methoden, Gruppenunterschiede zu verdeutlichen. Man könnte z. B. pro Gruppe ein Histogramm zeigen, das ist recht informationsreich.</p>
 <div class="cell">
 <div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">extra_no_na</span> <span class="op">&lt;-</span></span>
@@ -1230,7 +1235,7 @@ Listing&nbsp;10.1: Deskriptive Statistik mit Hilfe des R-Pakets <code>easystats<
 <span>       caption <span class="op">=</span> <span class="st">"Die gestrichelte horizontale Linie zeigt den Mittelwert der Verteilung."</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="080-Auswerten_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><img src="080-Auswerten_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1241,7 +1246,7 @@ Listing&nbsp;10.1: Deskriptive Statistik mit Hilfe des R-Pakets <code>easystats<
 <span>  <span class="fu"><a href="https://rpkgs.datanovia.com/ggpubr/reference/ggboxplot.html">ggboxplot</a></span><span class="op">(</span>y <span class="op">=</span> <span class="st">"extra_mean"</span>, x <span class="op">=</span> <span class="st">"sex"</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="080-Auswerten_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><img src="080-Auswerten_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1325,7 +1330,7 @@ Listing&nbsp;10.1: Deskriptive Statistik mit Hilfe des R-Pakets <code>easystats<
 <span>  <span class="fu"><a href="https://rpkgs.datanovia.com/ggpubr/reference/ggbarplot.html">ggbarplot</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"sex"</span>, y <span class="op">=</span> <span class="st">"n"</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="080-Auswerten_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><img src="080-Auswerten_files/figure-html/unnamed-chunk-16-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1437,7 +1442,7 @@ Listing&nbsp;10.1: Deskriptive Statistik mit Hilfe des R-Pakets <code>easystats<
 <span>  <span class="fu"><a href="https://rpkgs.datanovia.com/ggpubr/reference/ggbarplot.html">ggbarplot</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"young"</span>, y <span class="op">=</span> <span class="st">"n"</span>, fill <span class="op">=</span> <span class="st">"sex"</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="080-Auswerten_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><img src="080-Auswerten_files/figure-html/unnamed-chunk-19-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1452,7 +1457,7 @@ Listing&nbsp;10.1: Deskriptive Statistik mit Hilfe des R-Pakets <code>easystats<
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Deutlicher Zusammenhang zwischen Geschlecht und Alter"</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="080-Auswerten_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><img src="080-Auswerten_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1466,7 +1471,7 @@ Listing&nbsp;10.1: Deskriptive Statistik mit Hilfe des R-Pakets <code>easystats<
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Schwacher Zusammenhang zwischen Geschlecht und 'Party_Tiger'"</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="080-Auswerten_files/figure-html/unnamed-chunk-22-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><img src="080-Auswerten_files/figure-html/unnamed-chunk-21-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1703,7 +1708,7 @@ Listing&nbsp;10.1: Deskriptive Statistik mit Hilfe des R-Pakets <code>easystats<
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span> <span class="st">"Korrelationsmatrix, boa"</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="080-Auswerten_files/figure-html/unnamed-chunk-27-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><img src="080-Auswerten_files/figure-html/unnamed-chunk-26-1.png" class="img-fluid figure-img" width="672"></p>
 </figure>
 </div>
 </div>

@@ -199,15 +199,15 @@ Beachten Sie das Prinzip von "tidy data":
 Hier sehen Sie im Überblick die Schritte, die in vielen Fällen sinnvoll sind, um Daten auf einem guten Niveau auszuwerten.
 
 
-1. Vorverarbeitung
+1. *Vorverarbeitung*
     1. Importieren
     2. Aufbereiten (Umkodieren, fehlende Wert versorgen, Transformieren, neue Spalten berechnen)
-2. Explorative Analyse
-    1. Daten zusammenfassen (zentrale Tendenz, Streuung, Zusammenhang)
-    2. Daten visualisieren
-3. Modellierung und Inferenzstatistik
-    1. Modell berechnen
-    2. Parameter berichten (Punkt- und Intervallschätzer) und ggf. visualisieren
+2. *Explorative Analyse*
+    1. Daten zusammenfassen (zentrale Tendenz, Streuung, Zusammenhang -- jeweils für alle UV und AV sowie weiterer potenziell relevanter Variablen)
+    2. Daten visualisieren (Verteilung der UV, AV, gemeinsame Verteilung von UV und AV)
+3. *Modellierung und Inferenzstatistik*
+    1. Modell berechnen (AV ~ UV1 + UV2 + ...)
+    2. Parameter berichten (Punkt- und Intervallschätzer)
     3. Parameter visualisieren
     4. Nullhypothesen testen (z.B. ROPE)
     5. Modellgüte berichten (z.B. R-Quadrat)
@@ -235,7 +235,7 @@ Das Kursbuch [Start:Bayes!](https://start-bayes.netlify.app/) stellt einen Einst
 
 
 
-## Überblick zur Statistik
+## Überblick zur Statistik {#sec-overview-stats}
 
 ### Deskriptiv- vs. Inferenzstatistik
 
@@ -252,6 +252,10 @@ Das Kursbuch [Start:Bayes!](https://start-bayes.netlify.app/) stellt einen Einst
 
 
 ### Deskriptivstatistik
+
+Berechnen Sie die relevanten Kennwerte der Deskriptivstatistik für alle Variablen Ihrer Hypothesen (bzw. Forschungsfragen).
+Das beinhaltet sowohl *univariate* Analysen (d.h. Kennwerte für eine einzelne Variable)
+als auch *bivariate* Analysen (d.h. Zusammenhänge von zwei Variablen, also deren "gemeinsame Verteilung").
 
 
 Typische Kennwerte der Deskriptivstatistik sind:
@@ -508,6 +512,10 @@ gghistogram(extra, x = "extra_mean", add = "mean") +
 
 
 #### Gruppenvergleich
+
+Vergleicht man die Verteilung einer Variablen unterteilt auf die Stufen (Gruppen) einer zweiten Variablen, so untersucht man die *gemeinsame Verteilung* dieser beiden Variablen.
+
+
 
 Es gibt verschiedene Methoden, Gruppenunterschiede zu verdeutlichen.
 Man könnte z.B. pro Gruppe ein Histogramm zeigen, das ist recht informationsreich.
