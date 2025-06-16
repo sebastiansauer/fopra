@@ -190,10 +190,11 @@ Die Autoren der Studie geben an, dass die Daten in *z*-Einheiten skaliert sind.
 
 ```{r}
 #| eval: false
+d_bringtnixtin_summary <- 
 d_bringtnixtin %>% 
   group_by(g) %>% 
-  summarise(iq_mw = mean(y2),
-            iq_sd = sd(y2)) 
+  summarise(y2_mean = mean(y2),
+            y2_sd = sd(y2)) 
 ```
 
 
@@ -207,7 +208,7 @@ d_bringtnixtin_summary <-
 d_bringtnixtin %>% 
   group_by(g) %>% 
   summarise(y2_mean = mean(y2),
-            y2__sd = sd(y2)) 
+            y2_sd = sd(y2)) 
 
 d_bringtnixtin_summary
 ```
@@ -313,7 +314,7 @@ Der Effekt einer UV bemisst sich am (mittleren) Unterschied in der AV zwischen d
 :::
 
 
-### Modellierung
+### Modellierung und Inferenz
 
 
 Wir berechnen ein lineares Modell mit der Modellformel `y2 ~ g`. 
@@ -324,9 +325,15 @@ Wir berechnen ein lineares Modell mit der Modellformel `y2 ~ g`.
 Die Ergebnisse unseres Modells `m_bringtnixtin` sind in @tbl-m1-params zu sehen.
 
 ```{r}
+#| results: hide
+m_bringtnixtin <- stan_glm(y2 ~ g, 
+                           data = d_bringtnixtin)
+```
+
+
+```{r}
 #| label: tbl-m1-params
 #| tbl-cap: Parameter des Modells m_bringtnixtin
-m_bringtnixtin <- stan_glm(y2 ~ g, data = d_bringtnixtin, refresh = 0, seed = 42)
 parameters(m_bringtnixtin)
 ```
 
@@ -372,6 +379,7 @@ parameters(m_bringtnixtin) %>% plot(show_intercept = TRUE)
 
 ```{r}
 #| label: fig-m1-params
+#| echo: false
 #| fig-cap: "Parameter des Modells `m_bringtnixtin (95%-ETI)`; der ROPE ist als vertikaler blauer Balken markiert"
 parameters(m_bringtnixtin) %>% plot(show_intercept = TRUE) +
   geom_rect(aes(xmin = -.13, xmax = 0+.13, ymin = -Inf, ymax = Inf), 
@@ -436,6 +444,7 @@ rope(m_bringtnixtin) %>% plot()
 
 ```{r}
 #| label: fig-m1-rope
+#| echo: false
 #| fig-cap: "ROPE für Modell `m_bringtnixtin`"
 
 plot(rope(m_bringtnixtin)) + scale_fill_okabeito() 
@@ -496,7 +505,7 @@ Wir resümieren: "Es ist auszuschließen, dass der Effekt der Variable Zylinder 
 #| fig-cap: "ROPE (blauer Balken) und 95%-KI (roter Bereich) überlappen sich nicht: Die ROPE-Hypothese wird verworfen."
 library(easystats)
 library(rstanarm)
-m1 <- stan_glm(mpg ~ cyl, data = mtcars, refresh = 0, seed = 42)
+m1 <- stan_glm(mpg ~ cyl, data = mtcars)
 
 plot(rope(m1))
 ```
@@ -667,13 +676,14 @@ ggbetweenstats(
 
 
 
-### Modellierung
+### Modellierung und Inferenz
 
 Wir modellieren (in `m_bringtnixtin2`) jetzt die *Veränderung* `d = y2 - y1` als AV; UV ist wieder `g`, s. @tbl-m-bringtnixtin2-params.
 
 ```{r}
 #| results: hide
-m_bringtnixtin2 <- stan_glm(d ~ g, data = d_bringtnixtin, refresh = 0, seed = 42)
+m_bringtnixtin2 <- stan_glm(d ~ g,
+                            data = d_bringtnixtin)
 parameters(m_bringtnixtin2)
 ```
 
@@ -693,6 +703,7 @@ parameters(m_bringtnixtin2) %>%
 ```{r}
 #| fig-cap: "Parameterwerte von m_bringtnixtin2 (Intercept ist nicht dargestellt), 95%-ETI; die Null ist nicht enthalten, der Mittelwert ist negativ. ROPE ist als blaues Balken eingezeichnet. Wir können die exakte und die praktische Nullhypothese ausschließen."
 #| label: fig-bringtnixtin2-params
+#| echo: false
 plot(parameters(m_bringtnixtin2)) +
   geom_rect(aes(xmin = -.023, xmax = 0+.023, ymin = -Inf, ymax = Inf), 
               fill = "lightblue", color = NA)
@@ -772,7 +783,7 @@ Der Ablauf der Studie (aus Sicht der Probandis) ist in @fig-diagrammart-flow dar
 
 ```{mermaid}
 %%| label: fig-diagrammart-flow
-%%| fig-cap: "Ablauf der Studie zur Behaltensleistung y2 in Abhängigkeit der Visualisierungsart V (Within-UV mit zwei Stufen, V.1 und V.2). V.1 und V.2 sind jeweils Interventionen und damit Stufen der UV"
+%%| fig-cap: "Ablauf der Studie zur Behaltensleistung y2 in Abhängigkeit der Visualisierungsart V (Within-UV mit zwei Stufen, V.1 und V.2). V.1 und V.2 sind jeweils Interventionen und damit Stufen der UV. Alle Versuchspersonen laufen dieselben beiden Interventionen (V.1 und V.2)."
 flowchart LR
   V.1 --> y1 --> V.2 --> y2
 ```
@@ -886,13 +897,14 @@ ggwithinstats(
 ```
 
 
-### Inferenzanalyse
+### Modellierung und Inferenz
 
-Wir berechnen das Modell (`m_within`),s. @tbl-d2-params:
+Wir berechnen das Modell (`m_within`), s. @tbl-d2-params:
 
 ```{r}
 #| results: hide
-m_within <- stan_glm(d ~ 1, data = d_within, refresh = 0, seed = 42)
+m_within <- stan_glm(d ~ 1, 
+                     data = d_within)
 parameters(m_within)
 ```
 
@@ -1043,7 +1055,9 @@ Berechnen wir `m_within2`, das nicht nur den Intercept prüft (wie `m_within1`),
 sondern auch zusätzlich den Effekt der Reihenfolge (`g`), vgl. @tbl-m_within2-params.
 
 ```{r m-within2}
-m_within2 <- stan_glm(d ~ g, data = d_within, refresh = 0, seed = 42)
+#| results: hide
+m_within2 <- stan_glm(d ~ g, 
+                      data = d_within)
 ```
 
 ```{r}
@@ -1063,8 +1077,8 @@ Daher können wir wir die Nullhypothese nicht mit hoher Sicherheit ausschließen
 
 In Summe:
 
-1. H1 (Höhere Behaltensleistung von *animiert*) konnte nicht bestätigt werden, aber tendenziell fand sich ein Effekt in erwarteter Richtung (zugunsten einer höheren Behaltensleistung von *animiert*).
-2. H2 (Reihenfolgeeffekt) konnte nicht bestätigt werden.
+1. H1: (Höhere Behaltensleistung von *animiert*) konnte nicht bestätigt werden, aber tendenziell fand sich ein Effekt in erwarteter Richtung (zugunsten einer höheren Behaltensleistung von *animiert*).
+2. H2: (Abwesenheit eines Reihenfolgeeffekts) konnte nicht bestätigt werden; die Ergebnislage war uneindeutig.
 
 
 ## Vertiefung
@@ -1095,13 +1109,15 @@ d_within <-
 head(d_within)
 ```
 
-Hier benötigen wir die Daten in Langform:
+Hier benötigen wir die Daten in Langform; wir müssen also vom Breitformat zum Langformat pivotieren:
 
 
 ```{r}
 d_long <-
   d_within %>% 
-  pivot_longer(cols = y1:y3, names_to = "time", values_to = "y")
+  pivot_longer(cols = y1:y3, 
+               names_to = "time", 
+               values_to = "y")
 
 head(d_long)
 ```
@@ -1156,7 +1172,7 @@ d_long %>%
 
 
 
-### Inferenzanalyse
+### Modellierung und Inferenz
 
 
 
