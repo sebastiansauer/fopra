@@ -89,6 +89,7 @@ Mit Befehlen wie `parameters` oder `summary` können Sie Ihrem Modell einfach di
 
 
 
+
 ## 1 between-Variable, nur Nachher-Messung
 
 ### Design
@@ -1142,6 +1143,8 @@ plot(m_within3)
 
 Unter Modellieren versteht man in der Forschungspraxis meist ein Regressionsmodell der Form `av ~ uv`.
 Die Inferenzstatistik hilft, die Modellparameter mit Schätzwerten für die Population zu versehen.
+
+
 
 
 ## Aufgaben
