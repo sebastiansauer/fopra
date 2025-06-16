@@ -203,23 +203,25 @@ d_bringtnixtin %>%
 #| echo: false
 #| label: tbl-bringtnixtin-desk
 #| tbl-cap: "Mittlere fluide Intelligenz nach der Bringtnixtin-Intervention in Abhängigkeit der Gruppe"
+d_bringtnixtin_summary <- 
 d_bringtnixtin %>% 
   group_by(g) %>% 
-  summarise(iq_mw = mean(y2),
-            iq_sd = sd(y2)) 
+  summarise(y2_mean = mean(y2),
+            y2__sd = sd(y2)) 
+
+d_bringtnixtin_summary
 ```
 
 Die deskriptiven Kennwerte sind in @fig-bringtnixtin-desk1 bzw. @fig-bringtnixtin-desk1 visualisiert.
 Das sieht nicht gerade nach einem großen Effekt aus ...^[Die Mittelwerte der beiden Gruppen sind praktisch identisch.]
 
-:::{.panel-tabset}
+::::{.panel-tabset}
 
 
 ### Mit ggstatsplot
 
 ```{r}
-#| label: fig-bringtnixtin-desk1
-#| fig-cap: "Fluide Intelligenz (y2) nach der Bringtnixtin-Intervention. g=0: Kontrollgruppe (Placebo), g=1: Experimentalgruppe (hohe Dosis)"
+#| eval: false
 ggbetweenstats(
   data = d_bringtnixtin,
   x = g,
@@ -229,20 +231,87 @@ ggbetweenstats(
 ```
 
 
-#### Mit ggpubr
+```{r}
+#| label: fig-bringtnixtin-desk1
+#| echo: false
+#| fig-cap: "Fluide Intelligenz (y2) nach der Bringtnixtin-Intervention. g=0: Kontrollgruppe (Placebo), g=1: Experimentalgruppe (hohe Dosis). Die vertikale Linie zeigt die Stärke des Effekts (entspricht dem Unterschied in den Mittelwerten der Gruppen)"
+ggbetweenstats(
+  data = d_bringtnixtin,
+  x = g,
+  y = y2,
+  results.subtitle = FALSE  # keine Statistiken zeigen
+) +
+  geom_segment(
+    data = data.frame(
+      x = 1.6, 
+      xend = 1.6,
+      y = d_bringtnixtin_summary$y2_mean[1],
+      yend = d_bringtnixtin_summary$y2_mean[2]
+    ),
+    aes(x = x, xend = xend, y = y, yend = yend),
+    arrow = arrow(
+      type = "closed",
+      ends = "both",
+      angle = 30,
+      length = unit(0.3, "cm")
+    ),
+    color = "blue", 
+    size = 1
+  )
+```
+
+
+
+### Mit ggpubr
 
 ```{r}
-#| label: fig-bringtnixtin-desk2
-#| fig-cap: "Fluide Intelligenz (y2) nach der Bringtnixtin-Intervention. g=0: Kontrollgruppe (Placebo), g=1: Experimentalgruppe (hohe Dosis)"
+#| eval: false
 ggboxplot(
   data = d_bringtnixtin,
   x = "g",
-  y = "y2"
+  y = "y2",
+  add = "mean"
 )
 ```
+
+```{r}
+#| label: fig-bringtnixtin-desk2
+#| echo: false
+#| fig-cap: "Fluide Intelligenz (y2) nach der Bringtnixtin-Intervention. g=0: Kontrollgruppe (Placebo), g=1: Experimentalgruppe (hohe Dosis).Die vertikale Linie zeigt die Stärke des Effekts (entspricht dem Unterschied in den Mittelwerten der Gruppen)"
+ggboxplot(
+  data = d_bringtnixtin,
+  x = "g",
+  y = "y2",
+  add = "mean"
+) +
+  geom_segment(
+    data = data.frame(
+      x = 1.5, 
+      xend = 1.5,
+      y = d_bringtnixtin_summary$y2_mean[1],
+      yend = d_bringtnixtin_summary$y2_mean[2]
+    ),
+    aes(x = x, xend = xend, y = y, yend = yend),
+    arrow = arrow(
+      type = "closed",
+      ends = "both",
+      angle = 30,
+      length = unit(0.3, "cm")
+    ),
+    color = "blue", 
+    size = 1
+  )
+```
+
 ::::
 
 Sowohl das R-Paket `ggstatsplot` als auch das R-Paket `ggpubr` bieten ansprechende Datenvisualisierung.^[Beide bauen auf dem R-Paket `ggplot` auf, sind also eigentlich nur "Abkürzungen".]
+
+:::{.callout-important}
+### Der Gruppenunterschied ist der Effekt
+Der Effekt einer UV bemisst sich am (mittleren) Unterschied in der AV zwischen den Gruppen. 
+:::
+
 
 ### Modellierung
 
@@ -703,7 +772,7 @@ Der Ablauf der Studie (aus Sicht der Probandis) ist in @fig-diagrammart-flow dar
 
 ```{mermaid}
 %%| label: fig-diagrammart-flow
-%%| fig-cap: "Ablauf der Studie zur Behaltensleistung y2 in Abhängigkeit der Visualisierungsart V (Within-Variable)"
+%%| fig-cap: "Ablauf der Studie zur Behaltensleistung y2 in Abhängigkeit der Visualisierungsart V (Within-UV mit zwei Stufen, V.1 und V.2). V.1 und V.2 sind jeweils Interventionen und damit Stufen der UV"
 flowchart LR
   V.1 --> y1 --> V.2 --> y2
 ```
@@ -870,14 +939,14 @@ Forschungsfrage:
 
 >    Hat die Diagrammart einen Einfluss auf die Behaltensleistung? Anders gesagt: Unterscheiden sich die Diagrammarten in ihrem Einfluss auf die Behaltensleistung? Dabei kontrollieren wir die Reihenfolge.
 
-Forschungspraktisch bedeutet das, dass es zwei Gruppen, `g1` und `g2` in diesem Experiment gibt.
-Diese beiden Gruppen definieren eine between-Variable, `g`, die die Reihenfolge der Darbietung kontrolliert, s. @fig-within2-flow.
-Die Diagrammart `D` ist auch eine UV, aber als Within-Variable konzipiert.
+Forschungspraktisch bedeutet das, dass es zwei (Between-)Gruppen, `g1` und `g2` in diesem Experiment gibt.
+Diese beiden Gruppen definieren eine *Between*-UV, `G`, die die Reihenfolge der Darbietung kontrolliert, s. @fig-within2-flow.
+Die Diagrammart `V` ist auch eine UV, aber als *Within*-UV konzipiert (mit den zwei Stufen `V.1` und `V.2`).
 
 
 ```{mermaid}
 %%| label: fig-within2-flow
-%%| fig-cap: "Ablaufdiagramm für die Studie mit der Modellgleichung mit einem Within- und einem Between-Faktor"
+%%| fig-cap: "Ablaufdiagramm für die Studie mit der Modellgleichung mit einer Within-UV (V) und einer Between-UV (g)"
 flowchart LR
   subgraph g2
     direction LR
