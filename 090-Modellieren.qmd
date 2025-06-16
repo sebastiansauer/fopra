@@ -1069,6 +1069,14 @@ parameters(m_within2) %>%
 ```
 
 
+```{r}
+#| echo: false
+#| label: p_m_within2
+#| fig-cap: "Für beide Kennwerte zeigt sich, dass die Null im Schätzbereich enthalten ist. Die Null Hypothese kann also jeweils nicht ausgeschlossen werden. Für H2 wäre es interessant, ob die Nullhypothese bestätigt werden kann; die Ergebnisse sprechen aber dagegen. Insgesamt ist die Befundlage uneindeutig."
+plot(parameters(m_within2), show_intercept = TRUE)
+```
+
+
 Das CI für die Reihenfolge (Variable `gB`) beinhaltet die Null;
 Daher kann ein Nulleffekt der Reihenfolge - also kein Effekt der Reihenfolge - nicht ausgeschlossen werden, `g=0` ist also im Bereich der plausiblen Werte.
 
