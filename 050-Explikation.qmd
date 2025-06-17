@@ -102,7 +102,7 @@ Eine Interventionsstudie wird verwendet, um den Effekt von Ibuprofen auf (die Re
 ```{mermaid}
 %%| label: fig-ablauf-interv
 %%| fig-cap: Einfaches Schema des Ablaufs einer Interventionsstudie
-flowchart LR
+graph LR
 A[Begrüßung der Versuchsteilneher:innen] --> B1[Bedingung A: Ibuprofen]
 A --> B2[Bedingung 2: Placebo]
 B1 --> C[Messung des Kopfschmerzes]
@@ -216,7 +216,7 @@ Die Stärke eines Effekts (eines Treatments) kann als Funktion von fünf Größe
 ```{mermaid}
 %%| label: fig-effekt
 %%| fig-cap: Die fünf Determinanten eines Effekts
-flowchart LR
+graph LR
 T[Treatment T] --> E[Effekt E]
 VP[Versuchsperson P] --> E
 Z[Zeit Z] --> E
@@ -364,7 +364,7 @@ Die Abhängige Variable (AV) bezeichnet die Variable, die den Effekt misst, die 
 Die Forschungsfrage formuliert, dass die AV von der UV kausal und statsistisch abhängig ist.
 
 ```{mermaid}
-flowchart LR
+graph LR
 UV --> AV
 ```
 
@@ -416,71 +416,87 @@ Vor und nach der Intervention wird bei jeder Person die Konzentationsfähigkeit 
 ```{mermaid}
 %%| label: fig-between
 %%| fig-cap: Beispiel für ein Between-Subject-Design
-flowchart LR
-  M1[1. Messung der Konzentration] --> R[Gruppenzuweisung]
+graph LR
+  M1[Messung 1 der Konzentration] --> R[Gruppenzuweisung]
   R --> G1[Experimentalgruppe]
   R --> G2[Kontrollgruppe]
-  G1 --> M2[2. Messung der Konzentration]
-  G2 --> M2[2. Messung der Konzentration]  
+  G1 --> M2[Messung 2 der Konzentration]
+  G2 --> M2[Messung 2 der Konzentration]  
 ```
 
 
 In einigen Situationen ist eine Messung der AV *vor* dem Treatment nicht nötig;
-grundsätzlich ist sie aber zu bevorzugen.
+grundsätzlich ist es besser, vor und nach dem Treatment die AV zu messen (als nur nach dem Treatment).
+
+
+Prägnanter und allgemeiner ausgedrückt zeigt @fig-exp-pre-post ein typisches Vorher-Nachher-Design mit Between-Subject-UV.
+
+```{mermaid}
+%%| label: fig-exp-pre-post
+%%| fig-cap: Ein prototypisches Vorher-Nachher-Design mit Between-Subject-UV
+graph LR 
+  t1 --> exp
+  exp --> t2
+  t1 --> control
+  control --> t2
+```
+
+
 
 #### Within-Subject-Design
 
 
 :::{#def-within}
-Bei einem *einfachen Within-Subject-Design* durchäuft jede Versuchsperson alle Versuchsbedingungen in gleicher Reihenfolge, s. @fig-within.$\square$
+Bei einem *einfachen Within-Subject-Design* durchäuft jede Versuchsperson *alle* Versuchsbedingungen in gleicher Reihenfolge, s. @fig-within.$\square$
 :::
 
 ```{mermaid}
 %%| label: fig-within
 %%| fig-cap: Beispiel für ein Within-Subject-Design
-flowchart LR
-  M1[1. Messung der Konzentration] --> I1[Treatment 1]
-  I1 --> M2[2. Messung der Konzentration]
+graph LR
+  M1[Messung 1 der Konzentration] --> I1[Treatment 1]
+  I1 --> M2[Messung 2 der Konzentration]
   M2 --> I2[Treatment 2]
-  I2 --> M3[3. Messung der Konzentration]
+  I2 --> M3[Messung 3 der Konzentration]
 ```
 
 
 Das einfache Within-Subject-Design hat den Nachteil, dass Reihenfolge-Effekte möglich sind.
 
 :::{#exm-within2}
-Ei Forschi untersucht den Effekt von Achtsamkeit auf die Konzentrationsfähigkeit.
+Eine Forscherin untersucht den Effekt von Achtsamkeit auf die Konzentrationsfähigkeit.
 In dieser Studie führen alle Versuchspersonen eine Achtsamkeitsübung aus (Treatment 1);
 danach folgt eine Zeit des Handy-Daddelns (Treatment 2). Vor und nach den Treatments findet jeweils eine Konzentrationsmessung statt.$\square$
 :::
 
 
 :::{#exm-within1}
-Ei Forschi untersucht den Effekt des Markennamens von Süßwaren auf die Geschmacksbeurteilung. 
+Ein Forscher untersucht den Effekt des Markennamens von Süßwaren auf die Geschmacksbeurteilung. 
 Zuerst bekommen alle Versuchspersonen ein Markenprodukt dargeboten;
 danach folgt für alle ein No-Name-Produkt. Vor der ersten, nach der ersten und nach der zweiten Verkostung wird jeweils der Geschmack des Produkts beurteilt.$\square$
 :::
 
 
 :::{#def-within}
-Bei einem *Between-Within-Subject-Design* durchäuft jede Versuchsperson alle Versuchsbedingungen, aber die Reihenfolge unterscheidet sich zwischen den Versuchspersonen, s. @fig-within2.$\square$
+Bei einem *Between-Within-Subject-Design* durchläuft jede Versuchsperson *alle* Versuchsbedingungen,
+aber die Reihenfolge unterscheidet sich zwischen den Versuchspersonen, s. @fig-within2.$\square$
 :::
 
 
 ```{mermaid}
 %%| label: fig-within2
 %%| fig-cap: Beispiel für ein Between-Within-Subject-Design
-flowchart LR
-  M1[1. Messung der Konzentration] --> R[Zuweisung zu den Reihenfolge-Gruppen]
+graph LR
+  M1[Messung 1 der Konzentration] --> R[Zuweisung zu den Reihenfolge-Gruppen]
   R --> G1[Treatment 1]
   R --> G2[Treatment 2]
-  G1 --> M2[2. Messung der Konzentration]
+  G1 --> M2[Messung 2 der Konzentration]
   G2 --> M2
   
   M2 --> G11[Treatment 2]
   M2 --> G22[Treatment 1]  
   
-  G11 --> M3[3. Messung der Konzentration]
+  G11 --> M3[Messung 3 der Konzentration]
   G22 --> M3
 ```
 
@@ -549,7 +565,7 @@ Die Kunst des Experiments (bzw. des Experimentierens) kann man mit dem Max-Kon-M
 ```{mermaid}
 %%| label: fig-max-kon-min
 %%| fig-cap: Das Max-Kon-Min-Prinzip
-flowchart LR
+graph LR
   subgraph MKM[Max-Kon-Min-Prinzip]
     MAX
     KON
@@ -744,7 +760,7 @@ so spricht man von einem *Zwei-Gruppen-Nachher-Messung-Design*, s. @fig-design1.
 %%| label: fig-design1
 %%| fig-cap: Zwei-Gruppen-Nachher-Messung-Design
 
-flowchart LR
+graph LR
   A[Begrüßung und Aufklärung</br>der Probanden] --> C[Messung soziodemografischer</br>Variablen]
   C --> D[Aufteilung in Gruppen]
   D --> E1[Experimentalgruppe]
@@ -767,7 +783,7 @@ so spricht man von einem *Zwei-Gruppen-Vorher-Nachher-Messung-Design*, s. @fig-d
 %%| label: fig-design2
 %%| fig-cap: Zwei-Gruppen-Vorher-Nachher-Messung-Design
 
-flowchart LR
+graph LR
   A[Begrüßung und Aufklärung</br>der Probanden] --> C[Messung soziodemografischer</br>Variablen]
   C --> C2[Messung der AV]
   C2 --> D[Aufteilung in Gruppen]

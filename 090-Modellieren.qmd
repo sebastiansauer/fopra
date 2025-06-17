@@ -77,9 +77,9 @@ Praktisch gesehen heißt das, dass Sie ein Regressionsmodell der Art `AV ~ UV1 +
 
 Welche bzw. wie viele UV sollte man in ein (Regressions-)modell aufnehmen?
 Nehmen Sie alle Variablen auf, von denen Sie annehmen, dass es Ursachen Ihrer AV sind. 
-Berechnen Sie also *nicht* für jede UV ein eigenes Modell, sondern packen Sie alle UV in ein einziges Regressionsmodell -- sofern Sie der Meinung sind, alle UV sind direkte Ursachen der AV.
-Variablen mit anderen kausalen Funktionen, wie Konfundierungs- und Mediatorvariablen, sollten nicht in Ihr Modell aufgenommen werden, mit dem Sie den Effekt der UV auf die AV untersuchen.
-Es ist auch grundsätzlich sinnvoll, zusätzlich erhobenen Variablen, wie soziodemografische Variablen, in Ihr Modell aufzunehmen.
+Berechnen Sie also *nicht* für jede UV ein eigenes Modell, sondern packen Sie alle UV in ein einziges Regressionsmodell. Das beinhaltet auch Konfundierungsvariablen und sonstige Ursachen der AV, die für Ihre Fragestellung nicht so interessant sind (wie Alter und Geschlecht), aber helfen, zu genaueren Schätzungen zu kommen.
+Variablen mit anderen kausalen Funktionen, wie Mediatorvariablen, sollten *nicht* in Ihr Modell aufgenommen werden, mit dem Sie den Effekt der UV auf die AV untersuchen.
+
 
 *Inferenzstatistik* ordnet den Hypothesen eine Wahrscheinlichkeit zu und weist Punktschätzern einen Schätzbereich zu, s. @sec-overview-stats. 
 Kurz gesagt: Inferenzstatistik bestimmt die Ungewissheit einer Schätzung.

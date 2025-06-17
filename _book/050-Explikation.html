@@ -579,7 +579,7 @@ window.Quarto = {
 <div id="fig-ablauf-interv" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-ablauf-interv-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
-<pre class="mermaid mermaid-js" data-label="fig-ablauf-interv">flowchart LR
+<pre class="mermaid mermaid-js" data-label="fig-ablauf-interv">graph LR
 A[Begrüßung der Versuchsteilneher:innen] --&gt; B1[Bedingung A: Ibuprofen]
 A --&gt; B2[Bedingung 2: Placebo]
 B1 --&gt; C[Messung des Kopfschmerzes]
@@ -647,7 +647,7 @@ Abbildung&nbsp;6.2: Signal (Mittelwertsdifferenz, Dreieck) und Rauschen (Streuun
 <div id="fig-effekt" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-effekt-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
-<pre class="mermaid mermaid-js" data-label="fig-effekt">flowchart LR
+<pre class="mermaid mermaid-js" data-label="fig-effekt">graph LR
 T[Treatment T] --&gt; E[Effekt E]
 VP[Versuchsperson P] --&gt; E
 Z[Zeit Z] --&gt; E
@@ -859,7 +859,7 @@ Abbildung&nbsp;6.3: Die fünf Determinanten eines Effekts
 <div>
 <p></p><figure class="figure"></figure><p></p>
 <div>
-<pre class="mermaid mermaid-js">flowchart LR
+<pre class="mermaid mermaid-js">graph LR
 UV --&gt; AV
 </pre>
 </div>
@@ -893,12 +893,12 @@ UV --&gt; AV
 <div id="fig-between" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-between-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
-<pre class="mermaid mermaid-js" data-label="fig-between">flowchart LR
-  M1[1. Messung der Konzentration] --&gt; R[Gruppenzuweisung]
+<pre class="mermaid mermaid-js" data-label="fig-between">graph LR
+  M1[Messung 1 der Konzentration] --&gt; R[Gruppenzuweisung]
   R --&gt; G1[Experimentalgruppe]
   R --&gt; G2[Kontrollgruppe]
-  G1 --&gt; M2[2. Messung der Konzentration]
-  G2 --&gt; M2[2. Messung der Konzentration]  
+  G1 --&gt; M2[Messung 2 der Konzentration]
+  G2 --&gt; M2[Messung 2 der Konzentration]  
 </pre>
 </div>
 </div>
@@ -908,63 +908,83 @@ Abbildung&nbsp;6.4: Beispiel für ein Between-Subject-Design
 </div>
 </div>
 </div>
-<p>In einigen Situationen ist eine Messung der AV <em>vor</em> dem Treatment nicht nötig; grundsätzlich ist sie aber zu bevorzugen.</p>
+<p>In einigen Situationen ist eine Messung der AV <em>vor</em> dem Treatment nicht nötig; grundsätzlich ist es besser, vor und nach dem Treatment die AV zu messen (als nur nach dem Treatment).</p>
+<p>Prägnanter und allgemeiner ausgedrückt zeigt <a href="#fig-exp-pre-post" class="quarto-xref">Abbildung&nbsp;<span>6.5</span></a> ein typisches Vorher-Nachher-Design mit Between-Subject-UV.</p>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div id="fig-exp-pre-post" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-exp-pre-post-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<pre class="mermaid mermaid-js" data-label="fig-exp-pre-post">graph LR 
+  t1 --&gt; exp
+  exp --&gt; t2
+  t1 --&gt; control
+  control --&gt; t2
+</pre>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-exp-pre-post-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;6.5: Ein prototypisches Vorher-Nachher-Design mit Between-Subject-UV
+</figcaption></figure>
+</div>
+</div>
+</div>
 </section><section id="within-subject-design" class="level4" data-number="6.5.1.2"><h4 data-number="6.5.1.2" class="anchored" data-anchor-id="within-subject-design">
 <span class="header-section-number">6.5.1.2</span> Within-Subject-Design</h4>
 <div id="def-within" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 6.11</strong></span> Bei einem <em>einfachen Within-Subject-Design</em> durchäuft jede Versuchsperson alle Versuchsbedingungen in gleicher Reihenfolge, s. <a href="#fig-within" class="quarto-xref">Abbildung&nbsp;<span>6.5</span></a>.<span class="math inline">\(\square\)</span></p>
+<p><span class="theorem-title"><strong>Definition 6.11</strong></span> Bei einem <em>einfachen Within-Subject-Design</em> durchäuft jede Versuchsperson <em>alle</em> Versuchsbedingungen in gleicher Reihenfolge, s. <a href="#fig-within" class="quarto-xref">Abbildung&nbsp;<span>6.6</span></a>.<span class="math inline">\(\square\)</span></p>
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-within" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-within-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
-<pre class="mermaid mermaid-js" data-label="fig-within">flowchart LR
-  M1[1. Messung der Konzentration] --&gt; I1[Treatment 1]
-  I1 --&gt; M2[2. Messung der Konzentration]
+<pre class="mermaid mermaid-js" data-label="fig-within">graph LR
+  M1[Messung 1 der Konzentration] --&gt; I1[Treatment 1]
+  I1 --&gt; M2[Messung 2 der Konzentration]
   M2 --&gt; I2[Treatment 2]
-  I2 --&gt; M3[3. Messung der Konzentration]
+  I2 --&gt; M3[Messung 3 der Konzentration]
 </pre>
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-within-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;6.5: Beispiel für ein Within-Subject-Design
+Abbildung&nbsp;6.6: Beispiel für ein Within-Subject-Design
 </figcaption></figure>
 </div>
 </div>
 </div>
 <p>Das einfache Within-Subject-Design hat den Nachteil, dass Reihenfolge-Effekte möglich sind.</p>
 <div id="exm-within2" class="theorem example">
-<p><span class="theorem-title"><strong>Beispiel 6.6</strong></span> Ei Forschi untersucht den Effekt von Achtsamkeit auf die Konzentrationsfähigkeit. In dieser Studie führen alle Versuchspersonen eine Achtsamkeitsübung aus (Treatment 1); danach folgt eine Zeit des Handy-Daddelns (Treatment 2). Vor und nach den Treatments findet jeweils eine Konzentrationsmessung statt.<span class="math inline">\(\square\)</span></p>
+<p><span class="theorem-title"><strong>Beispiel 6.6</strong></span> Eine Forscherin untersucht den Effekt von Achtsamkeit auf die Konzentrationsfähigkeit. In dieser Studie führen alle Versuchspersonen eine Achtsamkeitsübung aus (Treatment 1); danach folgt eine Zeit des Handy-Daddelns (Treatment 2). Vor und nach den Treatments findet jeweils eine Konzentrationsmessung statt.<span class="math inline">\(\square\)</span></p>
 </div>
 <div id="exm-within1" class="theorem example">
-<p><span class="theorem-title"><strong>Beispiel 6.7</strong></span> Ei Forschi untersucht den Effekt des Markennamens von Süßwaren auf die Geschmacksbeurteilung. Zuerst bekommen alle Versuchspersonen ein Markenprodukt dargeboten; danach folgt für alle ein No-Name-Produkt. Vor der ersten, nach der ersten und nach der zweiten Verkostung wird jeweils der Geschmack des Produkts beurteilt.<span class="math inline">\(\square\)</span></p>
+<p><span class="theorem-title"><strong>Beispiel 6.7</strong></span> Ein Forscher untersucht den Effekt des Markennamens von Süßwaren auf die Geschmacksbeurteilung. Zuerst bekommen alle Versuchspersonen ein Markenprodukt dargeboten; danach folgt für alle ein No-Name-Produkt. Vor der ersten, nach der ersten und nach der zweiten Verkostung wird jeweils der Geschmack des Produkts beurteilt.<span class="math inline">\(\square\)</span></p>
 </div>
 <div id="def-within" class="theorem definition">
-<p><span class="theorem-title"><strong>Definition 6.12</strong></span> Bei einem <em>Between-Within-Subject-Design</em> durchäuft jede Versuchsperson alle Versuchsbedingungen, aber die Reihenfolge unterscheidet sich zwischen den Versuchspersonen, s. <a href="#fig-within2" class="quarto-xref">Abbildung&nbsp;<span>6.6</span></a>.<span class="math inline">\(\square\)</span></p>
+<p><span class="theorem-title"><strong>Definition 6.12</strong></span> Bei einem <em>Between-Within-Subject-Design</em> durchläuft jede Versuchsperson <em>alle</em> Versuchsbedingungen, aber die Reihenfolge unterscheidet sich zwischen den Versuchspersonen, s. <a href="#fig-within2" class="quarto-xref">Abbildung&nbsp;<span>6.7</span></a>.<span class="math inline">\(\square\)</span></p>
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-within2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-within2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
-<pre class="mermaid mermaid-js" data-label="fig-within2">flowchart LR
-  M1[1. Messung der Konzentration] --&gt; R[Zuweisung zu den Reihenfolge-Gruppen]
+<pre class="mermaid mermaid-js" data-label="fig-within2">graph LR
+  M1[Messung 1 der Konzentration] --&gt; R[Zuweisung zu den Reihenfolge-Gruppen]
   R --&gt; G1[Treatment 1]
   R --&gt; G2[Treatment 2]
-  G1 --&gt; M2[2. Messung der Konzentration]
+  G1 --&gt; M2[Messung 2 der Konzentration]
   G2 --&gt; M2
   
   M2 --&gt; G11[Treatment 2]
   M2 --&gt; G22[Treatment 1]  
   
-  G11 --&gt; M3[3. Messung der Konzentration]
+  G11 --&gt; M3[Messung 3 der Konzentration]
   G22 --&gt; M3
 </pre>
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-within2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;6.6: Beispiel für ein Between-Within-Subject-Design
+Abbildung&nbsp;6.7: Beispiel für ein Between-Within-Subject-Design
 </figcaption></figure>
 </div>
 </div>
@@ -1027,13 +1047,13 @@ Wichtig
 <span class="header-section-number">6.6</span> Die Kunst des Experimentierens</h2>
 <section id="max-kon-min-prinzip" class="level3" data-number="6.6.1"><h3 data-number="6.6.1" class="anchored" data-anchor-id="max-kon-min-prinzip">
 <span class="header-section-number">6.6.1</span> MAX-KON-MIN-Prinzip</h3>
-<p>Die Kunst des Experiments (bzw. des Experimentierens) kann man mit dem Max-Kon-Min-Prinzip zusammenfassen. <a href="#fig-max-kon-min" class="quarto-xref">Abbildung&nbsp;<span>6.7</span></a> stellt das Max-Kon-Min-Prinzip dar.</p>
+<p>Die Kunst des Experiments (bzw. des Experimentierens) kann man mit dem Max-Kon-Min-Prinzip zusammenfassen. <a href="#fig-max-kon-min" class="quarto-xref">Abbildung&nbsp;<span>6.8</span></a> stellt das Max-Kon-Min-Prinzip dar.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-max-kon-min" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-max-kon-min-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
-<pre class="mermaid mermaid-js" data-label="fig-max-kon-min">flowchart LR
+<pre class="mermaid mermaid-js" data-label="fig-max-kon-min">graph LR
   subgraph MKM[Max-Kon-Min-Prinzip]
     MAX
     KON
@@ -1043,7 +1063,7 @@ Wichtig
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-max-kon-min-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;6.7: Das Max-Kon-Min-Prinzip
+Abbildung&nbsp;6.8: Das Max-Kon-Min-Prinzip
 </figcaption></figure>
 </div>
 </div>
@@ -1165,13 +1185,13 @@ Tipp
 <span class="header-section-number">6.8</span> Typische Versuchspläne</h2>
 <section id="zwei-gruppen-nachher-messung" class="level3" data-number="6.8.1"><h3 data-number="6.8.1" class="anchored" data-anchor-id="zwei-gruppen-nachher-messung">
 <span class="header-section-number">6.8.1</span> Zwei-Gruppen-Nachher-Messung</h3>
-<p>Teilt man die Versuchspersonen in zwei Gruppen ein (idealerweise durch Randomisierung), wendet dann die Intervention an und misst abschließend die AV, so spricht man von einem <em>Zwei-Gruppen-Nachher-Messung-Design</em>, s. <a href="#fig-design1" class="quarto-xref">Abbildung&nbsp;<span>6.8</span></a>.</p>
+<p>Teilt man die Versuchspersonen in zwei Gruppen ein (idealerweise durch Randomisierung), wendet dann die Intervention an und misst abschließend die AV, so spricht man von einem <em>Zwei-Gruppen-Nachher-Messung-Design</em>, s. <a href="#fig-design1" class="quarto-xref">Abbildung&nbsp;<span>6.9</span></a>.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-design1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-design1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
-<pre class="mermaid mermaid-js" data-label="fig-design1">flowchart LR
+<pre class="mermaid mermaid-js" data-label="fig-design1">graph LR
   A[Begrüßung und Aufklärung&lt;/br&gt;der Probanden] --&gt; C[Messung soziodemografischer&lt;/br&gt;Variablen]
   C --&gt; D[Aufteilung in Gruppen]
   D --&gt; E1[Experimentalgruppe]
@@ -1183,20 +1203,20 @@ Tipp
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-design1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;6.8: Zwei-Gruppen-Nachher-Messung-Design
+Abbildung&nbsp;6.9: Zwei-Gruppen-Nachher-Messung-Design
 </figcaption></figure>
 </div>
 </div>
 </div>
 </section><section id="zwei-gruppen-vorher-nachher-messung" class="level3" data-number="6.8.2"><h3 data-number="6.8.2" class="anchored" data-anchor-id="zwei-gruppen-vorher-nachher-messung">
 <span class="header-section-number">6.8.2</span> Zwei-Gruppen-Vorher-Nachher-Messung</h3>
-<p>Teilt man die Versuchspersonen in zwei Gruppen ein (idealerweise durch Randomisierung), misst zunächst (zum ersten Mal) die AV, wendet dann die Intervention an und misst abschließend die AV (zum zweiten MAl), so spricht man von einem <em>Zwei-Gruppen-Vorher-Nachher-Messung-Design</em>, s. <a href="#fig-design2" class="quarto-xref">Abbildung&nbsp;<span>6.9</span></a>.</p>
+<p>Teilt man die Versuchspersonen in zwei Gruppen ein (idealerweise durch Randomisierung), misst zunächst (zum ersten Mal) die AV, wendet dann die Intervention an und misst abschließend die AV (zum zweiten MAl), so spricht man von einem <em>Zwei-Gruppen-Vorher-Nachher-Messung-Design</em>, s. <a href="#fig-design2" class="quarto-xref">Abbildung&nbsp;<span>6.10</span></a>.</p>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
 <div id="fig-design2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-design2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div>
-<pre class="mermaid mermaid-js" data-label="fig-design2">flowchart LR
+<pre class="mermaid mermaid-js" data-label="fig-design2">graph LR
   A[Begrüßung und Aufklärung&lt;/br&gt;der Probanden] --&gt; C[Messung soziodemografischer&lt;/br&gt;Variablen]
   C --&gt; C2[Messung der AV]
   C2 --&gt; D[Aufteilung in Gruppen]
@@ -1209,7 +1229,7 @@ Abbildung&nbsp;6.8: Zwei-Gruppen-Nachher-Messung-Design
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-design2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;6.9: Zwei-Gruppen-Vorher-Nachher-Messung-Design
+Abbildung&nbsp;6.10: Zwei-Gruppen-Vorher-Nachher-Messung-Design
 </figcaption></figure>
 </div>
 </div>
