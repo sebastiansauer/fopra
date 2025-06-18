@@ -678,7 +678,8 @@ ggbetweenstats(
 
 ### Modellierung und Inferenz
 
-Wir modellieren (in `m_bringtnixtin2`) jetzt die *Veränderung* `d = y2 - y1` als AV; UV ist wieder `g`, s. @tbl-m-bringtnixtin2-params.
+Wir modellieren (in `m_bringtnixtin2`) jetzt die *Veränderung* `d = y2 - y1` als AV;
+UV ist wieder `g`, s. @tbl-m-bringtnixtin2-params.
 
 ```{r}
 #| results: hide
@@ -733,11 +734,17 @@ plot(rope(m_bringtnixtin2)) + scale_fill_okabeito()
 
 
 
-## Fallstudie
+### Fallstudie
 
 [Hier](https://datenwerk.netlify.app/posts/einsamkeit-modellierung/index.html) ist eine Fallstudie einer studentischen Arbeit vorgestellt,
 in der Einsamkeit experimentell induziert wird und dann der Effekt auf wahrgenommene Einsamkeit untersucht wird (unter anderem).
 
+
+<!-- TODO: Interaktionsmodell -->
+<!-- Eine Interaktion tauch im DAG NICHT AUF -->
+
+
+<!-- TODO Mediationsmodell -->
 
 
 ## Beobachtungsstudien

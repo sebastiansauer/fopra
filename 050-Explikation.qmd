@@ -447,7 +447,7 @@ graph LR
 
 
 :::{#def-within}
-Bei einem *einfachen Within-Subject-Design* durchäuft jede Versuchsperson *alle* Versuchsbedingungen in gleicher Reihenfolge, s. @fig-within.$\square$
+Bei einem *einfachen Within-Subject-Design* durchläuft jede Versuchsperson *alle* Versuchsbedingungen in gleicher Reihenfolge, s. @fig-within.$\square$
 :::
 
 ```{mermaid}
@@ -508,12 +508,12 @@ Within- und Between-Subject-Designs haben jeweils Stärken und Schwächen:
 
 - Stärke des Within-Subject-Designs: Effekte werden leichter gefunden bzw. genauer geschätzt, da es weniger Rauschen gibt. Der Grund ist, dass die Unterschiede der Treatments in den gleichen Personen untersucht werden. So vermeidet man zusätzliches Rauschen, das aufgrund verschiedener Versuchspersonen entstehen würde. Anders gesagt reicht eine *kleinere* Stichprobe, um einen Effekt genau zu schätzen.
 
-- Stärke des Between-Subject-Designs: Manche Forschungsfragen erlauben keine wiederholte Intervention an den gleichen Versuchspersonen. Dann sind nur Between-Subject-Designs möglich. 
+- *Stärke* des Between-Subject-Designs: Manche Forschungsfragen erlauben keine wiederholte Intervention an den gleichen Versuchspersonen. Dann sind nur Between-Subject-Designs möglich. 
 
-- Schwäche des Within-Subject-Designs: Reihenfolge-Effekte können auftreten, diese sollten kontrolliert werden anhand des Between-Within-Subject-Designs.
+- *Schwäche* des Within-Subject-Designs: Reihenfolge-Effekte können auftreten, diese sollten kontrolliert werden anhand des Between-Within-Subject-Designs.
 
 :::{#exm-no-within}
-Ei Forschi untersucht den Effekt der UV "Witz erzählen mit und ohne Lacher abgespielt im Hintergrund" auf die wahrgenommenen Lustigkeit eines Witzes.
+Eine Forschinerin untersucht den Effekt der UV "Witz erzählen mit und ohne Lacher abgespielt im Hintergrund" auf die wahrgenommenen Lustigkeit eines Witzes.
 Einen Witz zum zweiten Mal zu hören, wird die Lustigkeit gegen Null gehen lassen.
 Daher ist in diesem Fall ein Within-Subject-Design kaum möglich.$\square$
 :::
@@ -533,7 +533,7 @@ Wenn möglich sollte ein Within-Subject-Design - in der Variante mit Kontrolle d
 
 :::{#def-exp}
 ### Experiment
-Ein Experiment (im engen Sinne des Wortes) ist ein Spezialfall einer interventionellen Studie. Es hat Explikation als epistemologisches Ziel, zumeist in Form einer Kausalaussage.
+Ein Experiment (im engen Sinne des Wortes) ist ein Spezialfall einer interventionellen Studie. Es hat *Explikation* als epistemologisches Ziel, zumeist in Form einer Kausalaussage.
 Methodisch zeichnet es sich durch folgende Merkmale aus:
 
 - *Kausalmodell*: Trennung mindestens einer unabhängigen Variablen (UV) von einer abhängigen Variablen (AV), wobei die AV gemäß der zu prüfenden Hypothese von der UV (kausal) beeinflusst wird.
