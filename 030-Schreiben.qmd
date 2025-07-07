@@ -1265,8 +1265,10 @@ bei der ersten Verwendung eine entsprechende Fußnote anzufügen.
 
 ## Formatierung {#sec-formatierung}
 
+Beachten Sie auch die Hinweise im [Hinweisbuch, Kapitel zu Formatierung](https://hinweisbuch.netlify.app/060-hinweise-pruefung-projektarbeit-frame#formatierung).
 
-Sie können Ihre Arbeit als paginiertes oder nicht-paginiertes Dokument einreichen. Paginiert bedeutet  "mit Seiten", also, die auf einem Blatt Papier gedruckt werden soll.
+
+Sie können Ihre Arbeit als *paginiertes* oder *nicht-paginiertes* Dokument einreichen. Paginiert bedeutet  "mit Seiten", also, die auf einem Blatt Papier gedruckt werden soll.
 Typische paginierte Dokumenttypen sind Word- oder PDF-Dokumente.
 Nicht-paginierte Dokumente, wie HTML-Dokumente, sind dagegen in aller Regel nicht paginiert,
 also nicht auf physikalische (Papier-)Blätter eines festen Formats zugeschnitten.
