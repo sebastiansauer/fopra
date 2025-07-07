@@ -1266,39 +1266,9 @@ bei der ersten Verwendung eine entsprechende Fußnote anzufügen.
 ## Formatierung {#sec-formatierung}
 
 
-### Paginierte Formate
-
-#### Richtlinien 
-
-Solange Sie keine anders lautenden Vorgaben von Ihrer Betreuungsperson haben, 
-können Sie sich an diesen Richtlinien orientieren.
-
-
-1. Verwenden Sie die *Format-Vorgaben der APA* (aktuelle Version)^[V7], um Zitationen, Tabellen und Abbildungen zu formatieren.
-1. *Fließtext* (in längeren Print-Dokumenten wie einer Seminararbeit) ist *mit Serifentext* zu schreiben; Überschriften können serifenlos gesetzt sein.
-2. *Fließtext* soll in *11 Punkt Schriftgröße* gesetzt sein.
-3. Der Text kann linksbündig oder im *Blocksatz* gesetzt sein. 
-4. *Silbentrennung* ist eingeschaltet.
-5. *Zeilenabstand*: 1 – 1,2 Zeilen
-6. Seitenformat (für papierbezogenen Formate): Din-A4
-7. *Einrücken*: Die *erste Zeile jedes Absatze*s wird mit 1.3 cm eingerückt (Ausnahme: Abstract, Titel, Blockzitate und Verzeichnisse). Aber: Der erste Absatz nach einer Überschrift, nach einer Abbildung, einer Tabelle o.Ä.  wird *nicht* eingerückt. Alternativ können Sie vertikalen Raum verwenden, um Absätze zu trennen (besser ist aber Einrücken). Verwenden Sie aber nicht sowohl Einrücken als auch vertikalen Abstand.
-8. *Kursivschrift*: Sie dürfen Kursivschrift verwenden, wenn Sie etwas hervorheben oder betonen möchten oder bei erstmaliger Einführung neugeprägter Begriffe, Fach- oder Schlüsselbegriffen, bei statistischen Symbolen und Variablen. Meiden Sie Fettdruck und Unterstreichungen.
-9. *Abschnittswechsel*: Vertikaler Abstand ist ein probates Mittel, um Sinnzusammenhänge kenntlich zu machen. Ein neuer Abschnitt wird mit vertikalem Abstand kenntlich gemacht.
-Gestalten Sie Ihre Seiten *doppelseitig* (d. h. linke vs. rechte Seite), auch im Druck (wenn Sie ein paginiertes Format verwenden).
-10. *Kolumnentitel* (Kapitelnummer und -name in Kopfzeile) sind empfehlenswert.
-11. Nummerierung: Verwenden Sie nur *arabische* („normale“) *Ziffern* für die Seitenzahlen (auch bei Abstract etc.).
-12. *Seitenränder*: Da eine gute Lesbarkeit bei nicht mehr als ca. 65 Zeichen liegt, können Sie Ihre Seitenränder entsprechend einstellen.
-
-Grundsätzlich sollten Sie in Ihren Entscheidungen konsistent sein: 
-Wenn Sie sich für ein bestimmtes Vorgehen entschieden haben, sollten Sie dieses konsequent anwenden.
-
-
-#### Seitenränder und Satzspiegel
-
-Seitenränder, Satzspiegel und andere typografische Elemente sind zumeist nur für paginierte Dokumenten relevant,
-Dokumente also, die auf einem Blatt Papier gedruckt werden soll.
+Sie können Ihre Arbeit als paginiertes oder nicht-paginiertes Dokument einreichen. Paginiert bedeutet  "mit Seiten", also, die auf einem Blatt Papier gedruckt werden soll.
 Typische paginierte Dokumenttypen sind Word- oder PDF-Dokumente.
-Elektronische Dokumente sind dagegen in aller Regel nicht paginiert,
+Nicht-paginierte Dokumente, wie HTML-Dokumente, sind dagegen in aller Regel nicht paginiert,
 also nicht auf physikalische (Papier-)Blätter eines festen Formats zugeschnitten.
 Das typische elektronische Format für Text sind Webseiten (HTML-Dokumente).
 Will man einen Text nicht primär in Papierform lesen, so bieten sich elektronische Dokumente an,
@@ -1306,6 +1276,12 @@ da diese komfortabler auf Bildschirmen zu lesen sind.
 Z.B. kann man die Schriftgröße auf die Größe des Displays einstellen.
 Das ist praktisch, da Displaygrößen enorm schwanken.
 Mit paginierten Dokumenten kann man das Layout hingegen nicht auf ein Display anpassen.^[Es gibt ein paar Versuche, wie Adobes "Liquid Mode", paginierte Formate auf nicht-paginierte umzuwandeln.]
+
+
+### Seitenränder und Satzspiegel
+
+Seitenränder, Satzspiegel und andere typografische Elemente sind zumeist nur für paginierte Dokumenten relevant.
+
 
 :::{#def-typografie}
 ### Typografie
@@ -1317,7 +1293,7 @@ Die Typografie ist die Lehre der ästhetischen und funktionalen Gestaltung der G
 Der Satzspiegel definiert die Nutzfläche einer Seite (im Gegensatz zum Gesamtplatz und leerem Platz).$\square$
 :::
 
-Ein Satzspiegel wird dann als ästhetisch empfunden, wenn sich (selbst-)ähnliche Proportionen wiederfinden.
+Ein Satzspiegel wird v.a. dann als ästhetisch empfunden, wenn sich (selbst-)ähnliche Proportionen wiederfinden.
 Die Länge einer Zeile sollte sich nach der optimalen Lesbarkeit ausrichten, für die ca. 65 Zeichen angenommen werden.
 Papierseiten nach Din-Normen haben ein Seitenverhältnis von ca. 1:1.4. Ein Satzspiegel im gleichen Verhältnis ist ästhetisch.
 Ein weiterer klassischer Satzspiegel ist nach dem Goldenen Schnitt aufgebaut.
@@ -1358,7 +1334,7 @@ d <- tribble(
 kable(d)
 ```
 
-#### Die 10 Gebote der Textformatierung
+### Die 10 Gebote der Textformatierung
 
 Die zehn Gebote der Textformatierung:
 
@@ -1381,7 +1357,7 @@ Die zehn Gebote der Textformatierung:
 
 Sofern Sie in einem nicht-paginierten Format schreiben,
 nutzen Sie die von der Lehrkraft bereitgestellte Vorlage.
-Alternative können Sie der Lehkraft Ihre eigene Vorlage vorstellen.
+Alternative können Sie der Lehrkraft Ihre eigene Vorlage vorstellen.
 
 
 ### Urheberrecht
