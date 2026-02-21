@@ -1096,6 +1096,233 @@ In Summe:
 2. H2: (Abwesenheit eines Reihenfolgeeffekts) konnte nicht bestätigt werden; die Ergebnislage war uneindeutig.
 
 
+## Mediatoranalyse
+
+### Grundlagen
+
+Die Mediatoranalyse fragt, *wodurch* wird ein Effekt von $X$ auf $Y$ übertragen (s. @fig-simple-med)? 
+Das ist eine Stufe komplexer, als zu fragen, ob $X$ einen Effekt auf $Y$ hat (s. @fig-simple-xy).
+
+Ein Mediatormodell besteht also aus drei Variablen:
+
+1. `X` - UV
+2. `Y` - AV
+3. `M` - Mediator
+
+Ein Mediatormodell besteht auch aus vier *Pfaden* bzw. Effekten, s. @fig-simple-med:
+
+1. Pfad *a*: $X \rightarrow M$  - Der Effekt der UV auf den Mediator
+2. Pfad *b*: $M \rightarrow Y$  - Der Effekt des Mediators auf die AV
+3. Pfad *c'*: $X \rightarrow Y$ - Der "direkte" Effekt der UV auf die AV (unter Kontrolle ("Ausschluss") des Mediators)
+4. Pfad *ab*: $X \rightarrow Y$ - Der "indirekte" Effekt der UV auf die AV über den Mediator
+
+
+
+::: {.columns}
+::: {.column width="50%"}
+
+```{mermaid}
+%%| fig-cap: "Wirkt X auf Y?"
+%%| label: fig-simple-xy 
+graph LR
+  X --> Y
+```
+
+:::
+
+::: {.column width="50%"}
+
+```{mermaid}
+%%| fig-cap: "Wirkt X auf Y *über* M?"
+%%| label: fig-simple-med
+graph LR
+  X -->|a| M
+  X -->|c'| Y
+  M -->|b| Y
+```
+
+:::
+:::
+
+### Fallbeispiel
+
+:::{exm-jobs1}
+Verringert ein Jobtraining (eine Intervention der Arbeitsagentur; `treat` als $X$) die Depressivität (`depress2` als $Y$) von Jobsuchenden vermittelt durch den Mediator Selbstwirksamkeit (`job_seek` als $M$), s. @fig-med-jobs? Die Daten sind dem Datensatz [`jobs`](https://vincentarelbundock.github.io/Rdatasets/doc/mediation/jobs.html) entnommen. 
+
+```{r}
+library(mediation)
+data(jobs)
+glimpse(jobs)
+```
+
+
+$\square$
+
+```{mermaid}
+%%| label: fig-med-jobs
+%%| fig-cap: Mediationsmodell von Jobtraining über Depressivität 
+graph LR
+  treat --> job_seek  
+  job_seek --> depress2
+  treat --> depress2
+```
+
+
+:::
+
+
+
+#### Mit `mediation`: Frequentistische Mediationsmodelle
+
+
+```{r}
+library(mediation)
+```
+
+Wir definieren zwei Regressionsmodelle:
+
+1. Das `m_model`: $X \rightarrow M$
+2. Das `y_model`: $X + M \rightarrow Y$
+
+
+```{r}
+m_model2 <- lm(job_seek ~ treat, data = jobs)
+y_model2 <- lm(depress2 ~ treat + job_seek, data = jobs)
+med_depress_freq <-
+  mediate(model.m = m_model2, 
+          model.y = y_model2, 
+          treat = "treat",  # UV, X
+          mediator = "job_seek",  # M
+          boot = TRUE,  # Simulationstechniken nutzen
+          sims = 1000)  # Anzahl der Simulationsdurchläufe
+```
+
+```{r}
+summary(med_depress_freq)
+```
+
+- ACME (Average Causal Mediation Effect): der *indirekte* Effekt 
+- ADE (Average Direct Effect): Der *direkte* Effekt
+- Total Effect: Die Summe von indirektem und direktem Effekt
+- Prop. Mediated: Der Anteil des indirekten Effekt (ACME) am Gesamteffekt (Total Effect)
+
+
+Wie man sieht, ist im ACME die Null enthalten. Wir können also einen Nulleffekt nicht ausschließen.
+
+
+#### Mit `bmlm`: Bayes Multilevel Mediation
+
+```{r}
+library(bmlm)
+jobs$id <- 1:nrow(jobs)
+```
+
+Achtung: Die Funktion `mlm` kann mehrere Minuten zum Durchlaufen benötigen.
+
+```{r}
+#| warning: false
+#| results: false
+med_depress_mlm <-mlm(
+  d = jobs,
+  id = "id",
+  x = "treat",
+  m = "job_seek",
+  y = "depress2",
+  iter = 2000,
+  chains = 1)
+```
+
+```{r}
+mlm_path_plot(med_depress_mlm,
+              xlab = "Treat", mlab = "job_seek", ylab = "depress2",
+              text = TRUE)
+```
+
+Hier sind die Erebnisse des Modells.
+Im Mediationseffket (`me`) ist die Null enthalten;
+daher ist die Nullhypothese nicht zu verwerfen.
+
+
+```{r}
+mlm_summary(med_depress_mlm)
+```
+
+- `a`: Pfad a
+- `b`: Pfad b
+- `cp`: Pfad c' ("c prime")
+- `me`: Medationseffekt (indirekter Effekt)
+- `c`: Pfad c (totaler Effekt)
+- `pme`: Anteil indirekter Effekt am Gesamteffekt ("proportion mediated effect")
+
+```{r}
+mlm_pars_plot(med_depress_mlm, pars = "me")
+```
+
+
+
+#### Mit `brms`: Bayes Regression modelling using Stan
+
+
+```{r}
+library(brms)
+```
+
+```{r}
+m_model <- bf(job_seek ~ treat )
+y_model <- bf(depress2 ~ treat + job_seek)
+
+med_depress_brms <-
+  brm(
+    m_model + y_model + set_rescor(FALSE),
+    data = jobs
+  )
+```
+
+
+`set_rescor(FALSE)` setzt die Korrelation der Residuen von M und Y auf Null: 
+Es sollte keinen Zusammenhang zwischen M und Y geben, der nicht durch X erklärt wird.
+Anders gesagt: Wir schließen Konfundierung durch unbeobachtete Variablen aus.
+
+
+
+Ergebnisse:
+
+```{r}
+summary(med_depress_brms)
+```
+
+
+
+
+Den indirekten Effekt muss man sich selber berechnen:
+
+```{r}
+post <- as_draws_df(med_depress_brms)
+a <- post$b_jobseek_treat
+b <- post$b_depress2_job_seek
+post$indirect <- a * b
+```
+
+Dann kann man sich z.B. ein Konfidenzintervall ausgeben lassen:
+
+```{r}
+hdi(post$indirect)
+```
+
+```{r}
+hdi(post$indirect) |> plot()
+```
+
+Wie man sieht, ist die Null im Intervall enthalten.
+
+
+### Vertiefung
+
+[Hier](https://wgruber.github.io/Modellbildung2/mediation.html) findet sich eine Einführung in die Mediationsanalyse.
+[Dieses R-Paket](https://github.com/GerkeLab/mediator/tree/master) stellt ebenfalls komfortable Funktionen zur Verfügung für Mediationsanalysen.
+
+
+
 ## Vertiefung
 
 
@@ -1228,13 +1455,6 @@ Die Random-Effekte kann man sich visualisieren lassen, s. @fig-randef-m3.
 #| fig-cap: "95%-CI der Random-Effekte von `m_within3`"
 plot(m_within3)
 ```
-
-
-
-### Mediatoranalyse
-
-[Hier](https://wgruber.github.io/Modellbildung2/mediation.html) findet sich eine Einführung in die Mediationsanalyse.
-[Dieses R-Paket](https://github.com/GerkeLab/mediator/tree/master) stellt ebenfalls komfortable Funktionen zur Verfügung für Mediationsanalysen.
 
 
 

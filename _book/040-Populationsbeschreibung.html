@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.31">
+<meta name="generator" content="quarto-1.8.25">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="keywords" content="Versuchsplanung, Statistik, R, Datenanalyse, Psychologie, Forschung">
 <meta name="description" content="“Planung, Erhebung, Auswertung und Berichtlegung quantitativer psychologischer Studien: Ein Kurs für Anfänger”">
@@ -88,18 +88,19 @@ div.csl-indent {
 <link href="./img/fopra-logo-small.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-8ef56b68f8fa1e9d2ba328e99e439f80.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-2d053c8a602df91ec61aa3379e601c1a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-7a339148c3b2635d23d0fec43941109e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-2d053c8a602df91ec61aa3379e601c1a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap-4760c14e01bb68cedbd56ecf75849c93.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-4c6d65c679321d81af7ec8b61b1d5a24.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-4760c14e01bb68cedbd56ecf75849c93.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -139,7 +140,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -335,7 +336,7 @@ window.Quarto = {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="./index.html" class="sidebar-logo-link">
-      <img src="./img/fopra-logo-small.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none"></a>
+      <img src="./img/fopra-logo-small.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none"><img src="./img/fopra-logo-small.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none"></a>
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Forschungsprojekt</a> 
         <div class="sidebar-tools-main">
@@ -501,7 +502,7 @@ window.Quarto = {
 </nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Inhaltsverzeichnis</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2"><h2 id="toc-title">Inhalt</h2>
    
   <ul>
 <li>
@@ -667,7 +668,7 @@ Abbildung&nbsp;5.1: Chuck Norris meint: Interpretiere niemals einen Befund in ei
 <i class="callout-icon"></i>
 </div>
 <div class="callout-title-container flex-fill">
-Kausalhypothese getarnt als Deskriptionshypothese
+<span class="screen-reader-only">Vorsicht</span>Kausalhypothese getarnt als Deskriptionshypothese
 </div>
 </div>
 <div class="callout-body-container callout-body">
@@ -742,15 +743,15 @@ Abbildung&nbsp;5.3: Deskriptivstatistik fasst zusammen. Inferenzstatistik verall
 <div id="exm-mtcars" class="theorem example">
 <p><span class="theorem-title"><strong>Beispiel 5.7 (Spritverbrauch bei Automatik- vs.&nbsp;manuellem Getriebe)</strong></span> Wie groß ist der Unterschied im Spritverbrauch <em>im Durchschnitt</em> bei Automatik- vs.&nbsp;manuellem Getriebe?</p>
 <div class="cell">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://mc-stan.org/rstanarm/">rstanarm</a></span><span class="op">)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://mc-stan.org/rstanarm/">rstanarm</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://easystats.github.io/easystats/">easystats</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="va">mtcars</span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">m1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://mc-stan.org/rstanarm/reference/stan_glm.html">stan_glm</a></span><span class="op">(</span><span class="va">mpg</span> <span class="op">~</span> <span class="va">am</span>, seed <span class="op">=</span> <span class="fl">42</span>, data <span class="op">=</span> <span class="va">mtcars</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="va">m1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://mc-stan.org/rstanarm/reference/stan_glm.html">stan_glm</a></span><span class="op">(</span><span class="va">mpg</span> <span class="op">~</span> <span class="va">am</span>, seed <span class="op">=</span> <span class="fl">42</span>, data <span class="op">=</span> <span class="va">mtcars</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Mit <code>parameters()</code> kann man sich die Schätzintervalle ausgeben lassen:</p>
 <div class="cell">
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">parameters</span><span class="op">(</span><span class="va">m1</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">parameters</span><span class="op">(</span><span class="va">m1</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -765,7 +766,7 @@ Abbildung&nbsp;5.3: Deskriptivstatistik fasst zusammen. Inferenzstatistik verall
 </blockquote>
 <p>Oder, anschaulicher, man kann sich den Schätzbereich auch visualisieren lassen, s. <a href="#fig-mtcars1" class="quarto-xref">Abbildung&nbsp;<span>5.4</span></a>.</p>
 <div class="cell">
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="fu">parameters</span><span class="op">(</span><span class="va">m1</span><span class="op">)</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="fu">parameters</span><span class="op">(</span><span class="va">m1</span><span class="op">)</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div id="fig-mtcars1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-mtcars1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1018,13 +1019,13 @@ Abbildung&nbsp;5.8: Studiendesign
 <p><span class="math display">\[n_{min} = \frac{z^2\sigma^2}{e^2}\]</span></p>
 <p>Lassen wir R die schnöde Rechenarbeit erledigen:</p>
 <div class="cell">
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">z</span> <span class="op">&lt;-</span> <span class="fl">1.96</span>  <span class="co"># z-Wert für 95%-KI</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">z</span> <span class="op">&lt;-</span> <span class="fl">1.96</span>  <span class="co"># z-Wert für 95%-KI</span></span>
 <span><span class="va">s</span> <span class="op">&lt;-</span> <span class="fl">20</span>  <span class="co"># Streuung, Sigma</span></span>
 <span><span class="va">e</span> <span class="op">&lt;-</span> <span class="fl">4</span> <span class="co"># Radius von 4 Minuten</span></span>
 <span></span>
 <span><span class="va">n</span> <span class="op">&lt;-</span> <span class="op">(</span><span class="va">z</span><span class="op">^</span><span class="fl">2</span><span class="op">*</span><span class="va">s</span><span class="op">^</span><span class="fl">2</span><span class="op">)</span> <span class="op">/</span> <span class="va">e</span><span class="op">^</span><span class="fl">2</span></span>
 <span><span class="va">n</span></span>
-<span><span class="co">## [1] 96.04</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">## [1] 96.04</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Unsere Stichprobe sollte also (mindestens) 97 Beobachtungseinheiten umfassen, um den Parameter mit der angegebenen Genauigkeit zu messen. Voraussetzung ist natürlich eine Zufallsstichprobe.</p>
 <p>Damit man nicht selber ausrechnen muss, kann man auch eine Tabelle bemühen, etwa die von <span class="citation" data-cites="Bortz2006">Bortz &amp; Döring (<a href="130-references.html#ref-Bortz2006" role="doc-biblioref">2006</a>)</span>, s. <a href="#fig-bortz-tab26" class="quarto-xref">Abbildung&nbsp;<span>5.9</span></a>.</p>
@@ -1188,13 +1189,14 @@ Schönbrodt, F. D., &amp; Perugini, M. (2013). At What Sample Size Do Correlatio
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

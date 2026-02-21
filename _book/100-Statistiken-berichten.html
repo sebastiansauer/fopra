@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.31">
+<meta name="generator" content="quarto-1.8.25">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="keywords" content="Versuchsplanung, Statistik, R, Datenanalyse, Psychologie, Forschung">
 <meta name="description" content="“Planung, Erhebung, Auswertung und Berichtlegung quantitativer psychologischer Studien: Ein Kurs für Anfänger”">
@@ -88,18 +88,19 @@ div.csl-indent {
 <link href="./img/fopra-logo-small.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-8ef56b68f8fa1e9d2ba328e99e439f80.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-2d053c8a602df91ec61aa3379e601c1a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-7a339148c3b2635d23d0fec43941109e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-2d053c8a602df91ec61aa3379e601c1a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap-4760c14e01bb68cedbd56ecf75849c93.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-4c6d65c679321d81af7ec8b61b1d5a24.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-4760c14e01bb68cedbd56ecf75849c93.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -137,7 +138,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -333,7 +334,7 @@ window.Quarto = {
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header sidebar-header-stacked">
       <a href="./index.html" class="sidebar-logo-link">
-      <img src="./img/fopra-logo-small.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none"></a>
+      <img src="./img/fopra-logo-small.png" alt="" class="sidebar-logo light-content py-0 d-lg-inline d-none"><img src="./img/fopra-logo-small.png" alt="" class="sidebar-logo dark-content py-0 d-lg-inline d-none"></a>
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Forschungsprojekt</a> 
         <div class="sidebar-tools-main">
@@ -499,7 +500,7 @@ window.Quarto = {
 </nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Inhaltsverzeichnis</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active" data-toc-expanded="2"><h2 id="toc-title">Inhalt</h2>
    
   <ul>
 <li>
@@ -570,11 +571,11 @@ window.Quarto = {
 </section><section id="benötigte-r-pakete" class="level3" data-number="13.1.4"><h3 data-number="13.1.4" class="anchored" data-anchor-id="benötigte-r-pakete">
 <span class="header-section-number">13.1.4</span> Benötigte R-Pakete</h3>
 <div class="cell">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://easystats.github.io/easystats/">easystats</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://mc-stan.org/rstanarm/">rstanarm</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://gt.rstudio.com">gt</a></span><span class="op">)</span>  <span class="co"># optional</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/ddsjoberg/gtsummary">gtsummary</a></span><span class="op">)</span>  <span class="co"># optional</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/ddsjoberg/gtsummary">gtsummary</a></span><span class="op">)</span>  <span class="co"># optional</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section></section><section id="warum-das-berichten-ihrer-analyse-wichtig-ist" class="level2" data-number="13.2"><h2 data-number="13.2" class="anchored" data-anchor-id="warum-das-berichten-ihrer-analyse-wichtig-ist">
 <span class="header-section-number">13.2</span> Warum das Berichten (Ihrer Analyse) wichtig ist</h2>
@@ -666,13 +667,13 @@ Hinweis
 <p>Im folgenden sind Möglichkeiten aufgezeigt, wie Sie Tabellen mit R für Ihren Bericht erstellen können. Bitte behalten Sie im Blick, dass in einem deutschsprachigen Bericht die Variablen- und Kennzahlennamen in deutscher Sprache erscheinen sollten. Auf “technisch” anmutenden Abkürzungen (z. B. <code>mpg_sd</code>) sollten man verzichten zugunsten “sprechenderer” Formulierengen (z. B. <em>SD Spritverbrauch</em>, oder <em>SD MPG</em>, wenn “MPG” in der Fußnote der Tabelle definiert ist). Tabellen sollten für sich selber verständlich sein, ohne Bezug zum Text.</p>
 <p>Mit gängigen R-Methoden kann man sich deskriptive Statistiken ausgeben lassen, s. <a href="#tbl-desk1" class="quarto-xref">Tabelle&nbsp;<span>13.1</span></a>.</p>
 <div class="cell">
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">mtcars</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">mtcars</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>mpg_avg <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">mpg</span><span class="op">)</span>,</span>
 <span>            mpg_sd <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/sd.html">sd</a></span><span class="op">(</span><span class="va">mpg</span><span class="op">)</span>,</span>
 <span>            cor_mpg_hp <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/stats/cor.html">cor</a></span><span class="op">(</span><span class="va">mpg</span>, <span class="va">hp</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename</a></span><span class="op">(</span>`MW Spritverbrauch` <span class="op">=</span> <span class="va">mpg_avg</span>,</span>
 <span>         `SD Spritverbrauch`<span class="op">=</span> <span class="va">mpg_sd</span>,</span>
-<span>         `Korrelation Spritverbrauch mit PS-Zahl` <span class="op">=</span> <span class="va">cor_mpg_hp</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>         `Korrelation Spritverbrauch mit PS-Zahl` <span class="op">=</span> <span class="va">cor_mpg_hp</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div id="tbl-desk1" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-desk1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Tabelle&nbsp;13.1: Einfache Tabelle mit deskriptiven Statistiken
@@ -690,11 +691,11 @@ Tabelle&nbsp;13.1: Einfache Tabelle mit deskriptiven Statistiken
 </div>
 <p>Alternativ zu selbsterstellten Tabellen kann “Statistik-Fast-Food” konsumieren und lässt sich einen Haufen Zahlen auf einmal ausgeben. R-Pakete wie <code>r_statix</code>, <code>skimr</code> oder <code>easystats</code> helfen dabei, s. als Beispiel <a href="#tbl-desk2" class="quarto-xref">Tabelle&nbsp;<span>13.2</span></a>.</p>
 <div class="cell">
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://easystats.github.io/easystats/">easystats</a></span><span class="op">)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://easystats.github.io/easystats/">easystats</a></span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu">describe_distribution</span><span class="op">(</span><span class="va">mtcars</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="op">-</span><span class="va">n</span>, <span class="op">-</span><span class="va">n_Missing</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename</a></span><span class="op">(</span>MW <span class="op">=</span> <span class="va">Mean</span>, Schiefe <span class="op">=</span> <span class="va">Skewness</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/rename.html">rename</a></span><span class="op">(</span>MW <span class="op">=</span> <span class="va">Mean</span>, Schiefe <span class="op">=</span> <span class="va">Skewness</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell">
 <div id="tbl-desk2" class="cell quarto-float quarto-figure quarto-figure-center anchored">
@@ -830,14 +831,14 @@ Tabelle&nbsp;13.2: Einfache Tabelle mit describe_distribution aus easystats
 </div>
 <p>Tabellen mit <code>flextable()</code>, <a href="https://education.rstudio.com/blog/2020/07/gtsummary/"><code>gtsummary</code></a> oder <code><a href="https://gt.rstudio.com/reference/gt.html">gt()</a></code> kann man sich eine schicke Tabelle (im HTML-Format) ausgeben lassen, die man dann per Copy-Paste in Word, d.h. den eigene Forschungsbericht, übernehmen kann. s. <a href="#tbl-gt1" class="quarto-xref">Tabelle&nbsp;<span>13.3</span></a>.</p>
 <div class="cell">
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://gt.rstudio.com">gt</a></span><span class="op">)</span>  <span class="co"># gt wie "grammer of tables"</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://gt.rstudio.com">gt</a></span><span class="op">)</span>  <span class="co"># gt wie "grammer of tables"</span></span>
 <span></span>
 <span><span class="va">meine_tab</span> <span class="op">&lt;-</span> </span>
 <span>  <span class="fu">describe_distribution</span><span class="op">(</span><span class="va">mtcars</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="https://gt.rstudio.com/reference/gt.html">gt</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>  <span class="co"># erzeugt schicke Tabelle</span></span>
 <span>  <span class="fu"><a href="https://gt.rstudio.com/reference/fmt_number.html">fmt_number</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/where.html">where</a></span><span class="op">(</span><span class="va">is.numeric</span><span class="op">)</span>, decimals <span class="op">=</span> <span class="fl">2</span><span class="op">)</span> <span class="co"># Anzahl der Dezimalstellen</span></span>
 <span></span>
-<span><span class="va">meine_tab</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="va">meine_tab</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div id="tbl-gt1" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-gt1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Tabelle&nbsp;13.3: Deskriptive Statistiken mit gt
@@ -1292,7 +1293,7 @@ Tabelle&nbsp;13.3: Deskriptive Statistiken mit gt
   height: 0px !important;
 }
 </style>
-<table class="gt_table do-not-create-environment cell caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<table class="gt_table do-not-create-environment cell caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
 <thead><tr class="gt_col_headings header">
 <th id="Variable" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Variable</th>
 <th id="Mean" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Mean</th>
@@ -1449,10 +1450,10 @@ Tabelle&nbsp;13.3: Deskriptive Statistiken mit gt
 <p>Aus APA-Sicht würde vermutlich MW und SD genüge tun (sofern man von normalverteilten Variablen) ausgeht. Allerdings schadet es auch nicht, zusätzliche Kennwerte anzugeben. Verzichten sollte man aber vermutlih - in diesem Fall - auf die Spalte <code>n_Missing</code>, da die Spalte keine Information birgt.</p>
 <p>So sieht eine Tabelle mit <code>gtsummary</code> aus, s. <a href="#tbl-gtsum1" class="quarto-xref">Tabelle&nbsp;<span>13.4</span></a>. Hier wird die Häufigkeitsanalyse gezeigt.</p>
 <div class="cell">
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/ddsjoberg/gtsummary">gtsummary</a></span><span class="op">)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/ddsjoberg/gtsummary">gtsummary</a></span><span class="op">)</span></span>
 <span><span class="va">mtcars</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">mpg</span>, <span class="va">cyl</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://www.danieldsjoberg.com/gtsummary/reference/tbl_summary.html">tbl_summary</a></span><span class="op">(</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="fu">tbl_summary</span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div id="tbl-gtsum1" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-gtsum1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Tabelle&nbsp;13.4: Deskriptive Statistiken mit gtsummary
@@ -1907,7 +1908,7 @@ Tabelle&nbsp;13.4: Deskriptive Statistiken mit gtsummary
   height: 0px !important;
 }
 </style>
-<table class="gt_table do-not-create-environment cell caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<table class="gt_table do-not-create-environment cell caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
 <colgroup>
 <col style="width: 50%">
 <col style="width: 50%">
@@ -1954,12 +1955,12 @@ Tabelle&nbsp;13.4: Deskriptive Statistiken mit gtsummary
 <p><a href="https://data-se.netlify.app/2022/05/02/kontigenztabellen-in-r/#exportieren">Hier</a> findet sich noch mehr zum Thema Exportieren von Tabellen aus R nach Word.</p>
 <p>Eine <em>tidy</em> Korrelationstabelle kann man sich z. B. (mit <code>easystats</code>, aber es gibt mehrere R-Pakete für diesen Zweck) so ausgeben lassen:</p>
 <div class="cell">
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">meine_cor_tab</span> <span class="op">&lt;-</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">meine_cor_tab</span> <span class="op">&lt;-</span></span>
 <span>  <span class="va">mtcars</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">mpg</span>, <span class="va">hp</span>, <span class="va">disp</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="fu">correlation</span><span class="op">(</span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">meine_cor_tab</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu">print_md</span><span class="op">(</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="va">meine_cor_tab</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://easystats.github.io/insight/reference/display.html">print_md</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
 <caption>Correlation Matrix (pearson-method)</caption>
@@ -2016,9 +2017,9 @@ Hinweis
 </div>
 <p>Möchte man eine <em>quadratische</em> Korrelationstabelle (was der üblicheren Berichtsform entspricht) kann man das so bekommen:</p>
 <div class="cell">
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">meine_cor_tab</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">meine_cor_tab</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="https://gt.rstudio.com/reference/gt.html">gt</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>  <span class="co"># machen wir gleich eine schicke HTML-Tabelle</span></span>
-<span>  <span class="fu"><a href="https://gt.rstudio.com/reference/fmt_number.html">fmt_number</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/where.html">where</a></span><span class="op">(</span><span class="va">is.numeric</span><span class="op">)</span>, decimals <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="fu"><a href="https://gt.rstudio.com/reference/fmt_number.html">fmt_number</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/where.html">where</a></span><span class="op">(</span><span class="va">is.numeric</span><span class="op">)</span>, decimals <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div id="hmnzceukih" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
 <style>#hmnzceukih table {
@@ -2469,7 +2470,7 @@ Hinweis
   height: 0px !important;
 }
 </style>
-<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
 <thead><tr class="gt_col_headings header">
 <th id="Parameter" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Parameter</th>
 <th id="disp" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">disp</th>
@@ -2530,14 +2531,14 @@ Hinweis
 </div>
 <p>Sie können eine Posteriori-Verteilung z. B. für ihr Modell berechnen:</p>
 <div class="cell">
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://mc-stan.org/rstanarm/">rstanarm</a></span><span class="op">)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://mc-stan.org/rstanarm/">rstanarm</a></span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">m1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://mc-stan.org/rstanarm/reference/stan_glm.html">stan_glm</a></span><span class="op">(</span><span class="va">mpg</span> <span class="op">~</span> <span class="va">am</span>, data <span class="op">=</span> <span class="va">mtcars</span>, seed <span class="op">=</span> <span class="fl">42</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="va">m1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://mc-stan.org/rstanarm/reference/stan_glm.html">stan_glm</a></span><span class="op">(</span><span class="va">mpg</span> <span class="op">~</span> <span class="va">am</span>, data <span class="op">=</span> <span class="va">mtcars</span>, seed <span class="op">=</span> <span class="fl">42</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Hier sind die Ergebnisse; noch nicht ganz poliert für einen APA-Bericht, s. <a href="#tbl-m1-params" class="quarto-xref">Tabelle&nbsp;<span>13.5</span></a>.</p>
 <div class="cell">
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">parameters</span><span class="op">(</span><span class="va">m1</span>, prob <span class="op">=</span> <span class="fl">.95</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu">print_md</span><span class="op">(</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">parameters</span><span class="op">(</span><span class="va">m1</span>, prob <span class="op">=</span> <span class="fl">.95</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://easystats.github.io/insight/reference/display.html">print_md</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div id="tbl-m1-params" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-m1-params-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Tabelle&nbsp;13.5: Parameter für das Modell m1
@@ -2595,7 +2596,7 @@ Tabelle&nbsp;13.5: Parameter für das Modell m1
 </blockquote>
 <p>Ein HDI bekommen Sie, wenn Sie bei <code>ci_method</code> den Wert <code>"hdi</code> wählen; oder wenn Sie gleich den Befehl <code>hdi(m1)</code> ausführen, s. <a href="#tbl-m1-params2" class="quarto-xref">Tabelle&nbsp;<span>13.6</span></a>.</p>
 <div class="cell">
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">parameters</span><span class="op">(</span><span class="va">m1</span>, prob <span class="op">=</span> <span class="fl">.95</span>, ci_method <span class="op">=</span> <span class="st">"hdi"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu">print_md</span><span class="op">(</span><span class="op">)</span>  <span class="co"># oder: hdi(m1)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">parameters</span><span class="op">(</span><span class="va">m1</span>, prob <span class="op">=</span> <span class="fl">.95</span>, ci_method <span class="op">=</span> <span class="st">"hdi"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://easystats.github.io/insight/reference/display.html">print_md</a></span><span class="op">(</span><span class="op">)</span>  <span class="co"># oder: hdi(m1)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div id="tbl-m1-params2" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-m1-params2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Tabelle&nbsp;13.6: Parameter für das Modell m1. Das Intervall ist ein HDI.
@@ -2648,10 +2649,10 @@ Tabelle&nbsp;13.6: Parameter für das Modell m1. Das Intervall ist ein HDI.
 </div>
 <p>Die Tabelle können Sie natürlich auch gleich wieder aufhübschen, für Ihren Bericht, s. <a href="#tbl-m1-params3" class="quarto-xref">Tabelle&nbsp;<span>13.7</span></a>.</p>
 <div class="cell">
-<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">hdi</span><span class="op">(</span><span class="va">m1</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">hdi</span><span class="op">(</span><span class="va">m1</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">Parameter</span>, <span class="va">CI_low</span>, <span class="va">CI_high</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="https://gt.rstudio.com/reference/gt.html">gt</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://gt.rstudio.com/reference/fmt_number.html">fmt_number</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/where.html">where</a></span><span class="op">(</span><span class="va">is.numeric</span><span class="op">)</span>, decimals <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="fu"><a href="https://gt.rstudio.com/reference/fmt_number.html">fmt_number</a></span><span class="op">(</span><span class="fu"><a href="https://tidyselect.r-lib.org/reference/where.html">where</a></span><span class="op">(</span><span class="va">is.numeric</span><span class="op">)</span>, decimals <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div id="tbl-m1-params3" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-m1-params3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Tabelle&nbsp;13.7: Parameter für das Modell m1. Das Intervall ist ein HDI.
@@ -3106,7 +3107,7 @@ Tabelle&nbsp;13.7: Parameter für das Modell m1. Das Intervall ist ein HDI.
   height: 0px !important;
 }
 </style>
-<table class="gt_table do-not-create-environment cell caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<table class="gt_table do-not-create-environment cell caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
 <thead><tr class="gt_col_headings header">
 <th id="Parameter" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Parameter</th>
 <th id="CI_low" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">CI_low</th>
@@ -3133,7 +3134,7 @@ Tabelle&nbsp;13.7: Parameter für das Modell m1. Das Intervall ist ein HDI.
 </div>
 <p>Ein ähnliches Ergebnis erzielt man mit dem Paket <code>gtsummary</code>, s. <a href="#tbl-m1-params4" class="quarto-xref">Tabelle&nbsp;<span>13.8</span></a>.</p>
 <div class="cell">
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://www.danieldsjoberg.com/gtsummary/reference/tbl_regression.html">tbl_regression</a></span><span class="op">(</span><span class="va">m1</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">tbl_regression</span><span class="op">(</span><span class="va">m1</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div id="tbl-m1-params4" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-m1-params4-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Tabelle&nbsp;13.8: Parameter für das Modell m1.
@@ -3588,7 +3589,7 @@ Tabelle&nbsp;13.8: Parameter für das Modell m1.
   height: 0px !important;
 }
 </style>
-<table class="gt_table do-not-create-environment cell caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<table class="gt_table do-not-create-environment cell caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
 <thead><tr class="gt_col_headings header">
 <th id="label" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col"><strong>Characteristic</strong></th>
 <th id="estimate" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col"><strong>Beta</strong></th>
@@ -3612,7 +3613,7 @@ Tabelle&nbsp;13.8: Parameter für das Modell m1.
 <p>Den Punktschätzer (<code>Median</code>) zum Unterschied für die Gruppen (Automatik vs.&nbsp;Schaltgetriebe) hat uns die Funktion <code>parameters()</code> auch geliefert. Der Unterschied zwischen den beiden Gruppen liegt laut Modell bei ca. 7.2 Meilen.</p>
 <p>Es bietet sich an, die Parameter-Schätzbereiche zu visualisieren. Das kann man z. B. so machen:</p>
 <div class="cell">
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">parameters</span><span class="op">(</span><span class="va">m1</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span>show_intercept <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">parameters</span><span class="op">(</span><span class="va">m1</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span>show_intercept <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="100-Statistiken-berichten_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
@@ -3625,17 +3626,17 @@ Tabelle&nbsp;13.8: Parameter für das Modell m1.
 <p>Mehr zur Analyse mit <code>rstanarm</code> findet sich z. B. <a href="http://mc-stan.org/rstanarm/articles/rstanarm.html">hier</a> oder bei <span class="citation" data-cites="gelman_regression_2021">Gelman et al. (<a href="130-references.html#ref-gelman_regression_2021" role="doc-biblioref">2021</a>)</span>.</p>
 <p>Übrigens kann man ein <code>hdi()</code> auch plotten, wenn man möchte:</p>
 <div class="cell">
-<div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="fu">hdi</span><span class="op">(</span><span class="va">m1</span><span class="op">)</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb14"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="fu">hdi</span><span class="op">(</span><span class="va">m1</span><span class="op">)</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Sieht auch ganz schick aus; im Hintergrund wird <a href="https://easystats.github.io/easystats/">easystats</a> zum Plotten verwendet. Praktischerweise ist es ein ggplot-Diagramm, man kann also mit bekannten (ggplot-)Methoden nachpolieren, z.B s. <a href="#fig-m1-hdi" class="quarto-xref">Abbildung&nbsp;<span>13.1</span></a>.</p>
 <div class="cell">
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="fu">hdi</span><span class="op">(</span><span class="va">m1</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="fu">hdi</span><span class="op">(</span><span class="va">m1</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>title <span class="op">=</span><span class="st">"Hier steht mein Titel"</span>,</span>
 <span>       y <span class="op">=</span> <span class="st">""</span>,</span>
 <span>       y <span class="op">=</span> <span class="st">""</span>,</span>
 <span>       x <span class="op">=</span> <span class="st">"Parameterwert"</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
-<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>axis.text.y <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span>  <span class="co"># keine Achsenlabels auf Y ("am" weg)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>axis.text.y <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_blank</a></span><span class="op">(</span><span class="op">)</span><span class="op">)</span>  <span class="co"># keine Achsenlabels auf Y ("am" weg)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div id="fig-m1-hdi" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-m1-hdi-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -3657,9 +3658,9 @@ Abbildung&nbsp;13.1: Die Postverteilung als Berg visualisiert, nicht als Seil.
 <p>Schauen Sie: Wie groß muss der Nutzen des Besuchens einer Vorlesung sein, damit Sie sie besuchen? Die Antwort der Frage hängt von mehreren Faktoren ab, und sie ist subjektiv in dem Sinne, dass die Antwort von persönlichen Präferenzen abhängt, die letztlich nicht objektiv zu begründen sind.</p>
 <p>So kann man in R ein ROPE berechnen (lassen):‚</p>
 <div class="cell">
-<div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://easystats.github.io/easystats/">easystats</a></span><span class="op">)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb16"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://easystats.github.io/easystats/">easystats</a></span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu">rope</span><span class="op">(</span><span class="va">m1</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="fu">rope</span><span class="op">(</span><span class="va">m1</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -3672,7 +3673,7 @@ Abbildung&nbsp;13.1: Die Postverteilung als Berg visualisiert, nicht als Seil.
 <p><em>Formulierungsvorschlag</em> &gt; Die Nullhypothese <span class="math inline">\(H^1_0\)</span> ist auszuschließen laut Modell m1, 0% ROPE. Der Effekt ist demnach in diesem Sinne signifikant.</p>
 <p>Das kann man sich auch plotten lassen:</p>
 <div class="cell">
-<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="fu">rope</span><span class="op">(</span><span class="va">m1</span><span class="op">)</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="fu">rope</span><span class="op">(</span><span class="va">m1</span><span class="op">)</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
 <figure class="figure"><p><img src="100-Statistiken-berichten_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
@@ -3708,8 +3709,8 @@ Abbildung&nbsp;13.1: Die Postverteilung als Berg visualisiert, nicht als Seil.
 <p>Vergleicht man Gruppen und ist z. B. die AV wenig anschaulich (etwa ein Summenscore), so bietet es sich, standardisierte Maße des Gruppenunterschieds anzugeben. Man nennt sie auch Maße der Effektstärke.</p>
 <p>Bei Gruppenvergleichen ist <em>Cohens d</em> ein bekanntes Maß. Man kann es sich so ausgeben lassen:</p>
 <div class="cell">
-<div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://easystats.github.io/easystats/">easystats</a></span><span class="op">)</span></span>
-<span><span class="fu">cohens_d</span><span class="op">(</span><span class="va">mpg</span> <span class="op">~</span> <span class="va">am</span>, data <span class="op">=</span> <span class="va">mtcars</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu">print_md</span><span class="op">(</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb18"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://easystats.github.io/easystats/">easystats</a></span><span class="op">)</span></span>
+<span><span class="fu">cohens_d</span><span class="op">(</span><span class="va">mpg</span> <span class="op">~</span> <span class="va">am</span>, data <span class="op">=</span> <span class="va">mtcars</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://easystats.github.io/insight/reference/display.html">print_md</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
 <thead><tr class="header">
@@ -3727,17 +3728,17 @@ Abbildung&nbsp;13.1: Die Postverteilung als Berg visualisiert, nicht als Seil.
 <p>Man gibt also die Regressionsformel und die Daten an. Zu beachten ist, dass die AV zweistufig sein muss, sonst ist Cohens <em>d</em> nicht definiert.</p>
 <p>Praktischerweise kann man sich die Effektstärke auch gleich interpretieren lassen:</p>
 <div class="cell">
-<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">interpret_cohens_d</span><span class="op">(</span><span class="op">-</span><span class="fl">1.48</span><span class="op">)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">interpret_cohens_d</span><span class="op">(</span><span class="op">-</span><span class="fl">1.48</span><span class="op">)</span></span>
 <span><span class="co">## [1] "large"</span></span>
-<span><span class="co">## (Rules: cohen1988)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">## (Rules: cohen1988)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Um <span class="math inline">\(R^2\)</span> in einem Bayes-Modell zu bekommen, bietet sich die Funktion <code><a href="https://mc-stan.org/rstantools/reference/bayes_R2.html">bayes_R2()</a></code> an:</p>
 <div class="cell">
-<div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">m1_R2</span> <span class="op">&lt;-</span> </span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb20"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">m1_R2</span> <span class="op">&lt;-</span> </span>
 <span>  <span class="fu"><a href="https://mc-stan.org/rstantools/reference/bayes_R2.html">bayes_R2</a></span><span class="op">(</span><span class="va">m1</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="https://tibble.tidyverse.org/reference/as_tibble.html">as_tibble</a></span><span class="op">(</span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu">hdi</span><span class="op">(</span><span class="va">m1_R2</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu">print_md</span><span class="op">(</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="fu">hdi</span><span class="op">(</span><span class="va">m1_R2</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://easystats.github.io/insight/reference/display.html">print_md</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <table class="caption-top table table-sm table-striped small">
 <caption>Highest Density Interval</caption>
@@ -3762,10 +3763,10 @@ Abbildung&nbsp;13.1: Die Postverteilung als Berg visualisiert, nicht als Seil.
 <p>Diagramme, die Sie mit <code>ggplot</code> erstellt haben, können Sie z. B. mit dem Befehl <a href="https://ggplot2.tidyverse.org/reference/ggsave.html"><code>ggsave</code></a> in eine Datei speichern (z. B. im Format PNG oder PDF).</p>
 <p>Interessant könnte für Sie auch das Paket <code>qwraps2</code> sein, das u.a. einen Formulierungsvorschlag erstellt, wie man Statistiken im Fließtext anführt. Betrachten wir ein Beispiel mit <code>mtcars</code>. Sagen wir, wir möchten den mittleren Spritverbrauch berichten.</p>
 <div class="cell">
-<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/dewittpe/qwraps2/">qwraps2</a></span><span class="op">)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/dewittpe/qwraps2/">qwraps2</a></span><span class="op">)</span></span>
 <span></span>
-<span><span class="fu"><a href="http://www.peteredewitt.com/qwraps2/reference/mean_sd.html">mean_sd</a></span><span class="op">(</span><span class="va">mtcars</span><span class="op">$</span><span class="va">mpg</span><span class="op">)</span></span>
-<span><span class="co">## [1] "20.09 $\\pm$ 6.03"</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="fu">mean_sd</span><span class="op">(</span><span class="va">mtcars</span><span class="op">$</span><span class="va">mpg</span><span class="op">)</span></span>
+<span><span class="co">## [1] "20.09 $\\pm$ 6.03"</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Das Zeichen <code>$\\pm$</code> steht für “Plus-Minus” ± (im Formelmodus). In Word sollten Sie es händisch durch den Glyphen (das Zeichen) “±” ersetzen.<a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a></p>
 </section><section id="r-paket-report" class="level3" data-number="13.6.3"><h3 data-number="13.6.3" class="anchored" data-anchor-id="r-paket-report">
@@ -3773,11 +3774,11 @@ Abbildung&nbsp;13.1: Die Postverteilung als Berg visualisiert, nicht als Seil.
 </h3>
 <p>Vielleicht ist das R-Paket <code>report</code> für Sie nützlich. Ich bin nicht ganz sicher, denn das Paket ist noch sehr neu und berichtet recht viel Informationen. Aber vielleicht wollen Sie es ja mal ausprobieren.</p>
 <div class="cell">
-<div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://easystats.github.io/easystats/">easystats</a></span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://easystats.github.io/easystats/">easystats</a></span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><code>report</code> lieft z. B. eine Beschreibung der Stichprobe:</p>
 <div class="cell">
-<div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">mtcars</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb23"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">mtcars</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="fl">1</span><span class="op">:</span><span class="fl">3</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span>  <span class="co"># hier nur die Variablen 1 bis 3, der Einfachheit halber</span></span>
 <span>  <span class="fu">report</span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="co">## The data contains 32 observations of the following 3 variables:</span></span>
@@ -3787,11 +3788,11 @@ Abbildung&nbsp;13.1: Die Postverteilung als Berg visualisiert, nicht als Seil.
 <span><span class="co">##   - cyl: n = 32, Mean = 6.19, SD = 1.79, Median = 6.00, MAD = 2.97, range: [4,</span></span>
 <span><span class="co">## 8], Skewness = -0.19, Kurtosis = -1.76, 0 missing</span></span>
 <span><span class="co">##   - disp: n = 32, Mean = 230.72, SD = 123.94, Median = 196.30, MAD = 140.48,</span></span>
-<span><span class="co">## range: [71.10, 472], Skewness = 0.42, Kurtosis = -1.07, 0 missing</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">## range: [71.10, 472], Skewness = 0.42, Kurtosis = -1.07, 0 missing</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Oder auch für (Bayes-)Regressionsmodelle:</p>
 <div class="cell">
-<div class="sourceCode" id="cb24"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">report</span><span class="op">(</span><span class="va">m1</span><span class="op">)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb24"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">report</span><span class="op">(</span><span class="va">m1</span><span class="op">)</span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## SAMPLING FOR MODEL 'continuous' NOW (CHAIN 1).</span></span>
 <span><span class="co">## Chain 1: </span></span>
@@ -3912,7 +3913,7 @@ Abbildung&nbsp;13.1: Die Postverteilung als Berg visualisiert, nicht als Seil.
 <span><span class="co">## large are |0.30| and |1.81| (corresponding respectively to 0.05 and 0.30 of the</span></span>
 <span><span class="co">## outcome's SD). Convergence and stability of the Bayesian sampling has been</span></span>
 <span><span class="co">## assessed using R-hat, which should be below 1.01 (Vehtari et al., 2019), and</span></span>
-<span><span class="co">## Effective Sample Size (ESS), which should be greater than 1000 (Burkner, 2017).</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="co">## Effective Sample Size (ESS), which should be greater than 1000 (Burkner, 2017).</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><code>report</code> berichtet Statistiken nach dem sog. SEXIT-Konzept <span class="citation" data-cites="makowski_indices_2019">Makowski et al. (<a href="130-references.html#ref-makowski_indices_2019" role="doc-biblioref">2019</a>)</span>. Wenn Ihnen einige Statistiken nicht geläufig sind, ignorieren Sie sich einfach oder lesen Sie sie nach.</p>
 </section></section><section id="reproduzierbarkeit" class="level2" data-number="13.7"><h2 data-number="13.7" class="anchored" data-anchor-id="reproduzierbarkeit">
@@ -3929,7 +3930,7 @@ Abbildung&nbsp;13.1: Die Postverteilung als Berg visualisiert, nicht als Seil.
 </ul>
 <p>Die Zufallszahlen in <code>stan_glm</code> können Sie z. B. so fixieren:</p>
 <div class="cell">
-<div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">m1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://mc-stan.org/rstanarm/reference/stan_glm.html">stan_glm</a></span><span class="op">(</span><span class="va">av</span> <span class="op">~</span> <span class="va">uv</span>, data <span class="op">=</span> <span class="va">meine_daten</span>, seed <span class="op">=</span> <span class="fl">42</span><span class="op">)</span></span></code><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb25"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">m1</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://mc-stan.org/rstanarm/reference/stan_glm.html">stan_glm</a></span><span class="op">(</span><span class="va">av</span> <span class="op">~</span> <span class="va">uv</span>, data <span class="op">=</span> <span class="va">meine_daten</span>, seed <span class="op">=</span> <span class="fl">42</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Die genaue Wert bei <code>seed</code> ist nicht entscheidend; aber ein <em>bestimmter</em> Seed-Wert wird immer die gleichen Zufallszahlen zielen und damit immer die gleichen Parameterwerte im Modell nach sich ziehen.</p>
 
@@ -4026,13 +4027,14 @@ Peters, J. H., &amp; Dörfler, T. (2019). <em>Planen, Durchführen und Auswerten
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
