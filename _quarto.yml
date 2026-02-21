@@ -115,7 +115,7 @@ format:
   html:
     toc: true
     toc-expand: 2
-    toc-title: "Inhalt"
+#    toc-title: "Inhalt"
     theme:
       light: lumen
       dark: darkly
