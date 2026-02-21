@@ -77,7 +77,7 @@ Also gut, Sie haben es so gewollt: Gehen Sie geradeaus weiter zur Statistik.
 
 
 
-### Über 7 Brücken musst du gehen: Die Schritte der Datenanalyse
+### Über sieben Brücken musst du gehen: Die sieben Schritte der Datenanalyse
 
 
 @fig-sieben-bruecken stellt die typischen Schritte ("Brücken") der Datenanalyse dar.
@@ -90,8 +90,8 @@ flowchart TD
   A[Einlesen und Aufbereiten] --> Z[Zusammenfassen]
   Z --> V[Visualisieren]
   V --> M[Modellieren]
-  M --> I[Interpretieren]
-  I --> K[Kritisieren]
+  M --> I[Inferieren]
+  I --> K[Diskutieren]
   K --> Ü[Amüsieren]
   Ü --> A
 ```
@@ -113,9 +113,11 @@ In etwas mehr Detail sieht der Fortgang Ihrer Datenanalyse so aus:
 
 3. *Modellieren*: Ah, hier kommt der Teil, in dem der Connaisseur seine Muskeln spielen lassen kann: Bayes-Inferenz, multiple Regression, Moderation, Mediation, Kausalanalyse... Ich weiß, Sie können Ihre Freude kaum noch zügeln, aber geduldigen Sie sich noch einen kleinen Augenblick.
 
-4. *Interpretieren*: So ein Modell bzw. die entsprechende Funktion in R spuckt einige Zahlen aus. Aber was sagt uns das jetzt? Das würden Sie auch gerne wissen? Prima! Finden wir es zusammen raus.
 
-5. *Kritisieren*: Jetzt müssen Sie stark sein. Keine Analyse ist perfekt. Keine Studie ist abschließend. Niemand hat bislang den goldenen Gral gefunden. Okay, aber bisher haben Sie sich auch noch nicht an der Sache versucht! Jedenfalls bricht niemanden ein Zacken aus der Krone, wenn man aufzeigt, wo noch Forschungslücken sind, auch nach der eigenen Studie. Oder sogar, welche Schwächen die eigene Studie bzw. Analyse hat und was man beim nächsten Mal noch besser machen könnte.
+4. *Inferieren*: Jetzt kommt die Inferenzstatistik ins Spiel (entweder in der Variante "Bayes" oder in der Variante "Frequentismus"). Ein Hauptzweck der Inferenzstatistik ist es, Schätzbereiche für die untersuchten Größen ("Parameter") anzugeben.
+
+4. *Diskutieren*: So ein Modell bzw. die entsprechende Funktion in R spuckt einige Zahlen aus. Aber was sagt uns das jetzt? Das würden Sie auch gerne wissen? Prima! Finden wir es zusammen raus: Diskutieren wir die Ergebnisse. Das beinhaltet auch, die Ergebnisse auf ihre Stichhaltigkeit hin abzuklopfen. Wie sicher kann man sich sein, dass die Ergebnisse der Analyse mit der Hypothese/Forschungsfrage bzw. mit der Realität konform sind? Jede Studie hat Schwächen.
+Niemand hat bislang den goldenen Gral gefunden. Okay, aber bisher haben Sie sich auch noch nicht an der Sache versucht! Jedenfalls bricht niemanden (auch nicht mir oder Ihnen) ein Zacken aus der Krone, wenn man aufzeigt, wo noch Forschungslücken sind, auch nach der eigenen Studie. Oder sogar, welche Schwächen die eigene Studie bzw. Analyse hat und was man beim nächsten Mal noch besser machen könnte.
 
 6. *Amüsieren*: So, irgendwann ist auch gut. Jetzt belohnen Sie sich mal für die ganze harte Arbeit des Studierens.
 
@@ -306,9 +308,11 @@ Interaktives Beispiel für Zusammenhangsdiagramme.
 
 ### Inferenzstatistik
 
-@fig-samples-for-inference veranschautlicht die Daaseinsberechtigung der Inferenzstatistik: 
-Eine einzelne Stichprobe schätzt den Mittelwert der Population (mu) ungenau (je kleiner die Stichprobe, desto ungenauer, ceteris paribus). 
-Daher brauchen wir eine Angabe, wie (un)genau unser Mittelwert wohl den "wahren" Mittelwert der Population (mu) schätzt. 
+@fig-samples-for-inference veranschaulicht die Daaseinsberechtigung der Inferenzstatistik: 
+Eine einzelne Stichprobe schätzt den Mittelwert der Population ($\mu$) ungenau (je kleiner die Stichprobe, 
+desto ungenauer, ceteris paribus). 
+Daher brauchen wir eine Angabe, wie (un)genau unser Mittelwert wohl den "wahren" Mittelwert 
+der Population ($\mu$) schätzt. 
 Genau das macht die Inferenzstatistik!
 
 
@@ -341,7 +345,8 @@ dass man einen Datensatz dabei so zusammenfasst,
 damit man das Wesentliche erkennt.
 Was ist das "Wesentliche"? Oft interessiert man sich für die Ursachen eines Phänomens. 
 Etwa: "Wie kommt es bloß, dass ich ohne zu lernen die Klausur so gut bestanden habe?"^[Das ist natürlich nur ein fiktives, komplett unrealistisches Beispiel, das auch unklaren Ursachen den Weg auf diese Seite gefunden hat.]
-Noch allgemeiner ist man dabei häufig am Zusammenhang von `X ` und `Y` interessiert, s. @fig-xy, die ein Sinnbild von statistischen Modellen widergibt.
+Noch allgemeiner ist man dabei häufig am Zusammenhang von `X ` und `Y` interessiert, s. @fig-xy, 
+die ein Sinnbild von statistischen Modellen widergibt.
 
 
 
@@ -371,8 +376,8 @@ oben: Sinnbild eines statistischen Modells; unten: Sinnbild eines statistischen 
 
 Man kann grob zwei Arten von Software-Programmen für Datenanalyse unterscheiden:
 
-1. *Skriptbasierte*: Man schreibt seine Befehle in einer Programmiersprache (z.B. R)
-2. *Klickbasierte*: Man klickt in einer Gui, um Befehle auszulösen (z.B. Jamovi)
+1. *Skriptbasierte*: Man schreibt seine Befehle in einer Programmiersprache (z.B. R oder Python)
+2. *Klickbasierte*: Man klickt in einer Gui, um Befehle auszulösen (z.B. Jamovi oder JASP)
 
 Die gängigen Beispiele für skriptbasierte Software für Datenanalyse sind R und Python.
 
