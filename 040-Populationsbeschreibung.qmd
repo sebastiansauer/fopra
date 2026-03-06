@@ -340,18 +340,6 @@ Vermutlich nicht, denn
 
 
 
-## Forschungsdesign
-
-
-Der Versuchsaufbau einer querschnittliche Studie mit Ziel der Populationsbeschreibung ist simpel:
-Sie messen pro Beobachtungseinheit alle relevanten Variablen.
-
-
-:::{#exm-design1}
-### Einkommen von Studentis
-Sie interessiert die Forschungsfrage, wie viel Geld Studentis im Monat als Einkommen zur Verfügung haben.
-Dazu befragen Sie $n=300$ Studentis. Um eine möglichst zufällige oder zumindest repräsentative Studie zu gewinnen, haben Sie eine Nachricht im Forum des Studiengangs gepostet: Wer bei Ihrer Befragung mitmacht, den laden Sie zur nächtsen Party ein. Außerdem verlosen Sie ein Abendessen mit Ihnen. Sicherlich wird der Andrang groß sein.$\square$
-:::
 
 
 ## Fallbeispiel: World Happiness Report
@@ -380,6 +368,16 @@ Man kann also argumentieren, dass die Rangfolge z.B. dieser drei Länder nicht s
 
 Da Studien mit Ziel der Populationsbeschreibung per Definition keine Treatment-Wirkungen untersuchen, sind die entsprechenden Studien nur auf Beobachtung (Informationsaufnahme) und nicht Intervention abgestellt.
 Beobachtungsstudien sind häufig einfacher strukturiert als Studien mit Treatment.
+Der Versuchsaufbau einer querschnittliche Studie mit Ziel der Populationsbeschreibung ist simpel:
+Sie messen pro Beobachtungseinheit alle relevanten Variablen.
+
+
+:::{#exm-design1}
+### Einkommen von Studentis
+Sie interessiert die Forschungsfrage, wie viel Geld Studentis im Monat als Einkommen zur Verfügung haben.
+Dazu befragen Sie $n=300$ Studentis. Um eine möglichst zufällige oder zumindest repräsentative Studie zu gewinnen, haben Sie eine Nachricht im Forum des Studiengangs gepostet: Wer bei Ihrer Befragung mitmacht, den laden Sie zur nächtsen Party ein. Außerdem verlosen Sie ein Abendessen mit Ihnen. Sicherlich wird der Andrang groß sein.$\square$
+:::
+
 
 
 :::{#def-forschungsdesign}
