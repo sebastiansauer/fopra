@@ -258,7 +258,11 @@ ggbetweenstats(
     ),
     color = "blue", 
     size = 1
-  )
+  ) +
+  labs(y = "fluide Intelligenz",
+       x = "Gruppe") +
+    scale_x_discrete(labels = c("0" = "Kontrollgruppe", 
+                              "1" = "Experimentalgruppe"))
 ```
 
 
@@ -301,12 +305,39 @@ ggboxplot(
     ),
     color = "blue", 
     size = 1
-  )
+  ) +
+  labs(caption = "Die Punkte stellen den Mittelwert pro Gruppe dar.") +
+    scale_x_discrete(labels = c("0" = "Kontrollgruppe", 
+                              "1" = "Experimentalgruppe")) 
+```
+
+
+### Mit `ggplot`
+
+
+```{r}
+#| label: fig-bringtnixtin-desk3
+#| echo: false
+#| fig-cap: "Fluide Intelligenz (y2) nach der Bringtnixtin-Intervention. g=0: Kontrollgruppe (Placebo), g=1: Experimentalgruppe (hohe Dosis).Die vertikale Linie zeigt die Stärke des Effekts (entspricht dem Unterschied in den Mittelwerten der Gruppen)"
+
+
+ggplot(data = d_bringtnixtin,
+       aes(x = factor(g), y = y2)) +
+  geom_violindot(fill_dots = "black") +
+  #geom_jitter2(width = 0.1, alpha = .7) +
+  stat_summary(fun = "mean", geom = "point", shape = 18, size = 7, color = "blue") +
+  stat_summary(aes(group = 1), geom = "line") +
+  scale_x_discrete(labels = c("0" = "Kontrollgruppe", 
+                              "1" = "Experimentalgruppe")) +
+  labs(x = "",
+       y = "fluide Intelligenz")
+
 ```
 
 ::::
 
-Sowohl das R-Paket `ggstatsplot` als auch das R-Paket `ggpubr` bieten ansprechende Datenvisualisierung.^[Beide bauen auf dem R-Paket `ggplot` auf, sind also eigentlich nur "Abkürzungen".]
+Sowohl das R-Paket `ggstatsplot` als auch das R-Paket `ggpubr` bieten ansprechende Datenvisualisierung.
+Beide bauen auf dem R-Paket `ggplot` auf, sind also eigentlich nur "Abkürzungen".
 
 :::{.callout-important}
 ### Der Gruppenunterschied ist der Effekt
