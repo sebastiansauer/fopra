@@ -100,7 +100,10 @@ div.csl-indent {
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-56eda4583107212d29f4466ddc7a5529.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/bootstrap/bootstrap-dark-e8fcd5ffe478d53ee79b2cefb23d4866.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-56eda4583107212d29f4466ddc7a5529.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap-56eda4583107212d29f4466ddc7a5529.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -3616,7 +3619,7 @@ Tabelle&nbsp;13.8: Parameter für das Modell m1.
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">parameters</span><span class="op">(</span><span class="va">m1</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span>show_intercept <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="100-Statistiken-berichten_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figure class="figure"><p><a href="100-Statistiken-berichten_files/figure-html/unnamed-chunk-14-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1"><img src="100-Statistiken-berichten_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
 </figure>
 </div>
 </div>
@@ -3640,7 +3643,7 @@ Tabelle&nbsp;13.8: Parameter für das Modell m1.
 <div class="cell-output-display">
 <div id="fig-m1-hdi" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-m1-hdi-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="100-Statistiken-berichten_files/figure-html/fig-m1-hdi-1.png" class="img-fluid figure-img" width="672">
+<a href="100-Statistiken-berichten_files/figure-html/fig-m1-hdi-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Abbildung&nbsp;13.1: Die Postverteilung als Berg visualisiert, nicht als Seil."><img src="100-Statistiken-berichten_files/figure-html/fig-m1-hdi-1.png" class="img-fluid figure-img" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-m1-hdi-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;13.1: Die Postverteilung als Berg visualisiert, nicht als Seil.
@@ -3676,7 +3679,7 @@ Abbildung&nbsp;13.1: Die Postverteilung als Berg visualisiert, nicht als Seil.
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="fu">rope</span><span class="op">(</span><span class="va">m1</span><span class="op">)</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="100-Statistiken-berichten_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<figure class="figure"><p><a href="100-Statistiken-berichten_files/figure-html/unnamed-chunk-18-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3"><img src="100-Statistiken-berichten_files/figure-html/unnamed-chunk-18-1.png" class="img-fluid figure-img" style="width:100.0%"></a></p>
 </figure>
 </div>
 </div>
@@ -4426,7 +4429,38 @@ Peters, J. H., &amp; Dörfler, T. (2019). <em>Planen, Durchführen und Auswerten
   </div>
 </nav>
 </div> <!-- /content -->
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sebastiansauer/fopra/blob/main/100-Statistiken-berichten.qmd" class="toc-action"><i class="bi bi-github"></i>Quellcode anzeigen</a></li><li><a href="https://github.com/sebastiansauer/fopra/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
-
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sebastiansauer/fopra/blob/main/100-Statistiken-berichten.qmd" class="toc-action"><i class="bi bi-github"></i>Quellcode anzeigen</a></li><li><a href="https://github.com/sebastiansauer/fopra/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div></div></footer></body></html>
+</body></html>

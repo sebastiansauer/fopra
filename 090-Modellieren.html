@@ -103,7 +103,10 @@ div.csl-indent {
 <link href="site_libs/bootstrap/bootstrap-56eda4583107212d29f4466ddc7a5529.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/downloadthis-1.9.1/downloadthis.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
+<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
+<link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
+<link href="site_libs/quarto-contrib/glightbox/lightbox.css" rel="stylesheet"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -673,7 +676,7 @@ Abbildung&nbsp;12.1: Ablaufdiagramm der Bringtnixtin-Studie
 <div class="cell-output-display">
 <div id="fig-bringtnixtin-dag" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-bringtnixtin-dag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="090-Modellieren_files/figure-html/fig-bringtnixtin-dag-1.png" class="img-fluid figure-img" style="width:100.0%">
+<a href="090-Modellieren_files/figure-html/fig-bringtnixtin-dag-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-1" title="Abbildung&nbsp;12.2: DAG für der Bringtnixtin-Studie"><img src="090-Modellieren_files/figure-html/fig-bringtnixtin-dag-1.png" class="img-fluid figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bringtnixtin-dag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;12.2: DAG für der Bringtnixtin-Studie
@@ -699,7 +702,7 @@ Hinweis
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">d_bringtnixtin_path</span> <span class="op">&lt;-</span> <span class="st">"https://raw.githubusercontent.com/sebastiansauer/fopra/main/data/d_bringtnixtin.csv"</span></span>
 <span><span class="va">d_bringtnixtin</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="va">d_bringtnixtin_path</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p><a href="#dnldts6426" onclick="fetch('data:text/csv;base64,aWQsZyx5MSx5MixkCjEsMCwxLjM3MDk1ODQ0NzE0NjY2ODUsMS40MTIxNTgxNjcxODY3MTkyLDAuMDQxMTk5NzIwMDQwMDUwNjgKMiwwLC0wLjU2NDY5ODE3MTM5NjA4ODcsLTAuNjM2OTA5NjMxMTA1ODIyLC0wLjA3MjIxMTQ1OTcwOTczMzMKMywwLDAuMzYzMTI4NDExMzM3MzM5MiwwLjUxNDc2MTA1ODQ3NzI0MjYsMC4xNTE2MzI2NDcxMzk5MDM0Mwo0LDAsMC42MzI4NjI2MDQ5NjEwNDA0LDAuNDg3NTIxNjM5NTQ1NzI1MzYsLTAuMTQ1MzQwOTY1NDE1MzE1MDUKNSwwLDAuNDA0MjY4MzIzMTQwOTk5MDMsMC4xMzA2MTIxMTQyNTcxNDAxLC0wLjI3MzY1NjIwODg4Mzg1ODk0CjYsMCwtMC4xMDYxMjQ1MTYwOTE0ODQwMywtMC4wMTk1NjA5MTA5MTM3NDA1OTgsMC4wODY1NjM2MDUxNzc3NDM0Mwo3LDAsMS41MTE1MjE5OTc0Mzg5MzksMS4zNDkyNDMzNjIyMDE2MDQ3LC0wLjE2MjI3ODYzNTIzNzMzNDIKOCwwLC0wLjA5NDY1OTAzODQxMzA5NzU2LDAuMTk0MTYxMjEzOTMxMTUzMDEsMC4yODg4MjAyNTIzNDQyNTA1Nwo5LDAsMi4wMTg0MjM3MTM4NzcwNDIsMS45MzIxMzQ0NzMzNTQzNzI2LC0wLjA4NjI4OTI0MDUyMjY2OTE3NQoxMCwwLC0wLjA2MjcxNDA5OTA1MjQyMSwwLjA2ODQxNTQ3NzYyODAyMDM3LDAuMTMxMTI5NTc2NjgwNDQxMzcKMTEsMCwxLjMwNDg2OTY1NDIyMzQ4NTIsMS4zNjkyNTQ3MDcyNjQyNzQ1LDAuMDY0Mzg1MDUzMDQwNzg5MjMKMTIsMCwyLjI4NjY0NTM5MjcwMTEwNywyLjEyOTg3NzYwNDUyNTAzMiwtMC4xNTY3Njc3ODgxNzYwNzQ5NQoxMywwLC0xLjM4ODg2MDcwMTExMjMzOTMsLTEuMDczNzE1MTk3MTUzOTQzOCwwLjMxNTE0NTUwMzk1ODM5NTQ3CjE0LDAsLTAuMjc4Nzg4NzY2ODE3MzcxMzYsLTAuMTUwMjA4OTA1NjczOTA4MDcsMC4xMjg1Nzk4NjExNDM0NjMzCjE1LDAsLTAuMTMzMzIxMzM2MzkzNjU4MDQsLTAuMTE1MzY5MjA3MDczNzM2OSwwLjAxNzk1MjEyOTMxOTkyMTEzCjE2LDAsMC42MzU5NTAzOTgwNzAwNzQ0LDAuNjkxMjYwNTQ3NTI4MzY3LDAuMDU1MzEwMTQ5NDU4MjkyNgoxNywwLC0wLjI4NDI1MjkyMTQxNjA3MjQsLTAuMTQ4Mzk1MTU4MjA1MDE4MjIsMC4xMzU4NTc3NjMyMTEwNTQxNwoxOCwwLC0yLjY1NjQ1NTQyMDkwNDc3NTcsLTIuNjM4NDg4ODQzNTg4OTU5MywwLjAxNzk2NjU3NzMxNTgxNjQxMgoxOSwwLC0yLjQ0MDQ2NjkyODU3NTUxOTQsLTMuMDM5MDg0OTQ1MjA2MTA2LC0wLjU5ODYxODAxNjYzMDU4NjgKMjAsMCwxLjMyMDExMzM0NTczMDE5MjEsMS4zNzcwODk5MzY0MzYzMjQsMC4wNTY5NzY1OTA3MDYxMzE5MjQKMjEsMSwtMC4zMDY2Mzg1OTQwNzg0NzQ1NSwtMC43MTM0MTg4NTU5NjAwMDMsLTAuNDA2NzgwMjYxODgxNTI4NDQKMjIsMSwtMS43ODEzMDg0MzM5OCwtMi4wNzc1OTU2NTQzNDAyMTE0LC0wLjI5NjI4NzIyMDM2MDIxMTQKMjMsMSwtMC4xNzE5MTczNTU3NTk2MjEzNiwtMC4zODg4ODU5NDM2MTk4NTMzNSwtMC4yMTY5Njg1ODc4NjAyMzIKMjQsMSwxLjIxNDY3NDY5OTE3MjU5ODcsMS4xNjEyODg3MzEyOTc4MDEsLTAuMDUzMzg1OTY3ODc0Nzk3NjYKMjUsMSwxLjg5NTE5MzQ2MTI2NDk2NTIsMS40MTY0MDE3MTYwMzY3MzksLTAuNDc4NzkxNzQ1MjI4MjI2MgoyNiwxLC0wLjQzMDQ2OTEzMTYwNjE5OTY1LC0wLjUwMzI5MzkzODUzMDcwNDMsLTAuMDcyODI0ODA2OTI0NTA0NgoyNywxLC0wLjI1NzI2OTM4Mjc2ODkyOTYzLC0wLjUyMzQzMzA5MjE1MTg0ODEsLTAuMjY2MTYzNzA5MzgyOTE4NDUKMjgsMSwtMS43NjMxNjMwODUxOTQ3ODAyLC0xLjg4ODc5NTE5ODc4ODU4OTEsLTAuMTI1NjMyMTEzNTkzODA5CjI5LDEsMC40NjAwOTczNTQ4MzEyNzE0LDAuMzEwOTA5NzM1MTU2MDY3NCwtMC4xNDkxODc2MTk2NzUyMDQKMzAsMSwtMC42Mzk5OTQ4NzU5NjAxMTkyLC0wLjgyOTE1MjU3NjcyMDA4LC0wLjE4OTE1NzcwMDc1OTk2MDg2CjMxLDEsMC40NTU0NTAxMjMyNDEyMTkzNiwtMC4wODY1MDY5OTc4MDU2ODQ5NywtMC41NDE5NTcxMjEwNDY5MDQzCjMyLDEsMC43MDQ4MzczMzcyMjg4MTkxLDAuMzUzNDY2NzI2NTczMzQ0NSwtMC4zNTEzNzA2MTA2NTU0NzQ2NQozMywxLDEuMDM1MTAzNTIxOTY5OTIyMywwLjgyNjQ3MzgyMTAzNjQ5NzcsLTAuMjA4NjI5NzAwOTMzNDI0NgozNCwxLC0wLjYwODkyNjM3NTQwNzIxMTEsLTEuMTMyOTY0MzgwMjk1MDEzMSwtMC41MjQwMzgwMDQ4ODc4MDIxCjM1LDEsMC41MDQ5NTUxMjMyOTc5NzAzLDAuMDYzMDU2MDI3MDQ5ODY1NjgsLTAuNDQxODk5MDk2MjQ4MTA0NjQKMzYsMSwtMS43MTcwMDg2NzkwNzMzNDI1LC0xLjkzNDE0MjcxMjg3MDMzOTIsLTAuMjE3MTM0MDMzNzk2OTk2NwozNywxLC0wLjc4NDQ1OTAwODM3OTQ5NiwtMC45NjQxNTY1OTQxNDU5MTExNSwtMC4xNzk2OTc1ODU3NjY0MTUxNQozOCwxLC0wLjg1MDkwNzU5NDE3NjUxODMsLTEuMDkxNDg3NDA5ODAxODE4MSwtMC4yNDA1Nzk4MTU2MjUyOTk4NAozOSwxLC0yLjQxNDIwNzY0OTk0NjYzMiwtMi45MjQ2OTYyNDI3NjE5MDEsLTAuNTEwNDg4NTkyODE1MjY5NAo0MCwxLDAuMDM2MTIyNjA2ODkyMjU1NjMsLTAuNTE3MTY2OTA2MTcwNjQ4OSwtMC41NTMyODk1MTMwNjI5MDQ1Cg==').then(res => res.blob()).then(blob => {
+<p><a href="#dnldts34264" onclick="fetch('data:text/csv;base64,aWQsZyx5MSx5MixkCjEsMCwxLjM3MDk1ODQ0NzE0NjY2ODUsMS40MTIxNTgxNjcxODY3MTkyLDAuMDQxMTk5NzIwMDQwMDUwNjgKMiwwLC0wLjU2NDY5ODE3MTM5NjA4ODcsLTAuNjM2OTA5NjMxMTA1ODIyLC0wLjA3MjIxMTQ1OTcwOTczMzMKMywwLDAuMzYzMTI4NDExMzM3MzM5MiwwLjUxNDc2MTA1ODQ3NzI0MjYsMC4xNTE2MzI2NDcxMzk5MDM0Mwo0LDAsMC42MzI4NjI2MDQ5NjEwNDA0LDAuNDg3NTIxNjM5NTQ1NzI1MzYsLTAuMTQ1MzQwOTY1NDE1MzE1MDUKNSwwLDAuNDA0MjY4MzIzMTQwOTk5MDMsMC4xMzA2MTIxMTQyNTcxNDAxLC0wLjI3MzY1NjIwODg4Mzg1ODk0CjYsMCwtMC4xMDYxMjQ1MTYwOTE0ODQwMywtMC4wMTk1NjA5MTA5MTM3NDA1OTgsMC4wODY1NjM2MDUxNzc3NDM0Mwo3LDAsMS41MTE1MjE5OTc0Mzg5MzksMS4zNDkyNDMzNjIyMDE2MDQ3LC0wLjE2MjI3ODYzNTIzNzMzNDIKOCwwLC0wLjA5NDY1OTAzODQxMzA5NzU2LDAuMTk0MTYxMjEzOTMxMTUzMDEsMC4yODg4MjAyNTIzNDQyNTA1Nwo5LDAsMi4wMTg0MjM3MTM4NzcwNDIsMS45MzIxMzQ0NzMzNTQzNzI2LC0wLjA4NjI4OTI0MDUyMjY2OTE3NQoxMCwwLC0wLjA2MjcxNDA5OTA1MjQyMSwwLjA2ODQxNTQ3NzYyODAyMDM3LDAuMTMxMTI5NTc2NjgwNDQxMzcKMTEsMCwxLjMwNDg2OTY1NDIyMzQ4NTIsMS4zNjkyNTQ3MDcyNjQyNzQ1LDAuMDY0Mzg1MDUzMDQwNzg5MjMKMTIsMCwyLjI4NjY0NTM5MjcwMTEwNywyLjEyOTg3NzYwNDUyNTAzMiwtMC4xNTY3Njc3ODgxNzYwNzQ5NQoxMywwLC0xLjM4ODg2MDcwMTExMjMzOTMsLTEuMDczNzE1MTk3MTUzOTQzOCwwLjMxNTE0NTUwMzk1ODM5NTQ3CjE0LDAsLTAuMjc4Nzg4NzY2ODE3MzcxMzYsLTAuMTUwMjA4OTA1NjczOTA4MDcsMC4xMjg1Nzk4NjExNDM0NjMzCjE1LDAsLTAuMTMzMzIxMzM2MzkzNjU4MDQsLTAuMTE1MzY5MjA3MDczNzM2OSwwLjAxNzk1MjEyOTMxOTkyMTEzCjE2LDAsMC42MzU5NTAzOTgwNzAwNzQ0LDAuNjkxMjYwNTQ3NTI4MzY3LDAuMDU1MzEwMTQ5NDU4MjkyNgoxNywwLC0wLjI4NDI1MjkyMTQxNjA3MjQsLTAuMTQ4Mzk1MTU4MjA1MDE4MjIsMC4xMzU4NTc3NjMyMTEwNTQxNwoxOCwwLC0yLjY1NjQ1NTQyMDkwNDc3NTcsLTIuNjM4NDg4ODQzNTg4OTU5MywwLjAxNzk2NjU3NzMxNTgxNjQxMgoxOSwwLC0yLjQ0MDQ2NjkyODU3NTUxOTQsLTMuMDM5MDg0OTQ1MjA2MTA2LC0wLjU5ODYxODAxNjYzMDU4NjgKMjAsMCwxLjMyMDExMzM0NTczMDE5MjEsMS4zNzcwODk5MzY0MzYzMjQsMC4wNTY5NzY1OTA3MDYxMzE5MjQKMjEsMSwtMC4zMDY2Mzg1OTQwNzg0NzQ1NSwtMC43MTM0MTg4NTU5NjAwMDMsLTAuNDA2NzgwMjYxODgxNTI4NDQKMjIsMSwtMS43ODEzMDg0MzM5OCwtMi4wNzc1OTU2NTQzNDAyMTE0LC0wLjI5NjI4NzIyMDM2MDIxMTQKMjMsMSwtMC4xNzE5MTczNTU3NTk2MjEzNiwtMC4zODg4ODU5NDM2MTk4NTMzNSwtMC4yMTY5Njg1ODc4NjAyMzIKMjQsMSwxLjIxNDY3NDY5OTE3MjU5ODcsMS4xNjEyODg3MzEyOTc4MDEsLTAuMDUzMzg1OTY3ODc0Nzk3NjYKMjUsMSwxLjg5NTE5MzQ2MTI2NDk2NTIsMS40MTY0MDE3MTYwMzY3MzksLTAuNDc4NzkxNzQ1MjI4MjI2MgoyNiwxLC0wLjQzMDQ2OTEzMTYwNjE5OTY1LC0wLjUwMzI5MzkzODUzMDcwNDMsLTAuMDcyODI0ODA2OTI0NTA0NgoyNywxLC0wLjI1NzI2OTM4Mjc2ODkyOTYzLC0wLjUyMzQzMzA5MjE1MTg0ODEsLTAuMjY2MTYzNzA5MzgyOTE4NDUKMjgsMSwtMS43NjMxNjMwODUxOTQ3ODAyLC0xLjg4ODc5NTE5ODc4ODU4OTEsLTAuMTI1NjMyMTEzNTkzODA5CjI5LDEsMC40NjAwOTczNTQ4MzEyNzE0LDAuMzEwOTA5NzM1MTU2MDY3NCwtMC4xNDkxODc2MTk2NzUyMDQKMzAsMSwtMC42Mzk5OTQ4NzU5NjAxMTkyLC0wLjgyOTE1MjU3NjcyMDA4LC0wLjE4OTE1NzcwMDc1OTk2MDg2CjMxLDEsMC40NTU0NTAxMjMyNDEyMTkzNiwtMC4wODY1MDY5OTc4MDU2ODQ5NywtMC41NDE5NTcxMjEwNDY5MDQzCjMyLDEsMC43MDQ4MzczMzcyMjg4MTkxLDAuMzUzNDY2NzI2NTczMzQ0NSwtMC4zNTEzNzA2MTA2NTU0NzQ2NQozMywxLDEuMDM1MTAzNTIxOTY5OTIyMywwLjgyNjQ3MzgyMTAzNjQ5NzcsLTAuMjA4NjI5NzAwOTMzNDI0NgozNCwxLC0wLjYwODkyNjM3NTQwNzIxMTEsLTEuMTMyOTY0MzgwMjk1MDEzMSwtMC41MjQwMzgwMDQ4ODc4MDIxCjM1LDEsMC41MDQ5NTUxMjMyOTc5NzAzLDAuMDYzMDU2MDI3MDQ5ODY1NjgsLTAuNDQxODk5MDk2MjQ4MTA0NjQKMzYsMSwtMS43MTcwMDg2NzkwNzMzNDI1LC0xLjkzNDE0MjcxMjg3MDMzOTIsLTAuMjE3MTM0MDMzNzk2OTk2NwozNywxLC0wLjc4NDQ1OTAwODM3OTQ5NiwtMC45NjQxNTY1OTQxNDU5MTExNSwtMC4xNzk2OTc1ODU3NjY0MTUxNQozOCwxLC0wLjg1MDkwNzU5NDE3NjUxODMsLTEuMDkxNDg3NDA5ODAxODE4MSwtMC4yNDA1Nzk4MTU2MjUyOTk4NAozOSwxLC0yLjQxNDIwNzY0OTk0NjYzMiwtMi45MjQ2OTYyNDI3NjE5MDEsLTAuNTEwNDg4NTkyODE1MjY5NAo0MCwxLDAuMDM2MTIyNjA2ODkyMjU1NjMsLTAuNTE3MTY2OTA2MTcwNjQ4OSwtMC41NTMyODk1MTMwNjI5MDQ1Cg==').then(res => res.blob()).then(blob => {
       const downloadURL = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       document.body.appendChild(a);
@@ -707,7 +710,7 @@ Hinweis
       a.download = 'bringtnixtin.csv.csv'; a.click();
       window.URL.revokeObjectURL(downloadURL);
       document.body.removeChild(a);
-        });"><button class="btn btn-default downloadthis  " id="dnldts6426"><i class="bi bi-download"></i> Download </button></a></p>
+        });"><button class="btn btn-default downloadthis  " id="dnldts34264"><i class="bi bi-download"></i> Download </button></a></p>
 <p>Die Autoren der Studie geben an, dass die Daten in <em>z</em>-Einheiten skaliert sind.</p>
 </section><section id="deskriptive-analyse" class="level3" data-number="12.2.2"><h3 data-number="12.2.2" class="anchored" data-anchor-id="deskriptive-analyse">
 <span class="header-section-number">12.2.2</span> Deskriptive Analyse</h3>
@@ -755,7 +758,7 @@ Tabelle&nbsp;12.1: Mittlere fluide Intelligenz nach der Bringtnixtin-Interventio
 <div class="cell-output-display">
 <div id="fig-bringtnixtin-desk1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-bringtnixtin-desk1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="090-Modellieren_files/figure-html/fig-bringtnixtin-desk1-1.png" class="img-fluid figure-img" width="672">
+<a href="090-Modellieren_files/figure-html/fig-bringtnixtin-desk1-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-2" title="Abbildung&nbsp;12.3: Fluide Intelligenz (y2) nach der Bringtnixtin-Intervention. g=0: Kontrollgruppe (Placebo), g=1: Experimentalgruppe (hohe Dosis). Die vertikale Linie zeigt die Stärke des Effekts (entspricht dem Unterschied in den Mittelwerten der Gruppen)"><img src="090-Modellieren_files/figure-html/fig-bringtnixtin-desk1-1.png" class="img-fluid figure-img" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bringtnixtin-desk1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;12.3: Fluide Intelligenz (y2) nach der Bringtnixtin-Intervention. g=0: Kontrollgruppe (Placebo), g=1: Experimentalgruppe (hohe Dosis). Die vertikale Linie zeigt die Stärke des Effekts (entspricht dem Unterschied in den Mittelwerten der Gruppen)
@@ -777,7 +780,7 @@ Abbildung&nbsp;12.3: Fluide Intelligenz (y2) nach der Bringtnixtin-Intervention.
 <div class="cell-output-display">
 <div id="fig-bringtnixtin-desk2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-bringtnixtin-desk2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="090-Modellieren_files/figure-html/fig-bringtnixtin-desk2-1.png" class="img-fluid figure-img" width="672">
+<a href="090-Modellieren_files/figure-html/fig-bringtnixtin-desk2-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-3" title="Abbildung&nbsp;12.4: Fluide Intelligenz (y2) nach der Bringtnixtin-Intervention. g=0: Kontrollgruppe (Placebo), g=1: Experimentalgruppe (hohe Dosis).Die vertikale Linie zeigt die Stärke des Effekts (entspricht dem Unterschied in den Mittelwerten der Gruppen)"><img src="090-Modellieren_files/figure-html/fig-bringtnixtin-desk2-1.png" class="img-fluid figure-img" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bringtnixtin-desk2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;12.4: Fluide Intelligenz (y2) nach der Bringtnixtin-Intervention. g=0: Kontrollgruppe (Placebo), g=1: Experimentalgruppe (hohe Dosis).Die vertikale Linie zeigt die Stärke des Effekts (entspricht dem Unterschied in den Mittelwerten der Gruppen)
@@ -791,7 +794,7 @@ Abbildung&nbsp;12.4: Fluide Intelligenz (y2) nach der Bringtnixtin-Intervention.
 <div class="cell-output-display">
 <div id="fig-bringtnixtin-desk3" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-bringtnixtin-desk3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="090-Modellieren_files/figure-html/fig-bringtnixtin-desk3-1.png" class="img-fluid figure-img" width="672">
+<a href="090-Modellieren_files/figure-html/fig-bringtnixtin-desk3-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-4" title="Abbildung&nbsp;12.5: Fluide Intelligenz (y2) nach der Bringtnixtin-Intervention. g=0: Kontrollgruppe (Placebo), g=1: Experimentalgruppe (hohe Dosis).Die vertikale Linie zeigt die Stärke des Effekts (entspricht dem Unterschied in den Mittelwerten der Gruppen)"><img src="090-Modellieren_files/figure-html/fig-bringtnixtin-desk3-1.png" class="img-fluid figure-img" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bringtnixtin-desk3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;12.5: Fluide Intelligenz (y2) nach der Bringtnixtin-Intervention. g=0: Kontrollgruppe (Placebo), g=1: Experimentalgruppe (hohe Dosis).Die vertikale Linie zeigt die Stärke des Effekts (entspricht dem Unterschied in den Mittelwerten der Gruppen)
@@ -882,7 +885,7 @@ Hinweis
 <div class="cell-output-display">
 <div id="fig-m1-params" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-m1-params-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="090-Modellieren_files/figure-html/fig-m1-params-1.png" class="img-fluid figure-img" width="672">
+<a href="090-Modellieren_files/figure-html/fig-m1-params-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-5" title="Abbildung&nbsp;12.6: Parameter des Modells m_bringtnixtin (95%-ETI); der ROPE ist als vertikaler blauer Balken markiert"><img src="090-Modellieren_files/figure-html/fig-m1-params-1.png" class="img-fluid figure-img" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-m1-params-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;12.6: Parameter des Modells <code>m_bringtnixtin (95%-ETI)</code>; der ROPE ist als vertikaler blauer Balken markiert
@@ -972,7 +975,7 @@ Tabelle&nbsp;12.3: ROPE für Modell m_bringtnixtin
 <div class="cell-output-display">
 <div id="fig-m1-rope" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-m1-rope-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="090-Modellieren_files/figure-html/fig-m1-rope-1.png" class="img-fluid figure-img" width="672">
+<a href="090-Modellieren_files/figure-html/fig-m1-rope-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-6" title="Abbildung&nbsp;12.7: ROPE für Modell m_bringtnixtin"><img src="090-Modellieren_files/figure-html/fig-m1-rope-1.png" class="img-fluid figure-img" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-m1-rope-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;12.7: ROPE für Modell <code>m_bringtnixtin</code>
@@ -1112,7 +1115,7 @@ Hinweis
 <div class="cell-output-display">
 <div id="fig-mpg-rope" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-mpg-rope-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="090-Modellieren_files/figure-html/fig-mpg-rope-1.png" class="img-fluid figure-img" width="672">
+<a href="090-Modellieren_files/figure-html/fig-mpg-rope-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-7" title="Abbildung&nbsp;12.8: ROPE (blauer Balken) und 95%-KI (roter Bereich) überlappen sich nicht: Die ROPE-Hypothese wird verworfen."><img src="090-Modellieren_files/figure-html/fig-mpg-rope-1.png" class="img-fluid figure-img" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-mpg-rope-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;12.8: ROPE (blauer Balken) und 95%-KI (roter Bereich) überlappen sich nicht: Die ROPE-Hypothese wird verworfen.
@@ -1185,7 +1188,7 @@ Abbildung&nbsp;12.9: Ablaufdiagramm der Bringtnixtin-Studie
 <div class="cell-output-display">
 <div id="fig-bringtnixtin-dag2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-bringtnixtin-dag2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="090-Modellieren_files/figure-html/fig-bringtnixtin-dag2-1.png" class="img-fluid figure-img" style="width:100.0%">
+<a href="090-Modellieren_files/figure-html/fig-bringtnixtin-dag2-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-8" title="Abbildung&nbsp;12.10: DAG für der Bringtnixtin-Studie"><img src="090-Modellieren_files/figure-html/fig-bringtnixtin-dag2-1.png" class="img-fluid figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bringtnixtin-dag2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;12.10: DAG für der Bringtnixtin-Studie
@@ -1306,7 +1309,7 @@ Abbildung&nbsp;12.10: DAG für der Bringtnixtin-Studie
 <div class="cell-output-display">
 <div id="fig-bringtnixtin-within-desk" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-bringtnixtin-within-desk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="090-Modellieren_files/figure-html/fig-bringtnixtin-within-desk-1.png" class="img-fluid figure-img" width="672">
+<a href="090-Modellieren_files/figure-html/fig-bringtnixtin-within-desk-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-9" title="Abbildung&nbsp;12.11: Veränderung der fluiden Intelligenz (d) in Abhängigkeit der Gruppe; g=0: Kontrollgruppe (Placebo), g=1: Experimentalgruppe (hohe Dosis)"><img src="090-Modellieren_files/figure-html/fig-bringtnixtin-within-desk-1.png" class="img-fluid figure-img" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bringtnixtin-within-desk-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;12.11: Veränderung der fluiden Intelligenz (d) in Abhängigkeit der Gruppe; g=0: Kontrollgruppe (Placebo), g=1: Experimentalgruppe (hohe Dosis)
@@ -1378,7 +1381,7 @@ Tabelle&nbsp;12.4: Parameter von <code>m_bringtnixtin2</code>
 <div class="cell-output-display">
 <div id="fig-bringtnixtin2-params" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-bringtnixtin2-params-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="090-Modellieren_files/figure-html/fig-bringtnixtin2-params-1.png" class="img-fluid figure-img" width="672">
+<a href="090-Modellieren_files/figure-html/fig-bringtnixtin2-params-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-10" title="Abbildung&nbsp;12.12: Parameterwerte von m_bringtnixtin2 (Intercept ist nicht dargestellt), 95%-ETI; die Null ist nicht enthalten, der Mittelwert ist negativ. ROPE ist als blaues Balken eingezeichnet. Wir können die exakte und die praktische Nullhypothese ausschließen."><img src="090-Modellieren_files/figure-html/fig-bringtnixtin2-params-1.png" class="img-fluid figure-img" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bringtnixtin2-params-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;12.12: Parameterwerte von m_bringtnixtin2 (Intercept ist nicht dargestellt), 95%-ETI; die Null ist nicht enthalten, der Mittelwert ist negativ. ROPE ist als blaues Balken eingezeichnet. Wir können die exakte und die praktische Nullhypothese ausschließen.
@@ -1404,7 +1407,7 @@ Abbildung&nbsp;12.12: Parameterwerte von m_bringtnixtin2 (Intercept ist nicht da
 <div class="cell-output-display">
 <div id="fig-rope-m_bringtnixtin2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-rope-m_bringtnixtin2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="090-Modellieren_files/figure-html/fig-rope-m_bringtnixtin2-1.png" class="img-fluid figure-img" width="672">
+<a href="090-Modellieren_files/figure-html/fig-rope-m_bringtnixtin2-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-11" title="Abbildung&nbsp;12.13: 95%-HDI und ROPE überlappt nicht: Wir verwerfen die ROPE Hypothese"><img src="090-Modellieren_files/figure-html/fig-rope-m_bringtnixtin2-1.png" class="img-fluid figure-img" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-rope-m_bringtnixtin2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;12.13: 95%-HDI und ROPE überlappt nicht: Wir verwerfen die ROPE Hypothese
@@ -1457,7 +1460,7 @@ Abbildung&nbsp;12.14: Ablauf der Studie zur Behaltensleistung y2 in Abhängigkei
 <div class="cell-output-display">
 <div id="fig-diagrammarten-dag" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-diagrammarten-dag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="090-Modellieren_files/figure-html/fig-diagrammarten-dag-1.png" class="img-fluid figure-img" style="width:100.0%">
+<a href="090-Modellieren_files/figure-html/fig-diagrammarten-dag-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-12" title="Abbildung&nbsp;12.15: DAG für die Studie zur Behaltensleistung y2 in Abhängigkeit des Visualiserungstyp V"><img src="090-Modellieren_files/figure-html/fig-diagrammarten-dag-1.png" class="img-fluid figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-diagrammarten-dag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;12.15: DAG für die Studie zur Behaltensleistung y2 in Abhängigkeit des Visualiserungstyp V
@@ -1482,7 +1485,7 @@ Abbildung&nbsp;12.15: DAG für die Studie zur Behaltensleistung y2 in Abhängigk
 </div>
 </div>
 </div>
-<p><a href="#dnldts18367" onclick="fetch('data:text/csv;base64,aWQseTEseTIseTMsZwoxLDcsOCw5LEEKMiw3LDcsMTAsQQozLDQsOSw5LEEKNCw3LDQsOSxBCjUsNiw3LDgsQQo2LDUsNCw5LEEKNyw2LDUsMTAsQQo4LDMsNywxMCxBCjksNiw0LDEwLEEKMTAsNiw3LDEwLEEKMTEsNSw4LDksQQoxMiw2LDgsMTAsQQoxMyw3LDcsMTAsQQoxNCw0LDYsNyxBCjE1LDUsOSw4LEEKMTYsNyw2LDksQQoxNyw4LDYsMTAsQQoxOCwzLDgsOSxBCjE5LDUsOCw4LEEKMjAsNSw3LDksQQoyMSw3LDYsOSxCCjIyLDMsNCwxMCxCCjIzLDgsNiwxMCxCCjI0LDgsNyw5LEIKMjUsMyw2LDcsQgoyNiw1LDgsNyxCCjI3LDUsOCw4LEIKMjgsNyw2LDksQgoyOSw1LDYsOSxCCjMwLDcsOCwxMCxCCjMxLDYsOSw5LEIKMzIsNiw5LDgsQgozMyw1LDgsOCxCCjM0LDYsNyw5LEIKMzUsMSw4LDksQgozNiw3LDYsOSxCCjM3LDEsMTAsMTAsQgozOCw0LDgsOSxCCjM5LDcsNyw5LEIKNDAsNSwxMCw4LEIK').then(res => res.blob()).then(blob => {
+<p><a href="#dnldts62722" onclick="fetch('data:text/csv;base64,aWQseTEseTIseTMsZwoxLDcsOCw5LEEKMiw3LDcsMTAsQQozLDQsOSw5LEEKNCw3LDQsOSxBCjUsNiw3LDgsQQo2LDUsNCw5LEEKNyw2LDUsMTAsQQo4LDMsNywxMCxBCjksNiw0LDEwLEEKMTAsNiw3LDEwLEEKMTEsNSw4LDksQQoxMiw2LDgsMTAsQQoxMyw3LDcsMTAsQQoxNCw0LDYsNyxBCjE1LDUsOSw4LEEKMTYsNyw2LDksQQoxNyw4LDYsMTAsQQoxOCwzLDgsOSxBCjE5LDUsOCw4LEEKMjAsNSw3LDksQQoyMSw3LDYsOSxCCjIyLDMsNCwxMCxCCjIzLDgsNiwxMCxCCjI0LDgsNyw5LEIKMjUsMyw2LDcsQgoyNiw1LDgsNyxCCjI3LDUsOCw4LEIKMjgsNyw2LDksQgoyOSw1LDYsOSxCCjMwLDcsOCwxMCxCCjMxLDYsOSw5LEIKMzIsNiw5LDgsQgozMyw1LDgsOCxCCjM0LDYsNyw5LEIKMzUsMSw4LDksQgozNiw3LDYsOSxCCjM3LDEsMTAsMTAsQgozOCw0LDgsOSxCCjM5LDcsNyw5LEIKNDAsNSwxMCw4LEIK').then(res => res.blob()).then(blob => {
       const downloadURL = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       document.body.appendChild(a);
@@ -1490,7 +1493,7 @@ Abbildung&nbsp;12.15: DAG für die Studie zur Behaltensleistung y2 in Abhängigk
       a.download = 'withindesign.csv.csv'; a.click();
       window.URL.revokeObjectURL(downloadURL);
       document.body.removeChild(a);
-        });"><button class="btn btn-default downloadthis  " id="dnldts18367"><i class="bi bi-download"></i> Download </button></a></p>
+        });"><button class="btn btn-default downloadthis  " id="dnldts62722"><i class="bi bi-download"></i> Download </button></a></p>
 <p>Wir berechnen <code>d</code>, was die zentrale Variable der Forschungsfrage ist.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">d_within</span> <span class="op">&lt;-</span></span>
@@ -1515,7 +1518,7 @@ Abbildung&nbsp;12.15: DAG für die Studie zur Behaltensleistung y2 in Abhängigk
 <div class="cell-output-display">
 <div id="fig-d1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-d1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="090-Modellieren_files/figure-html/fig-d1-1.png" class="img-fluid figure-img" width="672">
+<a href="090-Modellieren_files/figure-html/fig-d1-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-13" title="Abbildung&nbsp;12.16: Die Verteilung von d: Die Behaltensleistung ist im Mittel besser für animierte Diagramme (in diesen Daten)"><img src="090-Modellieren_files/figure-html/fig-d1-1.png" class="img-fluid figure-img" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-d1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;12.16: Die Verteilung von d: Die Behaltensleistung ist im Mittel besser für animierte Diagramme (in diesen Daten)
@@ -1603,7 +1606,7 @@ Tabelle&nbsp;12.5: Statistiken für <code>d</code>
 <div class="cell-output-display">
 <div id="fig-d2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-d2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="090-Modellieren_files/figure-html/fig-d2-1.png" class="img-fluid figure-img" width="672">
+<a href="090-Modellieren_files/figure-html/fig-d2-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-14" title="Abbildung&nbsp;12.17: Der Unterschied in der Behaltensleistung pro Versuchsperson; im Durchschnitt ist der Wert bei y2 höher als bei y1"><img src="090-Modellieren_files/figure-html/fig-d2-1.png" class="img-fluid figure-img" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-d2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;12.17: Der Unterschied in der Behaltensleistung pro Versuchsperson; im Durchschnitt ist der Wert bei y2 höher als bei y1
@@ -1665,7 +1668,7 @@ Tabelle&nbsp;12.6: Modellparameter von m_within
 <div class="cell-output-display">
 <div id="fig-m-within-params" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-m-within-params-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="090-Modellieren_files/figure-html/fig-m-within-params-1.png" class="img-fluid figure-img" width="672">
+<a href="090-Modellieren_files/figure-html/fig-m-within-params-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-15" title="Abbildung&nbsp;12.18: 95%-CI für d (Achsenabschnitt mit Modell m_within)"><img src="090-Modellieren_files/figure-html/fig-m-within-params-1.png" class="img-fluid figure-img" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-m-within-params-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;12.18: 95%-CI für d (Achsenabschnitt mit Modell m_within)
@@ -1733,7 +1736,7 @@ Abbildung&nbsp;12.19: Ablaufdiagramm für die Studie mit der Modellgleichung mit
 <div class="cell-output-display">
 <div id="fig-within2-dag" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-within2-dag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="090-Modellieren_files/figure-html/fig-within2-dag-1.png" class="img-fluid figure-img" style="width:100.0%">
+<a href="090-Modellieren_files/figure-html/fig-within2-dag-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-16" title="Abbildung&nbsp;12.20: DAG für die Studie mit der Modellgleichung mit einem Within- und einem Between-Faktor. Es wird kein Effekt für g erwartet (daher kein Pfeil von g auf y), wohl aber ein Effekt für V"><img src="090-Modellieren_files/figure-html/fig-within2-dag-1.png" class="img-fluid figure-img" style="width:100.0%"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-within2-dag-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;12.20: DAG für die Studie mit der Modellgleichung mit einem Within- und einem Between-Faktor. Es wird kein Effekt für g erwartet (daher kein Pfeil von g auf y), wohl aber ein Effekt für V
@@ -1784,7 +1787,7 @@ Abbildung&nbsp;12.20: DAG für die Studie mit der Modellgleichung mit einem With
 <div class="cell-output-display">
 <div id="fig-d-within2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-d-within2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="090-Modellieren_files/figure-html/fig-d-within2-1.png" class="img-fluid figure-img" width="672">
+<a href="090-Modellieren_files/figure-html/fig-d-within2-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-17" title="Abbildung&nbsp;12.21: Der Unterschied der Behaltensleistung (d) in Abhängigkeit von der Reihenfolge der Darbietung"><img src="090-Modellieren_files/figure-html/fig-d-within2-1.png" class="img-fluid figure-img" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-d-within2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;12.21: Der Unterschied der Behaltensleistung (d) in Abhängigkeit von der Reihenfolge der Darbietung
@@ -1854,7 +1857,7 @@ Tabelle&nbsp;12.7: Modellparameter von m_within2
 <div class="cell">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="090-Modellieren_files/figure-html/p_m_within2-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><a href="090-Modellieren_files/figure-html/p_m_within2-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-18" title="Für beide Kennwerte zeigt sich, dass die Null im Schätzbereich enthalten ist. Die Null Hypothese kann also jeweils nicht ausgeschlossen werden. Für H2 wäre es interessant, ob die Nullhypothese bestätigt werden kann; die Ergebnisse sprechen aber dagegen. Insgesamt ist die Befundlage uneindeutig."><img src="090-Modellieren_files/figure-html/p_m_within2-1.png" class="img-fluid figure-img" width="672" alt="Für beide Kennwerte zeigt sich, dass die Null im Schätzbereich enthalten ist. Die Null Hypothese kann also jeweils nicht ausgeschlossen werden. Für H2 wäre es interessant, ob die Nullhypothese bestätigt werden kann; die Ergebnisse sprechen aber dagegen. Insgesamt ist die Befundlage uneindeutig."></a></p>
 <figcaption>Für beide Kennwerte zeigt sich, dass die Null im Schätzbereich enthalten ist. Die Null Hypothese kann also jeweils nicht ausgeschlossen werden. Für H2 wäre es interessant, ob die Nullhypothese bestätigt werden kann; die Ergebnisse sprechen aber dagegen. Insgesamt ist die Befundlage uneindeutig.</figcaption></figure>
 </div>
 </div>
@@ -2044,7 +2047,7 @@ Abbildung&nbsp;12.24: Mediationsmodell von Jobtraining über Depressivität
 <span>              text <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="090-Modellieren_files/figure-html/unnamed-chunk-36-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><a href="090-Modellieren_files/figure-html/unnamed-chunk-36-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img src="090-Modellieren_files/figure-html/unnamed-chunk-36-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -2078,7 +2081,7 @@ Abbildung&nbsp;12.24: Mediationsmodell von Jobtraining über Depressivität
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/bmlm/man/mlm_pars_plot.html">mlm_pars_plot</a></span><span class="op">(</span><span class="va">med_depress_mlm</span>, pars <span class="op">=</span> <span class="st">"me"</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="090-Modellieren_files/figure-html/unnamed-chunk-38-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><a href="090-Modellieren_files/figure-html/unnamed-chunk-38-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img src="090-Modellieren_files/figure-html/unnamed-chunk-38-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -2250,7 +2253,7 @@ Abbildung&nbsp;12.24: Mediationsmodell von Jobtraining über Depressivität
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb48"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">hdi</span><span class="op">(</span><span class="va">post</span><span class="op">$</span><span class="va">indirect</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><img src="090-Modellieren_files/figure-html/unnamed-chunk-44-1.png" class="img-fluid figure-img" width="672"></p>
+<figure class="figure"><p><a href="090-Modellieren_files/figure-html/unnamed-chunk-44-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img src="090-Modellieren_files/figure-html/unnamed-chunk-44-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -2321,7 +2324,7 @@ Abbildung&nbsp;12.24: Mediationsmodell von Jobtraining über Depressivität
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-within-y3" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div id="fig-within-y3-1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-subfloat-fig figure"><div aria-describedby="fig-within-y3-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="090-Modellieren_files/figure-html/fig-within-y3-1.png" class="img-fluid figure-img" data-ref-parent="fig-within-y3" width="672">
+<a href="090-Modellieren_files/figure-html/fig-within-y3-1.png" class="lightbox" data-gallery="fig-within-y3" title="Abbildung&nbsp;12.25&nbsp;(a): Einfaches Punktediagramm"><img src="090-Modellieren_files/figure-html/fig-within-y3-1.png" class="img-fluid figure-img" data-ref-parent="fig-within-y3" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-within-y3-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (a) Einfaches Punktediagramm
@@ -2331,7 +2334,7 @@ Abbildung&nbsp;12.24: Mediationsmodell von Jobtraining über Depressivität
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-within-y3" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div id="fig-within-y3-2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-subfloat-fig figure"><div aria-describedby="fig-within-y3-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="090-Modellieren_files/figure-html/fig-within-y3-2.png" class="img-fluid figure-img" data-ref-parent="fig-within-y3" width="672">
+<a href="090-Modellieren_files/figure-html/fig-within-y3-2.png" class="lightbox" data-gallery="fig-within-y3" title="Abbildung&nbsp;12.25&nbsp;(b): Informationsreiches Punkte-, Boxplot- und Violinendiagramm mit Statistiken der Veränderung angereichert"><img src="090-Modellieren_files/figure-html/fig-within-y3-2.png" class="img-fluid figure-img" data-ref-parent="fig-within-y3" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-within-y3-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (b) Informationsreiches Punkte-, Boxplot- und Violinendiagramm mit Statistiken der Veränderung angereichert
@@ -2456,7 +2459,7 @@ Tabelle&nbsp;12.8: Mittelwerte von <code>y</code> pro Messzeitpunkte (<code>y_me
 <div class="cell-output-display">
 <div id="fig-randef-m3" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-randef-m3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="090-Modellieren_files/figure-html/fig-randef-m3-1.png" class="img-fluid figure-img" width="672">
+<a href="090-Modellieren_files/figure-html/fig-randef-m3-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-24" title="Abbildung&nbsp;12.26: 95%-CI der Random-Effekte von m_within3"><img src="090-Modellieren_files/figure-html/fig-randef-m3-1.png" class="img-fluid figure-img" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-randef-m3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Abbildung&nbsp;12.26: 95%-CI der Random-Effekte von <code>m_within3</code>
@@ -2955,7 +2958,38 @@ Sauer, S., &amp; Lustig, L. (2023). The Effect of <span>Bringtnixtin</span> on F
   </div>
 </nav>
 </div> <!-- /content -->
+<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sebastiansauer/fopra/blob/main/090-Modellieren.qmd" class="toc-action"><i class="bi bi-github"></i>Quellcode anzeigen</a></li><li><a href="https://github.com/sebastiansauer/fopra/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div></div></footer><script>var lightboxQuarto = GLightbox({"closeEffect":"zoom","descPosition":"bottom","loop":false,"openEffect":"zoom","selector":".lightbox"});
+(function() {
+  let previousOnload = window.onload;
+  window.onload = () => {
+    if (previousOnload) {
+      previousOnload();
+    }
+    lightboxQuarto.on('slide_before_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      const href = trigger.getAttribute('href');
+      if (href !== null) {
+        const imgEl = window.document.querySelector(`a[href="${href}"] img`);
+        if (imgEl !== null) {
+          const srcAttr = imgEl.getAttribute("src");
+          if (srcAttr && srcAttr.startsWith("data:")) {
+            slideConfig.href = srcAttr;
+          }
+        }
+      } 
+    });
+  
+    lightboxQuarto.on('slide_after_load', (data) => {
+      const { slideIndex, slideNode, slideConfig, player, trigger } = data;
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(slideNode);
+      }
+    });
+  
+  };
+  
+})();
+          </script>
 
 
-
-<footer class="footer"><div class="nav-footer"><div class="nav-footer-center"><div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sebastiansauer/fopra/blob/main/090-Modellieren.qmd" class="toc-action"><i class="bi bi-github"></i>Quellcode anzeigen</a></li><li><a href="https://github.com/sebastiansauer/fopra/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></div></div></footer></body></html>
+</body></html>
