@@ -144,7 +144,10 @@ Empfehlenswert ist z.B. die Arbeit zum Thema [Selbstwirksamkeit, Selbstregulatio
 
 :::{#exr-iwp}
 ### Einblick in studentische Forschung
-Fassen Sie eine studentische Forschungsarbeit mit Hilfe einer KI zusammen und präsentieren Sie die wesentlichen Ergebnisse! Nutzen Sie @tbl-studienprofil zur Gliederung Ihrer Analyse. Wichtig: Versuchen Sie die Stichhaltigkeit der Antworten der KI nachzuprüfen.
+Fassen Sie eine studentische Forschungsarbeit zusammen und präsentieren Sie die wesentlichen Ergebnisse! Nutzen Sie @tbl-studienprofil zur Gliederung Ihrer Analyse. 
+
+Wenn es Lizenz der Arbeit zulässt, können Sie auch einen KI-Dienst zur Zusammenfassung der Artikels nutzen.G
+Wichtig: Versuchen Sie die Stichhaltigkeit der Antworten der KI nachzuprüfen.
 
 Teilen Sie sich dabei in Gruppen auf; nutzen Sie verschiedene KI-Dienste, s. @tbl-ki-summ-pdf. $\square$
 :::
@@ -617,6 +620,153 @@ Wie fundiert ist obige Aussage zu "alle zwei Minuten" wohl?
 
 
 
+
+## Qualität von Studien: Orientierung an der CONSORT-Checkliste
+
+Eine hilfreiche Orientierung zur Bewertung von Studienqualität bietet die  
+[CONSORT-Checkliste](https://www.consort-spirit.org/) (*Consolidated Standards of Reporting Trials*).  
+
+Sie wurde ursprünglich für randomisierte kontrollierte Studien entwickelt, 
+eignet sich aber sehr gut als **allgemeines Raster**, um Studien systematisch zu prüfen.
+
+Ziel ist nicht, „perfekte“ Studien zu finden – sondern **transparent zu machen, was berichtet wird (und was nicht)**.
+
+
+### Zentrale Qualitätskriterien entlang von CONSORT
+
+#### 1. Titel & Abstract: Wird klar, worum es geht?
+- Ist das Studiendesign erkennbar (z. B. Experiment, RCT)?
+- Werden zentrale Ergebnisse berichtet?
+
+Erste Hinweise auf Qualität: unklare Abstracts = oft unklare Studien
+
+
+#### 2. Einführung: Ist die Fragestellung begründet?
+- Wird eine klare Hypothese formuliert?
+- Ist die Studie theoretisch eingebettet?
+
+Achtung bei:
+
+- vagen oder nachträglich wirkenden Hypothesen
+
+
+#### 3. Methode: Wie wurde die Studie durchgeführt?
+
+##### a) Stichprobe
+- Wer hat teilgenommen?
+- Ein- und Ausschlusskriterien klar?
+- Rekrutierung nachvollziehbar?
+
+Problematisch:
+
+- „Convenience Samples“ ohne Reflexion
+
+
+##### b) Design & Ablauf
+- Gibt es Kontrollbedingungen?
+- Wurden Teilnehmende randomisiert?
+- Ist der Ablauf klar beschrieben?
+
+Leitfrage:
+
+> Könnte ich die Studie exakt nachbauen?
+
+
+##### c) Operationalisierung
+- Wie wurden zentrale Variablen gemessen?
+- Sind die Messinstrumente valide und reliabel?
+
+Häufige Schwäche:
+
+- unklare oder fragwürdige Messungen
+
+
+##### d) Intervention / Manipulation
+- Was genau wurde gemacht?
+- Ist die Manipulation ausreichend beschrieben?
+
+Wenn Details fehlen → schlechte Reproduzierbarkeit
+
+
+#### 4. Ergebnisse: Was wurde gefunden?
+
+##### a) Stichprobenfluss (Flow)
+- Wie viele Personen haben teilgenommen?
+- Gab es Ausfälle (Dropouts)?
+
+CONSORT betont hier Transparenz (z. B. Flussdiagramme)
+
+
+
+##### b) Analysen
+- Welche statistischen Verfahren wurden verwendet?
+- Sind Effektgrößen berichtet (nicht nur p-Werte)?
+
+Achtung:
+- nur Signifikanz ohne Effektstärke = eingeschränkte Aussagekraft
+
+
+
+#### 5. Diskussion: Wie werden die Ergebnisse interpretiert?
+
+- Werden Limitationen benannt?
+- Wird vorsichtig oder übertrieben interpretiert?
+- Gibt es alternative Erklärungen?
+
+Warnsignal:
+
+- sehr starke Schlussfolgerungen bei schwachen Daten
+
+
+#### 6. Transparenz & Reproduzierbarkeit
+
+- Sind Materialien, Daten oder Analysen zugänglich?
+- Wird die Studie ausreichend detailliert beschrieben?
+
+Kernfrage:
+
+> Könnten andere Forschende die Ergebnisse reproduzieren?
+
+
+
+### Anwendung
+
+Für die Analyse einer Studie kann man sich an folgenden Leitfragen orientieren:
+
+1. **Verstehen**
+   - Was ist die zentrale Hypothese?
+   - Wie ist das Studiendesign aufgebaut?
+
+2. **Bewerten (CONSORT-orientiert)**
+   - Was ist gut berichtet?
+   - Was fehlt oder ist unklar?
+
+3. **Kritik**
+   - Wo liegen mögliche Schwächen?
+   - Welche Verzerrungen könnten vorliegen?
+
+4. **Reproduzierbarkeit**
+   - Könntet ihr die Studie selbst durchführen?
+   - Welche Informationen fehlen euch?
+
+
+:::{#exr-quali-brain}
+### Beurteilen Sie die Qualität des Brain-Drain-Artikels
+
+Beurteilen Sie die Qualität [dieses Artikels](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0219233) anhand der CONSORT-Checkliste!
+Berichten Sie dann Ihre Ergebnisse im Plenum. $\square$
+:::
+
+
+
+
+### Fazit
+
+Die CONSORT-Checkliste hilft dabei, Studien nicht nur inhaltlich, sondern vor allem **methodisch und strukturell** zu bewerten.
+
+> Eine Studie ist nicht nur dann gut, wenn ihre Ergebnisse überzeugend sind – sondern wenn ihr Aufbau so transparent ist, dass andere sie überprüfen können.
+
+
 ## KI-Arbeitsmittel
 
 
@@ -627,8 +777,203 @@ Informieren Sie sich, was einen Plagiatsfall darstellt und stellen Sie sicher, k
 
 
 :::{.callout-caution}
-Geben Sie keine personenbezogenen Daten Dritter an eine KI weiter. Auch bei den eigenen personenbezogenen Daten sollten Sie sparsam ein. $\square$
+Prüfen Sie die Nutzungsrechte, die Ihnen der Urheber einräumt.
+Geben Sie keine personenbezogenen Daten Dritter an eine KI weiter. Auch bei den *eigenen* personenbezogenen Daten sollten Sie sparsam ein. $\square$
 :::
+
+
+### Nutzungsregeln für KI-Tools (z. B. ChatGPT) in Studium und Forschung
+
+
+
+Grundprinzip:
+
+> **Man darf nur Inhalte hochladen, für die man die nötigen Rechte hat.**
+
+
+Erlaubte Inhalte sind:
+
+- Eigene Inhalte
+  - Eigene Texte, Notizen, Hausarbeiten
+  - Selbst erstellte Daten oder Auswertungen
+
+- Open-Access-Publikationen
+  - Frei zugängliche wissenschaftliche Artikel (z. B. arXiv)
+  - Inhalte mit offenen Lizenzen (z. B. CC-BY)
+
+- Inhalte mit ausdrücklicher Erlaubnis
+  - Materialien, für die Sie eine Nutzungslizenz haben
+
+
+### Suchen Sie nach CC-BY-Artikeln
+
+Woran erkennt man ein CC-BY-Paper?
+
+Im Paper steht typischerweise sowas wie:
+
+>   This article is distributed under the terms of the Creative Commons Attribution License (CC BY 4.0).
+
+Oder ein Symbol:
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.de)
+
+
+
+### Wo man CC-BY-Paper findet
+
+1. Open-Access-Journals (sehr häufig CC-BY)
+
+Viele große Verlage veröffentlichen Open-Access-Artikel standardmäßig unter CC-BY:
+
+- [Public Library of Science (PLOS)](https://plos.org)  
+  → fast alle Artikel sind CC-BY
+
+- [BioMed Central (BMC)](https://www.biomedcentral.com)  
+  → ebenfalls überwiegend CC-BY
+
+- [Springer Nature (Open Access)](https://www.springernature.com/gp/open-research)  
+  → oft CC-BY bei Open Access
+
+- [Elsevier Open Access](https://www.elsevier.com/open-access)  
+  → teilweise CC-BY (nicht immer!)
+
+Tipp: Die Lizenz steht meist direkt im Artikel (oben oder unten auf der Seite).
+
+
+
+2. Suchmaschinen mit Lizenzfilter
+
+- [Google Scholar](https://scholar.google.com)  
+  → keine direkte CC-BY-Filterung, aber oft Hinweise im PDF  
+
+- [CORE](https://core.ac.uk)  
+  → viele CC-lizenzierte Inhalte  
+
+- [BASE – Bielefeld Academic Search Engine](https://www.base-search.net)  
+  → erlaubt gezielte Open-Access-Suche  
+
+---
+
+3. Preprint-Server (aufpassen!)
+
+- [arXiv](https://arxiv.org)  
+  → oft CC-BY, aber nicht immer (verschiedene Lizenzen!)  
+
+- [bioRxiv](https://www.biorxiv.org)  
+  → häufig CC-BY oder CC-BY-NC  
+
+Wichtig: Lizenz immer direkt im Dokument prüfen!
+
+
+
+
+
+
+
+
+
+
+###  Vorsicht bei diesen Inhalten
+
+#### CC-BY-NC (Non-Commercial):
+
+- Nutzung nur für **nicht-kommerzielle Zwecke erlaubt**
+- Problematisch bei:
+  - Nutzung im Unternehmen
+  - kommerziellen Projekten
+  - möglicher Weiterverarbeitung durch KI-Anbieter
+
+Empfehlung: Nur im privaten oder universitären Kontext nutzen
+
+
+####  Nicht erlaubte Inhalte
+
+- Paywalled Artikel (z. B. Elsevier, Springer PDFs)
+- Inhalte aus Uni-Datenbanken ohne Weitergaberecht
+- Gekaufte oder lizenzpflichtige Texte ohne Erlaubnis
+- Vertrauliche oder personenbezogene Daten
+
+
+####  Besonderheit bei KI-Systemen
+
+Beim Hochladen von Inhalten:
+- erfolgt eine **technische Verarbeitung**
+- ggf. auch **Speicherung oder Weiterverwendung**
+
+Das kann rechtlich als Nutzung oder Vervielfältigung gelten
+
+---
+
+### Kommerzielle vs. nicht-kommerzielle Nutzung
+
+| Nutzungskontext | Bewertung |
+|----------------|----------|
+| Studium / Lehre | ✅ erlaubt |
+| Private Nutzung | ✅ erlaubt |
+| Forschung an Uni | ✅ meist erlaubt |
+| Nutzung im Unternehmen | ⚠️ kritisch |
+| Kommerzielle Projekte | ❌ oft unzulässig |
+
+
+### Wissenschaftliche Integrität
+
+#### Transparenz
+- KI-Nutzung offenlegen (je nach Vorgabe der Hochschule)
+
+#### Eigenleistung
+- KI ist ein Hilfsmittel, kein Ersatz für eigene Arbeit
+
+#### Quellenangaben
+- Ergebnisse aus KI überprüfen und korrekt zitieren
+
+---
+
+### Datenschutz beachten
+
+Keine sensiblen Daten hochladen:
+
+- personenbezogene Daten
+- Prüfungsleistungen anderer
+- interne Dokumente
+
+---
+
+### Faustregeln für den Alltag
+
+- „Darf ich das Dokument einfach weitergeben?“  
+  → Wenn nein: **nicht hochladen**
+
+- „Ist das frei im Internet verfügbar?“  
+  → Wenn ja: meist unproblematisch
+
+- Im Zweifel: **weniger hochladen, mehr selbst formulieren**
+
+---
+
+### Empfehlung
+
+Für rechtssichere Nutzung:
+- Bevorzuge **Open Access** oder **CC-BY**
+- Nutze **eigene Zusammenfassungen**
+- Vermeide **CC-BY-NC in unklaren Kontexten**
+
+---
+
+### Hinweis
+
+Diese Regeln bieten eine Orientierung, ersetzen aber keine individuelle Rechtsberatung.  
+Die rechtliche Lage (insbesondere bei KI) entwickelt sich derzeit weiter.
+
+---
+
+
+
+
+
+
+
+
+
+
 
 ### Sammlung an KI-Tools
 
@@ -720,7 +1065,8 @@ Wir alle müssen uns ständig bemühen, Dinge zu können, die die Maschine (z.B.
 
 ## Vertiefung
 
-Was ist Wissenschaft? -- Antworten auf diese Frage versucht u.a. @chalmers_wege_2007 zu geben. Einen breiteren Fokus auf die methodologischen Grundlagen der Psychologie liefert @walach_psychologie_2013. 
+Was ist Wissenschaft? -- Antworten auf diese Frage versucht u.a. @chalmers_wege_2007 zu geben.
+Einen breiteren Fokus auf die methodologischen Grundlagen der Psychologie liefert @walach_psychologie_2013. 
 Wer sich mit den Grundlagen der Logik befassen möchte - als Fundament vernünftiger Aussagen -, der findet etwa bei @suppes_introduction_1999 eine nützliche Einführung.
 Sie zweifeln, ob die Psychologie überhaupt eine Wissenschaft ist? Das ist keine Blasphemie, wie man @galliker_ist_2016 nachlesen kann.
 Dass Psychologie eine Wissenschaft ist, ist für @dienes_understanding_2008 klar. Übrigens ist dieses Buch weit rezipiert worden, mit positivem Echo.

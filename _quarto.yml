@@ -127,6 +127,7 @@ format:
     code-link: true
     mermaid:
       theme: neutral
+    lightbox: true
   # pdf:
   #   toc: true
   #   number-sections: true
