@@ -2,12 +2,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.36">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="keywords" content="Versuchsplanung, Statistik, R, Datenanalyse, Psychologie, Forschung">
 <meta name="description" content="“Planung, Erhebung, Auswertung und Berichtlegung quantitativer psychologischer Studien: Ein Kurs für Anfänger”">
 <title>11&nbsp; Auswerten: Daten aufbereiten – Forschungsprojekt</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -68,19 +71,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="./img/fopra-logo-small.png" rel="icon" type="image/png">
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-f418161beb48e0141c760e455f12af2c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-56eda4583107212d29f4466ddc7a5529.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-e8fcd5ffe478d53ee79b2cefb23d4866.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-56eda4583107212d29f4466ddc7a5529.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-969b080e2f4de514111c133ed7ee6ec2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-f19be3a04e224c6e3015e95e2247475f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-969b080e2f4de514111c133ed7ee6ec2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/downloadthis-1.9.1/downloadthis.css" rel="stylesheet">
 <script src="site_libs/quarto-contrib/glightbox/glightbox.min.js"></script>
 <link href="site_libs/quarto-contrib/glightbox/glightbox.min.css" rel="stylesheet">
@@ -111,7 +113,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Suchen"
   }
 }</script><link href="site_libs/pagedtable-1.1/css/pagedtable.css" rel="stylesheet">
-<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
+<script src="site_libs/pagedtable-1.1/js/pagedtable.js"></script><script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script><script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script><script type="text/javascript">
 const typesetMath = (el) => {
   if (window.MathJax) {
     // MathJax Typeset
@@ -622,7 +624,7 @@ Tabelle&nbsp;11.1: Ein Datensatz aus SoSci-Survey, der FALSCH eingelesen wurde, 
 Tabelle&nbsp;11.2: Beispiel für einen Datensatz von Sosci-Survey
 </figcaption><div aria-describedby="tbl-sosci_good-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<table class="cell caption-top table table-sm table-striped small">
 <colgroup>
 <col style="width: 1%">
 <col style="width: 2%">
@@ -1493,7 +1495,7 @@ Abbildung&nbsp;11.4: Das “Joinen” zweier Tabellen
 </div>
 </div>
 </div>
-<p><a href="#dnldts42633" onclick="fetch('data:text/csv;base64,IiIsIldhcy5pc3QuSWhyLkdlc2NobGVjaHQ/IiwiV2llLmFsdC5zaW5kLlNpZT8iLCJJY2guaGFiZS52aWVsZS5GcmV1bmRlLiIsIkljaC5zdGVoZS5nZXJuZS5pbS5SYW1wZW5saWNodC4iCiIxIiwiRnJhdSIsMjMsInN0aW1tZSB2b2xsIHVuZCBnYW56IHp1IixOQQoiMiIsIk1hbm4iLDQyLCJzdGltbWUgZWhlciB6dSIsInN0aW1tZSBlaGVyIHp1IgoiMyIsImRpdmVycyIsNzMsInN0aW1tIGVoZXIgbmljaHQgenUiLCJzdGltbWUgdm9sbCB1bmQgZ2FueiB6dSIK').then(res => res.blob()).then(blob => {
+<p><a href="#dnldts60216" onclick="fetch('data:text/csv;base64,IiIsIldhcy5pc3QuSWhyLkdlc2NobGVjaHQ/IiwiV2llLmFsdC5zaW5kLlNpZT8iLCJJY2guaGFiZS52aWVsZS5GcmV1bmRlLiIsIkljaC5zdGVoZS5nZXJuZS5pbS5SYW1wZW5saWNodC4iCiIxIiwiRnJhdSIsMjMsInN0aW1tZSB2b2xsIHVuZCBnYW56IHp1IixOQQoiMiIsIk1hbm4iLDQyLCJzdGltbWUgZWhlciB6dSIsInN0aW1tZSBlaGVyIHp1IgoiMyIsImRpdmVycyIsNzMsInN0aW1tIGVoZXIgbmljaHQgenUiLCJzdGltbWUgdm9sbCB1bmQgZ2FueiB6dSIK').then(res => res.blob()).then(blob => {
       const downloadURL = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       document.body.appendChild(a);
@@ -1501,7 +1503,7 @@ Abbildung&nbsp;11.4: Das “Joinen” zweier Tabellen
       a.download = 'umfrage_lange_spaltennamen.csv'; a.click();
       window.URL.revokeObjectURL(downloadURL);
       document.body.removeChild(a);
-        });"><button class="btn btn-default downloadthis  " id="dnldts42633"><i class="bi bi-download"></i> Download </button></a></p>
+        });"><button class="btn btn-default downloadthis  " id="dnldts60216"><i class="bi bi-download"></i> Download </button></a></p>
 <p>Solche langen Spaltennamen sind unpraktisch (und folgen nicht den R-Vorschriften für “brave” Spaltennamen – Ärger ist vorprogrammiert). Lieber wären uns sicherlich solche Spaltennamen:</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -2396,7 +2398,7 @@ Hinweis
 Tabelle&nbsp;11.3: Extraversion-Score berechen
 </figcaption><div aria-describedby="tbl-extra-score-mean-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output-display">
-<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<table class="cell caption-top table table-sm table-striped small">
 <thead><tr class="header">
 <th style="text-align: right;">i01</th>
 <th style="text-align: right;">i02r</th>
