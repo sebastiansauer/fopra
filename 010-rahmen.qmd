@@ -7,7 +7,7 @@ library(dplyr)
 ```
 
 
-![Hallo Forschung! Wer bist und wer bin ich?](img/spiro1.png){width="25%"}
+![Hallo, Forschung! Wer bist du - und wer bin ich?](img/spiro1.png){width="25%"}
 
 
 :::{.xsmall}
@@ -40,11 +40,6 @@ Wenn Sie es mir nicht glauben, werfen Sie einen Blick auf @fig-ueberblick und @f
 >    👹 Ok, hier ist der Monster-Rat: "Lass dir Zeit, ach, dass kannst du nächste oder übernächste Woche auch noch erledigen, oder irgendwann halt!"
 
 
-
-### Folienskript
-
-
-Das Folienskript zu diesem Kapitel finden Sie [hier](https://sebastiansauer.github.io/fopra-slides/thema02.html#/title-slide).
 
 
 

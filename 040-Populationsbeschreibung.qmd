@@ -465,6 +465,10 @@ Nennen wir das einen "mittleren" Effekt.
 ## Planung der Stichprobengröße
 
 
+Wie groß "muss" eine Stichprobe sein, damit man einen Effekt findet (wenn er denn da ist), am besten mit einer gewissen (hohen!) Genauigkeit?
+Die Beantwortung solcher Fragen nennt man auch Poweranalyse und ist im Folgenden in Grundzügen dargestellt.
+
+
 ### Schätzung eines normalverteilten Parameters 
 
 
@@ -544,15 +548,20 @@ $$\sigma = \frac{R}{5.15}$$
 Wenn Sie die Streuung des Merkmals $X$ nicht aus der Literatur ableiten können,
 können Sie sich behelfen, in dem Sie die Ausprägung von $X$ bei $n=20$ Versuchspersonen messen. Dann messen Sie wieder 20 Versuchspersonen.
 Sind beide Streuungen ähnlich, so haben Sie einen Schätzwert für die Streuung in der Population.
-Sind sie unähnlich, so erheben Sie weitere 20 Personen [@Bortz2006].$\square
+Sind sie unähnlich, so erheben Sie weitere 20 Personen [@Bortz2006]. $\square$
 :::
 
 
 ### Schätzung für Korrelationen
 
 
-@Schonbrodt2013a untersuchten mittels einer Simulationsstudie, ab welcher Stichprobengröße Korrelationswerte $\rho_0$ stabil werden. "Stabil" soll heißen, dass wiederholte Ziehungen einer Stichprobe aus einer Population mit Korrelation $\rho_0$ die Stichprobenwerte der Korrelation "nicht mehr so viel variieren", z.B. weniger als 0.1 Korrelationseinheiten.
-Ihre allgemeine Schlussfolgerung war, dass $n=250$ einen guter Grenzwert darstellt, s. @fig-corr-stab [@Schonbrodt2013a].
+@Schonbrodt2013a untersuchten mittels einer Simulationsstudie, ab welcher Stichprobengröße Korrelationswerte $\rho_0$ stabil werden. 
+"Stabil" soll heißen, 
+dass wiederholte Ziehungen einer Stichprobe aus einer Population mit Korrelation
+$\rho_0$ die Stichprobenwerte der Korrelation "nicht mehr so viel variieren", 
+z.B. weniger als 0.1 Korrelationseinheiten.
+Ihre allgemeine Schlussfolgerung war, dass $n=250$ einen guter Grenzwert darstellt, 
+s. @fig-corr-stab [@Schonbrodt2013a].
 
 
 ![Ab welcher Stichprobengröße werden Korrelationswerte stabil?](img/corr-stab.jpg){#fig-corr-stab}
@@ -564,31 +573,108 @@ Dort sind die Mindest-Fallzahlen $(\text{COS}_{\text{crit}})$ in Abhängigkeit d
 ![Mindest-Fallzahlen für stabile Korrelationskoeffizienten](img/fig-schoenbrodt2.jpg){#fig-schoenbrodt2}
 
 
-### Schätzung für typische statistische Tests
+### Stichprobengrößen für Nullhypothesentests
 
 
 Der Einfachheit halber begnügen wir uns mit der Analyse von @cohen_power_1992.
-Der Autor errechnet (die Untergrenze von) Stichprobenumfänge, um mit einer Wahrscheinlichkeit von 80% einen Effekt zu finden.
-Dabei hängt diese Wahrscheinlichkeit von der Größe des Effekts ab, s. @fig-cohen1.
-
-![Werte der Effektstärke (ES) für kleine (small), mittlere (medium) und große (large) Effekte](img/cohen1.jpg){#fig-cohen1}
+Der Autor errechnet (die Untergrenze von) Stichprobenumfänge, um mit einer Wahrscheinlichkeit von 80% einen Effekt zu finden, die Nullhypothese also zu verwerfen.
+Dabei hängt diese Wahrscheinlichkeit von der Größe des Effekts ab, s. @tbl-cohen1.
 
 
-Auf dieser Basis leiten der Autor folgende (Mindest-)Stichprobenanforderungen ab, s. @fig-cohen2.
+| Effektstärke                          | klein | mittel | groß |
+| ------------------------------------- | ----: | -----: | ---: |
+| **Cohen’s $d$** (Mittelwertunterschied) |  0.20 |   0.50 | 0.80 |
+| **r** (Korrelation)                   |  0.10 |   0.30 | 0.50 |
+| **$f^2$** (multiple Regression)          |  0.02 |   0.15 | 0.35 |
+| **$\eta^2$** (ANOVA, ungefähr)              |  0.01 |   0.06 | 0.14 |
+| *$f$** (ANOVA)                         |  0.10 |   0.25 | 0.40 |
+
+: Einteilung der Effektstärke nach Cohen {#tbl-cohen1}
 
 
-![Mindest-Stichprobengrößen in Abhängigkeit der Effektstärke](img/cohen2.jpg){#fig-cohen2}
+Dabei gilt:
 
-Die hier angegebenen Stichprobengrößen beziehen sich auf das Ziel, mit 80% Wahrscheinlichkeit einen Effekt (von angegebener Größe: klein, mittel, groß) zu entdecken.
+- $\eta^2 = \frac{SS_{\text{Effekt}}}{SS_{\text{gesamt}}}$, in R `eta_squared(mein_aov_modell)`, aus dem Paket `easystats`
+
+- $f^2 = \frac{R^2}{1 - R^2}$, in R mit `r2(mein_lm)`, aus dem Paket `easystats` 
+
+
+Auf dieser Basis leitet der Autor folgende (Mindest-)Stichprobenangrößen ab,
+s. @tbl-cohen2. Dabei typische Annahmen getroffen ($\alpha = .05$, $\beta=.2$).
+
+
+| Test                                | klein |    mittel |      groß |
+| ----------------------------------- | ----: | --------: | --------: |
+| **$t$-Test (unabhängig, zweiseitig)** |   394 |        64 |        26 |
+| **$t$-Test (gepaart)**                |   199 |        34 |        15 |
+| **Korrelation ($r$)**                 |   783 |        85 |        29 |
+| **ANOVA (1 Faktor, 4 Gruppen)**     |   180 |        44 |        28 |
+| **$\chi^2$-Test (df = 1)**              |   785 |        88 |        32 |
+| **$R^2$**                              |  0.01 | 0.06–0.09 | 0.14–0.25 |
+| **$f^2$ (Cohen)**                      |  0.02 |      0.15 |      0.35 |
+
+
+: Mindestwerte des Stichprobenumfänge in Abhängigkeit der Effektstärke {#tbl-cohen2}
+
+
+
+Die hier angegebenen Stichprobengrößen beziehen sich auf das Ziel, 
+mit 80% Wahrscheinlichkeit einen Effekt (von angegebener Größe: klein, mittel, groß) zu entdecken.
 Damit ist noch nichts über die Präzision der Parameterschätzung gesagt.
 Die Stichprobengrößen sind also nur gedacht für das bescheidene Ziel der Schätzung, ob ein Effekt ungleich 0 ist.
 Möchte man die wissen, wie viele Versuchspersonen man benötigt, um einen Effekt mit einer bestimmten Genauigkeit zu schätzen,
-würde man mehr Versuchspersonenen benötigen.
+würde man mehr Versuchspersonen benötigen.
+Das R-Paket [`effectsize`](https://easystats.github.io/see/articles/effectsize.html), Teil von `easystats`, bietet Hilfen zur Klassifizierung von Effektstärken.
+
+### Umsetzung mit R
+
+#### Für Nullhypothesen
+
+```{r}
+library(pwr)
+```
 
 
+Um die minimale Stichprobengröße für einen mittleren Effekt von $f^2$ zu berechnen,
+kann man die Funktion `pwr.f2.test` verwenden, etwa so:
+
+```{r}
+pwr.f2.test(u=5, f2=0.1/(1-0.1), sig.level=0.05, power = .8)
+```
+
+Dabei gilt:
+
+- `u`: Anzahl der Prädiktoren (UV) im Modell
+- `f2`: Effektgröße definiert als $R^2 / (1-R^2)$
+- `sig.level`: Das Signifikanzniveau, per Standard oft 5%
+- `power`: Die statistische Power ($1-\beta$)
+- `v` liefert die Stichprobengröße: $N = v + u + 1$
+
+
+#### Für Konfidenzintervalle
+
+
+```{r}
+library(prada)
+```
+
+
+Bei $u=5$ Prädiktoren und einem erwarteten R-Quadrat von 0.3
+wird folgende Stichprobengröße benötigt, wenn
+man das Konfidenzintervall von $R^2$ auf 0.1 begrenzen möchte:
+
+```{r}
+u <- 5
+r2 <- .3
+ss <- sample_size_for_r2(u = u, r2 = r2) 
+
+ss |> select(N)
+```
 
 
 ## Literatur
+
+Eine klassische Einführung in das Thema Planung psychologischer Studien liefert @Bortz2006.
 
 
 

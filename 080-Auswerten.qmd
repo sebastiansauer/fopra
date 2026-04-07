@@ -211,21 +211,42 @@ Sie  benötigen Hilfe für Ihre Datenanalyse? Hier sind einige Hilfestellungen.
 
 ### Checkliste zur Datenanalyse {#sec-checkdaten}
 
-Hier sehen Sie im Überblick die Schritte, die in vielen Fällen sinnvoll sind, um Daten auf einem guten Niveau auszuwerten.
+In @tbl-checkliste-datenanalyse sehen Sie im Überblick die Schritte, die in vielen Fällen sinnvoll sind, um Daten auf einem guten Niveau auszuwerten.
 
 
-1. *Vorverarbeitung*
-    1. Importieren
-    2. Aufbereiten (Umkodieren, fehlende Wert versorgen, Transformieren, neue Spalten berechnen)
-2. *Explorative Analyse*
-    1. Daten zusammenfassen (zentrale Tendenz, Streuung, Zusammenhang -- jeweils für alle UV und AV sowie weiterer potenziell relevanter Variablen)
-    2. Daten visualisieren (Verteilung der UV, AV, gemeinsame Verteilung von UV und AV)
-3. *Modellierung und Inferenzstatistik*
-    1. Modell berechnen (AV ~ UV1 + UV2 + ...)
-    2. Parameter berichten (Punkt- und Intervallschätzer)
-    3. Parameter visualisieren
-    4. Nullhypothesen testen (z.B. ROPE)
-    5. Modellgüte berichten (z.B. R-Quadrat)
+| Phase | Schritt | Leitfragen / Hinweise | Bewertung (0–2) |
+|------|--------|----------------------|-----------------|
+| 🎯 Fragestellung | Forschungsfrage klären | Was ist die konkrete Frage? Was sind UV und AV? Welche alternativen Erklärungen gibt es? | ☐ |
+| 🧹 Datenvorbereitung | Daten importieren & prüfen | Sind Variablentypen korrekt? Skalenniveau passend? | ☐ |
+|  | Daten aufbereiten | Umkodieren, fehlende Werte behandeln (begründen!), Transformationen, neue Variablen | ☐ |
+|  | Dokumentation | Sind alle Schritte reproduzierbar festgehalten? | ☐ |
+| 🔍 Explorative Analyse | Deskriptive Statistik | Wie sind Mittelwerte, Streuungen, Verteilungen? | ☐ |
+|  | Zusammenhänge prüfen | Gibt es Korrelationen oder Gruppenunterschiede? | ☐ |
+|  | Visualisieren | Wie sehen Verteilungen und Beziehungen aus (Histogramme, Scatterplots etc.)? | ☐ |
+|  | Auffälligkeiten erkennen | Gibt es Ausreißer, Nichtlinearitäten, Muster? | ☐ |
+| 🧠 Modellidee & Annahmen | Modell wählen | Welches Modell passt zur Fragestellung? | ☐ |
+|  | Annahmen prüfen | z.B. Linearität, Unabhängigkeit, Residuenverteilung | ☐ |
+| ⚙️ Modellierung | Modell spezifizieren | AV ~ UV₁ + UV₂ + … | ☐ |
+|  | Modell schätzen | Ergebnisse berechnen | ☐ |
+|  | Alternativen prüfen | Gibt es plausible andere Modelle? | ☐ |
+| 📏 Ergebnisse | Parameter berichten | Punktschätzer und Unsicherheit (Konfidenz- oder Bayes-Intervalle) | ☐ |
+|  | Modellgüte | Wie gut erklärt das Modell die Daten (z. B. R²)? | ☐ |
+| 🧪 Inferenz | Hypothesen prüfen | z. B. NHST oder ROPE | ☐ |
+|  | Effektgröße bewerten | Wie groß und praktisch relevant ist der Effekt? | ☐ |
+| 🔎 Diagnostik | Residuen analysieren | Passen die Modellannahmen wirklich? | ☐ |
+|  | Einfluss prüfen | Gibt es Ausreißer oder einflussreiche Fälle? | ☐ |
+|  | Robustheit testen | Bleiben Ergebnisse stabil bei kleinen Änderungen? | ☐ |
+| 🧩 Interpretation | Inhaltlich deuten | Was bedeuten die Ergebnisse fachlich? | ☐ |
+|  | Kausalität reflektieren | Was darf ich (nicht) kausal interpretieren? | ☐ |
+|  | Limitationen | Welche Schwächen hat die Analyse? | ☐ |
+| 📢 Kommunikation | Ergebnisse darstellen | Klar, verständlich, mit passenden Grafiken/Tabellen | ☐ |
+|  | Transparenz | Unsicherheit offen darstellen, keine Überinterpretation | ☐ |
+
+
+
+:Checkliste zur Datenanalyse {#tbl-checkliste-datenanalyse}
+
+
 
 
 
@@ -736,25 +757,46 @@ extra %>%
 
 
 
+## Typische Fehler
 
 
+
+@tbl-typ-fehler-statistik zeigt häufige Fehler bei statistischen Auswertungen in studentischen Arbeiten.
+
+
+| Nr. | Fehler                                   | Kurzbeschreibung                                                                 | Warum problematisch?                                              | Besser so                                                          |
+|-----|------------------------------------------|----------------------------------------------------------------------------------|-------------------------------------------------------------------|--------------------------------------------------------------------|
+| 1   | p-Werte falsch interpretieren            | p wird als Wahrscheinlichkeit der Hypothese gedeutet                            | Missverständnis der Inferenz                                      | Bayes nutzen. Oder p als Wahrscheinlichkeit der Daten unter H₀ interpretieren         |
+| 2   | Signifikanz = Relevanz                   | Signifikante Ergebnisse werden automatisch als wichtig angesehen                | Große N → fast alles signifikant                                  | Effektgrößen und praktische Bedeutung berücksichtigen              |
+| 3   | Fehlende Effektgrößen                    | Nur p-Werte berichtet                                                            | Keine Aussage über Stärke des Effekts                             | d, η², r etc. berichten und interpretieren                         |
+| 4   | Voraussetzungen ignorieren               | Tests ohne Prüfung von Annahmen durchgeführt                                     | Ergebnisse evtl. verzerrt                                         | Annahmen prüfen und ggf. robuste Verfahren nutzen                  |
+| 5   | Falscher Test gewählt                   | Test passt nicht zur Fragestellung                                               | Falsche Schlussfolgerungen                                        | Testwahl an Hypothese und Design anpassen                          |
+| 6   | Skalenniveaus missachten         | Man kann aus dem Durchschnitt von Postleitzahlen keine sinnvolle Aussage ableiten | Sinnlose Ergebnisse                                | Skalenniveau prüfen und passende Auswertung wählen                      |
+| 7   | Korrelation = Kausalität                | Zusammenhänge als Ursache interpretiert                                          | Fehlinterpretation der Daten                                      | Vorsichtig formulieren („Zusammenhang“, „assoziiert mit“)          |
+| 8   | Intransparente Datenbereinigung         | Ausreißer/Fälle ohne klare Regeln entfernt                                       | p-Hacking / Verzerrung                                            | Kriterien vorab festlegen und dokumentieren                        |
+| 9   | Fehlinterpretation von Modellen         | z. B. Regressionskoeffizienten falsch gedeutet                                   | Inhaltlich falsche Aussagen                                       | Modelle korrekt verstehen (Beta, Interaktion, Multikollinearität)  |
+| 10  | Schlechte Ergebnisdarstellung           | Unklare oder fehlende Tabellen/Grafiken, fehlende Beschriftung                                 | Ergebnisse schwer verständlich                                    | Klare, APA-konforme Darstellung                                    |
+| 11  | Hypothesen unpräzise operationalisiert  | Beispiel: „Es gibt einen Unterschied“ → aber kein klarer Test spezifiziert       | Unklar, ob statistischer Test der Forschungsfrage entspricht      | statistische Hypothesen formulieren |
+
+
+: Typische Fehler in statistischen Auswertungen {#tbl-typ-fehler-statistik}
 
 
 
 ## Aufgaben
 
 
-Auf dem [Datenwerk](https://datenwerk.netlify.app/) finden Sie eine Anzahl an Aufgaben zum Thema Datenanalyse.
+Auf dem [Datenwerk](https://sebastiansauer.github.io/datenwerk/) finden Sie eine Anzahl an Aufgaben zum Thema Datenanalyse.
 Schauen Sie sich mal die folgenden Tags an:
 
-- [eda](https://datenwerk.netlify.app/#category=eda)
+- [eda](https://sebastiansauer.github.io/datenwerk/#category=eda)
 
 
 
 ## Fallstudien
 
-Fallstudien zur explorativen Datenanalyse (EDA; d.h. deskriptive Statistik und Datenvisualisierung) finden Sie z.B. im [Datenwerk](https://datenwerk.netlify.app/):
+Fallstudien zur explorativen Datenanalyse (EDA; d.h. deskriptive Statistik und Datenvisualisierung) finden Sie z.B. im [Datenwerk](https://sebastiansauer.github.io/):
 
-- [flights-yacsda-eda](https://datenwerk.netlify.app/posts/flights-yacsda-eda/)
-- [oecd-yacsda](https://datenwerk.netlify.app/posts/oecd-yacsda/)
-- [smartphone1](https://datenwerk.netlify.app/posts/smartphone1/)
+- [flights-yacsda-eda](https://sebastiansauer.github.io/posts/flights-yacsda-eda/)
+- [oecd-yacsda](https://sebastiansauer.github.io/posts/oecd-yacsda/)
+- [smartphone1](https://sebastiansauer.github.io/posts/smartphone1/)

@@ -329,9 +329,9 @@ Weitere Hinweise zur Gestaltung von Tabellen finden Sie in @sec-formatierung-tab
 
 
 
-### Inferenzstatistik
+### Inferenzstatistik und Modellierung
 
-Es empfiehlt sich, die Modellgleichung inkl. Prior-Spezifiaktion aufzuführen.
+Es empfiehlt sich, die Modellgleichung inkl. Prior-Spezifikation aufzuführen.
 
 #### Posteriori-Verteilung
 
@@ -364,9 +364,11 @@ Sie können eine Posteriori-Verteilung z.B. für ihr Modell berechnen:
 library(rstanarm)
 
 m1 <- stan_glm(mpg ~ am, data = mtcars, seed = 42)
+m1_frequentistisch <- lm(mpg ~ am, data = mtcars)
 ```
 
-Hier sind die Ergebnisse; noch nicht ganz poliert für einen APA-Bericht, s. @tbl-m1-params.
+Hier sind die Ergebnisse; schon ordentlich poliert für einen APA-Bericht, 
+s. @tbl-m1-params.
 
 ```{r}
 #| label: tbl-m1-params
@@ -395,16 +397,7 @@ oder wenn Sie gleich den Befehl `hdi(m1)` ausführen, s. @tbl-m1-params2.
 parameters(m1, prob = .95, ci_method = "hdi") %>% print_md()  # oder: hdi(m1)
 ```
 
-Die Tabelle können Sie natürlich auch gleich wieder aufhübschen, für Ihren Bericht, s. @tbl-m1-params3.
 
-```{r}
-#| label: tbl-m1-params3
-#| tbl-cap: Parameter für das Modell m1. Das Intervall ist ein HDI.
-hdi(m1) %>% 
-  select(Parameter, CI_low, CI_high) %>% 
-  gt() %>% 
-  fmt_number(where(is.numeric), decimals = 2)
-```
 
 
 Ein ähnliches Ergebnis erzielt man mit dem Paket `gtsummary`, s. @tbl-m1-params4.
@@ -420,7 +413,16 @@ tbl_regression(m1)
 Den Punktschätzer (`Median`) zum Unterschied für die Gruppen (Automatik vs. Schaltgetriebe) hat uns die Funktion `parameters()` auch geliefert. Der Unterschied zwischen den beiden Gruppen liegt laut Modell bei ca. 7.2 Meilen.
 
 
+```{r}
+library(apaTables)
+```
 
+```{r}
+apa.reg.table(m1_frequentistisch, filename = NA)
+```
+
+Interessant ist die *quadrierte semipartielle Korrelation*, $sr^2$,
+die den Anteil der erklärten Varianz pro UV angibt.
 
 Es bietet sich an, die Parameter-Schätzbereiche zu visualisieren.
 Das kann man z.B. so machen:

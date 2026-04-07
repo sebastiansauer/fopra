@@ -1505,7 +1505,8 @@ Die Inferenzstatistik hilft, die Modellparameter mit Schätzwerten für die Popu
 
 Schauen Sie sich im [Datenwerk](https://datenwerk.netlify.app/) die Aufgaben mit folgenden Tags an:
 
-- [research-question](https://datenwerk.netlify.app/#category=research-question) - [researchdesign](https://datenwerk.netlify.app/#category=researchdesign)
+- [research-question](https://datenwerk.netlify.app/#category=research-question) 
+- [researchdesign](https://datenwerk.netlify.app/#category=researchdesign)
 <!-- - [within-design-analysis1](https://datenwerk.netlify.app/posts/within-design-analysis1/within-design-analysis1.html) -->
 - [inference](https://datenwerk.netlify.app/#category=inference)
 - [bayes](https://datenwerk.netlify.app/#category=bayes)

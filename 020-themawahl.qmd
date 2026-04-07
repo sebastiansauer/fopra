@@ -440,7 +440,8 @@ Obsidian hat ein paar Vorzüge:
 
 - kostenfrei
 - speichert Ihre Notizen offline als Textdateien
-- nutzerfreundlich
+- einfach zu bedienen
+- vernetzt Ihre Gedanken
 
 ![Die Oberfläche von Obsidian](img/obsidian1.png){#fig-obsidian1 width=75%}
 
@@ -452,6 +453,46 @@ Joschua Meyer erläutert im Video, wie ein (digitaler) Zettelkasten unser Denken
 
 {{< video https://www.youtube.com/watch?v=avb6b0nL3NQ >}}
 
+
+:::::{#exr-obs}
+### Notizen erstellen mit und ohne Obsidian
+
+:::{.panel-tabset}
+### Aufgabe
+
+1. Fassen Sie den folgenden Text mit Hilfe von einer (oder mehrerer) Notizen sinnvoll zusammen.
+2. Reflektieren Sie:
+   - Wie gut helfen Ihre Notizen zum Verständnis des Textes?
+   - Wie gut helfen Ihre Notizen bei der Vorbereitung auf eine Prüfung?
+
+
+### Text zum Zusammenfassen
+
+
+**Korrelation vs. Kausalität**
+
+In der empirischen Forschung wird häufig untersucht, ob zwei Variablen miteinander zusammenhängen. Ein solcher Zusammenhang wird als **Korrelation** bezeichnet. Wenn beispielsweise festgestellt wird, dass Personen, die mehr Zeit mit Lernen verbringen, tendenziell bessere Prüfungsnoten erzielen, spricht man von einer positiven Korrelation zwischen Lernzeit und Leistung.
+
+Eine Korrelation beschreibt jedoch zunächst nur, **dass zwei Variablen gemeinsam variieren**. Sie sagt nichts darüber aus, **warum** dieser Zusammenhang besteht. Insbesondere erlaubt eine Korrelation keine Aussage darüber, ob eine Variable die andere verursacht.
+
+Im Gegensatz dazu bezeichnet **Kausalität** einen Ursache-Wirkungs-Zusammenhang. Wenn ein kausaler Effekt vorliegt, bedeutet dies, dass eine Veränderung in Variable A direkt eine Veränderung in Variable B bewirkt. Ein klassisches Beispiel ist die Wirkung eines Medikaments: Wenn ein Medikament nachweislich Symptome reduziert, kann man von einem kausalen Effekt sprechen.
+
+Das zentrale Problem besteht darin, dass Korrelationen oft fälschlicherweise als Kausalität interpretiert werden. Dafür gibt es mehrere Gründe:
+
+Erstens kann eine **Drittvariable** (auch Störvariable oder Confounder genannt) beide Variablen beeinflussen. Ein bekanntes Beispiel ist der Zusammenhang zwischen Eisverkauf und Ertrinkungsfällen. Beide steigen im Sommer an, sind aber nicht ursächlich miteinander verbunden. Die Temperatur ist hier die Drittvariable, die beide beeinflusst.
+
+Zweitens ist auch die **Richtung des Zusammenhangs** unklar. Selbst wenn zwei Variablen korrelieren, kann nicht ohne Weiteres bestimmt werden, welche Variable die andere beeinflusst. Beispielsweise könnte gute Leistung zu mehr Lernmotivation führen – und nicht nur umgekehrt.
+
+Drittens können Zusammenhänge auch **zufällig** entstehen, insbesondere bei kleinen Stichproben oder bei vielen getesteten Variablen.
+
+Um Kausalität nachzuweisen, sind daher strengere Forschungsdesigns erforderlich. Besonders wichtig sind **Experimente**, bei denen eine Variable gezielt manipuliert wird und andere Einflussfaktoren kontrolliert werden. Durch Randomisierung kann sichergestellt werden, dass sich Gruppen nur in der untersuchten Variable unterscheiden.
+
+Zusammenfassend gilt: 
+**Korrelation ist eine notwendige, aber keine hinreichende Bedingung für Kausalität.**
+Nur weil zwei Variablen zusammenhängen, bedeutet das nicht, dass eine die Ursache der anderen ist.
+
+:::
+::::
 
 
 ### Texte zusammenfassen
