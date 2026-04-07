@@ -715,33 +715,181 @@ Abbildung&nbsp;10.2: Beispiel für ein Codebook
 <li>Schauen Sie sich die als empfehlenswert ausgestellten Arbeiten an (s. Moodle) oder <a href="120-abschluss.html#sec-beispiele-projektarbeiten" class="quarto-xref"><span>Kapitel 14.1</span></a>.</li>
 </ol></section><section id="sec-checkdaten" class="level3" data-number="10.6.2"><h3 data-number="10.6.2" class="anchored" data-anchor-id="sec-checkdaten">
 <span class="header-section-number">10.6.2</span> Checkliste zur Datenanalyse</h3>
-<p>Hier sehen Sie im Überblick die Schritte, die in vielen Fällen sinnvoll sind, um Daten auf einem guten Niveau auszuwerten.</p>
-<ol type="1">
-<li>
-<em>Vorverarbeitung</em>
-<ol type="1">
-<li>Importieren</li>
-<li>Aufbereiten (Umkodieren, fehlende Wert versorgen, Transformieren, neue Spalten berechnen)</li>
-</ol>
-</li>
-<li>
-<em>Explorative Analyse</em>
-<ol type="1">
-<li>Daten zusammenfassen (zentrale Tendenz, Streuung, Zusammenhang – jeweils für alle UV und AV sowie weiterer potenziell relevanter Variablen)</li>
-<li>Daten visualisieren (Verteilung der UV, AV, gemeinsame Verteilung von UV und AV)</li>
-</ol>
-</li>
-<li>
-<em>Modellierung und Inferenzstatistik</em>
-<ol type="1">
-<li>Modell berechnen (AV ~ UV1 + UV2 + …)</li>
-<li>Parameter berichten (Punkt- und Intervallschätzer)</li>
-<li>Parameter visualisieren</li>
-<li>Nullhypothesen testen (z. B. ROPE)</li>
-<li>Modellgüte berichten (z. B. R-Quadrat)</li>
-</ol>
-</li>
-</ol></section><section id="rostlöser" class="level3" data-number="10.6.3"><h3 data-number="10.6.3" class="anchored" data-anchor-id="rostlöser">
+<p>In <a href="#tbl-checkliste-datenanalyse" class="quarto-xref">Tabelle&nbsp;<span>10.1</span></a> sehen Sie im Überblick die Schritte, die in vielen Fällen sinnvoll sind, um Daten auf einem guten Niveau auszuwerten.</p>
+<div id="tbl-checkliste-datenanalyse" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-checkliste-datenanalyse-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabelle&nbsp;10.1: Checkliste zur Datenanalyse
+</figcaption><div aria-describedby="tbl-checkliste-datenanalyse-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 11%">
+<col style="width: 15%">
+<col style="width: 41%">
+<col style="width: 32%">
+</colgroup>
+<thead><tr class="header">
+<th>Phase</th>
+<th>Schritt</th>
+<th>Leitfragen / Hinweise</th>
+<th>Bewertung (0–2)</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>🎯 Fragestellung</td>
+<td>Forschungsfrage klären</td>
+<td>Was ist die konkrete Frage? Was sind UV und AV? Welche alternativen Erklärungen gibt es?</td>
+<td>☐</td>
+</tr>
+<tr class="even">
+<td>🧹 Datenvorbereitung</td>
+<td>Daten importieren &amp; prüfen</td>
+<td>Sind Variablentypen korrekt? Skalenniveau passend?</td>
+<td>☐</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Daten aufbereiten</td>
+<td>Umkodieren, fehlende Werte behandeln (begründen!), Transformationen, neue Variablen</td>
+<td>☐</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Dokumentation</td>
+<td>Sind alle Schritte reproduzierbar festgehalten?</td>
+<td>☐</td>
+</tr>
+<tr class="odd">
+<td>🔍 Explorative Analyse</td>
+<td>Deskriptive Statistik</td>
+<td>Wie sind Mittelwerte, Streuungen, Verteilungen?</td>
+<td>☐</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Zusammenhänge prüfen</td>
+<td>Gibt es Korrelationen oder Gruppenunterschiede?</td>
+<td>☐</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Visualisieren</td>
+<td>Wie sehen Verteilungen und Beziehungen aus (Histogramme, Scatterplots etc.)?</td>
+<td>☐</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Auffälligkeiten erkennen</td>
+<td>Gibt es Ausreißer, Nichtlinearitäten, Muster?</td>
+<td>☐</td>
+</tr>
+<tr class="odd">
+<td>🧠 Modellidee &amp; Annahmen</td>
+<td>Modell wählen</td>
+<td>Welches Modell passt zur Fragestellung?</td>
+<td>☐</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Annahmen prüfen</td>
+<td>z. B. Linearität, Unabhängigkeit, Residuenverteilung</td>
+<td>☐</td>
+</tr>
+<tr class="odd">
+<td>⚙️ Modellierung</td>
+<td>Modell spezifizieren</td>
+<td>AV ~ UV₁ + UV₂ + …</td>
+<td>☐</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Modell schätzen</td>
+<td>Ergebnisse berechnen</td>
+<td>☐</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Alternativen prüfen</td>
+<td>Gibt es plausible andere Modelle?</td>
+<td>☐</td>
+</tr>
+<tr class="even">
+<td>📏 Ergebnisse</td>
+<td>Parameter berichten</td>
+<td>Punktschätzer und Unsicherheit (Konfidenz- oder Bayes-Intervalle)</td>
+<td>☐</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Modellgüte</td>
+<td>Wie gut erklärt das Modell die Daten (z. B. R²)?</td>
+<td>☐</td>
+</tr>
+<tr class="even">
+<td>🧪 Inferenz</td>
+<td>Hypothesen prüfen</td>
+<td>z. B. NHST oder ROPE</td>
+<td>☐</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Effektgröße bewerten</td>
+<td>Wie groß und praktisch relevant ist der Effekt?</td>
+<td>☐</td>
+</tr>
+<tr class="even">
+<td>🔎 Diagnostik</td>
+<td>Residuen analysieren</td>
+<td>Passen die Modellannahmen wirklich?</td>
+<td>☐</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Einfluss prüfen</td>
+<td>Gibt es Ausreißer oder einflussreiche Fälle?</td>
+<td>☐</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Robustheit testen</td>
+<td>Bleiben Ergebnisse stabil bei kleinen Änderungen?</td>
+<td>☐</td>
+</tr>
+<tr class="odd">
+<td>🧩 Interpretation</td>
+<td>Inhaltlich deuten</td>
+<td>Was bedeuten die Ergebnisse fachlich?</td>
+<td>☐</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Kausalität reflektieren</td>
+<td>Was darf ich (nicht) kausal interpretieren?</td>
+<td>☐</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Limitationen</td>
+<td>Welche Schwächen hat die Analyse?</td>
+<td>☐</td>
+</tr>
+<tr class="even">
+<td>📢 Kommunikation</td>
+<td>Ergebnisse darstellen</td>
+<td>Klar, verständlich, mit passenden Grafiken/Tabellen</td>
+<td>☐</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>Transparenz</td>
+<td>Unsicherheit offen darstellen, keine Überinterpretation</td>
+<td>☐</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section><section id="rostlöser" class="level3" data-number="10.6.3"><h3 data-number="10.6.3" class="anchored" data-anchor-id="rostlöser">
 <span class="header-section-number">10.6.3</span> Rostlöser</h3>
 <p>Ihre R-Skills sind etwas eingerostet? Flutscht nicht so? Keine Sorge! Es gibt Rostlöser, der Sie schnell wieder in Schwung bringt. 🧴</p>
 <section id="grundlagen-der-statistik" class="level4" data-number="10.6.3.1"><h4 data-number="10.6.3.1" class="anchored" data-anchor-id="grundlagen-der-statistik">
@@ -1735,7 +1883,7 @@ Listing&nbsp;10.1: Deskriptive Statistik mit Hilfe des R-Pakets <code>easystats<
 <p><span class="quarto-unresolved-ref">?tbl-typ-fehler-statistik</span> zeigt häufige Fehler bei statistischen Auswertungen in studentischen Arbeiten.</p>
 <div id="tbl-typ-fehler" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-typ-fehler-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Tabelle&nbsp;10.1: Typische Fehler in statistischen Auswertungen
+Tabelle&nbsp;10.2: Typische Fehler in statistischen Auswertungen
 </figcaption><div aria-describedby="tbl-typ-fehler-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="caption-top table">
 <colgroup>
