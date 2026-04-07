@@ -536,8 +536,9 @@ window.Quarto = {
   <li><a href="#korrelationen-darstellen" id="toc-korrelationen-darstellen" class="nav-link" data-scroll-target="#korrelationen-darstellen"><span class="header-section-number">10.9.4</span> Korrelationen darstellen</a></li>
   </ul>
 </li>
-  <li><a href="#aufgaben" id="toc-aufgaben" class="nav-link" data-scroll-target="#aufgaben"><span class="header-section-number">10.10</span> Aufgaben</a></li>
-  <li><a href="#fallstudien" id="toc-fallstudien" class="nav-link" data-scroll-target="#fallstudien"><span class="header-section-number">10.11</span> Fallstudien</a></li>
+  <li><a href="#typische-fehler" id="toc-typische-fehler" class="nav-link" data-scroll-target="#typische-fehler"><span class="header-section-number">10.10</span> Typische Fehler</a></li>
+  <li><a href="#aufgaben" id="toc-aufgaben" class="nav-link" data-scroll-target="#aufgaben"><span class="header-section-number">10.11</span> Aufgaben</a></li>
+  <li><a href="#fallstudien" id="toc-fallstudien" class="nav-link" data-scroll-target="#fallstudien"><span class="header-section-number">10.12</span> Fallstudien</a></li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/sebastiansauer/fopra/blob/main/080-Auswerten.qmd" class="toc-action"><i class="bi bi-github"></i>Quellcode anzeigen</a></li><li><a href="https://github.com/sebastiansauer/fopra/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
@@ -1729,13 +1730,118 @@ Listing&nbsp;10.1: Deskriptive Statistik mit Hilfe des R-Pakets <code>easystats<
 </div>
 </div>
 </div>
-</section></section></section><section id="aufgaben" class="level2" data-number="10.10"><h2 data-number="10.10" class="anchored" data-anchor-id="aufgaben">
-<span class="header-section-number">10.10</span> Aufgaben</h2>
+</section></section></section><section id="typische-fehler" class="level2" data-number="10.10"><h2 data-number="10.10" class="anchored" data-anchor-id="typische-fehler">
+<span class="header-section-number">10.10</span> Typische Fehler</h2>
+<p><span class="quarto-unresolved-ref">?tbl-typ-fehler-statistik</span> zeigt häufige Fehler bei statistischen Auswertungen in studentischen Arbeiten.</p>
+<div id="tbl-typ-fehler" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-typ-fehler-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabelle&nbsp;10.1: Typische Fehler in statistischen Auswertungen
+</figcaption><div aria-describedby="tbl-typ-fehler-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<colgroup>
+<col style="width: 1%">
+<col style="width: 15%">
+<col style="width: 31%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead><tr class="header">
+<th>Nr.</th>
+<th>Fehler</th>
+<th>Kurzbeschreibung</th>
+<th>Warum problematisch?</th>
+<th>Besser so</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td>p-Werte falsch interpretieren</td>
+<td>p wird als Wahrscheinlichkeit der Hypothese gedeutet</td>
+<td>Missverständnis der Inferenz</td>
+<td>Bayes nutzen. Oder p als Wahrscheinlichkeit der Daten unter H₀ interpretieren</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Signifikanz = Relevanz</td>
+<td>Signifikante Ergebnisse werden automatisch als wichtig angesehen</td>
+<td>Große N → fast alles signifikant</td>
+<td>Effektgrößen und praktische Bedeutung berücksichtigen</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td>Fehlende Effektgrößen</td>
+<td>Nur p-Werte berichtet</td>
+<td>Keine Aussage über Stärke des Effekts</td>
+<td>d, η², r etc. berichten und interpretieren</td>
+</tr>
+<tr class="even">
+<td>4</td>
+<td>Voraussetzungen ignorieren</td>
+<td>Tests ohne Prüfung von Annahmen durchgeführt</td>
+<td>Ergebnisse evtl. verzerrt</td>
+<td>Annahmen prüfen und ggf. robuste Verfahren nutzen</td>
+</tr>
+<tr class="odd">
+<td>5</td>
+<td>Falscher Test gewählt</td>
+<td>Test passt nicht zur Fragestellung</td>
+<td>Falsche Schlussfolgerungen</td>
+<td>Testwahl an Hypothese und Design anpassen</td>
+</tr>
+<tr class="even">
+<td>6</td>
+<td>Skalenniveaus missachten</td>
+<td>Man kann aus dem Durchschnitt von Postleitzahlen keine sinnvolle Aussage ableiten</td>
+<td>Sinnlose Ergebnisse</td>
+<td>Skalenniveau prüfen und passende Auswertung wählen</td>
+</tr>
+<tr class="odd">
+<td>7</td>
+<td>Korrelation = Kausalität</td>
+<td>Zusammenhänge als Ursache interpretiert</td>
+<td>Fehlinterpretation der Daten</td>
+<td>Vorsichtig formulieren („Zusammenhang“, „assoziiert mit“)</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>Intransparente Datenbereinigung</td>
+<td>Ausreißer/Fälle ohne klare Regeln entfernt</td>
+<td>p-Hacking / Verzerrung</td>
+<td>Kriterien vorab festlegen und dokumentieren</td>
+</tr>
+<tr class="odd">
+<td>9</td>
+<td>Fehlinterpretation von Modellen</td>
+<td>z. B. Regressionskoeffizienten falsch gedeutet</td>
+<td>Inhaltlich falsche Aussagen</td>
+<td>Modelle korrekt verstehen (Beta, Interaktion, Multikollinearität)</td>
+</tr>
+<tr class="even">
+<td>10</td>
+<td>Schlechte Ergebnisdarstellung</td>
+<td>Unklare oder fehlende Tabellen/Grafiken, fehlende Beschriftung</td>
+<td>Ergebnisse schwer verständlich</td>
+<td>Klare, APA-konforme Darstellung</td>
+</tr>
+<tr class="odd">
+<td>11</td>
+<td>Hypothesen unpräzise operationalisiert</td>
+<td>Beispiel: „Es gibt einen Unterschied“ → aber kein klarer Test spezifiziert</td>
+<td>Unklar, ob statistischer Test der Forschungsfrage entspricht</td>
+<td>statistische Hypothesen formulieren</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section><section id="aufgaben" class="level2" data-number="10.11"><h2 data-number="10.11" class="anchored" data-anchor-id="aufgaben">
+<span class="header-section-number">10.11</span> Aufgaben</h2>
 <p>Auf dem <a href="https://datenwerk.netlify.app/">Datenwerk</a> finden Sie eine Anzahl an Aufgaben zum Thema Datenanalyse. Schauen Sie sich mal die folgenden Tags an:</p>
 <ul>
 <li><a href="https://datenwerk.netlify.app/#category=eda">eda</a></li>
-</ul></section><section id="fallstudien" class="level2" data-number="10.11"><h2 data-number="10.11" class="anchored" data-anchor-id="fallstudien">
-<span class="header-section-number">10.11</span> Fallstudien</h2>
+</ul></section><section id="fallstudien" class="level2" data-number="10.12"><h2 data-number="10.12" class="anchored" data-anchor-id="fallstudien">
+<span class="header-section-number">10.12</span> Fallstudien</h2>
 <p>Fallstudien zur explorativen Datenanalyse (EDA; d.h. deskriptive Statistik und Datenvisualisierung) finden Sie z. B. im <a href="https://datenwerk.netlify.app/">Datenwerk</a>:</p>
 <ul>
 <li><a href="https://datenwerk.netlify.app/posts/flights-yacsda-eda/">flights-yacsda-eda</a></li>
