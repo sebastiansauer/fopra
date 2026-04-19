@@ -217,8 +217,8 @@ Die Stärke eines Effekts (eines Treatments) kann als Funktion von fünf Größe
 %%| label: fig-effekt
 %%| fig-cap: Die fünf Determinanten eines Effekts
 graph LR
-T[Treatment T] --> E[Effekt E]
-VP[Versuchsperson P] --> E
+U[Ursache, Treatment U] --> E[Effekt E]
+O[Versuchsperson O] --> E
 Z[Zeit Z] --> E
 R[Rahmen R] --> E
 M[Messinstrument M] --> E
@@ -227,10 +227,10 @@ M[Messinstrument M] --> E
 
 
 
-1. *Treatment* T (*Ursache* U) - *wie?*
-- ︎ Art und Menge des Treatment spielt natürlich eine Rolle (50 mg Ibuprofen wirken anders als 500 mg).
+1. *Treatment* (*Ursache* U) - *wie?*
+- ︎ Art und Menge des Treatment spielt natürlich eine Rolle (50 mg Ibuprofen wirken stärker  als 500 mg).
 
-2. *Versuchsperson* (bzw. *Versuchsobjekt*) P - *wer?*
+2. *Versuchsperson* (bzw. ***O**bjekt*) O - *wer?*
 - Auf den Versuchsobjekten wird das Treatment angewendet und die Effekte gemessen.
 - Die Effekte können also zwischen den Versuchsobjekten variieren.
 
@@ -244,7 +244,7 @@ M[Messinstrument M] --> E
 - Je nach verwendeten Messinstrument oder Zielvariablen können die Effekte des Treatments deutlicher oder weniger deutlich zum Tragen kommen.
 
 
-Prägnant zusammengefasst, kann man sagen, dass die Effektstärke (die Größe eines Effekts) eine Funktion von fünf Determinanten ist:
+Prägnant zusammengefasst, kann man sagen, dass die Effektstärke (die Größe eines Effekts) eine Funktion der fünf "ZURMO-Determinanten" ist:
 
 $$ES = f(ZURMO)$$
 
@@ -304,7 +304,7 @@ Bedrohungen bzw. Einschränkungen der internen Validität beziehen sich nur best
 
 
 
-2. *Versuchsperson* (bzw. *Versuchsobjekt*) P - *wer?*
+2. *Versuchsperson* (bzw. *Versuchsobjekt*) O - *wer?*
 - In einer medizinischen Studie werden die gesünderen Patienten in die Gruppe mit dem neuen Medikament gebracht, aber die kränkeren in die Gruppe mit dem bisherigen Standard-Medikament.
 - Allein schon durch diese Zuordnung zeigte sich ein Effekt; das Treatment war unwirksam.
 
@@ -337,7 +337,7 @@ Externe Validität fragt, wie gut ein Effekt verallgemeinert werden kann, z.B. a
 - Eine Forscherin hat nur einen Teil eines neuen Coachingskonzepts in einem Treatment umgesetzt. Sind die Ergebnisse jetzt auf das ganze Coachingkonzept verallgemeinerter?
 
 
-2. *Versuchsperson* (bzw. *Versuchsobjekt*) P - *wer?*
+2. *Versuchsperson* (bzw. *Versuchsobjekt*) O - *wer?*
 - Ein Krebsmedikament wurde nur an älteren Frauen evaluiert (und dies hat das Forscherteam korrekt angegeben). Ob der Effekt wohl auch für andere Altersgruppen und Geschlechter gilt?
 
 3. *Zeit* Z - *wann?*

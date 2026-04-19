@@ -24,6 +24,14 @@ Behalten Sie Ihren Fortschritt im Projektplan im Blick, s. @fig-projektplan.
 
 
 
+### Benötigte R-Pakete
+
+
+```{r}
+library(pwr)  # Planung der Stichprobengröße für Nullhypothesentests
+library(prada) # Planung der Stichprobengröße für Konfidenzintervalle
+```
+
 
 
 ```{r}
@@ -466,7 +474,7 @@ Nennen wir das einen "mittleren" Effekt.
 
 
 Wie groß "muss" eine Stichprobe sein, damit man einen Effekt findet (wenn er denn da ist), am besten mit einer gewissen (hohen!) Genauigkeit?
-Die Beantwortung solcher Fragen nennt man auch Poweranalyse und ist im Folgenden in Grundzügen dargestellt.
+Die Beantwortung solcher Fragen nennt man auch *Poweranalyse* und ist im Folgenden in Grundzügen dargestellt.
 
 
 ### Schätzung eines normalverteilten Parameters 
@@ -587,7 +595,7 @@ Dabei hängt diese Wahrscheinlichkeit von der Größe des Effekts ab, s. @tbl-co
 | **r** (Korrelation)                   |  0.10 |   0.30 | 0.50 |
 | **$f^2$** (multiple Regression)          |  0.02 |   0.15 | 0.35 |
 | **$\eta^2$** (ANOVA, ungefähr)              |  0.01 |   0.06 | 0.14 |
-| *$f$** (ANOVA)                         |  0.10 |   0.25 | 0.40 |
+| **$f$** (ANOVA)                         |  0.10 |   0.25 | 0.40 |
 
 : Einteilung der Effektstärke nach Cohen {#tbl-cohen1}
 
@@ -610,21 +618,35 @@ s. @tbl-cohen2. Dabei typische Annahmen getroffen ($\alpha = .05$, $\beta=.2$).
 | **Korrelation ($r$)**                 |   783 |        85 |        29 |
 | **ANOVA (1 Faktor, 4 Gruppen)**     |   180 |        44 |        28 |
 | **$\chi^2$-Test (df = 1)**              |   785 |        88 |        32 |
-| **$R^2$**                              |  0.01 | 0.06–0.09 | 0.14–0.25 |
-| **$f^2$ (Cohen)**                      |  0.02 |      0.15 |      0.35 |
-
 
 : Mindestwerte des Stichprobenumfänge in Abhängigkeit der Effektstärke {#tbl-cohen2}
+
+Für Regressionen hängt die Stichprobengröße nicht nur von der Effektgröße, sondern auch von der Anzahl der Prädiktoren ($k$) ab, s. @tbl-cohen3.
+
+| Prädiktoren \(k\) | klein | mittel | groß |
+|------------------:|------:|-------:|-----:|
+| 1 *(= r)*         |   783 |     85 |   29 |
+| 2                 |   481 |     67 |   30 |
+| 3                 |   547 |     76 |   34 |
+| 4                 |   599 |     84 |   38 |
+| 5                 |   645 |     91 |   42 |
+| 6                 |   686 |     97 |   45 |
+| 7                 |   726 |    102 |   48 |
+| 8                 |   757 |    107 |   50 |
+
+
+: Mindestwerte des Stichprobenumfänge bei Regressionsanalysen in Abhängigkeit der Effektstärke und der Anzahl der Prädiktoren {#tbl-cohen3}
 
 
 
 Die hier angegebenen Stichprobengrößen beziehen sich auf das Ziel, 
 mit 80% Wahrscheinlichkeit einen Effekt (von angegebener Größe: klein, mittel, groß) zu entdecken.
-Damit ist noch nichts über die Präzision der Parameterschätzung gesagt.
-Die Stichprobengrößen sind also nur gedacht für das bescheidene Ziel der Schätzung, ob ein Effekt ungleich 0 ist.
+Damit ist noch *nichts* über die *Präzision* der Parameterschätzung gesagt.
+Die Stichprobengrößen sind also nur gedacht für das bescheiderene Ziel der Schätzung, ob ein Effekt ungleich 0 ist.
 Möchte man die wissen, wie viele Versuchspersonen man benötigt, um einen Effekt mit einer bestimmten Genauigkeit zu schätzen,
 würde man mehr Versuchspersonen benötigen.
-Das R-Paket [`effectsize`](https://easystats.github.io/see/articles/effectsize.html), Teil von `easystats`, bietet Hilfen zur Klassifizierung von Effektstärken.
+Das R-Paket [`effectsize`](https://easystats.github.io/see/articles/effectsize.html), Teil von `easystats`, 
+bietet Hilfen zur Klassifizierung von Effektstärken.
 
 ### Umsetzung mit R
 
@@ -654,9 +676,6 @@ Dabei gilt:
 #### Für Konfidenzintervalle
 
 
-```{r}
-library(prada)
-```
 
 
 Bei $u=5$ Prädiktoren und einem erwarteten R-Quadrat von 0.3
@@ -666,10 +685,48 @@ man das Konfidenzintervall von $R^2$ auf 0.1 begrenzen möchte:
 ```{r}
 u <- 5
 r2 <- .3
-ss <- sample_size_for_r2(u = u, r2 = r2) 
+ss <- sample_size_for_r2(u = u, r2 = r2)  # aus dem R-Paket prada
 
 ss |> select(N)
 ```
+
+## Welche Prädiktoren soll ich in meine Regressionsanalyse aufnehmen?
+
+1. Alle UVs
+2. ggf. weitere Kovariaten
+
+
+:::{#def-kovariate}
+### Kovariate
+Eine Kovariate ist eine Variable, die in ein statistisches Modell aufgenommen wird, 
+um zusätzliche Varianz der abhängigen Variable zu erklären oder Störeinflüsse zu kontrollieren,
+ohne selbst die zentrale interessierende unabhängige Variable zu sein. $\square$
+:::
+
+
+Es bietet sich an, weitere Prädiktoren in eine Regression aufnehmen, wenn sie:
+- Confounding kontrollieren
+- Residualvarianz reduzieren (Parameter werden genauer geschätzt)
+- Moderation testen (Interaktionen)
+- theoretisch begründet sind
+
+
+Nicht aufnehmen, wenn:
+- sie durch die UV verursacht sind (Mediator)
+- sie sowohl eine Wirkung der UV als auch der AV ist (Collider)
+- keine theoretische Begründung vorliegt
+- Stichprobe zu klein ist
+
+
+
+Eine Kovariate sollte:
+
+1. zeitlich vor der UV liegen
+2. mit UV UND AV zusammenhängen können
+3. nicht durch die UV verursacht sein
+4. theoretisch begründet sein
+
+Eine Kovariate, die die Bedingungen nicht erfüllt, sollte nicht als in das Modell aufgenommen werden.
 
 
 ## Literatur
