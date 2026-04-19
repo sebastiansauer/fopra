@@ -515,7 +515,8 @@ window.Quarto = {
   <ul class="collapse">
 <li><a href="#tldr" id="toc-tldr" class="nav-link" data-scroll-target="#tldr"><span class="header-section-number">5.1.1</span> tl;dr</a></li>
   <li><a href="#standort-im-lernpfad" id="toc-standort-im-lernpfad" class="nav-link" data-scroll-target="#standort-im-lernpfad"><span class="header-section-number">5.1.2</span> Standort im Lernpfad</a></li>
-  <li><a href="#lernziele" id="toc-lernziele" class="nav-link" data-scroll-target="#lernziele"><span class="header-section-number">5.1.3</span> Lernziele</a></li>
+  <li><a href="#ben%C3%B6tigte-r-pakete" id="toc-benötigte-r-pakete" class="nav-link" data-scroll-target="#ben%C3%B6tigte-r-pakete"><span class="header-section-number">5.1.3</span> Benötigte R-Pakete</a></li>
+  <li><a href="#lernziele" id="toc-lernziele" class="nav-link" data-scroll-target="#lernziele"><span class="header-section-number">5.1.4</span> Lernziele</a></li>
   </ul>
 </li>
   <li>
@@ -554,7 +555,8 @@ window.Quarto = {
   <li><a href="#umsetzung-mit-r" id="toc-umsetzung-mit-r" class="nav-link" data-scroll-target="#umsetzung-mit-r"><span class="header-section-number">5.7.4</span> Umsetzung mit R</a></li>
   </ul>
 </li>
-  <li><a href="#literatur" id="toc-literatur" class="nav-link" data-scroll-target="#literatur"><span class="header-section-number">5.8</span> Literatur</a></li>
+  <li><a href="#welche-variablen-soll-ich-in-meine-regressionsanalyse-aufnehmen" id="toc-welche-variablen-soll-ich-in-meine-regressionsanalyse-aufnehmen" class="nav-link" data-scroll-target="#welche-variablen-soll-ich-in-meine-regressionsanalyse-aufnehmen"><span class="header-section-number">5.8</span> Welche Variablen soll ich in meine Regressionsanalyse aufnehmen?</a></li>
+  <li><a href="#literatur" id="toc-literatur" class="nav-link" data-scroll-target="#literatur"><span class="header-section-number">5.9</span> Literatur</a></li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/sebastiansauer/fopra/blob/main/040-Populationsbeschreibung.qmd" class="toc-action"><i class="bi bi-github"></i>Quellcode anzeigen</a></li><li><a href="https://github.com/sebastiansauer/fopra/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
@@ -592,8 +594,15 @@ window.Quarto = {
 </section><section id="standort-im-lernpfad" class="level3" data-number="5.1.2"><h3 data-number="5.1.2" class="anchored" data-anchor-id="standort-im-lernpfad">
 <span class="header-section-number">5.1.2</span> Standort im Lernpfad</h3>
 <p><a href="index.html#fig-ueberblick" class="quarto-xref">Abbildung&nbsp;<span>1.2</span></a> zeigt den Standort dieses Kapitels im Lernpfad und gibt damit einen Überblick über das Thema dieses Kapitels im Kontext aller Kapitel. Behalten Sie Ihren Fortschritt im Projektplan im Blick, s. <a href="index.html#fig-projektplan" class="quarto-xref">Abbildung&nbsp;<span>1.3</span></a>.</p>
-</section><section id="lernziele" class="level3" data-number="5.1.3"><h3 data-number="5.1.3" class="anchored" data-anchor-id="lernziele">
-<span class="header-section-number">5.1.3</span> Lernziele</h3>
+</section><section id="benötigte-r-pakete" class="level3" data-number="5.1.3"><h3 data-number="5.1.3" class="anchored" data-anchor-id="benötigte-r-pakete">
+<span class="header-section-number">5.1.3</span> Benötigte R-Pakete</h3>
+<p>In diesem Kapitel benötigen Sie folgende R-Pakete.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/heliosdrm/pwr">pwr</a></span><span class="op">)</span>  <span class="co"># Planung der Stichprobengröße für Nullhypothesentests</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">prada</span><span class="op">)</span> <span class="co"># Planung der Stichprobengröße für Konfidenzintervalle</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section><section id="lernziele" class="level3" data-number="5.1.4"><h3 data-number="5.1.4" class="anchored" data-anchor-id="lernziele">
+<span class="header-section-number">5.1.4</span> Lernziele</h3>
 <ul>
 <li>Sie können das Ziel einer Populationsbeschreibung von einer Explikation (kausale Erklärung) begrifflich trennen.</li>
 <li>Sie können erläutern, inwiefern die Inferenzstatistik benötigt wird, um die Ungewissheit einer Schätzung eines Populationsparamters zu quantifizieren.</li>
@@ -748,7 +757,7 @@ Abbildung&nbsp;5.3: Deskriptivstatistik fasst zusammen. Inferenzstatistik verall
 <div id="exm-mtcars" class="theorem example">
 <p><span class="theorem-title"><strong>Beispiel 5.7 (Spritverbrauch bei Automatik- vs.&nbsp;manuellem Getriebe)</strong></span> Wie groß ist der Unterschied im Spritverbrauch <em>im Durchschnitt</em> bei Automatik- vs.&nbsp;manuellem Getriebe?</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://mc-stan.org/rstanarm/">rstanarm</a></span><span class="op">)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://mc-stan.org/rstanarm/">rstanarm</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://easystats.github.io/easystats/">easystats</a></span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/data.html">data</a></span><span class="op">(</span><span class="va">mtcars</span><span class="op">)</span></span>
 <span></span>
@@ -756,7 +765,7 @@ Abbildung&nbsp;5.3: Deskriptivstatistik fasst zusammen. Inferenzstatistik verall
 </div>
 <p>Mit <code>parameters()</code> kann man sich die Schätzintervalle ausgeben lassen:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">parameters</span><span class="op">(</span><span class="va">m1</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">parameters</span><span class="op">(</span><span class="va">m1</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
@@ -771,7 +780,7 @@ Abbildung&nbsp;5.3: Deskriptivstatistik fasst zusammen. Inferenzstatistik verall
 </blockquote>
 <p>Oder, anschaulicher, man kann sich den Schätzbereich auch visualisieren lassen, s. <a href="#fig-mtcars1" class="quarto-xref">Abbildung&nbsp;<span>5.4</span></a>.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="fu">parameters</span><span class="op">(</span><span class="va">m1</span><span class="op">)</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="fu">parameters</span><span class="op">(</span><span class="va">m1</span><span class="op">)</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div id="fig-mtcars1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-mtcars1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
@@ -1004,7 +1013,7 @@ Abbildung&nbsp;5.8: Studiendesign
 <p>Das ist ein Unterschied von 3 cm, oder ca. 1/2 SD-Einheit. Nennen wir das einen “mittleren” Effekt.</p>
 </section><section id="planung-der-stichprobengröße" class="level2" data-number="5.7"><h2 data-number="5.7" class="anchored" data-anchor-id="planung-der-stichprobengröße">
 <span class="header-section-number">5.7</span> Planung der Stichprobengröße</h2>
-<p>Wie groß “muss” eine Stichprobe sein, damit man einen Effekt findet (wenn er denn da ist), am besten mit einer gewissen (hohen!) Genauigkeit? Die Beantwortung solcher Fragen nennt man auch Poweranalyse und ist im Folgenden in Grundzügen dargestellt.</p>
+<p>Wie groß “muss” eine Stichprobe sein, damit man einen Effekt findet (wenn er denn da ist), am besten mit einer gewissen (hohen!) Genauigkeit? Die Beantwortung solcher Fragen nennt man auch <em>Poweranalyse</em> und ist im Folgenden in Grundzügen dargestellt.</p>
 <section id="schätzung-eines-normalverteilten-parameters" class="level3" data-number="5.7.1"><h3 data-number="5.7.1" class="anchored" data-anchor-id="schätzung-eines-normalverteilten-parameters">
 <span class="header-section-number">5.7.1</span> Schätzung eines normalverteilten Parameters</h3>
 <p>Sagen wir, wir möchten einen normalverteilten Parameter <span class="math inline">\(X\)</span> mit “hinreichender Genauigkeit”, <span class="math inline">\(e\)</span> schätzen. Dazu müssen Sie Annahmen treffen zur Verteilungsform und zur Streuung von <span class="math inline">\(X\)</span>.</p>
@@ -1022,7 +1031,7 @@ Abbildung&nbsp;5.8: Studiendesign
 <p><span class="math display">\[n_{min} = \frac{z^2\sigma^2}{e^2}\]</span></p>
 <p>Lassen wir R die schnöde Rechenarbeit erledigen:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">z</span> <span class="op">&lt;-</span> <span class="fl">1.96</span>  <span class="co"># z-Wert für 95%-KI</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">z</span> <span class="op">&lt;-</span> <span class="fl">1.96</span>  <span class="co"># z-Wert für 95%-KI</span></span>
 <span><span class="va">s</span> <span class="op">&lt;-</span> <span class="fl">20</span>  <span class="co"># Streuung, Sigma</span></span>
 <span><span class="va">e</span> <span class="op">&lt;-</span> <span class="fl">4</span> <span class="co"># Radius von 4 Minuten</span></span>
 <span></span>
@@ -1123,7 +1132,8 @@ Tabelle&nbsp;5.2: Einteilung der Effektstärke nach Cohen
 <td style="text-align: right;">0.14</td>
 </tr>
 <tr class="odd">
-<td>*<span class="math inline">\(f\)</span>** (ANOVA)</td>
+<td>
+<strong><span class="math inline">\(f\)</span></strong> (ANOVA)</td>
 <td style="text-align: right;">0.10</td>
 <td style="text-align: right;">0.25</td>
 <td style="text-align: right;">0.40</td>
@@ -1187,34 +1197,89 @@ Tabelle&nbsp;5.3: Mindestwerte des Stichprobenumfänge in Abhängigkeit der Effe
 <td style="text-align: right;">88</td>
 <td style="text-align: right;">32</td>
 </tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<p>Für Regressionen hängt die Stichprobengröße nicht nur von der Effektgröße, sondern auch von der Anzahl der Prädiktoren (<span class="math inline">\(k\)</span>) ab, s. <a href="#tbl-cohen3" class="quarto-xref">Tabelle&nbsp;<span>5.4</span></a>.</p>
+<div id="tbl-cohen3" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure"><figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-cohen3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabelle&nbsp;5.4: Mindestwerte des Stichprobenumfänge bei Regressionsanalysen in Abhängigkeit der Effektstärke und der Anzahl der Prädiktoren
+</figcaption><div aria-describedby="tbl-cohen3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="caption-top table">
+<thead><tr class="header">
+<th style="text-align: right;">Prädiktoren (k)</th>
+<th style="text-align: right;">klein</th>
+<th style="text-align: right;">mittel</th>
+<th style="text-align: right;">groß</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1 <em>(= r)</em>
+</td>
+<td style="text-align: right;">783</td>
+<td style="text-align: right;">85</td>
+<td style="text-align: right;">29</td>
+</tr>
 <tr class="even">
-<td><strong><span class="math inline">\(R^2\)</span></strong></td>
-<td style="text-align: right;">0.01</td>
-<td style="text-align: right;">0.06–0.09</td>
-<td style="text-align: right;">0.14–0.25</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">481</td>
+<td style="text-align: right;">67</td>
+<td style="text-align: right;">30</td>
 </tr>
 <tr class="odd">
-<td><strong><span class="math inline">\(f^2\)</span> (Cohen)</strong></td>
-<td style="text-align: right;">0.02</td>
-<td style="text-align: right;">0.15</td>
-<td style="text-align: right;">0.35</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">547</td>
+<td style="text-align: right;">76</td>
+<td style="text-align: right;">34</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">599</td>
+<td style="text-align: right;">84</td>
+<td style="text-align: right;">38</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">645</td>
+<td style="text-align: right;">91</td>
+<td style="text-align: right;">42</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">686</td>
+<td style="text-align: right;">97</td>
+<td style="text-align: right;">45</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">726</td>
+<td style="text-align: right;">102</td>
+<td style="text-align: right;">48</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">757</td>
+<td style="text-align: right;">107</td>
+<td style="text-align: right;">50</td>
 </tr>
 </tbody>
 </table>
 </div>
 </figure>
 </div>
-<p>Die hier angegebenen Stichprobengrößen beziehen sich auf das Ziel, mit 80% Wahrscheinlichkeit einen Effekt (von angegebener Größe: klein, mittel, groß) zu entdecken. Damit ist noch nichts über die Präzision der Parameterschätzung gesagt. Die Stichprobengrößen sind also nur gedacht für das bescheidene Ziel der Schätzung, ob ein Effekt ungleich 0 ist. Möchte man die wissen, wie viele Versuchspersonen man benötigt, um einen Effekt mit einer bestimmten Genauigkeit zu schätzen, würde man mehr Versuchspersonen benötigen. Das R-Paket <a href="https://easystats.github.io/see/articles/effectsize.html"><code>effectsize</code></a>, Teil von <code>easystats</code>, bietet Hilfen zur Klassifizierung von Effektstärken.</p>
+<p>Die hier angegebenen Stichprobengrößen beziehen sich auf das Ziel, mit 80% Wahrscheinlichkeit einen Effekt (von angegebener Größe: klein, mittel, groß) zu entdecken. Damit ist noch <em>nichts</em> über die <em>Präzision</em> der Parameterschätzung gesagt. Die Stichprobengrößen sind also nur gedacht für das bescheiderene Ziel der Schätzung, ob ein Effekt ungleich 0 ist. Möchte man die wissen, wie viele Versuchspersonen man benötigt, um einen Effekt mit einer bestimmten Genauigkeit zu schätzen, würde man mehr Versuchspersonen benötigen. Das R-Paket <a href="https://easystats.github.io/see/articles/effectsize.html"><code>effectsize</code></a>, Teil von <code>easystats</code>, bietet Hilfen zur Klassifizierung von Effektstärken.</p>
 </section><section id="umsetzung-mit-r" class="level3" data-number="5.7.4"><h3 data-number="5.7.4" class="anchored" data-anchor-id="umsetzung-mit-r">
 <span class="header-section-number">5.7.4</span> Umsetzung mit R</h3>
 <section id="für-nullhypothesen" class="level4" data-number="5.7.4.1"><h4 data-number="5.7.4.1" class="anchored" data-anchor-id="für-nullhypothesen">
 <span class="header-section-number">5.7.4.1</span> Für Nullhypothesen</h4>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/heliosdrm/pwr">pwr</a></span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/heliosdrm/pwr">pwr</a></span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Um die minimale Stichprobengröße für einen mittleren Effekt von <span class="math inline">\(f^2\)</span> zu berechnen, kann man die Funktion <code>pwr.f2.test</code> verwenden, etwa so:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/pwr/man/pwr.f2.test.html">pwr.f2.test</a></span><span class="op">(</span>u<span class="op">=</span><span class="fl">5</span>, f2<span class="op">=</span><span class="fl">0.1</span><span class="op">/</span><span class="op">(</span><span class="fl">1</span><span class="op">-</span><span class="fl">0.1</span><span class="op">)</span>, sig.level<span class="op">=</span><span class="fl">0.05</span>, power <span class="op">=</span> <span class="fl">.8</span><span class="op">)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/pwr/man/pwr.f2.test.html">pwr.f2.test</a></span><span class="op">(</span>u<span class="op">=</span><span class="fl">5</span>, f2<span class="op">=</span><span class="fl">0.1</span><span class="op">/</span><span class="op">(</span><span class="fl">1</span><span class="op">-</span><span class="fl">0.1</span><span class="op">)</span>, sig.level<span class="op">=</span><span class="fl">0.05</span>, power <span class="op">=</span> <span class="fl">.8</span><span class="op">)</span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">##      Multiple regression power calculation </span></span>
 <span><span class="co">## </span></span>
@@ -1240,14 +1305,11 @@ Tabelle&nbsp;5.3: Mindestwerte des Stichprobenumfänge in Abhängigkeit der Effe
 </li>
 </ul></section><section id="für-konfidenzintervalle" class="level4" data-number="5.7.4.2"><h4 data-number="5.7.4.2" class="anchored" data-anchor-id="für-konfidenzintervalle">
 <span class="header-section-number">5.7.4.2</span> Für Konfidenzintervalle</h4>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va">prada</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
 <p>Bei <span class="math inline">\(u=5\)</span> Prädiktoren und einem erwarteten R-Quadrat von 0.3 wird folgende Stichprobengröße benötigt, wenn man das Konfidenzintervall von <span class="math inline">\(R^2\)</span> auf 0.1 begrenzen möchte:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">u</span> <span class="op">&lt;-</span> <span class="fl">5</span></span>
 <span><span class="va">r2</span> <span class="op">&lt;-</span> <span class="fl">.3</span></span>
-<span><span class="va">ss</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/prada/man/sample_size_for_r2.html">sample_size_for_r2</a></span><span class="op">(</span>u <span class="op">=</span> <span class="va">u</span>, r2 <span class="op">=</span> <span class="va">r2</span><span class="op">)</span> </span>
+<span><span class="va">ss</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/prada/man/sample_size_for_r2.html">sample_size_for_r2</a></span><span class="op">(</span>u <span class="op">=</span> <span class="va">u</span>, r2 <span class="op">=</span> <span class="va">r2</span><span class="op">)</span>  <span class="co"># aus dem R-Paket prada</span></span>
 <span></span>
 <span><span class="va">ss</span> <span class="op">|&gt;</span> <span class="fu">select</span><span class="op">(</span><span class="va">N</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
@@ -1258,8 +1320,28 @@ Tabelle&nbsp;5.3: Mindestwerte des Stichprobenumfänge in Abhängigkeit der Effe
 </div>
 </div>
 </div>
-</section></section></section><section id="literatur" class="level2" data-number="5.8"><h2 data-number="5.8" class="anchored" data-anchor-id="literatur">
-<span class="header-section-number">5.8</span> Literatur</h2>
+</section></section></section><section id="welche-variablen-soll-ich-in-meine-regressionsanalyse-aufnehmen" class="level2" data-number="5.8"><h2 data-number="5.8" class="anchored" data-anchor-id="welche-variablen-soll-ich-in-meine-regressionsanalyse-aufnehmen">
+<span class="header-section-number">5.8</span> Welche Variablen soll ich in meine Regressionsanalyse aufnehmen?</h2>
+<p>Nehmen Sie (zusätzlich zur AV) folgende Variablen in Ihr Regressionsmodell auf:</p>
+<ol type="1">
+<li>Alle UVs</li>
+<li>ggf. weitere Kovariaten</li>
+</ol>
+<div id="def-kovariate" class="theorem definition">
+<p><span class="theorem-title"><strong>Definition 5.6 (Kovariate)</strong></span> Eine Kovariate ist eine Variable, die in ein statistisches Modell aufgenommen wird, um zusätzliche Varianz der abhängigen Variable zu erklären oder Störeinflüsse zu kontrollieren, ohne selbst die zentrale interessierende unabhängige Variable zu sein. <span class="math inline">\(\square\)</span></p>
+</div>
+<p>Es bietet sich an, weitere Prädiktoren in eine Regression aufnehmen, wenn sie: - Confounding kontrollieren - Residualvarianz reduzieren (Parameter werden genauer geschätzt) - Moderation testen (Interaktionen) - theoretisch begründet sind</p>
+<p>Nicht aufnehmen, wenn: - sie durch die UV verursacht sind (Mediator) - sie sowohl eine Wirkung der UV als auch der AV ist (Collider) - keine theoretische Begründung vorliegt - Stichprobe zu klein ist</p>
+<p>Eine Kovariate sollte:</p>
+<ol type="1">
+<li>zeitlich vor der UV liegen</li>
+<li>mit UV UND AV zusammenhängen können</li>
+<li>nicht durch die UV verursacht sein</li>
+<li>theoretisch begründet sein</li>
+</ol>
+<p>Eine Kovariate, die die Bedingungen nicht erfüllt, sollte nicht als in das Modell aufgenommen werden.</p>
+</section><section id="literatur" class="level2" data-number="5.9"><h2 data-number="5.9" class="anchored" data-anchor-id="literatur">
+<span class="header-section-number">5.9</span> Literatur</h2>
 <p>Eine klassische Einführung in das Thema Planung psychologischer Studien liefert <span class="citation" data-cites="Bortz2006">Bortz &amp; Döring (<a href="130-references.html#ref-Bortz2006" role="doc-biblioref">2006</a>)</span>.</p>
 
 
