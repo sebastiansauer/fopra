@@ -26,6 +26,7 @@ Behalten Sie Ihren Fortschritt im Projektplan im Blick, s. @fig-projektplan.
 
 ### Benötigte R-Pakete
 
+In diesem Kapitel benötigen Sie folgende R-Pakete.
 
 ```{r}
 library(pwr)  # Planung der Stichprobengröße für Nullhypothesentests
@@ -690,7 +691,9 @@ ss <- sample_size_for_r2(u = u, r2 = r2)  # aus dem R-Paket prada
 ss |> select(N)
 ```
 
-## Welche Prädiktoren soll ich in meine Regressionsanalyse aufnehmen?
+## Welche Variablen soll ich in meine Regressionsanalyse aufnehmen?
+
+Nehmen Sie (zusätzlich zur AV) folgende Variablen in Ihr Regressionsmodell auf:
 
 1. Alle UVs
 2. ggf. weitere Kovariaten
