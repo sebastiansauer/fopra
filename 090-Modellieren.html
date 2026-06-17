@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="de" xml:lang="de"><head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
-<meta name="generator" content="quarto-1.9.36">
+<meta charset="UTF-8">
+<meta name="generator" content="quarto-1.9.37">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 <meta name="keywords" content="Versuchsplanung, Statistik, R, Datenanalyse, Psychologie, Forschung">
 <meta name="description" content="“Planung, Erhebung, Auswertung und Berichtlegung quantitativer psychologischer Studien: Ein Kurs für Anfänger”">
@@ -95,14 +94,14 @@ div.csl-indent {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-f418161beb48e0141c760e455f12af2c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d0ae9245876894da5ac7e18953ecc5cc.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-969b080e2f4de514111c133ed7ee6ec2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-f19be3a04e224c6e3015e95e2247475f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-969b080e2f4de514111c133ed7ee6ec2.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-414b5c4ed78a43da754c5fea08cce4b8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-613b3621c13d6e1168d5fe52bd912707.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-414b5c4ed78a43da754c5fea08cce4b8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/downloadthis-1.9.1/downloadthis.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
@@ -559,7 +558,7 @@ window.Quarto = {
   </ul>
 </li>
   <li>
-<a href="#mediatoranalyse" id="toc-mediatoranalyse" class="nav-link" data-scroll-target="#mediatoranalyse"><span class="header-section-number">12.7</span> Mediatoranalyse</a>
+<a href="#einfache-mediatoranalyse" id="toc-einfache-mediatoranalyse" class="nav-link" data-scroll-target="#einfache-mediatoranalyse"><span class="header-section-number">12.7</span> Einfache Mediatoranalyse</a>
   <ul class="collapse">
 <li><a href="#grundlagen" id="toc-grundlagen" class="nav-link" data-scroll-target="#grundlagen"><span class="header-section-number">12.7.1</span> Grundlagen</a></li>
   <li><a href="#fallbeispiel" id="toc-fallbeispiel" class="nav-link" data-scroll-target="#fallbeispiel"><span class="header-section-number">12.7.2</span> Fallbeispiel</a></li>
@@ -567,16 +566,25 @@ window.Quarto = {
   </ul>
 </li>
   <li>
-<a href="#vertiefung-2" id="toc-vertiefung-2" class="nav-link" data-scroll-target="#vertiefung-2"><span class="header-section-number">12.8</span> Vertiefung</a>
+<a href="#sec-moderierte-mediation" id="toc-sec-moderierte-mediation" class="nav-link" data-scroll-target="#sec-moderierte-mediation"><span class="header-section-number">12.8</span> Moderierte Mediation</a>
   <ul class="collapse">
-<li><a href="#within-variable-mit-mehr-als-zwei-stufen" id="toc-within-variable-mit-mehr-als-zwei-stufen" class="nav-link" data-scroll-target="#within-variable-mit-mehr-als-zwei-stufen"><span class="header-section-number">12.8.1</span> 1 within-Variable mit mehr als zwei Stufen</a></li>
-  <li><a href="#design-4" id="toc-design-4" class="nav-link" data-scroll-target="#design-4"><span class="header-section-number">12.8.2</span> Design</a></li>
-  <li><a href="#deskriptive-analyse-4" id="toc-deskriptive-analyse-4" class="nav-link" data-scroll-target="#deskriptive-analyse-4"><span class="header-section-number">12.8.3</span> Deskriptive Analyse</a></li>
-  <li><a href="#modellierung-und-inferenz-3" id="toc-modellierung-und-inferenz-3" class="nav-link" data-scroll-target="#modellierung-und-inferenz-3"><span class="header-section-number">12.8.4</span> Modellierung und Inferenz</a></li>
+<li><a href="#konzeptuelles-und-statistisches-diagramm" id="toc-konzeptuelles-und-statistisches-diagramm" class="nav-link" data-scroll-target="#konzeptuelles-und-statistisches-diagramm"><span class="header-section-number">12.8.1</span> Konzeptuelles und statistisches Diagramm</a></li>
+  <li><a href="#der-index-der-moderierten-mediation" id="toc-der-index-der-moderierten-mediation" class="nav-link" data-scroll-target="#der-index-der-moderierten-mediation"><span class="header-section-number">12.8.2</span> Der Index der moderierten Mediation</a></li>
+  <li><a href="#beispiel-mit-simulierten-daten" id="toc-beispiel-mit-simulierten-daten" class="nav-link" data-scroll-target="#beispiel-mit-simulierten-daten"><span class="header-section-number">12.8.3</span> Beispiel mit simulierten Daten</a></li>
+  <li><a href="#sonderfall-moderation-des-c-pfads" id="toc-sonderfall-moderation-des-c-pfads" class="nav-link" data-scroll-target="#sonderfall-moderation-des-c-pfads"><span class="header-section-number">12.8.4</span> Sonderfall: Moderation des c′-Pfads</a></li>
   </ul>
 </li>
-  <li><a href="#fazit" id="toc-fazit" class="nav-link" data-scroll-target="#fazit"><span class="header-section-number">12.9</span> Fazit</a></li>
-  <li><a href="#aufgaben" id="toc-aufgaben" class="nav-link" data-scroll-target="#aufgaben"><span class="header-section-number">12.10</span> Aufgaben</a></li>
+  <li>
+<a href="#vertiefung-2" id="toc-vertiefung-2" class="nav-link" data-scroll-target="#vertiefung-2"><span class="header-section-number">12.9</span> Vertiefung</a>
+  <ul class="collapse">
+<li><a href="#within-variable-mit-mehr-als-zwei-stufen" id="toc-within-variable-mit-mehr-als-zwei-stufen" class="nav-link" data-scroll-target="#within-variable-mit-mehr-als-zwei-stufen"><span class="header-section-number">12.9.1</span> 1 within-Variable mit mehr als zwei Stufen</a></li>
+  <li><a href="#design-4" id="toc-design-4" class="nav-link" data-scroll-target="#design-4"><span class="header-section-number">12.9.2</span> Design</a></li>
+  <li><a href="#deskriptive-analyse-4" id="toc-deskriptive-analyse-4" class="nav-link" data-scroll-target="#deskriptive-analyse-4"><span class="header-section-number">12.9.3</span> Deskriptive Analyse</a></li>
+  <li><a href="#modellierung-und-inferenz-3" id="toc-modellierung-und-inferenz-3" class="nav-link" data-scroll-target="#modellierung-und-inferenz-3"><span class="header-section-number">12.9.4</span> Modellierung und Inferenz</a></li>
+  </ul>
+</li>
+  <li><a href="#fazit" id="toc-fazit" class="nav-link" data-scroll-target="#fazit"><span class="header-section-number">12.10</span> Fazit</a></li>
+  <li><a href="#aufgaben" id="toc-aufgaben" class="nav-link" data-scroll-target="#aufgaben"><span class="header-section-number">12.11</span> Aufgaben</a></li>
   </ul><div class="toc-actions"><ul><li><a href="https://github.com/sebastiansauer/fopra/blob/main/090-Modellieren.qmd" class="toc-action"><i class="bi bi-github"></i>Quellcode anzeigen</a></li><li><a href="https://github.com/sebastiansauer/fopra/issues/new" class="toc-action"><i class="bi empty"></i>Problem melden</a></li></ul></div></nav>
     </div>
 <!-- main -->
@@ -615,9 +623,10 @@ window.Quarto = {
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://easystats.github.io/easystats/">easystats</a></span><span class="op">)</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://indrajeetpatil.github.io/ggstatsplot/">ggstatsplot</a></span><span class="op">)</span>  <span class="co"># Visualisierung</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://www.indrapatil.com/ggstatsplot/">ggstatsplot</a></span><span class="op">)</span>  <span class="co"># Visualisierung</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://rpkgs.datanovia.com/ggpubr/">ggpubr</a></span><span class="op">)</span>  <span class="co"># Visualisierung</span></span>
-<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://mc-stan.org/rstanarm/">rstanarm</a></span><span class="op">)</span>  <span class="co"># Bayes</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://mc-stan.org/rstanarm/">rstanarm</a></span><span class="op">)</span>  <span class="co"># Bayes</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://imai.princeton.edu/projects/mechanisms.html">mediation</a></span><span class="op">)</span>  <span class="co"># Mediation, ggf. weitere Pakete, s.u.</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section><section id="position-im-lernpfad" class="level3" data-number="12.1.3"><h3 data-number="12.1.3" class="anchored" data-anchor-id="position-im-lernpfad">
 <span class="header-section-number">12.1.3</span> Position im Lernpfad</h3>
@@ -704,7 +713,7 @@ Hinweis
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">d_bringtnixtin_path</span> <span class="op">&lt;-</span> <span class="st">"https://raw.githubusercontent.com/sebastiansauer/fopra/main/data/d_bringtnixtin.csv"</span></span>
 <span><span class="va">d_bringtnixtin</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="va">d_bringtnixtin_path</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p><a href="#dnldts58698" onclick="fetch('data:text/csv;base64,aWQsZyx5MSx5MixkCjEsMCwxLjM3MDk1ODQ0NzE0NjY2ODUsMS40MTIxNTgxNjcxODY3MTkyLDAuMDQxMTk5NzIwMDQwMDUwNjgKMiwwLC0wLjU2NDY5ODE3MTM5NjA4ODcsLTAuNjM2OTA5NjMxMTA1ODIyLC0wLjA3MjIxMTQ1OTcwOTczMzMKMywwLDAuMzYzMTI4NDExMzM3MzM5MiwwLjUxNDc2MTA1ODQ3NzI0MjYsMC4xNTE2MzI2NDcxMzk5MDM0Mwo0LDAsMC42MzI4NjI2MDQ5NjEwNDA0LDAuNDg3NTIxNjM5NTQ1NzI1MzYsLTAuMTQ1MzQwOTY1NDE1MzE1MDUKNSwwLDAuNDA0MjY4MzIzMTQwOTk5MDMsMC4xMzA2MTIxMTQyNTcxNDAxLC0wLjI3MzY1NjIwODg4Mzg1ODk0CjYsMCwtMC4xMDYxMjQ1MTYwOTE0ODQwMywtMC4wMTk1NjA5MTA5MTM3NDA1OTgsMC4wODY1NjM2MDUxNzc3NDM0Mwo3LDAsMS41MTE1MjE5OTc0Mzg5MzksMS4zNDkyNDMzNjIyMDE2MDQ3LC0wLjE2MjI3ODYzNTIzNzMzNDIKOCwwLC0wLjA5NDY1OTAzODQxMzA5NzU2LDAuMTk0MTYxMjEzOTMxMTUzMDEsMC4yODg4MjAyNTIzNDQyNTA1Nwo5LDAsMi4wMTg0MjM3MTM4NzcwNDIsMS45MzIxMzQ0NzMzNTQzNzI2LC0wLjA4NjI4OTI0MDUyMjY2OTE3NQoxMCwwLC0wLjA2MjcxNDA5OTA1MjQyMSwwLjA2ODQxNTQ3NzYyODAyMDM3LDAuMTMxMTI5NTc2NjgwNDQxMzcKMTEsMCwxLjMwNDg2OTY1NDIyMzQ4NTIsMS4zNjkyNTQ3MDcyNjQyNzQ1LDAuMDY0Mzg1MDUzMDQwNzg5MjMKMTIsMCwyLjI4NjY0NTM5MjcwMTEwNywyLjEyOTg3NzYwNDUyNTAzMiwtMC4xNTY3Njc3ODgxNzYwNzQ5NQoxMywwLC0xLjM4ODg2MDcwMTExMjMzOTMsLTEuMDczNzE1MTk3MTUzOTQzOCwwLjMxNTE0NTUwMzk1ODM5NTQ3CjE0LDAsLTAuMjc4Nzg4NzY2ODE3MzcxMzYsLTAuMTUwMjA4OTA1NjczOTA4MDcsMC4xMjg1Nzk4NjExNDM0NjMzCjE1LDAsLTAuMTMzMzIxMzM2MzkzNjU4MDQsLTAuMTE1MzY5MjA3MDczNzM2OSwwLjAxNzk1MjEyOTMxOTkyMTEzCjE2LDAsMC42MzU5NTAzOTgwNzAwNzQ0LDAuNjkxMjYwNTQ3NTI4MzY3LDAuMDU1MzEwMTQ5NDU4MjkyNgoxNywwLC0wLjI4NDI1MjkyMTQxNjA3MjQsLTAuMTQ4Mzk1MTU4MjA1MDE4MjIsMC4xMzU4NTc3NjMyMTEwNTQxNwoxOCwwLC0yLjY1NjQ1NTQyMDkwNDc3NTcsLTIuNjM4NDg4ODQzNTg4OTU5MywwLjAxNzk2NjU3NzMxNTgxNjQxMgoxOSwwLC0yLjQ0MDQ2NjkyODU3NTUxOTQsLTMuMDM5MDg0OTQ1MjA2MTA2LC0wLjU5ODYxODAxNjYzMDU4NjgKMjAsMCwxLjMyMDExMzM0NTczMDE5MjEsMS4zNzcwODk5MzY0MzYzMjQsMC4wNTY5NzY1OTA3MDYxMzE5MjQKMjEsMSwtMC4zMDY2Mzg1OTQwNzg0NzQ1NSwtMC43MTM0MTg4NTU5NjAwMDMsLTAuNDA2NzgwMjYxODgxNTI4NDQKMjIsMSwtMS43ODEzMDg0MzM5OCwtMi4wNzc1OTU2NTQzNDAyMTE0LC0wLjI5NjI4NzIyMDM2MDIxMTQKMjMsMSwtMC4xNzE5MTczNTU3NTk2MjEzNiwtMC4zODg4ODU5NDM2MTk4NTMzNSwtMC4yMTY5Njg1ODc4NjAyMzIKMjQsMSwxLjIxNDY3NDY5OTE3MjU5ODcsMS4xNjEyODg3MzEyOTc4MDEsLTAuMDUzMzg1OTY3ODc0Nzk3NjYKMjUsMSwxLjg5NTE5MzQ2MTI2NDk2NTIsMS40MTY0MDE3MTYwMzY3MzksLTAuNDc4NzkxNzQ1MjI4MjI2MgoyNiwxLC0wLjQzMDQ2OTEzMTYwNjE5OTY1LC0wLjUwMzI5MzkzODUzMDcwNDMsLTAuMDcyODI0ODA2OTI0NTA0NgoyNywxLC0wLjI1NzI2OTM4Mjc2ODkyOTYzLC0wLjUyMzQzMzA5MjE1MTg0ODEsLTAuMjY2MTYzNzA5MzgyOTE4NDUKMjgsMSwtMS43NjMxNjMwODUxOTQ3ODAyLC0xLjg4ODc5NTE5ODc4ODU4OTEsLTAuMTI1NjMyMTEzNTkzODA5CjI5LDEsMC40NjAwOTczNTQ4MzEyNzE0LDAuMzEwOTA5NzM1MTU2MDY3NCwtMC4xNDkxODc2MTk2NzUyMDQKMzAsMSwtMC42Mzk5OTQ4NzU5NjAxMTkyLC0wLjgyOTE1MjU3NjcyMDA4LC0wLjE4OTE1NzcwMDc1OTk2MDg2CjMxLDEsMC40NTU0NTAxMjMyNDEyMTkzNiwtMC4wODY1MDY5OTc4MDU2ODQ5NywtMC41NDE5NTcxMjEwNDY5MDQzCjMyLDEsMC43MDQ4MzczMzcyMjg4MTkxLDAuMzUzNDY2NzI2NTczMzQ0NSwtMC4zNTEzNzA2MTA2NTU0NzQ2NQozMywxLDEuMDM1MTAzNTIxOTY5OTIyMywwLjgyNjQ3MzgyMTAzNjQ5NzcsLTAuMjA4NjI5NzAwOTMzNDI0NgozNCwxLC0wLjYwODkyNjM3NTQwNzIxMTEsLTEuMTMyOTY0MzgwMjk1MDEzMSwtMC41MjQwMzgwMDQ4ODc4MDIxCjM1LDEsMC41MDQ5NTUxMjMyOTc5NzAzLDAuMDYzMDU2MDI3MDQ5ODY1NjgsLTAuNDQxODk5MDk2MjQ4MTA0NjQKMzYsMSwtMS43MTcwMDg2NzkwNzMzNDI1LC0xLjkzNDE0MjcxMjg3MDMzOTIsLTAuMjE3MTM0MDMzNzk2OTk2NwozNywxLC0wLjc4NDQ1OTAwODM3OTQ5NiwtMC45NjQxNTY1OTQxNDU5MTExNSwtMC4xNzk2OTc1ODU3NjY0MTUxNQozOCwxLC0wLjg1MDkwNzU5NDE3NjUxODMsLTEuMDkxNDg3NDA5ODAxODE4MSwtMC4yNDA1Nzk4MTU2MjUyOTk4NAozOSwxLC0yLjQxNDIwNzY0OTk0NjYzMiwtMi45MjQ2OTYyNDI3NjE5MDEsLTAuNTEwNDg4NTkyODE1MjY5NAo0MCwxLDAuMDM2MTIyNjA2ODkyMjU1NjMsLTAuNTE3MTY2OTA2MTcwNjQ4OSwtMC41NTMyODk1MTMwNjI5MDQ1Cg==').then(res => res.blob()).then(blob => {
+<p><a href="#dnldts28515" onclick="fetch('data:text/csv;base64,aWQsZyx5MSx5MixkCjEsMCwxLjM3MDk1ODQ0NzE0NjY2ODUsMS40MTIxNTgxNjcxODY3MTkyLDAuMDQxMTk5NzIwMDQwMDUwNjgKMiwwLC0wLjU2NDY5ODE3MTM5NjA4ODcsLTAuNjM2OTA5NjMxMTA1ODIyLC0wLjA3MjIxMTQ1OTcwOTczMzMKMywwLDAuMzYzMTI4NDExMzM3MzM5MiwwLjUxNDc2MTA1ODQ3NzI0MjYsMC4xNTE2MzI2NDcxMzk5MDM0Mwo0LDAsMC42MzI4NjI2MDQ5NjEwNDA0LDAuNDg3NTIxNjM5NTQ1NzI1MzYsLTAuMTQ1MzQwOTY1NDE1MzE1MDUKNSwwLDAuNDA0MjY4MzIzMTQwOTk5MDMsMC4xMzA2MTIxMTQyNTcxNDAxLC0wLjI3MzY1NjIwODg4Mzg1ODk0CjYsMCwtMC4xMDYxMjQ1MTYwOTE0ODQwMywtMC4wMTk1NjA5MTA5MTM3NDA1OTgsMC4wODY1NjM2MDUxNzc3NDM0Mwo3LDAsMS41MTE1MjE5OTc0Mzg5MzksMS4zNDkyNDMzNjIyMDE2MDQ3LC0wLjE2MjI3ODYzNTIzNzMzNDIKOCwwLC0wLjA5NDY1OTAzODQxMzA5NzU2LDAuMTk0MTYxMjEzOTMxMTUzMDEsMC4yODg4MjAyNTIzNDQyNTA1Nwo5LDAsMi4wMTg0MjM3MTM4NzcwNDIsMS45MzIxMzQ0NzMzNTQzNzI2LC0wLjA4NjI4OTI0MDUyMjY2OTE3NQoxMCwwLC0wLjA2MjcxNDA5OTA1MjQyMSwwLjA2ODQxNTQ3NzYyODAyMDM3LDAuMTMxMTI5NTc2NjgwNDQxMzcKMTEsMCwxLjMwNDg2OTY1NDIyMzQ4NTIsMS4zNjkyNTQ3MDcyNjQyNzQ1LDAuMDY0Mzg1MDUzMDQwNzg5MjMKMTIsMCwyLjI4NjY0NTM5MjcwMTEwNywyLjEyOTg3NzYwNDUyNTAzMiwtMC4xNTY3Njc3ODgxNzYwNzQ5NQoxMywwLC0xLjM4ODg2MDcwMTExMjMzOTMsLTEuMDczNzE1MTk3MTUzOTQzOCwwLjMxNTE0NTUwMzk1ODM5NTQ3CjE0LDAsLTAuMjc4Nzg4NzY2ODE3MzcxMzYsLTAuMTUwMjA4OTA1NjczOTA4MDcsMC4xMjg1Nzk4NjExNDM0NjMzCjE1LDAsLTAuMTMzMzIxMzM2MzkzNjU4MDQsLTAuMTE1MzY5MjA3MDczNzM2OSwwLjAxNzk1MjEyOTMxOTkyMTEzCjE2LDAsMC42MzU5NTAzOTgwNzAwNzQ0LDAuNjkxMjYwNTQ3NTI4MzY3LDAuMDU1MzEwMTQ5NDU4MjkyNgoxNywwLC0wLjI4NDI1MjkyMTQxNjA3MjQsLTAuMTQ4Mzk1MTU4MjA1MDE4MjIsMC4xMzU4NTc3NjMyMTEwNTQxNwoxOCwwLC0yLjY1NjQ1NTQyMDkwNDc3NTcsLTIuNjM4NDg4ODQzNTg4OTU5MywwLjAxNzk2NjU3NzMxNTgxNjQxMgoxOSwwLC0yLjQ0MDQ2NjkyODU3NTUxOTQsLTMuMDM5MDg0OTQ1MjA2MTA2LC0wLjU5ODYxODAxNjYzMDU4NjgKMjAsMCwxLjMyMDExMzM0NTczMDE5MjEsMS4zNzcwODk5MzY0MzYzMjQsMC4wNTY5NzY1OTA3MDYxMzE5MjQKMjEsMSwtMC4zMDY2Mzg1OTQwNzg0NzQ1NSwtMC43MTM0MTg4NTU5NjAwMDMsLTAuNDA2NzgwMjYxODgxNTI4NDQKMjIsMSwtMS43ODEzMDg0MzM5OCwtMi4wNzc1OTU2NTQzNDAyMTE0LC0wLjI5NjI4NzIyMDM2MDIxMTQKMjMsMSwtMC4xNzE5MTczNTU3NTk2MjEzNiwtMC4zODg4ODU5NDM2MTk4NTMzNSwtMC4yMTY5Njg1ODc4NjAyMzIKMjQsMSwxLjIxNDY3NDY5OTE3MjU5ODcsMS4xNjEyODg3MzEyOTc4MDEsLTAuMDUzMzg1OTY3ODc0Nzk3NjYKMjUsMSwxLjg5NTE5MzQ2MTI2NDk2NTIsMS40MTY0MDE3MTYwMzY3MzksLTAuNDc4NzkxNzQ1MjI4MjI2MgoyNiwxLC0wLjQzMDQ2OTEzMTYwNjE5OTY1LC0wLjUwMzI5MzkzODUzMDcwNDMsLTAuMDcyODI0ODA2OTI0NTA0NgoyNywxLC0wLjI1NzI2OTM4Mjc2ODkyOTYzLC0wLjUyMzQzMzA5MjE1MTg0ODEsLTAuMjY2MTYzNzA5MzgyOTE4NDUKMjgsMSwtMS43NjMxNjMwODUxOTQ3ODAyLC0xLjg4ODc5NTE5ODc4ODU4OTEsLTAuMTI1NjMyMTEzNTkzODA5CjI5LDEsMC40NjAwOTczNTQ4MzEyNzE0LDAuMzEwOTA5NzM1MTU2MDY3NCwtMC4xNDkxODc2MTk2NzUyMDQKMzAsMSwtMC42Mzk5OTQ4NzU5NjAxMTkyLC0wLjgyOTE1MjU3NjcyMDA4LC0wLjE4OTE1NzcwMDc1OTk2MDg2CjMxLDEsMC40NTU0NTAxMjMyNDEyMTkzNiwtMC4wODY1MDY5OTc4MDU2ODQ5NywtMC41NDE5NTcxMjEwNDY5MDQzCjMyLDEsMC43MDQ4MzczMzcyMjg4MTkxLDAuMzUzNDY2NzI2NTczMzQ0NSwtMC4zNTEzNzA2MTA2NTU0NzQ2NQozMywxLDEuMDM1MTAzNTIxOTY5OTIyMywwLjgyNjQ3MzgyMTAzNjQ5NzcsLTAuMjA4NjI5NzAwOTMzNDI0NgozNCwxLC0wLjYwODkyNjM3NTQwNzIxMTEsLTEuMTMyOTY0MzgwMjk1MDEzMSwtMC41MjQwMzgwMDQ4ODc4MDIxCjM1LDEsMC41MDQ5NTUxMjMyOTc5NzAzLDAuMDYzMDU2MDI3MDQ5ODY1NjgsLTAuNDQxODk5MDk2MjQ4MTA0NjQKMzYsMSwtMS43MTcwMDg2NzkwNzMzNDI1LC0xLjkzNDE0MjcxMjg3MDMzOTIsLTAuMjE3MTM0MDMzNzk2OTk2NwozNywxLC0wLjc4NDQ1OTAwODM3OTQ5NiwtMC45NjQxNTY1OTQxNDU5MTExNSwtMC4xNzk2OTc1ODU3NjY0MTUxNQozOCwxLC0wLjg1MDkwNzU5NDE3NjUxODMsLTEuMDkxNDg3NDA5ODAxODE4MSwtMC4yNDA1Nzk4MTU2MjUyOTk4NAozOSwxLC0yLjQxNDIwNzY0OTk0NjYzMiwtMi45MjQ2OTYyNDI3NjE5MDEsLTAuNTEwNDg4NTkyODE1MjY5NAo0MCwxLDAuMDM2MTIyNjA2ODkyMjU1NjMsLTAuNTE3MTY2OTA2MTcwNjQ4OSwtMC41NTMyODk1MTMwNjI5MDQ1Cg==').then(res => res.blob()).then(blob => {
       const downloadURL = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       document.body.appendChild(a);
@@ -712,7 +721,7 @@ Hinweis
       a.download = 'bringtnixtin.csv.csv'; a.click();
       window.URL.revokeObjectURL(downloadURL);
       document.body.removeChild(a);
-        });"><button class="btn btn-default downloadthis  " id="dnldts58698"><i class="bi bi-download"></i> Download </button></a></p>
+        });"><button class="btn btn-default downloadthis  " id="dnldts28515"><i class="bi bi-download"></i> Download </button></a></p>
 <p>Die Autoren der Studie geben an, dass die Daten in <em>z</em>-Einheiten skaliert sind.</p>
 </section><section id="deskriptive-analyse" class="level3" data-number="12.2.2"><h3 data-number="12.2.2" class="anchored" data-anchor-id="deskriptive-analyse">
 <span class="header-section-number">12.2.2</span> Deskriptive Analyse</h3>
@@ -840,7 +849,7 @@ Tabelle&nbsp;12.2: Parameter des Modells m_bringtnixtin
 <div class="cell-output-display">
 <div data-pagedtable="false">
   <script data-pagedtable-source="" type="application/json">
-{"columns":[{"label":["Parameter"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Median"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["CI"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["CI_low"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["CI_high"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["pd"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["Rhat"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["ESS"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["Prior_Distribution"],"name":[9],"type":["chr"],"align":["left"]},{"label":["Prior_Location"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["Prior_Scale"],"name":[11],"type":["dbl"],"align":["right"]}],"data":[{"1":"(Intercept)","2":"0.1897533","3":"0.95","4":"-0.3534656","5":"0.72324730","6":"0.74950","7":"1.000752","8":"3805.106","9":"normal","10":"-0.1902336","11":"3.183966"},{"1":"g","2":"-0.7549500","3":"0.95","4":"-1.5456626","5":"0.01646221","6":"0.97275","7":"1.001159","8":"3847.165","9":"normal","10":"0.0000000","11":"6.287828"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+{"columns":[{"label":["Parameter"],"name":[1],"type":["chr"],"align":["left"]},{"label":["Median"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["CI"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["CI_low"],"name":[4],"type":["dbl"],"align":["right"]},{"label":["CI_high"],"name":[5],"type":["dbl"],"align":["right"]},{"label":["pd"],"name":[6],"type":["dbl"],"align":["right"]},{"label":["Rhat"],"name":[7],"type":["dbl"],"align":["right"]},{"label":["ESS_tail"],"name":[8],"type":["dbl"],"align":["right"]},{"label":["Prior_Distribution"],"name":[9],"type":["chr"],"align":["left"]},{"label":["Prior_Location"],"name":[10],"type":["dbl"],"align":["right"]},{"label":["Prior_Scale"],"name":[11],"type":["dbl"],"align":["right"]}],"data":[{"1":"(Intercept)","2":"0.1897533","3":"0.95","4":"-0.3534656","5":"0.72324730","6":"0.74950","7":"1.000752","8":"2685","9":"normal","10":"-0.1902336","11":"3.183966"},{"1":"g","2":"-0.7549500","3":"0.95","4":"-1.5456626","5":"0.01646221","6":"0.97275","7":"1.001159","8":"2655","9":"normal","10":"0.0000000","11":"6.287828"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
   </script>
 </div>
 </div>
@@ -1017,8 +1026,8 @@ Hinweis
 <pre><code>## 
 ## SAMPLING FOR MODEL 'continuous' NOW (CHAIN 1).
 ## Chain 1: 
-## Chain 1: Gradient evaluation took 1.8e-05 seconds
-## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.18 seconds.
+## Chain 1: Gradient evaluation took 1.7e-05 seconds
+## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.17 seconds.
 ## Chain 1: Adjust your expectations accordingly!
 ## Chain 1: 
 ## Chain 1: 
@@ -1035,15 +1044,15 @@ Hinweis
 ## Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 1: 
-## Chain 1:  Elapsed Time: 0.034 seconds (Warm-up)
-## Chain 1:                0.037 seconds (Sampling)
-## Chain 1:                0.071 seconds (Total)
+## Chain 1:  Elapsed Time: 0.014 seconds (Warm-up)
+## Chain 1:                0.013 seconds (Sampling)
+## Chain 1:                0.027 seconds (Total)
 ## Chain 1: 
 ## 
 ## SAMPLING FOR MODEL 'continuous' NOW (CHAIN 2).
 ## Chain 2: 
-## Chain 2: Gradient evaluation took 1.5e-05 seconds
-## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.15 seconds.
+## Chain 2: Gradient evaluation took 4e-06 seconds
+## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.04 seconds.
 ## Chain 2: Adjust your expectations accordingly!
 ## Chain 2: 
 ## Chain 2: 
@@ -1060,15 +1069,15 @@ Hinweis
 ## Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 2: 
-## Chain 2:  Elapsed Time: 0.031 seconds (Warm-up)
-## Chain 2:                0.035 seconds (Sampling)
-## Chain 2:                0.066 seconds (Total)
+## Chain 2:  Elapsed Time: 0.013 seconds (Warm-up)
+## Chain 2:                0.014 seconds (Sampling)
+## Chain 2:                0.027 seconds (Total)
 ## Chain 2: 
 ## 
 ## SAMPLING FOR MODEL 'continuous' NOW (CHAIN 3).
 ## Chain 3: 
-## Chain 3: Gradient evaluation took 1.1e-05 seconds
-## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.11 seconds.
+## Chain 3: Gradient evaluation took 4e-06 seconds
+## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.04 seconds.
 ## Chain 3: Adjust your expectations accordingly!
 ## Chain 3: 
 ## Chain 3: 
@@ -1085,15 +1094,15 @@ Hinweis
 ## Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 3: 
-## Chain 3:  Elapsed Time: 0.033 seconds (Warm-up)
-## Chain 3:                0.032 seconds (Sampling)
-## Chain 3:                0.065 seconds (Total)
+## Chain 3:  Elapsed Time: 0.014 seconds (Warm-up)
+## Chain 3:                0.013 seconds (Sampling)
+## Chain 3:                0.027 seconds (Total)
 ## Chain 3: 
 ## 
 ## SAMPLING FOR MODEL 'continuous' NOW (CHAIN 4).
 ## Chain 4: 
-## Chain 4: Gradient evaluation took 1.4e-05 seconds
-## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.14 seconds.
+## Chain 4: Gradient evaluation took 4e-06 seconds
+## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.04 seconds.
 ## Chain 4: Adjust your expectations accordingly!
 ## Chain 4: 
 ## Chain 4: 
@@ -1110,9 +1119,9 @@ Hinweis
 ## Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)
 ## Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)
 ## Chain 4: 
-## Chain 4:  Elapsed Time: 0.029 seconds (Warm-up)
-## Chain 4:                0.036 seconds (Sampling)
-## Chain 4:                0.065 seconds (Total)
+## Chain 4:  Elapsed Time: 0.013 seconds (Warm-up)
+## Chain 4:                0.014 seconds (Sampling)
+## Chain 4:                0.027 seconds (Total)
 ## Chain 4:</code></pre>
 <div class="cell-output-display">
 <div id="fig-mpg-rope" class="quarto-float quarto-figure quarto-figure-center anchored">
@@ -1335,13 +1344,13 @@ Tabelle&nbsp;12.4: Parameter von <code>m_bringtnixtin2</code>
 <div class="cell-output-display">
 <table class="cell caption-top table table-sm table-striped small">
 <colgroup>
-<col style="width: 14%">
 <col style="width: 13%">
-<col style="width: 19%">
-<col style="width: 9%">
+<col style="width: 12%">
+<col style="width: 17%">
 <col style="width: 8%">
 <col style="width: 7%">
-<col style="width: 28%">
+<col style="width: 13%">
+<col style="width: 26%">
 </colgroup>
 <thead><tr class="header">
 <th style="text-align: left;">Parameter</th>
@@ -1349,7 +1358,7 @@ Tabelle&nbsp;12.4: Parameter von <code>m_bringtnixtin2</code>
 <th style="text-align: center;">95% CI</th>
 <th style="text-align: center;">pd</th>
 <th style="text-align: center;">Rhat</th>
-<th style="text-align: center;">ESS</th>
+<th style="text-align: center;">ESS (tail)</th>
 <th style="text-align: center;">Prior</th>
 </tr></thead>
 <tbody>
@@ -1359,7 +1368,7 @@ Tabelle&nbsp;12.4: Parameter von <code>m_bringtnixtin2</code>
 <td style="text-align: center;">(-0.08, 0.08)</td>
 <td style="text-align: center;">50.22%</td>
 <td style="text-align: center;">1.000</td>
-<td style="text-align: center;">3416</td>
+<td style="text-align: center;">3010</td>
 <td style="text-align: center;">Normal (-0.15 +- 0.59)</td>
 </tr>
 <tr class="even">
@@ -1368,7 +1377,7 @@ Tabelle&nbsp;12.4: Parameter von <code>m_bringtnixtin2</code>
 <td style="text-align: center;">(-0.42, -0.19)</td>
 <td style="text-align: center;">100%</td>
 <td style="text-align: center;">1.000</td>
-<td style="text-align: center;">3582</td>
+<td style="text-align: center;">2242</td>
 <td style="text-align: center;">Normal (0.00 +- 1.17)</td>
 </tr>
 </tbody>
@@ -1487,7 +1496,7 @@ Abbildung&nbsp;12.15: DAG für die Studie zur Behaltensleistung y2 in Abhängigk
 </div>
 </div>
 </div>
-<p><a href="#dnldts23798" onclick="fetch('data:text/csv;base64,aWQseTEseTIseTMsZwoxLDcsOCw5LEEKMiw3LDcsMTAsQQozLDQsOSw5LEEKNCw3LDQsOSxBCjUsNiw3LDgsQQo2LDUsNCw5LEEKNyw2LDUsMTAsQQo4LDMsNywxMCxBCjksNiw0LDEwLEEKMTAsNiw3LDEwLEEKMTEsNSw4LDksQQoxMiw2LDgsMTAsQQoxMyw3LDcsMTAsQQoxNCw0LDYsNyxBCjE1LDUsOSw4LEEKMTYsNyw2LDksQQoxNyw4LDYsMTAsQQoxOCwzLDgsOSxBCjE5LDUsOCw4LEEKMjAsNSw3LDksQQoyMSw3LDYsOSxCCjIyLDMsNCwxMCxCCjIzLDgsNiwxMCxCCjI0LDgsNyw5LEIKMjUsMyw2LDcsQgoyNiw1LDgsNyxCCjI3LDUsOCw4LEIKMjgsNyw2LDksQgoyOSw1LDYsOSxCCjMwLDcsOCwxMCxCCjMxLDYsOSw5LEIKMzIsNiw5LDgsQgozMyw1LDgsOCxCCjM0LDYsNyw5LEIKMzUsMSw4LDksQgozNiw3LDYsOSxCCjM3LDEsMTAsMTAsQgozOCw0LDgsOSxCCjM5LDcsNyw5LEIKNDAsNSwxMCw4LEIK').then(res => res.blob()).then(blob => {
+<p><a href="#dnldts12385" onclick="fetch('data:text/csv;base64,aWQseTEseTIseTMsZwoxLDcsOCw5LEEKMiw3LDcsMTAsQQozLDQsOSw5LEEKNCw3LDQsOSxBCjUsNiw3LDgsQQo2LDUsNCw5LEEKNyw2LDUsMTAsQQo4LDMsNywxMCxBCjksNiw0LDEwLEEKMTAsNiw3LDEwLEEKMTEsNSw4LDksQQoxMiw2LDgsMTAsQQoxMyw3LDcsMTAsQQoxNCw0LDYsNyxBCjE1LDUsOSw4LEEKMTYsNyw2LDksQQoxNyw4LDYsMTAsQQoxOCwzLDgsOSxBCjE5LDUsOCw4LEEKMjAsNSw3LDksQQoyMSw3LDYsOSxCCjIyLDMsNCwxMCxCCjIzLDgsNiwxMCxCCjI0LDgsNyw5LEIKMjUsMyw2LDcsQgoyNiw1LDgsNyxCCjI3LDUsOCw4LEIKMjgsNyw2LDksQgoyOSw1LDYsOSxCCjMwLDcsOCwxMCxCCjMxLDYsOSw5LEIKMzIsNiw5LDgsQgozMyw1LDgsOCxCCjM0LDYsNyw5LEIKMzUsMSw4LDksQgozNiw3LDYsOSxCCjM3LDEsMTAsMTAsQgozOCw0LDgsOSxCCjM5LDcsNyw5LEIKNDAsNSwxMCw4LEIK').then(res => res.blob()).then(blob => {
       const downloadURL = window.URL.createObjectURL(blob);
       const a = document.createElement('a');
       document.body.appendChild(a);
@@ -1495,7 +1504,7 @@ Abbildung&nbsp;12.15: DAG für die Studie zur Behaltensleistung y2 in Abhängigk
       a.download = 'withindesign.csv.csv'; a.click();
       window.URL.revokeObjectURL(downloadURL);
       document.body.removeChild(a);
-        });"><button class="btn btn-default downloadthis  " id="dnldts23798"><i class="bi bi-download"></i> Download </button></a></p>
+        });"><button class="btn btn-default downloadthis  " id="dnldts12385"><i class="bi bi-download"></i> Download </button></a></p>
 <p>Wir berechnen <code>d</code>, was die zentrale Variable der Forschungsfrage ist.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb22"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">d_within</span> <span class="op">&lt;-</span></span>
@@ -1632,13 +1641,13 @@ Tabelle&nbsp;12.6: Modellparameter von m_within
 <div class="cell-output-display">
 <table class="cell caption-top table table-sm table-striped small">
 <colgroup>
-<col style="width: 15%">
-<col style="width: 10%">
-<col style="width: 20%">
+<col style="width: 14%">
+<col style="width: 9%">
+<col style="width: 18%">
 <col style="width: 7%">
 <col style="width: 8%">
-<col style="width: 7%">
-<col style="width: 30%">
+<col style="width: 14%">
+<col style="width: 28%">
 </colgroup>
 <thead><tr class="header">
 <th style="text-align: left;">Parameter</th>
@@ -1646,7 +1655,7 @@ Tabelle&nbsp;12.6: Modellparameter von m_within
 <th style="text-align: center;">95% CI</th>
 <th style="text-align: center;">pd</th>
 <th style="text-align: center;">Rhat</th>
-<th style="text-align: center;">ESS</th>
+<th style="text-align: center;">ESS (tail)</th>
 <th style="text-align: center;">Prior</th>
 </tr></thead>
 <tbody><tr class="odd">
@@ -1655,7 +1664,7 @@ Tabelle&nbsp;12.6: Modellparameter von m_within
 <td style="text-align: center;">(-2.46, -0.74)</td>
 <td style="text-align: center;">100%</td>
 <td style="text-align: center;">1.001</td>
-<td style="text-align: center;">2464</td>
+<td style="text-align: center;">2055</td>
 <td style="text-align: center;">Normal (-1.60 +- 6.57)</td>
 </tr></tbody>
 </table>
@@ -1813,13 +1822,13 @@ Tabelle&nbsp;12.7: Modellparameter von m_within2
 <div class="cell-output-display">
 <table class="cell caption-top table table-sm table-striped small">
 <colgroup>
-<col style="width: 15%">
-<col style="width: 10%">
-<col style="width: 18%">
-<col style="width: 10%">
+<col style="width: 13%">
+<col style="width: 9%">
+<col style="width: 17%">
+<col style="width: 9%">
 <col style="width: 8%">
-<col style="width: 7%">
-<col style="width: 30%">
+<col style="width: 13%">
+<col style="width: 27%">
 </colgroup>
 <thead><tr class="header">
 <th style="text-align: left;">Parameter</th>
@@ -1827,7 +1836,7 @@ Tabelle&nbsp;12.7: Modellparameter von m_within2
 <th style="text-align: center;">95% CI</th>
 <th style="text-align: center;">pd</th>
 <th style="text-align: center;">Rhat</th>
-<th style="text-align: center;">ESS</th>
+<th style="text-align: center;">ESS (tail)</th>
 <th style="text-align: center;">Prior</th>
 </tr></thead>
 <tbody>
@@ -1837,7 +1846,7 @@ Tabelle&nbsp;12.7: Modellparameter von m_within2
 <td style="text-align: center;">(-2.31, 0.04)</td>
 <td style="text-align: center;">97.15%</td>
 <td style="text-align: center;">1.000</td>
-<td style="text-align: center;">3636</td>
+<td style="text-align: center;">2924</td>
 <td style="text-align: center;">Normal (-1.60 +- 6.57)</td>
 </tr>
 <tr class="even">
@@ -1846,7 +1855,7 @@ Tabelle&nbsp;12.7: Modellparameter von m_within2
 <td style="text-align: center;">(-2.56, 0.76)</td>
 <td style="text-align: center;">86.28%</td>
 <td style="text-align: center;">1.000</td>
-<td style="text-align: center;">3436</td>
+<td style="text-align: center;">2176</td>
 <td style="text-align: center;">Normal (0.00 +- 12.98)</td>
 </tr>
 </tbody>
@@ -1870,8 +1879,8 @@ Tabelle&nbsp;12.7: Modellparameter von m_within2
 <ol type="1">
 <li>H1: (Höhere Behaltensleistung von <em>animiert</em>) konnte nicht bestätigt werden, aber tendenziell fand sich ein Effekt in erwarteter Richtung (zugunsten einer höheren Behaltensleistung von <em>animiert</em>).</li>
 <li>H2: (Abwesenheit eines Reihenfolgeeffekts) konnte nicht bestätigt werden; die Ergebnislage war uneindeutig.</li>
-</ol></section></section><section id="mediatoranalyse" class="level2" data-number="12.7"><h2 data-number="12.7" class="anchored" data-anchor-id="mediatoranalyse">
-<span class="header-section-number">12.7</span> Mediatoranalyse</h2>
+</ol></section></section><section id="einfache-mediatoranalyse" class="level2" data-number="12.7"><h2 data-number="12.7" class="anchored" data-anchor-id="einfache-mediatoranalyse">
+<span class="header-section-number">12.7</span> Einfache Mediatoranalyse</h2>
 <section id="grundlagen" class="level3" data-number="12.7.1"><h3 data-number="12.7.1" class="anchored" data-anchor-id="grundlagen">
 <span class="header-section-number">12.7.1</span> Grundlagen</h3>
 <p>Die Mediatoranalyse fragt, <em>wodurch</em> wird ein Effekt von <span class="math inline">\(X\)</span> auf <span class="math inline">\(Y\)</span> übertragen (s. <a href="#fig-simple-med" class="quarto-xref">Abbildung&nbsp;<span>12.23</span></a>)? Das ist eine Stufe komplexer, als zu fragen, ob <span class="math inline">\(X\)</span> einen Effekt auf <span class="math inline">\(Y\)</span> hat (s. <a href="#fig-simple-xy" class="quarto-xref">Abbildung&nbsp;<span>12.22</span></a>).</p>
@@ -2049,7 +2058,7 @@ Abbildung&nbsp;12.24: Mediationsmodell von Jobtraining über Depressivität
 <span>              text <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><a href="090-Modellieren_files/figure-html/unnamed-chunk-36-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img src="090-Modellieren_files/figure-html/unnamed-chunk-36-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figure class="figure"><p><a href="090-Modellieren_files/figure-html/plot_med_depress_mlm-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-19"><img src="090-Modellieren_files/figure-html/plot_med_depress_mlm-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -2083,7 +2092,7 @@ Abbildung&nbsp;12.24: Mediationsmodell von Jobtraining über Depressivität
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb42"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/bmlm/man/mlm_pars_plot.html">mlm_pars_plot</a></span><span class="op">(</span><span class="va">med_depress_mlm</span>, pars <span class="op">=</span> <span class="st">"me"</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><a href="090-Modellieren_files/figure-html/unnamed-chunk-38-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img src="090-Modellieren_files/figure-html/unnamed-chunk-38-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figure class="figure"><p><a href="090-Modellieren_files/figure-html/unnamed-chunk-35-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-20"><img src="090-Modellieren_files/figure-html/unnamed-chunk-35-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -2105,8 +2114,8 @@ Abbildung&nbsp;12.24: Mediationsmodell von Jobtraining über Depressivität
 <span><span class="co">## </span></span>
 <span><span class="co">## SAMPLING FOR MODEL 'anon_model' NOW (CHAIN 1).</span></span>
 <span><span class="co">## Chain 1: </span></span>
-<span><span class="co">## Chain 1: Gradient evaluation took 3e-05 seconds</span></span>
-<span><span class="co">## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.3 seconds.</span></span>
+<span><span class="co">## Chain 1: Gradient evaluation took 1e-05 seconds</span></span>
+<span><span class="co">## Chain 1: 1000 transitions using 10 leapfrog steps per transition would take 0.1 seconds.</span></span>
 <span><span class="co">## Chain 1: Adjust your expectations accordingly!</span></span>
 <span><span class="co">## Chain 1: </span></span>
 <span><span class="co">## Chain 1: </span></span>
@@ -2123,15 +2132,15 @@ Abbildung&nbsp;12.24: Mediationsmodell von Jobtraining über Depressivität
 <span><span class="co">## Chain 1: Iteration: 1800 / 2000 [ 90%]  (Sampling)</span></span>
 <span><span class="co">## Chain 1: Iteration: 2000 / 2000 [100%]  (Sampling)</span></span>
 <span><span class="co">## Chain 1: </span></span>
-<span><span class="co">## Chain 1:  Elapsed Time: 0.08 seconds (Warm-up)</span></span>
-<span><span class="co">## Chain 1:                0.075 seconds (Sampling)</span></span>
-<span><span class="co">## Chain 1:                0.155 seconds (Total)</span></span>
+<span><span class="co">## Chain 1:  Elapsed Time: 0.024 seconds (Warm-up)</span></span>
+<span><span class="co">## Chain 1:                0.024 seconds (Sampling)</span></span>
+<span><span class="co">## Chain 1:                0.048 seconds (Total)</span></span>
 <span><span class="co">## Chain 1: </span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## SAMPLING FOR MODEL 'anon_model' NOW (CHAIN 2).</span></span>
 <span><span class="co">## Chain 2: </span></span>
-<span><span class="co">## Chain 2: Gradient evaluation took 1.3e-05 seconds</span></span>
-<span><span class="co">## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.13 seconds.</span></span>
+<span><span class="co">## Chain 2: Gradient evaluation took 4e-06 seconds</span></span>
+<span><span class="co">## Chain 2: 1000 transitions using 10 leapfrog steps per transition would take 0.04 seconds.</span></span>
 <span><span class="co">## Chain 2: Adjust your expectations accordingly!</span></span>
 <span><span class="co">## Chain 2: </span></span>
 <span><span class="co">## Chain 2: </span></span>
@@ -2148,15 +2157,15 @@ Abbildung&nbsp;12.24: Mediationsmodell von Jobtraining über Depressivität
 <span><span class="co">## Chain 2: Iteration: 1800 / 2000 [ 90%]  (Sampling)</span></span>
 <span><span class="co">## Chain 2: Iteration: 2000 / 2000 [100%]  (Sampling)</span></span>
 <span><span class="co">## Chain 2: </span></span>
-<span><span class="co">## Chain 2:  Elapsed Time: 0.069 seconds (Warm-up)</span></span>
-<span><span class="co">## Chain 2:                0.074 seconds (Sampling)</span></span>
-<span><span class="co">## Chain 2:                0.143 seconds (Total)</span></span>
+<span><span class="co">## Chain 2:  Elapsed Time: 0.024 seconds (Warm-up)</span></span>
+<span><span class="co">## Chain 2:                0.025 seconds (Sampling)</span></span>
+<span><span class="co">## Chain 2:                0.049 seconds (Total)</span></span>
 <span><span class="co">## Chain 2: </span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## SAMPLING FOR MODEL 'anon_model' NOW (CHAIN 3).</span></span>
 <span><span class="co">## Chain 3: </span></span>
-<span><span class="co">## Chain 3: Gradient evaluation took 1.3e-05 seconds</span></span>
-<span><span class="co">## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.13 seconds.</span></span>
+<span><span class="co">## Chain 3: Gradient evaluation took 4e-06 seconds</span></span>
+<span><span class="co">## Chain 3: 1000 transitions using 10 leapfrog steps per transition would take 0.04 seconds.</span></span>
 <span><span class="co">## Chain 3: Adjust your expectations accordingly!</span></span>
 <span><span class="co">## Chain 3: </span></span>
 <span><span class="co">## Chain 3: </span></span>
@@ -2173,15 +2182,15 @@ Abbildung&nbsp;12.24: Mediationsmodell von Jobtraining über Depressivität
 <span><span class="co">## Chain 3: Iteration: 1800 / 2000 [ 90%]  (Sampling)</span></span>
 <span><span class="co">## Chain 3: Iteration: 2000 / 2000 [100%]  (Sampling)</span></span>
 <span><span class="co">## Chain 3: </span></span>
-<span><span class="co">## Chain 3:  Elapsed Time: 0.067 seconds (Warm-up)</span></span>
-<span><span class="co">## Chain 3:                0.074 seconds (Sampling)</span></span>
-<span><span class="co">## Chain 3:                0.141 seconds (Total)</span></span>
+<span><span class="co">## Chain 3:  Elapsed Time: 0.023 seconds (Warm-up)</span></span>
+<span><span class="co">## Chain 3:                0.024 seconds (Sampling)</span></span>
+<span><span class="co">## Chain 3:                0.047 seconds (Total)</span></span>
 <span><span class="co">## Chain 3: </span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## SAMPLING FOR MODEL 'anon_model' NOW (CHAIN 4).</span></span>
 <span><span class="co">## Chain 4: </span></span>
-<span><span class="co">## Chain 4: Gradient evaluation took 1.3e-05 seconds</span></span>
-<span><span class="co">## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.13 seconds.</span></span>
+<span><span class="co">## Chain 4: Gradient evaluation took 4e-06 seconds</span></span>
+<span><span class="co">## Chain 4: 1000 transitions using 10 leapfrog steps per transition would take 0.04 seconds.</span></span>
 <span><span class="co">## Chain 4: Adjust your expectations accordingly!</span></span>
 <span><span class="co">## Chain 4: </span></span>
 <span><span class="co">## Chain 4: </span></span>
@@ -2198,9 +2207,9 @@ Abbildung&nbsp;12.24: Mediationsmodell von Jobtraining über Depressivität
 <span><span class="co">## Chain 4: Iteration: 1800 / 2000 [ 90%]  (Sampling)</span></span>
 <span><span class="co">## Chain 4: Iteration: 2000 / 2000 [100%]  (Sampling)</span></span>
 <span><span class="co">## Chain 4: </span></span>
-<span><span class="co">## Chain 4:  Elapsed Time: 0.075 seconds (Warm-up)</span></span>
-<span><span class="co">## Chain 4:                0.076 seconds (Sampling)</span></span>
-<span><span class="co">## Chain 4:                0.151 seconds (Total)</span></span>
+<span><span class="co">## Chain 4:  Elapsed Time: 0.023 seconds (Warm-up)</span></span>
+<span><span class="co">## Chain 4:                0.026 seconds (Sampling)</span></span>
+<span><span class="co">## Chain 4:                0.049 seconds (Total)</span></span>
 <span><span class="co">## Chain 4:</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p><code>set_rescor(FALSE)</code> setzt die Korrelation der Residuen von M und Y auf Null: Es sollte keinen Zusammenhang zwischen M und Y geben, der nicht durch X erklärt wird. Anders gesagt: Wir schließen Konfundierung durch unbeobachtete Variablen aus.</p>
@@ -2255,7 +2264,7 @@ Abbildung&nbsp;12.24: Mediationsmodell von Jobtraining über Depressivität
 <div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb48"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">hdi</span><span class="op">(</span><span class="va">post</span><span class="op">$</span><span class="va">indirect</span><span class="op">)</span> <span class="op">|&gt;</span> <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div>
-<figure class="figure"><p><a href="090-Modellieren_files/figure-html/unnamed-chunk-44-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img src="090-Modellieren_files/figure-html/unnamed-chunk-44-1.png" class="img-fluid figure-img" width="672"></a></p>
+<figure class="figure"><p><a href="090-Modellieren_files/figure-html/unnamed-chunk-40-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-21"><img src="090-Modellieren_files/figure-html/unnamed-chunk-40-1.png" class="img-fluid figure-img" width="672"></a></p>
 </figure>
 </div>
 </div>
@@ -2264,20 +2273,177 @@ Abbildung&nbsp;12.24: Mediationsmodell von Jobtraining über Depressivität
 </section></section><section id="vertiefung-1" class="level3" data-number="12.7.3"><h3 data-number="12.7.3" class="anchored" data-anchor-id="vertiefung-1">
 <span class="header-section-number">12.7.3</span> Vertiefung</h3>
 <p><a href="https://wgruber.github.io/Modellbildung2/mediation.html">Hier</a> findet sich eine Einführung in die Mediationsanalyse. <a href="https://github.com/GerkeLab/mediator/tree/master">Dieses R-Paket</a> stellt ebenfalls komfortable Funktionen zur Verfügung für Mediationsanalysen. Mit den “klickbaren” Programmen <a href="https://blog.jamovi.org/2017/09/25/medmod.html">Jamovi</a> oder <a href="https://jasp-stats.org/2020/03/12/mediation-and-moderation-analysis-in-jasp/">JASP</a> kann man ebenfalls - und zwar sehr einfach - eine Mediationsanalyse durchführen. Einfach mal ausprobieren!</p>
-</section></section><section id="vertiefung-2" class="level2" data-number="12.8"><h2 data-number="12.8" class="anchored" data-anchor-id="vertiefung-2">
-<span class="header-section-number">12.8</span> Vertiefung</h2>
-<section id="within-variable-mit-mehr-als-zwei-stufen" class="level3" data-number="12.8.1"><h3 data-number="12.8.1" class="anchored" data-anchor-id="within-variable-mit-mehr-als-zwei-stufen">
-<span class="header-section-number">12.8.1</span> 1 within-Variable mit mehr als zwei Stufen</h3>
+</section></section><section id="sec-moderierte-mediation" class="level2" data-number="12.8"><h2 data-number="12.8" class="anchored" data-anchor-id="sec-moderierte-mediation">
+<span class="header-section-number">12.8</span> Moderierte Mediation</h2>
+<p>Bei einer <em>einfachen Mediation</em> wirkt ein Prädiktor <span class="math inline">\(X\)</span> über einen Mediator <span class="math inline">\(M\)</span> auf ein Ergebnis <span class="math inline">\(Y\)</span>. Der indirekte Effekt ist das Produkt <span class="math inline">\(a \cdot b\)</span> der beiden beteiligten Pfade. Eine <em>moderierte</em> Mediation liegt vor, wenn dieser indirekte Effekt selbst von einer weiteren Variable, dem Moderator <span class="math inline">\(W\)</span>, abhängt. Anders gesagt: Der Mechanismus, über den <span class="math inline">\(X\)</span> auf <span class="math inline">\(Y\)</span> wirkt, ist nicht für alle gleich stark.</p>
+<p>Die zentrale Frage ist immer: <em>Welcher Pfad wird moderiert?</em> Diese Entscheidung ist theoretischer, nicht technischer Natur. Drei Leitfragen helfen:</p>
+<ul>
+<li>Hängt die <em>Entstehung</em> des Mediators von <span class="math inline">\(W\)</span> ab? → a-Pfad</li>
+<li>Hängt die <em>Übersetzung</em> des Mediators in <span class="math inline">\(Y\)</span> von <span class="math inline">\(W\)</span> ab? → b-Pfad</li>
+<li>Hängt der <em>direkte Resteffekt</em> von <span class="math inline">\(X\)</span> auf <span class="math inline">\(Y\)</span> von <span class="math inline">\(W\)</span> ab? → c′-Pfad</li>
+</ul>
+<p>Die ersten beiden Fälle sind moderierte Mediation im engeren Sinn. Der dritte Fall moderiert den direkten Pfad und ist damit eine moderierte <em>direkte</em> Wirkung — dazu unten mehr.</p>
+<section id="konzeptuelles-und-statistisches-diagramm" class="level3" data-number="12.8.1"><h3 data-number="12.8.1" class="anchored" data-anchor-id="konzeptuelles-und-statistisches-diagramm">
+<span class="header-section-number">12.8.1</span> Konzeptuelles und statistisches Diagramm</h3>
+<p>In der konzeptuellen Notation nach <span class="citation" data-cites="hayes2022">Hayes (<a href="130-references.html#ref-hayes2022" role="doc-biblioref">2022</a>)</span> zeigt der Moderator mit einem Pfeil auf einen <em>Pfad</em> (nicht auf einen Knoten). Diese Darstellung macht die Hypothese unmittelbar lesbar, lässt sich aber nicht in jedem Diagramm-Werkzeug umsetzen.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-modmed-konzeptuell" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-modmed-konzeptuell-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="090-Modellieren_files/figure-html/fig-modmed-konzeptuell-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-22" title="Abbildung&nbsp;12.25: Konzeptuelles Diagramm: Der Moderator W zielt auf den a-Pfad (Modell 7)."><img src="090-Modellieren_files/figure-html/fig-modmed-konzeptuell-1.png" class="img-fluid figure-img" width="576"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-modmed-konzeptuell-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;12.25: Konzeptuelles Diagramm: Der Moderator <span class="math inline">\(W\)</span> zielt auf den a-Pfad (Modell 7).
+</figcaption></figure>
+</div>
+</div>
+</div>
+<p>Im <em>statistischen</em> Diagramm wird die Moderation als Interaktionsterm <span class="math inline">\(X \cdot W\)</span> aufgelöst, der als eigener Prädiktor auf <span class="math inline">\(M\)</span> wirkt. Genau das schätzt das Regressionsmodell <code>lm(M ~ X * W)</code>. Der Koeffizient dieses Interaktionsterms heißt <span class="math inline">\(a_3\)</span>.</p>
+</section><section id="der-index-der-moderierten-mediation" class="level3" data-number="12.8.2"><h3 data-number="12.8.2" class="anchored" data-anchor-id="der-index-der-moderierten-mediation">
+<span class="header-section-number">12.8.2</span> Der Index der moderierten Mediation</h3>
+<p><span class="citation" data-cites="hayes2015">Hayes (<a href="130-references.html#ref-hayes2015" role="doc-biblioref">2015</a>)</span> führt den <em>Index of moderated mediation</em> ein. Wird der a-Pfad moderiert, ist der bedingte indirekte Effekt</p>
+<p><span class="math display">\[
+\text{indirekt}(W) = (a_1 + a_3 \cdot W) \cdot b ,
+\]</span></p>
+<p>und der Index ist schlicht</p>
+<p><span class="math display">\[
+\text{Index} = a_3 \cdot b .
+\]</span></p>
+<p>Ist der Index von null verschieden (das Bootstrap-Konfidenzintervall schließt die Null aus), liegt moderierte Mediation vor. Der Test ist also ein Konfidenzintervall auf das Produkt <span class="math inline">\(a_3 \cdot b\)</span>.</p>
+</section><section id="beispiel-mit-simulierten-daten" class="level3" data-number="12.8.3"><h3 data-number="12.8.3" class="anchored" data-anchor-id="beispiel-mit-simulierten-daten">
+<span class="header-section-number">12.8.3</span> Beispiel mit simulierten Daten</h3>
+<p>Wir erzeugen einen Datensatz, in dem der a-Pfad bewusst moderiert ist (der Term <code>0.5 * X * W</code>):</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb49"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/Random.html">set.seed</a></span><span class="op">(</span><span class="fl">42</span><span class="op">)</span></span>
+<span><span class="va">n</span> <span class="op">&lt;-</span> <span class="fl">300</span></span>
+<span><span class="va">X</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span></span>
+<span><span class="va">W</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span></span>
+<span><span class="va">M</span> <span class="op">&lt;-</span> <span class="fl">0.4</span> <span class="op">*</span> <span class="va">X</span> <span class="op">+</span> <span class="fl">0.3</span> <span class="op">*</span> <span class="va">W</span> <span class="op">+</span> <span class="fl">0.5</span> <span class="op">*</span> <span class="va">X</span> <span class="op">*</span> <span class="va">W</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span></span>
+<span><span class="va">Y</span> <span class="op">&lt;-</span> <span class="fl">0.6</span> <span class="op">*</span> <span class="va">M</span> <span class="op">+</span> <span class="fl">0.2</span> <span class="op">*</span> <span class="va">X</span> <span class="op">+</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html">rnorm</a></span><span class="op">(</span><span class="va">n</span><span class="op">)</span></span>
+<span><span class="va">d</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span><span class="va">X</span>, <span class="va">W</span>, <span class="va">M</span>, <span class="va">Y</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<section id="schätzung-mit-lavaan" class="level4" data-number="12.8.3.1"><h4 data-number="12.8.3.1" class="anchored" data-anchor-id="schätzung-mit-lavaan">
+<span class="header-section-number">12.8.3.1</span> Schätzung mit <code>lavaan</code>
+</h4>
+<p>Der Vorteil: Das Pfadmodell steht explizit im Code, nichts ist Blackbox. Der Interaktionsterm wird vorab gebildet:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb50"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://lavaan.ugent.be">lavaan</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">d</span><span class="op">$</span><span class="va">XW</span> <span class="op">&lt;-</span> <span class="va">d</span><span class="op">$</span><span class="va">X</span> <span class="op">*</span> <span class="va">d</span><span class="op">$</span><span class="va">W</span></span>
+<span></span>
+<span><span class="va">modell</span> <span class="op">&lt;-</span> <span class="st">'</span></span>
+<span><span class="st">  # a-Pfad mit Interaktion X:W</span></span>
+<span><span class="st">  M ~ a1*X + a2*W + a3*XW</span></span>
+<span><span class="st">  # b-Pfad und direkter Pfad</span></span>
+<span><span class="st">  Y ~ b*M + cp*X</span></span>
+<span><span class="st"></span></span>
+<span><span class="st">  # bedingte indirekte Effekte bei W = -1, 0, +1</span></span>
+<span><span class="st">  ind_lo   := (a1 + a3 * -1) * b</span></span>
+<span><span class="st">  ind_mean := (a1 + a3 *  0) * b</span></span>
+<span><span class="st">  ind_hi   := (a1 + a3 *  1) * b</span></span>
+<span><span class="st"></span></span>
+<span><span class="st">  # Index der moderierten Mediation</span></span>
+<span><span class="st">  index := a3 * b</span></span>
+<span><span class="st">'</span></span>
+<span></span>
+<span><span class="va">fit</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/lavaan/man/sem.html">sem</a></span><span class="op">(</span><span class="va">modell</span>, data <span class="op">=</span> <span class="va">d</span>, se <span class="op">=</span> <span class="st">"bootstrap"</span>, bootstrap <span class="op">=</span> <span class="fl">1000</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb51"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/lavaan/man/parameterEstimates.html">parameterEstimates</a></span><span class="op">(</span><span class="va">fit</span>, ci <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://rdrr.io/r/base/subset.html">subset</a></span><span class="op">(</span><span class="va">label</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"ind_lo"</span>, <span class="st">"ind_mean"</span>, <span class="st">"ind_hi"</span>, <span class="st">"index"</span><span class="op">)</span>,</span>
+<span>         select <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="va">label</span>, <span class="va">est</span>, <span class="va">ci.lower</span>, <span class="va">ci.upper</span><span class="op">)</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div data-pagedtable="false">
+  <script data-pagedtable-source="" type="application/json">
+{"columns":[{"label":[""],"name":["_rn_"],"type":[""],"align":["left"]},{"label":["label"],"name":[1],"type":["chr"],"align":["left"]},{"label":["est"],"name":[2],"type":["dbl"],"align":["right"]},{"label":["ci.lower"],"name":[3],"type":["dbl"],"align":["right"]},{"label":["ci.upper"],"name":[4],"type":["dbl"],"align":["right"]}],"data":[{"1":"ind_lo","2":"-0.07685543","3":"-0.1857454","4":"0.0469926","_rn_":"14"},{"1":"ind_mean","2":"0.22401138","3":"0.1456224","4":"0.3111481","_rn_":"15"},{"1":"ind_hi","2":"0.52487820","3":"0.3898178","4":"0.6795872","_rn_":"16"},{"1":"index","2":"0.30086682","3":"0.2029888","4":"0.3974418","_rn_":"17"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
+  </script>
+</div>
+</div>
+</div>
+<p>Der Parameter <code>index</code> ist der Kern: Schließt sein Konfidenzintervall die Null aus, ist die Mediation moderiert. Die drei <code>ind_*</code>-Werte zeigen, wie stark der indirekte Effekt bei niedrigem, mittlerem und hohem <span class="math inline">\(W\)</span> ausfällt.</p>
+</section><section id="bedingte-indirekte-effekte-über-den-wertebereich-von-w" class="level4" data-number="12.8.3.2"><h4 data-number="12.8.3.2" class="anchored" data-anchor-id="bedingte-indirekte-effekte-über-den-wertebereich-von-w">
+<span class="header-section-number">12.8.3.2</span> Bedingte indirekte Effekte über den Wertebereich von <span class="math inline">\(W\)</span>
+</h4>
+<p>Statt nur dreier Stützstellen lässt sich der bedingte indirekte Effekt <span class="math inline">\((a_1 + a_3 W)\, b\)</span> als stetige Funktion von <span class="math inline">\(W\)</span> darstellen. Das macht unmittelbar sichtbar, <em>wo</em> der Mediationsmechanismus stark ist und wo er verschwindet:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb52"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">est</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/coef.html">coef</a></span><span class="op">(</span><span class="va">fit</span><span class="op">)</span></span>
+<span><span class="va">a1</span> <span class="op">&lt;-</span> <span class="va">est</span><span class="op">[</span><span class="st">"a1"</span><span class="op">]</span>; <span class="va">a3</span> <span class="op">&lt;-</span> <span class="va">est</span><span class="op">[</span><span class="st">"a3"</span><span class="op">]</span>; <span class="va">b</span> <span class="op">&lt;-</span> <span class="va">est</span><span class="op">[</span><span class="st">"b"</span><span class="op">]</span></span>
+<span></span>
+<span><span class="va">w_seq</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/seq.html">seq</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">min</a></span><span class="op">(</span><span class="va">d</span><span class="op">$</span><span class="va">W</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/Extremes.html">max</a></span><span class="op">(</span><span class="va">d</span><span class="op">$</span><span class="va">W</span><span class="op">)</span>, length.out <span class="op">=</span> <span class="fl">100</span><span class="op">)</span></span>
+<span><span class="va">plot_df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span></span>
+<span>  W <span class="op">=</span> <span class="va">w_seq</span>,</span>
+<span>  effekt <span class="op">=</span> <span class="op">(</span><span class="va">a1</span> <span class="op">+</span> <span class="va">a3</span> <span class="op">*</span> <span class="va">w_seq</span><span class="op">)</span> <span class="op">*</span> <span class="va">b</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="va">plot_df</span>, <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">W</span>, y <span class="op">=</span> <span class="va">effekt</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_abline.html">geom_hline</a></span><span class="op">(</span>yintercept <span class="op">=</span> <span class="fl">0</span>, linetype <span class="op">=</span> <span class="st">"dashed"</span>, colour <span class="op">=</span> <span class="st">"grey50"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span>linewidth <span class="op">=</span> <span class="fl">0.8</span>, colour <span class="op">=</span> <span class="st">"#185FA5"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Moderator W"</span>,</span>
+<span>       y <span class="op">=</span> <span class="st">"Bedingter indirekter Effekt"</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggtheme.html">theme_minimal</a></span><span class="op">(</span>base_size <span class="op">=</span> <span class="fl">12</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div id="fig-bedingt-indirekt" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-bedingt-indirekt-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<a href="090-Modellieren_files/figure-html/fig-bedingt-indirekt-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-23" title="Abbildung&nbsp;12.26: Bedingter indirekter Effekt von X auf Y über den Wertebereich des Moderators W. Die Steigung der Geraden entspricht dem Index der moderierten Mediation (a_3 \cdot b)."><img src="090-Modellieren_files/figure-html/fig-bedingt-indirekt-1.png" class="img-fluid figure-img" width="576"></a>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-bedingt-indirekt-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Abbildung&nbsp;12.26: Bedingter indirekter Effekt von <span class="math inline">\(X\)</span> auf <span class="math inline">\(Y\)</span> über den Wertebereich des Moderators <span class="math inline">\(W\)</span>. Die Steigung der Geraden entspricht dem Index der moderierten Mediation (<span class="math inline">\(a_3 \cdot b\)</span>).
+</figcaption></figure>
+</div>
+</div>
+</div>
+<p>Ist die Gerade waagerecht (<span class="math inline">\(a_3 = 0\)</span>), hängt der indirekte Effekt nicht von <span class="math inline">\(W\)</span> ab — keine moderierte Mediation. Je steiler sie verläuft, desto stärker die Moderation. Genau diese Steigung ist der Index aus <span class="citation" data-cites="hayes2015">Hayes (<a href="130-references.html#ref-hayes2015" role="doc-biblioref">2015</a>)</span>.</p>
+</section><section id="schätzung-mit-dem-paket-mediation" class="level4" data-number="12.8.3.3"><h4 data-number="12.8.3.3" class="anchored" data-anchor-id="schätzung-mit-dem-paket-mediation">
+<span class="header-section-number">12.8.3.3</span> Schätzung mit dem Paket <code>mediation</code>
+</h4>
+<p>Klassischer Weg über zwei getrennte Modelle:</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb53"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://imai.princeton.edu/projects/mechanisms.html">mediation</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">m_mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">M</span> <span class="op">~</span> <span class="va">X</span> <span class="op">*</span> <span class="va">W</span>, data <span class="op">=</span> <span class="va">d</span><span class="op">)</span></span>
+<span><span class="va">y_mod</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/lm.html">lm</a></span><span class="op">(</span><span class="va">Y</span> <span class="op">~</span> <span class="va">M</span> <span class="op">+</span> <span class="va">X</span>, data <span class="op">=</span> <span class="va">d</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># bedingte Mediation bei festem W</span></span>
+<span><span class="va">med_lo</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/mediation/man/mediate.html">mediate</a></span><span class="op">(</span><span class="va">m_mod</span>, <span class="va">y_mod</span>, treat <span class="op">=</span> <span class="st">"X"</span>, mediator <span class="op">=</span> <span class="st">"M"</span>,</span>
+<span>                  covariates <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>W <span class="op">=</span> <span class="op">-</span><span class="fl">1</span><span class="op">)</span>, boot <span class="op">=</span> <span class="cn">TRUE</span>, sims <span class="op">=</span> <span class="fl">1000</span><span class="op">)</span></span>
+<span><span class="va">med_hi</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/mediation/man/mediate.html">mediate</a></span><span class="op">(</span><span class="va">m_mod</span>, <span class="va">y_mod</span>, treat <span class="op">=</span> <span class="st">"X"</span>, mediator <span class="op">=</span> <span class="st">"M"</span>,</span>
+<span>                  covariates <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>W <span class="op">=</span>  <span class="fl">1</span><span class="op">)</span>, boot <span class="op">=</span> <span class="cn">TRUE</span>, sims <span class="op">=</span> <span class="fl">1000</span><span class="op">)</span></span>
+<span></span>
+<span><span class="co"># Test, ob sich indirekte Effekte über W unterscheiden</span></span>
+<span><span class="fu"><a href="https://rdrr.io/pkg/mediation/man/test.modmed.html">test.modmed</a></span><span class="op">(</span><span class="va">med_lo</span>,</span>
+<span>            covariates.1 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>W <span class="op">=</span> <span class="op">-</span><span class="fl">1</span><span class="op">)</span>,</span>
+<span>            covariates.2 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>W <span class="op">=</span>  <span class="fl">1</span><span class="op">)</span>,</span>
+<span>            sims <span class="op">=</span> <span class="fl">1000</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section></section><section id="sonderfall-moderation-des-c-pfads" class="level3" data-number="12.8.4"><h3 data-number="12.8.4" class="anchored" data-anchor-id="sonderfall-moderation-des-c-pfads">
+<span class="header-section-number">12.8.4</span> Sonderfall: Moderation des c′-Pfads</h3>
+<p>Wird nicht der a- oder b-Pfad, sondern der direkte Pfad c′ moderiert, ändert sich der <em>indirekte</em> Effekt nicht über <span class="math inline">\(W\)</span> — nur der direkte Resteffekt von <span class="math inline">\(X\)</span> auf <span class="math inline">\(Y\)</span>. Das ist inhaltlich eine andere Aussage: Der Mediationsmechanismus ist überall gleich stark, aber der direkte Effekt hängt von <span class="math inline">\(W\)</span> ab.</p>
+<p>Wichtig: Der <em>Index of moderated mediation</em> nach Hayes ist hier <strong>nicht definiert</strong>, weil der indirekte Effekt konstant bleibt. Getestet wird stattdessen der Interaktionskoeffizient <span class="math inline">\(X \cdot W\)</span> in der <span class="math inline">\(Y\)</span>-Gleichung.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb54"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">modell_c</span> <span class="op">&lt;-</span> <span class="st">'</span></span>
+<span><span class="st">  M ~ a*X</span></span>
+<span><span class="st">  Y ~ b*M + cp1*X + cp2*W + cp3*XW</span></span>
+<span><span class="st"></span></span>
+<span><span class="st">  indirect := a * b      # konstant, nicht moderiert</span></span>
+<span><span class="st">  # kein Index of moderated mediation</span></span>
+<span><span class="st">  # stattdessen: ist cp3 signifikant?</span></span>
+<span><span class="st">'</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p>Der Begriff lautet dann korrekt <em>moderierte direkte Wirkung</em>, nicht moderierte Mediation.</p>
+</section></section><section id="vertiefung-2" class="level2" data-number="12.9"><h2 data-number="12.9" class="anchored" data-anchor-id="vertiefung-2">
+<span class="header-section-number">12.9</span> Vertiefung</h2>
+<section id="within-variable-mit-mehr-als-zwei-stufen" class="level3" data-number="12.9.1"><h3 data-number="12.9.1" class="anchored" data-anchor-id="within-variable-mit-mehr-als-zwei-stufen">
+<span class="header-section-number">12.9.1</span> 1 within-Variable mit mehr als zwei Stufen</h3>
 <p><i class="fa-solid fa-dumbbell" aria-label="dumbbell"></i> VERTIEFUNG <i class="fa-solid fa-dumbbell" aria-label="dumbbell"></i> - Sie können diesen Abschnitt ohne Gefahr ignorieren.</p>
-</section><section id="design-4" class="level3" data-number="12.8.2"><h3 data-number="12.8.2" class="anchored" data-anchor-id="design-4">
-<span class="header-section-number">12.8.2</span> Design</h3>
+</section><section id="design-4" class="level3" data-number="12.9.2"><h3 data-number="12.9.2" class="anchored" data-anchor-id="design-4">
+<span class="header-section-number">12.9.2</span> Design</h3>
 <p>Eine Forscherin hat die Gesundheit (<code>y</code>) von Studentis drei Mal (t1, t2, t3) im Zeitraum eines Semesters untersucht.</p>
 <p>Ihre Forschungsfrage lautet, ob sich die Gesundheit im Laufe des Semesters substanziell verändert. Ihre Hypothese lautet, dass die Werte über die Zeit hinweg stabil bleiben.</p>
-</section><section id="deskriptive-analyse-4" class="level3" data-number="12.8.3"><h3 data-number="12.8.3" class="anchored" data-anchor-id="deskriptive-analyse-4">
-<span class="header-section-number">12.8.3</span> Deskriptive Analyse</h3>
+</section><section id="deskriptive-analyse-4" class="level3" data-number="12.9.3"><h3 data-number="12.9.3" class="anchored" data-anchor-id="deskriptive-analyse-4">
+<span class="header-section-number">12.9.3</span> Deskriptive Analyse</h3>
 <p>Hier sind einige Spieldaten:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb49"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">d_within</span> <span class="op">&lt;-</span> </span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb55"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">d_within</span> <span class="op">&lt;-</span> </span>
 <span>  <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"https://raw.githubusercontent.com/sebastiansauer/Lehre/main/data/withindesign.csv"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html">head</a></span><span class="op">(</span><span class="va">d_within</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
@@ -2291,7 +2457,7 @@ Abbildung&nbsp;12.24: Mediationsmodell von Jobtraining über Depressivität
 </div>
 <p>Hier benötigen wir die Daten in Langform; wir müssen also vom Breitformat zum Langformat pivotieren:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb50"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">d_long</span> <span class="op">&lt;-</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb56"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">d_long</span> <span class="op">&lt;-</span></span>
 <span>  <span class="va">d_within</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="https://tidyr.tidyverse.org/reference/pivot_longer.html">pivot_longer</a></span><span class="op">(</span>cols <span class="op">=</span> <span class="va">y1</span><span class="op">:</span><span class="va">y3</span>, </span>
 <span>               names_to <span class="op">=</span> <span class="st">"time"</span>, </span>
@@ -2306,8 +2472,8 @@ Abbildung&nbsp;12.24: Mediationsmodell von Jobtraining über Depressivität
 </div>
 </div>
 </div>
-<p>Es hilft (wie meistens), sich die Daten zu visualisieren, s. <a href="#fig-within-y3" class="quarto-xref">Abbildung&nbsp;<span>12.25</span></a>.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb51"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">p_y123_a</span> <span class="op">&lt;-</span></span>
+<p>Es hilft (wie meistens), sich die Daten zu visualisieren, s. <a href="#fig-within-y3" class="quarto-xref">Abbildung&nbsp;<span>12.27</span></a>.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb57"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">p_y123_a</span> <span class="op">&lt;-</span></span>
 <span>  <span class="va">d_long</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">time</span>, y <span class="op">=</span> <span class="va">y</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_jitter.html">geom_jitter</a></span><span class="op">(</span>width <span class="op">=</span> <span class="fl">.2</span><span class="op">)</span></span>
@@ -2326,7 +2492,7 @@ Abbildung&nbsp;12.24: Mediationsmodell von Jobtraining über Depressivität
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-within-y3" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div id="fig-within-y3-1" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-subfloat-fig figure"><div aria-describedby="fig-within-y3-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="090-Modellieren_files/figure-html/fig-within-y3-1.png" class="lightbox" data-gallery="fig-within-y3" title="Abbildung&nbsp;12.25&nbsp;(a): Einfaches Punktediagramm"><img src="090-Modellieren_files/figure-html/fig-within-y3-1.png" class="img-fluid figure-img" data-ref-parent="fig-within-y3" width="672"></a>
+<a href="090-Modellieren_files/figure-html/fig-within-y3-1.png" class="lightbox" data-gallery="fig-within-y3" title="Abbildung&nbsp;12.27&nbsp;(a): Einfaches Punktediagramm"><img src="090-Modellieren_files/figure-html/fig-within-y3-1.png" class="img-fluid figure-img" data-ref-parent="fig-within-y3" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-within-y3-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (a) Einfaches Punktediagramm
@@ -2336,7 +2502,7 @@ Abbildung&nbsp;12.24: Mediationsmodell von Jobtraining über Depressivität
 <div class="cell-output-display quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-within-y3" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div id="fig-within-y3-2" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-subfloat-fig figure"><div aria-describedby="fig-within-y3-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="090-Modellieren_files/figure-html/fig-within-y3-2.png" class="lightbox" data-gallery="fig-within-y3" title="Abbildung&nbsp;12.25&nbsp;(b): Informationsreiches Punkte-, Boxplot- und Violinendiagramm mit Statistiken der Veränderung angereichert"><img src="090-Modellieren_files/figure-html/fig-within-y3-2.png" class="img-fluid figure-img" data-ref-parent="fig-within-y3" width="672"></a>
+<a href="090-Modellieren_files/figure-html/fig-within-y3-2.png" class="lightbox" data-gallery="fig-within-y3" title="Abbildung&nbsp;12.27&nbsp;(b): Informationsreiches Punkte-, Boxplot- und Violinendiagramm mit Statistiken der Veränderung angereichert"><img src="090-Modellieren_files/figure-html/fig-within-y3-2.png" class="img-fluid figure-img" data-ref-parent="fig-within-y3" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-within-y3-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (b) Informationsreiches Punkte-, Boxplot- und Violinendiagramm mit Statistiken der Veränderung angereichert
@@ -2346,12 +2512,12 @@ Abbildung&nbsp;12.24: Mediationsmodell von Jobtraining über Depressivität
 </div>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-within-y3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;12.25: Messwerte (y) in Abhängigkeit vom Messzeitpunkt (t1, t2, t3)
+Abbildung&nbsp;12.27: Messwerte (y) in Abhängigkeit vom Messzeitpunkt (t1, t2, t3)
 </figcaption></figure>
 </div>
 <p>Berechnen wir die Mittelwerte von <code>y</code> pro Messzeitpunkte sowie die Veränderung von t1 zu t2 bzw. von t2 zu t3, s. <a href="#tbl-d123" class="quarto-xref">Tabelle&nbsp;<span>12.8</span></a>.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb52"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">d_long</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb58"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">d_long</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">time</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarise</a></span><span class="op">(</span>y_mean <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">y</span><span class="op">)</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html">%&gt;%</a></span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>d <span class="op">=</span> <span class="va">y_mean</span> <span class="op">-</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/lead-lag.html">lag</a></span><span class="op">(</span><span class="va">y_mean</span><span class="op">)</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
@@ -2391,10 +2557,10 @@ Tabelle&nbsp;12.8: Mittelwerte von <code>y</code> pro Messzeitpunkte (<code>y_me
 </figure>
 </div>
 </div>
-</section><section id="modellierung-und-inferenz-3" class="level3" data-number="12.8.4"><h3 data-number="12.8.4" class="anchored" data-anchor-id="modellierung-und-inferenz-3">
-<span class="header-section-number">12.8.4</span> Modellierung und Inferenz</h3>
+</section><section id="modellierung-und-inferenz-3" class="level3" data-number="12.9.4"><h3 data-number="12.9.4" class="anchored" data-anchor-id="modellierung-und-inferenz-3">
+<span class="header-section-number">12.9.4</span> Modellierung und Inferenz</h3>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb53"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">m_within3</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://mc-stan.org/rstanarm/reference/stan_glmer.html">stan_lmer</a></span><span class="op">(</span><span class="va">y</span> <span class="op">~</span> <span class="fl">1</span> <span class="op">+</span> <span class="op">(</span><span class="fl">1</span> <span class="op">|</span> <span class="va">time</span><span class="op">)</span>, data <span class="op">=</span> <span class="va">d_long</span>, refresh <span class="op">=</span> <span class="fl">0</span><span class="op">)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb59"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">m_within3</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://mc-stan.org/rstanarm/reference/stan_glmer.html">stan_lmer</a></span><span class="op">(</span><span class="va">y</span> <span class="op">~</span> <span class="fl">1</span> <span class="op">+</span> <span class="op">(</span><span class="fl">1</span> <span class="op">|</span> <span class="va">time</span><span class="op">)</span>, data <span class="op">=</span> <span class="va">d_long</span>, refresh <span class="op">=</span> <span class="fl">0</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/summary.html">summary</a></span><span class="op">(</span><span class="va">m_within3</span><span class="op">)</span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## Model Info:</span></span>
@@ -2409,12 +2575,12 @@ Tabelle&nbsp;12.8: Mittelwerte von <code>y</code> pro Messzeitpunkte (<code>y_me
 <span><span class="co">## </span></span>
 <span><span class="co">## Estimates:</span></span>
 <span><span class="co">##                                       mean   sd   10%   50%   90%</span></span>
-<span><span class="co">## (Intercept)                          7.2    1.2  5.7   7.1   8.6 </span></span>
-<span><span class="co">## b[(Intercept) time:y1]              -1.7    1.2 -3.1  -1.7  -0.3 </span></span>
-<span><span class="co">## b[(Intercept) time:y2]              -0.1    1.2 -1.6  -0.1   1.3 </span></span>
-<span><span class="co">## b[(Intercept) time:y3]               1.8    1.2  0.3   1.8   3.2 </span></span>
-<span><span class="co">## sigma                                1.5    0.1  1.3   1.4   1.6 </span></span>
-<span><span class="co">## Sigma[time:(Intercept),(Intercept)]  5.1    5.7  1.2   3.3  10.3 </span></span>
+<span><span class="co">## (Intercept)                          7.3    1.2  5.9   7.2   8.6 </span></span>
+<span><span class="co">## b[(Intercept) time:y1]              -1.8    1.2 -3.2  -1.7  -0.4 </span></span>
+<span><span class="co">## b[(Intercept) time:y2]              -0.2    1.2 -1.6  -0.2   1.2 </span></span>
+<span><span class="co">## b[(Intercept) time:y3]               1.7    1.2  0.3   1.7   3.1 </span></span>
+<span><span class="co">## sigma                                1.5    0.1  1.3   1.5   1.6 </span></span>
+<span><span class="co">## Sigma[time:(Intercept),(Intercept)]  4.8    5.2  1.1   3.1  10.1 </span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## Fit Diagnostics:</span></span>
 <span><span class="co">##            mean   sd   10%   50%   90%</span></span>
@@ -2424,14 +2590,14 @@ Tabelle&nbsp;12.8: Mittelwerte von <code>y</code> pro Messzeitpunkte (<code>y_me
 <span><span class="co">## </span></span>
 <span><span class="co">## MCMC diagnostics</span></span>
 <span><span class="co">##                                     mcse Rhat n_eff</span></span>
-<span><span class="co">## (Intercept)                         0.0  1.0  1062 </span></span>
-<span><span class="co">## b[(Intercept) time:y1]              0.0  1.0  1037 </span></span>
-<span><span class="co">## b[(Intercept) time:y2]              0.0  1.0  1007 </span></span>
-<span><span class="co">## b[(Intercept) time:y3]              0.0  1.0  1053 </span></span>
-<span><span class="co">## sigma                               0.0  1.0  3237 </span></span>
-<span><span class="co">## Sigma[time:(Intercept),(Intercept)] 0.2  1.0  1179 </span></span>
-<span><span class="co">## mean_PPD                            0.0  1.0  3625 </span></span>
-<span><span class="co">## log-posterior                       0.1  1.0  1330 </span></span>
+<span><span class="co">## (Intercept)                         0.0  1.0  1270 </span></span>
+<span><span class="co">## b[(Intercept) time:y1]              0.0  1.0  1291 </span></span>
+<span><span class="co">## b[(Intercept) time:y2]              0.0  1.0  1289 </span></span>
+<span><span class="co">## b[(Intercept) time:y3]              0.0  1.0  1287 </span></span>
+<span><span class="co">## sigma                               0.0  1.0  2699 </span></span>
+<span><span class="co">## Sigma[time:(Intercept),(Intercept)] 0.1  1.0  1451 </span></span>
+<span><span class="co">## mean_PPD                            0.0  1.0  3897 </span></span>
+<span><span class="co">## log-posterior                       0.1  1.0  1096 </span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## For each parameter, mcse is Monte Carlo standard error, n_eff is a crude measure of effective sample size, and Rhat is the potential scale reduction factor on split chains (at convergence Rhat=1).</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
@@ -2439,41 +2605,41 @@ Tabelle&nbsp;12.8: Mittelwerte von <code>y</code> pro Messzeitpunkte (<code>y_me
 <p>Ein “fixer” Effekt ist ein Effekt, für den kein Pooling stattfindet, das ist hier der Intercept.</p>
 <p>Nur die festen (<em>fixed</em>) Effekte kann man sich so ausgeben lassen:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb54"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/nlme/man/fixed.effects.html">fixef</a></span><span class="op">(</span><span class="va">m_within3</span><span class="op">)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb60"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/nlme/man/fixed.effects.html">fixef</a></span><span class="op">(</span><span class="va">m_within3</span><span class="op">)</span></span>
 <span><span class="co">## (Intercept) </span></span>
-<span><span class="co">##    7.144688</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+<span><span class="co">##    7.217592</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Im Durchschnitt werden ca. 7.1 Fragen richtig beantwortet (Gesamtmittel); das ist die Information die der Punktschätzer des Intercepts bietet.</p>
 <p>Nur die Random-Effekte kann man sich so ausgeben lassen:</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb55"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/nlme/man/random.effects.html">ranef</a></span><span class="op">(</span><span class="va">m_within3</span><span class="op">)</span></span>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb61"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/nlme/man/random.effects.html">ranef</a></span><span class="op">(</span><span class="va">m_within3</span><span class="op">)</span></span>
 <span><span class="co">## $time</span></span>
 <span><span class="co">##    (Intercept)</span></span>
-<span><span class="co">## y1 -1.65624917</span></span>
-<span><span class="co">## y2 -0.09682942</span></span>
-<span><span class="co">## y3  1.78464925</span></span>
+<span><span class="co">## y1  -1.7077278</span></span>
+<span><span class="co">## y2  -0.1826931</span></span>
+<span><span class="co">## y3   1.6952708</span></span>
 <span><span class="co">## </span></span>
 <span><span class="co">## with conditional variances for "time"</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>Das sind jeweils die Abweichungen der Gruppenmittelwerte (y1, y2, y3) vom Gesamtmittel. Die Random-Effekte kann man sich visualisieren lassen, s. <a href="#fig-randef-m3" class="quarto-xref">Abbildung&nbsp;<span>12.26</span></a>.</p>
+<p>Das sind jeweils die Abweichungen der Gruppenmittelwerte (y1, y2, y3) vom Gesamtmittel. Die Random-Effekte kann man sich visualisieren lassen, s. <a href="#fig-randef-m3" class="quarto-xref">Abbildung&nbsp;<span>12.28</span></a>.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb56"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">m_within3</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb62"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html">plot</a></span><span class="op">(</span><span class="va">m_within3</span><span class="op">)</span></span></code></pre></div><button title="In die Zwischenablage kopieren" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output-display">
 <div id="fig-randef-m3" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure"><div aria-describedby="fig-randef-m3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<a href="090-Modellieren_files/figure-html/fig-randef-m3-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-24" title="Abbildung&nbsp;12.26: 95%-CI der Random-Effekte von m_within3"><img src="090-Modellieren_files/figure-html/fig-randef-m3-1.png" class="img-fluid figure-img" width="672"></a>
+<a href="090-Modellieren_files/figure-html/fig-randef-m3-1.png" class="lightbox" data-gallery="quarto-lightbox-gallery-26" title="Abbildung&nbsp;12.28: 95%-CI der Random-Effekte von m_within3"><img src="090-Modellieren_files/figure-html/fig-randef-m3-1.png" class="img-fluid figure-img" width="672"></a>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-randef-m3-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Abbildung&nbsp;12.26: 95%-CI der Random-Effekte von <code>m_within3</code>
+Abbildung&nbsp;12.28: 95%-CI der Random-Effekte von <code>m_within3</code>
 </figcaption></figure>
 </div>
 </div>
 </div>
-</section></section><section id="fazit" class="level2" data-number="12.9"><h2 data-number="12.9" class="anchored" data-anchor-id="fazit">
-<span class="header-section-number">12.9</span> Fazit</h2>
+</section></section><section id="fazit" class="level2" data-number="12.10"><h2 data-number="12.10" class="anchored" data-anchor-id="fazit">
+<span class="header-section-number">12.10</span> Fazit</h2>
 <p>Unter Modellieren versteht man in der Forschungspraxis meist ein Regressionsmodell der Form <code>av ~ uv</code>. Die Inferenzstatistik hilft, die Modellparameter mit Schätzwerten für die Population zu versehen.</p>
-</section><section id="aufgaben" class="level2" data-number="12.10"><h2 data-number="12.10" class="anchored" data-anchor-id="aufgaben">
-<span class="header-section-number">12.10</span> Aufgaben</h2>
+</section><section id="aufgaben" class="level2" data-number="12.11"><h2 data-number="12.11" class="anchored" data-anchor-id="aufgaben">
+<span class="header-section-number">12.11</span> Aufgaben</h2>
 <p>Schauen Sie sich im <a href="https://datenwerk.netlify.app/">Datenwerk</a> die Aufgaben mit folgenden Tags an:</p>
 <ul>
 <li><a href="https://datenwerk.netlify.app/#category=research-question">research-question</a></li>
@@ -2486,6 +2652,12 @@ Abbildung&nbsp;12.26: 95%-CI der Random-Effekte von <code>m_within3</code>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list" style="display: none">
+<div id="ref-hayes2015" class="csl-entry" role="listitem">
+Hayes, A. F. (2015). An Index and Test of Linear Moderated Mediation. <em>Multivariate Behavioral Research</em>, <em>50</em>(1), 1–22. <a href="https://doi.org/10.1080/00273171.2014.962683">https://doi.org/10.1080/00273171.2014.962683</a>
+</div>
+<div id="ref-hayes2022" class="csl-entry" role="listitem">
+Hayes, A. F. (2022). <em>Introduction to Mediation, Moderation, and Conditional Process Analysis: A Regression-Based Approach</em> (3. Aufl.). Guilford Press.
+</div>
 <div id="ref-kruschke_rejecting_2018" class="csl-entry" role="listitem">
 Kruschke, J. K. (2018). Rejecting or <span>Accepting Parameter Values</span> in <span>Bayesian Estimation</span>. <em>Advances in Methods and Practices in Psychological Science</em>, <em>1</em>(2), 270–280. <a href="https://doi.org/10.1177/2515245918771304">https://doi.org/10.1177/2515245918771304</a>
 </div>
