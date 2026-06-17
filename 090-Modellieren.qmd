@@ -37,6 +37,7 @@ library(easystats)
 library(ggstatsplot)  # Visualisierung
 library(ggpubr)  # Visualisierung
 library(rstanarm)  # Bayes
+library(mediation)  # Mediation, ggf. weitere Pakete, s.u.
 ```
 
 
@@ -1127,7 +1128,7 @@ In Summe:
 2. H2: (Abwesenheit eines Reihenfolgeeffekts) konnte nicht bestätigt werden; die Ergebnislage war uneindeutig.
 
 
-## Mediatoranalyse
+## Einfache Mediatoranalyse
 
 ### Grundlagen
 
@@ -1216,7 +1217,7 @@ Wir definieren zwei Regressionsmodelle:
 2. Das `y_model`: $X + M \rightarrow Y$
 
 
-```{r}
+```{r med_depress_freq}
 m_model2 <- lm(job_seek ~ treat, data = jobs)
 y_model2 <- lm(depress2 ~ treat + job_seek, data = jobs)
 med_depress_freq <-
@@ -1250,7 +1251,7 @@ jobs$id <- 1:nrow(jobs)
 
 Achtung: Die Funktion `mlm` kann mehrere Minuten zum Durchlaufen benötigen.
 
-```{r}
+```{r med_depress_mlm}
 #| warning: false
 #| results: false
 med_depress_mlm <-mlm(
@@ -1263,7 +1264,7 @@ med_depress_mlm <-mlm(
   chains = 1)
 ```
 
-```{r}
+```{r plot_med_depress_mlm}
 mlm_path_plot(med_depress_mlm,
               xlab = "Treat", mlab = "job_seek", ylab = "depress2",
               text = TRUE)
@@ -1298,7 +1299,7 @@ mlm_pars_plot(med_depress_mlm, pars = "me")
 library(brms)
 ```
 
-```{r}
+```{r med_depress_brms}
 m_model <- bf(job_seek ~ treat )
 y_model <- bf(depress2 ~ treat + job_seek)
 
@@ -1354,6 +1355,339 @@ Wie man sieht, ist die Null im Intervall enthalten.
 Mit den "klickbaren" Programmen [Jamovi](https://blog.jamovi.org/2017/09/25/medmod.html) oder [JASP](https://jasp-stats.org/2020/03/12/mediation-and-moderation-analysis-in-jasp/) 
 kann man ebenfalls - und zwar sehr einfach - eine Mediationsanalyse durchführen. 
 Einfach mal ausprobieren!
+
+
+
+## Moderierte Mediation {#sec-moderierte-mediation}
+
+Bei einer *einfachen Mediation* wirkt ein Prädiktor $X$ über einen Mediator $M$
+auf ein Ergebnis $Y$. 
+Der indirekte Effekt ist das Produkt $a \cdot b$ der
+beiden beteiligten Pfade. 
+Eine *moderierte* Mediation liegt vor, wenn dieser
+indirekte Effekt selbst von einer weiteren Variable, 
+dem Moderator $W$, abhängt.
+Anders gesagt: Der Mechanismus, über den $X$ auf $Y$ wirkt, ist nicht für alle
+gleich stark.
+
+Die zentrale Frage ist immer: *Welcher Pfad wird moderiert?* Diese Entscheidung
+ist theoretischer, nicht technischer Natur. Drei Leitfragen helfen:
+
+- Hängt die *Entstehung* des Mediators von $W$ ab? → a-Pfad
+- Hängt die *Übersetzung* des Mediators in $Y$ von $W$ ab? → b-Pfad
+- Hängt der *direkte Resteffekt* von $X$ auf $Y$ von $W$ ab? → c′-Pfad
+
+Die ersten beiden Fälle sind moderierte Mediation im engeren Sinn. 
+Der dritte
+Fall moderiert den direkten Pfad und ist damit eine moderierte *direkte*
+Wirkung — dazu unten mehr.
+
+### Konzeptuelles und statistisches Diagramm
+
+In der konzeptuellen Notation nach @hayes2022 zeigt der Moderator mit einem
+Pfeil auf einen *Pfad* (nicht auf einen Knoten). 
+Diese Darstellung macht die
+Hypothese unmittelbar lesbar, 
+lässt sich aber nicht in jedem
+Diagramm-Werkzeug umsetzen.
+
+```{r}
+#| label: fig-modmed-konzeptuell
+#| echo: false
+#| message: false
+#| fig-cap: "Konzeptuelles Diagramm: Der Moderator $W$ zielt auf den a-Pfad (Modell 7)."
+#| fig-width: 6
+#| fig-height: 4
+library(ggplot2)
+
+# Knotenpositionen
+knoten <- data.frame(
+  name = c("X", "M", "Y", "W"),
+  x    = c(0,   2,   4,   1),
+  y    = c(0,   1.4, 0,  -1.4)
+)
+
+# Pfeil-Funktion für gerade Pfade zwischen Knoten (mit Randabstand)
+pfeil <- function(von, nach, daten, kürzen = 0.18) {
+  p1 <- daten[daten$name == von, c("x", "y")]
+  p2 <- daten[daten$name == nach, c("x", "y")]
+  d  <- c(p2$x - p1$x, p2$y - p1$y)
+  len <- sqrt(sum(d^2)); u <- d / len
+  data.frame(
+    x = p1$x + u[1] * kürzen, y = p1$y + u[2] * kürzen,
+    xend = p2$x - u[1] * kürzen, yend = p2$y - u[2] * kürzen
+  )
+}
+
+pfade <- rbind(pfeil("X", "M", knoten),
+               pfeil("M", "Y", knoten),
+               pfeil("X", "Y", knoten))
+
+ggplot() +
+  # Pfade X->M, M->Y, X->Y
+  geom_segment(data = pfade,
+               aes(x = x, y = y, xend = xend, yend = yend),
+               arrow = arrow(length = unit(0.22, "cm"), type = "closed"),
+               linewidth = 0.6) +
+  # Moderatorpfeil: W zielt auf die Mitte des a-Pfads (X->M)
+  geom_segment(aes(x = 1, y = -1.1, xend = 1, yend = 0.6),
+               arrow = arrow(length = unit(0.22, "cm"), type = "closed"),
+               linewidth = 0.6, colour = "#BA7517") +
+  # Pfadbeschriftungen
+  annotate("text", x = 0.9, y = 0.85, label = "a", fontface = "italic") +
+  annotate("text", x = 3.1, y = 0.85, label = "b", fontface = "italic") +
+  annotate("text", x = 2,   y = -0.12, label = "c'", fontface = "italic") +
+  # Knoten als Boxen mit Beschriftung
+  geom_label(data = knoten, aes(x = x, y = y, label = name),
+             size = 6, label.size = 0.4, label.r = unit(0.15, "cm"),
+             label.padding = unit(0.4, "cm")) +
+  coord_equal(clip = "off") +
+  theme_void() +
+  theme(plot.margin = margin(10, 10, 10, 10))
+```
+
+Im *statistischen* Diagramm wird die Moderation als Interaktionsterm $X \cdot W$
+aufgelöst, der als eigener Prädiktor auf $M$ wirkt. 
+Genau das schätzt das
+Regressionsmodell `lm(M ~ X * W)`. 
+Der Koeffizient dieses Interaktionsterms
+heißt $a_3$.
+
+### Der Index der moderierten Mediation
+
+@hayes2015 führt den *Index of moderated mediation* ein. 
+Wird der a-Pfad
+moderiert, ist der bedingte indirekte Effekt
+
+$$
+\text{indirekt}(W) = (a_1 + a_3 \cdot W) \cdot b ,
+$$
+
+und der Index ist schlicht
+
+$$
+\text{Index} = a_3 \cdot b .
+$$
+
+Ist der Index von null verschieden (das Bootstrap-Konfidenzintervall schließt
+die Null aus), liegt moderierte Mediation vor. 
+Der Test ist also ein Konfidenzintervall auf das Produkt $a_3 \cdot b$.
+
+
+
+### Beispiel mit simulierten Daten
+
+Wir erzeugen einen Datensatz, in dem der a-Pfad bewusst moderiert ist
+(der Term `0.5 * X * W`):
+
+```{r}
+#| label: sim-daten
+set.seed(42)
+n <- 300
+X <- rnorm(n)
+W <- rnorm(n)
+M <- 0.4 * X + 0.3 * W + 0.5 * X * W + rnorm(n)
+Y <- 0.6 * M + 0.2 * X + rnorm(n)
+d <- data.frame(X, W, M, Y)
+```
+
+#### Schätzung mit `lavaan`
+
+Der Vorteil: Das Pfadmodell steht explizit im Code, 
+nichts ist
+Blackbox. Der Interaktionsterm wird vorab gebildet:
+
+```{r}
+#| label: lavaan-modell
+#| message: false
+library(lavaan)
+
+d$XW <- d$X * d$W
+
+modell <- '
+  # a-Pfad mit Interaktion X:W
+  M ~ a1*X + a2*W + a3*XW
+  # b-Pfad und direkter Pfad
+  Y ~ b*M + cp*X
+
+  # bedingte indirekte Effekte bei W = -1, 0, +1
+  ind_lo   := (a1 + a3 * -1) * b
+  ind_mean := (a1 + a3 *  0) * b
+  ind_hi   := (a1 + a3 *  1) * b
+
+  # Index der moderierten Mediation
+  index := a3 * b
+'
+
+fit <- sem(modell, data = d, se = "bootstrap", bootstrap = 1000)
+```
+
+```{r}
+#| label: lavaan-ergebnis
+parameterEstimates(fit, ci = TRUE) |>
+  subset(label %in% c("ind_lo", "ind_mean", "ind_hi", "index"),
+         select = c(label, est, ci.lower, ci.upper))
+```
+
+Der Parameter `index` ist der Kern: 
+Schließt sein Konfidenzintervall die Null
+aus, ist die Mediation moderiert. 
+Die drei `ind_*`-Werte zeigen, wie stark der
+indirekte Effekt bei niedrigem, mittlerem und hohem $W$ ausfällt.
+
+#### Bedingte indirekte Effekte über den Wertebereich von $W$
+
+Statt nur dreier Stützstellen lässt sich der bedingte indirekte Effekt
+$(a_1 + a_3 W)\, b$ als stetige Funktion von $W$ darstellen. Das macht
+unmittelbar sichtbar, *wo* der Mediationsmechanismus stark ist und wo er
+verschwindet:
+
+```{r}
+#| label: fig-bedingt-indirekt
+#| message: false
+#| fig-cap: "Bedingter indirekter Effekt von $X$ auf $Y$ über den Wertebereich des Moderators $W$. Die Steigung der Geraden entspricht dem Index der moderierten Mediation ($a_3 \\cdot b$)."
+#| fig-width: 6
+#| fig-height: 4
+est <- coef(fit)
+a1 <- est["a1"]; a3 <- est["a3"]; b <- est["b"]
+
+w_seq <- seq(min(d$W), max(d$W), length.out = 100)
+plot_df <- data.frame(
+  W = w_seq,
+  effekt = (a1 + a3 * w_seq) * b
+)
+
+ggplot(plot_df, aes(x = W, y = effekt)) +
+  geom_hline(yintercept = 0, linetype = "dashed", colour = "grey50") +
+  geom_line(linewidth = 0.8, colour = "#185FA5") +
+  labs(x = "Moderator W",
+       y = "Bedingter indirekter Effekt") +
+  theme_minimal(base_size = 12)
+```
+
+Ist die Gerade waagerecht ($a_3 = 0$), hängt der indirekte Effekt nicht von $W$
+ab — keine moderierte Mediation. Je steiler sie verläuft, desto stärker die
+Moderation. Genau diese Steigung ist der Index aus @hayes2015.
+
+#### Schätzung mit dem Paket `mediation`
+
+Klassischer Weg über zwei getrennte Modelle:
+
+```{r}
+#| label: mediation-paket
+#| message: false
+#| eval: false
+library(mediation)
+
+m_mod <- lm(M ~ X * W, data = d)
+y_mod <- lm(Y ~ M + X, data = d)
+
+# bedingte Mediation bei festem W
+med_lo <- mediate(m_mod, y_mod, treat = "X", mediator = "M",
+                  covariates = list(W = -1), boot = TRUE, sims = 1000)
+med_hi <- mediate(m_mod, y_mod, treat = "X", mediator = "M",
+                  covariates = list(W =  1), boot = TRUE, sims = 1000)
+
+# Test, ob sich indirekte Effekte über W unterscheiden
+test.modmed(med_lo,
+            covariates.1 = list(W = -1),
+            covariates.2 = list(W =  1),
+            sims = 1000)
+```
+
+
+
+### Sonderfall: Moderation des c′-Pfads
+
+Wird nicht der a- oder b-Pfad, sondern der direkte Pfad c′ moderiert, 
+ändert sich der *indirekte* Effekt nicht über $W$ — nur der direkte
+Resteffekt von $X$ auf $Y$. 
+Das ist inhaltlich eine andere Aussage: 
+Der Mediationsmechanismus ist überall gleich stark, 
+aber der direkte Effekt hängt
+von $W$ ab.
+
+Wichtig: Der *Index of moderated mediation* nach Hayes ist hier **nicht definiert**, weil
+der indirekte Effekt konstant bleibt. 
+Getestet wird stattdessen der
+Interaktionskoeffizient $X \cdot W$ in der $Y$-Gleichung.
+
+```{r}
+#| label: cpfad-modell
+#| eval: false
+modell_c <- '
+  M ~ a*X
+  Y ~ b*M + cp1*X + cp2*W + cp3*XW
+
+  indirect := a * b      # konstant, nicht moderiert
+  # kein Index of moderated mediation
+  # stattdessen: ist cp3 signifikant?
+'
+```
+
+Der Begriff lautet dann korrekt *moderierte direkte Wirkung*, nicht moderierte
+Mediation.
+
+
+
+### Vertiefung
+
+Wieso ist der indirekte Effekt definiert als 
+
+$$
+\text{indirekt}(W) = (a_1 + a_3 \cdot W) \cdot b ,
+$$
+
+
+Die Frage zielt auf den Kern: *Warum* multipliziert man die beiden Pfade überhaupt, und warum genau diese Teile? Ich baue es von Grund auf.
+
+
+Der indirekte Effekt beantwortet: Wenn ich $X$ um eine Einheit erhöhe, wie stark ändert sich $Y$ — aber *nur über den Umweg durch $M$*, nicht direkt?
+
+Das ist eine zweigliedrige Kette: $X \to M \to Y$. Die Logik dahinter ist eine einfache Verkettung.
+
+#### Die Kettenlogik
+
+Stell dir konkrete Zahlen vor. Angenommen:
+
+- Erhöhe ich $X$ um 1, steigt $M$ um 2 Einheiten.
+- Erhöht sich $M$ um 1, steigt $Y$ um 3 Einheiten.
+
+Frage: Erhöhe ich $X$ um 1 — wie viel mehr $Y$ kommt über $M$ heraus?
+
+$X$ schiebt $M$ um 2 hoch. Jede dieser 2 Einheiten $M$ schiebt $Y$ um je 3 hoch. Also $2 \times 3 = 6$. Der Umweg-Effekt ist das **Produkt** der beiden Glieder, nicht die Summe — weil das zweite Glied auf dem Output des ersten aufsetzt. Es ist wie ein Wechselkurs über zwei Stationen: erst Euro→Dollar, dann Dollar→Yen. Den Gesamtkurs bekommst du durch Multiplizieren.
+
+In der Mediation sind diese beiden Glieder:
+
+- Effekt von $X$ auf $M$ = der **a-Pfad**
+- Effekt von $M$ auf $Y$ = der **b-Pfad**
+
+Also allgemein:
+
+$$\text{indirekter Effekt} = a \times b$$
+
+#### Wo das $(a_1 + a_3 W)$ herkommt
+
+Bis hierhin galt: $a$ ist eine feste Zahl. Bei der moderierten Mediation ist genau das nicht mehr so. Das Modell für $M$ lautet:
+
+$$M = a_1 X + a_2 W + a_3 (X \cdot W) + \dots$$
+
+Frage wie oben: Wenn $X$ um 1 steigt, wie stark steigt $M$? Sammle alle Terme, in denen $X$ steckt:
+
+$$a_1 X + a_3 (X \cdot W) = (a_1 + a_3 W)\, X$$
+
+Der Faktor vor $X$ ist $a_1 + a_3 W$ — und *das* ist der a-Pfad. Er ist keine feste Zahl mehr, sondern hängt von $W$ ab. Bei $W = 0$ ist er $a_1$; bei $W = 2$ ist er $a_1 + 2a_3$; usw. Das ist die ganze Idee der Moderation: $W$ verstellt die Stärke, mit der $X$ auf $M$ wirkt.
+
+#### Zusammensetzen
+
+Jetzt setze den variablen a-Pfad in die Ketten-Formel $a \times b$ ein:
+
+$$\text{indirekter Effekt}(W) = \underbrace{(a_1 + a_3 W)}_{a\text{-Pfad, hängt von }W\text{ ab}} \times \underbrace{b}_{b\text{-Pfad, fest}}$$
+
+Das $b$ bleibt eine feste Zahl, weil in diesem Modell (Modell 7) nur der a-Pfad moderiert ist — die Y-Gleichung enthält keinen Interaktionsterm mit $M$. Würde stattdessen der b-Pfad moderiert (Modell 14), stünde die Klammer beim $b$ statt beim $a$.
+
+Der indirekte Effekt ist also deshalb $(a_1 + a_3 W)\, b$, weil er das Produkt zweier verketteter Glieder ist — und das erste Glied durch die Moderation selbst eine Funktion von $W$ geworden ist.
+
 
 
 ## Vertiefung
