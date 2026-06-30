@@ -378,7 +378,7 @@ parameters(m1, prob = .95) %>%
 Wir bekommen ein 95%-Perzentilintervall (PI, kein HDI, ist aber auch ok, allerdings ist das HDI einen Tick besser).
 Es erlaubt uns zu sagen, dass der Unterschied im Spritverbrauch zwischen 3.6 und 11 Meilen (pro Gallone Sprit) liegt,
 laut dem Modell.
-Der Schalter `prob` erlaubt, andere CI-Breiten, z.B. 97% zu wählen.
+Der Schalter `prob` erlaubt andere CI-Breiten, z.B. 97% zu wählen.
 
 
 Formulierungsvorschlag:
