@@ -700,8 +700,11 @@ m1 <- stan_glm(av ~ uv, data = meine_daten, seed = 42)
 ```
 
 
-Die genaue Wert bei `seed` ist nicht entscheidend;
-aber ein *bestimmter*  Seed-Wert wird immer die gleichen Zufallszahlen zielen und damit immer die gleichen Parameterwerte im Modell nach sich ziehen.
+Der genaue Wert bei `seed` ist nicht entscheidend;
+aber ein *bestimmter*  Seed-Wert wird immer die gleichen Zufallszahlen zielen und damit immer die gleichen Parameterwerte im Modell nach sich ziehen 
+(leider können sich die Werte zwischen verschiedenen Computern unterscheiden).
+
+
 
 
 
