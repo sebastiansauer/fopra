@@ -1,0 +1,36 @@
+Question
+========
+In einer Umfrage-Software liegen Item-Antworten als Ankertexte vor: `"stimme überhaupt nicht zu"`, `"stimme eher nicht zu"`, `"stimme eher zu"`, `"stimme voll und ganz zu"`. Diese sollen mit `case_when()` in die Zahlen 1 bis 4 (aufsteigend nach Zustimmungsgrad) umgewandelt werden. Welche Aussage zur Funktionsweise von `case_when()` in diesem Kontext ist korrekt?
+
+Answerlist
+----------
+* `case_when()` prüft die angegebenen Wenn-Dann-Regeln der Reihe nach zeilenweise; trifft eine Prüfung (z.B. `i01 == "stimme eher zu"`) für eine Zeile zu, wird der zugehörige Wert (hier 3) zugewiesen, ansonsten wird die nächste Regel geprüft.
+* `case_when()` wendet immer alle angegebenen Regeln gleichzeitig auf jede Zeile an und summiert die Ergebnisse aller zutreffenden Regeln zu einem Gesamtwert.
+* `case_when()` kann ausschließlich auf numerische Vektoren angewendet werden, weshalb ein direktes Umwandeln von Textantworten wie „stimme eher zu“ in Zahlen mit `case_when()` nicht möglich ist.
+* `case_when()` ordnet allen Zeilen automatisch denselben Wert zu, unabhängig vom Inhalt der geprüften Spalte, und eignet sich daher nicht für item-spezifisches Umkodieren.
+* `case_when()` benötigt zwingend genau zwei Prüfbedingungen und kann daher nicht für ein Item mit vier unterschiedlichen Ankertexten wie im Beispiel verwendet werden.
+
+Solution
+========
+Laut Kapitel listet `case_when()` "Wenn-Dann-Regeln" auf, die zeilenweise abgearbeitet werden: Nur wenn eine Prüfbedingung (z.B. `i01 == "stimme eher zu"`) für eine bestimmte Zeile erfüllt (`TRUE`) ist, wird die zugehörige Konsequenz (hier der Zahlenwert 3) zugewiesen; andernfalls wird die nächste Bedingung geprüft. Damit lassen sich beliebig viele Textantworten (hier vier Ankertexte) in entsprechende Zahlenwerte übersetzen. Antwort 1 ist daher korrekt.
+
+Zu den Distraktoren:
+* Antwort 2 unterstellt eine additive/gleichzeitige Verrechnung mehrerer Regeln, die es bei `case_when()` nicht gibt: Pro Zeile wird genau eine zutreffende Regel angewendet, keine Summierung.
+* Antwort 3 widerspricht direkt dem Kapitel-Beispiel, in dem `case_when()` gerade genutzt wird, um Textwerte wie `"stimme eher zu"` zu prüfen (`i01 == "stimme eher zu"`) und in Zahlen umzuwandeln; `case_when()` ist nicht auf numerische Eingaben beschränkt.
+* Antwort 4 ist falsch, weil `case_when()` gerade *inhaltsabhängig* prüft (je nach Wert der Spalte `i01` wird eine andere Konsequenz zugewiesen) und nicht pauschal denselben Wert vergibt.
+* Antwort 5 erfindet eine Beschränkung auf zwei Bedingungen; im Kapitel-Beispiel werden vier Bedingungen (für vier Ankertexte) verwendet, `case_when()` erlaubt beliebig viele Prüfungen.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: case-when-itemlabels-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

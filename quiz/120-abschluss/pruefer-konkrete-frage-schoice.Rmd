@@ -1,0 +1,30 @@
+Question
+========
+Da eine pauschale Rückmeldung ("Passt das so?") vom Prüfer nicht gegeben werden kann, empfiehlt das Kapitel eine alternative Strategie, um dennoch inhaltliche Unterstützung zu bekommen. Welche der folgenden Fragen entspricht am ehesten dieser empfohlenen Strategie?
+
+Answerlist
+----------
+* "Wir haben folgende UV in unser Regressionsmodell aufgenommen - ist das okay, oder hätten wir pro UV lieber ein eigenes Modell rechnen sollen?"
+* "Können Sie bitte unser komplettes R-Skript durchgehen und uns sagen, ob alles richtig ist?"
+* "Ist unsere gesamte Auswertung so in Ordnung, wie wir sie gemacht haben?"
+* "Würden Sie uns sagen, welche Note wir mit dieser Auswertung ungefähr bekommen?"
+* "Könnten Sie uns die Musterlösung für unsere Fragestellung zuschicken?"
+
+Solution
+========
+Das Kapitel nennt als Beispiel für eine erlaubte, hilfreiche Frage genau eine konkrete, eng umrissene methodische Frage wie "Wir haben folgende UV in unser Regressionsmodell aufgenommen. Ist das okay oder hätten wir pro UV lieber ein eigenes Regressionsmodell rechnen sollen?" - das entspricht der ersten Antwort. Die Bitte, das komplette Skript durchzugehen und pauschal zu bestätigen, ist genau die Art globaler Vorab-Korrektur, die laut Kapitel unzulässig ist. Die Frage nach der generellen Richtigkeit der gesamten Auswertung ist ebenfalls zu pauschal und entspricht der abgelehnten "Passt das so?"-Frage. Eine Frage nach der voraussichtlichen Note verlangt eine Vorab-Bewertung der Prüfungsleistung, was explizit nicht zulässig ist. Die Bitte um eine Musterlösung würde bedeuten, dem Prüfer die eigentliche Prüfungsaufgabe abzunehmen, was ebenfalls nicht dem Sinn einer Prüfung entspricht.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: pruefer-konkrete-frage
+extype: schoice
+exsolution: 10000
+exshuffle: 5

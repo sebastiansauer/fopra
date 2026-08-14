@@ -1,0 +1,38 @@
+Question
+========
+In einer Studie zu Handynutzung beim Autofahren (Brown & Rash, 2021) schreiben die Autoren: "Rash impulsivity ... will positively predict TWD (texting while driving)." Die Studie berichtet ausschließlich Zusammenhangsmaße (keine Prognosestatistiken auf neuen Daten). Welche Aussage zur Interpretation dieser Formulierung ist im Sinne des Kapitels korrekt?
+
+Answerlist
+----------
+* Obwohl "predict" sprachlich nach Prognose bzw. Kausalität klingt, handelt es sich der Sache nach um eine Deskriptionshypothese, da nur ein Zusammenhang, keine kausale Wirkung, berichtet wird.
+* Die Formulierung "will positively predict" ist per se eine kausale Hypothese, weil das Wort "predict" im Englischen ausschließlich für kausale Vorhersagen verwendet wird.
+* Da die Autoren keine explizite Kausalaussage formulieren, kann man sicher sein, dass es sich um eine reine Deskriptionsstudie ohne implizite Kausalannahme handelt.
+* Weil "more likely" eine Wahrscheinlichkeitsaussage ist, ist automatisch auch jede kausale Interpretation dieser Aussage zulässig.
+* Sprachliche Formulierung ist für die Einordnung als Deskriptions- oder Explikationshypothese irrelevant; entscheidend ist einzig, ob die Autoren das Wort "Ursache" verwenden.
+
+Solution
+========
+Das Kapitel erläutert genau an diesem Beispiel, dass die verwendete Sprache ("will positively predict") zwar nach einer Prognose- bzw. Kausalhypothese klingt, die Autoren aber tatsächlich nur Zusammenfassungsstatistiken (Zusammenhänge) berichten, keine Vorhersage auf neuen, unabhängigen Daten und keine Kausalanalyse. Daher handelt es sich inhaltlich um eine (unpräzise formulierte) Deskriptionshypothese. Damit ist die erste Antwort korrekt.
+
+Die zweite Antwort ist falsch: "predict" wird im Englischen unpräzise sowohl für reine statistische Assoziation als auch für kausale Vorhersage verwendet; das Wort allein legt keine Kausalität fest, wie im Kapitel ausdrücklich thematisiert wird.
+
+Die dritte Antwort ist falsch: Das Kapitel warnt explizit im Callout "Kausalhypothese getarnt als Deskriptionshypothese" davor, dass Studien ohne explizite Kausalaussage trotzdem implizit eine Kausalhypothese verfolgen, die sich den Lesenden aufdrängt (z.B. "Handy weglegen beim Fahren").
+
+Die vierte Antwort ist falsch: Das Kapitel stellt klar, dass "more likely" eine reine Wahrscheinlichkeitsaussage ist und ausdrücklich "nichts mit Kausalität zu tun hat" – aus einer Wahrscheinlichkeitsaussage folgt keine automatische kausale Interpretation.
+
+Die fünfte Antwort ist falsch: Die Einordnung hängt nicht am wörtlichen Vorkommen des Begriffs "Ursache", sondern daran, was methodisch tatsächlich analysiert und berichtet wurde (Zusammenhang vs. kausale Wirkung, ggf. mit Kontrolle von Drittvariablen/Interventionen).
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: deskription-kausalitaet
+extype: schoice
+exsolution: 10000
+exshuffle: 5

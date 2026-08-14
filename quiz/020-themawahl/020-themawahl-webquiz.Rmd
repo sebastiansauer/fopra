@@ -1,0 +1,24 @@
+---
+title: "Quiz: Themawahl und Hypothesen"
+output: exams2forms::webquiz
+---
+
+```{r exams2forms-setup, include = FALSE}
+## package and exercises
+library("exams2forms")
+exm <- c("/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/020-themawahl/drei-blicke-methode-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/020-themawahl/empirischer-gehalt-hypothese-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/020-themawahl/forschungsfrage-definition-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/020-themawahl/hypothesenarten-taxonomie-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/020-themawahl/konfirmatorisch-explorativ-forschung-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/020-themawahl/korrelation-kausalitaet-drittvariable-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/020-themawahl/literaturrecherche-prozess-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/020-themawahl/nullhypothese-forschungshypothese-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/020-themawahl/pwert-signifikanzgrenze-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/020-themawahl/taxonomie-forschungsfragen-schoice.Rmd"
+)
+```
+
+```{r exams2forms-include, echo = FALSE, message = FALSE, results="asis"}
+exams2forms(exm,  n = 1L, nsamp = NULL)
+```

@@ -1,0 +1,36 @@
+Question
+========
+Im Kapitel wird das klassische Beispiel "Störche und Babies" erwähnt: In Regionen mit mehr Störchen werden auch mehr Babies geboren. Wie ist dieser Zusammenhang laut Kapitel korrekt zu interpretieren?
+
+Answerlist
+----------
+* Der Zusammenhang ist eine Scheinkorrelation: Eine Drittvariable (z. B. "Umwelt", etwa ländliche vs. städtische Region) beeinflusst sowohl die Storchenpopulation als auch die Geburtenrate.
+* Störche verursachen kausal eine höhere Geburtenrate, z. B. durch einen bislang unbekannten biologischen Mechanismus.
+* Eine höhere Geburtenrate lockt mehr Störche an, weil diese sich von Neugeborenen ernähren.
+* Der Zusammenhang beruht auf einem reinen Zufallsfund ohne jede erklärbare Struktur, ähnlich einer Nonsens-Korrelation zwischen unabhängigen Zeitreihen.
+* Der Zusammenhang zeigt, dass Korrelation grundsätzlich immer auch Kausalität belegt, sofern die Stichprobe groß genug ist.
+
+Solution
+========
+Das Kapitel nennt dieses Beispiel explizit als Fall eines nicht identifizierten, konfundierten Effekts: Eine Drittvariable ("Umwelt") beeinflusst sowohl Störche als auch Babies, wodurch der beobachtete Zusammenhang nicht-kausal (eine Scheinkorrelation) ist.
+
+Zu den Distraktoren:
+- Option 2 unterstellt eine direkte Kausalwirkung von Störchen auf Geburten, die im Beispiel explizit ausgeschlossen wird.
+- Option 3 kehrt die Wirkrichtung um (reverse causation) und ist ebenfalls nicht die im Kapitel beschriebene Erklärung.
+- Option 4 ("reiner Zufall") ignoriert, dass das Beispiel gerade zeigen soll, dass ein systematischer, aber konfundierter (nicht zufälliger) Mechanismus vorliegt.
+- Option 5 widerspricht der Kernaussage des Kapitels, dass Korrelation gerade NICHT automatisch Kausalität bedeutet, unabhängig von der Stichprobengröße.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: stoerche-baby-beispiel-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

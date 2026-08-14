@@ -1,0 +1,38 @@
+Question
+========
+Wozu dient die im Kapitel vorgestellte CONSORT-Checkliste primär?
+
+Answerlist
+----------
+* Als allgemeines Raster, um Studien systematisch auf Transparenz und methodische Qualität zu prüfen – also sichtbar zu machen, was berichtet wird und was nicht.
+* Um ausschließlich randomisierte kontrollierte Studien statistisch neu auszuwerten.
+* Um zu garantieren, dass eine geprüfte Studie "perfekt" und frei von jeglicher Schwäche ist.
+* Um Effektgrößen einer Studie automatisch zu berechnen.
+* Um die Zitierhäufigkeit einer wissenschaftlichen Publikation zu bestimmen.
+
+Solution
+========
+Das Kapitel stellt klar, dass die CONSORT-Checkliste zwar ursprünglich für randomisierte kontrollierte Studien entwickelt wurde, sich aber "sehr gut als allgemeines Raster eignet, um Studien systematisch zu prüfen." Ziel ist es ausdrücklich, "transparent zu machen, was berichtet wird (und was nicht)" – nicht die Suche nach "perfekten" Studien. Die erste Antwort ist korrekt.
+
+Zu den Distraktoren:
+
+* "Nur für RCTs, zur statistischen Neuauswertung": CONSORT ist eine Berichts- und Bewertungscheckliste, kein Verfahren zur (Neu-)Berechnung von Statistiken, und das Kapitel betont ausdrücklich die Eignung als allgemeines Raster über RCTs hinaus.
+* "Garantiert perfekte Studien": Das Kapitel formuliert explizit das Gegenteil: "Ziel ist nicht, 'perfekte' Studien zu finden – sondern transparent zu machen, was berichtet wird."
+* "Berechnet automatisch Effektgrößen": CONSORT prüft, ob Effektgrößen berichtet wurden (im Gegensatz zu reinen p-Werten), berechnet sie aber nicht selbst – das wäre Aufgabe einer statistischen Analyse, nicht einer Berichts-Checkliste.
+* "Bestimmt die Zitierhäufigkeit": Das verwechselt CONSORT mit bibliometrischen Kennzahlen (z. B. Zitationsindizes), die im Kapitel an dieser Stelle nicht thematisiert werden.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: consort-checkliste-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5
+excategory: Rahmen

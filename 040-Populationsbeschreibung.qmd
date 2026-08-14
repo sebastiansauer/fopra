@@ -69,7 +69,7 @@ Studien dieser Art können eine, zwei oder mehr Variablen enthalten.$\square$
 
 :::{#exm-popdeskript}
 ### Beispiele für populationsbeschreibende Fragen
-- Wie viel Geld hat ei Studenti in Deutschland aktuell (typischerweise) zur Verfügung im Monat?
+- Wie viel Geld hat ein Studenti in Deutschland aktuell (typischerweise) zur Verfügung im Monat?
 - Haben weibliche Studentinnen mehr Geld zur Verfügung als männliche Studentis?
 - Wie unterscheidet sich das Budget der Studentis nach Bundesland und nach Studienrichtung?$\square$
 :::
@@ -79,7 +79,7 @@ Studien dieser Art können eine, zwei oder mehr Variablen enthalten.$\square$
 :::{#exm-pop1v}
 ### 1 Variable
 - Wie viel Geld hat ein Studenti in Deutschland aktuell (typischerweise) zur Verfügung im Monat?
-- Wie viele Parties besucht ei Studenti im Schnitt pro Semester (in Deutschland, aktuell, in einem wirtschaftlichen Studiengang)?
+- Wie viele Parties besucht ein Studenti im Schnitt pro Semester (in Deutschland, aktuell, in einem wirtschaftlichen Studiengang)?
 - Wie groß ist der Anteil an Arbeitnehmern, die im Home-Office arbeiten (mind. 1 Tag pro Woche, aktuell, in De)?
 - Wie groß ist der Anteil an Studentis, die heimlich nachts Statistik-Bücher lesen (mind. 30 Minuten, mind. 3 Nächte pro Woche, aktuell, in Deutschland ...)?$\square$
 :::
@@ -136,7 +136,7 @@ In ihrer Studie führen die Autoren Zusammenhänge zwischen verschiedenen Persö
 
 >   ... a person higher on rash impulsivity may be more likely to both read and send a TWD (texting while driving).
 
-"More likely" ist keine kausale Aussage, sondern ist eine Wahrscheinlichkeitsaussge, das hat nichts mit Kausalität zu tun.
+"More likely" ist keine kausale Aussage, sondern ist eine Wahrscheinlichkeitsaussage, das hat nichts mit Kausalität zu tun.
 
 An anderer Stelle schreiben die Autoren:
 
@@ -218,7 +218,7 @@ Ein Schätzbereich^[Es gibt viele Synonyme oder ähnliche, nicht immer scharf de
 Auf Basis unseres fiktiven Beispiels mit den heimlichen Statistikfans resümieren wir in unserer Inferenzanalyse, dass der 95%-Schätzbereich des Anteils von 0.32 bis 0.52 reicht.$\square$
 :::
 
-Es gibt mehrere Varianten einens Schätzbereichs; in der Bayes-Statistik sind [Perzentilintervalle](https://start-bayes.netlify.app/post#visualisierung-der-intervalle) ([PI; auch als Equal-Tail-Intervall, ETI bezeichnet]) und [Intervalle höchster Dichte](https://start-bayes.netlify.app/post#intervalle-h%C3%B6chster-dichte)^[Highest Density Inteval, HDI] üblich.
+Es gibt mehrere Varianten eines Schätzbereichs; in der Bayes-Statistik sind [Perzentilintervalle](https://start-bayes.netlify.app/post#visualisierung-der-intervalle) ([PI; auch als Equal-Tail-Intervall, ETI bezeichnet]) und [Intervalle höchster Dichte](https://start-bayes.netlify.app/post#intervalle-h%C3%B6chster-dichte)^[Highest Density Interval, HDI] üblich.
 
 
 
@@ -305,12 +305,12 @@ Mehr griechische Buchstaben finden sich [hier](https://de.wikipedia.org/wiki/Gri
 ### Gelegenheitsstichproben und Musikgeschmack
 
 Schorsch erhebt seine Umfrage zu Musikpräferenzen Samstag Nacht um 23.50h vor der Nürnberger Disko *Hirsch*. Deva erhebt ihre Daten ihre Daten zur gleichen Zeit vor dem Nürnberger Opernhaus.
-Beide möchten den Musikgeschmack in der Nürnberer Population bestimmen. Ob ihre Stichproben wohl repräsentativ sind?^[Nein.]$\square$
+Beide möchten den Musikgeschmack in der Nürnberger Population bestimmen. Ob ihre Stichproben wohl repräsentativ sind?^[Nein.]$\square$
 :::
 
 :::{#def-adhoc-stipro}
 ### Gelegenheitsstichprobe
-Eine Gelegenheits- oder Ad-hoc-Stichprobe ist das Resultat des Ziehens einer Stichprobe nach Praktikabilitätsgesichtpunkten. Anders gesagt: Man nimmt die erstbesten Personen in die Stichprobe auf - oder diejenigen, die einem am besten in den Kram passen.$\square$
+Eine Gelegenheits- oder Ad-hoc-Stichprobe ist das Resultat des Ziehens einer Stichprobe nach Praktikabilitätsgesichtspunkten. Anders gesagt: Man nimmt die erstbesten Personen in die Stichprobe auf - oder diejenigen, die einem am besten in den Kram passen.$\square$
 :::
 
 Um mit Hilfe einer Stichprobenerhebung gültige Aussagen über ein Merkmal $X$ in der avisierten Population treffen zu können, muss die Stichprobe repräsentativ sein.
@@ -384,7 +384,7 @@ Sie messen pro Beobachtungseinheit alle relevanten Variablen.
 :::{#exm-design1}
 ### Einkommen von Studentis
 Sie interessiert die Forschungsfrage, wie viel Geld Studentis im Monat als Einkommen zur Verfügung haben.
-Dazu befragen Sie $n=300$ Studentis. Um eine möglichst zufällige oder zumindest repräsentative Studie zu gewinnen, haben Sie eine Nachricht im Forum des Studiengangs gepostet: Wer bei Ihrer Befragung mitmacht, den laden Sie zur nächtsen Party ein. Außerdem verlosen Sie ein Abendessen mit Ihnen. Sicherlich wird der Andrang groß sein.$\square$
+Dazu befragen Sie $n=300$ Studentis. Um eine möglichst zufällige oder zumindest repräsentative Studie zu gewinnen, haben Sie eine Nachricht im Forum des Studiengangs gepostet: Wer bei Ihrer Befragung mitmacht, den laden Sie zur nächsten Party ein. Außerdem verlosen Sie ein Abendessen mit Ihnen. Sicherlich wird der Andrang groß sein.$\square$
 :::
 
 
@@ -608,7 +608,7 @@ Dabei gilt:
 - $f^2 = \frac{R^2}{1 - R^2}$, in R mit `r2(mein_lm)`, aus dem Paket `easystats` 
 
 
-Auf dieser Basis leitet der Autor folgende (Mindest-)Stichprobenangrößen ab,
+Auf dieser Basis leitet der Autor folgende (Mindest-)Stichprobengrößen ab,
 s. @tbl-cohen2. Dabei typische Annahmen getroffen ($\alpha = .05$, $\beta=.2$).
 
 

@@ -1,0 +1,36 @@
+Question
+========
+Eine Studierende stellt bei ihrer Qualifizierungsarbeit fest, dass der Kausaleffekt ihrer Forschungsfrage anhand des DAGs nicht identifizierbar ist. Was folgt daraus laut Kapitel für die Bewertung ihrer Arbeit?
+
+Answerlist
+----------
+* Es spielt für die Note keine Rolle, ob der Effekt identifizierbar ist; entscheidend ist, ob sorgfältig gearbeitet wurde. Die Erkenntnis, dass ein Problem existiert, ist sogar ein wissenschaftlicher Fortschritt.
+* Die Arbeit muss zwingend abgebrochen und ein neues, identifizierbares Thema gewählt werden, da sonst keine Bewertung möglich ist.
+* Die Note wird automatisch schlechter, weil kein kausaler Effekt berichtet werden kann.
+* Die Studierende muss die Stichprobe deutlich vergrößern, bis der Effekt identifizierbar wird.
+* Nicht-Identifizierbarkeit bedeutet, dass die Forschungsfrage wissenschaftlich uninteressant war und nicht weiterverfolgt werden sollte.
+
+Solution
+========
+Das Kapitel stellt ausdrücklich klar: Für die Note in einer Qualifizierungsarbeit spielt es keine Rolle, ob der Effekt identifizierbar ist – zählt allein die Sorgfalt der Arbeit. Zudem wird betont, dass das Erkennen von Nicht-Identifizierbarkeit selbst ein wissenschaftlicher Fortschritt ist, da vorher unklar war, dass hier ein ungelöstes Problem besteht.
+
+Zu den Distraktoren:
+- Option 2 unterstellt einen zwingenden Abbruch, den das Kapitel explizit nicht fordert ("keine Schande", kein Themenwechsel nötig).
+- Option 3 nimmt fälschlich an, die Note hänge am Ergebnis (identifizierbar ja/nein), was dem Kapitel widerspricht, das ausdrücklich die Sorgfalt statt des Ergebnisses betont.
+- Option 4 verwechselt Identifizierbarkeit (ein Struktur-/DAG-Problem) mit einem Stichprobengrößenproblem; eine größere Stichprobe löst keine strukturelle Konfundierung.
+- Option 5 unterstellt fälschlich, Nicht-Identifizierbarkeit mache die Frage uninteressant; das Kapitel bewertet dies im Gegenteil positiv als Erkenntnisgewinn.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: nicht-identifizierbar-konsequenz-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

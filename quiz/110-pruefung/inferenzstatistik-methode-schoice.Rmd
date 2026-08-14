@@ -1,0 +1,37 @@
+Question
+========
+Welche methodische Anforderung stellen die Prüfungshinweise an die Wahl des inferenzstatistischen Verfahrens in der Projektarbeit?
+
+Answerlist
+----------
+* Für inferenzstatistische Fragestellungen sind bevorzugt Bayes-Methoden einzusetzen; frequentistische Methoden sind als Alternative zulässig.
+* Es ist ausschließlich die klassische frequentistische Signifikanztestung (z. B. p-Werte) zulässig; Bayes-Methoden dürfen nicht verwendet werden.
+* Die Wahl des inferenzstatistischen Verfahrens ist komplett freigestellt; es gibt keine Präferenz zwischen Bayes- und frequentistischen Methoden.
+* Inferenzstatistik ist in der Projektarbeit grundsätzlich nicht gefordert, es genügt eine deskriptive Auswertung der Daten.
+* Es müssen sowohl Bayes- als auch frequentistische Methoden parallel für dieselbe Fragestellung berichtet werden, um die Ergebnisse zu vergleichen.
+
+Solution
+========
+Im Abschnitt zu den methodischen Anforderungen heißt es: "Für inferenzstatistische Fragestellungen sind Bayes-Methoden (bevorzugt) oder frequentistische Methoden einzusetzen." Es gibt also eine klare Präferenz für Bayes-Methoden, frequentistische Methoden bleiben aber als Alternative erlaubt. Damit ist Antwort 1 korrekt.
+
+Zu den Distraktoren:
+
+- Antwort 2 kehrt die im Text formulierte Präferenz um: Bayes-Methoden werden bevorzugt, nicht ausgeschlossen; frequentistische Methoden sind zulässig, aber nicht die einzig erlaubte Option.
+- Antwort 3 ignoriert das Wort "(bevorzugt)" im Text, das ausdrücklich eine Präferenz für Bayes-Methoden ausdrückt und nicht von völliger Gleichrangigkeit spricht.
+- Antwort 4 widerspricht dem Text an anderer Stelle, der als substanziellen methodischen Mangel ausdrücklich nennt: "Es wird keine Inferenzstatistik verwendet." Inferenzstatistik ist also gefordert, eine rein deskriptive Auswertung reicht nicht aus.
+- Antwort 5 unterstellt eine Doppelanforderung (beide Verfahren parallel), die im Text nicht vorgesehen ist; es wird lediglich zwischen zwei alternativen, nicht kumulativ zu verwendenden Ansätzen unterschieden.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: inferenzstatistik-methode-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

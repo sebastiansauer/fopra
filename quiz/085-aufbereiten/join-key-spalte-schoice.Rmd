@@ -1,0 +1,36 @@
+Question
+========
+Im Kapitel wird das spaltenweise Zusammenführen zweier Tabellen per "Join" beschrieben, bei dem im Unterschied zu `bind_cols()` die korrekte Zuordnung der Zeilen sichergestellt wird. Welche Aussage zu einem Join beschreibt das Konzept korrekt?
+
+Answerlist
+----------
+* Ein Join ordnet die Zeilen zweier Tabellen anhand der Übereinstimmung der Werte einer ID- bzw. Key-Spalte einander zu, unabhängig davon, in welcher Reihenfolge die Zeilen in den Ausgangstabellen stehen.
+* Ein Join fügt zwei Tabellen einfach nebeneinander an, ohne die Reihenfolge der Zeilen zu berücksichtigen, denn genau das unterscheidet ihn von `bind_cols()`.
+* Ein Join funktioniert nur, wenn beide Tabellen exakt gleich viele Zeilen enthalten und in identischer Reihenfolge sortiert sind.
+* Ein Join ist die Bezeichnung für das zeilenweise Untereinanderhängen zweier Tabellen mit identischen Spalten, so wie es `bind_rows()` leistet.
+* Ein Join verlangt, dass alle Spaltennamen beider Tabellen paarweise identisch sind, da sonst keine Zuordnung möglich ist.
+
+Solution
+========
+Laut Definition im Kapitel ist ein "Join" das spaltenweise Zusammenführen zweier Tabellen *unter Beachtung der Sortierung*, wobei mit "Sortierung" die Übereinstimmung der Werte einer ID- bzw. Key-Spalte gemeint ist. Ein Join ordnet also Zeilen anhand gleicher Schlüsselwerte einander zu – unabhängig von der physischen Reihenfolge in den Ausgangstabellen. Damit ist Antwort 1 richtig.
+
+Zu den Distraktoren:
+* Antwort 2 beschreibt exakt das Verhalten von `bind_cols()`, das laut Kapitel *nicht* prüft, ob die Sortierung übereinstimmt – das ist gerade der Nachteil, den ein Join beheben soll, nicht seine Definition.
+* Antwort 3 verwechselt die Voraussetzung für `bind_cols()` (gleiche Zeilenzahl und -reihenfolge nötig, da blind nebeneinandergefügt wird) mit der Stärke eines Joins, der gerade *unabhängig* von der Ausgangssortierung korrekt zuordnet.
+* Antwort 4 verwechselt Join mit dem zeilenweisen Zusammenführen (`bind_rows()`), das im Kapitel als eigenes, separates Konzept beschrieben wird.
+* Antwort 5 überzieht die Anforderung: Für einen Join muss lediglich die Key-Spalte (ID-Spalte) übereinstimmen bzw. vorhanden sein; die übrigen Spalten dürfen und sollen sich gerade unterscheiden, sonst gäbe es nichts zusammenzuführen.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: join-key-spalte-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

@@ -1,0 +1,37 @@
+Question
+========
+Welche der folgenden Aussagen zum Abstract einer wissenschaftlichen Arbeit ist gemäß Kapitel korrekt?
+
+Answerlist
+----------
+* Der Abstract steht direkt nach dem Deckblatt, umfasst ca. 150-250 Wörter, ist wertfrei formuliert und erscheint nicht im Inhaltsverzeichnis.
+* Der Abstract steht am Ende der Arbeit nach dem Literaturverzeichnis und darf eine persönliche Bewertung der eigenen Ergebnisse enthalten.
+* Der Abstract sollte mindestens 1000 Wörter umfassen, da er als Kurzfassung der gesamten Arbeit dient und daher besonders ausführlich sein muss.
+* Der Abstract erscheint als eigener Gliederungspunkt im Inhaltsverzeichnis und enthält typischerweise Zitate aus der Diskussion.
+* Der Abstract wird erst nach der mündlichen Prüfung verfasst, da er die Ergebnisse der Verteidigung mit zusammenfasst.
+
+Solution
+========
+Laut Kapitel steht der Abstract zu Beginn der Arbeit (nach dem Deckblatt), ist eine stark verkürzte, prägnante und wertfreie Darstellung der Arbeit mit einem Umfang von ca. 150-250 Wörtern, und er erscheint nicht in der Gliederung (dem Inhaltsverzeichnis).
+
+Die Distraktoren beruhen auf folgenden typischen Denkfehlern:
+
+- "am Ende... nach dem Literaturverzeichnis... persönliche Bewertung": Verwechselt die Position (der Abstract steht ganz am Anfang, nicht am Ende) und ignoriert, dass der Abstract explizit als "wertfrei" beschrieben wird, also keine Bewertungen enthalten darf.
+- "mindestens 1000 Wörter... besonders ausführlich": Verwechselt "Kurzfassung" mit "vollständiger Zusammenfassung" – tatsächlich ist der Abstract gerade durch seine Kürze (150-250 Wörter) definiert, nicht durch Ausführlichkeit.
+- "eigener Gliederungspunkt... Zitate aus der Diskussion": Das Kapitel stellt explizit klar, dass der Abstract nicht in der Gliederung erscheint; außerdem ist ein Abstract eine eigenständige Zusammenfassung und keine Zitatsammlung aus der Diskussion.
+- "erst nach der mündlichen Prüfung verfasst": Der Abstract ist Teil der schriftlichen Arbeit selbst und wird vor der Abgabe geschrieben, nicht nachträglich nach einer mündlichen Prüfung ergänzt.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: abstract-merkmale-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

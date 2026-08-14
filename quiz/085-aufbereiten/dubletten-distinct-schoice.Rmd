@@ -1,0 +1,62 @@
+```{r, include=FALSE}
+library(tibble)
+library(dplyr)
+
+df <- tibble(id = c(1, 2, 3, 4),
+             x  = c("a", "a", "yeah", "yeah"),
+             y  = c(5, 5, 3000, 3000))
+
+n_gesamt <- nrow(df)
+n_distinct_xy <- df |> distinct(x, y, .keep_all = TRUE) |> nrow()
+
+korrekt <- n_distinct_xy       # 2
+d1 <- n_gesamt                 # 4, keine Dublette erkannt
+d2 <- n_gesamt - 1              # 3, nur eine Dublette erkannt
+d3 <- 1                         # nur eine Zeile übrig (Fehlannahme: alle Zeilen sind Dubletten)
+d4 <- 0                         # alle Zeilen fälschlich als Dubletten entfernt
+
+stopifnot(length(unique(c(korrekt, d1, d2, d3, d4))) == 5)
+```
+
+Question
+========
+Gegeben ist folgender Datensatz `df` mit einer eindeutigen ID-Spalte `id` sowie den Spalten `x` und `y`:
+
+```{r, echo=FALSE, results="asis"}
+knitr::kable(df)
+```
+
+Sie wenden `df |> distinct(x, y, .keep_all = TRUE)` an, um Dubletten bezüglich der Spalten `x` und `y` zu entfernen (die Spalte `id` bleibt dabei unberücksichtigt, ist aber weiterhin Teil der Ausgabe). Wie viele Zeilen enthält das Ergebnis?
+
+Answerlist
+----------
+* `r korrekt`
+* `r d1`
+* `r d2`
+* `r d3`
+* `r d4`
+
+Solution
+========
+`distinct(x, y, .keep_all = TRUE)` betrachtet nur die Kombination der Werte in den Spalten `x` und `y` (die Spalte `id` wird dabei ignoriert). Zeile 1 (`x = "a"`, `y = 5`) und Zeile 2 (`x = "a"`, `y = 5`) sind bezüglich `x` und `y` identisch, ebenso Zeile 3 (`x = "yeah"`, `y = 3000`) und Zeile 4 (`x = "yeah"`, `y = 3000`). Von jedem der beiden identischen Paare wird nur die jeweils erste Zeile behalten, sodass `r korrekt` Zeilen übrig bleiben. Die Spalte `id` bleibt dabei erhalten (`.keep_all = TRUE`), beeinflusst aber die Dublettenprüfung nicht.
+
+Zu den Distraktoren:
+* `r d1` entsteht, wenn man fälschlich annimmt, dass wegen der eindeutigen `id`-Spalte gar keine Dubletten erkannt werden (`distinct()` bezieht sich hier aber nur auf `x` und `y`, nicht auf `id`).
+* `r d2` entsteht, wenn man nur eines der beiden Duplikat-Paare (statt beider) erkennt und entsprechend nur eine Zeile entfernt.
+* `r d3` entsteht, wenn man fälschlich annimmt, dass *alle vier* Zeilen bezüglich `x` und `y` identisch seien und daher nur eine einzige Zeile übrig bliebe.
+* `r d4` entsteht durch die irrige Annahme, `distinct()` entferne bei Duplikaten *alle* beteiligten Zeilen (statt jeweils eine Zeile pro Duplikat-Gruppe zu behalten), sodass am Ende keine Zeile mehr übrig wäre.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: dubletten-distinct-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

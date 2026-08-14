@@ -1,0 +1,70 @@
+```{r, include=FALSE}
+set.seed(158)
+ok <- FALSE
+tries <- 0
+while (!ok && tries < 10000) {
+  tries <- tries + 1
+  acme <- round(runif(1, 0.20, 0.45), 2)   # indirekter Effekt (ACME)
+  ade  <- round(runif(1, 0.20, 0.60), 2)   # direkter Effekt (ADE)
+  total <- round(acme + ade, 2)            # Total Effect = ACME + ADE
+
+  loesung <- round(acme / total, 2)        # Prop. Mediated = ACME / Total
+
+  # Distraktoren (typische Verwechslungen):
+  d_swap   <- round(ade / total, 2)        # ACME und ADE vertauscht (Anteil des direkten statt indirekten Effekts)
+  d_denom  <- round(acme / ade, 2)         # durch ADE statt Total Effect geteilt
+  d_both   <- round(ade / acme, 2)         # beide Fehler kombiniert (vertauscht UND falscher Nenner)
+  d_invers <- round(total / acme, 2)       # Kehrwert der korrekten Lösung gebildet
+
+  werte <- c(loesung, d_swap, d_denom, d_both, d_invers)
+  ok <- length(unique(werte)) == 5 &&
+        loesung > 0.05 && loesung < 0.95 &&
+        all(werte > 0)
+}
+stopifnot(ok)
+```
+
+Question
+========
+In einer frequentistischen Mediationsanalyse (Paket `mediation`, Funktion `mediate()`) ergeben sich für den Effekt einer UV `treat` auf eine AV über einen Mediator folgende Kennwerte: ACME (indirekter Effekt) $= `r acme`$ und ADE (direkter Effekt) $= `r ade`$. Wie hoch ist der Anteil des Gesamteffekts, der über den Mediator vermittelt wird (`Prop. Mediated`)?
+
+Answerlist
+----------
+* `r loesung`
+* `r d_swap`
+* `r d_denom`
+* `r d_both`
+* `r d_invers`
+
+Solution
+========
+Laut Kapitel gilt: Total Effect ist die Summe aus indirektem Effekt (ACME) und direktem Effekt (ADE), und `Prop. Mediated` ist "der Anteil des indirekten Effekts (ACME) am Gesamteffekt (Total Effect)". Damit rechnet man:
+
+$$\text{Total Effect} = \text{ACME} + \text{ADE} = `r acme` + `r ade` = `r total`$$
+
+$$\text{Prop. Mediated} = \dfrac{\text{ACME}}{\text{Total Effect}} = \dfrac{`r acme`}{`r total`} = `r loesung`$$
+
+Damit ist `r loesung` die korrekte Antwort.
+
+Zu den Distraktoren:
+
+* `r d_swap`: Entsteht, wenn man ACME und ADE vertauscht und den Anteil des *direkten* statt des indirekten Effekts berechnet ($\text{ADE} / \text{Total Effect}$) – ein typischer Verwechslungsfehler zwischen den beiden Effektarten.
+* `r d_denom`: Entsteht, wenn man ACME fälschlich durch ADE statt durch den Total Effect teilt, also den Nenner der `Prop. Mediated`-Formel falsch wählt.
+* `r d_both`: Entsteht, wenn beide Fehler gleichzeitig gemacht werden: ACME und ADE vertauscht *und* durch den jeweils falschen Nenner geteilt ($\text{ADE} / \text{ACME}$).
+* `r d_invers`: Entsteht, wenn man versehentlich den Kehrwert der korrekten Formel bildet ($\text{Total Effect} / \text{ACME}$ statt $\text{ACME} / \text{Total Effect}$).
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: mediationsanalyse-effektzerlegung-rechnung-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5
+excategory: Modellieren

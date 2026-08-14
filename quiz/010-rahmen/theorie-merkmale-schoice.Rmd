@@ -1,0 +1,33 @@
+Question
+========
+Welche der folgenden Eigenschaften wird im Kapitel **nicht** als Merkmal einer wissenschaftlichen Theorie genannt?
+
+Answerlist
+----------
+* Sie muss von der Mehrheit der Bevölkerung akzeptiert und für allgemein plausibel gehalten werden.
+* Die enthaltenen Aussagen sind aufeinander bezogen.
+* Die enthaltenen Aussagen sind widerspruchsfrei.
+* Die enthaltenen Aussagen sind häufig Kausalaussagen.
+* Die enthaltenen Aussagen sind prüfbar.
+
+Solution
+========
+Das Kapitel definiert eine Theorie als ein Bündel von Aussagen, die aufeinander bezogen, widerspruchsfrei, häufig Kausalaussagen und prüfbar sind. Eine gesellschaftliche Akzeptanz oder allgemeine Plausibilität wird dagegen **nicht** als Kriterium genannt – im Gegenteil, das Kapitel warnt sogar mit dem Russell-Zitat davor, Expertenkonsens unkritisch zu vertrauen. Damit ist die erste Antwort korrekt (sie beschreibt kein tatsächliches Kriterium aus dem Text).
+
+Zu den Distraktoren: "aufeinander bezogen", "widerspruchsfrei", "häufig Kausalaussagen" und "prüfbar" sind allesamt wörtlich im Kapitel als Merkmale von Theorien genannt. Wer eine dieser vier Antworten wählt, hat die Frage falsch verstanden (gesucht ist das Merkmal, das *nicht* genannt wird) oder die Definition im Kapitel nicht vollständig erinnert.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: theorie-merkmale-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5
+excategory: Rahmen

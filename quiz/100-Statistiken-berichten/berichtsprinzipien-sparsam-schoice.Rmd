@@ -1,0 +1,38 @@
+Question
+========
+Das *erste* Prinzip des Berichtens von Statistiken lautet laut Kapitel "so viel wie nötig, aber so wenig wie möglich". Was ist damit gemeint?
+
+Answerlist
+----------
+* Man soll alle für das Verständnis notwendigen Informationen vermitteln, die Lesenden aber nicht mit unnötigen Details überfrachten.
+* Man soll möglichst viele Statistiken berichten, um größtmögliche Vollständigkeit zu demonstrieren.
+* Man soll möglichst wenige Statistiken berichten, um den Bericht kurz zu halten, auch wenn dadurch wichtige Informationen fehlen.
+* Man soll nur die Statistiken berichten, die das eigene Ergebnis bestätigen, und andere weglassen.
+* Man soll sämtliche Rohdaten im Fließtext auflisten, damit keine Information verloren geht.
+
+Solution
+========
+Das Prinzip verlangt eine Balance: Alle für die Nachvollziehbarkeit *nötigen* Informationen müssen enthalten sein, gleichzeitig soll man die Lesenden nicht mit Überflüssigem belasten. Genau das beschreibt die erste Antwortoption korrekt.
+
+Zu den Distraktoren:
+
+* "Möglichst viele Statistiken berichten" ignoriert den Teil "so wenig wie möglich" und führt zu Überfrachtung.
+* "Möglichst wenige Statistiken, auch wenn wichtige Informationen fehlen" verletzt den Teil "so viel wie nötig" - Nachvollziehbarkeit würde leiden.
+* "Nur bestätigende Statistiken berichten" beschreibt eine Verletzung des *fünften* Prinzips (Lauterkeit/selektives Berichten), nicht das erste Prinzip.
+* "Sämtliche Rohdaten im Fließtext" widerspricht dem *dritten* Prinzip (Priorisierung: Details gehören in Tabellen oder den Anhang, nicht in den Fließtext).
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: berichtsprinzipien-sparsam
+extype: schoice
+exsolution: 10000
+exshuffle: 5
+excategory: berichten-statistik

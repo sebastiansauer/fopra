@@ -1,0 +1,37 @@
+Question
+========
+Im Kapitel wird "Messen" definiert als die Zuordnung eines empirischen Zusammenhangs zu einem Zusammenhang, der in Zahlen ausgedrückt wird, und zwar nach "vernünftigen Regeln". Was ist mit dieser Formulierung konkret gemeint?
+
+Answerlist
+----------
+* Die numerischen Beziehungen zwischen den zugeordneten Zahlen müssen die empirischen Beziehungen zwischen den gemessenen Objekten widerspiegeln (z.\ B. muss ein längerer Stock eine größere Zahl erhalten als ein kürzerer).
+* Die Zahlen müssen so gewählt werden, dass der Mittelwert der Messung immer genau 0 beträgt.
+* Jedem Objekt muss eine eindeutige, aber ansonsten beliebige Zahl zugeordnet werden, Hauptsache die Zuordnung ist reliabel.
+* Es muss immer eine Ratioskala (Verhältnisskala) mit echtem Nullpunkt verwendet werden, andere Skalenniveaus sind keine "vernünftigen" Messungen.
+* Die Messwerte müssen normalverteilt sein, damit man von einer "vernünftigen" Messung sprechen kann.
+
+Solution
+========
+"Vernünftige Regeln" meint, dass die Struktur der empirischen Relationen (z.\ B. "Stock C ist länger als Stock A", $C \succ A$) sich in der Struktur der zugeordneten Zahlen widerspiegeln muss (z.\ B. $Z(C) > Z(A)$). Das ist genau die Definition von Messen im Sinne der Repräsentationstheorie, wie sie im Kapitel anhand des Stöcke-Beispiels illustriert wird. Damit ist die erste Antwort korrekt.
+
+Zu den Distraktoren:
+
+* "Mittelwert muss 0 sein" verwechselt die Definition des Messens mit einer Eigenschaft standardisierter (z.\ B. z-transformierter) Werte; das ist keine Voraussetzung des Messbegriffs an sich.
+* "Beliebige eindeutige Zahl, Hauptsache reliabel" ignoriert, dass die Zahlen nicht beliebig sein dürfen, sondern die empirischen Relationen (Gleichheit, Rangfolge, Additivität) korrekt abbilden müssen; Reliabilität allein (Wiederholbarkeit) sagt nichts über die Angemessenheit der Zahlenzuordnung aus.
+* "Es muss immer eine Ratioskala verwendet werden" ist falsch, weil das Kapitel explizit auch Nominal- und Ordinalskalen als gültige (wenn auch informationsärmere) Formen des Messens nach vernünftigen Regeln beschreibt.
+* "Normalverteilung" ist eine Eigenschaft, die für manche statistische Verfahren wichtig ist, aber keine Voraussetzung dafür, dass überhaupt sinnvoll (nach vernünftigen Regeln) gemessen wurde.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: messen-vernuenftige-regeln-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

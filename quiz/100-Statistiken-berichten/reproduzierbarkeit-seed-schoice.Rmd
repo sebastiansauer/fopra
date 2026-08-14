@@ -1,0 +1,38 @@
+Question
+========
+Warum sollte man laut Kapitel bei Analysen, die mit Zufallszahlen arbeiten (z.B. `stan_glm()`), einen bestimmten `seed`-Wert fixieren?
+
+Answerlist
+----------
+* Damit die Analyse bei jeder erneuten Ausführung exakt dieselben Zufallszahlen und somit dieselben Parameterschätzungen liefert.
+* Damit das Modell garantiert statistisch signifikante Ergebnisse liefert.
+* Damit sich die Rechenzeit des Modells verkürzt.
+* Damit automatisch der "beste" Zufallszahlen-Startwert für maximale Modellgüte ausgewählt wird.
+* Weil ein bestimmter Seed-Wert (z.B. 42) statistisch überlegene Schätzwerte liefert im Vergleich zu anderen Seed-Werten.
+
+Solution
+========
+Das Kapitel erläutert es direkt: "ein *bestimmter* Seed-Wert wird immer die gleichen Zufallszahlen ziehen und damit immer die gleichen Parameterwerte im Modell nach sich ziehen." Das Fixieren des Seeds dient also der *Reproduzierbarkeit* der Analyse - ein zentrales Element wissenschaftlicher Transparenz.
+
+Zu den Distraktoren:
+
+* Der Seed-Wert beeinflusst nicht, ob ein Ergebnis "signifikant" ausfällt - er sorgt nur dafür, dass bei jedem Durchlauf dieselben (nicht: bessere) Zufallszahlen gezogen werden.
+* Die Rechenzeit von `stan_glm()` hängt von Modellkomplexität, Datenmenge und Sampler-Einstellungen ab, nicht vom gewählten Seed-Wert.
+* Es gibt keinen "besten" Seed für höhere Modellgüte; das Kapitel stellt explizit klar: "Die genaue Wert bei `seed` ist nicht entscheidend."
+* Ebenso widerspricht die Vorstellung, ein bestimmter Seed (z.B. 42) liefere überlegene Schätzwerte, direkt der Kapitelaussage, dass der konkrete Seed-Wert nicht entscheidend ist - entscheidend ist nur, dass überhaupt *irgendein* fester Wert verwendet wird.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: reproduzierbarkeit-seed
+extype: schoice
+exsolution: 10000
+exshuffle: 5
+excategory: berichten-statistik

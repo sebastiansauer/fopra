@@ -1,0 +1,63 @@
+```{r, include=FALSE}
+library(pwr)
+
+u <- 3        # Anzahl Prädiktoren
+r2 <- .15     # erwartetes R^2 (mittlerer Effekt f^2)
+f2 <- r2 / (1 - r2)
+
+res <- pwr.f2.test(u = u, f2 = f2, sig.level = 0.05, power = .8)
+v <- res$v
+
+N_korrekt <- ceiling(v + u + 1)
+N_b <- ceiling(v + u)        # "+1" vergessen
+N_c <- ceiling(v + 1)        # u vergessen
+N_d <- ceiling(v)            # nur v aufgerundet, u und Konstante vergessen
+N_e <- ceiling(v + 2*u + 1)  # u versehentlich verdoppelt
+
+antworten <- c(N_korrekt, N_b, N_c, N_d, N_e)
+stopifnot(length(unique(antworten)) == 5)
+stopifnot(all(antworten > 1))
+```
+
+Question
+========
+Für eine multiple Regression mit $u=`r u`$ Prädiktoren erwarten Sie ein $R^2$ von `r r2` (mittlerer Effekt gemäß $f^2 = R^2/(1-R^2)$). Bei $\alpha=.05$ und einer Power von 80% liefert `pwr.f2.test(u=`r u`, f2=`r round(f2,4)`, sig.level=0.05, power=.8)` den Wert $v \approx `r round(v,2)`$. Wie groß muss die Stichprobe $N$ mindestens sein?
+
+Answerlist
+----------
+* $N = `r N_korrekt`$
+* $N = `r N_b`$
+* $N = `r N_c`$
+* $N = `r N_d`$
+* $N = `r N_e`$
+
+Solution
+========
+Laut Kapitel liefert `pwr.f2.test` den Wert $v$, aus dem sich die benötigte Gesamtstichprobengröße als $N = v + u + 1$ ergibt (die "$+1$" entspricht dem Intercept-Term). Mit $v \approx `r round(v,2)`$ und $u=`r u`$ Prädiktoren folgt:
+
+$$N = v + u + 1 \approx `r round(v,2)` + `r u` + 1 = `r round(v+u+1,2)`$$
+
+Aufgerundet auf die nächste ganze Zahl ergibt sich $N = `r N_korrekt`$. Damit ist die erste Antwort korrekt.
+
+$N = `r N_b`$ entsteht, wenn man die "$+1$" für den Intercept in der Formel $N=v+u+1$ vergisst und nur $N=v+u$ berechnet.
+
+$N = `r N_c`$ entsteht, wenn man die Anzahl der Prädiktoren $u$ in der Formel vergisst und nur $N=v+1$ rechnet, also so tut, als gäbe es keine Prädiktoren.
+
+$N = `r N_d`$ entsteht, wenn man fälschlich annimmt, $v$ selbst sei bereits die gesuchte Stichprobengröße, und weder $u$ noch die Konstante addiert.
+
+$N = `r N_e`$ entsteht, wenn man die Anzahl der Prädiktoren versehentlich doppelt einrechnet, also $N = v + 2u + 1$ statt $N = v + u + 1$ berechnet.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: stichprobengroesse-power-regression
+extype: schoice
+exsolution: 10000
+exshuffle: 5

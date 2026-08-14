@@ -1,0 +1,77 @@
+```{r, include=FALSE}
+set.seed(NULL)
+
+ok <- FALSE
+while (!ok) {
+  # ziehe 5 p-Werte zwischen 0 und 0.20, gerundet auf 3 Nachkommastellen
+  pvals <- round(runif(5, min = 0.001, max = 0.199), 3)
+
+  sig_count <- sum(pvals < 0.05)
+
+  # Lösung: Anzahl signifikanter Ergebnisse (bei alpha = .05)
+  loesung <- sig_count
+
+  # Distraktoren: plausible Fehlantworten
+  d1 <- sum(pvals <= 0.05) # Grenzfall <= statt <, meist gleich aber zur Sicherheit geprüft
+  d2 <- length(pvals) - sig_count # Anzahl NICHT signifikanter Ergebnisse (Verwechslung)
+  d3 <- sig_count + 1
+  d4 <- sig_count - 1
+
+  distraktoren <- c(d1, d2, d3, d4)
+
+  # Bedingungen: alle Distraktoren von Lösung UND voneinander verschieden,
+  # alle Werte im plausiblen Bereich 0..5, keine negativen Werte, keine Randwerte 0 oder 5 fuer die Lösung
+  ok <- length(unique(c(loesung, distraktoren))) == 5 &&
+    all(distraktoren >= 0 & distraktoren <= 5) &&
+    loesung >= 1 && loesung <= 4 &&
+    all(distraktoren != loesung)
+}
+
+optionen <- c(loesung, d1, d2, d3, d4)
+richtige_position <- 1  # loesung steht an Position 1 vor dem Mischen; exams mischt via exshuffle
+
+pvals_text <- paste0("p = ", format(pvals, nsmall = 3), collapse = ", ")
+```
+
+Question
+========
+Das Kapitel beschreibt die verbreitete Praxis, Studienergebnisse anhand des p-Werts mit dem Grenzwert $\alpha = .05$ zu beurteilen: Ist $p < .05$, gilt das Ergebnis als "statistisch signifikant" und die wissenschaftliche Hypothese wird "nicht verworfen"; ist $p > .05$, gilt das Ergebnis als "nicht signifikant" und die Hypothese wird verworfen.
+
+Eine Forschungsgruppe hat fünf unabhängige Studien zur selben Fragestellung durchgeführt und dabei folgende p-Werte erhalten:
+
+`r pvals_text`
+
+Bei wie vielen dieser fünf Studien wäre das Ergebnis nach der im Kapitel beschriebenen Grenzwert-Logik (Signifikanzniveau $\alpha = .05$) als "statistisch signifikant" einzustufen?
+
+Answerlist
+----------
+* `r loesung`
+* `r d1`
+* `r d2`
+* `r d3`
+* `r d4`
+
+Solution
+========
+Nach der im Kapitel beschriebenen Regel gilt ein Ergebnis als signifikant, wenn $p < .05$ ist. Von den fünf p-Werten (`r pvals_text`) liegen `r loesung` unterhalb der Grenze von .05 und werden daher als statistisch signifikant eingestuft. Rechnerisch: Man zählt einfach, wie viele der fünf p-Werte kleiner als .05 sind; das ergibt `r loesung`.
+
+Begründung der Distraktoren:
+- `r d1`: Diese Zahl entspricht der Anzahl der p-Werte mit $p \leq .05$ statt $p < .05$ (Verwechslung von "kleiner" und "kleiner-gleich" an der Signifikanzgrenze).
+- `r d2`: Diese Zahl entspricht der Anzahl der *nicht* signifikanten Studien (also $p > .05$) — hier wird verwechselt, ob nach signifikanten oder nicht-signifikanten Ergebnissen gefragt ist.
+- `r d3`: Diese Zahl ist um eins zu hoch — ein typischer Zählfehler (Verrechnen beim Durchgehen der Liste, z. B. Doppelzählung eines Werts nahe der Grenze).
+- `r d4`: Diese Zahl ist um eins zu niedrig — ebenfalls ein typischer Zählfehler (Übersehen eines p-Werts, der tatsächlich unter .05 liegt).
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: pwert-signifikanzgrenze-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

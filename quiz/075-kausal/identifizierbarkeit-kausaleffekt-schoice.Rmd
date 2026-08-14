@@ -1,0 +1,38 @@
+Question
+========
+Wann gilt der Effekt einer unabhängigen Variable (UV) auf eine abhängige Variable (AV) im Sinne der Kausalinferenz als "identifiziert"?
+
+Answerlist
+----------
+* Wenn sich anhand des DAGs zeigen lässt, dass der Effekt der UV auf die AV nicht durch andere Variablen überlagert (konfundiert) wird.
+* Wenn die Korrelation zwischen UV und AV statistisch signifikant ist (p < .05).
+* Wenn die Stichprobe groß genug ist, um den Effekt mit ausreichender Power zu schätzen.
+* Wenn UV und AV beide intervallskaliert sind und linear regressiert werden können.
+* Wenn ein signifikanter Interaktionseffekt zwischen UV und einem Moderator gefunden wird.
+
+Solution
+========
+Identifizierbarkeit ist ein Konzept der Kausalinferenz und keine Frage der Signifikanz, Stichprobengröße oder des Skalenniveaus.
+Ein Kausaleffekt gilt als identifiziert, wenn man mithilfe eines DAGs (gerichteter azyklischer Graph) zeigen kann, dass der Zusammenhang zwischen UV und AV "rein" ist, also nicht durch weitere Variablen (Konfundierer) verzerrt wird.
+Nur dann ist der berechnete statistische Effekt auch als kausaler Effekt interpretierbar.
+
+Zu den Distraktoren:
+- Statistische Signifikanz (Option 2) sagt nichts über Kausalität aus; auch eine reine Scheinkorrelation kann signifikant sein (vgl. Störche-Babies-Beispiel).
+- Eine große Stichprobe (Option 3) erhöht nur die Präzision der Schätzung, löst aber kein Konfundierungsproblem.
+- Das Skalenniveau (Option 4) betrifft die Wahl des statistischen Modells, nicht die kausale Identifizierbarkeit.
+- Ein Interaktionseffekt (Option 5) betrifft Moderation, ein anderes Konzept, das mit der Identifizierbarkeit des Haupteffekts nichts zu tun hat.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: identifizierbarkeit-kausaleffekt-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

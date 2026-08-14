@@ -1,0 +1,19 @@
+---
+title: "Quiz: Wissenschaftliches Schreiben"
+output: exams2forms::webquiz
+---
+
+```{r exams2forms-setup, include = FALSE}
+## package and exercises
+library("exams2forms")
+exm <- c("abstract-merkmale-schoice.Rmd", "behauptung-bewertung-beleg-schoice.Rmd", 
+"ergebnisteil-tempus-schoice.Rmd", "gliederung-hauptteil-schoice.Rmd", 
+"horror-vacui-teilaufgaben-schoice.Rmd", "neunerteilung-satzspiegel-schoice.Rmd", 
+"replizierbarkeit-reproduzierbarkeit-schoice.Rmd", "rope-praktische-null-schoice.Rmd", 
+"seitenumfang-theorieteil-schoice.Rmd", "theorieteil-aufbau-schoice.Rmd"
+)
+```
+
+```{r exams2forms-include, echo = FALSE, message = FALSE, results="asis"}
+exams2forms(exm,  n = 1L, nsamp = NULL)
+```

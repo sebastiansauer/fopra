@@ -1,0 +1,54 @@
+```{r, include=FALSE}
+x <- 3.5     # extra_mean-Wert einer Versuchsperson
+m <- 2.5     # Stichprobenmittelwert von extra_mean
+sdv <- 0.5   # Stichproben-Standardabweichung von extra_mean
+
+korrekt <- (x - m) / sdv          # 2, korrekte z-Transformation
+d1 <- x - m                        # 1, Division durch SD vergessen
+d2 <- (m - x) / sdv                # -2, Vorzeichen vertauscht
+d3 <- (x - m) / sdv^2              # 4, durch Varianz statt SD geteilt
+d4 <- x / sdv - m                  # 4.5, falsche Klammersetzung/Reihenfolge
+
+stopifnot(length(unique(c(korrekt, d1, d2, d3, d4))) == 5)
+```
+
+Question
+========
+Im Kapitel wird die Funktion `standardize()` (aus `easystats`) genutzt, um eine Spalte wie `extra_mean` mittels z-Transformation zu standardisieren, wobei Stichprobenmittelwert und Stichproben-Standardabweichung als Referenzwerte dienen. Eine Versuchsperson hat einen `extra_mean`-Wert von `r x`. In der Stichprobe beträgt der Mittelwert von `extra_mean` `r m` und die Standardabweichung `r sdv`. Welchen z-standardisierten Wert erhält diese Person?
+
+Answerlist
+----------
+* `r korrekt`
+* `r d1`
+* `r d2`
+* `r d3`
+* `r d4`
+
+Solution
+========
+Die z-Transformation berechnet sich als
+
+$$z = \frac{x - \bar{x}}{s} = \frac{`r x` - `r m`}{`r sdv`} = `r korrekt`$$
+
+wobei $\bar{x}$ der Stichprobenmittelwert und $s$ die Stichproben-Standardabweichung ist (wie im Kapitel betont: nicht die Kennwerte einer Normierungsstichprobe). Damit ist `r korrekt` die korrekte Antwort.
+
+Zu den Distraktoren:
+* `r d1` entsteht, wenn man nur die Differenz $x - \bar{x} = `r x` - `r m` = `r d1`$ bildet, aber die Division durch die Standardabweichung vergisst.
+* `r d2` entsteht durch einen Vorzeichenfehler, wenn man $\dfrac{\bar{x} - x}{s} = \dfrac{`r m` - `r x`}{`r sdv`} = `r d2`$ statt $\dfrac{x - \bar{x}}{s}$ rechnet.
+* `r d3` entsteht, wenn man fälschlich durch die *Varianz* ($s^2 = `r sdv`^2 = `r sdv^2`$) statt durch die Standardabweichung $s$ teilt: $\dfrac{`r x` - `r m`}{`r sdv`^2} = `r d3`$.
+* `r d4` entsteht durch eine falsche Klammersetzung/Rechenreihenfolge, z.B. $\dfrac{x}{s} - \bar{x} = \dfrac{`r x`}{`r sdv`} - `r m` = `r d4`$, statt zuerst die Differenz $x - \bar{x}$ zu bilden und erst dann durch $s$ zu teilen.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: z-standardisierung-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

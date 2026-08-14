@@ -1,0 +1,38 @@
+Question
+========
+Ein Studierender überlegt, für ein Online-Experiment mit zwei Bedingungen statt einer Randomisierungsfunktion einfach zwei getrennte Umfrage-Links (eine je Bedingung) anzulegen und die Teilnehmenden selbst auswählen zu lassen, welchen Link sie öffnen. Welches Problem dieser Vorgehensweise wird im Kapitel angesprochen?
+
+Answerlist
+----------
+* Es besteht die Gefahr, dass die Gruppen unterschiedlich groß werden, und zusätzlich müssen zwei Umfragen statt einer instand gehalten werden.
+* Es gibt kein Problem – zwei getrennte Umfragen sind laut Kapitel methodisch gleichwertig zu einer echten Randomisierungsfunktion.
+* Das Problem besteht ausschließlich darin, dass SoSci-Survey technisch keine zwei parallelen Umfragen erlaubt.
+* Zwei getrennte Umfragen verstoßen automatisch gegen die DSGVO, da doppelte Datensätze entstehen.
+* Das einzige Problem ist ein erhöhter Zeitaufwand beim Erstellen, die Gruppengrößen sind davon nicht betroffen.
+
+Solution
+========
+Im Kapitel wird in einem Dialog genau dieses Vorgehen diskutiert: Auf die Frage, ob man nicht einfach zwei Umfragen für ein Experiment anlegen könne, wird geantwortet, dass das zwar grundsätzlich geht, aber die Gefahr birgt, dass die Gruppen dann unterschiedlich groß sind; außerdem müssen dann zwei Umfragen „in Schuss“ gehalten werden statt nur einer. Damit ist die erste Option korrekt.
+
+Die zweite Option widerspricht der im Kapitel geäußerten Warnung – es wird explizit ein Nachteil benannt, die Verfahren sind also nicht als gleichwertig dargestellt.
+
+Die dritte Option ist zu eng und sachlich falsch: Das im Kapitel genannte Problem ist inhaltlich-methodischer Natur (Gruppengröße, Verwaltungsaufwand), nicht eine rein technische Einschränkung von SoSci-Survey.
+
+Die vierte Option erfindet einen im Kapitel nicht erwähnten Datenschutzverstoß; DSGVO-Bezüge werden im Kapitel an anderer Stelle behandelt, aber nicht im Zusammenhang mit zwei getrennten Umfrage-Links.
+
+Die fünfte Option greift nur einen Teilaspekt (Verwaltungsaufwand) auf und lässt das im Kapitel ausdrücklich zuerst genannte Problem der ungleichen Gruppengrößen weg.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: randomisierung-online-umfragetools-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

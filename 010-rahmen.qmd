@@ -70,7 +70,7 @@ Grund genug, dass wir uns einmal mit solchen Magazinen beschäftigen.
 
 :::{#exr-inmind}
 #### Erarbeiten Sie eine Studie aus einem Wissenschaftsmagazin!
-Suchen Sie sich eine Studie aus einem Wissenchaftsmagazin und arbeiten Sie die Kernaspekte heraus. 
+Suchen Sie sich eine Studie aus einem Wissenschaftsmagazin und arbeiten Sie die Kernaspekte heraus. 
 Erarbeiten Sie ein Profil der Studie. Orientieren Sie sich an dem Leitfaden aus @tbl-studienprofil.
 Sie können [dieses Dateigerüst](https://docs.google.com/document/d/19JLtjAH4A5CSguCyLffWau9Bvf5VcpQ-GPqBxrZITJ4/edit?usp=sharing) verwenden, um Ihre Ergebnisse aufzuschreiben.
 :::
@@ -233,8 +233,8 @@ Die Art und Weise einer Wissenschaft nennt man ihre wissenschaftliche Methode. D
 
 
 
-Da die Phänomene der Welt (Evolution, Gravitation, Liebe, Inflation, Agression, ...) komplex sind, neigen auch die Erklärungsansätze der Wissenschaft dazu, kompliziert zu sein.
-Allerdings sollten die Erkärungsansätze so einfach wie möglich sein (und so komplex wie nötig).
+Da die Phänomene der Welt (Evolution, Gravitation, Liebe, Inflation, Aggression, ...) komplex sind, neigen auch die Erklärungsansätze der Wissenschaft dazu, kompliziert zu sein.
+Allerdings sollten die Erklärungsansätze so einfach wie möglich sein (und so komplex wie nötig).
 
 
 :::{#def-theorie}
@@ -1008,7 +1008,7 @@ Umsetzung: Zum Beispiel: "Erkläre die Ursachen der Französischen Revolution au
 *3. Die genaue Angabe des gewünschten Formats ist wesentlich*
 
 Begründung: KI kann verschiedene Ausgabeformate liefern, von Absätzen bis zu Tabellen oder Code.
-Umsetzung: Anfragen wie "Gib eine Liste mit fünf Schlüsselpunkten" oder "Formatiere die Ausgabe als Tabelle mit den Spalten 'Name', 'Datum' und 'Zusammenfassung'" oder "gebe das Ergebniss im JSON Format zurück" führen zu präziseren Ergebnissen.
+Umsetzung: Anfragen wie "Gib eine Liste mit fünf Schlüsselpunkten" oder "Formatiere die Ausgabe als Tabelle mit den Spalten 'Name', 'Datum' und 'Zusammenfassung'" oder "gebe das Ergebnis im JSON Format zurück" führen zu präziseren Ergebnissen.
 
 *4. Beispiele sind hilfreich*
 

@@ -1,0 +1,36 @@
+Question
+========
+In einem Datensatz liegt die Spalte `i03` als `factor` mit den Textstufen `"-2"`, `"+2"`, `"-1"` vor. Sie möchten daraus eine numerische Spalte mit den tatsächlichen Werten -2, 2 und -1 erzeugen. Welche Aussage dazu ist korrekt?
+
+Answerlist
+----------
+* `as.numeric(i03)` direkt auf die Faktor-Spalte angewendet liefert *nicht* die eigentlichen Werte -2, 2 und -1, sondern die internen Level-Codes (Ganzzahlen ab 1); `parse_number(as.character(i03))` liefert dagegen die korrekten numerischen Werte.
+* `as.numeric(i03)` liefert bei Faktor-Variablen immer direkt die korrekten inhaltlichen Werte, weshalb ein Umweg über `parse_number()` unnötig ist.
+* `parse_number()` kann nur auf numerische Vektoren angewendet werden und scheitert deshalb bei einer Faktor-Spalte wie `i03`, weshalb hier ausschließlich `as.numeric(i03)` funktioniert.
+* Sowohl `as.numeric(i03)` als auch `parse_number(as.character(i03))` liefern bei einer Faktor-Spalte stets identische, korrekte Ergebnisse, sodass die Wahl der Funktion keine Rolle spielt.
+* `parse_number()` funktioniert bei einer Faktor-Spalte nur dann korrekt, wenn man sie vorher direkt (ohne Umwandlung in `character`) übergibt, da `as.character()` die Werte verfälscht.
+
+Solution
+========
+Im Kapitel wird explizit demonstriert, dass `as.numeric()` bei einer Faktor-Spalte *nicht* die inhaltlichen Werte, sondern die internen Level-Codes zurückgibt (Beispiel `i02_KAPUTT <- as.numeric(factor(i02))`, wobei die Zahlen "nicht passen"). Um die tatsächlichen Werte zu erhalten, muss die Faktor-Spalte zunächst mit `as.character()` in Text umgewandelt werden, bevor `parse_number()` (das laut Kapitel `character` als Input verlangt) angewendet wird: `parse_number(as.character(i03))`. Damit ist Antwort 1 richtig.
+
+Zu den Distraktoren:
+* Antwort 2 ist genau der im Kapitel als Stolperfalle beschriebene Fehler ("Hoppla! Die Zahlen passen nicht!") – `as.numeric()` auf einem Faktor liefert die Level-Codes, nicht die Originalwerte.
+* Antwort 3 verwechselt die tatsächliche Einschränkung: `parse_number()` verlangt `character` als Input, kann also nicht *direkt* auf einen Faktor angewendet werden, funktioniert aber sehr wohl nach vorheriger Umwandlung mit `as.character()` – die Aussage, dass ausschließlich `as.numeric()` funktioniert, ist falsch.
+* Antwort 4 ignoriert den im Kapitel gezeigten Unterschied zwischen beiden Wegen bei Faktor-Variablen; die Ergebnisse sind gerade *nicht* identisch.
+* Antwort 5 kehrt die tatsächliche Anforderung um: `parse_number()` benötigt laut Kapitel `character` als Eingabe, weshalb `as.character()` vor der Anwendung nötig ist, nicht schädlich.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: parse-number-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

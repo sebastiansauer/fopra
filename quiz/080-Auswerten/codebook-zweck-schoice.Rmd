@@ -1,0 +1,30 @@
+Question
+========
+Im Kapitel wird das Codebook (auch Data-Dictionary genannt) als Teil der Dokumentation einer Studie erwähnt. Welche Funktion erfüllt ein Codebook laut Kapitel?
+
+Answerlist
+----------
+* Es erläutert die Namen der Variablen in der (Roh-)Datentabelle.
+* Es enthält den vollständigen R-Code für die Modellierung der Daten.
+* Es listet ausschließlich die p-Werte aller in der Studie durchgeführten statistischen Tests auf.
+* Es ersetzt die Rohdaten, sodass diese nicht mehr separat eingereicht werden müssen.
+* Es dokumentiert, welche Software (skriptbasiert oder klickbasiert) für die Analyse verwendet wurde.
+
+Solution
+========
+Laut Kapitel gilt: "Ein Codebook erläutert die Namen der Variablen in Ihrer (Roh-)Datentabelle." Damit ist die erste Option korrekt – ein Codebook macht nachvollziehbar, wofür einzelne Variablennamen (z.B. Abkürzungen) stehen.
+
+Die zweite Option verwechselt das Codebook mit dem Analyseskript; im Kapitel werden Codebook und Analyseskript als getrennte, jeweils eigenständig einzureichende Bestandteile der Dokumentation genannt.
+
+Die dritte Option ist falsch, weil p-Werte Ergebnisse statistischer Tests sind und nichts mit der Erläuterung von Variablennamen zu tun haben – ein Codebook enthält keine Testergebnisse.
+
+Die vierte Option beruht auf einem Denkfehler: Im Kapitel werden Rohdaten und Codebook als zwei getrennte, gemeinsam einzureichende Elemente genannt ("Rohdaten inkl. Codebook"), das Codebook ersetzt die Rohdaten also nicht, sondern ergänzt sie.
+
+Die fünfte Option verwechselt das Codebook mit einer allgemeinen Methodenbeschreibung; die Wahl der Analysesoftware wird im Kapitel getrennt (im Abschnitt zu skript- vs. klickbasierter Software) behandelt und ist nicht Aufgabe des Codebooks.
+
+Meta-information
+================
+exname: codebook-zweck-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

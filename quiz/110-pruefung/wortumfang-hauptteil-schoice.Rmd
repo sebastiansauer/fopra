@@ -1,0 +1,52 @@
+```{r, include=FALSE}
+lower <- round(6000 * 0.9)
+upper <- round(6000 * 1.1)
+stopifnot(lower == 5400, upper == 6600)
+```
+
+Question
+========
+Bei einer Projektarbeit als *Gruppenarbeit* beträgt der geforderte Umfang des Hauptteils laut Prüfungshinweisen 6000 Wörter, plus/minus 10 %.
+
+Welches Intervall (Unter- bis Obergrenze) ergibt sich für die zulässige Wortzahl des Hauptteils?
+
+Answerlist
+----------
+* 5400 bis 6600 Wörter
+* 5400 bis 6000 Wörter
+* 4800 bis 7200 Wörter
+* 5940 bis 6060 Wörter
+* 3600 bis 4400 Wörter
+
+Solution
+========
+Der Sollwert für den Hauptteil einer Gruppenarbeit beträgt 6000 Wörter, mit einer zulässigen Abweichung von $\pm 10\,\%$.
+
+Damit ergibt sich:
+
+- Untergrenze: $6000 \cdot (1 - 0{,}10) = 6000 \cdot 0{,}9 = 5400$
+- Obergrenze: $6000 \cdot (1 + 0{,}10) = 6000 \cdot 1{,}1 = 6600$
+
+Also liegt das zulässige Intervall bei $5400$ bis $6600$ Wörtern. Das ist Antwort 1.
+
+Zu den Distraktoren:
+
+- Antwort 2 (5400 bis 6000) entsteht, wenn nur die Untergrenze korrekt berechnet, aber die Obergrenze fälschlich gleich dem Sollwert gesetzt wird (die $+10\,\%$-Anpassung wird vergessen).
+- Antwort 3 (4800 bis 7200) entsteht, wenn statt $\pm 10\,\%$ fälschlich mit $\pm 20\,\%$ gerechnet wird ($6000 \cdot 0{,}8 = 4800$; $6000 \cdot 1{,}2 = 7200$).
+- Antwort 4 (5940 bis 6060) entsteht, wenn statt $\pm 10\,\%$ fälschlich mit $\pm 1\,\%$ gerechnet wird ($6000 \cdot 0{,}99 = 5940$; $6000 \cdot 1{,}01 = 6060$).
+- Antwort 5 (3600 bis 4400) entsteht, wenn fälschlich der Sollwert für *Einzelarbeiten* (4000 Wörter) statt des Werts für Gruppenarbeiten (6000 Wörter) verwendet wird ($4000 \cdot 0{,}9 = 3600$; $4000 \cdot 1{,}1 = 4400$).
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: wortumfang-hauptteil-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

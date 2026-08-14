@@ -1,0 +1,37 @@
+Question
+========
+Ein Team aus zwei Personen bearbeitet eine Projektarbeit als Gruppenarbeit. Wie ist laut den Prüfungshinweisen die Aufteilung der Hauptkapitel (Theorie, Methode, Ergebnis, Diskussion) zwischen den Teammitgliedern korrekt zu gestalten?
+
+Answerlist
+----------
+* Jedes Mitglied verfasst ein komplettes empirisches Kapitel (Methode oder Ergebnis) und ein komplettes theoretisches Kapitel (Theorie oder Diskussion); jedes Hauptkapitel ist mit genau einem verantwortlichen Namen zu versehen.
+* Alle vier Hauptkapitel werden von beiden Teammitgliedern gemeinsam und zu gleichen Teilen verfasst, ohne dass einzelne Abschnitte einer Person zugeordnet werden.
+* Ein Teammitglied verfasst grundsätzlich alle vier Hauptkapitel allein, während das andere Mitglied ausschließlich die Einleitung und das Fazit übernimmt.
+* Die Aufteilung der Kapitel ist beliebig, solange am Ende beide Mitglieder ungefähr die gleiche Wortzahl beigetragen haben, unabhängig davon, welche Kapitel sie bearbeitet haben.
+* Ein einzelnes Hauptkapitel darf auf mehrere Teammitglieder aufgeteilt werden, solange am Kapitelende alle beteiligten Namen genannt werden.
+
+Solution
+========
+Der Text zur Arbeitsteilung bei Gruppenarbeiten legt fest: "Die Aufteilung der Teilaspekte der Arbeit soll so erfolgen, dass jedes Mitglied des Teams ein komplettes empirisches Kapitel (Methodenteil oder Ergebnisteil) und ein komplettes theoretisches Kapitel (Theorieteil oder Diskussion) verfasst." Zudem gilt: "Zu jedem der (Haupt-)Kapitel des Berichts (Theorie, Methode, Ergebnis, Diskussion) ist genau ein Name anzugeben." Eine Aufteilung eines Kapitels auf mehrere Personen ist ausdrücklich *nicht* zulässig. Damit ist Antwort 1 korrekt.
+
+Zu den Distraktoren:
+
+- Antwort 2 widerspricht der Vorgabe, dass jedes Hauptkapitel genau einem Namen zuzuordnen ist; eine gemeinsame, nicht namentlich getrennte Verfassung aller Kapitel ist damit nicht vorgesehen.
+- Antwort 3 verletzt das Prinzip gleichwertiger Beiträge ("Alle teilnehmenden Personen einer Forschungsgruppe sollen in ähnlichem Umfang beitragen") und die Vorgabe, dass jedes Mitglied jeweils ein empirisches *und* ein theoretisches Kapitel übernimmt, nicht nur Randabschnitte wie Einleitung/Fazit.
+- Antwort 4 ignoriert die inhaltliche Vorgabe (je ein empirisches und ein theoretisches Kapitel pro Person) zugunsten einer rein quantitativen Wortzahl-Betrachtung, die im Text so nicht als Kriterium genannt wird.
+- Antwort 5 widerspricht der Regel ausdrücklich: "Eine Aufteilung eines Kapitels auf mehrere Personen eines Teams ist nicht zulässig."
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: gruppenarbeit-kapitelaufteilung-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

@@ -1,0 +1,38 @@
+Question
+========
+Für Modell `m1` wird berichtet, dass 0% des 95%-HDI innerhalb des ROPE-Bereichs (Region of Practical Equivalence) liegen. Welche Schlussfolgerung ist gemäß der im Kapitel beschriebenen ROPE-Logik korrekt?
+
+Answerlist
+----------
+* Die "Praktischnullhypothese" kann verworfen werden, da sich das Glaubwürdigkeitsintervall (HDI) und der ROPE-Bereich nicht überschneiden.
+* Die "Praktischnullhypothese" muss beibehalten werden, weil 0% ein sehr kleiner und damit vernachlässigbarer Anteil ist.
+* Der Effekt gilt als nicht signifikant, weil das ROPE zu 0% mit dem HDI überlappt.
+* Das Ergebnis lässt sich nicht interpretieren, da das ROPE-Konzept nur in der frequentistischen Statistik verwendet wird.
+* Die *exakte* Nullhypothese (Effekt = genau 0) kann mit diesem Ergebnis zweifelsfrei bestätigt werden.
+
+Solution
+========
+Die Merkregel im Kapitel lautet: "Schneidet ROPE mit dem Berg, dem roten, dann Verwerfen ist verboten!" Im Umkehrschluss gilt: Schneidet ROPE die Posteriori-Verteilung (den "Berg") *nicht* - wie hier, bei 0% Überlappung -, dann ist das Verwerfen der Praktischnullhypothese erlaubt. Das Kapitel zieht genau diesen Schluss: "Die Nullhypothese ist also für praktische Zwecke auszuschließen."
+
+Zu den Distraktoren:
+
+* Die Aussage "muss beibehalten werden" kehrt die Entscheidungsregel fälschlich um: Ein *kleiner* Überlappungsanteil spricht gerade *gegen*, nicht für die Praktischnullhypothese.
+* "Nicht signifikant" verwechselt die Richtung der Schlussfolgerung: 0% Überlappung ist im Kapitel gerade das Kriterium dafür, den Effekt als (praktisch) bedeutsam bzw. "signifikant in diesem Sinne" zu werten, wie es der Formulierungsvorschlag im Kapitel explizit tut.
+* ROPE ist ein genuin *Bayes'sches* Konzept (es baut auf der Posteriori-Verteilung bzw. dem HDI auf) und gerade kein frequentistisches Verfahren - diese Aussage kehrt die Zuordnung um.
+* Das Kapitel unterscheidet explizit zwischen der "Exaktnullhypothese" (Effekt ist exakt 0) und der "Praktischnullhypothese" (Effekt ist vernachlässigbar klein). ROPE prüft nur Letztere; über die exakte Nullhypothese trifft ROPE keine Aussage.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: rope-entscheidungsregel
+extype: schoice
+exsolution: 10000
+exshuffle: 5
+excategory: berichten-statistik

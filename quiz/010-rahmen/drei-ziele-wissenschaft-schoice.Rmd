@@ -1,0 +1,38 @@
+Question
+========
+Welche drei Ziele nennt das Kapitel als die (einzigen) Ziele einer empirischen Wissenschaft?
+
+Answerlist
+----------
+* Beschreiben, Vorhersagen, Erklären
+* Beschreiben, Kritisieren, Publizieren
+* Messen, Testen, Replizieren
+* Beobachten, Interpretieren, Bewerten
+* Erklären, Beweisen, Verallgemeinern
+
+Solution
+========
+Das Kapitel nennt ausdrücklich genau drei Zielarten empirischer Wissenschaft: Beschreiben (z. B. "Wie groß ist der Gender-Paygap in Branche X?"), Vorhersagen (z. B. Notenprognose bei gegebener Lernzeit) und Erklären (z. B. wie viel das Lernen zur Notenverbesserung beiträgt). Damit ist die erste Antwort korrekt.
+
+Zu den Distraktoren:
+
+* "Beschreiben, Kritisieren, Publizieren": Kritisieren und Publizieren sind Tätigkeiten des Wissenschaftsbetriebs, aber keine der im Kapitel genannten Zielarten der empirischen Erkenntnisgewinnung.
+* "Messen, Testen, Replizieren": Das sind methodische Aktivitäten bzw. Gütekriterien (vgl. Reproduzierbarkeit), aber keine der drei explizit genannten Zielarten.
+* "Beobachten, Interpretieren, Bewerten": Das klingt plausibel, ist aber eine Verwechslung mit allgemeinen Schritten des wissenschaftlichen Arbeitens, nicht mit der im Kapitel gegebenen Dreiteilung.
+* "Erklären, Beweisen, Verallgemeinern": "Beweisen" widerspricht sogar dem im Kapitel betonten Prinzip, dass wissenschaftliche Aussagen prüfbar/falsifizierbar, aber nicht endgültig "bewiesen" sind; "Verallgemeinern" ist zudem eher ein Merkmal von Induktion als eine der drei genannten Zielarten.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: drei-ziele-wissenschaft-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5
+excategory: Rahmen

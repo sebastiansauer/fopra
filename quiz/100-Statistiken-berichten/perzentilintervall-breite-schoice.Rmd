@@ -1,0 +1,53 @@
+```{r, include=FALSE}
+unten <- 3.72
+oben <- 10.70
+breite <- oben - unten       # korrekte Loesung
+summe <- oben + unten        # Distraktor: Summe statt Differenz
+halb <- breite / 2           # Distraktor: Halbe Breite
+mitte <- (oben + unten) / 2  # Distraktor: Mittelpunkt (= Median-Punktschaetzer)
+falsch_vz <- unten - oben    # Distraktor: Vorzeichenfehler
+
+werte <- round(c(breite, summe, halb, mitte, falsch_vz), 2)
+stopifnot(length(unique(werte)) == 5)
+```
+
+Question
+========
+Im Kapitel wird für das Modell `m1` (`mpg ~ am`, Datensatz `mtcars`) ein 95%-Perzentilintervall (PI) von [`r unten`, `r oben`] für den Effekt der Schaltung auf den Spritverbrauch berichtet. Wie breit (in Meilen pro Gallone) ist dieses Intervall?
+
+Answerlist
+----------
+* `r werte[1]`
+* `r werte[2]`
+* `r werte[3]`
+* `r werte[4]`
+* `r werte[5]`
+
+Solution
+========
+Die Breite eines Intervalls ergibt sich aus der oberen minus der unteren Grenze:
+
+$$\text{Breite} = `r oben` - `r unten` = `r werte[1]`$$
+
+Zu den Distraktoren:
+
+* `r werte[2]` entsteht, wenn man fälschlich obere und untere Grenze *addiert* statt subtrahiert.
+* `r werte[3]` entsteht, wenn man die korrekte Breite versehentlich noch durch 2 teilt (z.B. in Verwechslung mit einer "Fehlerspanne" um einen Mittelpunkt).
+* `r werte[4]` entspricht dem *Mittelpunkt* des Intervalls, $\dfrac{`r oben` + `r unten`}{2}$ - das ist eine Verwechslung der Intervallbreite mit einem Punktschätzer (der im Kapitel berichtete Median-Schätzwert liegt zufällig sehr nahe an diesem Mittelpunkt).
+* `r werte[5]` entsteht durch einen Vorzeichenfehler, wenn man untere minus obere Grenze rechnet, statt umgekehrt.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: perzentilintervall-breite
+extype: schoice
+exsolution: 10000
+exshuffle: 5
+excategory: berichten-statistik

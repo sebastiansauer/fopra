@@ -1,0 +1,66 @@
+```{r, include=FALSE}
+set.seed(2024)
+ok <- FALSE
+tries <- 0
+while (!ok && tries < 10000) {
+  tries <- tries + 1
+  a1 <- round(runif(1, 0.20, 0.60), 2)   # a-Pfad bei W = 0
+  a3 <- round(runif(1, 0.30, 0.80), 2)   # Interaktionskoeffizient (X:W) im a-Pfad
+  b  <- round(runif(1, 0.40, 0.90), 2)   # b-Pfad
+
+  loesung <- round(a3 * b, 2)            # Index der moderierten Mediation = a3 * b
+
+  # Distraktoren (typische Verwechslungen):
+  d_a1statt_a3 <- round(a1 * b, 2)       # a1 statt a3 verwendet (Haupteffekt statt Interaktion)
+  d_summe      <- round(a3 + b, 2)       # Summe statt Produkt
+  d_bedingt    <- round((a1 + a3) * b, 2) # bedingter indirekter Effekt bei W=1, nicht der Index selbst
+  d_ohne_b     <- round(a1 * a3, 2)      # b vergessen, stattdessen a1 * a3 gerechnet
+
+  werte <- c(loesung, d_a1statt_a3, d_summe, d_bedingt, d_ohne_b)
+  ok <- length(unique(werte)) == 5 && all(werte > 0) && loesung > 0.05
+}
+stopifnot(ok)
+```
+
+Question
+========
+In einem Modell mit moderierter Mediation (Moderation des a-Pfads durch $W$) gilt $M = a_1 X + a_2 W + a_3 (X \cdot W) + \dots$ und $Y = b M + c' X + \dots$. Eine Schätzung liefert $a_1 = `r a1`$, $a_3 = `r a3`$ und $b = `r b`$. Wie hoch ist der *Index der moderierten Mediation* (nach Hayes, 2015)?
+
+Answerlist
+----------
+* `r loesung`
+* `r d_a1statt_a3`
+* `r d_summe`
+* `r d_bedingt`
+* `r d_ohne_b`
+
+Solution
+========
+Der Index der moderierten Mediation ist definiert als $\text{Index} = a_3 \cdot b$, wobei $a_3$ der Interaktionskoeffizient (der angibt, wie stark $W$ den a-Pfad moderiert) und $b$ der (feste) b-Pfad ist. Mit den gegebenen Werten:
+
+$$\text{Index} = a_3 \cdot b = `r a3` \times `r b` = `r loesung`$$
+
+Damit ist `r loesung` die korrekte Antwort. Ist dieser Index (bzw. dessen Bootstrap-Konfidenzintervall) von Null verschieden, liegt moderierte Mediation vor.
+
+Zu den Distraktoren:
+
+* `r d_a1statt_a3`: Entsteht, wenn man versehentlich $a_1$ (den a-Pfad bei $W=0$) statt $a_3$ (den Interaktionskoeffizienten) mit $b$ multipliziert. $a_1$ ist aber Teil des *bedingten* indirekten Effekts, nicht des Index, der ausschließlich die Änderung des a-Pfads über $W$ hinweg (also $a_3$) erfasst.
+* `r d_summe`: Entsteht, wenn man $a_3$ und $b$ addiert statt multipliziert – ein Verwechseln der Verkettungslogik der Mediation (Pfade werden multipliziert, nicht addiert) mit einer einfachen Summenbildung.
+* `r d_bedingt`: Entsteht, wenn man den *bedingten indirekten Effekt* bei $W=1$, also $(a_1 + a_3 \cdot 1) \cdot b$, berechnet und fälschlich als "Index" ausgibt. Das ist der bedingte indirekte Effekt an einer bestimmten Stützstelle von $W$, nicht der (von $W$ unabhängige) Index selbst.
+* `r d_ohne_b`: Entsteht, wenn man $b$ vergisst und stattdessen $a_1 \cdot a_3$ berechnet – eine Verwechslung, bei der zwei Teile des a-Pfads statt a-Pfad-Interaktion und b-Pfad multipliziert werden.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: index-moderierte-mediation-rechnung-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5
+excategory: Modellieren

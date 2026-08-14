@@ -1,0 +1,38 @@
+Question
+========
+Das Kapitel unterscheidet *konfirmatorische* (hypothesenprüfende) von *explorativer* (hypothesengenerierender) Forschung. Als Beispiel für explorative Forschung wird die zufällige Entdeckung des Penicillins durch Alexander Fleming genannt (1928 bemerkte er zufällig, dass ein Schimmelpilz eine Bakterienkultur zerstört hatte). Als Beispiel für konfirmatorische Forschung wird John Snows Untersuchung des Cholera-Ausbruchs in London (ab 1848) genannt, bei der er gezielt prüfte, ob Cholera durch Keime im Wasser verbreitet wird.
+
+Was unterscheidet diese beiden Forschungsarten laut Kapitel grundlegend?
+
+Answerlist
+----------
+* Bei explorativer Forschung fehlt zu Beginn ausreichendes Wissen, um Hypothesen aufzustellen, und man entwickelt Hypothesen erst im Zuge der Untersuchung (wie bei Fleming); bei konfirmatorischer Forschung wird hingegen eine zuvor aufgestellte Hypothese gezielt überprüft (wie bei Snows Wasser-Hypothese).
+* Explorative Forschung verwendet ausschließlich qualitative Methoden, konfirmatorische Forschung ausschließlich quantitative Methoden.
+* Konfirmatorische Forschung findet immer im Labor statt, explorative Forschung immer im Feld.
+* Explorative Forschung testet Nullhypothesen mit p-Werten, konfirmatorische Forschung tut dies nicht.
+* Beide Begriffe bezeichnen dasselbe Vorgehen und unterscheiden sich im Kapitel nur in der Bezeichnung, nicht im Inhalt.
+
+Solution
+========
+Der Text definiert: "Sobald Sie ein exakteres, tieferes Verständnis Ihrer Forschungsfrage haben, können Sie Hypothesen aufstellen, um diese zu überprüfen. Solche Forschung nennt man hypothesenprüfende Forschung [...] oder konfirmatorische Forschung. Allerdings gibt es auch Forschungsfelder, von denen man zu wenig weiß, um Hypothesen aufstellen zu können. So erlangt man Erkenntnisse [...] man entwickelt also Hypothesen. Solche Forschung nennt man hypothesengenerierende Forschung oder auch explorative Forschung." Fleming hatte keine vorherige Hypothese über Penicillin (explorativ, Hypothese entsteht erst durch den Zufallsfund), während Snow gezielt seine Wasser-Hypothese zur Cholera-Übertragung überprüfte (konfirmatorisch).
+
+Begründung der Distraktoren:
+- "Nur qualitativ vs. nur quantitativ": Diese Methodenzuordnung wird im Kapitel an dieser Stelle nicht getroffen; die Unterscheidung betrifft, ob vorab eine Hypothese existiert, nicht die Art der verwendeten Methode.
+- "Labor vs. Feld": Weder Flemings Laborzufallsfund noch Snows Feldstudie zur Cholera in London werden im Text nach diesem Kriterium unterschieden; der Ort des Forschens ist nicht das definierende Merkmal.
+- "p-Werte nur bei explorativer Forschung": Das Testen von Nullhypothesen mit p-Werten wird im Kapitel im Zusammenhang mit hypothesenprüfender (konfirmatorischer), nicht explorativer Forschung behandelt — die Aussage kehrt den Zusammenhang also um.
+- "Beide Begriffe bezeichnen dasselbe": Widerspricht direkt der expliziten begrifflichen Abgrenzung im Kapitel zwischen hypothesenprüfender/konfirmatorischer und hypothesengenerierender/explorativer Forschung.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: konfirmatorisch-explorativ-forschung-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

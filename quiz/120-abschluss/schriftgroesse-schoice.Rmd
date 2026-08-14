@@ -1,0 +1,30 @@
+Question
+========
+Ein Studierender fragt, ob er sich bei Schriftgröße und Zeilenabstand eher an einem externen Ratgeberbuch (Times New Roman 12pt, Zeilenabstand 1,5) oder an den Vorgaben im Skript (Serifenschrift 11pt, Zeilenabstand 1 bis 1,2) orientieren soll. Wie beantwortet das Kapitel diese Frage?
+
+Answerlist
+----------
+* Beide Varianten sind akzeptabel, wobei ein Zeilenabstand von 1 bis 1,2 gegenüber 1,5 bevorzugt wird
+* Nur Times New Roman in 12pt mit Zeilenabstand 1,5 ist zulässig, alle anderen Formatierungen führen zu Punktabzug
+* Die Schriftgröße und der Zeilenabstand spielen für die Bewertung überhaupt keine Rolle
+* Es muss zwingend eine serifenlose Schrift wie Arial in Größe 11 verwendet werden
+* Der Zeilenabstand muss mindestens 2,0 betragen, damit handschriftliche Anmerkungen möglich sind
+
+Solution
+========
+Die Antwort im Kapitel lautet, dass beides in Ordnung ist, ein Zeilenabstand von 1 bis 1,2 aber bevorzugt wird gegenüber 1,5. Das ist die korrekte Aussage. Die Behauptung, nur Times New Roman 12pt mit 1,5-fachem Abstand sei zulässig, widerspricht der ausdrücklichen Aussage, dass beide Varianten akzeptiert werden. Die Aussage, Formatierung spiele keine Rolle, ignoriert, dass im Kapitel explizit eine Präferenz geäußert wird. Eine verpflichtende serifenlose Schrift wie Arial wird nirgends gefordert - im Gegenteil, es ist von einer Serifenschrift die Rede. Ein Mindestzeilenabstand von 2,0 wird im Kapitel nicht genannt und widerspricht der genannten Präferenz für einen engeren Abstand.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: schriftgroesse
+extype: schoice
+exsolution: 10000
+exshuffle: 5

@@ -1,0 +1,38 @@
+Question
+========
+Sie möchten den Effekt einer UV auf eine AV mittels eines Regressionsmodells (`AV ~ UV1 + UV2 + ...`) schätzen. Welche Aussage zur Auswahl der weiteren Prädiktoren, die Sie zusätzlich zur eigentlich interessierenden UV in das Modell aufnehmen, ist korrekt?
+
+Answerlist
+----------
+* Konfundierungsvariablen (gemeinsame Ursachen von UV und AV) sollten mit ins Modell aufgenommen werden, Mediatorvariablen (die den Effekt der UV auf die AV vermitteln) dagegen nicht.
+* Für jede zusätzlich interessierende Variable sollte ein separates Regressionsmodell gerechnet werden, damit sich die Schätzungen nicht gegenseitig beeinflussen.
+* Mediatorvariablen sollten unbedingt mit ins Modell aufgenommen werden, damit der Gesamteffekt der UV korrekt geschätzt wird.
+* Es sollten nur Variablen ins Modell aufgenommen werden, die selbst inhaltlich von Interesse sind; reine Kontrollvariablen wie Alter oder Geschlecht gehören nicht dazu.
+* Da Regressionsmodelle robust gegenüber der Variablenauswahl sind, spielt es für die Schätzung des UV-Effekts keine Rolle, welche weiteren Variablen aufgenommen werden.
+
+Solution
+========
+Die Regel lautet: Nehmen Sie alle Variablen auf, von denen Sie annehmen, dass es Ursachen der AV sind – das schließt Konfundierungsvariablen (gemeinsame Ursachen von UV und AV) und sonstige Ursachen der AV ein, auch wenn diese inhaltlich uninteressant sind (z. B. Alter, Geschlecht), weil sie zu genaueren Schätzungen beitragen. Variablen mit anderen kausalen Funktionen, insbesondere Mediatorvariablen, sollten dagegen *nicht* aufgenommen werden, da man sonst den Effekt der UV auf die AV verzerrt (nämlich um den über den Mediator laufenden Anteil bereinigt) schätzen würde. Die erste Antwortoption gibt genau diese Regel korrekt wieder.
+
+Zu den Distraktoren:
+
+* "Separates Modell pro Variable": Das widerspricht der Empfehlung, *nicht* für jede UV ein eigenes Modell zu rechnen, sondern alle relevanten Prädiktoren in ein einziges Modell zu packen, um zu genaueren Schätzungen zu kommen.
+* "Mediatorvariablen unbedingt mit aufnehmen": Das ist der klassische Fehler des "Overcontrolling" – wer den Mediator kontrolliert, "wegkontrolliert" gerade den interessierenden (indirekten) Effekt der UV und unterschätzt so den Gesamteffekt.
+* "Nur inhaltlich interessante Variablen, Kontrollvariablen gehören nicht dazu": Das ist falsch herum – gerade Kontrollvariablen wie Alter und Geschlecht sollen laut Kapitel aufgenommen werden, obwohl sie nicht im Fokus der Fragestellung stehen, weil sie als Konfundierer die Schätzung präzisieren.
+* "Variablenauswahl spielt keine Rolle": Das ignoriert, dass die Einbeziehung eines Mediators die UV-AV-Schätzung systematisch verzerrt und damit sehr wohl eine Rolle spielt.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: modellformel-uv-auswahl-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5
+excategory: Modellieren

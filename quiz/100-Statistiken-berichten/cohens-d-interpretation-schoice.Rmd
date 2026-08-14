@@ -1,0 +1,48 @@
+```{r, include=FALSE}
+# Verifikation der im Kapitel per interpret_cohens_d(-1.48) gelieferten Einordnung
+# gegen die Konventionen nach Cohen (1988): |d| < 0.2 vernachlaessigbar,
+# 0.2 klein, 0.5 mittel, 0.8 gross.
+d <- -1.48
+schwellen <- c(vernachlaessigbar = 0.2, klein = 0.2, mittel = 0.5, gross = 0.8)
+kategorie <- if (abs(d) < 0.2) "vernachlaessigbar" else if (abs(d) < 0.5) "klein" else if (abs(d) < 0.8) "mittel" else "gross"
+stopifnot(kategorie == "gross")
+```
+
+Question
+========
+Im Kapitel wird für Modell `m1` (`mpg ~ am`, Datensatz `mtcars`) ein Cohens *d* von $d = -1.48$ berichtet und mit `interpret_cohens_d(-1.48)` automatisch klassifiziert. Nach den gängigen Konventionen von Cohen (1988) (Schwellenwerte $|d| =$ 0.2, 0.5 und 0.8 für klein, mittel und groß) - welcher Kategorie entspricht dieser Wert?
+
+Answerlist
+----------
+* Großer Effekt, da $|d| = 1.48$ deutlich über dem Schwellenwert von 0.8 liegt.
+* Mittlerer Effekt, da 1.48 relativ nahe am Schwellenwert für "mittel" (0.5) liegt.
+* Kleiner Effekt, da das negative Vorzeichen die Effektstärke rechnerisch verringert.
+* Cohens *d* ist bei negativen Werten nicht definiert, daher kann keine Kategorie angegeben werden.
+* Vernachlässigbarer Effekt, da $|d|$ kleiner als 2 ist und Cohen (1988) den Schwellenwert für "groß" erst bei 2 ansetzt.
+
+Solution
+========
+Nach Cohen (1988) gilt für den Betrag $|d|$: ab 0.2 "klein", ab 0.5 "mittel", ab 0.8 "groß". Hier ist $|d| = |-1.48| = 1.48$, und $1.48 > 0.8$, also liegt der Wert deutlich im Bereich "groß". Das entspricht auch der im Kapitel gezeigten Ausgabe von `interpret_cohens_d(-1.48)`.
+
+Zu den Distraktoren:
+
+* Die Einschätzung "mittel, weil nahe an 0.5" ignoriert, dass der Wert bereits weit *über* dem höchsten Schwellenwert (0.8) liegt - es zählt der tatsächliche Abstand zu allen Schwellen, nicht die gefühlte Nähe zu einer einzelnen Schwelle.
+* Das negative Vorzeichen von Cohens *d* gibt nur die *Richtung* des Gruppenunterschieds an (welche Gruppe den höheren Mittelwert hat), nicht die Stärke des Effekts; für die Einordnung wird der *Betrag* $|d|$ verwendet.
+* Cohens *d* ist für negative Werte problemlos definiert - negative Werte treten regelmäßig auf, je nachdem welche Gruppe als erste im Vergleich steht.
+* Es gibt in Cohens (1988) Konvention keinen Schwellenwert von 2; der höchste benannte Schwellenwert (0.8) markiert bereits die Kategorie "groß", größere Werte bleiben in dieser Kategorie.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: cohens-d-interpretation
+extype: schoice
+exsolution: 10000
+exshuffle: 5
+excategory: berichten-statistik

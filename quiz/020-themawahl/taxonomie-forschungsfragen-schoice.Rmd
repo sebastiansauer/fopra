@@ -1,0 +1,40 @@
+Question
+========
+Im Kapitel werden Forschungsfragen in drei Zielarten gegliedert: *beschreiben*, *vorhersagen* und *erklären*. Als Beispiel für die Kategorie "erklären" wird u. a. genannt: "Je mehr du lernst, desto höher dein Klausurerfolg."
+
+Betrachten Sie folgende Aussage: "Frauen parken im Mittel um 10 cm schneller aus als Männer."
+
+Welcher der drei Zielarten entspricht diese Aussage laut der im Kapitel vorgestellten Taxonomie, und warum?
+
+Answerlist
+----------
+* Beschreiben, denn die Aussage stellt lediglich einen beobachteten Sachverhalt (einen Mittelwertsunterschied) fest, ohne eine Ursache dafür zu benennen oder etwas für die Zukunft vorherzusagen.
+* Erklären, denn es wird ein Geschlechtsunterschied genannt, und Geschlecht gilt automatisch als Ursache jeder damit verglichenen Größe.
+* Vorhersagen, denn die Aussage macht eine Prognose über zukünftiges Ausparkverhalten einzelner Personen.
+* Erklären, denn Zahlenangaben wie "10 cm" kommen laut Kapitel nur in Erklärungs-Aussagen vor, nie in beschreibenden Aussagen.
+* Vorhersagen, denn jede Aussage mit einem Vergleich zwischen zwei Gruppen ist per Definition eine Vorhersage über zukünftige Messungen.
+
+Solution
+========
+Die Aussage "Frauen parken im Mittel um 10 cm schneller aus als Männer" beschreibt nur, dass ein Unterschied zwischen zwei Gruppen beobachtet wurde ("Männer sind im Schnitt 10 cm größer als Frauen" ist im Kapitel exakt als Beispiel für "beschreiben" aufgeführt, und die Ausparkaufgabe wird direkt danebengestellt). Es wird keine Ursache genannt (kein "weil") und keine Aussage über die Zukunft gemacht. Daher handelt es sich um eine beschreibende Forschungsfrage/Aussage.
+
+Die Distraktoren beruhen auf typischen Fehlschlüssen:
+- "Erklären, weil Geschlecht automatisch Ursache ist": Ein bloßer Gruppenunterschied ist noch keine Erklärung; das Nennen einer Kausalursache (wie "Ursache von X ist Y") fehlt, und Korrelation/Deskription ist nicht automatisch Kausalität.
+- "Vorhersagen, weil Prognose über zukünftiges Verhalten": Die Aussage bezieht sich auf einen bereits beobachteten Mittelwertsunterschied in einer Studie, nicht auf eine explizite Prognose für ein zukünftiges Ereignis (wie das Sonnenfinsternis-Beispiel im Kapitel).
+- "Erklären wegen Zahlenangabe": Zahlen (z. B. "10 cm") kommen im Kapitel gerade in den Beispielen für "beschreiben" vor (Körpergröße, Ausparkzeit); Zahlenangaben sind kein Kriterium für die Kategorie "erklären".
+- "Vergleich zweier Gruppen ist immer Vorhersage": Vergleiche zweier Gruppen sind das klassische Beispiel für "beschreiben", nicht für "vorhersagen".
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: taxonomie-forschungsfragen-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

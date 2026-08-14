@@ -1,0 +1,38 @@
+Question
+========
+Das Kapitel beschreibt den Ablauf des Wissensaufbaus als Kreislauf mit den Schritten *Suchen &rarr; Screenen &rarr; Sammeln &rarr; Lesen &rarr; Zusammenfassen &rarr; Verbinden &rarr; (zurück zu) Suchen*. Beim *Screenen* werden laut Text vor allem die Open-Access-Elemente (Titel, Abstract, Literaturverzeichnis) genutzt, der Volltext ist dabei "nicht (unbedingt) nötig".
+
+Welche Aussage beschreibt den Zweck des Schritts *Screenen* in diesem Ablauf korrekt?
+
+Answerlist
+----------
+* Beim Screenen wird anhand von Titel, Abstract und Literaturverzeichnis eingeschätzt, ob ein gefundenes Werk inhaltlich und methodisch zur Forschungsfrage passt, bevor Zeit in die Beschaffung und das vollständige Lesen investiert wird.
+* Beim Screenen wird der komplette Volltext jedes gefundenen Werks gelesen, um dessen Qualität abschließend zu beurteilen.
+* Screenen bezeichnet das Anlegen der Zitierinformationen in einem Literaturverwaltungsprogramm wie Zotero.
+* Screenen ist der letzte Schritt des Kreislaufs, bei dem die zentralen Inhalte mehrerer Werke zu einer Wissenslandkarte verknüpft werden.
+* Screenen bedeutet, direkt bei den Autor:innen eines Werks nachzufragen, ob ein Volltext zur Verfügung gestellt werden kann.
+
+Solution
+========
+Im Kapitel steht explizit: "Im nächsten Schritt, Screenen, sind zumeist die Open-Access-Elemente am wichtigsten, damit man einschätzen kann, ob das Werk geeignet ist. Der Volltext ist an dieser Stelle nicht (unbedingt) nötig." Screenen dient also der schnellen Eignungsprüfung anhand frei zugänglicher Informationen, bevor mehr Aufwand (Volltextbeschaffung, Lesen) investiert wird.
+
+Die Distraktoren entsprechen anderen Schritten des Kreislaufs bzw. falschen Vorstellungen:
+- "Kompletten Volltext lesen": Das ist der Schritt *Lesen*, nicht *Screenen* — beim Screenen wird laut Text der Volltext gerade nicht benötigt.
+- "Zitierinformationen in Zotero anlegen": Das entspricht dem Schritt *Sammeln* ("Geeignete Werke sammelt man in einer Liste, z. B. mit dem Literaturprogramm Zotero").
+- "Letzter Schritt, Wissenslandkarte verknüpfen": Das beschreibt den Schritt *Verbinden*, der im Kreislauf nach dem Zusammenfassen kommt, nicht das Screenen.
+- "Autor:innen nach Volltext fragen": Das ist eine der im Abschnitt "Volltext-Zugriff" genannten Strategien, um an Volltexte zu gelangen, nicht Teil des Screening-Schritts.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: literaturrecherche-prozess-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

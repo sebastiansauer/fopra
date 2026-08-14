@@ -258,7 +258,7 @@ Keine Sorge! Es gibt Rostlöser, der Sie schnell wieder in Schwung bringt.
 
 #### Grundlagen der Statistik
 
-Das Kursbuch [Statistik1](https://statistik1.netlify.app/) beinhaltet einen Überblick über Datenaufbereitung und -visualierung  sowie Modellierung mit dem linearen Modell, alles mit R.
+Das Kursbuch [Statistik1](https://statistik1.netlify.app/) beinhaltet einen Überblick über Datenaufbereitung und -visualisierung  sowie Modellierung mit dem linearen Modell, alles mit R.
 
 #### Grundlagen der Inferenzstatistik
 
@@ -283,7 +283,7 @@ Das Kursbuch [Start:Bayes!](https://start-bayes.netlify.app/) stellt einen Einst
 
 
 
-![Inferenzstatistik schätzt die (Un-)Genauigkeit der Kennwerte der Deskriptivstatatistik](img/desk-inf-fans.jpg){#fig-inf2 width=70% fig-align="center"}
+![Inferenzstatistik schätzt die (Un-)Genauigkeit der Kennwerte der Deskriptivstatistik](img/desk-inf-fans.jpg){#fig-inf2 width=70% fig-align="center"}
 
 
 
@@ -367,7 +367,7 @@ damit man das Wesentliche erkennt.
 Was ist das "Wesentliche"? Oft interessiert man sich für die Ursachen eines Phänomens. 
 Etwa: "Wie kommt es bloß, dass ich ohne zu lernen die Klausur so gut bestanden habe?"^[Das ist natürlich nur ein fiktives, komplett unrealistisches Beispiel, das auch unklaren Ursachen den Weg auf diese Seite gefunden hat.]
 Noch allgemeiner ist man dabei häufig am Zusammenhang von `X ` und `Y` interessiert, s. @fig-xy, 
-die ein Sinnbild von statistischen Modellen widergibt.
+die ein Sinnbild von statistischen Modellen wiedergibt.
 
 
 
@@ -506,7 +506,7 @@ extra %>%
 ```
 
 
-Übersetzen wir @lst-desk1 vom Errischen ins Deutsche:
+Übersetzen wir @lst-desk1 vom Englischen ins Deutsche:
 
 1. Hey R,
 2. nimm die Tabelle `extra` ... und dann

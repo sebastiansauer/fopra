@@ -1,0 +1,38 @@
+Question
+========
+Das Kapitel beschreibt: "Der Unterschied (im Mittelwert) zwischen Gruppe 1 und 2 ist gleich Null" als typische Nullhypothese, in mathematischer Notation $\bar{X_1} = \bar{X_2}$. Die Forschungshypothese sei hingegen "fast immer das Gegenteil der Nullhypothese", z. B. $X_1 > X_2$.
+
+Angenommen, eine Forscherin formuliert als **Forschungshypothese**: "Personen in der Trainingsgruppe erzielen im Mittel einen höheren Testwert als Personen in der Kontrollgruppe" ($\mu_{Training} > \mu_{Kontrolle}$). Wie lautet die dazu passende Nullhypothese gemäß der im Kapitel beschriebenen Logik?
+
+Answerlist
+----------
+* $\mu_{Training} = \mu_{Kontrolle}$ — es gibt im Mittel keinen Unterschied zwischen Trainings- und Kontrollgruppe.
+* $\mu_{Training} > \mu_{Kontrolle}$ — dieselbe Aussage wie die Forschungshypothese, da Null- und Forschungshypothese laut Kapitel identisch formuliert werden.
+* $\mu_{Training} < \mu_{Kontrolle}$ — die Trainingsgruppe hat im Mittel einen niedrigeren Testwert als die Kontrollgruppe.
+* $\mu_{Training} \neq 0$ — der Mittelwert der Trainingsgruppe ist unter allen Umständen ungleich Null.
+* Es gibt bei diesem Beispiel gar keine sinnvolle Nullhypothese, da Nullhypothesen laut Kapitel nur bei Korrelationen, nicht bei Mittelwertvergleichen, formuliert werden können.
+
+Solution
+========
+Laut Kapitel ist die Nullhypothese die Behauptung, dass kein Unterschied besteht (Differenz gleich Null), formal $\bar{X_1} = \bar{X_2}$; die Forschungshypothese ist "fast immer das Gegenteil der Nullhypothese", hier also $\mu_{Training} > \mu_{Kontrolle}$. Das logische Gegenteil von "$\mu_{Training} > \mu_{Kontrolle}$" im Sinne von "kein Effekt" ist $\mu_{Training} = \mu_{Kontrolle}$ — genau das entspricht dem Schema aus dem Kapitel und ist damit die korrekte Nullhypothese.
+
+Begründung der Distraktoren:
+- "$\mu_{Training} > \mu_{Kontrolle}$, da Null- und Forschungshypothese identisch formuliert werden": Widerspricht direkt der Kapitelaussage, dass die Forschungshypothese "fast immer das Gegenteil der Nullhypothese" ist; Null- und Forschungshypothese dürfen sich nicht gleichen.
+- "$\mu_{Training} < \mu_{Kontrolle}$": Das wäre die entgegengesetzte gerichtete Hypothese (die Trainingsgruppe schneidet schlechter ab), nicht die Nullhypothese "kein Unterschied"; hier wird die Rolle von Nullhypothese und gerichteter Alternativhypothese in die andere Richtung verwechselt.
+- "$\mu_{Training} \neq 0$": Hier wird fälschlich der Vergleich zwischen zwei Gruppenmittelwerten mit einem Vergleich gegen den festen Wert Null verwechselt (wie im Beispiel $\mu > 42$ aus dem Kapitel), obwohl es im Beispiel um den Vergleich zweier Gruppen (Training vs. Kontrolle) geht, nicht um einen Wert gegen absolut Null.
+- "Keine sinnvolle Nullhypothese möglich, da nur bei Korrelationen": Das Kapitel zeigt gerade das Gegenteil: Das Standardbeispiel für Nullhypothesen im Text ist ein Mittelwertsvergleich zweier Gruppen ($\bar{X_1} = \bar{X_2}$), Korrelationen ($\rho > 0$) sind nur ein weiteres, zusätzliches Beispiel.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: nullhypothese-forschungshypothese-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

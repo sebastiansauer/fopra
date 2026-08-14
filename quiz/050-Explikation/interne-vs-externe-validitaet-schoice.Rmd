@@ -1,0 +1,38 @@
+Question
+========
+Ein Forscherteam führt eine medizinische Studie durch, in der gesündere Patient:innen bevorzugt in die Gruppe mit dem neuen Medikament eingeteilt werden, während kränkere Patient:innen in die Gruppe mit dem Standardmedikament kommen. Dadurch zeigt sich ein scheinbarer Effekt, obwohl das neue Medikament in Wahrheit unwirksam ist. Welche Art von Validität ist hier primär verletzt?
+
+Answerlist
+----------
+* Die interne Validität, da die angenommene Ursache (Treatment) nicht die tatsächliche Ursache des beobachteten Effekts ist, sondern eine ungleiche Gruppenzuteilung.
+* Die externe Validität, da der gefundene Effekt nicht auf andere Populationen verallgemeinert werden kann.
+* Die Konstruktvalidität des Messinstruments, da die Symptome falsch operationalisiert wurden.
+* Die Reliabilität der Messung, da die Messwerte nicht reproduzierbar sind.
+* Die statistische Validität, da eine zu kleine Stichprobe verwendet wurde.
+
+Solution
+========
+Die interne Validität betrifft laut Kapitel die korrekte Spezifikation des Determinanten *Ursache*: Ist die angenommene Ursache tatsächlich auch die Ursache des beobachteten Effekts? Im beschriebenen Beispiel (aus dem Kapitelabschnitt zur internen Validität) führt allein die ungleiche Zuordnung von gesünderen vs. kränkeren Patient:innen zu einem Scheineffekt – die Störvariable "Gesundheitszustand bei Studienbeginn" statt des Treatments erzeugt den Effekt. Damit ist die interne Validität verletzt, Antwortoption 1 ist korrekt.
+
+Distraktor 2 verwechselt interne mit externer Validität: Externe Validität betrifft die Generalisierbarkeit eines *tatsächlich vorhandenen* Effekts auf andere Personen/Situationen – hier geht es aber darum, dass der Effekt innerhalb der Studie selbst nicht kausal korrekt zustande kommt.
+
+Distraktor 3 bringt fälschlich die Messinstrument-Determinante (Konstruktvalidität der AV) ins Spiel; im Beispiel liegt das Problem aber nicht in der Messung der AV, sondern in der (nicht-randomisierten) Zuteilung zur UV.
+
+Distraktor 4 verwechselt Validität mit Reliabilität (Zuverlässigkeit/Reproduzierbarkeit einer Messung), was im Beispiel nicht thematisiert wird.
+
+Distraktor 5 nennt einen im Kapitel nicht verwendeten Begriff ("statistische Validität") und unterstellt einen Stichprobengrößenfehler, der im Beispiel nicht die Ursache des Problems ist – das Problem liegt in der systematisch ungleichen Gruppenzuteilung, nicht in der Stichprobengröße.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: interne-vs-externe-validitaet
+extype: schoice
+exsolution: 10000
+exshuffle: 5

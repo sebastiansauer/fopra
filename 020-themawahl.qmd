@@ -233,7 +233,7 @@ Aber Anregung, Ideen und Inspiration dürfen Sie erwarten. $\square$
 >   🧑‍🎓 Am Anfang des Studiums war ich verwirrt. Am Ende des Studiums bin ich immer noch verwirrt. Aber auf einem höheren Niveau.
 
 
-Die Verstädnis-Spirale: Durch Einlesen in ein Themengebiet schält sich langsam ein Thema und dann ein konkrete Forschungsfrage heraus.
+Die Verständnis-Spirale: Durch Einlesen in ein Themengebiet schält sich langsam ein Thema und dann ein konkrete Forschungsfrage heraus.
 Der Fortschritt ist mitunter langsam, aber stetig.
 Wenn Sie dranbleiben und sich weiter einarbeiten steigt Ihr Verständnis spiralförmig an, s. @fig-spirale.
 
@@ -270,7 +270,7 @@ Suchen-->Screenen-->Sammeln-->Lesen-->Zusammenfassen-->Verbinden-->Suchen
 
 1. *Suchen* ist das Ausfindigmachen geeigneter Literatur. 
 Dazu sucht man meist in einschlägigen wissenschaftlichen Literatur-Datenbanken wie z. B. Google Scholar. 
-Sie finden Literaturquellen, die für Ihre Forschungsfrage relevant sein könnnten.
+Sie finden Literaturquellen, die für Ihre Forschungsfrage relevant sein könnten.
 Beim Suchen von muss man unterscheiden zwischen dem Finden von 
 
     a. 🖋️ *Zitierinformationen* wie Autor, Titel, Datum der Veröffentlichung oder ID-Nummer (wie DOI oder ISBN)
@@ -330,7 +330,7 @@ Mit etwas Glück hat Ihre Bib Zugang zum betreffenden Artikel.
 | 4     | [SciSpace](https://scispace.com/)                                         | ja      | ?                                 | 200M+   |
 | 5     | [Semantic Scholar](https://www.semanticscholar.org/)                      | ja      | ?                                 | 200M+   |
 | 6     | [Consenus](https://consensus.app/search/)                                 | ja      | ?                                 | 200M+   |
-| 7     | [Papper Digest](https://www.paperdigest.org)                              | ja      | ?                                 | 200M+   |
+| 7     | [Paper Digest](https://www.paperdigest.org)                              | ja      | ?                                 | 200M+   |
 | 8     | [Open Read](https://www.openread.academy/)                                | ja      | ?                                 | 300M+   |
 
 
@@ -712,7 +712,7 @@ Die Methode der "drei Blicke" erlaubt Ihnen, das Wesentliche (oder einen Teil da
 
 #### 👁 Blick 2: Die Qualität
 
-1. Sind Kausalaussgen möglich?
+1. Sind Kausalaussagen möglich?
 2. Ist die theoretische Basis solide?
 3. Gibt es Ungereimtheiten ([Intransparenz](http://www.sciencecartoonsplus.com/pages/gallery.php), Interessenskonflikte, ...)?
 
@@ -948,7 +948,7 @@ Gehen Sie auf folgende Aspekte ein:
 - Ursache
 - Wirkung
 - Erwartetes Ergebnis
-- thoretischer Hintergrund
+- theoretischer Hintergrund
 $\square$
 :::
 
@@ -1017,7 +1017,7 @@ ine Aussage ist ein Satz, der wahr oder falsch sein kann^[einen "Wahrheitswert" 
 Eine Hypothese mit *geringen* empirischen Gehalt wäre "Es gibt einen Zusammenhang zwischen Lernen und Prüfungserfolg" (Nennen wir diese Hypothese HA). 
 Diese Aussage kann zwar falsch sein - wenn es keinen Zusammenhang zwischen Lernen und Prüfungserfolg gibt in Wirklichkeit. 
 Allerdings müsste dann der Zusammenhang *exakt* Null sein. Wie wahrscheinlich ist es, dass der Zusammenhang exakt Null ist, also 0,000000000? Schon wenn der Zusammenhang in Wirklichkeit nur eine winzige Kleinigkeit von Null abweicht, ist die Aussage (Hypothese HA) wahr! 
-Das Beispiel zeigt, dass der empirische Gehalt von HA gering ist. Ein anderes wichtiges Beispiel sind "Es-gibt-Aussgen", wie "Es gibt Einhörner". 
+Das Beispiel zeigt, dass der empirische Gehalt von HA gering ist. Ein anderes wichtiges Beispiel sind "Es-gibt-Aussagen", wie "Es gibt Einhörner". 
 Es ist (fast) unmöglich, diese Aussage zu widerlegen. Auch wenn ich jahrelang alle Habitate möglicher Einhörner abgrase und keines finde, 
 könnten Sie immer noch sagen "Das Einhorn hat sich gerade versteckt". 
 Also: Es-gibt-Aussagen sind von empirisch geringem Gehalt.
@@ -1033,7 +1033,7 @@ Vielmehr ist es eine Voraussetzung, die Hypothese ernst zu nehmen.
 
 #### Gewagtheit
 
-Eine Hyothese, die einen revolutionären Gedanken in sich trägt ist, ceteris paribus, mehr Wert, als eine Hypothese, von der man schon (fast sicher) weiß, dass sie richtig ist, die also nur Altbackenes widergibt.
+Eine Hypothese, die einen revolutionären Gedanken in sich trägt ist, ceteris paribus, mehr Wert, als eine Hypothese, von der man schon (fast sicher) weiß, dass sie richtig ist, die also nur Altbackenes wiedergibt.
 
 
 #### Präzision
@@ -1088,7 +1088,7 @@ Aufgabenbereiche in Agentur-Teams besonders gut geeignet. $\square$
 
 ### Inferenz
 
-Eine Schlussfolgerung, eine Verallgemeinerung von bekannten Fakten auf neues, bisher unbekanntes Wissen. In der Statistik ist dies häufig das mit Ungewissheit behaftete Schließen von einer Stichprobe auf eine Grundsgesamtheit.$\square$
+Eine Schlussfolgerung, eine Verallgemeinerung von bekannten Fakten auf neues, bisher unbekanntes Wissen. In der Statistik ist dies häufig das mit Ungewissheit behaftete Schließen von einer Stichprobe auf eine Grundgesamtheit.$\square$
 :::
 
 
@@ -1160,7 +1160,7 @@ kable(d)
 
 #### Sachhypothese
 
-Eine Sachhypothese kommt dem Alltagsverstädnis von Hypothese am nächsten. 
+Eine Sachhypothese kommt dem Alltagsverständnis von Hypothese am nächsten. 
 Man formuliert eine Behauptung in den Fachbegriffen des Themenfelds oder einer Theorie, z. B. "Tägliches Musizieren erhöht die Konzentrationsfähigkeit",
 "Ambiguitätstoleranz A und Frustrationsschwelle F hängen (positiv) zusammen"^[Wenn man behauptet, dass zwei Dinge zusammenhängen, 
 so meint man oft implizit, dass sie gleichsinnig, also positiv zusammenhängen.] 
@@ -1217,12 +1217,12 @@ höheres Konfliktpotenzial und eine weniger stabile Teamdynamik aufweisen.
 #### Operationalisierte Hypothese
 
 Bei einer O-Hypothese werden die Fachbegriffe, die die Bestandteile der Hypothese ausmachen in Messgrößen übersetzt. 
-"Das Absolvieren des X-Musikprogramms im Umfang Y erhöht den Messwert im Konzentrationstest Z" oder "Der Messwert im Ambuigitätstest (A) nach Sauer (1921) 
+"Das Absolvieren des X-Musikprogramms im Umfang Y erhöht den Messwert im Konzentrationstest Z" oder "Der Messwert im Ambiguitätstest (A) nach Sauer (1921) 
 hängt positiv zusammen mit dem Messwert der Frustrationsschwelle (F) nach Süß (2022)".
 
 #### Statistische Hypothese
 
-Eine statistische Hypothese gibt die "Zahlenbasis" an, anhand derer die Bestätigung oder Widerlgung festmachen kann. Um die O-Hypothese von Ambiguität und Frustration zu einer statistischen Hypothese zu befördern, könnte man formulieren: $r(A,F) > 0$. 
+Eine statistische Hypothese gibt die "Zahlenbasis" an, anhand derer die Bestätigung oder Widerlegung festmachen kann. Um die O-Hypothese von Ambiguität und Frustration zu einer statistischen Hypothese zu befördern, könnte man formulieren: $r(A,F) > 0$. 
 Das soll heißen, dass der (Pearson'sche) Korrelationskoeffizient zwischen den Größen $A$ und $A$ positiv ist, laut der Hypothese.
 
 
@@ -1276,7 +1276,7 @@ Je höher der empirische Gehalt, desto falsifizierbarer die Hypothese (und desto
 Je gewagter die Hypothese, desto leichter wäre sie zu falsifizieren, wenn sie falsch sein sollte.
 Eine häufige Form von Hypothesen ist (in geringer entwickelten Wissenschaftszweigen) ist daher die *Nullhypothese*: 
 Der Unterschied (im Mittelwert) zwischen Gruppe 1 und 2 ist gleich *Null*. In mathematischer Notation: $\bar{X_1} = \bar{X_2}$.
-Die Forschungshypothese ist hingegen meist das logische Gegenteil der Nullhypothese: Das also ein Effekt vorliegt, das der Mittelwertsunterschied eben nicht Nulll ist.
+Die Forschungshypothese ist hingegen meist das logische Gegenteil der Nullhypothese: Das also ein Effekt vorliegt, das der Mittelwertsunterschied eben nicht Null ist.
 Etwa: Gruppe 1 hat einen höheren Mittelwert als Gruppe 2. In mathematischer Notation: $X_1 > X_2$.
 
 Die *Forschungshypothese* - Ihre Hypothese! -  ist fast immer das *Gegenteil* der Nullhypothese: Meist glaubt man, dass es einen Effekt gibt, dass ein Effekt eben nicht Null ist.

@@ -1,0 +1,38 @@
+Question
+========
+Das Kapitel unterscheidet drei Hypothesenarten nach ihrer Exaktheit: Sachhypothese, operationalisierte Hypothese (O-Hypothese) und statistische Hypothese. Als Beispiel wird u. a. genannt: Sachhypothese "Wer viel joggt, hat wenig Körperfett", O-Hypothese "In Bedingung 'Joggen' hatten die Teilnehmer einen geringeren Körperfettanteil als in der Bedingung 'Sofa'", statistische Hypothese "MW(Joggen) < MW(Sofa)".
+
+Welcher Hypothesenart entspricht die Aussage $r(A,F) > 0$ (mit $A$ = Messwert im Ambiguitätstest, $F$ = Messwert der Frustrationsschwelle)?
+
+Answerlist
+----------
+* Statistische Hypothese, da die Aussage sich auf einen konkreten Kennwert (den Korrelationskoeffizienten $r$) zwischen zwei benannten Messgrößen bezieht und in mathematischer Notation formuliert ist.
+* Sachhypothese, da $r(A,F) > 0$ einen inhaltlichen Zusammenhang in Fachbegriffen des Themenfelds beschreibt, ohne Bezug auf konkrete Messinstrumente.
+* O-Hypothese, da $A$ und $F$ Abkürzungen für Alltagsbegriffe sind, die noch nicht in Messgrößen übersetzt wurden.
+* Weder Sach-, O- noch statistische Hypothese, sondern eine Nullhypothese, da $r(A,F) > 0$ behauptet, dass kein Zusammenhang besteht.
+* Sachhypothese, weil griechische oder mathematische Symbole laut Kapitel ausschließlich in Sachhypothesen verwendet werden.
+
+Solution
+========
+Das Kapitel definiert: "Eine statistische Hypothese gibt die 'Zahlenbasis' an, anhand derer die Bestätigung oder Widerlegung festmachen kann. Um die O-Hypothese von Ambiguität und Frustration zu einer statistischen Hypothese zu befördern, könnte man formulieren: $r(A,F) > 0$." Die Aussage bezieht sich auf einen konkreten statistischen Kennwert (den Pearson-Korrelationskoeffizienten) zwischen den bereits operationalisierten Messgrößen $A$ und $F$ und ist damit eine statistische Hypothese — die konkreteste der drei Stufen.
+
+Begründung der Distraktoren:
+- "Sachhypothese, da inhaltlicher Zusammenhang ohne Messinstrumente": Eine Sachhypothese würde eher lauten "Ambiguitätstoleranz und Frustrationsschwelle hängen positiv zusammen", also ohne konkrete Messgrößen $A$/$F$ und ohne mathematische Notation mit $r(\cdot,\cdot)$; die gegebene Formel geht deutlich darüber hinaus.
+- "O-Hypothese, da $A$/$F$ noch nicht operationalisiert": Das ist falsch, denn $A$ und $F$ stehen im Kapitel bereits für konkrete Messinstrumente ("Messwert im Ambiguitätstest (A) nach Sauer (1921)", "Messwert der Frustrationsschwelle (F) nach Süß (2022)") — die Operationalisierung ist also bereits erfolgt, und die Formel geht mit dem konkreten Kennwert $r$ noch einen Schritt weiter zur statistischen Hypothese.
+- "Nullhypothese, da $r(A,F) > 0$ keinen Zusammenhang behauptet": Das Gegenteil ist richtig — $r(A,F) > 0$ behauptet gerade einen positiven Zusammenhang und wäre damit eher eine Forschungshypothese; die zugehörige Nullhypothese wäre $r(A,F) = 0$ (kein Zusammenhang).
+- "Mathematische Symbole nur in Sachhypothesen": Das Kapitel zeigt exakt das Gegenteil: Mathematische Symbole und griechische Buchstaben charakterisieren gerade die statistische Hypothese, während Sachhypothesen in Fachbegriffen (nicht in Formeln) formuliert werden.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: hypothesenarten-taxonomie-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

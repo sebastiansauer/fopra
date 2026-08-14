@@ -1,0 +1,24 @@
+---
+title: "Quiz: Populationsbeschreibung"
+output: exams2forms::webquiz
+---
+
+```{r exams2forms-setup, include = FALSE}
+## package and exercises
+library("exams2forms")
+exm <- c("/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/040-Populationsbeschreibung/adhoc-stichprobe-repraesentativitaet-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/040-Populationsbeschreibung/deskription-kausalitaet-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/040-Populationsbeschreibung/deskriptiv-vs-inferenzstatistik-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/040-Populationsbeschreibung/effektstaerke-cohen-koerpergroesse-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/040-Populationsbeschreibung/kovariate-regressionsmodell-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/040-Populationsbeschreibung/notation-forschungsfragen-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/040-Populationsbeschreibung/populationsbeschreibung-definition-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/040-Populationsbeschreibung/schaetzbereich-interpretation-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/040-Populationsbeschreibung/stichprobengroesse-power-regression-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/040-Populationsbeschreibung/stichprobenumfang-ki-normalverteilt-schoice.Rmd"
+)
+```
+
+```{r exams2forms-include, echo = FALSE, message = FALSE, results="asis"}
+exams2forms(exm,  n = 1L, nsamp = NULL)
+```

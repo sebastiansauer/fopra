@@ -1,0 +1,38 @@
+Question
+========
+Welche Funktion erfüllt die Randomisierung von Versuchspersonen zu Versuchsbedingungen in einem Experiment laut Kapitel?
+
+Answerlist
+----------
+* Sie soll bewirken, dass alle personengebundenen Variablen in den Versuchsbedingungen ähnliche Verteilungen (z.B. gleiche Mittelwerte) erlangen, sodass Unterschiede in der AV nicht auf personenbezogene Unterschiede zurückgeführt werden können.
+* Sie garantiert bei jeder Stichprobengröße, dass die Gruppen in allen Merkmalen exakt identisch sind.
+* Sie ersetzt die Notwendigkeit, eine Kontrollgruppe zu bilden.
+* Sie erhöht die Reliabilität des verwendeten Messinstruments.
+* Sie stellt sicher, dass die Ergebnisse automatisch auf die Gesamtbevölkerung verallgemeinerbar sind (externe Validität).
+
+Solution
+========
+Laut Definition im Kapitel ist Randomisieren das zufällige Zuteilen von Versuchsobjekten zu Versuchsbedingungen mit dem Ziel, dass alle personengebundenen Variablen in den Bedingungen gleiche Verteilungen erlangen. Sind Unterschiede zwischen den Bedingungen in der AV dann vorhanden, können sie nicht mehr auf personenbezogene Unterschiede zurückgeführt werden – wichtige Alternativerklärungen werden dadurch ausgeschlossen. Antwortoption 1 ist korrekt.
+
+Distraktor 2 übertreibt die Wirkung der Randomisierung: Laut Kapitel (unter Verweis auf Saint-Mont, 2015) kann man sich auf den "Segen" der Randomisierung erst bei hohen (vierstelligen) Stichprobengrößen verlassen – exakte Gleichheit in allen Merkmalen garantiert Randomisierung nie, auch nicht bei großen Stichproben.
+
+Distraktor 3 verwechselt Randomisierung mit dem Vorhandensein einer Kontrollgruppe; beides sind unterschiedliche, sich ergänzende Merkmale eines guten Experiments – Randomisierung betrifft die *Zuteilung* zu Gruppen, nicht deren *Existenz*.
+
+Distraktor 4 verwechselt Randomisierung mit einem Gütekriterium der Messung (Reliabilität); Randomisierung betrifft die Gruppenzuteilung der Versuchspersonen, nicht die Messgenauigkeit eines Instruments.
+
+Distraktor 5 verwechselt interne mit externer Validität: Randomisierung der Gruppenzuteilung stärkt primär die *interne* Validität (Ausschluss von Alternativerklärungen für den Effekt), sagt aber nichts über die Generalisierbarkeit der Ergebnisse auf andere Populationen aus.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: randomisierung-funktion
+extype: schoice
+exsolution: 10000
+exshuffle: 5

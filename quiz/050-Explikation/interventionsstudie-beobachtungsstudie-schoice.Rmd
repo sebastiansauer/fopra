@@ -1,0 +1,38 @@
+Question
+========
+Worin besteht der zentrale Unterschied zwischen einer *Interventionsstudie* und einer *Beobachtungsstudie*?
+
+Answerlist
+----------
+* In einer Interventionsstudie wirken die Forschis aktiv auf die Versuchsobjekte ein (Treatment), in einer Beobachtungsstudie werden nur Ausprägungen von Variablen gemessen, ohne sie zu verändern.
+* In einer Interventionsstudie wird immer eine größere Stichprobe benötigt als in einer Beobachtungsstudie.
+* Eine Interventionsstudie verwendet ausschließlich quantitative, eine Beobachtungsstudie ausschließlich qualitative Daten.
+* In einer Beobachtungsstudie gibt es immer eine Kontrollgruppe, in einer Interventionsstudie nie.
+* Interventionsstudien werden nur im Labor, Beobachtungsstudien nur im Feld durchgeführt.
+
+Solution
+========
+Laut Definition im Kapitel ist eine Interventionsstudie dadurch gekennzeichnet, dass die Versuchsobjekte behandelt ("gemacht") werden – die Forschis wirken aktiv auf das System ein. Eine Beobachtungsstudie hingegen "macht nichts", sondern misst nur die Werte der interessierenden Variablen, ohne sie zu manipulieren. Damit ist die erste Antwortoption korrekt.
+
+Die zweite Option ist falsch: Die Stichprobengröße ist unabhängig vom Studientyp und hängt von der Fragestellung, der erwarteten Effektgröße und der Teststärke ab, nicht davon, ob interveniert wird.
+
+Die dritte Option verwechselt die Unterscheidung Intervention/Beobachtung mit der Unterscheidung quantitativ/qualitativ; beide Studientypen können sowohl quantitative als auch qualitative Daten erheben.
+
+Die vierte Option ist falsch: Gerade Interventionsstudien nutzen häufig eine Kontrollgruppe (z.B. Placebo-Gruppe), während Beobachtungsstudien oft gar keine Gruppeneinteilung im interventionellen Sinne vornehmen.
+
+Die fünfte Option ist falsch: Der Ort der Durchführung (Labor vs. Feld) ist unabhängig davon, ob eine Studie interventionell oder beobachtend ist – es gibt sowohl Feldexperimente (Intervention im Feld) als auch Laborbeobachtungen.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: interventionsstudie-beobachtungsstudie
+extype: schoice
+exsolution: 10000
+exshuffle: 5

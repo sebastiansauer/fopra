@@ -1,0 +1,52 @@
+```{r, include=FALSE}
+berta <- c(2, NA, 4, NA)   # Item 1 = 2, Item 2 fehlt, Item 3 = 4, Item 4 fehlt
+
+korrekt <- mean(berta, na.rm = TRUE)          # 3
+d1 <- sum(berta, na.rm = TRUE)                 # 6, Summenscore statt Mittelwert
+d2 <- sum(berta, na.rm = TRUE) / length(berta) # 1.5, durch alle Items (inkl. fehlende) geteilt
+d3 <- max(berta, na.rm = TRUE)                  # 4, nur höchsten beantworteten Wert genommen
+d4 <- min(berta, na.rm = TRUE)                  # 2, nur niedrigsten beantworteten Wert genommen
+
+stopifnot(length(unique(c(korrekt, d1, d2, d3, d4))) == 5)
+```
+
+Question
+========
+Die Versuchsperson "Berta" hat einen Extraversions-Fragebogen mit 4 Items (Antwortstufen 1 bis 4) bearbeitet, aber nur zwei der vier Items beantwortet: Item 1 mit dem Wert 2 und Item 3 mit dem Wert 4; Item 2 und Item 4 sind fehlende Werte (`NA`). Wie im Kapitel begründet, ist bei fehlenden Werten der Mittelwert-Score dem Summenscore vorzuziehen, da Letzterer die Ausprägung bei unvollständigen Antworten systematisch unterschätzt. Welchen Wert hat Bertas Mittelwert-Score, wenn er (wie empfohlen) nur aus den *tatsächlich beantworteten* Items berechnet wird?
+
+Answerlist
+----------
+* `r korrekt`
+* `r d1`
+* `r d2`
+* `r d3`
+* `r d4`
+
+Solution
+========
+Der Mittelwert wird über die beantworteten Items gebildet, fehlende Werte werden dabei außer Acht gelassen (`na.rm = TRUE`):
+
+$$\text{Mittelwert} = \frac{2 + 4}{2} = `r korrekt`$$
+
+Damit ist `r korrekt` die korrekte Antwort. Das entspricht auch der Argumentation im Kapitel (Beispiel "Alois"): Wer bei den beantworteten Items im Schnitt eine bestimmte Ausprägung zeigt, für den ist es plausibel, dass er bei den fehlenden Items ähnlich geantwortet hätte – der Mittelwert bildet das besser ab als eine Summe.
+
+Zu den Distraktoren:
+* `r d1` ist der *Summenscore* (Summe der beantworteten Werte $2+4=`r d1`$) statt des Mittelwerts. Genau dieser Wert würde laut Kapitel Bertas Ausprägung *unterschätzen*, weil er suggeriert, sie hätte im Schnitt niedrige Werte gewählt.
+* `r d2` entsteht, wenn man die Summe der beantworteten Werte durch die *Gesamtzahl* der Items (4, inklusive der beiden fehlenden) teilt, statt nur durch die Anzahl der tatsächlich beantworteten Items (2) – ein häufiger Fehler beim Umgang mit `NA`.
+* `r d3` entsteht, wenn man fälschlich nur den höchsten beantworteten Einzelwert als Score nimmt, anstatt über alle beantworteten Items zu mitteln.
+* `r d4` entsteht, wenn man fälschlich nur den niedrigsten beantworteten Einzelwert als Score nimmt, anstatt über alle beantworteten Items zu mitteln.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: summenscore-vs-mittelwertscore-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

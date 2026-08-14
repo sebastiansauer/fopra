@@ -1,0 +1,37 @@
+Question
+========
+Sie berichten im Ergebnisteil Ihrer Arbeit zwei Sätze: (1) "Es fand sich ein Unterschied zwischen den Gruppen." und (2) "Dieser Wert ist statistisch signifikant." Welche Regel zur Zeitform (Tempus) und zum Inhalt des Ergebnisteils wird dabei korrekt angewendet?
+
+Answerlist
+----------
+* Konkrete Handlungen/Befunde der eigenen Studie werden in der Vergangenheitsform beschrieben (Satz 1), überdauernde Tatsachen hingegen im Präsens (Satz 2); zudem enthält der Ergebnisteil nur Fakten, keine Interpretationen.
+* Beide Sätze müssten im Präsens stehen, da der gesamte Ergebnisteil ausschließlich im Präsens verfasst wird.
+* Beide Sätze müssten in der Vergangenheitsform stehen, da im Ergebnisteil grundsätzlich alles, was berichtet wird, bereits abgeschlossen ist.
+* Satz 1 ist eine unzulässige Bewertung und gehört in die Diskussion, während Satz 2 korrekt im Ergebnisteil steht.
+* Die Zeitform ist im Ergebnisteil frei wählbar, solange sie im gesamten Dokument einheitlich verwendet wird; eine inhaltliche Regel zur Tempuswahl gibt es laut Kapitel nicht.
+
+Solution
+========
+Das Kapitel führt aus, dass Handlungen (also konkrete, abgeschlossene Ereignisse/Befunde wie "Es fand sich ein Unterschied…") in der 1. Vergangenheit beschrieben werden, während überdauernde Tatsachen (wie "Dieser Wert ist statistisch signifikant") im Präsens stehen. Zudem betont das Kapitel, dass im Ergebnisteil nur objektive Fakten berichtet werden, keine Interpretationen oder Bewertungen – diese gehören in die Diskussion.
+
+Die Distraktoren beruhen auf folgenden typischen Denkfehlern:
+
+- "beide Sätze im Präsens": Ignoriert, dass das Kapitel explizit zwischen abgeschlossenen Handlungen (Vergangenheit) und andauernden Tatsachen (Präsens) unterscheidet – nicht alles wird einheitlich im Präsens verfasst.
+- "beide Sätze in der Vergangenheitsform": Ignoriert ebenfalls die Differenzierung; eine statistische Signifikanzaussage gilt als andauernde Tatsache und wird daher im Präsens formuliert, nicht in der Vergangenheit.
+- "Satz 1 ist eine unzulässige Bewertung": Verwechselt eine sachliche Befundbeschreibung ("Es fand sich ein Unterschied") mit einer Bewertung; eine Bewertung wäre z.B. "Der Unterschied ist bedeutsam" – das ist hier nicht der Fall, Satz 1 gehört korrekt in den Ergebnisteil.
+- "Zeitform frei wählbar, keine Regel": Widerspricht direkt der im Kapitel explizit formulierten Tempus-Regel für den Ergebnisteil.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: ergebnisteil-tempus-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

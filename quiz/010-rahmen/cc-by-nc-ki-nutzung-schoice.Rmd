@@ -1,0 +1,38 @@
+Question
+========
+Ein wissenschaftlicher Artikel steht unter einer CC-BY-NC-Lizenz. Sie möchten ihn im Rahmen eines kommerziellen Firmenprojekts bei einem KI-Dienst hochladen, um ihn zusammenfassen zu lassen. Was folgt daraus nach den im Kapitel dargestellten Nutzungsregeln?
+
+Answerlist
+----------
+* Die Nutzung ist problematisch, da CC-BY-NC nur nicht-kommerzielle Nutzung erlaubt und das Hochladen bei einem kommerziellen KI-Anbieter als kommerzielle Nutzung bzw. Weiterverarbeitung gelten kann.
+* Die Nutzung ist unproblematisch, da CC-BY-NC jede Nutzung erlaubt, solange die Quelle genannt wird.
+* Die Nutzung ist nur im privaten Kontext erlaubt, im universitären Kontext dagegen ausdrücklich verboten.
+* CC-BY-NC-Lizenzen verbieten grundsätzlich jedes Lesen oder Zitieren des Artikels.
+* Die Lizenzbedingungen sind für KI-Nutzung irrelevant, da beim Hochladen keine rechtlich relevante Vervielfältigung stattfindet.
+
+Solution
+========
+Das Kapitel erklärt zu CC-BY-NC ausdrücklich: "Nutzung nur für nicht-kommerzielle Zwecke erlaubt", problematisch u. a. bei "Nutzung im Unternehmen" und bei "möglicher Weiterverarbeitung durch KI-Anbieter". Die Empfehlung lautet, solche Inhalte "nur im privaten oder universitären Kontext" zu nutzen. Für ein kommerzielles Firmenprojekt ist die Nutzung damit problematisch. Die erste Antwort ist korrekt.
+
+Zu den Distraktoren:
+
+* "Jede Nutzung erlaubt, solange Quelle genannt wird": Das beschreibt eher eine reine CC-BY-Lizenz ohne NC-Zusatz. Der NC-Zusatz (Non-Commercial) schränkt gerade die kommerzielle Nutzung zusätzlich ein, unabhängig von der Namensnennung.
+* "Nur privat erlaubt, universitär verboten": Das Kapitel nennt explizit sowohl privaten als auch universitären Kontext als (im Gegensatz zum Unternehmenskontext) empfohlene Nutzungsbereiche für CC-BY-NC-Inhalte – die Aussage kehrt das Verhältnis fälschlich um.
+* "Verbietet jegliches Lesen/Zitieren": Der NC-Zusatz betrifft die kommerzielle Nutzung/Vervielfältigung, nicht das grundsätzliche Lesen oder korrekte Zitieren eines frei zugänglichen Artikels.
+* "Lizenz irrelevant, keine rechtliche Vervielfältigung": Das Kapitel weist ausdrücklich darauf hin, dass beim Hochladen bei einem KI-Dienst eine technische Verarbeitung und ggf. Speicherung/Weiterverwendung erfolgt, was rechtlich als Nutzung oder Vervielfältigung gelten kann – die Lizenz ist also gerade relevant.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: cc-by-nc-ki-nutzung-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5
+excategory: Rahmen

@@ -1,0 +1,37 @@
+Question
+========
+Ein Item hat das Antwortformat "trifft überhaupt nicht zu (-2) -- (-1) -- (0) -- (+1) -- (+2) trifft voll und ganz zu". Wie ist dieses Antwortformat gemäß der im Kapitel getroffenen Unterscheidung zu klassifizieren?
+
+Answerlist
+----------
+* Bipolar, weil es zwei entgegengesetzte Ausprägungsrichtungen (Ablehnung vs.\ Zustimmung) um einen neutralen Mittelpunkt herum abbildet.
+* Unipolar, weil es von "nie" bis "immer" verläuft und damit nur eine Häufigkeitsrichtung abbildet.
+* Nominal, weil den Antwortstufen keine sinnvolle Rangfolge zugeordnet werden kann.
+* Bipolar, weil es aus genau zwei Antwortmöglichkeiten (Zustimmung oder Ablehnung) besteht.
+* Unipolar, weil alle fünf Werte im Beispiel positiv kodiert sind.
+
+Solution
+========
+Im Kapitel wird die Unterscheidung unipolar/bipolar anhand von Beispielen eingeführt: Unipolare Formate verlaufen von einem neutralen Nullpunkt in eine Richtung (z.\ B. "nie -- selten -- gelegentlich -- oft -- immer"), während bipolare Formate zwei entgegengesetzte Ausprägungen um einen neutralen Mittelpunkt (hier: 0) abbilden, wie im gegebenen Beispiel "trifft überhaupt nicht zu (-2) ... (+2) trifft voll und ganz zu". Die Kodierung von -2 bis +2 mit 0 als neutralem Mittelpunkt ist das Musterbeispiel für ein bipolares Format im Kapitel. Damit ist die erste Antwort korrekt.
+
+Zu den Distraktoren:
+
+* "Unipolar, weil es von 'nie' bis 'immer' verläuft" beschreibt fälschlich das *andere*, im Kapitel als unipolares Beispiel genannte Format und trifft nicht auf das hier beschriebene Zustimmungsformat mit negativem und positivem Pol zu.
+* "Nominal, weil keine Rangfolge zugeordnet werden kann" ist falsch: Die Stufen sind eindeutig ordinal (bzw. werden häufig als intervallskaliert angenommen) geordnet, von starker Ablehnung bis starker Zustimmung; die Unterscheidung nominal/ordinal/metrisch betrifft zudem das Skalenniveau, nicht die Frage uni- vs.\ bipolar.
+* "Bipolar, weil es aus genau zwei Antwortmöglichkeiten besteht" verwechselt "bipolar" (zwei *Richtungen* eines Kontinuums mit mehreren Abstufungen) mit einer binären Antwortoption (nur zwei mögliche Antworten); das Beispiel hat fünf Abstufungen, keine zwei.
+* "Unipolar, weil alle Werte positiv kodiert sind" ist sachlich falsch, da die Kodierung explizit von -2 bis +2 reicht, also sowohl negative als auch positive Werte enthält; das ist gerade das Kennzeichen eines bipolaren, nicht unipolaren Formats.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: likert-bipolar-unipolar-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

@@ -1,0 +1,38 @@
+Question
+========
+Wie ist die Posteriori-Verteilung (Post-Verteilung) in einer Bayes-Analyse laut Kapitel korrekt zu interpretieren?
+
+Answerlist
+----------
+* Sie gibt an, wie wahrscheinlich ein bestimmter Parameterwert ist, nachdem die Daten bekannt sind.
+* Sie gibt die Wahrscheinlichkeit an, mit der die Nullhypothese über viele gedachte Wiederholungen der Studie hinweg abgelehnt würde.
+* Sie beschreibt die Wahrscheinlichkeit der beobachteten Daten unter der Annahme, dass die Nullhypothese wahr ist.
+* Sie ist inhaltlich identisch mit der Prior-Verteilung, nur unter anderem Namen.
+* Sie gibt an, wie wahrscheinlich die Daten sind, bevor die Studie überhaupt durchgeführt wurde.
+
+Solution
+========
+Das Kapitel definiert es direkt: "Die Post-Verteilung gibt an, wie wahrscheinlich ein bestimmter Parameterwert jetzt ist, nachdem die Daten bekannt sind." Die Posteriori-Verteilung bezieht sich also auf die Wahrscheinlichkeit von Parameterwerten *nach* Einbezug der Daten.
+
+Zu den Distraktoren:
+
+* Eine Aussage über Ablehnraten der Nullhypothese über gedachte Wiederholungen beschreibt die (häufig missverstandene) frequentistische Logik von Signifikanztests, nicht die Bayes'sche Posteriori-Verteilung.
+* Die Wahrscheinlichkeit der Daten unter der Nullhypothese entspricht der Grundidee des *p*-Werts (frequentistisch), nicht der Posteriori-Verteilung eines Parameters.
+* Die Prior-Verteilung repräsentiert den Wissensstand *vor* den Daten; die Posteriori-Verteilung entsteht erst durch deren Aktualisierung mit den Daten - beide sind also nicht identisch.
+* Die Wahrscheinlichkeit der Daten *vor* der Studie beschreibt eher die Prior-Prädiktion, nicht die Posteriori-Verteilung eines Parameters, die sich gerade auf die Situation *nach* Kenntnis der Daten bezieht.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: posteriori-verteilung-interpretation
+extype: schoice
+exsolution: 10000
+exshuffle: 5
+excategory: berichten-statistik

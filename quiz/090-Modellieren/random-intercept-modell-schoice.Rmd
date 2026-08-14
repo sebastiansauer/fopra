@@ -1,0 +1,38 @@
+Question
+========
+Für Messwiederholungen zu drei Zeitpunkten wird im Kapitel das Modell `stan_lmer(y ~ 1 + (1 | time), data = d_long)` gerechnet. Welche Aussage zur Interpretation dieser Modellformel ist korrekt?
+
+Answerlist
+----------
+* `(1 | time)` gibt an, dass der Intercept (nicht eine UV) zwischen den Messzeitpunkten variiert; `fixef()` liefert den festen Gesamtmittelwert, `ranef()` die Abweichungen der einzelnen Messzeitpunkte davon.
+* `(1 | time)` bedeutet, dass `time` als feste UV mit eigenem Regressionskoeffizienten in das Modell aufgenommen wird, so wie `g` im Modell `d ~ g`.
+* Die `1` in `(1 | time)` steht für eine Konstante, die für alle Messzeitpunkte exakt denselben Wert erzwingt, sodass keine Variation zwischen den Zeitpunkten mehr möglich ist.
+* `fixef()` liefert die Abweichungen der einzelnen Messzeitpunkte vom Gesamtmittel, während `ranef()` den festen Gesamtmittelwert liefert.
+* Das Modell `y ~ 1 + (1 | time)` ist inhaltlich identisch mit `y ~ time` und unterscheidet sich nur in der Schreibweise, nicht im geschätzten Ergebnis.
+
+Solution
+========
+Das Kapitel erläutert: Die Schreibweise `(1 | time)` bedeutet, dass die Messwerte innerhalb von `time` verschachtelt sind und variieren; die `1` sagt, dass es sich bei der variierenden Größe um den *Intercept* handelt, nicht um eine UV. Ein "fixer" Effekt ist dabei ein Effekt, für den kein Pooling stattfindet – hier der Gesamt-Intercept, den man sich mit `fixef()` ausgeben lassen kann (im Beispiel ca. 7.1 als Gesamtmittel). Die Random-Effekte, abrufbar mit `ranef()`, sind "die Abweichungen der Gruppenmittelwerte (y1, y2, y3) vom Gesamtmittel". Das entspricht der ersten Antwortoption.
+
+Zu den Distraktoren:
+
+* "`time` als feste UV mit eigenem Regressionskoeffizienten": Das beschreibt ein Modell wie `y ~ time` (feste Effekte je Zeitpunkt), nicht die Random-Intercept-Notation `(1 | time)`, bei der `time` als Gruppierungsvariable für zufällig variierende Intercepts fungiert, nicht als klassische UV mit festen Koeffizienten.
+* "`1` erzwingt identischen Wert für alle Zeitpunkte, keine Variation möglich": Das ist das Gegenteil der Intention – `(1 | time)` erlaubt gerade, dass der Intercept *zwischen* den Zeitpunkten variiert (Random Intercept), statt ihn auf einen einzigen Wert festzulegen.
+* "`fixef()` liefert Abweichungen, `ranef()` den Gesamtmittelwert": Das vertauscht die beiden Funktionen genau umgekehrt zur im Kapitel beschriebenen Verwendung; `fixef()` liefert den festen Gesamteffekt, `ranef()` die gruppenspezifischen Abweichungen.
+* "`y ~ 1 + (1 | time)` ist identisch mit `y ~ time`": Beide Modelle unterscheiden sich konzeptionell: `y ~ time` schätzt für jede Stufe von `time` einen eigenen festen Koeffizienten, während `y ~ 1 + (1 | time)` einen gemeinsamen (gepoolten) Intercept mit darum variierenden Random-Effekten je Zeitpunkt schätzt – die Schätzergebnisse können sich daher deutlich unterscheiden.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: random-intercept-modell-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5
+excategory: Modellieren

@@ -1,0 +1,30 @@
+Question
+========
+Eine Gruppe berichtet im FAQ, was sie vor der eigentlichen Modellierung bereits am Datensatz gemacht hat ("Datenjudo"), und bekommt die Rückmeldung, dass sich das gut anhört. Welche der folgenden Aufzählungen entspricht den im Kapitel genannten vorbereitenden Schritten?
+
+Answerlist
+----------
+* Spalten mit fehlenden Werten entfernt, Items umkodiert, Items zu einem Konstrukt zusammengefasst (Mittelwertbildung), Korrelationen angeschaut
+* Ein vollständiges Strukturgleichungsmodell mit latenten Variablen spezifiziert und auf Modellfit geprüft
+* Eine Poweranalyse durchgeführt und die Stichprobengröße nachträglich verdoppelt
+* Alle Rohdaten pseudonymisiert, anonymisiert und in eine SQL-Datenbank überführt
+* Ein systematisches Review der Literatur zur Präregistrierung der Hypothesen erstellt
+
+Solution
+========
+Im Kapitel werden genau diese Schritte als bereits erledigtes "Datenjudo" genannt: Spalten mit fehlenden Werten entfernen, Items umkodieren, Items zu einem Konstrukt zusammenfassen und den Mittelwert bilden, sowie Korrelationen anschauen. Das entspricht der ersten Antwort. Ein vollständiges Strukturgleichungsmodell ist ein deutlich weiterführender Modellierungsschritt und wird im Kapitel nicht als vorbereitender Datenjudo-Schritt genannt. Eine nachträgliche Poweranalyse mit Verdopplung der Stichprobe ist nach der Datenerhebung nicht mehr sinnvoll umsetzbar und wird im Text nicht erwähnt. Pseudonymisierung und Überführung in eine Datenbank betreffen Datenschutz- bzw. Infrastrukturfragen, nicht die im Kapitel beschriebene inhaltliche Datenaufbereitung. Ein systematisches Literaturreview zur Präregistrierung gehört in die Planungsphase vor der Datenerhebung, nicht zur nachträglichen Datenaufbereitung.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: datenjudo
+extype: schoice
+exsolution: 10000
+exshuffle: 5

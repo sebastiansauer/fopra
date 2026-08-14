@@ -1,0 +1,37 @@
+Question
+========
+Ihre Forschungsfrage lautet "Führt X zu Y?" (also eine typische "X führt zu Y"-Fragestellung). Welche drei inhaltlichen Bestandteile sollte der Theorieteil laut Kapitel dafür mindestens abdecken?
+
+Answerlist
+----------
+* X, Y sowie den (häufig kausalen) Zusammenhang von X und Y.
+* Die historische Entwicklung des Fachgebiets, eine Literaturübersicht zu allen verwandten Konstrukten und eine ausführliche Methodenkritik.
+* Nur X, da Y als abhängige Variable erst im Ergebnisteil eingeführt werden muss.
+* Eine allgemeine Einführung in die Psychologie als Fach, gefolgt von einer Definition von "Wissenschaft" und einem Exkurs zur Wissenschaftstheorie.
+* Die persönliche Motivation der Verfasserin oder des Verfassers, die Methode der Datenerhebung sowie die geplante Stichprobengröße.
+
+Solution
+========
+Das Kapitel erläutert, dass bei "X führt zu Y"-Forschungsfragen der Theorieteil aus drei Teilen bestehen sollte: (1) X, (2) Y und (3) der (häufig kausale) Zusammenhang von X und Y. Das wird auch an den Beispielen "Statussymbole und Online-Dating" (Status, Partnersuche, kausaler Zusammenhang) und "Achtsamkeit und affektive Reaktivität" illustriert.
+
+Die Distraktoren beruhen auf folgenden typischen Denkfehlern:
+
+- "historische Entwicklung... alle verwandten Konstrukte... Methodenkritik": Das Kapitel warnt explizit vor einem Theorieteil, der "über alles Mögliche" berichtet (z.B. "Die Geschichte des Konstrukts X in den letzten 300 Jahren") statt sich auf die Bestandteile der Forschungsfrage zu konzentrieren.
+- "Nur X... Y erst im Ergebnisteil": Dieser Distraktor ignoriert, dass sowohl X als auch Y bereits im Theorieteil behandelt werden müssen, da beide Konstrukte für das Verständnis des postulierten Zusammenhangs nötig sind.
+- "allgemeine Einführung in die Psychologie... Wissenschaftstheorie": Das Kapitel betont, dass der Theorieteil nur enthalten soll, was für die konkrete Forschungsfrage relevant ist – ein allgemeiner Fach-Einführungslevel (wie ein Lehrbuchkapitel) wird explizit als unzureichend bezeichnet.
+- "persönliche Motivation... Methode... Stichprobengröße": Persönliche Motivation gehört (falls überhaupt) in die Einleitung, Methode und Stichprobe gehören in den Methodenteil, nicht in den Theorieteil.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: theorieteil-aufbau-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

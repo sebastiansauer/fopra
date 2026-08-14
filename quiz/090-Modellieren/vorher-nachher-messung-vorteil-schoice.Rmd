@@ -1,0 +1,38 @@
+Question
+========
+Im Kapitel wird eine Vorher-Nachher-Messung (mit Prä- und Postmessung `y1`/`y2` und Differenzvariable `d = y2 - y1`) einer reinen Nur-Nachher-Messung gegenübergestellt. Welchen Vorteil hat die Vorher-Nachher-Messung laut Kapitel?
+
+Answerlist
+----------
+* Sie rechnet unterschiedliche Ausgangswerte der AV zwischen den Gruppen heraus, wodurch man tendenziell zu belastbareren Ergebnissen kommt, insbesondere bei nicht sehr großen Gruppen.
+* Sie macht die Randomisierung der Probandis zu den Gruppen überflüssig, da Ausgangsunterschiede ohnehin über die Prämessung kontrolliert werden.
+* Sie verringert automatisch die benötigte Stichprobengröße auf die Hälfte, unabhängig vom untersuchten Effekt.
+* Sie erlaubt es, ganz auf ein statistisches Modell zu verzichten, da die Differenzbildung die Inferenzstatistik ersetzt.
+* Sie stellt sicher, dass gefundene Effekte niemals auf Ausgangsunterschieden zwischen den Gruppen beruhen können, selbst bei kleinen Stichproben.
+
+Solution
+========
+Das Kapitel erläutert: Eine Vorher-Nachher-Messung hat den Vorteil, dass sie – im Gegensatz zur Nur-Nachher-Messung – unterschiedliche Ausgangswerte in der AV herausrechnet, wodurch man "oft zu belastbareren, also besseren, Ergebnissen" kommt. Bei großen Gruppen gleichen sich die Ausgangswerte durch Randomisierung zwar an, bei nicht so großen Gruppen kann aber auch bei Randomisierung ein erheblicher Unterschied zwischen den Gruppen verbleiben – genau hier hilft die Prämessung, diesen Unterschied statistisch zu kontrollieren. Das entspricht der ersten Antwortoption.
+
+Zu den Distraktoren:
+
+* "Macht Randomisierung überflüssig": Das Gegenteil ist richtig – das Kapitel erklärt, dass gerade bei *nicht* großen Gruppen auch *trotz* Randomisierung Ausgangsunterschiede verbleiben können; die Prämessung ergänzt die Randomisierung, ersetzt sie aber nicht.
+* "Halbiert automatisch die Stichprobengröße": Das Kapitel macht keine solche pauschale Aussage zur Stichprobengröße; der Vorteil liegt in der Kontrolle von Ausgangsunterschieden, nicht in einer festen Effizienzformel.
+* "Ersetzt das statistische Modell": Auch bei der Differenzvariable `d` wird weiterhin ein Modell (z. B. `d ~ g` bzw. `d ~ 1`) berechnet und inferenzstatistisch ausgewertet; die Differenzbildung ersetzt die Modellierung nicht, sondern ist Teil der Datenaufbereitung dafür.
+* "Schließt Ausgangsunterschiede als Erklärung sicher aus, auch bei kleinen Stichproben": Das ist eine Übertreibung; das Kapitel warnt explizit, dass bei nicht großen Gruppen ein Unterschied zwischen den Gruppen "verbleiben" kann, sodass ein gefundener Effekt eben doch (teilweise) auf Ausgangsunterschieden statt auf der Intervention beruhen könnte.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: vorher-nachher-messung-vorteil-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5
+excategory: Modellieren

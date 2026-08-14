@@ -1,0 +1,37 @@
+Question
+========
+In einer Studie werden Versuchspersonen instruiert, sechs Erlebnisse aufzuschreiben, bei denen ihnen etwas gut gelungen ist, um positive Stimmung zu induzieren. Wie ist die Instruktion in diesem Beispiel gemäß der im Kapitel eingeführten Terminologie einzuordnen?
+
+Answerlist
+----------
+* Als Stimulus, der zugleich als Operationalisierung des Konstrukts "positive Stimmung" dient.
+* Als psychometrische Skala, deren Cronbachs Alpha berechnet werden muss.
+* Als Item einer Ratingskala mit fünf Antwortstufen.
+* Als abhängige Variable, die am Ende der Studie gemessen wird.
+* Als Kontrollvariable, die statistisch auspartialisiert werden muss.
+
+Solution
+========
+Im Kapitel wird ein Stimulus definiert als ein Objekt oder Ereignis, für das die Reaktion einer Versuchsperson gemessen wird; Stimuli selbst werden nicht gemessen, können aber (wie im gegebenen Beispiel) zugleich Operationalisierungen eines Konstrukts sein. Im genannten Beispiel dient die Instruktion, positive Erlebnisse aufzuschreiben, als Stimulus zur Induktion von Stimmung und ist damit die Operationalisierung des Konstrukts "positive Stimmung". Die erste Antwort ist korrekt.
+
+Zu den Distraktoren:
+
+* "Psychometrische Skala mit Cronbachs Alpha" ist falsch: Eine Skala besteht aus mehreren Items, deren Werte zu einem Punktwert aufsummiert werden; die Instruktion im Beispiel ist aber kein aus Items zusammengesetztes Messinstrument, sondern ein manipulativer Reiz (Stimulus) zur Induktion eines Zustands.
+* "Item einer Ratingskala" ist falsch, weil ein Item eine Frage ist, auf die eine Versuchsperson mit einer Antwortoption reagiert; die Instruktion im Beispiel fragt aber nichts ab, sondern induziert eine Stimmung, sie ist also kein Antwort-Item.
+* "Abhängige Variable" ist falsch: Die abhängige Variable in einer solchen Studie wäre die *gemessene* Stimmung (z.\ B. via Fragebogen) nach der Induktion, nicht die Instruktion selbst, die als unabhängige Variable bzw.\ Manipulation fungiert.
+* "Kontrollvariable" ist falsch: Eine Kontrollvariable wird mit erhoben, um sie statistisch zu kontrollieren, ist aber nicht die eigentliche experimentelle Manipulation; im Beispiel ist die Instruktion gerade der zentrale, gezielt eingesetzte Stimulus der Studie, keine Störgröße.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: stimulus-definition-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

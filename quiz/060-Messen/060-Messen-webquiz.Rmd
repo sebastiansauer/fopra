@@ -1,0 +1,19 @@
+---
+title: "Quiz: Messen"
+output: exams2forms::webquiz
+---
+
+```{r exams2forms-setup, include = FALSE}
+## package and exercises
+library("exams2forms")
+exm <- c("cronbachs-alpha-interpretation-schoice.Rmd", "guetekriterien-messguete-schoice.Rmd", 
+"implizite-messung-schoice.Rmd", "likert-bipolar-unipolar-schoice.Rmd", 
+"make-or-buy-fragebogen-schoice.Rmd", "messen-vernuenftige-regeln-schoice.Rmd", 
+"operationalisierung-definition-schoice.Rmd", "psychologischer-test-definition-schoice.Rmd", 
+"skalenniveau-additivitaet-schoice.Rmd", "stimulus-definition-schoice.Rmd"
+)
+```
+
+```{r exams2forms-include, echo = FALSE, message = FALSE, results="asis"}
+exams2forms(exm,  n = 1L, nsamp = NULL)
+```

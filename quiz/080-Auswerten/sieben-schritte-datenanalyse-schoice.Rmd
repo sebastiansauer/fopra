@@ -1,0 +1,30 @@
+Question
+========
+Im Kapitel wird der Ablauf einer Datenanalyse als eine Abfolge typischer Schritte ("Brücken") beschrieben, die von der Datenaufbereitung bis zur Ergebnisdiskussion reichen. Welche der folgenden Reihenfolgen entspricht dieser im Kapitel beschriebenen Abfolge?
+
+Answerlist
+----------
+* Einlesen und Aufbereiten $\rightarrow$ Zusammenfassen $\rightarrow$ Visualisieren $\rightarrow$ Modellieren $\rightarrow$ Inferieren $\rightarrow$ Diskutieren
+* Modellieren $\rightarrow$ Einlesen und Aufbereiten $\rightarrow$ Inferieren $\rightarrow$ Zusammenfassen $\rightarrow$ Visualisieren $\rightarrow$ Diskutieren
+* Zusammenfassen $\rightarrow$ Einlesen und Aufbereiten $\rightarrow$ Visualisieren $\rightarrow$ Diskutieren $\rightarrow$ Modellieren $\rightarrow$ Inferieren
+* Einlesen und Aufbereiten $\rightarrow$ Inferieren $\rightarrow$ Modellieren $\rightarrow$ Zusammenfassen $\rightarrow$ Visualisieren $\rightarrow$ Diskutieren
+* Diskutieren $\rightarrow$ Modellieren $\rightarrow$ Inferieren $\rightarrow$ Zusammenfassen $\rightarrow$ Visualisieren $\rightarrow$ Einlesen und Aufbereiten
+
+Solution
+========
+Laut Kapitel ("Über sieben Brücken musst du gehen") lautet die typische Abfolge der Datenanalyse: (1) Einlesen und Aufbereiten, (2) Zusammenfassen, (3) Visualisieren, (4) Modellieren, (5) Inferieren, (6) Diskutieren (und optional (7) Amüsieren als Belohnung). Die erste Option gibt exakt diese Reihenfolge wieder und ist daher korrekt.
+
+Die zweite Option ist falsch, weil sie mit "Modellieren" beginnt, bevor überhaupt Daten eingelesen und aufbereitet wurden – Modellieren setzt aber aufbereitete und zusammengefasste Daten voraus.
+
+Die dritte Option vertauscht "Diskutieren" und "Modellieren"/"Inferieren": Man kann Ergebnisse erst diskutieren, nachdem ein Modell geschätzt und die Inferenzstatistik angewendet wurde, nicht davor.
+
+Die vierte Option springt direkt vom Einlesen zum Inferieren, ohne die Zwischenschritte Zusammenfassen, Visualisieren und Modellieren zu durchlaufen – dieser Denkfehler überspringt die deskriptive Phase, die im Kapitel als notwendige Grundlage betont wird.
+
+Die fünfte Option kehrt die gesamte Reihenfolge um und beginnt mit dem Diskutieren der (noch nicht vorhandenen) Ergebnisse – das widerspricht der Logik, dass man erst Daten analysieren muss, bevor man Ergebnisse diskutieren kann.
+
+Meta-information
+================
+exname: sieben-schritte-datenanalyse-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

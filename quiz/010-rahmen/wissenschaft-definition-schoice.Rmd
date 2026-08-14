@@ -1,0 +1,38 @@
+Question
+========
+Welche der folgenden Aussagen entspricht am ehesten der im Kapitel gegebenen Definition von Wissenschaft?
+
+Answerlist
+----------
+* Wissenschaft ist ein systematisches Unterfangen, das Wissen erzeugt und organisiert, vor allem in Form testbarer Erklärungen über beobachtbare Phänomene.
+* Wissenschaft ist die Sammlung aller technischen Erfindungen, die den Alltag komfortabler machen.
+* Wissenschaft ist jede Aussage, die von anerkannten Experten geäußert wird.
+* Wissenschaft ist eine Sammlung endgültig bewiesener, unumstößlicher Wahrheiten.
+* Wissenschaft ist in erster Linie eine Methode, um bereits bestehende Überzeugungen zu bestätigen.
+
+Solution
+========
+Laut Kapitel ist Wissenschaft "ein systematisches Unterfangen, das Wissen erzeugt und organisiert, primär in Form von testbaren Erklärungen über beobachtbare Phänomene." Damit ist die erste Antwort korrekt.
+
+Zu den Distraktoren:
+
+* "Sammlung aller technischen Erfindungen": Das verwechselt Wissenschaft mit ihren Anwendungen bzw. mit Technik. Das Kapitel unterscheidet ausdrücklich Wissenschaft (Wissenserzeugung) von angewandten Nutzeffekten wie technischem Fortschritt.
+* "Jede Aussage anerkannter Experten": Dies ist ein Autoritätsargument. Das Kapitel betont dagegen, dass rationale, fachlich informierte Personen unabhängig von Autoritäten zur gleichen Einschätzung kommen sollten, und zitiert sogar Bertrand Russell zur Vorsicht bei Expertenkonsens.
+* "Endgültig bewiesene Wahrheiten": Das widerspricht der im Kapitel betonten Rolle der Falsifizierbarkeit als Fortschrittskriterium; wissenschaftliches Wissen gilt als vorläufig und prüfbar, nicht als endgültig bewiesen.
+* "Methode zur Bestätigung bestehender Überzeugungen": Das Kapitel hebt gerade hervor, dass Verifizieren als schwaches Fortschrittsmittel gilt und Skeptizismus (Zweifel) zentral ist – nicht die Bestätigung von Vorannahmen.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: wissenschaft-definition-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5
+excategory: Rahmen

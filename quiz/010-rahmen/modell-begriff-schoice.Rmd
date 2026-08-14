@@ -1,0 +1,38 @@
+Question
+========
+Was zeichnet laut Kapitel ein wissenschaftliches Modell besonders aus?
+
+Answerlist
+----------
+* Es ist eine vereinfachte, aber kohärente Auffassung eines Forschungsgegenstands, die wesentliche Merkmale erfasst und dabei oft auf Metaphern oder Analogien zurückgreift.
+* Es muss die Realität in allen Details vollständig abbilden, ohne etwas wegzulassen.
+* Es ist inhaltlich identisch mit einer Theorie und unterscheidet sich nur im Namen.
+* Es dient ausschließlich der mathematischen Beschreibung; grafische oder statistische Formen sind ausgeschlossen.
+* Es muss frei von jeglicher Analogie oder Metapher sein, um objektiv zu bleiben.
+
+Solution
+========
+Das Kapitel definiert ein wissenschaftliches Modell als "eine vereinfachte (aber kohärente) Auffassung eines Forschungsgegenstands", bei der häufig Metaphern oder Analogien eine Rolle spielen (Beispiel: Bohrsches Atommodell als Analogie zum Sonnensystem). Damit ist die erste Antwort korrekt.
+
+Zu den Distraktoren:
+
+* "Muss die Realität vollständig abbilden": Das widerspricht dem Kerngedanken der Vereinfachung. Der Text betont ausdrücklich, dass wesentliche Größen aufgenommen und unwesentliche weggelassen werden – ein vollständiges Abbild wäre kein Modell mehr, sondern die Realität selbst.
+* "Identisch mit einer Theorie": Das Kapitel stellt klar, dass Modelle Theorien zwar ähnlich, aber meist kleiner gefasst sind und die Analogie/Metapher stärker im Vordergrund steht – sie sind also nicht dasselbe.
+* "Nur mathematisch, nicht grafisch/statistisch": Das Kapitel nennt ausdrücklich grafische, mathematische und statistische Modelle als mögliche Formen.
+* "Frei von jeglicher Analogie/Metapher": Das ist das genaue Gegenteil dessen, was der Text sagt – Metaphern und Analogien werden als typisches Element von Modellen hervorgehoben.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: modell-begriff-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5
+excategory: Rahmen

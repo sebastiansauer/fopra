@@ -1,0 +1,24 @@
+---
+title: "Quiz: Auswerten"
+output: exams2forms::webquiz
+---
+
+```{r exams2forms-setup, include = FALSE}
+## package and exercises
+library("exams2forms")
+exm <- c("/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/080-Auswerten/codebook-zweck-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/080-Auswerten/deskriptiv-vs-inferenzstatistik-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/080-Auswerten/mittelwert-sd-berechnung-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/080-Auswerten/p-wert-interpretation-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/080-Auswerten/reproduzierbarkeit-bestandteile-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/080-Auswerten/sieben-schritte-datenanalyse-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/080-Auswerten/signifikanz-vs-effektgroesse-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/080-Auswerten/skalenniveau-mittelwert-fehler-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/080-Auswerten/skript-vs-klickbasiert-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/080-Auswerten/tidy-data-prinzip-schoice.Rmd"
+)
+```
+
+```{r exams2forms-include, echo = FALSE, message = FALSE, results="asis"}
+exams2forms(exm,  n = 1L, nsamp = NULL)
+```

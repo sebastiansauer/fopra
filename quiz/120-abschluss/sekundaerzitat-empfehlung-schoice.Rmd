@@ -1,0 +1,30 @@
+Question
+========
+Welche Empfehlung gibt das Kapitel zum Umgang mit Sekundärzitaten in der Projektarbeit?
+
+Answerlist
+----------
+* Sekundärzitate sind grundsätzlich erlaubt, aber nicht empfehlenswert; besser ist es, eine passende Primärquelle zu finden oder sich zusätzliche Wege zum Volltext zu erschließen
+* Sekundärzitate sind strikt verboten und führen automatisch zu einer schlechteren Bewertung der Arbeit
+* Sekundärzitate sollten immer verwendet werden, da sie den Lesefluss verbessern
+* Sekundärzitate dürfen nur bei englischsprachigen Quellen verwendet werden
+* Sekundärzitate sind nur in der Einleitung, nicht aber in der Diskussion erlaubt
+
+Solution
+========
+Laut Kapitel sind Sekundärzitate erlaubt, aber nicht empfehlenswert; als bessere Alternativen werden genannt, eine ähnliche, direkt passende Quelle zu suchen oder sich zusätzliche Zugangswege zu Volltexten zu erschließen. Das entspricht der korrekten Antwort. Ein strikt formuliertes Verbot mit automatischer Abwertung steht so nicht im Text - es wird lediglich von der Verwendung abgeraten, nicht verboten. Die Aussage, Sekundärzitate sollten immer verwendet werden, widerspricht direkt der Empfehlung, sie zu vermeiden. Eine Einschränkung auf englischsprachige Quellen wird im Kapitel nicht erwähnt und ist sachlich unbegründet. Ebenso wird keine Unterscheidung zwischen Einleitung und Diskussion bezüglich der Zulässigkeit von Sekundärzitaten getroffen.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: sekundaerzitat-empfehlung
+extype: schoice
+exsolution: 10000
+exshuffle: 5

@@ -1,0 +1,38 @@
+Question
+========
+Im Kapitel wird gefordert, alle Materialien einzureichen, die nötig sind, damit andere die Ergebnisse einer Studie „reproduzieren“ können. Welche Aufzählung entspricht am genauesten den im Kapitel dafür genannten Bestandteilen?
+
+Answerlist
+----------
+* Anonyme oder pseudonymisierte Daten, Codebook, Stimuli, Syntax der Datenanalyse, Beschreibung des Versuchsdesigns.
+* Nur die anonymisierten Rohdaten; alle anderen Materialien sind laut Kapitel optional.
+* Vollständige Klarnamen-Daten der Teilnehmenden, damit die Reproduktion eindeutig zugeordnet werden kann.
+* Ausschließlich die Syntax der Datenanalyse; Stimuli und Versuchsdesign müssen nicht dokumentiert werden.
+* Ein Videomitschnitt der gesamten Datenerhebung anstelle von Codebook und Syntax.
+
+Solution
+========
+Der Kapiteltext listet explizit auf, was zur Reproduzierbarkeit eingereicht werden soll: anonyme oder pseudonymisierte Daten, Codebook (synonym: Data Dictionary), Stimuli, Syntax der Datenanalyse und Beschreibung des Versuchsdesigns. Damit ist die erste Option korrekt.
+
+Die zweite Option greift zu kurz: Der Text nennt ausdrücklich mehrere weitere notwendige Bestandteile (Codebook, Stimuli, Syntax, Designbeschreibung), nicht nur die Rohdaten.
+
+Die dritte Option widerspricht dem Kapitel fundamental: Es wird ausdrücklich gewarnt, niemals Daten zu veröffentlichen, die einen Rückschluss auf einzelne Personen erlauben (u. a. Name); gefordert werden anonyme oder pseudonymisierte Daten, keine Klarnamen.
+
+Die vierte Option ist zu eng: Neben der Syntax werden auch Stimuli, Codebook und Designbeschreibung als notwendig genannt.
+
+Die fünfte Option erfindet ein im Kapitel nicht genanntes Material (Videomitschnitt) und lässt die tatsächlich geforderten Bestandteile (Codebook, Syntax) unerwähnt bzw. ersetzt sie fälschlich.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: reproduzierbarkeit-materialien-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

@@ -239,7 +239,7 @@ Es scheint also, dass man optimistisch sein darf, dass psychologische Variablen 
 ### Definition
 
 
-Einen inhatlich psychologisch und methodisch psychologisch ("psychometrisch") fundierten Fragebogen bezeichnet man auch als *(psychologischen) Test*^[Das ist etwas verwirrend, weil der Begriff Test für alle möglichen Dinge verwendet wird. Zumeist lässt sich aus dem Kontext erschließen, was mit "Test" gemeint ist.]
+Einen inhaltlich psychologisch und methodisch psychologisch ("psychometrisch") fundierten Fragebogen bezeichnet man auch als *(psychologischen) Test*^[Das ist etwas verwirrend, weil der Begriff Test für alle möglichen Dinge verwendet wird. Zumeist lässt sich aus dem Kontext erschließen, was mit "Test" gemeint ist.]
 
 :::{#def-psytest}
 ### Psychologischer Test
@@ -295,7 +295,7 @@ Es gibt viele verschiedene Antwortformate [vgl. @Buhner2011]; eine gängige Vari
 Eine Rating- oder Beurteilungsskala präsentiert der Versuchsperson  Items mit einem Antwortformat,
 bei dem derjenige Punkte bzw. diejenige Antwortoption gewählt werden soll, die der Beurteilung der Versuchsperson am besten entspricht, vgl. @fig-likert.
 Eine gängige Variante von Ratingskalen sind Likert-Skalen.
-Items von Likert-Skalen sind Aussagen bei denen die Versuchspersonen den Grad Ihrer Zustimmung bzw. Ablehnung ausdrücken, in einem bipolarem Format also^[in diskreten Stufen; bei stufenlos wählbaren Stufen spricht man von einer *visuellen Analogskala*. Visuelle Analogskalen sind entweder gleichwertig zu Likert-Skalen oder denen überlegen, wie einige Forschung konstatiert [@grant_comparison_1999]]. Generell gilt, dass höhere Zustimmung zu einem Item der Likert-Skala auf einen höheren Wert im zugrundliegenden Konstrukt geschlossen werden kann.$\square$
+Items von Likert-Skalen sind Aussagen bei denen die Versuchspersonen den Grad Ihrer Zustimmung bzw. Ablehnung ausdrücken, in einem bipolarem Format also^[in diskreten Stufen; bei stufenlos wählbaren Stufen spricht man von einer *visuellen Analogskala*. Visuelle Analogskalen sind entweder gleichwertig zu Likert-Skalen oder denen überlegen, wie einige Forschung konstatiert [@grant_comparison_1999]]. Generell gilt, dass höhere Zustimmung zu einem Item der Likert-Skala auf einen höheren Wert im zugrundeliegenden Konstrukt geschlossen werden kann.$\square$
 :::
 
 
@@ -348,7 +348,7 @@ Man kann Antwortformate dahingehend unterscheiden, ob sie *uni- oder bipolar* au
 
 - [Arabpsychology](https://scales.arabpsychology.com/) stellt eine breite Auswahl psychologischer Skalen bereit.
 
-- Im [Open Test Archive: Repositorium für Open-Access-Tests](https://www.testarchiv.eu/) findet sich eine Aufstellung von 230 Open-Access-Testverfahern in deutscher Sprache.
+- Im [Open Test Archive: Repositorium für Open-Access-Tests](https://www.testarchiv.eu/) findet sich eine Aufstellung von 230 Open-Access-Testverfahren in deutscher Sprache.
 
 - [Creativity and Arts Tasks and Scales: Free for Public Use](https://osf.io/4s9p6/) ist ein Repo bei [OSF](https://osf.io/), das freie psychologische Skalen aus dem Bereich Kreativität bereitstellt.
 
@@ -921,7 +921,7 @@ So ist ein Beispiel für Messinstrumente um emotionale Reaktionen von Versuchspe
 Skalen für Kundenzufriedenheit und Kaufabsicht finden sich etwa bei @maxham_longitudinal_2002 oder bei @grewal_effects_1998.
 @graf_measuring_2018 messen *cognitive fluency*, das sie als ein "subjective feeling of easy or difficulty associated with any type of mental processing" definieren (S. 394).
 So könnte etwa die "kognitive Leichtigkeit" mit der ein (Werbe-)Diagramm mental verarbeitet wird,
-mit der Subskala *Perceptual Fluency* messen, die als semantisches Differenzial mit 5 Items aufebaut ist (vgl. S. 400).
+mit der Subskala *Perceptual Fluency* messen, die als semantisches Differenzial mit 5 Items aufgebaut ist (vgl. S. 400).
 
 
 
@@ -998,7 +998,7 @@ Auch in dem Paper finden sich noch einige nützliche weiterführende Hinweise.
 Drittens wurde die *Bereitschaft, den Roboter weiter zu verwenden* mit einem Single-Item-Ansatz gemessen:
 "I would be willing to use the virtual assistant again" (7 Stufen von "stimme überhaupt nicht zu" bis "stimme voll und ganz zu", auf Englisch).
 
-Die Autoren berichten, dass sie die Instrumente vorab auf psychometrische Qualität hin untersucht haben und bereichten akzektable Ergebnisse.
+Die Autoren berichten, dass sie die Instrumente vorab auf psychometrische Qualität hin untersucht haben und bereichten akzeptable Ergebnisse.
 
 
 
@@ -1006,9 +1006,9 @@ Die Autoren berichten, dass sie die Instrumente vorab auf psychometrische Qualit
 ### Einstellung gegenüber KI
 
 @sindermann_assessing_2021 präsentieren ein Messinstrument (auf Deutsch, Englisch und Chinesisch), um die Einstellung gegenüber künstlicher Intelligenz zu messen.
-Die Autoren resümeren, dass es sich um ein ökonomisches, reliables und valides Instrument handle.
+Die Autoren resümieren, dass es sich um ein ökonomisches, reliables und valides Instrument handle.
 
-Die Items sind in [Tabelle 1 des Papers](https://link.springer.com/article/10.1007/s13218-020-00689-0/tables/1) dargestelt:
+Die Items sind in [Tabelle 1 des Papers](https://link.springer.com/article/10.1007/s13218-020-00689-0/tables/1) dargestellt:
 
 01. Ich habe Angst vor künstlicher Intelligenz.
 02. Ich vertraue künstlicher Intelligenz.

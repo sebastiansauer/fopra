@@ -1,0 +1,38 @@
+Question
+========
+Sie planen ein Regressionsmodell mit der unabhängigen Variable (UV) "wöchentliche Lernzeit" und der abhängigen Variable (AV) "Klausurnote". Ein Kollege schlägt vor, zusätzlich die Variable "Prüfungsangst am Klausurtag" als Kovariate aufzunehmen. Aus einer Voruntersuchung wissen Sie, dass "Prüfungsangst am Klausurtag" durch die Lernzeit (UV) verursacht wird (mehr Lernzeit reduziert die Prüfungsangst) und ihrerseits die Klausurnote beeinflusst. Wie sollten Sie mit diesem Vorschlag umgehen?
+
+Answerlist
+----------
+* Die Variable sollte nicht als Kovariate aufgenommen werden, da sie ein Mediator ist (durch die UV verursacht) und ihre Aufnahme den Effekt der UV auf die AV verzerren bzw. teilweise wegkontrollieren würde.
+* Die Variable sollte unbedingt als Kovariate aufgenommen werden, da jede Variable, die mit der AV zusammenhängt, automatisch die Schätzung des UV-Effekts präzisiert.
+* Die Variable sollte aufgenommen werden, weil sie zeitlich nach der UV liegt und Kovariaten laut Definition zwingend nach der UV gemessen werden müssen.
+* Die Entscheidung ist beliebig, da die Aufnahme zusätzlicher Prädiktoren in ein Regressionsmodell die Schätzung der übrigen Koeffizienten grundsätzlich nicht beeinflusst.
+* Die Variable sollte aufgenommen werden, um Confounding zwischen UV und AV zu kontrollieren, da dies der Hauptgrund für die Aufnahme von Kovariaten ist.
+
+Solution
+========
+Im Kapitel wird explizit festgehalten, dass eine Variable, die durch die UV verursacht wird (ein Mediator), nicht als Kovariate in das Modell aufgenommen werden sollte. Zusätzlich verlangt die im Kapitel genannte Bedingung, dass eine Kovariate zeitlich VOR der UV liegen soll – hier liegt "Prüfungsangst am Klausurtag" aber zeitlich nach der Lernzeit und wird durch sie beeinflusst, sie erfüllt also weder das Zeitkriterium noch das Mediator-Ausschlusskriterium. Nimmt man einen Mediator als Kovariate auf, kontrolliert man einen Teil des tatsächlichen (indirekten) Effekts der UV weg und verzerrt die Schätzung. Damit ist die erste Antwort korrekt.
+
+Die zweite Antwort ist falsch: Laut Kapitel ist ein Zusammenhang mit der AV allein kein hinreichendes Kriterium – eine Kovariate darf insbesondere nicht selbst durch die UV verursacht sein (Mediator) oder gemeinsame Wirkung von UV und AV sein (Collider); sonst wird der Effekt der UV verzerrt statt präzisiert.
+
+Die dritte Antwort ist falsch: Das Kapitel verlangt exakt das Gegenteil – eine Kovariate soll zeitlich VOR der UV liegen, nicht danach. Eine Variable, die erst nach oder durch die UV entsteht, ist typischerweise ein Mediator und sollte gerade nicht aufgenommen werden.
+
+Die vierte Antwort ist falsch: Die Aufnahme zusätzlicher Prädiktoren kann die Schätzung anderer Koeffizienten deutlich verändern (z.B. bei Mediatoren oder Collidern zu Verzerrung führen, bei echten Kovariaten zu präziseren Schätzungen); die Wahl ist keineswegs beliebig.
+
+Die fünfte Antwort ist falsch: Zwar ist Confounding-Kontrolle ein legitimer Grund für die Aufnahme mancher Kovariaten, trifft aber im vorliegenden Fall nicht zu, da hier kein Confounder (gemeinsame Ursache von UV und AV), sondern ein Mediator (Folge der UV) vorliegt – für Mediatoren gilt laut Kapitel ausdrücklich, dass sie nicht aufgenommen werden sollten.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: kovariate-regressionsmodell
+extype: schoice
+exsolution: 10000
+exshuffle: 5

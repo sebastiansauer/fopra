@@ -1,0 +1,61 @@
+```{r, include=FALSE}
+z <- 1.96   # z-Wert für 95%-KI
+s <- 30     # angenommene Streuung (Sigma) in Minuten
+e <- 5      # gewünschter Radius (halbe KI-Breite) in Minuten
+
+n_korrekt <- ceiling((z^2 * s^2) / e^2)
+
+# Distraktoren: typische Rechenfehler
+n_b <- ceiling((z^2 * s^2) / (2*e)^2)  # e fälschlich verdoppelt (Radius nochmals halbiert)
+n_c <- ceiling((z * s) / e^2)          # z und s nicht quadriert
+z90 <- 1.645
+n_d <- ceiling((z90^2 * s^2) / e^2)    # falscher z-Wert (90% statt 95%)
+n_e <- ceiling((z^2 * s^2) / e)        # e im Nenner nicht quadriert
+
+antworten <- c(n_korrekt, n_b, n_c, n_d, n_e)
+stopifnot(length(unique(antworten)) == 5)
+stopifnot(all(antworten > 1))
+```
+
+Question
+========
+Man möchte die mittlere tägliche Handynutzungsdauer $X$ mittelfränkischer junger Erwachsener schätzen. $X$ sei normalverteilt mit einer aus einer Vorstudie geschätzten Streuung von $\sigma=`r s`$ Minuten. Die Schätzung soll so präzise sein, dass das 95%-Konfidenzintervall einen Radius (halbe Breite) von höchstens $e=`r e`$ Minuten hat. Welche Mindeststichprobengröße $n_{min}$ wird benötigt?
+
+Answerlist
+----------
+* $n_{min} = `r n_korrekt`$
+* $n_{min} = `r n_b`$
+* $n_{min} = `r n_c`$
+* $n_{min} = `r n_d`$
+* $n_{min} = `r n_e`$
+
+Solution
+========
+Die im Kapitel hergeleitete Formel lautet $n_{min} = \dfrac{z^2 \sigma^2}{e^2}$, wobei $z=`r z`$ der z-Wert für das 95%-Konfidenzintervall ist. Einsetzen ergibt:
+
+$$n_{min} = \frac{`r z`^2 \cdot `r s`^2}{`r e`^2} = \frac{`r z^2` \cdot `r s^2`}{`r e^2`} \approx `r round((z^2*s^2)/e^2,2)`$$
+
+Da die Stichprobengröße mindestens so groß sein muss, wird aufgerundet: $n_{min} = `r n_korrekt`$. Damit ist die erste Antwort korrekt.
+
+$n_{min} = `r n_b`$ entsteht, wenn man den angegebenen Radius $e$ fälschlich noch einmal verdoppelt (als wäre $e$ die volle Breite und nicht bereits der Radius), sodass im Nenner $(2e)^2$ statt $e^2$ verwendet wird – dies führt zu einer deutlich zu kleinen (und damit zu ungenauen) Stichprobe.
+
+$n_{min} = `r n_c`$ entsteht, wenn man vergisst, $z$ und $\sigma$ im Zähler zu quadrieren, und stattdessen nur $z \cdot \sigma$ durch $e^2$ teilt – ein häufiger Flüchtigkeitsfehler beim Umformen der Ungleichung.
+
+$n_{min} = `r n_d`$ entsteht, wenn man den z-Wert für ein 90%- statt für ein 95%-Konfidenzintervall verwendet ($z=`r z90`$ statt $z=`r z`$), was zu einer zu kleinen Stichprobe für das angeforderte 95%-Niveau führt.
+
+$n_{min} = `r n_e`$ entsteht, wenn man beim Umformen der Ungleichung vergisst, den Fehler $e$ im Nenner zu quadrieren, also $\dfrac{z^2 \sigma^2}{e}$ statt $\dfrac{z^2 \sigma^2}{e^2}$ berechnet – dies führt zu einer deutlich zu großen, unnötig teuren Stichprobe.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: stichprobenumfang-ki-normalverteilt
+extype: schoice
+exsolution: 10000
+exshuffle: 5

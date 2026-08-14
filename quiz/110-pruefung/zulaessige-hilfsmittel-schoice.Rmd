@@ -1,0 +1,37 @@
+Question
+========
+Welche Aussage zu den während der Prüfung zulässigen Hilfsmitteln bzw. Verhaltensregeln ist gemäß den allgemeinen Prüfungshinweisen korrekt?
+
+Answerlist
+----------
+* Zulässige Hilfsmittel sind u. a. Notizpapier, Stifte, Taschenrechner, Vorlesungsfolien, Skripte, eigene Notizen, Bücher sowie Internetquellen; die Prüfung ist dabei allein, ohne Hilfe Dritter, zu absolvieren.
+* Da Bücher und Internetquellen als Hilfsmittel zulässig sind, ist auch eine wörtliche Übernahme ("copy-paste") von Textpassagen aus diesen Quellen ohne Kennzeichnung erlaubt.
+* Da die Prüfung eigenständig zu absolvieren ist, sind Skripte und Vorlesungsfolien als Hilfsmittel ausdrücklich untersagt, da sie als "Hilfe Dritter" gelten.
+* Kommunikation mit anderen Prüflingen ist erlaubt, solange es ausschließlich um die Klärung technischer Probleme geht.
+* Alle Hilfsmittel sind uneingeschränkt zulässig; es gibt keine abschließende Liste erlaubter Hilfsmittel.
+
+Solution
+========
+Der Text listet als zulässige Hilfsmittel explizit auf: Notizpapier, Stifte, Taschenrechner, Vorlesungsfolien, Skripte, eigene Notizen, Bücher sowie Quellen aus dem Internet. Gleichzeitig gilt: Die Prüfung ist selbständig, also allein durch den Prüfling, ohne Hilfe Dritter, zu absolvieren. Beides zusammen macht Antwort 1 korrekt.
+
+Zu den Distraktoren:
+
+- Antwort 2 verwechselt "Quelle darf konsultiert werden" mit "Inhalte dürfen unmarkiert übernommen werden". Der Text stellt ausdrücklich klar, dass eine wörtliche Übernahme ("copy-paste") von Inhalten Dritter unzulässig ist und Übernahmen als solche gekennzeichnet (zitiert) werden müssen.
+- Antwort 3 verwechselt "Hilfe Dritter" (also Unterstützung durch andere Personen) mit der Nutzung zulässiger Materialien; Skripte und Vorlesungsfolien sind im Text jedoch ausdrücklich als erlaubte Hilfsmittel genannt, keine "Hilfe Dritter" im gemeinten Sinn.
+- Antwort 4 übersieht, dass Kommunikation mit anderen Personen, insbesondere Prüflingen, während der Prüfung generell untersagt ist – auch bei (vermeintlichen) technischen Problemen; in diesem Fall ist stattdessen der Prüfer zu kontaktieren.
+- Antwort 5 ignoriert, dass der Text eine konkrete, abschließend wirkende Aufzählung zulässiger Hilfsmittel nennt ("Die zulässigen Hilfsmittel sind: ...") und nicht von uneingeschränkter Zulässigkeit spricht.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: zulaessige-hilfsmittel-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

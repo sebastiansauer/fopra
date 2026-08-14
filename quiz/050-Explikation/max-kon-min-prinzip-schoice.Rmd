@@ -1,0 +1,38 @@
+Question
+========
+Das Max-Kon-Min-Prinzip fasst laut Kapitel "die Kunst des Experimentierens" zusammen. Welche Zuordnung der drei Bestandteile zu ihrer jeweiligen Bedeutung ist korrekt?
+
+Answerlist
+----------
+* MAX: das Signal (Behandlungsvarianz) maximieren; KON: das Rauschen (systematischer Fehler) kontrollieren; MIN: das Rauschen (Zufallsfehler) minimieren.
+* MAX: die Stichprobengröße maximieren; KON: die Kontrollgruppe konstant halten; MIN: die Anzahl der Messzeitpunkte minimieren.
+* MAX: die Anzahl der UV maximieren; KON: die Randomisierung kontrollieren; MIN: die Anzahl der Störvariablen minimieren.
+* MAX: die externe Validität maximieren; KON: die Konstruktvalidität kontrollieren; MIN: die interne Validität minimieren.
+* MAX: die Reliabilität maximieren; KON: die Konfundierung kontrollieren; MIN: die Stichprobengröße minimieren.
+
+Solution
+========
+Laut Kapitel steht das Max-Kon-Min-Prinzip für drei Handlungsanweisungen: MAXimiere das Signal (Primär- bzw. Behandlungsvarianz), z.B. durch Wahl geeigneter UV-Stufen; KONtrolliere das Rauschen, also den systematischen Fehler (Sekundärvarianz), z.B. durch Konstanthalten oder Ausbalancieren von Störfaktoren; MINimiere das Rauschen im Sinne des Zufallsfehlers, also unsystematische Merkmalsfluktuationen. Antwortoption 1 gibt dies korrekt wieder.
+
+Distraktor 2 ersetzt die drei Begriffe durch praktische Studienaspekte (Stichprobengröße, Kontrollgruppe, Messzeitpunkte), die zwar in Experimenten relevant sein können, aber nicht die im Kapitel definierte Bedeutung von MAX-KON-MIN darstellen.
+
+Distraktor 3 verwechselt die Prinzipien mit der Anzahl von UV und Störvariablen sowie der Randomisierung – Randomisierung ist eine *Technik* innerhalb von KON, nicht KON selbst, und die Anzahl der UV zu maximieren widerspricht dem eigentlichen Ziel (Signalmaximierung).
+
+Distraktor 4 vermischt das Max-Kon-Min-Prinzip fälschlich mit den Validitätsarten (interne/externe/Konstruktvalidität); insbesondere ergibt "interne Validität minimieren" fachlich keinen Sinn, da man Validität immer maximieren, nie minimieren möchte.
+
+Distraktor 5 nennt Testgütekriterien (Reliabilität) und einen widersinnigen Punkt ("Stichprobengröße minimieren", was der eigentlichen Zielsetzung wissenschaftlicher Studien widerspricht) statt der korrekten Bedeutung des Prinzips.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: max-kon-min-prinzip
+extype: schoice
+exsolution: 10000
+exshuffle: 5

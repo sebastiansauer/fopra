@@ -1,0 +1,24 @@
+---
+title: "Quiz: Abschluss"
+output: exams2forms::webquiz
+---
+
+```{r exams2forms-setup, include = FALSE}
+## package and exercises
+library("exams2forms")
+exm <- c("/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/120-abschluss/datenjudo-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/120-abschluss/manipulationscheck-zweck-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/120-abschluss/mediation-alternative-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/120-abschluss/mediation-struktur-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/120-abschluss/pruefer-grenzen-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/120-abschluss/pruefer-konkrete-frage-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/120-abschluss/schriftgroesse-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/120-abschluss/sekundaerzitat-definition-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/120-abschluss/sekundaerzitat-empfehlung-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/120-abschluss/vorbildarbeiten-schoice.Rmd"
+)
+```
+
+```{r exams2forms-include, echo = FALSE, message = FALSE, results="asis"}
+exams2forms(exm,  n = 1L, nsamp = NULL)
+```

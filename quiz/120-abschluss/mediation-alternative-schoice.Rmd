@@ -1,0 +1,30 @@
+Question
+========
+Das Kapitel weist darauf hin, dass eine vollständige Mediatoranalyse im Unterricht nicht behandelt wurde und daher nicht zwingend erwartet wird. Welche "nächstbeste" Vorgehensweise wird stattdessen als akzeptabler Ersatz vorgeschlagen?
+
+Answerlist
+----------
+* Getrennt die drei Modelle uv -> av, uv -> m und m -> av rechnen und jeweils auf Signifikanz prüfen
+* Nur das Gesamtmodell uv -> av rechnen und den Mediator komplett ignorieren
+* Ausschließlich Mittelwertunterschiede zwischen den Bedingungen mittels t-Test vergleichen, ohne Regressionsmodelle
+* Ein einziges multiples Regressionsmodell mit av als Prädiktor für uv und m rechnen
+* Eine Faktorenanalyse über uv, m und av durchführen, um die Zahl der Variablen zu reduzieren
+
+Solution
+========
+Die im Kapitel genannte "nächstbeste" Lösung besteht darin, die drei Teilmodelle uv -> av, uv -> m und m -> av separat zu rechnen und jeweils die Signifikanz zu prüfen - das entspricht der ersten Antwort. Nur das Gesamtmodell uv -> av zu rechnen würde die Mediatorfrage komplett übergehen und ist explizit nicht das, was vorgeschlagen wird, denn gerade die Rolle des Mediators soll geprüft werden. Ein reiner Vergleich von Mittelwerten per t-Test prüft keine der im Kapitel genannten Pfadbeziehungen und lässt die Mediatorlogik außer Acht. Ein Regressionsmodell, das av als Prädiktor verwendet, kehrt die Kausalrichtung fälschlich um, da av im Modell die abhängige und nicht die unabhängige Variable ist. Eine Faktorenanalyse dient der Datenreduktion bzw. Konstruktbildung, nicht der Prüfung von Kausalpfaden zwischen UV, Mediator und AV.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: mediation-alternative
+extype: schoice
+exsolution: 10000
+exshuffle: 5

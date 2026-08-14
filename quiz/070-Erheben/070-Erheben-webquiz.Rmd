@@ -1,0 +1,24 @@
+---
+title: "Quiz: Datenerhebung"
+output: exams2forms::webquiz
+---
+
+```{r exams2forms-setup, include = FALSE}
+## package and exercises
+library("exams2forms")
+exm <- c("/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/070-Erheben/checklisten-studienqualitaet-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/070-Erheben/dsgvo-drittstaaten-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/070-Erheben/dsgvo-personenbezogene-daten-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/070-Erheben/fair-prinzip-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/070-Erheben/informed-consent-inhalte-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/070-Erheben/no-risk-research-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/070-Erheben/pseudonym-code-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/070-Erheben/randomisierung-online-umfragetools-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/070-Erheben/reproduzierbarkeit-materialien-schoice.Rmd", 
+"/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/070-Erheben/sosci-survey-eigenschaften-schoice.Rmd"
+)
+```
+
+```{r exams2forms-include, echo = FALSE, message = FALSE, results="asis"}
+exams2forms(exm,  n = 1L, nsamp = NULL)
+```

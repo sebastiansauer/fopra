@@ -1,0 +1,38 @@
+Question
+========
+Für den Anteil heimlicher Statistikfans wird ein 95%-Schätzbereich von 0.32 bis 0.52 berichtet. Welche Aussage zur korrekten Interpretation eines Schätzbereichs (Konfidenz- bzw. Kredibilitätsintervall) ist zutreffend?
+
+Answerlist
+----------
+* Ein Schätzbereich gibt einen Bereich plausibler Werte für den Populationsparameter an; in der Bayes-Statistik sind dabei explizite Wahrscheinlichkeitsaussagen über den Parameter erlaubt, in der frequentistischen Statistik hingegen nicht.
+* Ein 95%-Schätzbereich bedeutet in jeder statistischen Denkschule, dass der wahre Parameter mit 95% Wahrscheinlichkeit im Intervall [0.32, 0.52] liegt.
+* Ein Schätzbereich ist ausschließlich in der Bayes-Statistik definiert; in der frequentistischen Statistik existiert kein Analogon dazu.
+* Je größer die Stichprobe, desto breiter wird der Schätzbereich, da mehr Beobachtungen mehr Unsicherheitsquellen einbringen.
+* Perzentilintervall (PI) und Intervall höchster Dichte (HDI) sind zwei unterschiedliche Bezeichnungen für exakt dasselbe Intervall und liefern immer identische Grenzen.
+
+Solution
+========
+Das Kapitel definiert den Schätzbereich als Bereich plausibler Werte für einen Parameter und weist ausdrücklich darauf hin, dass in der Bayes-Statistik Wahrscheinlichkeitsaussagen über einen Wertebereich zulässig sind, in der frequentistischen Statistik dagegen nicht. Damit ist die erste Antwort korrekt.
+
+Die zweite Antwort ist falsch: Genau diese laienhafte "95% Wahrscheinlichkeit"-Interpretation ist im frequentistischen Rahmen nicht zulässig (dort bezieht sich die 95%-Angabe auf die Methode über wiederholte Stichprobenziehungen, nicht auf eine Wahrscheinlichkeitsaussage über den festen, aber unbekannten Parameter). Nur im Bayes'schen Rahmen ist eine solche direkte Wahrscheinlichkeitsaussage zulässig, wie das Kapitel betont.
+
+Die dritte Antwort ist falsch: Das Kapitel nennt ausdrücklich auch das frequentistische Pendant (Konfidenzintervall) als Variante eines Schätzbereichs; der Begriff "Schätzbereich" ist als Oberbegriff für mehrere Varianten (u.a. Konfidenzintervall, Perzentilintervall, HDI) gemeint.
+
+Die vierte Antwort ist falsch: Größere Stichproben führen (bei sonst gleichen Bedingungen) zu präziseren, also schmaleren, nicht breiteren Schätzbereichen, wie im Beispiel des World Happiness Reports erläutert wird (große Stichprobe → kleine Konfidenzintervalle).
+
+Die fünfte Antwort ist falsch: PI (Perzentil-/Equal-Tail-Intervall) und HDI (Intervall höchster Dichte) sind zwei unterschiedliche Konstruktionsverfahren für Schätzbereiche in der Bayes-Statistik, die bei schiefen Verteilungen unterschiedliche Grenzen liefern können; sie sind nicht identisch.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: schaetzbereich-interpretation
+extype: schoice
+exsolution: 10000
+exshuffle: 5

@@ -1,0 +1,37 @@
+Question
+========
+Ein Student möchte gegen die Benotung seiner Projektarbeit Widerspruch einlegen. Welcher der folgenden Kritikpunkte hat laut den Prüfungshinweisen tatsächlich *Aussicht auf eine Änderung* der Note?
+
+Answerlist
+----------
+* Der Gutachter hat sich bei der Punktesumme verzählt: Der Student hat tatsächlich 43 Punkte erreicht, im Gutachten wurden aber nur 42 Punkte gezählt.
+* Die Benotung ist insgesamt zu streng ausgefallen im Vergleich zu den eigenen Erwartungen.
+* Das Gutachten enthielt kein konstruktives Feedback zur Verbesserung der Arbeit.
+* Eine andere Studentin hat inhaltlich Ähnliches geschrieben und dafür eine bessere Note erhalten.
+* Die vergebene Note lässt sich anhand der schriftlichen Hinweise im Gutachten nicht vollständig nachvollziehen.
+
+Solution
+========
+Der Text nennt als Kritikpunkte mit Aussicht auf Erfolg explizit u. a.: "Der Gutachter hat sich verzählt (oder Punkte übersehen): Sie haben tatsächlich 43 Punkte, aber er hat nur 42 Punkte gezählt." Ein solcher objektiver Zählfehler ist überprüfbar und korrigierbar, weshalb Antwort 1 korrekt ist.
+
+Zu den Distraktoren – diese Punkte werden im Text ausdrücklich als *nicht* erfolgversprechend aufgeführt:
+
+- Antwort 2 ("Das ist zu streng benotet.") ist im Text wörtlich als Beispiel für einen Kritikpunkt genannt, der *nicht* zu einer Notenänderung führt, da die Einschätzung der Angemessenheit einer Note im pädagogischen Ermessen liegt und nicht allein durch subjektives Empfinden widerlegt werden kann.
+- Antwort 3 ("Da war kein konstruktives Feedback dabei.") wird im Text ebenfalls explizit als nicht erfolgversprechender Kritikpunkt gelistet, da fehlendes Feedback kein Fehler in der Bewertung selbst ist.
+- Antwort 4 (Vergleich mit anderen Studierenden) wird im Text ausdrücklich als nicht erfolgversprechend genannt, da die Vergleichbarkeit von Seminararbeiten komplex ist und sich die Gesamtnote aus vielen Aspekten zusammensetzt, sodass ein einzelner Aspekt keine verlässliche Vergleichsbasis liefert.
+- Antwort 5 ("Die Gutachterin konnte mir die Note nicht verständlich machen.") wird im Text ebenfalls ausdrücklich als Beispiel genannt, das *nicht* zu einer Notenänderung führt.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: widerspruch-erfolgsaussicht-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

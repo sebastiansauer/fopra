@@ -1,0 +1,38 @@
+Question
+========
+Welches Vorgehen empfiehlt das Kapitel bei der Wahl von Lage- und Streuungsmaßen für *stark schiefe* Verteilungen?
+
+Answerlist
+----------
+* Robuste Kennwerte (z.B. Median statt Mittelwert) verwenden, statt Mittelwert und SD.
+* Immer Mittelwert und SD berichten, unabhängig von der Form der Verteilung.
+* Nur den Modus berichten, da er bei schiefen Verteilungen als am genauesten gilt.
+* Die Varianz durch die Spannweite (Range) ersetzen, da diese robuster gegenüber Ausreißern ist.
+* Auf die Angabe eines Streuungsmaßes ganz verzichten, wenn die Verteilung schief ist.
+
+Solution
+========
+Das Kapitel führt explizit aus: "Bei schiefen Verteilungen greift man meist auf robuste Kennwerte zurück; bei normalverteilten Verteilungen ist Mittelwert und SD die Statistik der Wahl." Für schiefe Verteilungen sind also robuste Kennwerte (wie der Median statt des Mittelwerts) angemessener.
+
+Zu den Distraktoren:
+
+* "Immer Mittelwert und SD" ignoriert genau die im Kapitel getroffene Unterscheidung zwischen normalverteilten und schiefen Verteilungen.
+* Der Modus wird im Kapitel nicht als bevorzugtes robustes Lagemaß genannt; die übliche Empfehlung bei Schiefe ist der Median.
+* Die Spannweite ist entgegen der Intuition *besonders empfindlich* gegenüber Ausreißern (sie hängt nur von den beiden Extremwerten ab), also gerade kein robustes Streuungsmaß.
+* Auf ein Streuungsmaß ganz zu verzichten widerspricht dem Grundprinzip, dass neben der zentralen Tendenz stets ein passendes Streuungsmaß berichtet werden soll.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: deskriptive-statistik-zentrale-tendenz
+extype: schoice
+exsolution: 10000
+exshuffle: 5
+excategory: berichten-statistik

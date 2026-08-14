@@ -1,0 +1,38 @@
+Question
+========
+Eine Studie zur Populationsbeschreibung untersucht eine abhängige Variable $y$ (verfügbares Budget von Studentis) in Abhängigkeit von zwei unabhängigen Variablen: Bundesland ($x_1$) und Studienrichtung ($x_2$). Welche Notation ist für diese Forschungsfrage korrekt?
+
+Answerlist
+----------
+* $y \sim x_1 + x_2$
+* $y \sim 1$
+* $y \sim x$
+* $x_1 + x_2 \sim y$
+* $y \sim x_1 \times x_2$
+
+Solution
+========
+Forschungsfragen mit 3 oder mehr Variablen (1 AV, 2 oder mehr UV) werden im Kapitel als $y \sim x_1 + x_2 + \ldots$ notiert. Da hier eine AV ($y$) und zwei UVs ($x_1$, $x_2$) vorliegen, ist $y \sim x_1 + x_2$ die korrekte Notation.
+
+$y \sim 1$ ist falsch: Diese Notation steht für eine univariate Forschungsfrage mit nur einer einzigen Variable (kein $x$ vorhanden), z.B. "Wie hoch ist das mittlere Budget aller Studentis?" ohne Gruppierungsvariable.
+
+$y \sim x$ ist falsch: Diese Notation ist für Forschungsfragen mit genau einer AV und einer UV reserviert (2 Variablen insgesamt), hier liegen aber zwei UVs vor.
+
+$x_1 + x_2 \sim y$ ist falsch: Die Reihenfolge in der Notation ist nicht beliebig; konventionsgemäß steht links immer die abhängige Variable ($y$) und rechts die unabhängige(n) Variable(n). Diese Antwort vertauscht AV und UV.
+
+$y \sim x_1 \times x_2$ ist falsch: Das Multiplikationszeichen ("$\times$") wird in Modellnotationen typischerweise für Interaktionseffekte zwischen $x_1$ und $x_2$ verwendet, nicht für die additive Betrachtung zweier separater Haupteffekte, wie sie hier gefragt ist (Vergleich nach Bundesland UND nach Studienrichtung, nicht deren Interaktion).
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: notation-forschungsfragen
+extype: schoice
+exsolution: 10000
+exshuffle: 5

@@ -1,0 +1,38 @@
+Question
+========
+Ein Forschungsteam möchte personenbezogene Daten von EU-Bürgerinnen und -Bürgern in einer Cloud verarbeiten, deren Server in den USA stehen. Welche Aussage zur Zulässigkeit ist nach den im Kapitel dargestellten DSGVO-Grundsätzen korrekt?
+
+Answerlist
+----------
+* Die Übermittlung ist grundsätzlich nicht erlaubt, da die USA nicht die DSGVO-Voraussetzungen erfüllen; erlaubt ist sie nur mit speziellen Verträgen, die die DSGVO-Grundlagen garantieren, oder mit informierter Einwilligung der betroffenen Personen.
+* Die Übermittlung ist immer erlaubt, weil DSGVO-Regeln nur innerhalb der EU gelten und Drittstaaten davon nicht betroffen sind.
+* Die Übermittlung ist immer verboten, es gibt laut DSGVO keine Ausnahmen für Datenübermittlung in Drittstaaten.
+* Die Übermittlung ist erlaubt, solange die Daten pseudonymisiert (aber nicht vollständig anonymisiert) sind, unabhängig vom Zielland.
+* Die Übermittlung ist erlaubt, weil die USA laut Kapitel zu den Ländern gehören, die die Voraussetzungen der DSGVO erfüllen.
+
+Solution
+========
+Der Kapiteltext nennt explizit, dass personenbezogene Daten von EU-Bürgern nicht außerhalb der EU einbezogen werden dürfen, es sei denn, das Zielland erfüllt die Voraussetzungen der DSGVO (Beispiele: ja bei Kanada, Schweiz, Australien; nein bei Indien, China, USA). Als Ausnahmen werden genannt: a) das Vorliegen spezieller Verträge, die die Grundlagen der DSGVO im Einzelfall garantieren, und b) die informierte Einwilligung der betroffenen Personen. Da die USA im Text explizit als Land ohne DSGVO-Konformität aufgeführt werden, ist die erste Option korrekt.
+
+Die zweite Option ist falsch: Der Text macht deutlich, dass gerade die Übermittlung in Drittstaaten besonderen Regeln unterliegt, DSGVO-Schutz gilt also nicht nur EU-intern.
+
+Die dritte Option übersieht die im Text explizit genannten zwei Ausnahmen (Verträge, informierte Einwilligung).
+
+Die vierte Option verwechselt Pseudonymisierung mit Anonymisierung: Pseudonymisierte Daten bleiben personenbezogen und unterliegen weiterhin dem Datenschutzrecht; das Zielland bleibt relevant.
+
+Die fünfte Option widerspricht der im Text gegebenen Beispiel-Liste, in der die USA ausdrücklich als „nein“ (nicht DSGVO-konform) eingestuft werden.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: dsgvo-drittstaaten-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

@@ -1,0 +1,56 @@
+```{r, include=FALSE}
+# Verifikation der Optionen (Gleichheits- und Additivitätsbedingung)
+opts <- list(
+  korrekt = c(A = 3, B = 3, C = 6),
+  d1      = c(A = 3, B = 3, C = 7),
+  d2      = c(A = 3, B = 4, C = 7),
+  d3      = c(A = 2, B = 3, C = 6),
+  d4      = c(A = 3, B = 3, C = 3)
+)
+check <- sapply(opts, function(v) {
+  eq  <- unname(v["A"] == v["B"])
+  add <- unname((v["A"] + v["B"]) == v["C"])
+  c(eq = eq, add = add)
+})
+stopifnot(check["eq", "korrekt"], check["add", "korrekt"])
+stopifnot(!(check["eq", -1] & check["add", -1]))  # kein Distraktor erfüllt beides
+stopifnot(length(unique(sapply(opts, paste, collapse = ","))) == 5)
+```
+
+Question
+========
+Zwei Stöcke A und B sind gleich lang. Legt man Stock A und Stock B hintereinander, so sind sie zusammen genau so lang wie Stock C. Welche der folgenden Zahlenzuordnungen $Z(A)$, $Z(B)$, $Z(C)$ erfüllt sowohl die Bedingung der Nominalskala (Gleichheit: $Z(A) = Z(B)$) als auch die Additivitätsbedingung der metrischen Skala ($Z(A) + Z(B) = Z(C)$)?
+
+Answerlist
+----------
+* $Z(A) = 3,\ Z(B) = 3,\ Z(C) = 6$
+* $Z(A) = 3,\ Z(B) = 3,\ Z(C) = 7$
+* $Z(A) = 3,\ Z(B) = 4,\ Z(C) = 7$
+* $Z(A) = 2,\ Z(B) = 3,\ Z(C) = 6$
+* $Z(A) = 3,\ Z(B) = 3,\ Z(C) = 3$
+
+Solution
+========
+Da A und B gleich lang sind, muss $Z(A) = Z(B)$ gelten (Nominalskalenbedingung). Da A und B zusammen so lang sind wie C, muss zusätzlich $Z(A) + Z(B) = Z(C)$ gelten (Additivitätsbedingung der metrischen Skala). Für $Z(A) = 3, Z(B) = 3, Z(C) = 6$ gilt $Z(A) = Z(B)$ (3 = 3) und $Z(A) + Z(B) = Z(C)$ ($3 + 3 = 6$). Beide Bedingungen sind erfüllt, die erste Antwort ist also korrekt. Dies wurde auch im R-Code oben nachgerechnet.
+
+Zu den Distraktoren:
+
+* $Z(A)=3, Z(B)=3, Z(C)=7$: Die Gleichheitsbedingung ist erfüllt, aber $3+3=6 \ne 7$, die Additivität ist verletzt. Diese Zuordnung erfüllt nur ein ordinales Skalenniveau (C > A, C > B), aber kein metrisches.
+* $Z(A)=3, Z(B)=4, Z(C)=7$: Hier stimmt zwar zufällig die Summe ($3+4=7$), aber die Gleichheitsbedingung ist verletzt ($Z(A) \ne Z(B)$, obwohl A und B gleich lang sind). Ein typischer Fehler ist, nur auf die Summe zu achten und die Gleichheit gleich langer Objekte zu übersehen.
+* $Z(A)=2, Z(B)=3, Z(C)=6$: Weder ist $Z(A)=Z(B)$ noch $2+3=6$ (sondern 5); beide Bedingungen sind verletzt, lediglich die Rangfolge ($C$ am größten) stimmt noch.
+* $Z(A)=3, Z(B)=3, Z(C)=3$: Die Gleichheit von A und B ist zwar erfüllt, aber selbst die schwächere Ordinalbedingung ($Z(C) > Z(A)$, da C länger ist) ist verletzt, da alle drei Werte gleich sind. Additivität ($3+3=3$) ist ebenfalls falsch.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: skalenniveau-additivitaet-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

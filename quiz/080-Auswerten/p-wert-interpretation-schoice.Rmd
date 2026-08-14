@@ -1,0 +1,30 @@
+Question
+========
+In der Tabelle "Typische Fehler" des Kapitels wird ein häufiger Interpretationsfehler von p-Werten in studentischen Arbeiten beschrieben. Welche Aussage entspricht der im Kapitel als korrekt empfohlenen Interpretation?
+
+Answerlist
+----------
+* Der p-Wert ist keine Wahrscheinlichkeit der Hypothese, sondern (grob gesprochen) die Wahrscheinlichkeit der beobachteten (oder extremeren) Daten unter der Annahme, dass die Nullhypothese ($H_0$) zutrifft.
+* Der p-Wert gibt direkt die Wahrscheinlichkeit an, mit der die Alternativhypothese wahr ist.
+* Der p-Wert gibt an, wie groß der untersuchte Effekt in der Population tatsächlich ist.
+* Ein kleiner p-Wert beweist automatisch, dass ein praktisch bedeutsamer Effekt vorliegt.
+* Der p-Wert gibt die Wahrscheinlichkeit an, dass die Nullhypothese ($H_0$) zutrifft, gegeben die beobachteten Daten.
+
+Solution
+========
+Laut Kapitel (Tabelle "Typische Fehler", Zeile 1) ist ein häufiger Fehler, "p [...] als Wahrscheinlichkeit der Hypothese" zu deuten; als bessere Interpretation wird empfohlen, "p als Wahrscheinlichkeit der Daten unter H₀" zu interpretieren (oder alternativ Bayes-Methoden zu nutzen). Die erste Option gibt genau diese korrekte, im Kapitel empfohlene Interpretation wieder.
+
+Die zweite Option beschreibt exakt den im Kapitel genannten typischen Fehler (p als Wahrscheinlichkeit einer Hypothese, hier sogar der Alternativhypothese) und ist daher falsch.
+
+Die dritte Option verwechselt den p-Wert mit einer Effektgröße; im Kapitel wird als eigener, separater Fehler genannt, dass Effektgrößen oft fehlen und stattdessen nur p-Werte berichtet werden – der p-Wert selbst sagt nichts über die Stärke des Effekts aus.
+
+Die vierte Option entspricht dem im Kapitel genannten Fehler "Signifikanz = Relevanz": Ein signifikantes (kleines p) Ergebnis wird fälschlich automatisch als praktisch wichtig angesehen, obwohl gerade bei großem N fast alles signifikant wird.
+
+Die fünfte Option ist die klassische Fehlinterpretation, bei der bedingte Wahrscheinlichkeiten vertauscht werden (Wahrscheinlichkeit der Hypothese gegeben die Daten statt Wahrscheinlichkeit der Daten gegeben $H_0$) – genau dieser Fehler wird im Kapitel als Zeile 1 der Fehlertabelle beschrieben.
+
+Meta-information
+================
+exname: p-wert-interpretation-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

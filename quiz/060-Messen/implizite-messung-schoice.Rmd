@@ -1,0 +1,37 @@
+Question
+========
+Worin unterscheidet sich implizite Messung (z.\ B. mittels des Impliziten Assoziationstests, IAT) grundlegend von expliziter Messung (z.\ B. mittels eines Selbsteinschätzungs-Fragebogens)?
+
+Answerlist
+----------
+* Bei impliziter Messung wird das Konstrukt über ein Verhaltensmaß (z.\ B. Reaktionszeiten in einer kognitiven Aufgabe) erfasst, ohne dass der Person bewusst ist, dass gerade dieses Konstrukt gemessen wird; bei expliziter Messung schätzt sich die Person selbst bewusst über einen Fragebogen ein.
+* Implizite Messung verwendet immer eine Ratingskala mit sieben Stufen, während explizite Messung immer binär (ja/nein) kodiert wird.
+* Implizite Messung ist ein Synonym für Objektivität, während explizite Messung ein Synonym für Validität ist.
+* Implizite Messung wird ausschließlich bei Wissenstests eingesetzt, explizite Messung ausschließlich bei Persönlichkeitsskalen.
+* Implizite Messung liefert per Definition immer reliablere Ergebnisse als explizite Messung.
+
+Solution
+========
+Im Kapitel wird implizite Messung definiert als eine Messung eines psychologischen Konstrukts, die erhalten wird, während die zu bewertende Person nicht weiß, dass die Messung (des jeweiligen Konstrukts) stattfindet; typischerweise wird dabei ein Antwortergebnis eines experimentellen, oft reaktionszeitbasierten Verfahrens ausgewertet (Beispiel: Wortstamm-Vervollständigung, IAT). Explizite Messung erfolgt dagegen über bewusste Selbsteinschätzung mittels psychometrisch fundiertem Fragebogen. Der zentrale Unterschied liegt also im Bewusstsein der Person über das gemessene Konstrukt und in der Art der Erhebung (Verhaltensmaß vs.\ Selbstauskunft). Die erste Antwort ist korrekt.
+
+Zu den Distraktoren:
+
+* "Immer sieben Stufen / immer binär" ist eine erfundene, im Kapitel nicht genannte formale Regel; weder das Antwortformat impliziter Verfahren noch das expliziter Fragebögen ist auf eine feste Stufenanzahl bzw. Binärcodierung festgelegt.
+* "Synonym für Objektivität/Validität" verwechselt implizite bzw.\ explizite Messung mit den im Kapitel getrennt behandelten Gütekriterien Objektivität und Validität; das sind unterschiedliche Konzeptebenen (Erhebungsart vs.\ Gütekriterium).
+* "Ausschließlich Wissenstests vs.\ ausschließlich Persönlichkeitsskalen" ist falsch: Implizite Verfahren wie der IAT werden im Kapitel gerade zur Messung von Einstellungen, Vorurteilen und sozialkognitiven Konstrukten eingesetzt, nicht primär von Wissen; explizite Fragebögen wiederum werden nicht nur für Persönlichkeit verwendet.
+* "Implizite Messung ist per Definition immer reliabler" ist eine unbelegte Übergeneralisierung; das Kapitel trifft keine solche pauschale Aussage über die Reliabilität impliziter im Vergleich zu expliziter Messung.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: implizite-messung-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

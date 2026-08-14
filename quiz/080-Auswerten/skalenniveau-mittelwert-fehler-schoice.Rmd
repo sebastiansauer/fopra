@@ -1,0 +1,30 @@
+Question
+========
+In der Tabelle "Typische Fehler" des Kapitels wird als Beispiel genannt, dass man aus dem Durchschnitt von Postleitzahlen keine sinnvolle Aussage ableiten kann. Welchem der im Kapitel gelisteten Fehlertypen entspricht dieses Beispiel, und was ist laut Kapitel die Konsequenz?
+
+Answerlist
+----------
+* Es handelt sich um "Skalenniveaus missachten": Für Postleitzahlen (Nominalskala) ist ein arithmetisches Mittel kein sinnvolles Kennwert, weshalb man das Skalenniveau prüfen und eine passende Auswertung wählen sollte.
+* Es handelt sich um "Fehlende Effektgrößen": Der Fehler entsteht, weil bei Postleitzahlen keine Effektgröße wie $d$ oder $\eta^2$ berichtet wurde.
+* Es handelt sich um "Falscher Test gewählt": Bei Postleitzahlen darf grundsätzlich kein Mittelwert berechnet werden, weil es sich um eine Verhältnisskala handelt.
+* Es handelt sich um "Korrelation = Kausalität": Ein Mittelwert von Postleitzahlen suggeriert fälschlich einen kausalen Zusammenhang zwischen Wohnort und Merkmal.
+* Es handelt sich um "Voraussetzungen ignorieren": Der Fehler besteht darin, dass die Normalverteilungsannahme der Postleitzahlen nicht getestet wurde.
+
+Solution
+========
+In der Kapiteltabelle "Typische Fehler" steht als Zeile 6 "Skalenniveaus missachten" mit genau dem Beispiel "Man kann aus dem Durchschnitt von Postleitzahlen keine sinnvolle Aussage ableiten"; als Konsequenz werden "sinnlose Ergebnisse" genannt, als Abhilfe "Skalenniveau prüfen und passende Auswertung wählen". Die erste Option gibt dies exakt wieder: Postleitzahlen sind nominalskaliert (reine Kategorien/Kennungen), sodass ein arithmetisches Mittel (das Abstände zwischen Werten voraussetzt) inhaltlich bedeutungslos ist.
+
+Die zweite Option verwechselt zwei unterschiedliche, in der Tabelle getrennt aufgeführte Fehler: "Fehlende Effektgrößen" betrifft das Nicht-Berichten der Effektstärke bei ansonsten sinnvollen Tests, nicht die grundsätzliche Sinnlosigkeit eines Mittelwerts bei falschem Skalenniveau.
+
+Die dritte Option benennt zwar korrekt, dass ein Mittelwert hier ungeeignet ist, ordnet das Beispiel aber falsch dem Fehler "Falscher Test gewählt" zu und behauptet zudem fälschlich, Postleitzahlen seien verhältnisskaliert – tatsächlich sind Postleitzahlen nominalskaliert, nicht verhältnisskaliert.
+
+Die vierte Option ist inhaltlich sachfremd: Es geht bei Postleitzahlen nicht um eine Verwechslung von Korrelation und Kausalität, sondern schlicht darum, dass ein arithmetisches Mittel für eine Nominalvariable kein sinnvolles Kennwert ist.
+
+Die fünfte Option verwechselt den Fehler mit "Voraussetzungen ignorieren" (z.B. fehlende Prüfung von Normalverteilung bei Tests); das Postleitzahlen-Beispiel im Kapitel bezieht sich aber nicht auf eine Verteilungsannahme, sondern grundsätzlich auf das falsche Skalenniveau für die Kennwertberechnung.
+
+Meta-information
+================
+exname: skalenniveau-mittelwert-fehler-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

@@ -1,0 +1,37 @@
+Question
+========
+Welche Aussage beschreibt am treffendsten, was im Kapitel unter einem *psychologischen Test* (im Sinne eines fundierten Fragebogens) verstanden wird?
+
+Answerlist
+----------
+* Ein wissenschaftliches Routineverfahren zur Untersuchung eines oder mehrerer empirisch abgrenzbarer Persönlichkeitsmerkmale mit dem Ziel einer möglichst quantitativen Aussage über den relativen Grad der individuellen Merkmalsausprägung.
+* Jede beliebige, spontan erstellte Liste von Fragen, die ein Forscher einer Stichprobe vorlegt.
+* Ein Verfahren, das ausschließlich zur Messung von Wissen bzw. korrekten/falschen Antworten eingesetzt wird.
+* Ein rein qualitatives Interviewverfahren ohne quantitative Auswertung.
+* Ein Verfahren, das nur einmalig, nie routinemäßig, bei einer einzelnen Untersuchung eingesetzt werden darf.
+
+Solution
+========
+Im Kapitel wird ein (psychologischer) Test definiert als "ein wissenschaftliches Routineverfahren zur Untersuchung eines oder mehrerer empirisch abgrenzbarer Persönlichkeitsmerkmale mit dem Ziel einer möglichst quantitativen Aussage über den relativen Grad der individuellen Merkmalsausprägung". Zentrale Bestandteile sind: wissenschaftlich fundiert, routinemäßig (wiederholt) einsetzbar, und mit dem Ziel einer quantitativen (nicht nur qualitativen) Aussage. Damit ist die erste Antwort korrekt.
+
+Zu den Distraktoren:
+
+* "Jede beliebige, spontan erstellte Liste von Fragen" widerspricht dem Kapitel explizit: Selbst gestrickte Fragebögen ohne psychometrische Prüfung gelten gerade *nicht* als (psychologischer) Test, weil ihre Gütekriterien unbekannt sind.
+* "Ausschließlich zur Messung von Wissen" verwechselt den psychologischen Test allgemein mit dem Spezialfall *Wissenstest*, der im Kapitel als eine von mehreren Arten von Messinstrumenten behandelt wird, nicht als Definition des Testbegriffs insgesamt.
+* "Rein qualitatives Interviewverfahren ohne quantitative Auswertung" widerspricht der Definition direkt, die explizit eine "möglichst quantitative Aussage" fordert.
+* "Nur einmalig, nie routinemäßig" widerspricht dem Wort "Routineverfahren" in der Originaldefinition, das gerade die wiederholte, standardisierte Anwendbarkeit betont.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: psychologischer-test-definition-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

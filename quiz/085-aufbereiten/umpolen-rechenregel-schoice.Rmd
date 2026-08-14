@@ -1,0 +1,56 @@
+```{r, include=FALSE}
+n_kat <- 6
+alter_wert <- 5
+
+korrekt <- n_kat + 1 - alter_wert    # 2
+d1 <- alter_wert                     # 5, keine Umpolung vorgenommen
+d2 <- n_kat - alter_wert             # 1, das "+1" vergessen
+d3 <- alter_wert + 1                 # 6, addiert statt umgepolt
+d4 <- n_kat - alter_wert + 2         # 3, falsche Konstante verwendet
+
+stopifnot(length(unique(c(korrekt, d1, d2, d3, d4))) == 5)
+stopifnot(all(c(korrekt, d1, d2, d3, d4) > 0))
+```
+
+Question
+========
+Ein Fragebogen-Item hat `r n_kat` Antwortstufen (kodiert von 1 bis `r n_kat`). Das Item ist *negativ* gepolt und muss daher umgepolt werden, bevor es in einen Score einfließt. Eine Versuchsperson hat auf diesem Item den Wert `r alter_wert` angegeben. Welchen Wert erhält diese Person nach korrekter Umpolung gemäß der Rechenregel
+
+$$\text{neuer Wert} = \text{Anzahl Kategorien} + 1 - \text{alter Wert}$$
+
+Answerlist
+----------
+* `r korrekt`
+* `r d1`
+* `r d2`
+* `r d3`
+* `r d4`
+
+Solution
+========
+Nach der im Kapitel angegebenen Rechenregel gilt:
+
+$$\text{neuer Wert} = \text{Anzahl Kategorien} + 1 - \text{alter Wert} = `r n_kat` + 1 - `r alter_wert` = `r korrekt`$$
+
+Damit ist `r korrekt` die korrekte Antwort.
+
+Zu den Distraktoren:
+* `r d1` entspricht dem *unveränderten* alten Wert – dieser Distraktor entsteht, wenn man vergisst, überhaupt eine Umpolung vorzunehmen.
+* `r d2` entsteht, wenn man die Formel ohne das "+1" anwendet, also nur $\text{Anzahl Kategorien} - \text{alter Wert}$ rechnet (`r n_kat` $-$ `r alter_wert` $=$ `r d2`) – ein klassischer Off-by-one-Fehler.
+* `r d3` entsteht, wenn man den alten Wert fälschlich einfach um 1 erhöht ($\text{alter Wert} + 1 = `r alter_wert` + 1 = `r d3`$), anstatt die eigentliche Umpolungsformel anzuwenden.
+* `r d4` entsteht durch eine falsche Konstante in der Formel, z.B. $\text{Anzahl Kategorien} - \text{alter Wert} + 2 = `r n_kat` - `r alter_wert` + 2 = `r d4`$, statt korrekt "+1" zu verwenden.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: umpolen-rechenregel-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

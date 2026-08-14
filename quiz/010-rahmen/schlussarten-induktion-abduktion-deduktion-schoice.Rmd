@@ -1,0 +1,38 @@
+Question
+========
+Eine Forscherin zieht nacheinander 60 Bohnen aus einem Sack, ohne vorher etwas über den Inhalt des Sacks zu wissen. Alle gezogenen Bohnen sind weiß. Daraus schließt sie: "Alle Bohnen in diesem Sack sind vermutlich weiß." Um welche der im Kapitel beschriebenen Schlussarten handelt es sich hier?
+
+Answerlist
+----------
+* Induktion
+* Abduktion
+* Deduktion
+* Falsifikation
+* Kausalschluss
+
+Solution
+========
+Die Forscherin sammelt viele Einzelbeobachtungen (60 gezogene weiße Bohnen) und verallgemeinert daraus zu einer Allaussage über den gesamten Sackinhalt, ohne von einer vorab bekannten Theorie auszugehen. Das entspricht exakt der im Kapitel beschriebenen Induktion ("Sammlung vieler Einzelbeobachtungen; atheoretisch"; Beispiel im Kapitel: aus 30 weißen gezogenen Bohnen wird geschlossen, alle Bohnen im Sack seien weiß).
+
+Zu den Distraktoren:
+
+* Abduktion: Bei der Abduktion wird von einer einzelnen, bereits vorliegenden Beobachtung (z. B. eine gefundene weiße Bohne auf dem Boden) auf eine plausible Erklärung geschlossen (sie stamme aus dem Sack). Hier liegt aber eine systematische Reihe von Ziehungen vor, aus der verallgemeinert wird – das ist Induktion, nicht die kreative Erklärungssuche der Abduktion.
+* Deduktion: Bei der Deduktion wird aus einer bereits feststehenden Allgemeinaussage (Theorie) eine Einzelaussage logisch zwingend abgeleitet (z. B.: "Ich habe nur weiße Bohnen eingefüllt, also ist die gezogene Bohne weiß"). Im Beispiel ist die Allaussage aber gerade das Ergebnis des Schlusses, nicht die Ausgangsprämisse – das ist der umgekehrte Fall.
+* Falsifikation: Falsifikation ist keine der drei im Kapitel genannten Schlussarten, sondern eine Prüfstrategie, mit der Hypothesen widerlegt werden. Hier wird jedoch nichts widerlegt, sondern positiv verallgemeinert.
+* Kausalschluss: Ein Kausalschluss bezieht sich auf Ursache-Wirkungs-Beziehungen. Im Beispiel geht es aber nur um die Verallgemeinerung eines Merkmals (Farbe), nicht um eine Ursachenzuschreibung – zudem ist "Kausalschluss" keine der drei im Kapitel benannten Schlussarten (Induktion, Abduktion, Deduktion).
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: schlussarten-induktion-abduktion-deduktion-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5
+excategory: Rahmen

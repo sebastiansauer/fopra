@@ -1,0 +1,44 @@
+Question
+========
+Im Kapitel wird folgender Schluss als **fehlerhafte** Anwendung der Deduktion diskutiert:
+
+Prämisse 1: Alle Nobelpreisträger sind schlau.
+Prämisse 2: Albert Einstein ist schlau.
+Folgerung: Albert Einstein ist Nobelpreisträger.
+
+Warum ist dieser Schluss logisch nicht zulässig?
+
+Answerlist
+----------
+* Weil aus "schlau sein" nicht folgt, Nobelpreisträger zu sein – Prämisse 1 macht nur eine Aussage über Nobelpreisträger, nicht über alle schlauen Menschen.
+* Weil die Prämisse "Alle Nobelpreisträger sind schlau" empirisch nachweislich falsch ist.
+* Weil Albert Einstein tatsächlich kein Nobelpreisträger war.
+* Weil es sich hierbei um einen induktiven und keinen deduktiven Schluss handelt.
+* Weil zwei Prämissen für einen gültigen deduktiven Schluss grundsätzlich nicht ausreichen.
+
+Solution
+========
+Der Fehler liegt in der logischen Struktur des Arguments, nicht in dessen Inhalt: Aus "alle Nobelpreisträger sind schlau" folgt nur, dass Nobelpreisträger eine Teilmenge der schlauen Menschen sind – nicht umgekehrt. Dass Einstein schlau ist, erlaubt daher keinen zwingenden Schluss darauf, dass er Nobelpreisträger ist (es könnte ja auch andere schlaue Menschen ohne Nobelpreis geben). Das Kapitel nennt genau dieses Beispiel, um zu zeigen, dass "nicht alle Schlauen Nobelpreisträger sind". Die erste Antwort ist daher korrekt.
+
+Zu den Distraktoren:
+
+* "Prämisse 1 ist empirisch falsch": Der logische Fehler des Arguments besteht unabhängig davon, ob die Prämisse inhaltlich wahr oder falsch ist – selbst wenn Prämisse 1 wahr wäre, bliebe der Schluss ungültig. Der Fehler liegt in der Schlussform, nicht im Wahrheitsgehalt der Prämisse.
+* "Einstein war tatsächlich kein Nobelpreisträger": Das ist sachlich falsch (Einstein erhielt 1921 den Nobelpreis für Physik) und außerdem irrelevant – die logische Ungültigkeit des Arguments hängt nicht von den realen Fakten über Einstein ab, sondern von der Argumentstruktur.
+* "Es handelt sich um Induktion, nicht Deduktion": Die Argumentform (zwei Prämissen, eine daraus gezogene Folgerung) ist eindeutig ein deduktiver Syllogismus; der Fehler liegt in einer ungültigen Schlussfigur (Bestätigung des Konsequens), nicht darin, dass fälschlich Deduktion statt Induktion angewendet würde.
+* "Zwei Prämissen reichen grundsätzlich nicht": Klassische Syllogismen bestehen typischerweise aus genau zwei Prämissen und einer Konklusion und können bei korrekter logischer Form durchaus gültig sein (wie das im Kapitel genannte Beispiel mit Einstein und "schlau sein" zeigt) – die Anzahl der Prämissen ist hier nicht das Problem.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: deduktion-fehlschluss-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5
+excategory: Rahmen

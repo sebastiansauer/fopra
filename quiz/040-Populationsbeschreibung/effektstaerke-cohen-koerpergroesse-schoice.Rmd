@@ -1,0 +1,56 @@
+```{r, include=FALSE}
+mw_6_0 <- 115   # mittlere Körpergröße 6.0 Jahre, in cm
+mw_6_5 <- 118   # mittlere Körpergröße 6.5 Jahre, in cm
+sd_ref <- 5.5   # Standardabweichung, in cm
+
+diff_cm <- mw_6_5 - mw_6_0
+d_korrekt <- diff_cm / sd_ref
+
+# Distraktoren (typische Fehler)
+d_ganzjahr <- (121 - mw_6_0) / sd_ref      # nutzt Ganzjahresunterschied (6.0 vs 7.0) statt Halbjahr
+d_sd1      <- diff_cm / 1                   # SD fälschlich als 1 angenommen
+d_swap     <- sd_ref / diff_cm              # Differenz und SD vertauscht
+d_percent  <- (diff_cm / mw_6_5) * 100       # Prozentualer statt SD-standardisierter Unterschied
+
+antworten <- round(c(d_korrekt, d_ganzjahr, d_sd1, d_swap, d_percent), 2)
+stopifnot(length(unique(antworten)) == 5)
+```
+
+Question
+========
+Die mittlere Körpergröße von Mädchen beträgt im Alter von 6.0 Jahren `r mw_6_0` cm und im Alter von 6.5 Jahren `r mw_6_5` cm; die Standardabweichung der Körpergröße in dieser Altersgruppe liegt bei ca. `r sd_ref` cm. Wie groß ist der SD-standardisierte Effekt (im Sinne von Cohens $d$) dieses Größenunterschieds, und wie ist er nach der im Kapitel genannten Klassifikation (klein $\approx 0.2$, mittel $\approx 0.5$, groß $\approx 0.8$) einzuordnen?
+
+Answerlist
+----------
+* $d = \dfrac{`r mw_6_5`-`r mw_6_0`}{`r sd_ref`} \approx `r antworten[1]`$, ein mittlerer Effekt
+* $d \approx `r antworten[2]`$, ein sehr großer Effekt
+* $d \approx `r antworten[3]`$, ein sehr großer Effekt
+* $d \approx `r antworten[4]`$, ein sehr großer Effekt
+* $d \approx `r antworten[5]`$ (in Prozent), ein sehr großer Effekt
+
+Solution
+========
+Der SD-standardisierte Unterschied berechnet sich als Differenz der Mittelwerte geteilt durch die Standardabweichung: $d = \dfrac{`r mw_6_5` - `r mw_6_0`}{`r sd_ref`} = \dfrac{`r diff_cm`}{`r sd_ref`} \approx `r antworten[1]`$. Nach Cohens Klassifikation (klein $\approx 0.2$, mittel $\approx 0.5$, groß $\approx 0.8$) entspricht dies einem mittleren Effekt – exakt die Einordnung, die im Kapitel für den Größenunterschied zwischen 6.0 und 6.5 Jahren getroffen wird ("Nennen wir das einen 'mittleren' Effekt"). Damit ist die erste Antwort korrekt.
+
+$d \approx `r antworten[2]`$ entsteht, wenn man versehentlich den vollen Jahresunterschied (6.0 vs. 7.0 Jahre, `r 121-mw_6_0` cm) statt des im Text gefragten Halbjahresunterschieds (6.0 vs. 6.5 Jahre) verwendet; das entspricht einer anderen, im Kapitel separat als "großer" Effekt bezeichneten Vergleichsgröße, ist aber für die hier gefragte Situation falsch.
+
+$d \approx `r antworten[3]`$ entsteht, wenn man die Standardabweichung fälschlich gleich 1 setzt und den Größenunterschied in cm direkt undividiert übernimmt, also die Standardisierung schlicht vergisst.
+
+$d \approx `r antworten[4]`$ entsteht, wenn man Zähler und Nenner der Formel vertauscht, also die Standardabweichung durch den Mittelwertunterschied statt umgekehrt teilt.
+
+$d \approx `r antworten[5]`$ entsteht, wenn man den Unterschied fälschlich als Prozentanteil vom größeren Mittelwert berechnet, statt ihn an der Streuung zu relativieren – ein prozentualer Unterschied ist aber kein SD-standardisiertes Effektstärkemaß im Sinne von Cohens $d$.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: effektstaerke-cohen-koerpergroesse
+extype: schoice
+exsolution: 10000
+exshuffle: 5

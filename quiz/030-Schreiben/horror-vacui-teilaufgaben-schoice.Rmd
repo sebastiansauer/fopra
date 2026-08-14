@@ -1,0 +1,37 @@
+Question
+========
+Im Kapitel wird die "Angst vor dem leeren Blatt" (horror vacui) beim Schreiben thematisiert. Welche Ursache wird dafür angegeben und welche Lösung wird empfohlen?
+
+Answerlist
+----------
+* Ursache ist der Versuch, alle Teilaufgaben des Schreibens (z.B. Ideen klären, gliedern, formulieren, Rechtschreibung) gleichzeitig zu erledigen; die Lösung ist, diese Teilaufgaben nacheinander (sequenziert) anzugehen.
+* Ursache ist mangelndes Talent zum Schreiben; die Lösung ist, ein Schreibseminar zu besuchen, bevor man mit der Arbeit beginnt.
+* Ursache ist, dass noch nicht genug Fachartikel gelesen wurden; die Lösung ist, so lange weiterzulesen, bis man sich zum Schreiben bereit fühlt.
+* Ursache ist fehlende Software-Kompetenz (z.B. mit Word oder Quarto); die Lösung ist, zunächst die Formatierungsfunktionen der Schreibsoftware zu erlernen.
+* Ursache ist, dass die Gliederung noch nicht final vom Betreuer abgenommen wurde; die Lösung ist, mit dem Schreiben zu warten, bis die Gliederung offiziell genehmigt ist.
+
+Solution
+========
+Das Kapitel erklärt die Angst vor dem leeren Blatt damit, dass Schreibende versuchen, alle Teilaufgaben des Schreibens (zentrale Ideen klären, Gliederung festlegen, Belege/Quellen sammeln, Beispiele parat haben, Argumentation vorbereiten, treffend formulieren, Rechtschreibung korrigieren, Formatierung ansprechend gestalten) gleichzeitig zu bewältigen. Das führt zwangsläufig zur Überforderung. Der empfohlene Weg ist, diese Teilaufgaben zu sequenzieren, also nacheinander statt parallel anzugehen.
+
+Die Distraktoren beruhen auf folgenden typischen Denkfehlern:
+
+- "mangelndes Talent... Schreibseminar": Das Kapitel führt die Schreibblockade nicht auf fehlendes Talent zurück, sondern explizit auf die Gleichzeitigkeit der Teilaufgaben – ein Verständnisfehler, der die eigentliche, im Text genannte Ursache ignoriert.
+- "nicht genug Fachartikel gelesen... weiterlesen": Das Kapitel warnt im Gegenteil davor, das Lesen als alleinige Vorbereitung zu betrachten; Lesen und Schreiben sollen sich abwechseln, nicht strikt nacheinander in dieser Reihenfolge erfolgen.
+- "fehlende Software-Kompetenz": Formatierung ist zwar eine der acht genannten Teilaufgaben, aber nicht die Hauptursache der Blockade – dieser Distraktor verwechselt eine von acht Teilaufgaben mit der eigentlichen Ursache (der Gleichzeitigkeit aller acht).
+- "Gliederung noch nicht abgenommen": Das Kapitel empfiehlt zwar eine saubere Gliederung als Hilfe, macht aber keine offizielle Freigabe durch eine Lehrperson zur Voraussetzung für den Schreibbeginn.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: horror-vacui-teilaufgaben-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

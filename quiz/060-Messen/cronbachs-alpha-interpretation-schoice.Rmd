@@ -1,0 +1,37 @@
+Question
+========
+Eine Skala zur Messung von Extraversion erzielt in einer Stichprobe ein Cronbachs Alpha von $\alpha = .82$. Wie ist dieser Wert gemäß den im Kapitel genannten Richtwerten zu interpretieren?
+
+Answerlist
+----------
+* Die interne Konsistenz der Skala ist gut, da Werte ab etwa .8 üblicherweise als gut eingestuft werden.
+* Die interne Konsistenz der Skala ist inakzeptabel, da Cronbachs Alpha per Definition höchstens .70 betragen kann.
+* Der Wert zeigt, dass 82\% der befragten Personen das Konstrukt korrekt eingeschätzt haben.
+* Der Wert zeigt, dass die Skala zu 82\% valide ist, also die zugrunde liegende Persönlichkeitseigenschaft korrekt misst.
+* Der Wert ist nicht interpretierbar, weil Cronbachs Alpha ausschließlich für Wissenstests, nicht für Persönlichkeitsskalen berechnet werden darf.
+
+Solution
+========
+Cronbachs Alpha hat einen Wertebereich von 0 bis 1 und ist ein Maß für die interne Konsistenz (Reliabilität) einer Skala; anschaulich kann man es als ein Maß der mittleren Korrelation der Items untereinander verstehen. Im Kapitel werden Werte ab .7 als akzeptabel und ab .8 als gut bezeichnet. Ein Wert von $\alpha = .82$ liegt über der .8-Schwelle und ist somit als gute interne Konsistenz einzustufen. Die erste Antwort ist korrekt.
+
+Zu den Distraktoren:
+
+* "Höchstens .70" ist falsch: Der Wertebereich von Cronbachs Alpha reicht bis 1, und Werte über .8 werden im Kapitel sogar als besonders gut bezeichnet, nicht als unmöglich.
+* "82\% der Personen haben korrekt eingeschätzt" verwechselt Cronbachs Alpha mit einer Trefferquote bei einem Wissenstest; Alpha bezieht sich auf die Konsistenz der Items untereinander, nicht auf die "Richtigkeit" von Antworten bei einer Persönlichkeitsskala, bei der es ohnehin keine "richtigen" Antworten gibt.
+* "82\% valide" verwechselt Reliabilität (Cronbachs Alpha) mit Validität; das sind im Kapitel zwei unterschiedliche Gütekriterien. Ein hoher Alpha-Wert sagt nichts direkt darüber aus, ob tatsächlich das intendierte Konstrukt gemessen wird.
+* "Nur für Wissenstests zulässig" ist falsch: Im Kapitel wird Cronbachs Alpha gerade im Kontext psychometrischer (Persönlichkeits-)Skalen wie Extraversion eingeführt, nicht primär für Wissenstests.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: cronbachs-alpha-interpretation-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

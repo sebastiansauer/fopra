@@ -1,0 +1,36 @@
+Question
+========
+Im Kapitel heißt es sinngemäß, der Effekt der UV auf die AV sei nur dann identifiziert, wenn er "rein" ist. Was ist damit gemeint?
+
+Answerlist
+----------
+* Der geschätzte Zusammenhang zwischen UV und AV wird nicht durch den Einfluss anderer (konfundierender) Variablen überlagert oder verzerrt.
+* Die UV und die AV wurden beide mit reliablen, validierten Messinstrumenten erhoben.
+* Der Zusammenhang zwischen UV und AV ist linear und weist keine Ausreißer auf.
+* Die Stichprobe wurde durch Zufallsauswahl (Random Sampling) aus der Zielpopulation gezogen.
+* Der Effekt der UV auf die AV ist über alle untersuchten Subgruppen hinweg gleich groß (keine Moderation).
+
+Solution
+========
+"Rein" bezieht sich im Kapitel darauf, dass der Effekt der UV auf die AV nicht von anderen Variablen überlagert wird – also nicht konfundiert ist. Nur unter dieser Bedingung ist der Effekt kausal identifiziert.
+
+Zu den Distraktoren:
+- Option 2 beschreibt Messgüte (Reliabilität/Validität), ein wichtiges, aber anderes Qualitätskriterium als kausale Identifizierbarkeit.
+- Option 3 beschreibt Annahmen der linearen Regression (Linearität, keine Ausreißer), die unabhängig von der kausalen Identifizierbarkeit des Effekts sind.
+- Option 4 beschreibt die externe Validität bzw. Repräsentativität der Stichprobe, nicht die interne, kausale Reinheit des Effekts.
+- Option 5 beschreibt Effekthomogenität bzw. das Fehlen von Moderation, ein Zusatzaspekt, der mit der Frage der Konfundierung (Reinheit des Effekts) nicht gleichzusetzen ist.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: reiner-effekt-ueberlagerung-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

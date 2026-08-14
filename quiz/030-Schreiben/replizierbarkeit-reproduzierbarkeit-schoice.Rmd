@@ -1,0 +1,37 @@
+Question
+========
+Im Methodenteil-Abschnitt des Kapitels werden die Begriffe "Replizierbarkeit" und "Reproduzierbarkeit" unterschieden. Welche Zuordnung ist korrekt?
+
+Answerlist
+----------
+* Replizierbarkeit bedeutet, dass man die Analyse nachrechnen kann und zum gleichen Ergebnis kommt; Reproduzierbarkeit bedeutet, dass man weiß, wie man die Studie wiederholen könnte.
+* Replizierbarkeit bedeutet, dass man weiß, wie man die Studie wiederholen könnte; Reproduzierbarkeit bedeutet, dass man die Analyse nachrechnen kann und zum gleichen Ergebnis kommt.
+* Beide Begriffe sind laut Kapitel synonym und werden austauschbar verwendet.
+* Replizierbarkeit bezieht sich nur auf die Verwendung von R als Statistiksoftware, Reproduzierbarkeit auf die Verwendung von Word.
+* Replizierbarkeit betrifft nur den Theorieteil, Reproduzierbarkeit nur den Ergebnisteil einer Arbeit.
+
+Solution
+========
+Das Kapitel definiert (in einer Fußnote) Replizierbarkeit als: "Man kann Ihre Analyse nachrechnen und kommt zum gleichen Ergebnis" und Reproduzierbarkeit als: "Man weiß, wie man Ihre Studie wiederholen könnte." Beide Aspekte werden als wesentlich für die Wissenschaft bezeichnet, und der Methodenteil soll die Grundlage dafür legen.
+
+Die Distraktoren beruhen auf folgenden typischen Denkfehlern:
+
+- Die zweite Option vertauscht schlicht die beiden Definitionen – ein naheliegender Verwechslungsfehler bei zwei ähnlich klingenden Fachbegriffen.
+- "synonym... austauschbar": Das Kapitel führt die Begriffe bewusst als zwei unterschiedliche, jeweils eigens definierte Konzepte ein, nicht als Synonyme.
+- "nur R... nur Word": Beide Begriffe beziehen sich allgemein auf die Nachvollziehbarkeit von Analyse bzw. Studie und sind nicht an eine bestimmte Software gebunden (auch wenn R im Kapitel als Beispiel-Software für Reproduzierbarkeit vorkommt).
+- "nur Theorieteil... nur Ergebnisteil": Beide Begriffe werden im Kontext des Methodenteils eingeführt und betreffen die gesamte Studie, nicht isoliert einzelne Kapitel wie Theorie oder Ergebnisse.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: replizierbarkeit-reproduzierbarkeit-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

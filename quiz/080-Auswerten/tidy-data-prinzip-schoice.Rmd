@@ -1,0 +1,30 @@
+Question
+========
+Eine Studierende hat ihre Erhebungsdaten in einer Tabelle notiert. Welche der folgenden Beschreibungen entspricht dem im Kapitel genannten Prinzip von "tidy data"?
+
+Answerlist
+----------
+* In jeder Zeile steht eine Beobachtung, in jeder Spalte eine Variable, und in jeder Zelle genau ein Wert.
+* In jeder Spalte steht eine Beobachtung, in jeder Zeile eine Variable, und Zellen dürfen mehrere Werte enthalten, solange sie durch Kommas getrennt sind.
+* Tidy Data bedeutet, dass die Tabelle keine Kopfzeile besitzt, damit R die Spalten automatisch benennen kann.
+* Tidy Data bedeutet, dass pro Variable eine eigene Tabelle angelegt wird und diese Tabellen erst nach der Analyse zusammengeführt werden.
+* Tidy Data bedeutet, dass numerische und kategoriale Variablen in getrennten Dateien gespeichert werden müssen, damit R sie korrekt einliest.
+
+Solution
+========
+Im Kapitel wird "tidy data" explizit definiert als: In jeder Zeile steht eine Beobachtung, in jeder Spalte eine Variable, und in jeder Zelle steht ein Wert. Die erste Option gibt diese Definition korrekt wieder.
+
+Die zweite Option vertauscht Zeilen und Spalten und erlaubt zusätzlich mehrere Werte pro Zelle – beides widerspricht der im Kapitel genannten Definition, nach der genau ein Wert pro Zelle stehen soll.
+
+Die dritte Option verwechselt eine andere Regel aus dem Abschnitt "Wir brauchen brave Daten" (es muss genau eine Kopfzeile geben, nicht keine) mit dem Tidy-Data-Prinzip; das Fehlen einer Kopfzeile ist im Kapitel sogar ausdrücklich unerwünscht.
+
+Die vierte Option beschreibt kein im Kapitel genanntes Konzept: Tidy Data bezieht sich auf die Struktur innerhalb einer einzelnen Tabelle (Zeilen/Spalten/Zellen), nicht auf die Aufteilung in mehrere Tabellen pro Variable.
+
+Die fünfte Option ist eine erfundene Regel: Das Kapitel verlangt nicht, dass verschiedene Variablentypen in getrennten Dateien liegen müssen – im Gegenteil, in einer tidy Tabelle stehen alle Variablen (unabhängig vom Typ) gemeinsam in Spalten nebeneinander.
+
+Meta-information
+================
+exname: tidy-data-prinzip-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

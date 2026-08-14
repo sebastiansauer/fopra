@@ -1,0 +1,30 @@
+Question
+========
+Das Kapitel stellt skriptbasierte Software (z.B. R, Python) klickbasierter Software (z.B. Jamovi, JASP) für die Datenanalyse gegenüber. Welche der folgenden Gegenüberstellungen entspricht der im Kapitel genannten Einschätzung?
+
+Answerlist
+----------
+* Klickbasierte Software hat meist eine flachere Lernkurve, während skriptbasierte Software umfassender ist, aber eine steilere Lernkurve hat.
+* Klickbasierte Software ist grundsätzlich umfassender als skriptbasierte Software, weil man mit ihr alles erreichen kann, was man für die Datenanalyse braucht.
+* Skriptbasierte Software hat laut Kapitel eine flachere Lernkurve als klickbasierte Software, da man keine Befehle in einer Programmiersprache schreiben muss.
+* Klickbasierte Software ist im Kapitel als grundsätzlich kostenpflichtig beschrieben, während skriptbasierte Software immer kostenlos ist.
+* Laut Kapitel gibt es keinerlei Unterschiede zwischen skript- und klickbasierter Software, außer der Bezeichnung.
+
+Solution
+========
+Im Kapitel werden für klickbasierte Software als Vorteile u.a. "eher kostenlos", "aktuell", "flachere Lernkurve" und "R-Code integriert" genannt, für skriptbasierte Software dagegen "kostenlos", "aktueller", "umfassend (klickbasierte Software kann nicht alles, was man braucht)" und "steilere Lernkurve". Die erste Option fasst genau diesen Kontrast (flachere Lernkurve bei klickbasiert, umfassender aber steilere Lernkurve bei skriptbasiert) korrekt zusammen.
+
+Die zweite Option kehrt die im Kapitel genannte Aussage um: Dort steht ausdrücklich, dass klickbasierte Software eben NICHT alles kann, was man braucht ("kann nicht alles, was man braucht") – umfassender ist laut Kapitel die skriptbasierte Software.
+
+Die dritte Option vertauscht die Lernkurven-Zuordnung: Im Kapitel wird die flachere Lernkurve der klickbasierten Software zugeschrieben, nicht der skriptbasierten, die im Gegenteil als steiler in der Lernkurve beschrieben wird.
+
+Die vierte Option überzeichnet die Kostenangabe: Im Kapitel steht bei klickbasierter Software "eher kostenlos (es gibt kostenpflichtige Premium-Versionen)", also nicht grundsätzlich kostenpflichtig, sondern überwiegend kostenlos mit Ausnahmen.
+
+Die fünfte Option ignoriert die im Kapitel explizit aufgelisteten Unterschiede (Kosten, Aktualität, Lernkurve, Umfang) und ist daher offensichtlich falsch.
+
+Meta-information
+================
+exname: skript-vs-klickbasiert-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

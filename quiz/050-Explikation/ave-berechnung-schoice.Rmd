@@ -1,0 +1,64 @@
+```{r, include=FALSE}
+# Fixe, verifizierte Datenlage (Kopfschmerz-Reduktion auf einer Skala 0-10)
+y1 <- c(3.2, 4.2, 3.0, 5.9, 4.4)   # Ibuprofen-Gruppe: Y(1)
+y0 <- c(1.0, 2.6, 2.9, 2.7, 1.6)   # Placebo-Gruppe: Y(0)
+
+m1 <- round(mean(y1), 2)
+m0 <- round(mean(y0), 2)
+ave_est <- round(m1 - m0, 2)
+
+d1 <- round(m1, 2)                 # nur Mittelwert der Treatmentgruppe
+d2 <- round(m0, 2)                 # nur Mittelwert der Kontrollgruppe
+d3 <- round(m0 - m1, 2)            # Vorzeichen vertauscht
+d4 <- round(mean(c(y1, y0)), 2)    # Gesamtmittelwert statt Differenz
+
+stopifnot(length(unique(c(ave_est, d1, d2, d3, d4))) == 5)
+```
+
+Question
+========
+In einer (fiktiven) Interventionsstudie zur Wirkung von Ibuprofen auf akuten Kopfschmerz wird bei $n=5$ Personen der Ibuprofen-Gruppe und $n=5$ Personen der Placebo-Gruppe die Schmerzreduktion (Skala 0-10, höher = stärkere Reduktion) gemessen:
+
+Ibuprofen-Gruppe: $Y(1) = `r y1`$
+
+Placebo-Gruppe: $Y(0) = `r y0`$
+
+Man schätzt den mittleren Treatmenteffekt (AVE) über die Differenz der Gruppenmittelwerte, $\widehat{AVE} = \bar{Y}(1) - \bar{Y}(0)$. Wie groß ist der geschätzte AVE (auf zwei Nachkommastellen gerundet)?
+
+Answerlist
+----------
+* `r ave_est`
+* `r d1`
+* `r d2`
+* `r d3`
+* `r d4`
+
+Solution
+========
+Der Mittelwert der Ibuprofen-Gruppe beträgt $\bar{Y}(1) = `r m1`$, der Mittelwert der Placebo-Gruppe $\bar{Y}(0) = `r m0`$.
+Der geschätzte mittlere Treatmenteffekt ist damit
+$$\widehat{AVE} = \bar{Y}(1) - \bar{Y}(0) = `r m1` - `r m0` = `r ave_est`.$$
+Dies ist die korrekte Lösung.
+
+Der Distraktor `r d1` entspricht nur dem Mittelwert der Treatmentgruppe $\bar{Y}(1)$ – hier wurde vergessen, den Kontrollgruppenmittelwert zu subtrahieren.
+
+Der Distraktor `r d2` entspricht nur dem Mittelwert der Kontrollgruppe $\bar{Y}(0)$ – ein analoger Fehler, bei dem fälschlich nur die Kontrollgruppe berichtet wird.
+
+Der Distraktor `r d3` ergibt sich aus einer vertauschten Subtraktionsreihenfolge, $\bar{Y}(0) - \bar{Y}(1)$, wodurch das Vorzeichen des Effekts fälschlich umgekehrt wird.
+
+Der Distraktor `r d4` entspricht dem Gesamtmittelwert aller zehn Messwerte (ohne Gruppenunterscheidung) – ein typischer Fehler, bei dem die Gruppenzugehörigkeit ignoriert und keine Differenz gebildet wird.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: ave-berechnung
+extype: schoice
+exsolution: 10000
+exshuffle: 5

@@ -1,0 +1,38 @@
+Question
+========
+Das Kapitel empfiehlt SoSci-Survey als Tool für Online-Umfragen. Welche der folgenden Eigenschaften wird im Kapitel korrekt als Vorteil von SoSci-Survey genannt?
+
+Answerlist
+----------
+* SoSci-Survey ist deutschsprachig, DSGVO-konform, mächtig in den Funktionen und für wissenschaftliche Studien kostenlos.
+* SoSci-Survey ist ausschließlich englischsprachig, was die internationale Nutzung erleichtert.
+* SoSci-Survey ist zwar mächtig, aber grundsätzlich kostenpflichtig, auch für wissenschaftliche Studien.
+* SoSci-Survey erfüllt laut Kapitel nicht die DSGVO-Anforderungen und eignet sich daher nur für Studien außerhalb der EU.
+* SoSci-Survey bietet laut Kapitel keine Möglichkeit zur Randomisierung, weshalb dafür ein separates Tool nötig ist.
+
+Solution
+========
+Im Kapitel werden als Vorteile von SoSci-Survey explizit genannt: Deutsch, DSGVO-konform, mächtig, kostenlos (für wissenschaftliche Studien). Damit ist die erste Option korrekt.
+
+Die zweite Option widerspricht dem Text direkt: SoSci-Survey wird als deutschsprachiges Tool beschrieben, nicht als ausschließlich englischsprachig.
+
+Die dritte Option ist falsch, da im Kapitel „kostenlos (für wissenschaftliche Studien)“ als Vorteil aufgeführt wird, nicht „kostenpflichtig“.
+
+Die vierte Option kehrt die im Kapitel genannte Eigenschaft „DSGVO-konform“ ins Gegenteil und ist damit falsch.
+
+Die fünfte Option widerspricht dem Kapitel, das explizit darauf hinweist, dass mit SoSci-Survey Randomisierung möglich ist und dies sogar detailliert erläutert wird (Abschnitt „Randomisierung“).
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: sosci-survey-eigenschaften-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

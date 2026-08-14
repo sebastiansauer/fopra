@@ -1,0 +1,38 @@
+Question
+========
+Wie ist eine *Störvariable* im Kapitel definiert, und was passiert, wenn sie nicht kontrolliert wird?
+
+Answerlist
+----------
+* Eine Störvariable beeinflusst die AV, ist aber weder die UV noch wird sie gemessen; wird sie nicht kontrolliert, kann eine Veränderung der AV nicht eindeutig auf die UV zurückgeführt werden, ein Kausalschluss ist dann nicht möglich.
+* Eine Störvariable ist die AV selbst, wenn sie unzuverlässig gemessen wird; wird sie nicht kontrolliert, sinkt die Reliabilität der Studie.
+* Eine Störvariable ist jede zusätzliche UV, die ein Forschungsteam bewusst in den Versuchsplan aufnimmt, um mehr Varianz aufzuklären.
+* Eine Störvariable ist eine Variable, die nur in Beobachtungsstudien, nie in Experimenten auftreten kann.
+* Eine Störvariable ist eine Variable, die per Definition immer gemessen und danach statistisch kontrolliert wird.
+
+Solution
+========
+Laut Definition im Kapitel ist eine Störvariable eine Variable, die die AV beeinflusst, aber nicht die UV ist und nicht gemessen wird. Wird sie nicht kontrolliert, kann eine Veränderung der AV nicht eindeutig auf die UV zurückgeführt werden – ein Kausalschluss ist dann nicht möglich. Antwortoption 1 ist korrekt.
+
+Distraktor 2 verwechselt Störvariable mit einem Messfehler der AV selbst (Reliabilitätsproblem); eine Störvariable ist jedoch eine eigenständige, nicht gemessene Variable, keine Eigenschaft der AV-Messung.
+
+Distraktor 3 beschreibt das Gegenteil: Wird eine potenzielle Störvariable bewusst als zusätzliche UV in den Versuchsplan aufgenommen (wie im Kapitelbeispiel zu Geschlecht und Motivation), ist sie per Definition keine Störvariable mehr, sondern eine UV.
+
+Distraktor 4 ist falsch, da Störvariablen laut Kapitel sowohl in Beobachtungsstudien als auch in Experimenten auftreten können; Experimente mit Randomisierung können lediglich den Einfluss personengebundener Störvariablen besser unter Kontrolle bringen, Störvariablen aber nicht grundsätzlich ausschließen.
+
+Distraktor 5 widerspricht der Definition direkt: Eine Störvariable ist laut Kapitel gerade dadurch gekennzeichnet, dass sie *nicht* gemessen wird; wird sie doch gemessen und nachträglich statistisch kontrolliert (z.B. per Kovarianzanalyse), spricht man von einer *Kontrollvariablen*, nicht mehr von einer (unkontrollierten) Störvariablen im engeren Sinne.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: stoervariable-kontrollvariable
+extype: schoice
+exsolution: 10000
+exshuffle: 5

@@ -1,0 +1,38 @@
+Question
+========
+Eine Forscherin plant eine reine Beobachtungsstudie: Sie wertet anonym zugängliche Bibliotheksstatistiken aus, um den Zusammenhang von Bildschirmzeit und Konzentrationsfähigkeit zu untersuchen. Für die teilnehmenden Personen entstehen dabei keinerlei Belastungen, die über das Alltagsrisiko hinausgehen. Welche Aussage zur Einwilligung der Versuchspersonen (VP) trifft in diesem Fall zu?
+
+Answerlist
+----------
+* Da es sich um „no risk research“ bzw. „minimal risk research“ handelt, kann auf eine umfangreiche Aufklärung und informierte Einwilligung verzichtet werden.
+* Da personenbezogene Daten erhoben werden, ist unabhängig vom Risiko immer eine ausführliche informierte Einwilligung nötig.
+* Da es sich um eine Beobachtungsstudie handelt, ist grundsätzlich nie eine Einwilligung nötig, unabhängig vom Risiko.
+* Da ein kausaler Zusammenhang untersucht wird, handelt es sich automatisch um „greater than minimal risk research“, weshalb eine schriftliche Einverständniserklärung zwingend ist.
+* Die Entscheidung über Aufklärungspflicht liegt allein bei der Ethikkommission und lässt sich nicht aus dem Risiko der Studie ableiten.
+
+Solution
+========
+Laut Kapiteltext gilt: Studien, die für die Versuchsperson keinerlei bzw. nur dem Alltag entsprechende Belastungen mit sich bringen („no risk research“ bzw. „minimal risk research“), erfordern keine umfangreiche Aufklärung und informierte Einwilligung. Das im Fragetext beschriebene Beispiel entspricht genau diesem Fall (vgl. Beispiel „Bildschirmzeit und Merkfähigkeit“ im Kapitel), weshalb die erste Option korrekt ist.
+
+Die zweite Option verwechselt das Kriterium: Nicht die Art der Daten (personenbezogen oder nicht), sondern das Ausmaß der Belastung entscheidet über die Aufklärungspflicht; zudem wertet die Forscherin hier ohnehin nur anonym zugängliche Daten aus.
+
+Die dritte Option ist falsch, weil Beobachtungsstudien nicht grundsätzlich von der Einwilligungspflicht ausgenommen sind – bei „greater than minimal risk“ ist auch bei Beobachtungsstudien informierte Einwilligung nötig.
+
+Die vierte Option beruht auf einem Denkfehler: Ob ein kausaler Zusammenhang untersucht wird, sagt nichts über das Belastungsrisiko der Teilnahme aus; das Beispiel im Kapitel zeigt explizit, dass eine solche Studie „no risk“ sein kann.
+
+Die fünfte Option ist falsch, weil im Kapitel gerade das Belastungsrisiko (nicht die Ethikkommission per se) als Kriterium für die Aufklärungspflicht genannt wird; eine Ethikkommission wird ohnehin erst bei möglichen Einwänden/Bedenken konsultiert.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: no-risk-research-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

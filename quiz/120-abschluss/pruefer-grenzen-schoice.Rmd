@@ -1,0 +1,30 @@
+Question
+========
+Studierende fragen, ob der Prüfer ihr R-Skript anschauen und ihnen rückmelden kann, ob sie "auf dem richtigen Weg" sind. Warum lehnt das Kapitel eine pauschale Rückmeldung dieser Art ab?
+
+Answerlist
+----------
+* Weil es einem Prüfer nicht zulässig ist, die Prüfungsleistung vorab zu korrigieren
+* Weil der Prüfer aus Zeitgründen grundsätzlich keine Fragen von Studierenden beantwortet
+* Weil R-Skripte aus rechtlichen Gründen nicht per E-Mail verschickt werden dürfen
+* Weil eine Rückmeldung nur nach Abschluss der gesamten Notenvergabe erlaubt ist
+* Weil ausschließlich die Zweitprüfer:in inhaltliche Rückmeldungen geben darf
+
+Solution
+========
+Das Kapitel begründet die Ablehnung explizit damit, dass es einem Prüfer nicht zulässig ist, die Prüfungsleistung vorab zu korrigieren; deshalb sind pauschale Fragen wie "Passt das so?" schwierig zu beantworten. Das ist die korrekte Begründung. Dass der Prüfer grundsätzlich keine Fragen beantwortet, widerspricht dem Kapitel direkt, denn es werden zwei konkrete Wege genannt, wie doch geholfen werden kann (konkrete Fragen stellen, Hilfestellungen nutzen). Eine rechtliche Einschränkung beim Versand von R-Skripten per E-Mail wird im Kapitel nicht erwähnt und ist nicht der genannte Grund. Eine zeitliche Sperre bis nach Abschluss der Notenvergabe wird im Text nicht angesprochen. Die Zuständigkeit einer Zweitprüfer:in für inhaltliche Rückmeldungen ist im Kapitel ebenfalls kein Thema.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: pruefer-grenzen
+extype: schoice
+exsolution: 10000
+exshuffle: 5

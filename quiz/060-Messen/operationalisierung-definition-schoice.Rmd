@@ -1,0 +1,37 @@
+Question
+========
+Was versteht man in der Psychologie unter *Operationalisierung* eines Konstrukts?
+
+Answerlist
+----------
+* Die genaue Festlegung, anhand welcher (beobachtbaren) Operationen ein nicht direkt beobachtbares Konstrukt messbar gemacht wird.
+* Die statistische Überprüfung, ob eine Skala reliabel und valide ist.
+* Die Umrechnung von Rohwerten eines Tests in Prozentränge oder T-Werte.
+* Die Formulierung einer Forschungshypothese auf Basis eines theoretischen Konstrukts.
+* Die Auswahl einer Stichprobe, die für die Zielpopulation repräsentativ ist.
+
+Solution
+========
+Operationalisierung ist der Vorgang des genauen Beschreibens, anhand welcher Operationen ein Konstrukt beobachtbar und damit messbar gemacht wird. Da psychologische Variablen (Konstrukte) in der Regel nicht direkt beobachtbar sind, ist die Operationalisierung ein notwendiger Zwischenschritt zwischen theoretischem Konstrukt und Messmodell (vgl. Abbildung "Vom Konstrukt zum Messmodell" im Kapitel). Damit ist die erste Antwortoption korrekt.
+
+Zu den Distraktoren:
+
+* "Statistische Überprüfung von Reliabilität und Validität" beschreibt die *Prüfung der Messgüte*, nicht die Operationalisierung selbst; das sind zwei verschiedene Schritte im Forschungsprozess.
+* "Umrechnung in Prozentränge/T-Werte" ist eine *Normierung* bzw. Standardisierung von Testwerten, kein Bestandteil der Operationalisierung.
+* "Formulierung einer Forschungshypothese" ist ein eigenständiger, der Operationalisierung vorgelagerter bzw. paralleler Schritt der Theoriebildung, nicht die Operationalisierung selbst.
+* "Auswahl einer repräsentativen Stichprobe" betrifft die Stichprobenziehung, ein Aspekt des Untersuchungsdesigns, hat aber nichts mit der Frage zu tun, wie ein Konstrukt in beobachtbare Operationen übersetzt wird.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: operationalisierung-definition-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

@@ -1,0 +1,38 @@
+Question
+========
+Im Bayes-Modell zur Bringtnixtin-Studie wird für den Parameter `g` unter anderem die Kennzahl `pd` (probability of direction) berichtet. Was gibt `pd` an?
+
+Answerlist
+----------
+* Die (laut Modell geschätzte) Wahrscheinlichkeit, dass der Effekt in der Population dasselbe Vorzeichen hat wie der Punktschätzer (also entweder positiv oder negativ ist).
+* Den Anteil der Posteriori-Verteilung, der innerhalb der Region praktischer Äquivalenz (ROPE) liegt.
+* Die Wahrscheinlichkeit, dass die Nullhypothese in der Population exakt zutrifft.
+* Den p-Wert eines klassischen (frequentistischen) Signifikanztests für den Parameter `g`.
+* Den Anteil erklärter Varianz, den die UV `g` zur AV beiträgt.
+
+Solution
+========
+Das Kapitel definiert `pd` explizit: "`pd` gibt die Wahrscheinlichkeit (laut Modell) an, dass der Effekt in der Population negativ bzw. positiv ist (d.h. gleich dem Vorzeichen des Punktschätzers)." Im Beispiel ist der Punktschätzer von `g` negativ, entsprechend gibt `pd` die Wahrscheinlichkeit an, dass der wahre Effekt ebenfalls negativ ist. Das entspricht der ersten Antwortoption.
+
+Zu den Distraktoren:
+
+* "Anteil der Posteriori-Verteilung im ROPE": Das ist die Definition des ROPE-Anteils, nicht von `pd`. `pd` bezieht sich auf das *Vorzeichen* des Effekts, nicht auf dessen praktische Bedeutsamkeit relativ zu einem Nullbereich.
+* "Wahrscheinlichkeit, dass Nullhypothese exakt zutrifft": `pd` bewertet die Richtung des Effekts (positiv/negativ), nicht die Wahrscheinlichkeit eines exakten Nullwerts – ein exakter Punktwert hat in einer stetigen Posteriori-Verteilung ohnehin Wahrscheinlichkeit nahe Null.
+* "p-Wert eines frequentistischen Tests": `pd` ist eine bayesianische Kennzahl aus der Posteriori-Verteilung, konzeptionell verwandt, aber nicht identisch mit einem klassischen p-Wert aus der Frequentistik.
+* "Anteil erklärter Varianz": Das beschreibt $R^2$ (Modellgüte), eine völlig andere Kennzahl als `pd`, die sich auf die Richtung des Effekts und nicht auf die Erklärungskraft des Gesamtmodells bezieht.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: probability-of-direction-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5
+excategory: Modellieren

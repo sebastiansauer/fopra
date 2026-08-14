@@ -1,0 +1,50 @@
+```{r, include=FALSE}
+lower <- 50 * 2
+upper <- 100 * 2
+stopifnot(lower == 100, upper == 200)
+```
+
+Question
+========
+Für eine *beobachtende* Studie (kein Experiment) wird bei Einzelarbeiten eine Stichprobengröße von ca. 50 bis 100 Fällen als Anspruch an eine gute Arbeit genannt. Für Gruppenarbeiten ist laut den Prüfungshinweisen der Faktor 2 auf diese Angaben anzulegen.
+
+Welche Stichprobengröße ergibt sich demnach als Richtwert für eine beobachtende Studie im Rahmen einer Gruppenarbeit?
+
+Answerlist
+----------
+* Ca. 100 bis 200 Fälle
+* Ca. 50 bis 100 Fälle
+* Ca. 40 bis 60 Fälle
+* Ca. 25 bis 50 Fälle
+* Ca. 40 Fälle
+
+Solution
+========
+Der Richtwert für Einzelarbeiten bei beobachtenden Studien liegt bei 50 bis 100 Fällen. Der Faktor 2 für Gruppenarbeiten wird multiplikativ auf beide Grenzen angewendet:
+
+- Untergrenze: $50 \times 2 = 100$
+- Obergrenze: $100 \times 2 = 200$
+
+Damit ergibt sich ein Richtwert von 100 bis 200 Fällen für Gruppenarbeiten (Antwort 1).
+
+Zu den Distraktoren:
+
+- Antwort 2 (50 bis 100) entsteht, wenn der Faktor 2 für Gruppenarbeiten schlicht vergessen und der Einzelarbeits-Wert unverändert übernommen wird.
+- Antwort 3 (40 bis 60) entsteht, wenn fälschlich die Werte für das *experimentelle Between-Design* (20 bis 30 Fälle bei Einzelarbeiten) statt der Werte für beobachtende Studien verdoppelt werden ($20 \times 2 = 40$; $30 \times 2 = 60$).
+- Antwort 4 (25 bis 50) entsteht, wenn der Faktor 2 fälschlich als Division statt als Multiplikation interpretiert wird ($50 \div 2 = 25$; $100 \div 2 = 50$).
+- Antwort 5 (40 Fälle) entsteht, wenn fälschlich der Wert für das *experimentelle Within-Design* bei Einzelarbeiten (20 Fälle, als Einzelwert) verdoppelt wird ($20 \times 2 = 40$) und als vermeintliche Antwort für die beobachtende Gruppenarbeit angegeben wird.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: stichprobengroesse-gruppenarbeit-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

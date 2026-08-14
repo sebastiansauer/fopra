@@ -1,0 +1,36 @@
+Question
+========
+Im Kapitel wird `across()` (aus `tidyverse`) eingeführt, um z.B. `parse_number()` auf mehrere Item-Spalten (`i01` bis `i03`) gleichzeitig anzuwenden, statt jede Spalte einzeln von Hand zu bearbeiten. In diesem Zusammenhang wird auch der Begriff "Schleife" definiert. Welche Aussage beschreibt das Konzept einer Schleife am treffendsten, wie es im Kapitel verwendet wird?
+
+Answerlist
+----------
+* Eine Schleife führt einen Befehl mehrfach wiederholt aus, z.B. dieselbe Spalten-Operation nacheinander auf mehrere Spalten einer Tabelle, wie es `across()` für mehrere Item-Spalten leistet.
+* Eine Schleife bezeichnet das einmalige Anwenden mehrerer unterschiedlicher Befehle auf eine einzelne Spalte einer Tabelle.
+* Eine Schleife ist ein anderer Ausdruck für das Zusammenführen zweier Tabellen mittels `bind_rows()` oder `bind_cols()`.
+* Eine Schleife bezeichnet ausschließlich die fehlerfreie Umwandlung von Faktor- in Character-Variablen mit `as.character()`.
+* Eine Schleife bedeutet, dass ein Befehl genau einmal auf die gesamte Tabelle angewendet wird, ohne dass eine Wiederholung stattfindet.
+
+Solution
+========
+Im Kapitel wird eine Schleife definiert als "eine Operation, die einen Befehl mehrfach (wiederholt) ausführt", wobei sich die Wiederholung im Kontext der Datenanalyse oft auf eine Spalten-Operation bezieht, die für mehrere Spalten wiederholt wird. `across(i01:i03, parse_number)` ist genau ein solches Beispiel: derselbe Befehl (`parse_number`) wird wiederholt auf mehrere Spalten (`i01`, `i02`, `i03`) angewendet. Damit ist Antwort 1 richtig.
+
+Zu den Distraktoren:
+* Antwort 2 kehrt die Definition um: Bei einer Schleife wird typischerweise *ein* Befehl auf *mehrere* Spalten angewendet, nicht mehrere unterschiedliche Befehle auf eine einzelne Spalte.
+* Antwort 3 verwechselt das Konzept "Schleife" mit dem im Kapitel separat behandelten Thema des Zusammenführens von Tabellen (`bind_rows()`/`bind_cols()`); beides hat inhaltlich nichts miteinander zu tun.
+* Antwort 4 verengt das allgemeine Konzept "Schleife" fälschlich auf ein einzelnes Beispiel (Typumwandlung), obwohl das Kapitel die Schleife allgemein als wiederholte Ausführung eines Befehls definiert, unabhängig vom konkreten Befehl.
+* Antwort 5 widerspricht der Definition direkt: Eine Schleife zeichnet sich gerade durch die *wiederholte* Ausführung aus, nicht durch eine einmalige Anwendung.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: across-schleife-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

@@ -1,0 +1,37 @@
+Question
+========
+Betrachten Sie den Satz: "Die Stichprobe der Studie von Müller (2023) ist klein, was ihre Aussagekraft stark einschränkt." Wie sind die beiden Teile dieses Satzes gemäß der im Kapitel eingeführten Unterscheidung von Behauptung, Bewertung und Beleg einzuordnen?
+
+Answerlist
+----------
+* "Die Stichprobe... ist klein" ist eine Behauptung (Tatsachenaussage); "was ihre Aussagekraft stark einschränkt" ist eine Bewertung, die durch einen Beleg gestützt werden sollte.
+* Beide Teile des Satzes sind Behauptungen, da beide auf Fakten aus der Studie von Müller (2023) beruhen.
+* Beide Teile des Satzes sind Bewertungen, da jede Aussage über eine andere Studie subjektiv gefärbt ist.
+* "Die Stichprobe... ist klein" ist ein Beleg für die nachfolgende Bewertung, da Belege laut Kapitel immer zuerst genannt werden müssen.
+* "was ihre Aussagekraft stark einschränkt" ist eine Behauptung, "Die Stichprobe... ist klein" ist eine Bewertung, da Zahlenangaben im Kapitel grundsätzlich als bewertend gelten.
+
+Solution
+========
+Laut Kapitel ist eine Behauptung ein Satz, der eine (vermeintliche) Tatsache angibt (z.B. "Die Stichprobe der Studie von Müller (2023) ist klein" – eine überprüfbare Sachaussage über die Stichprobengröße). Eine Bewertung verortet eine Behauptung hingegen zwischen den Polen "gut" und "schlecht" bzw. stellt sie auf ein Kontinuum der Erstrebenswertheit; "was ihre Aussagekraft stark einschränkt" ist eine solche wertende Einordnung. Bewertungen sollten aus belegten Behauptungen resultieren, d.h. hier müsste zusätzlich noch begründet (belegt) werden, warum genau diese Stichprobengröße die Aussagekraft einschränkt.
+
+Die Distraktoren beruhen auf folgenden typischen Denkfehlern:
+
+- "Beide Teile sind Behauptungen": Ignoriert, dass der zweite Teil eine wertende Einordnung ("stark einschränkt") vornimmt und damit über eine reine Tatsachenfeststellung hinausgeht.
+- "Beide Teile sind Bewertungen": Ignoriert, dass die Stichprobengröße selbst eine überprüfbare, objektive Tatsachenaussage ist (eine Zahl bzw. deren Einordnung als "klein" kann anhand von Konventionen überprüft werden) und keine reine Werthaltung darstellt.
+- "Beleg... Belege müssen immer zuerst genannt werden": Verwechselt eine Behauptung mit einem Beleg; ein Beleg liefert laut Kapitel Gründe für eine Behauptung (z.B. ein Literaturverweis), ist hier aber gar nicht enthalten. Zudem macht das Kapitel keine Aussage über eine feste Reihenfolge "Beleg zuerst".
+- "Vertauschung Behauptung/Bewertung, weil Zahlen bewertend seien": Eine Zahlenangabe (bzw. deren einfache Charakterisierung wie "klein") ist laut Kapitel gerade ein Beispiel für eine Behauptung, keine Bewertung; Bewertungen entstehen erst durch die wertende Einordnung (hier: "schränkt stark ein").
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: behauptung-bewertung-beleg-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

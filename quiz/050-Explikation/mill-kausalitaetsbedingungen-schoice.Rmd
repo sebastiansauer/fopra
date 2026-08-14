@@ -1,0 +1,38 @@
+Question
+========
+Nach John Stuart Mill müssen im Kapitel zufolge drei Bedingungen erfüllt sein, damit eine vermeintliche Ursache tatsächlich die Ursache eines Effekts ist. Welche der folgenden Aufzählungen gibt diese drei Bedingungen korrekt wieder?
+
+Answerlist
+----------
+* (1) Es besteht ein statistischer Zusammenhang zwischen UV und AV, (2) Veränderungen der UV treten zeitlich vor Veränderungen der AV auf, (3) Alternativerklärungen für den Zusammenhang sind ausgeschlossen.
+* (1) Die Stichprobe ist randomisiert, (2) die Stichprobe ist ausreichend groß, (3) die Messinstrumente sind reliabel.
+* (1) Die UV wird experimentell manipuliert, (2) es gibt eine Kontrollgruppe, (3) die Ergebnisse sind statistisch signifikant.
+* (1) Es gibt eine Korrelation zwischen UV und AV, (2) die Korrelation ist stark (groß), (3) die Stichprobe ist repräsentativ.
+* (1) Die AV wird vor und nach dem Treatment gemessen, (2) es gibt mindestens zwei Gruppen, (3) die Gruppen sind gleich groß.
+
+Solution
+========
+Laut Kapitel nennt Mill drei notwendige Bedingungen für Kausalität: (1) *Zusammenhang* – es muss eine statistische Kovariation (z.B. Korrelation) zwischen UV und AV bestehen; (2) *zeitliche Abfolge* – Veränderungen der UV müssen zeitlich vor Veränderungen der AV auftreten; (3) *Ausschluss von Alternativerklärungen* – andere mögliche Ursachen des Zusammenhangs müssen theoretisch oder empirisch ausgeschlossen werden. Damit ist Antwortoption 1 korrekt.
+
+Distraktor 2 nennt Gütekriterien einer *guten Studie* (Randomisierung, Stichprobengröße, Reliabilität) statt der von Mill formulierten logischen Bedingungen für einen Kausalschluss – diese Aspekte helfen zwar, die dritte Mill-Bedingung (Ausschluss von Alternativerklärungen) zu erfüllen, sind aber nicht selbst die drei Bedingungen.
+
+Distraktor 3 beschreibt Merkmale eines *Experiments* (Manipulation, Kontrollgruppe, Signifikanz), vermischt also Studiendesign-Elemente mit den eigentlichen Kausalitätsbedingungen von Mill.
+
+Distraktor 4 verwechselt die erste Bedingung (irgendein Zusammenhang) fälschlich mit der zusätzlichen Forderung nach einem *starken* Zusammenhang und ersetzt die zeitliche Bedingung durch Repräsentativität, die im Kapitel nicht als Mill-Bedingung genannt wird.
+
+Distraktor 5 listet praktische Designmerkmale (Vorher-Nachher-Messung, Gruppenanzahl, Gruppengröße) auf, die für ein gutes Experiment hilfreich sein können, aber nicht den drei logischen Mill-Bedingungen entsprechen.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: mill-kausalitaetsbedingungen
+extype: schoice
+exsolution: 10000
+exshuffle: 5

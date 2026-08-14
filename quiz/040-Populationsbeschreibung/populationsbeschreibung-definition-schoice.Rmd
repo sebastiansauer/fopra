@@ -1,0 +1,38 @@
+Question
+========
+Was kennzeichnet eine Studie mit dem Erkenntnisziel *Populationsbeschreibung* im Unterschied zu einer Explikationsstudie?
+
+Answerlist
+----------
+* Sie beschreibt einen Kennwert (z.B. Mittelwert, Anteil) einer Grundgesamtheit, ohne dass dabei kausale Interpretationen von Zusammenhängen zulässig sind.
+* Sie enthält per Definition genau eine einzige Variable, während Explikationsstudien immer mehrere Variablen benötigen.
+* Sie kommt per Definition ohne jede Form von Inferenzstatistik aus, weil nur beschrieben und nichts erklärt wird.
+* Sie unterscheidet sich von einer Explikationsstudie ausschließlich durch die Stichprobengröße, nicht durch die Fragestellung.
+* Sie darf nur bei experimentellen Studien mit Treatment-Manipulation eingesetzt werden, nicht bei Beobachtungsstudien.
+
+Solution
+========
+Populationsbeschreibung ist die Umsetzung des epistemologischen Ziels "Beschreibung": Ein oder mehrere Populationsparameter (z.B. mittleres Budget, Anteilswert) werden auf Basis einer Stichprobe geschätzt. Wie im Kapitel betont wird ("Deskription ≠ Explikation"), dürfen Befunde aus einer solchen Studie nicht kausal interpretiert werden, selbst wenn die verwendete Sprache ("predict", "Zusammenhang") dies suggeriert. Damit ist die erste Antwort korrekt.
+
+Die zweite Antwort ist falsch: Der Text nennt ausdrücklich Beispiele mit 1, 2 oder mehr Variablen als Populationsbeschreibung (z.B. Vergleich des Budgets nach Bundesland und Studienrichtung mit mehreren Variablen); die Anzahl der Variablen ist kein Unterscheidungsmerkmal zur Explikation.
+
+Die dritte Antwort verwechselt Populationsbeschreibung mit reiner Deskriptivstatistik. Tatsächlich benötigt man auch bei einer Populationsbeschreibung Inferenzstatistik, um von der Stichprobe auf die Population zu schließen und die Ungewissheit der Schätzung zu quantifizieren (Schätzbereiche).
+
+Die vierte Antwort ist falsch, da der Unterschied inhaltlicher Natur ist (Ziel: Beschreiben vs. kausal Erklären) und nichts mit der Stichprobengröße zu tun hat.
+
+Die fünfte Antwort ist falsch: Im Gegenteil, Populationsbeschreibung ist gerade typischerweise mit Beobachtungsstudien (Querschnittstudien ohne Treatment) verbunden, wie im Abschnitt zu typischen Forschungsdesigns erläutert wird.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: populationsbeschreibung-definition
+extype: schoice
+exsolution: 10000
+exshuffle: 5

@@ -1,0 +1,38 @@
+Question
+========
+Das Kapitel stellt die "Methode der drei Blicke" vor, um einen Fachartikel effizient zu erschließen. Beim ersten Blick ("Die Essenz") werden Fragen wie "Was ist die Forschungsfrage des Artikels?", "Wie lautet die Antwort darauf?" und "Wie ist der Ablauf der Studie?" gestellt, ohne dabei bereits den Volltext im Detail zu lesen — im Beispiel der "Schmink-Studie" wird der erste Blick allein anhand von Titel, Abstract und Abbildungen durchgeführt.
+
+Welche Fragen gehören laut Kapitel zum **zweiten** Blick ("Die Qualität") der Methode?
+
+Answerlist
+----------
+* Sind Kausalaussagen möglich? Ist die theoretische Basis solide? Gibt es Ungereimtheiten (Intransparenz, Interessenkonflikte)?
+* Was ist die Forschungsfrage des Artikels? Wie lautet die Antwort darauf? Wie ist der Ablauf der Studie aus Sicht der Versuchsperson?
+* Auf welche Theorien und Befunde wurde zurückgegriffen? Welche empirischen Methoden wurden verwendet? Wie lauten die Ergebnisse im Detail?
+* Wie hoch ist der Journal-Impact-Faktor? Wie viele Zitationen hat der Artikel? Wurde der Artikel von einem renommierten Journal veröffentlicht?
+* Ist der Titel eine "Nebelkerze"? Ist das Abstract auf Deutsch verfügbar? Gibt es eine PDF-Version zum Download?
+
+Solution
+========
+Im Kapitel wird der zweite Blick ("Die Qualität") mit genau den Fragen definiert: "1. Sind Kausalaussagen möglich? 2. Ist die theoretische Basis solide? 3. Gibt es Ungereimtheiten (Intransparenz, Interessenskonflikte, ...)?" Diese Fragen zielen auf die Bewertung der methodischen und inhaltlichen Qualität des Artikels ab, im Unterschied zum ersten Blick (Essenz erfassen) und dritten Blick (Details vertiefen).
+
+Begründung der Distraktoren:
+- "Forschungsfrage / Antwort / Ablauf der Studie": Das sind exakt die Fragen des **ersten** Blicks ("Die Essenz"), nicht des zweiten Blicks — hier wird die Reihenfolge der drei Blicke verwechselt.
+- "Theorien und Befunde / empirische Methoden / Ergebnisse im Detail": Das sind die Fragen des **dritten** Blicks ("Die Details"), der im Kapitel nach dem Qualitäts-Blick kommt.
+- "Journal-Impact-Faktor / Zitationen / renommiertes Journal": Diese Kriterien werden im separaten Abschnitt "Was ist ein gutes Journal?" behandelt, sind dort aber ausdrücklich als nur "bedingt aussagekräftig" beschrieben und gehören nicht zur Methode der drei Blicke.
+- "Nebelkerze-Titel / deutsches Abstract / PDF-Download": Das vermischt einzelne Randbemerkungen aus dem Kapitel (z. B. zum Titel der Schmink-Studie) mit rein praktischen Zugangsfragen, die nicht Teil der definierten Fragen des zweiten Blicks sind.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: drei-blicke-methode-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

@@ -1,0 +1,44 @@
+```{r, include=FALSE}
+breite_a4 <- 210  # mm
+raster <- 9
+
+feld_breite <- breite_a4 / raster
+
+d1 <- feld_breite / 2
+d2 <- feld_breite * 2
+d3 <- breite_a4 / 3
+d4 <- 297 / raster  # Verwechslung Breite/Hoehe
+
+vals <- round(c(feld_breite, d1, d2, d3, d4), 2)
+stopifnot(length(unique(vals)) == length(vals))
+```
+
+Question
+========
+Eine A4-Seite ist `r breite_a4` mm breit. Bei der im Kapitel beschriebenen "Neunerteilung" des Satzspiegels wird die Seite in ein Raster von `r raster` $\times$ `r raster` gleich großen Feldern eingeteilt. Wie breit ist demnach ein einzelnes Feld (in mm, gerundet auf zwei Nachkommastellen)?
+
+Answerlist
+----------
+* `r round(feld_breite, 2)` mm
+* `r round(d1, 2)` mm
+* `r round(d2, 2)` mm
+* `r round(d3, 2)` mm
+* `r round(d4, 2)` mm
+
+Solution
+========
+Rechenweg: Die Feldbreite ergibt sich, indem man die Seitenbreite durch die Anzahl der Raster-Spalten teilt: $\dfrac{`r breite_a4`\text{mm}}{`r raster`} = `r round(feld_breite, 2)`$ mm. Das entspricht (bis auf Rundung) dem im Kapitel genannten Wert für den Bundsteg (23 mm) bzw. Kombinationen daraus für weitere Stege.
+
+Die Distraktoren beruhen auf folgenden typischen Denkfehlern:
+
+- `r round(d1, 2)` mm: Hier wurde das korrekte Ergebnis versehentlich noch einmal halbiert, z.B. weil fälschlich angenommen wurde, nur die halbe Seite werde gerastert.
+- `r round(d2, 2)` mm: Hier wurde das korrekte Ergebnis versehentlich verdoppelt, z.B. weil statt der einfachen Feldbreite der Abstand zweier Felder berechnet wurde.
+- `r round(d3, 2)` mm: Hier wurde fälschlich mit einem 3$\times$3-Raster statt des im Kapitel genannten 9$\times$9-Rasters ("Neunerteilung") gerechnet.
+- `r round(d4, 2)` mm: Hier wurde die Seitenhöhe (297 mm) statt der Seitenbreite (210 mm) verwendet – eine Verwechslung der beiden Seitenmaße einer A4-Seite.
+
+Meta-information
+================
+exname: neunerteilung-satzspiegel-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

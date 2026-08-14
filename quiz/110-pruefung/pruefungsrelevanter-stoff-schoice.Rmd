@@ -1,0 +1,37 @@
+Question
+========
+Wie ist laut den Prüfungshinweisen der Begriff "prüfungsrelevanter Stoff" definiert?
+
+Answerlist
+----------
+* Alles, was im Unterricht behandelt wurde, sofern es nicht explizit und schriftlich als "nicht prüfungsrelevant" gekennzeichnet ist – dazu zählen auch Hinweise auf zu lesende Literatur.
+* Ausschließlich der Inhalt des Skripts; alle mündlich im Unterricht besprochenen Zusatzinformationen sind grundsätzlich nicht prüfungsrelevant.
+* Nur die Inhalte, die der Dozent zu Beginn des Semesters in einer eigens dafür vorgesehenen schriftlichen Liste als "prüfungsrelevant" explizit aufgeführt hat.
+* Alles, was im gesamten Literaturverzeichnis des Skripts aufgeführt ist, unabhängig davon, ob konkret darauf verwiesen wurde.
+* Ausschließlich das, was in der letzten Sitzung vor der Prüfung wiederholt wurde.
+
+Solution
+========
+Im Text heißt es: "Prüfungsrelevanter Stoff ist alles, was im Unterricht behandelt wurde, sofern es nicht explizit (und schriftlich) als 'nicht prüfungsrelevant' gekennzeichnet ist." Insbesondere ist der komplette Inhalt des Skripts und sonstiger vom Dozenten eingestellter Unterlagen prüfungsrelevant, ebenso Hinweise auf zu lesende Literatur (nicht aber sonstige Literatur im Literaturverzeichnis). Damit ist Antwort 1 korrekt.
+
+Zu den Distraktoren:
+
+- Antwort 2 engt den Stoff fälschlich auf das Skript ein und schließt mündlich behandelte Inhalte pauschal aus – das widerspricht der Formulierung "alles, was im Unterricht behandelt wurde", die ausdrücklich über das Skript hinausgeht.
+- Antwort 3 kehrt die im Text beschriebene Opt-out-Logik (alles ist relevant, außer explizit ausgeschlossen) in eine Opt-in-Logik (nur explizit gelistete Inhalte sind relevant) um, die so nicht vorgesehen ist.
+- Antwort 4 verwechselt "Hinweise auf zu lesende Literatur" (relevant) mit "sonstiger Literatur im Literaturverzeichnis" (laut Text ausdrücklich *nicht* prüfungsrelevant) – im Text wird genau diese Unterscheidung getroffen.
+- Antwort 5 erfindet eine im Text nicht enthaltene zeitliche Einschränkung auf die letzte Sitzung.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: pruefungsrelevanter-stoff-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

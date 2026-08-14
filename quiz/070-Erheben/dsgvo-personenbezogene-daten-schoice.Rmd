@@ -1,0 +1,38 @@
+Question
+========
+Welche der folgenden Aussagen zum Umgang mit personenbezogenen Daten nach DSGVO (wie im Kapitel dargestellt) ist korrekt?
+
+Answerlist
+----------
+* Personenbezogene Daten umfassen neben Adress- und Kennnummerndaten auch physische Merkmale, Online-Daten (z. B. IP-Adresse) sowie psychologische Daten wie IQ- oder Persönlichkeitstestergebnisse; ihr Einbezug ist grundsätzlich nur mit Rechtsgrundlage oder Einwilligung der Person erlaubt.
+* Personenbezogene Daten sind ausschließlich Daten, die den vollständigen Namen einer Person enthalten; alle anderen Angaben gelten datenschutzrechtlich als unkritisch.
+* Sobald ein Datensatz einmal anonymisiert wurde, ist eine Re-Identifizierung der Personen prinzipiell und unter allen Umständen ausgeschlossen.
+* Das Erheben personenbezogener Daten ist innerhalb der EU immer erlaubt, solange die Daten für wissenschaftliche Zwecke genutzt werden, unabhängig von einer Rechtsgrundlage oder Einwilligung.
+* Besonders schützenswerte Daten (z. B. Gesundheitsdaten, ethnischer Hintergrund) dürfen genauso behandelt werden wie gewöhnliche personenbezogene Daten, da die DSGVO hier keine Unterscheidung trifft.
+
+Solution
+========
+Laut Kapiteltext (mit Verweis auf DSGVO Art. 4 Abs. 1) versteht man unter personenbezogenen Daten alle Daten, die einen Menschen beschreiben – dazu zählen Adressdaten, Kennnummern, Online-Daten (IP-Adresse), physische Merkmale, Kundendaten, Zeugnisse, Standortdaten sowie genetische oder psychologische Daten (z. B. IQ- oder Persönlichkeitstestergebnisse). Das Erheben, Speichern und Verarbeiten ist grundsätzlich nicht erlaubt, es sei denn, es existiert eine gesetzliche Regelung oder die Einwilligung der betroffenen Person liegt vor. Damit ist die erste Option korrekt.
+
+Die zweite Option ist zu eng gefasst: Der Kapiteltext nennt ausdrücklich viele weitere Datentypen (z. B. IP-Adresse, physische Merkmale) als personenbezogen, nicht nur den Namen.
+
+Die dritte Option widerspricht dem Text: Dort wird explizit erwähnt, dass eine Anonymisierung u. U. aufgehoben werden kann (Beispielfrage nach weiblichen, 18-jährigen Azubis in einer kleinen Abteilung), Anonymisierung ist also nicht immer irreversibel sicher.
+
+Die vierte Option ignoriert, dass laut Text personenbezogene Daten grundsätzlich nur mit Rechtsgrundlage oder Einwilligung einbezogen werden dürfen – „wissenschaftlicher Zweck“ allein reicht nicht automatisch als Rechtfertigung.
+
+Die fünfte Option ist falsch, da der Text explizit hervorhebt, dass besonders schützenswerte Daten (Gesundheit, ethnischer Hintergrund, politische/religiöse/sexuelle Einstellung) nur mit erhöhtem Datenschutzaufwand einbezogen werden dürfen (DSGVO Art. 9, 35).
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: dsgvo-personenbezogene-daten-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

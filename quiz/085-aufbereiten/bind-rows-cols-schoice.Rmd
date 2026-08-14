@@ -1,0 +1,36 @@
+Question
+========
+Sie haben in Ihrer Studie zwei experimentelle Gruppen (A und B) mit *unterschiedlichen* Versuchspersonen untersucht. Beide Gruppen haben *denselben* Fragebogen mit denselben Variablen (Spalten) ausgefüllt, sodass zwei Datensätze mit identischen Spaltennamen, aber unterschiedlichen Zeilen (Personen) vorliegen. Welche Aussage zum Zusammenführen dieser beiden Tabellen in R (`tidyverse`) trifft zu?
+
+Answerlist
+----------
+* Die beiden Tabellen sollten mit `bind_rows()` zeilenweise untereinandergehängt werden, da beide Tabellen dieselben Spalten, aber unterschiedliche Fälle enthalten.
+* Die beiden Tabellen sollten mit `bind_cols()` spaltenweise nebeneinandergehängt werden, da beide Tabellen dieselben Spalten enthalten.
+* Die beiden Tabellen sollten mit `bind_rows()` spaltenweise verheiratet werden, weil `bind_rows()` grundsätzlich für alle Arten des Zusammenführens von Tabellen zuständig ist.
+* Ein Zusammenführen ist hier prinzipiell unmöglich, weil die Tabellen unterschiedliche Personen enthalten und daher nie in eine gemeinsame Tabelle passen.
+* Die beiden Tabellen müssen zwingend per `join`-Funktion über eine ID-Spalte verbunden werden, da `bind_rows()` nur für spaltengleiche, aber zeilenidentische Tabellen geeignet ist.
+
+Solution
+========
+Im Kapitel wird unterschieden: Wenn *dieselben Variablen* (Spalten) für *unterschiedliche* Fälle (Personen) vorliegen – wie hier bei den Gruppen A und B – werden die Tabellen zeilenweise mit `bind_rows()` "untereinandergeklebt" (analog zu `tab1 %>% bind_rows(tab2)` im Beispiel mit `mtcars`). Damit ist Antwort 1 richtig.
+
+Zu den Distraktoren:
+* Antwort 2 verwechselt den beschriebenen Fall mit dem *anderen* Szenario aus dem Kapitel: `bind_cols()` ist passend, wenn *dieselben* Personen in beiden Tabellen stehen, aber *unterschiedliche* Variablen erfasst wurden – hier ist es aber umgekehrt (gleiche Variablen, unterschiedliche Personen).
+* Antwort 3 überträgt fälschlich die Funktion `bind_rows()` auch auf das spaltenweise Zusammenführen; tatsächlich ist `bind_rows()` nur für das zeilenweise Zusammenführen gedacht.
+* Antwort 4 ist ein Trugschluss: Unterschiedliche Personen in zwei Tabellen mit identischen Spalten sind genau der Standardfall für ein zeilenweises Zusammenführen; ein Zusammenführen ist hier problemlos möglich.
+* Antwort 5 überzieht die im Kapitel beschriebene Notwendigkeit eines `join()`: Ein `join()` über eine ID-Spalte ist laut Kapitel nötig, wenn Tabellen *spaltenweise* zusammengeführt werden sollen und die Sortierung/Zuordnung der Zeilen nicht von vornherein übereinstimmt (z.B. bei fehlenden oder unterschiedlich sortierten Fällen) – nicht beim hier beschriebenen zeilenweisen Zusammenführen gleicher Variablen.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: bind-rows-cols-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

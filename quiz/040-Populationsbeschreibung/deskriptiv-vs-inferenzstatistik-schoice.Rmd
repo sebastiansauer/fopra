@@ -1,0 +1,38 @@
+Question
+========
+Man befragt alle $n=200$ Studentis eines Studiengangs (Vollerhebung dieser Kohorte) danach, ob sie heimlich nachts Statistikbücher lesen. 68 von ihnen bejahen dies. Welche Aussage zum Unterschied zwischen Deskriptiv- und Inferenzstatistik trifft in diesem Kontext zu?
+
+Answerlist
+----------
+* Der Anteil von $68/200=.34$ in der befragten Gruppe ist eine deskriptivstatistische Kennzahl ohne Ungewissheit; erst wenn man von dieser Gruppe auf eine größere, nicht vollständig erfasste Population schließen möchte, kommt Inferenzstatistik (mit Ungewissheit) ins Spiel.
+* Da $n=200$ eine relativ große Stichprobe ist, handelt es sich automatisch um Inferenzstatistik, weil erst ab einer bestimmten Stichprobengröße überhaupt von Statistik gesprochen werden kann.
+* Deskriptivstatistik und Inferenzstatistik unterscheiden sich nicht in der Fragestellung, sondern nur darin, welches R-Paket zur Berechnung verwendet wird.
+* Weil alle 200 Studentis befragt wurden, benötigt man zwingend ein Konfidenzintervall, um den Anteil von 34% korrekt zu berichten.
+* Inferenzstatistik ist nur dann anwendbar, wenn die interessierende Variable kategorial (nicht metrisch) ist; für den hier berichteten Anteilswert ist daher nur Deskriptivstatistik sinnvoll.
+
+Solution
+========
+Das Kapitel führt dieses Beispiel (Anteil "heimlicher Statistikfans") explizit an: Solange man nur die befragte Gruppe selbst beschreibt (hier: Vollerhebung der 200 Studentis dieses Studiengangs), gibt es bezüglich dieser Gruppe keine Ungewissheit – das ist Deskriptivstatistik. Möchte man hingegen von dieser Stichprobe/Gruppe auf eine umfassendere Population schließen (z.B. alle Studentis in Deutschland), auf die sich die 200 Befragten nur als Teilmenge beziehen, braucht man Inferenzstatistik, die diese Verallgemeinerung mit Ungewissheit quantifiziert. Damit ist die erste Antwort korrekt.
+
+Die zweite Antwort ist falsch: Die Stichprobengröße allein entscheidet nicht darüber, ob deskriptiv oder inferenzstatistisch vorgegangen wird; entscheidend ist, ob von der erhobenen Gruppe auf eine größere, nicht vollständig erfasste Population geschlossen werden soll.
+
+Die dritte Antwort ist falsch: Der Unterschied ist inhaltlich-methodisch (Zusammenfassen vorliegender Daten vs. Verallgemeinern auf eine Population) und hat nichts mit der verwendeten Software zu tun.
+
+Die vierte Antwort ist falsch: Bei einer echten Vollerhebung der interessierenden Population (hier: exakt diese 200 Studentis, nicht mehr) gibt es keine Stichprobenungewissheit bezogen auf diese Gruppe, ein Konfidenzintervall wäre hier nicht nötig, um den Anteil in dieser Gruppe zu berichten.
+
+Die fünfte Antwort ist falsch: Inferenzstatistik ist sowohl auf kategoriale (Anteile) als auch auf metrische Variablen (Mittelwerte) anwendbar; das Skalenniveau der Variable ist kein Kriterium dafür, ob Inferenzstatistik sinnvoll ist.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: deskriptiv-vs-inferenzstatistik
+extype: schoice
+exsolution: 10000
+exshuffle: 5

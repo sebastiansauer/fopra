@@ -1,0 +1,38 @@
+Question
+========
+Für die Forschungsfrage "Wie viel Zeit verbringt ein deutscher Bürger im Schnitt am Tag am Handy?" werden die nächstbesten 100 Personen an einem Hauptbahnhof samstagabends um 23 Uhr befragt. Welche Aussage zu dieser Vorgehensweise ist zutreffend?
+
+Answerlist
+----------
+* Es handelt sich um eine Gelegenheits- bzw. Ad-hoc-Stichprobe, die vermutlich nicht repräsentativ ist, da bestimmte Gruppen (z.B. junge Menschen, ortsansässige Personen) systematisch über- oder unterrepräsentiert sein dürften.
+* Da $n=100$ Personen befragt wurden, ist die Stichprobe automatisch groß genug, um repräsentativ zu sein, unabhängig davon, wie die Personen ausgewählt wurden.
+* Diese Stichprobe ist einer Zufallsstichprobe gleichwertig, weil die Auswahl der genauen Passantinnen und Passanten dem Zufall überlassen war.
+* Repräsentativität hängt ausschließlich von der Stichprobengröße ab, nicht von der Art der Auswahl der Personen.
+* Da es sich um eine Vollerhebung aller anwesenden Personen am Hauptbahnhof handelt, ist per Definition Repräsentativität für die deutsche Bevölkerung gegeben.
+
+Solution
+========
+Die Befragung der "nächstbesten" 100 Personen an einem bestimmten Ort zu einer bestimmten Uhrzeit ist ein Lehrbuchbeispiel für eine Gelegenheits- oder Ad-hoc-Stichprobe (Auswahl nach Praktikabilität statt nach Zufallsprinzip). Wie im Kapitel ausgeführt, ist eine solche Stichprobe vermutlich nicht repräsentativ, weil z.B. junge Menschen/Nicht-Berufstätige und ortsansässige Personen zur gewählten Uhrzeit und am gewählten Ort überrepräsentiert sein dürften und sich ihr Handykonsum von der Gesamtbevölkerung unterscheiden könnte. Damit ist die erste Antwort korrekt.
+
+Die zweite Antwort ist falsch: Eine hinreichend große Stichprobengröße allein macht eine Stichprobe nicht repräsentativ; entscheidend ist, wie die Personen ausgewählt wurden (systematische Verzerrung bleibt bei jeder Stichprobengröße bestehen).
+
+Die dritte Antwort ist falsch: "Zufällig, wer gerade vorbeikommt" ist nicht dasselbe wie eine echte Zufallsstichprobe im statistischen Sinn (Ziehung mit bekannter Auswahlwahrscheinlichkeit aus der gesamten Zielpopulation). Die Auswahl ist an Ort und Zeit gebunden und daher systematisch verzerrt, keine echte Zufallsstichprobe.
+
+Die vierte Antwort ist falsch: Das Kapitel nennt als zentrales Kriterium für Repräsentativität, dass die Stichprobe der Zielpopulation im interessierenden Merkmal ähnelt bzw. die Präzision der Schätzung messbar ist – beides hängt primär von der Art der Auswahl (z.B. Zufallsstichprobe) ab, nicht allein von der Stichprobengröße.
+
+Die fünfte Antwort ist falsch: Es handelt sich nicht um eine Vollerhebung der Zielpopulation (alle deutschen Bürger), sondern nur um eine (kleine, selektive) Teilmenge von Personen an einem bestimmten Ort; eine Vollerhebung dieser lokalen Gruppe ist nicht dasselbe wie Repräsentativität für die deutsche Gesamtbevölkerung.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: adhoc-stichprobe-repraesentativitaet
+extype: schoice
+exsolution: 10000
+exshuffle: 5

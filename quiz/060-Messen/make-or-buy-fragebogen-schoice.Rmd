@@ -1,0 +1,37 @@
+Question
+========
+Sie planen eine Seminararbeit und möchten das (latente) Persönlichkeitskonstrukt "Gewissenhaftigkeit" erheben. Welche Empfehlung gibt das Kapitel zur "Make-or-buy"-Entscheidung für dieses Konstrukt?
+
+Answerlist
+----------
+* Man sollte bevorzugt auf ein bestehendes, psychometrisch geprüftes Instrument zurückgreifen, da bei selbst entwickelten Items die Gütekriterien unbekannt bzw.\ fragwürdig sind.
+* Man sollte immer ein eigenes Instrument entwickeln, weil publizierte Instrumente urheberrechtlich grundsätzlich nicht verwendet werden dürfen.
+* Die Wahl zwischen eigenem und bestehendem Instrument ist bei Persönlichkeitskonstrukten irrelevant, da beide Vorgehen gleichwertig sind.
+* Man sollte grundsätzlich mehrere selbst gestrickte Items einfach mitteln, unabhängig vom inhaltlichen Bezug der Items zueinander.
+* Da es sich um eine Seminararbeit handelt, ist grundsätzlich jede Vorgehensweise ohne Qualitätsprüfung akzeptabel.
+
+Solution
+========
+Im Kapitel wird explizit empfohlen, bei latenten (nicht direkt beobachtbaren) Konstrukten wie Persönlichkeitsvariablen möglichst kein selbst entwickeltes, sondern ein bestehendes, publiziertes Instrument mit geprüfter Qualität zu verwenden ("Bestehende Messung übernehmen"). Begründet wird das damit, dass bei selbst gestrickten Fragebögen die Gütekriterien (Reliabilität, Validität) unbekannt oder fragwürdig sind und man selbst für den Nachweis der Güte verantwortlich wäre. Die erste Antwort ist korrekt.
+
+Zu den Distraktoren:
+
+* "Immer selbst entwickeln, weil publizierte Instrumente nie verwendet werden dürfen" widerspricht dem Kapitel direkt: Nicht-kommerzielle Tests (z.\ B. von Gesis) dürfen ohne Rückfrage und Gebühr verwendet werden (Zitationspflicht bleibt bestehen), und selbst kommerzielle Tests können erworben bzw. genehmigt werden.
+* "Beide Vorgehen sind gleichwertig" widerspricht der klaren Empfehlung des Kapitels, bei latenten Persönlichkeitskonstrukten auf geprüfte Instrumente zurückzugreifen, gerade weil beide Vorgehensweisen *nicht* gleichwertig sind.
+* "Selbst gestrickte Items einfach mitteln, unabhängig vom inhaltlichen Bezug" widerspricht dem im Kapitel genannten Beispiel (Mittelwert aus "Meine Füße fühlen sich groß an" und einem Item zu Filmen/Songs), das gerade zeigt, dass ein solches Mitteln ohne inhaltlichen Bezug der Items keinen sinnvollen Kennwert ergibt.
+* "Bei einer Seminararbeit ist jede Vorgehensweise ohne Qualitätsprüfung akzeptabel" ist zu pauschal: Das Kapitel erlaubt Erleichterungen (z.\ B. bei Übersetzungen oder Verhaltensmaßen) nur in bestimmten, genannten Fällen, nicht generell für jedes selbst gestrickte Persönlichkeitsinstrument.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: make-or-buy-fragebogen-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

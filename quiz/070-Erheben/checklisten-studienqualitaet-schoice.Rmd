@@ -1,0 +1,38 @@
+Question
+========
+Im Kapitel werden zwei Checklisten zur Prüfung der Qualität einer Studie genannt: STROBE und CONSORT. Welche Aussage zur richtigen Anwendung dieser Checklisten ist korrekt?
+
+Answerlist
+----------
+* STROBE wird für Beobachtungsstudien eingesetzt, CONSORT für Experimente.
+* STROBE wird für Experimente eingesetzt, CONSORT für Beobachtungsstudien.
+* Beide Checklisten sind austauschbar und für jeden Studientyp gleichermaßen geeignet.
+* STROBE und CONSORT sind Checklisten zur Beurteilung der Datenschutzkonformität einer Studie, nicht zur allgemeinen Studienqualität.
+* STROBE und CONSORT sind Synonyme für dieselbe Checkliste, nur mit unterschiedlichem Namen in verschiedenen Ländern.
+
+Solution
+========
+Im Kapitel steht unter „Checklisten“ explizit: Für Beobachtungsstudien wird STROBE genannt, für Experimente CONSORT. Damit ist die erste Option korrekt.
+
+Die zweite Option vertauscht die Zuordnung genau umgekehrt zu der im Kapitel getroffenen Aussage.
+
+Die dritte Option ignoriert, dass die beiden Checklisten im Kapitel explizit unterschiedlichen Studiendesigns (Beobachtungsstudien vs. Experimente) zugeordnet werden – sie sind also nicht beliebig austauschbar, da sie auf unterschiedliche methodische Aspekte (z. B. Randomisierung bei Experimenten) zugeschnitten sind.
+
+Die vierte Option verwechselt den Zweck der Checklisten: Im Kapitel werden sie im Abschnitt zur „Prüfung der Qualität einer Studie“ eingeführt, nicht im Datenschutzabschnitt (DSGVO wird separat behandelt).
+
+Die fünfte Option ist falsch, da STROBE und CONSORT im Kapitel als zwei unterschiedliche, für unterschiedliche Studiendesigns entwickelte Checklisten mit eigenen Links genannt werden, nicht als bloße Namensvarianten derselben Sache.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: checklisten-studienqualitaet-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

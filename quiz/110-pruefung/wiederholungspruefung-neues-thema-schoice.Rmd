@@ -1,0 +1,37 @@
+Question
+========
+Eine Studentin ist bei einer Prüfung, die aus einer *Projektarbeit* besteht, durchgefallen und muss die Prüfung wiederholen. Was gilt laut den Prüfungshinweisen für die Wiederholungsprüfung bezüglich des Themas?
+
+Answerlist
+----------
+* Es muss ein neues Thema bearbeitet werden; das alte, nicht eingereichte Thema darf nicht weitergeführt werden.
+* Das ursprüngliche Thema muss zwingend beibehalten werden, damit die Vergleichbarkeit der Prüfungen gewahrt bleibt.
+* Die Studentin darf frei wählen, ob sie das alte Thema weiterführt oder ein neues Thema bearbeitet.
+* Ein neues Thema ist nur dann erforderlich, wenn der Dozent dies ausdrücklich verlangt; andernfalls gilt automatisch das alte Thema.
+* Die Wahl des Themas entfällt bei einer Wiederholungsprüfung ersatzlos, da nur noch eine mündliche Prüfung stattfindet.
+
+Solution
+========
+Laut den Prüfungshinweisen gilt: Handelt es sich bei der Prüfung um eine Projektarbeit (oder eine vergleichbare Leistung), so ist als Wiederholungsprüfung ein *neues Thema* zu bearbeiten. Das "alte" (nicht eingereichte) Thema darf *nicht* weitergeführt werden, da sonst die Bearbeitungszeit unzulässig lang wäre (z. B. ein ganzes Jahr, wenn man Vorarbeiten aus dem ursprünglichen Versuch weiterverwendet). Damit ist Antwort 1 korrekt.
+
+Zu den Distraktoren:
+
+- Antwort 2 unterstellt fälschlich, das *alte* Thema müsse beibehalten werden – das ist das genaue Gegenteil der tatsächlichen Regel und verwechselt vermutlich die Regel zur inhaltlichen/formalen Gleichwertigkeit der Wiederholungsprüfung (die sich auf Anspruch/Stoff, nicht auf das konkrete Thema bezieht) mit einer Themenbindung.
+- Antwort 3 unterstellt eine freie Wahlmöglichkeit, die im Text nicht vorgesehen ist; die Regel ist verbindlich formuliert ("ist ... zu bearbeiten"), keine Kann-Bestimmung.
+- Antwort 4 erfindet eine Ausnahmeregelung ("nur wenn der Dozent dies verlangt"), die im Text nicht existiert; die Pflicht zum neuen Thema gilt grundsätzlich, ohne Sonderfall.
+- Antwort 5 vermischt die Regelung mit einer nicht existierenden Aussage zum Prüfungsformat (mündliche Prüfung); im Text ist von der Themenwahl, nicht vom Prüfungsformat die Rede.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: wiederholungspruefung-neues-thema-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

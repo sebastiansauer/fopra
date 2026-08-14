@@ -1,0 +1,36 @@
+Question
+========
+Ein Umfrage-Tool exportiert Spaltennamen wie `Was.ist.Ihr.Geschlecht?` und `Ich.habe.viele.Freunde.` (also den vollständigen Frage- bzw. Itemtext). Warum sollten solche Spaltennamen vor der weiteren Analyse in R in kürzere, "brave" Namen wie `geschlecht` oder `extraversion01` umbenannt werden?
+
+Answerlist
+----------
+* Lange, aus dem Itemtext generierte Spaltennamen folgen häufig nicht den R-Vorschriften für "brave" Spaltennamen und führen dadurch beim Programmieren zu unnötigem Ärger, weshalb kürzere, eindeutige Namen praktischer sind.
+* Kurze Spaltennamen sind zwingend erforderlich, weil R-Funktionen wie `mutate()` oder `filter()` technisch nur mit Spaltennamen bis zu einer Länge von 10 Zeichen arbeiten können.
+* Das Umbenennen von Spaltennamen ist ausschließlich aus ästhetischen Gründen sinnvoll und hat keinerlei praktischen Nutzen für die weitere Datenverarbeitung.
+* R kann Spalten mit Sonderzeichen wie `?` im Namen grundsätzlich nicht einlesen, weshalb das Umbenennen der einzige Weg ist, die Daten überhaupt in R zu laden.
+* Lange Spaltennamen sollten nur deshalb umbenannt werden, weil sie sonst nicht korrekt in einer `gt()`-Tabelle dargestellt werden können.
+
+Solution
+========
+Im Kapitel heißt es wörtlich, dass solche langen Spaltennamen "unpraktisch" sind "und nicht den R-Vorschriften für 'brave' Spaltennamen folgen -- Ärger ist vorprogrammiert". Kürzere, sprechende Namen wie `geschlecht`, `alter`, `extraversion01` und `extraversion02` erleichtern die weitere Arbeit mit `tidyverse`-Funktionen (z.B. beim Ansprechen einzelner Spalten in `select()` oder `mutate()`) erheblich. Damit ist Antwort 1 richtig.
+
+Zu den Distraktoren:
+* Antwort 2 erfindet eine technische Zeichenlimit-Regel, die im Kapitel nicht genannt wird und so nicht existiert; R-Spaltennamen können durchaus länger als 10 Zeichen sein, solange sie den Namenskonventionen entsprechen.
+* Antwort 3 unterschätzt den praktischen Nutzen: Das Kapitel betont ausdrücklich den *praktischen* (nicht bloß ästhetischen) Vorteil, da unpraktische Spaltennamen beim Programmieren tatsächlich Probleme (Fehler, Sonderzeichen-Handling) verursachen.
+* Antwort 4 übertreibt die Konsequenz: R kann solche Spaltennamen durchaus einlesen (das Beispiel im Kapitel zeigt genau das mittels `tribble()`), sie sind lediglich im Umgang unpraktisch, nicht technisch unlesbar.
+* Antwort 5 verengt den Grund fälschlich auf die Darstellung in einer `gt()`-Tabelle; diese Funktion dient im Kapitel nur der Anzeige des Beispiels, ist aber nicht der eigentliche Grund für das Umbenennen.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: spaltennamen-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

@@ -1,0 +1,30 @@
+Question
+========
+Laut Kapitel sollten für eine gute Reproduzierbarkeit einer Studie mehrere Dinge zusammen mit der Publikation eingereicht werden. Welche der folgenden Aufzählungen entspricht am ehesten den im Kapitel genannten wesentlichen Faktoren für Reproduzierbarkeit?
+
+Answerlist
+----------
+* Rohdaten (inkl. Codebook), Analyseskript, Stimuli (falls nicht öffentlich verfügbar), Messinstrumente (falls nicht öffentlich verfügbar), Dokumentation des Vorgehens
+* Nur der finale Forschungsbericht sowie eine Zusammenfassung der Ergebnisse in Tabellenform
+* Ausschließlich die p-Werte und Effektgrößen aller durchgeführten Tests
+* Nur die bereinigten (transformierten) Daten, da Rohdaten aus Datenschutzgründen generell nicht weitergegeben werden dürfen
+* Nur der R-Code der Modellierung, da Rohdaten und Dokumentation für die Nachvollziehbarkeit nicht relevant sind
+
+Solution
+========
+Im Kapitel werden als wesentliche Faktoren für Reproduzierbarkeit explizit genannt: die Rohdaten (inkl. Codebook), das Analyseskript, die Stimuli (sofern nicht öffentlich verfügbar), die Messinstrumente (sofern nicht öffentlich verfügbar) sowie die Dokumentation des Vorgehens. Die erste Option zählt genau diese fünf Punkte auf und ist daher korrekt.
+
+Die zweite Option ist unvollständig: Ein finaler Bericht mit Ergebnistabelle allein erlaubt keine Nachvollziehbarkeit der Analyseschritte, da weder Rohdaten noch Skript vorliegen.
+
+Die dritte Option verwechselt die Angabe von Kennzahlen (p-Werte, Effektgrößen) mit Reproduzierbarkeit; diese Kennzahlen sagen nichts darüber aus, wie sie zustande kamen, und ersetzen nicht Rohdaten oder Skript.
+
+Die vierte Option enthält einen typischen Trugschluss: Rohdaten können (ggf. anonymisiert oder unter kontrolliertem Zugang) durchaus geteilt werden; ein pauschaler Verzicht auf Rohdaten widerspricht dem im Kapitel betonten Transparenzgedanken.
+
+Die fünfte Option unterschätzt die Bedeutung von Rohdaten und Dokumentation: Ohne Rohdaten und eine Beschreibung des Vorgehens lässt sich eine Analyse nicht nachvollziehen, selbst wenn der Modellierungscode vorliegt.
+
+Meta-information
+================
+exname: reproduzierbarkeit-bestandteile-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

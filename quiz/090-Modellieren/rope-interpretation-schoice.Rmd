@@ -1,0 +1,38 @@
+Question
+========
+Das ROPE-Verfahren ("Region of Practical Equivalence") prüft eine "Praktisch-Null-Hypothese". Welche Aussage beschreibt korrekt, was dabei geprüft wird?
+
+Answerlist
+----------
+* Es wird geprüft, welcher Anteil des Posteriori-Intervalls (z. B. des 95%-HDI) in einen Bereich "vernachlässigbar kleiner" Parameterwerte um die Null herum fällt.
+* Es wird geprüft, ob der Punktschätzer exakt gleich Null ist.
+* Es wird geprüft, wie groß die Stichprobe sein müsste, damit ein Effekt statistisch bedeutsam wird.
+* Es wird geprüft, ob die Residuen des Modells normalverteilt sind.
+* Es wird geprüft, welcher Anteil der Posteriori-Verteilung positiv bzw. negativ ist, unabhängig von der Effektgröße.
+
+Solution
+========
+Laut Definition im Kapitel wird beim ROPE geprüft, "welcher Anteil des Posteriori-Intervalls zu einem Bereich 'vernachlässigbar kleiner' Parameterwerte" gehört – also ob ein Bereich "Null plus/minus ein bisschen" im Hauptbereich (z. B. 95%-HDI) enthalten ist. Im Bringtnixtin-Beispiel liegen z. B. 3% des 95%-HDI im ROPE-Bereich. Das entspricht der ersten Antwortoption.
+
+Zu den Distraktoren:
+
+* "Punktschätzer exakt gleich Null": Das beschreibt eine viel strengere, kaum je erfüllbare Prüfung und entspricht nicht dem ROPE-Konzept, das einen ganzen *Bereich* um die Null und den *Anteil* der Verteilung darin betrachtet, nicht einen einzelnen Punktwert.
+* "Nötige Stichprobengröße für Signifikanz": Das verwechselt ROPE mit einer Poweranalyse; ROPE bewertet die vorliegende Posteriori-Verteilung, nicht die für zukünftige Signifikanz benötigte Stichprobengröße.
+* "Normalverteilung der Residuen": Das ist eine Modellannahme-Prüfung (Modelldiagnostik), hat aber nichts mit der inhaltlichen Frage zu tun, ob ein Effekt praktisch bedeutsam ist.
+* "Anteil positiv/negativ, unabhängig von Effektgröße": Das beschreibt eher die Kennzahl `pd` (probability of direction), die das Vorzeichen des Effekts betrifft, nicht dessen praktische Bedeutsamkeit im Sinne des ROPE.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: rope-interpretation-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5
+excategory: Modellieren

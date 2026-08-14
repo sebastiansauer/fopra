@@ -1,0 +1,36 @@
+Question
+========
+Welche Schrittfolge empfiehlt das Kapitel für die Kausalanalyse in der Praxis (z. B. bei einer Qualifizierungsarbeit)?
+
+Answerlist
+----------
+* Literatur zum Kausalzusammenhang zwischen UV und AV lesen, passende DAGs bei Dagitty zeichnen, sich die zu kontrollierenden Variablen ausgeben lassen.
+* Zunächst die Daten erheben, danach explorativ nach signifikanten Korrelationen suchen, anschließend eine Kausalgeschichte dazu konstruieren.
+* Ein Strukturgleichungsmodell schätzen, danach die Modellgüte (Fit-Indizes) prüfen, abschließend die Literatur zur Interpretation heranziehen.
+* Eine Poweranalyse durchführen, die Stichprobengröße festlegen, danach die Datenerhebung starten.
+* Die Hypothesen präregistrieren, danach die Datenerhebung durchführen, abschließend die Voranalyse der Literatur nachholen.
+
+Solution
+========
+Das Kapitel nennt explizit die Reihenfolge: (1) Literatur zu den Kausaleffekten zwischen UV und AV lesen, (2) bei Dagitty passende DAGs zeichnen, (3) sich von Dagitty die zu kontrollierenden Variablen angeben lassen, um den Kausaleffekt zu identifizieren.
+
+Zu den Distraktoren:
+- Option 2 beschreibt ein rein datengetriebenes, explorative Vorgehen ("HARKing"), das im Kapitel nicht empfohlen wird und der theoriegeleiteten DAG-Logik widerspricht.
+- Option 3 beschreibt das Vorgehen bei Strukturgleichungsmodellen (SEM), das im Kapitel nicht behandelt wird; zudem wird dort die Literatur erst am Ende statt zu Beginn herangezogen.
+- Option 4 beschreibt die Planung der Stichprobengröße (Poweranalyse), ein eigenständiges Thema, das mit der im Kapitel beschriebenen DAG-basierten Identifizierbarkeitsprüfung nichts zu tun hat.
+- Option 5 nennt zwar sinnvolle Schritte einer Studie (Präregistrierung), aber in der falschen, unplausiblen Reihenfolge (Literatur erst nach der Datenerhebung), was der im Kapitel beschriebenen Logik widerspricht.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: praxis-schritte-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

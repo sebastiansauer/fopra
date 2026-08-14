@@ -53,7 +53,7 @@ Kurz gesagt: Sie lernen, eine echte, eigene Studie zu erstellen.$\square$
 ### Was lerne ich hier und wozu ist das gut?
 
 
-Ein Forschungprojekt ist das vielleicht schönste Projekt in Ihrem Studiengang: 
+Ein Forschungsprojekt ist das vielleicht schönste Projekt in Ihrem Studiengang: 
 Es vereint echtes Problemlösen mit Kreativität und wohl fundierter Analyse. 
 Sie haben viele Freiheitsgrade: 
 Führen Sie eine echte Studie durch, unterstützt von den Dozentis 
@@ -255,7 +255,7 @@ Hinweise zu Software zum gemeinsamen Bearbeiten von Dokumenten und Lernstrategie
 
 Im Live-Unterricht werden Schwerpunkte auf bestimmte Themen gesetzt.
 Im Rahmen Ihrer individuellen Vor- und Nachbereitung des Live-Unterrichts sollten Sie nicht nur die Schwerpunkte des Live-Unterrichts, sondern alle Inhalte des Skripts erarbeiten.
-Für die Prüfung wird die komplette Kenntnis der Inhalte des Skripts sowie sonstiger im Unterricht behandelter Themen vorausausgesetzt.
+Für die Prüfung wird die komplette Kenntnis der Inhalte des Skripts sowie sonstiger im Unterricht behandelter Themen vorausgesetzt.
 [Hier](https://hinweisbuch.netlify.app/) finden Sie allgemein Hinweise zu diesem Modul.
 [Hier](https://hinweisbuch.netlify.app/110-hinweise-didaktik-frame) finden Sie didaktische Hinweise zu diesem Modul.
 

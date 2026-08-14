@@ -1,0 +1,30 @@
+Question
+========
+Im Kapitel wird der Unterschied zwischen Deskriptiv- und Inferenzstatistik anhand des Stichprobenmittelwerts erläutert. Welche Aussage beschreibt diesen Unterschied korrekt?
+
+Answerlist
+----------
+* Die Deskriptivstatistik fasst die vorliegenden Stichprobendaten zusammen (z.B. als Mittelwert), während die Inferenzstatistik angibt, wie (un)genau dieser Stichprobenkennwert den entsprechenden Populationsparameter schätzt.
+* Deskriptivstatistik und Inferenzstatistik sind zwei Namen für dasselbe Verfahren; der Unterschied liegt nur in der Formulierung des Ergebnisberichts.
+* Die Deskriptivstatistik schätzt Populationsparameter mit Unsicherheitsangaben, während die Inferenzstatistik nur die Stichprobe beschreibt.
+* Die Inferenzstatistik wird nur bei sehr großen Stichproben benötigt, bei kleinen Stichproben reicht die Deskriptivstatistik völlig aus.
+* Die Deskriptivstatistik befasst sich ausschließlich mit kategorialen Variablen, die Inferenzstatistik ausschließlich mit metrischen Variablen.
+
+Solution
+========
+Im Kapitel heißt es sinngemäß: Eine einzelne Stichprobe schätzt den Mittelwert der Population ($\mu$) nur ungenau; daher braucht man eine Angabe, wie (un)genau der Stichprobenkennwert den wahren Populationswert schätzt – genau das leistet die Inferenzstatistik, während die Deskriptivstatistik die Stichprobendaten selbst zusammenfasst. Die erste Option gibt diesen Unterschied korrekt wieder.
+
+Die zweite Option ist falsch, weil das Kapitel die beiden Begriffe klar als unterschiedliche Aufgaben beschreibt (Zusammenfassen der Stichprobe vs. Schätzung der Populationsgenauigkeit), nicht als Synonyme.
+
+Die dritte Option vertauscht die beiden Begriffe genau umgekehrt zur im Kapitel gegebenen Definition – tatsächlich ist es die Inferenzstatistik, die Populationsparameter mit Unsicherheitsangaben schätzt.
+
+Die vierte Option beruht auf einem Denkfehler zur Stichprobengröße: Das Kapitel betont im Gegenteil, dass die Schätzung bei kleineren Stichproben ungenauer ist ("je kleiner die Stichprobe, desto ungenauer") und daher Inferenzstatistik gerade auch bei kleinen Stichproben wichtig ist, nicht überflüssig.
+
+Die fünfte Option erfindet eine Zuordnung nach Skalenniveau, die im Kapitel nicht getroffen wird; sowohl Deskriptiv- als auch Inferenzstatistik werden im Kapitel für metrische und nominale Variablen gleichermaßen eingesetzt (z.B. Anteile, Mittelwerte, Korrelationen).
+
+Meta-information
+================
+exname: deskriptiv-vs-inferenzstatistik-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

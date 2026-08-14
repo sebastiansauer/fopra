@@ -1,0 +1,38 @@
+Question
+========
+Im Kapitel wird zwischen *Modellierung* und *Inferenzstatistik* unterschieden. Welche Aussage beschreibt die Funktion der Inferenzstatistik in diesem Zusammenhang korrekt?
+
+Answerlist
+----------
+* Die Inferenzstatistik ordnet den Hypothesen eine Wahrscheinlichkeit zu und weist Punktschätzern einen Schätzbereich (Intervallschätzer) zu – sie quantifiziert also die Ungewissheit einer Schätzung.
+* Die Inferenzstatistik legt fest, welche UV und Kontrollvariablen in die Modellformel aufgenommen werden.
+* Die Inferenzstatistik ersetzt die Notwendigkeit, überhaupt ein statistisches Modell wie `AV ~ UV` aufzustellen.
+* Die Inferenzstatistik liefert ausschließlich den Punktschätzer eines Modellparameters, nicht aber ein Maß für dessen Unsicherheit.
+* Die Inferenzstatistik ist ein rein deskriptives Verfahren zur Beschreibung der Stichprobe, ohne Bezug zur Population.
+
+Solution
+========
+Laut Kapitel gilt: "Inferenzstatistik ordnet den Hypothesen eine Wahrscheinlichkeit zu und weist Punktschätzern einen Schätzbereich zu." Kurz gesagt bestimmt die Inferenzstatistik die *Ungewissheit* einer Schätzung. Praktisch ist dafür wenig zusätzlich zu tun, da Modellierungsbefehle wie `stan_glm` oder `lm` die Inferenzstatistik direkt mitliefern (z. B. über `parameters()` oder `summary()`). Die erste Option trifft diese Beschreibung exakt.
+
+Zu den Distraktoren:
+
+* "Legt fest, welche Variablen in die Modellformel aufgenommen werden": Das ist die Aufgabe der *Modellierung* (der inhaltlich-theoretischen Überlegung, welche Ursachen der AV einbezogen werden), nicht der Inferenzstatistik, die erst *nach* Festlegung der Modellformel ansetzt.
+* "Ersetzt die Notwendigkeit, ein Modell aufzustellen": Das verwechselt die beiden Schritte – ohne Modell (Modellformel) gibt es nichts, dem die Inferenzstatistik Wahrscheinlichkeiten oder Schätzbereiche zuordnen könnte.
+* "Liefert nur den Punktschätzer, kein Unsicherheitsmaß": Das ist unvollständig; gerade die Ergänzung um einen Schätzbereich (z. B. ein 95%-CI) ist der Kern dessen, was Inferenzstatistik zusätzlich zum reinen Punktschätzer liefert.
+* "Rein deskriptiv, ohne Bezug zur Population": Das ist das Gegenteil der Definition – Inferenzstatistik zielt gerade auf Aussagen über die Population (Schätzung, Ungewissheit), nicht nur auf die Beschreibung der Stichprobe.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: inferenzstatistik-definition-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5
+excategory: Modellieren

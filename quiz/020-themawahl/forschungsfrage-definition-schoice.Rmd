@@ -1,0 +1,38 @@
+Question
+========
+Im Kapitel wird eine Forschungsfrage definiert als "die Frage (das Problem), die Sie in Ihrer Arbeit versuchen zu beantworten", und es wird betont, dass sie häufig die Struktur "Führt X zu Y?" hat und präziser ist als ein bloßes "Thema", aber noch nicht so konkret wie eine Hypothese.
+
+Welche der folgenden Aussagen beschreibt die Rolle und Position der Forschungsfrage im Forschungsprozess laut Kapitel am treffendsten?
+
+Answerlist
+----------
+* Die Forschungsfrage steht zwischen einem unpräzisen Thema und einer Hypothese: Sie ist präziser als ein Thema, aber weniger konkret (operationalisiert) als eine Hypothese, und eine Arbeit sollte nur eine Forschungsfrage haben.
+* Die Forschungsfrage ist mit dem Thema identisch, nur anders formuliert; beide können beliebig austauschbar verwendet werden.
+* Die Forschungsfrage ist die konkreteste, am stärksten operationalisierte Stufe und steht daher am Ende der im Kapitel gezeigten Exaktheits-Skala (nach der Statistik-Hypothese).
+* Eine Arbeit sollte mehrere Forschungsfragen parallel verfolgen, um möglichst viele Aspekte des Themas abzudecken.
+* Die Forschungsfrage muss bereits zu Beginn der Arbeit exakt feststehen und darf sich im Laufe der Literaturarbeit nicht mehr verändern.
+
+Solution
+========
+Laut Kapitel ist die Reihenfolge der Exaktheit: kein Plan &rarr; Thema &rarr; Forschungsfrage &rarr; Sachhypothese &rarr; O-Hypothese &rarr; Statistik-Hypothese (s. Abbildung zur Exaktheit). Die Forschungsfrage ist damit eine Präzisierung des Themas, aber noch nicht so konkret (operationalisiert) wie eine Hypothese. Zudem wird explizit gesagt: "Eine Arbeit sollte nur eine Forschungsfrage haben." Die erste Antwort gibt diese Zwischenposition und die Eindeutigkeitsregel korrekt wieder.
+
+Die Distraktoren beruhen auf typischen Fehlvorstellungen:
+- "Identisch mit dem Thema": Widerspricht der zentralen Kapitelaussage, dass ein Thema "viel zu unpräzise" ist und explizit von der Forschungsfrage abgegrenzt wird.
+- "Konkreteste Stufe nach der Statistik-Hypothese": Verwechselt die Reihenfolge der Exaktheits-Skala; die Forschungsfrage steht am Anfang dieser Skala, nicht am Ende.
+- "Mehrere Forschungsfragen parallel": Widerspricht der expliziten Aussage "Eine Arbeit sollte nur eine Forschungsfrage haben."
+- "Muss zu Beginn exakt feststehen": Widerspricht der Aussage, dass sich die Forschungsfrage erst "im Zuge Ihrer Beschäftigung mit dem Thema" herausschält und man sie zu Beginn "gar nicht" genau kennen kann.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: forschungsfrage-definition-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

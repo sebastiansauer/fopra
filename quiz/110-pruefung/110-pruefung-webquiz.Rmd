@@ -1,0 +1,19 @@
+---
+title: "Quiz: Pruefung"
+output: exams2forms::webquiz
+---
+
+```{r exams2forms-setup, include = FALSE}
+## package and exercises
+library("exams2forms")
+exm <- c("benotung-teilaspekte-schoice.Rmd", "gruppenarbeit-kapitelaufteilung-schoice.Rmd", 
+"inferenzstatistik-methode-schoice.Rmd", "plagiat-ueberlappung-schoice.Rmd", 
+"pruefungsrelevanter-stoff-schoice.Rmd", "stichprobengroesse-gruppenarbeit-schoice.Rmd", 
+"widerspruch-erfolgsaussicht-schoice.Rmd", "wiederholungspruefung-neues-thema-schoice.Rmd", 
+"wortumfang-hauptteil-schoice.Rmd", "zulaessige-hilfsmittel-schoice.Rmd"
+)
+```
+
+```{r exams2forms-include, echo = FALSE, message = FALSE, results="asis"}
+exams2forms(exm,  n = 1L, nsamp = NULL, edir = "/home/sebastian-sauer/Dokumente/3X_Lehre/36_Lehre-Entwicklung/08_fopra/quiz/110-pruefung")
+```

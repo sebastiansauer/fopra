@@ -1,0 +1,30 @@
+Question
+========
+Ein Student berichtet in seiner Arbeit: "Der Zusammenhang zwischen Facebook-Freunden und Extraversion ist bei $N = 50000$ hochsignifikant ($p < .001$), daher ist der Effekt stark und praktisch bedeutsam." Welcher Fehler aus der im Kapitel genannten Liste "Typische Fehler" liegt hier vor, und wie sollte man laut Kapitel stattdessen vorgehen?
+
+Answerlist
+----------
+* Es liegt der Fehler "Signifikanz = Relevanz" vor: Bei großem N wird fast alles signifikant, weshalb zusätzlich Effektgrößen (z.B. $d$, $\eta^2$, $r$) berichtet und interpretiert werden sollten.
+* Es liegt kein Fehler vor, denn ein sehr kleiner p-Wert beweist bei jeder Stichprobengröße automatisch einen praktisch bedeutsamen Effekt.
+* Es liegt der Fehler "Korrelation = Kausalität" vor, weil Signifikanz grundsätzlich nichts mit Kausalität zu tun hat.
+* Es liegt der Fehler "Falscher Test gewählt" vor, weil bei so großen Stichproben grundsätzlich kein Signifikanztest zulässig ist.
+* Es liegt der Fehler "Intransparente Datenbereinigung" vor, da bei $N = 50000$ zwangsläufig Fälle ausgeschlossen wurden.
+
+Solution
+========
+Laut Kapitel (Tabelle "Typische Fehler", Zeile 2) ist "Signifikanz = Relevanz" ein häufiger Fehler: Signifikante Ergebnisse werden automatisch als wichtig angesehen, obwohl bei großem N fast alles signifikant wird. Die empfohlene Lösung laut Kapitel ist, "Effektgrößen und praktische Bedeutung [zu] berücksichtigen" – also z.B. $d$, $\eta^2$ oder $r$ zusätzlich zum p-Wert zu berichten. Die erste Option benennt diesen Fehler korrekt und nennt die im Kapitel empfohlene Abhilfe.
+
+Die zweite Option behauptet das Gegenteil dessen, was das Kapitel als Fehler bezeichnet: Gerade bei großem N sagt ein kleiner p-Wert wenig über die praktische Bedeutsamkeit aus, ein "Beweis" für einen starken Effekt liegt darin nicht.
+
+Die dritte Option verwechselt zwei unterschiedliche, beide in der Tabelle separat aufgeführte Fehler: "Korrelation = Kausalität" bezieht sich darauf, Zusammenhänge fälschlich als Ursache zu interpretieren, nicht auf die Fehlinterpretation von Signifikanz bei großem N.
+
+Die vierte Option ist eine erfundene Regel; im Kapitel wird nicht behauptet, dass Signifikanztests bei großen Stichproben grundsätzlich unzulässig seien – das Problem ist die Interpretation der Signifikanz, nicht die Zulässigkeit des Tests an sich.
+
+Die fünfte Option unterstellt fälschlich, dass eine große Stichprobe automatisch auf intransparente Datenbereinigung hindeutet; dieser im Kapitel separat genannte Fehler bezieht sich auf das Entfernen von Ausreißern/Fällen ohne klare, dokumentierte Regeln, nicht auf die Stichprobengröße selbst.
+
+Meta-information
+================
+exname: signifikanz-vs-effektgroesse-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

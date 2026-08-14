@@ -1,0 +1,37 @@
+Question
+========
+In den Projektarbeiten zweier Studierender, A und B, werden bei der Plagiatsprüfung substanzielle inhaltliche Überlappungen festgestellt. Wie wird dieser Fall laut den Prüfungshinweisen typischerweise behandelt?
+
+Answerlist
+----------
+* Es wird angenommen, dass beide getäuscht haben – eine Person hat abgeschrieben, die andere hat ihre Arbeit dafür bereitgestellt; daher kann bei beiden ein Plagiatsfall festgestellt und geahndet werden.
+* Nur diejenige Person, deren Arbeit textlich später eingereicht wurde, gilt automatisch als Täuschende; die zuerst einreichende Person bleibt in jedem Fall unbelastet.
+* Überlappungen zwischen zwei Arbeiten sind grundsätzlich unproblematisch, solange beide Studierenden angeben, unabhängig voneinander gearbeitet zu haben.
+* Es wird ausschließlich die Arbeit mit der schlechteren Gesamtqualität als Plagiat gewertet, da hier die Abschreib-Motivation naheliegender erscheint.
+* Ein Plagiatsfall bei Überlappungen kann nur dann geahndet werden, wenn beide Studierenden aus derselben Arbeitsgruppe stammen.
+
+Solution
+========
+Der Text führt aus: Werden in den Projektarbeiten von Studenti A und B (substanzielle) Überlappungen gefunden, ist davon auszugehen, dass *beide* Studierenden getäuscht haben – eine Person hat abgeschrieben, die andere hat die eigene Arbeit dafür bereitgestellt. Daher wird in diesem Fall unter Umständen bei beiden der Plagiatsfall festgestellt und geahndet (z. B. mit "nicht bestanden"). Die genauen Konsequenzen legt die Prüfungskommission im Einzelfall fest. Damit ist Antwort 1 korrekt.
+
+Zu den Distraktoren:
+
+- Antwort 2 unterstellt eine automatische Zuordnung der Täuschung anhand des Einreichzeitpunkts; eine solche Regel wird im Text nicht genannt – im Gegenteil wird explizit von einer Verantwortung *beider* Beteiligten ausgegangen.
+- Antwort 3 unterstellt, bloße Beteuerungen von Unabhängigkeit würden Überlappungen entschuldigen; das widerspricht der im Text formulierten Vermutung gegenseitiger Täuschung bei substanziellen Überlappungen.
+- Antwort 4 erfindet ein im Text nicht vorhandenes Kriterium (Qualität der Arbeit als Unterscheidungsmerkmal für Täuschung); die Regel bezieht sich auf die Überlappung selbst, nicht auf die Qualität der jeweiligen Arbeiten.
+- Antwort 5 schränkt die Regel fälschlich auf Mitglieder derselben Arbeitsgruppe ein; im Text ist allgemein von "Studenti A und B" die Rede, ohne eine solche Einschränkung.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: plagiat-ueberlappung-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

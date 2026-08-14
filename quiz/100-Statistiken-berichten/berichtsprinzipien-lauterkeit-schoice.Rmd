@@ -1,0 +1,38 @@
+Question
+========
+Welche der folgenden Beschreibungen entspricht einer Verletzung des *fünften* Prinzips des Berichtens ("Lauterkeit" bzw. "Rechtschaffenheit"), wie es im Kapitel beschrieben wird?
+
+Answerlist
+----------
+* Es wird nicht gelogen, aber unliebsame Befunde werden verschwiegen, während hypothesenkonforme Ergebnisse bevorzugt in den Vordergrund gestellt werden.
+* Eine Ergebnistabelle wird mit zwei Nachkommastellen statt mit einer angegeben.
+* Ein Autor verwendet für eine bestimmte Kennzahl im ganzen Bericht durchgehend dieselbe Abkürzung.
+* Im Ergebnisteil werden die Befunde nur beschrieben, ohne sie zu bewerten oder zu interpretieren.
+* Detaillierte Zusatzstatistiken werden in den Anhang statt in den Haupttext gesetzt.
+
+Solution
+========
+Im Kapitel wird als gängigere, subtilere Verletzung der Lauterkeit das *selektive Berichten* genannt: Unliebsame Befunde werden verschwiegen, hypothesenkonforme Befunde nach vorne gestellt. Das ist "nicht gelogen", aber die Irreführung wird bewusst in Kauf genommen - das entspricht der ersten Antwortoption.
+
+Zu den Distraktoren:
+
+* Unterschiedliche Nachkommastellen sind eine reine Formatierungsfrage ohne inhaltliche Täuschung und keine Verletzung der Lauterkeit.
+* Durchgängige Verwendung derselben Abkürzung beschreibt gerade die Einhaltung des *vierten* Prinzips (Konsistenz), nicht dessen Verletzung.
+* Rein deskriptives, unbewertetes Berichten entspricht dem separat genannten Grundsatz "deskriptiv, nicht bewertend" und ist damit erwünschtes, korrektes Verhalten, keine Verletzung.
+* Details in den Anhang statt in den Haupttext zu setzen entspricht dem *dritten* Prinzip (Priorisierung) und ist ebenfalls erwünschtes Verhalten.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: berichtsprinzipien-lauterkeit
+extype: schoice
+exsolution: 10000
+exshuffle: 5
+excategory: berichten-statistik

@@ -1,0 +1,58 @@
+```{r, include=FALSE}
+library(ggplot2)
+
+# Kleine Illustration des Mediationsmodells uv -> m -> av,
+# wie es im Kapitel für die Induktion von Einsamkeit vorgeschlagen wird.
+knoten <- data.frame(
+  x = c(0, 1, 2),
+  y = c(0, 1, 0),
+  label = c("Induktion\n(uv)", "Einsamkeit\n(m)", "Anthropomorphismus\n(av)")
+)
+
+pfade <- data.frame(
+  x = c(0, 1),
+  y = c(0, 1),
+  xend = c(1, 2),
+  yend = c(1, 0)
+)
+
+p_mediation <- ggplot() +
+  geom_segment(
+    data = pfade,
+    aes(x = x, y = y, xend = xend, yend = yend),
+    arrow = arrow(length = unit(0.2, "cm")), linewidth = 0.6
+  ) +
+  geom_label(data = knoten, aes(x = x, y = y, label = label)) +
+  theme_void()
+```
+
+Question
+========
+Im FAQ wird als gute Lösung zur Prüfung, ob eine experimentelle Induktion (hier: Einsamkeit durch Musik/Geschichte) tatsächlich wirkt, eine Mediatoranalyse vorgeschlagen. Welche Zuordnung der Variablenrollen `Induktion`, `Einsamkeit` und `Anthropomorphismus` entspricht dem im Kapitel beschriebenen Modell `uv -> m -> av`?
+
+Answerlist
+----------
+* Induktion ist die UV, Einsamkeit ist der Mediator, Anthropomorphismus ist die AV
+* Anthropomorphismus ist die UV, Einsamkeit ist der Mediator, Induktion ist die AV
+* Einsamkeit ist die UV, Induktion ist der Mediator, Anthropomorphismus ist die AV
+* Induktion ist die UV, Anthropomorphismus ist der Mediator, Einsamkeit ist die AV
+* Induktion, Einsamkeit und Anthropomorphismus sind alle drei gleichzeitig unabhängige Variablen ohne Mediator
+
+Solution
+========
+Im Kapitel wird die Kette `Ind -> einsam -> anthro` beschrieben, also Induktion als unabhängige Variable (UV), Einsamkeit als Mediator (M) und Anthropomorphismus als abhängige Variable (AV). Das entspricht exakt der ersten Antwort. Die zweite Option vertauscht UV und AV und ergibt eine inhaltlich unsinnige Kausalrichtung (die wahrgenommene Anthropomorphie würde die experimentelle Induktion "verursachen"). Die dritte Option macht die Einsamkeit fälschlich zur UV und die Induktion zum Mediator, obwohl die Induktion die experimentell manipulierte Ausgangsvariable ist. Die vierte Option vertauscht Mediator und AV und widerspricht damit der im Kapitel genannten Kette. Die letzte Option ignoriert, dass gerade die Mediatorrolle der Einsamkeit der Kern der vorgeschlagenen Analyse ist.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: mediation-struktur
+extype: schoice
+exsolution: 10000
+exshuffle: 5

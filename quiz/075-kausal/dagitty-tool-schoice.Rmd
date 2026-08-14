@@ -1,0 +1,36 @@
+Question
+========
+Welche Funktion erfüllt das im Kapitel genannte Online-Tool dagitty.net im Forschungsprozess?
+
+Answerlist
+----------
+* Es erlaubt, DAGs online zu zeichnen und automatisch prüfen zu lassen, welche Variablen kontrolliert werden müssen, um einen Kausaleffekt zu identifizieren.
+* Es führt automatisch eine multiple Regression auf einem hochgeladenen Datensatz durch und gibt die Regressionskoeffizienten aus.
+* Es berechnet die benötigte Stichprobengröße für eine Studie auf Basis einer a-priori-Poweranalyse.
+* Es generiert automatisch APA-konforme Literaturverzeichnisse für Kausalstudien.
+* Es dient als Repository für Open-Data-Datensätze zu kausalen Fragestellungen.
+
+Solution
+========
+dagitty.net ist laut Kapitel ein Werkzeug, um DAGs online zu zeichnen und ihre Identifizierbarkeit prüfen zu lassen; insbesondere zeigt es an, welche Variablen als Kontrollvariablen in ein Modell aufgenommen werden müssen, damit ein Kausaleffekt identifiziert ist.
+
+Zu den Distraktoren:
+- Option 2 verwechselt dagitty.net mit einer Statistiksoftware zur Datenanalyse; dagitty.net arbeitet mit der Graphstruktur, nicht mit Rohdaten.
+- Option 3 beschreibt eine Poweranalyse-Software (z. B. G*Power), eine andere Aufgabe als die DAG-basierte Identifizierbarkeitsprüfung.
+- Option 4 beschreibt ein Literaturverwaltungsprogramm (z. B. Zotero), keine Funktion von dagitty.net.
+- Option 5 beschreibt ein Datenrepositorium (z. B. OSF), was nicht der im Kapitel beschriebenen Funktion entspricht.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: dagitty-tool-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

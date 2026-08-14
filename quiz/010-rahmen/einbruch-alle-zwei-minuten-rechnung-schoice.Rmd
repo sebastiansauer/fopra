@@ -1,0 +1,57 @@
+```{r, include=FALSE}
+minuten_pro_jahr <- 365 * 24 * 60          # Minuten in einem (Nicht-Schalt-)Jahr
+loesung <- minuten_pro_jahr / 2            # alle 2 Minuten ein Einbruchsversuch
+
+# Distraktoren (typische Rechenfehler):
+distraktor_pro_tag <- 24 * 60 / 2          # Tageswert fälschlich als Jahreswert übernommen
+distraktor_ohne_teilen <- minuten_pro_jahr # Division durch 2 vergessen (jede Minute statt alle 2 Min.)
+distraktor_stunden <- 365 * 24 / 2         # "alle 2 Stunden" statt "alle 2 Minuten" gerechnet
+distraktor_360 <- 360 * 24 * 60 / 2        # mit 360 statt 365 Tagen gerechnet
+
+werte <- round(c(loesung, distraktor_pro_tag, distraktor_ohne_teilen,
+                  distraktor_stunden, distraktor_360))
+stopifnot(length(unique(werte)) == 5)      # alle Antwortoptionen müssen sich unterscheiden
+```
+
+Question
+========
+Auf der Webseite eines Sicherheitstechnik-Anbieters stand: "Alle zwei Minuten findet in Deutschland ein Einbruchsversuch statt." Wenn diese Aussage exakt zuträfe (Rechnung mit 365 Tagen pro Jahr), wie viele Einbruchsversuche wären das ungefähr pro Jahr?
+
+Answerlist
+----------
+* `r format(werte[1], big.mark = ".", decimal.mark = ",")`
+* `r format(werte[2], big.mark = ".", decimal.mark = ",")`
+* `r format(werte[3], big.mark = ".", decimal.mark = ",")`
+* `r format(werte[4], big.mark = ".", decimal.mark = ",")`
+* `r format(werte[5], big.mark = ".", decimal.mark = ",")`
+
+Solution
+========
+Ein Jahr mit 365 Tagen hat $365 \times 24 \times 60 = `r format(minuten_pro_jahr, big.mark = ".", decimal.mark = ",")`$ Minuten. Findet alle zwei Minuten ein Einbruchsversuch statt, ergibt sich die Anzahl der Einbruchsversuche pro Jahr als
+
+$$\dfrac{365 \times 24 \times 60}{2} = `r format(loesung, big.mark = ".", decimal.mark = ",")`.$$
+
+Damit ist `r format(werte[1], big.mark = ".", decimal.mark = ",")` die korrekte Antwort. Diese Zahl verdeutlicht, wie unplausibel hoch eine solche unbelegte Behauptung ("alle zwei Minuten") tatsächlich ist, wenn man sie konkret hochrechnet – genau die Art von Refexion, zu der das Kapitel bei der Bewertung solcher Alltagsaussagen anregt.
+
+Zu den Distraktoren:
+
+* `r format(werte[2], big.mark = ".", decimal.mark = ",")`: Entsteht, wenn man versehentlich nur die Minuten eines *einzelnen Tages* durch 2 teilt ($24 \times 60 / 2$) und dieses Ergebnis fälschlich als Jahreswert ausgibt, statt mit 365 Tagen zu multiplizieren.
+* `r format(werte[3], big.mark = ".", decimal.mark = ",")`: Entsteht, wenn man die Division durch 2 vergisst und damit implizit von "jede Minute ein Einbruch" statt "alle zwei Minuten ein Einbruch" ausgeht.
+* `r format(werte[4], big.mark = ".", decimal.mark = ",")`: Entsteht, wenn man die Angabe fälschlich als "alle zwei *Stunden*" statt "alle zwei *Minuten*" interpretiert und mit $365 \times 24 / 2$ rechnet.
+* `r format(werte[5], big.mark = ".", decimal.mark = ",")`: Entsteht, wenn man mit einem vereinfachten Jahr von 360 statt 365 Tagen rechnet (z. B. aus einer Verwechslung mit dem kaufmännischen Zinsjahr).
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: einbruch-alle-zwei-minuten-rechnung-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5
+excategory: Rahmen

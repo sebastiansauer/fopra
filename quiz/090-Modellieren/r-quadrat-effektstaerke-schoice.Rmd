@@ -1,0 +1,38 @@
+Question
+========
+Für das Modell `m_bringtnixtin` ergibt `r2(m_bringtnixtin)` einen Wert von $R^2 \approx 0.09$. Wie ist dieser Wert im Sinne der im Kapitel verwendeten Effektstärkeneinschätzung (nach Cohen) zu interpretieren, und was bedeutet $R^2$ inhaltlich?
+
+Answerlist
+----------
+* $R^2 \approx 0.09$ bedeutet, dass das Modell etwa 9% der Varianz der AV erklärt; das entspricht nach Cohens Konvention einem schwachen Effekt.
+* $R^2 \approx 0.09$ bedeutet, dass die UV `g` in 9% der Fälle den korrekten Vorzeichentrend vorhersagt; das entspricht einem starken Effekt.
+* $R^2 \approx 0.09$ bedeutet, dass 91% der Varianz der AV durch das Modell erklärt werden, da $R^2$ den unerklärten Varianzanteil angibt.
+* $R^2 \approx 0.09$ ist der standardisierte Regressionskoeffizient von `g` und zeigt, dass der Gruppenunterschied 0.09 Skaleneinheiten beträgt.
+* $R^2 \approx 0.09$ ist ein reiner Signifikanztest-Kennwert; Werte unter 0.1 bedeuten automatisch, dass kein signifikanter Effekt vorliegt.
+
+Solution
+========
+Das Kapitel berechnet `r2(m_bringtnixtin)` als "standardisierte Effektstärke der Modellgüte" und interpretiert das Ergebnis als "etwa 9% erklärte Varianz". Mit `interpret_r2(.09)` wird diese Modellgüte nach Cohens Konvention eingeschätzt; das Kapitel resümiert, dass der Effekt von `g` damit als *schwach* einzustufen ist. $R^2$ gibt somit den Anteil der durch das Modell erklärten Varianz der AV an – hier rund 9%, was als schwacher Effekt gilt. Das entspricht der ersten Antwortoption.
+
+Zu den Distraktoren:
+
+* "9% korrekte Vorzeichenvorhersage, starker Effekt": Das verwechselt $R^2$ mit einer Trefferquote bzw. mit der Kennzahl `pd` und deutet einen kleinen Wert fälschlich als *starken* statt als schwachen Effekt.
+* "91% erklärte Varianz, da $R^2$ den unerklärten Anteil angibt": Das kehrt die Definition von $R^2$ um; $R^2$ gibt direkt den *erklärten* Varianzanteil an (hier 9%), nicht den unerklärten (der wäre $1-R^2 = 91\%$).
+* "Standardisierter Regressionskoeffizient von `g`": Das verwechselt $R^2$ (eine Kennzahl der Gesamt-Modellgüte) mit einem einzelnen (standardisierten) Parameterschätzer für `g`; $R^2$ bezieht sich auf das gesamte Modell, nicht auf einen einzelnen Prädiktor-Koeffizienten.
+* "Reiner Signifikanztest-Kennwert mit Schwellenwert 0.1": $R^2$ ist ein deskriptives Effektstärkemaß der Modellgüte, kein Signifikanztest, und es gibt keinen festen Schwellenwert von 0.1, ab dem automatisch "nicht signifikant" gilt.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: r-quadrat-effektstaerke-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5
+excategory: Modellieren

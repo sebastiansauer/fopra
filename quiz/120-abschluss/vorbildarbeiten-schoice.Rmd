@@ -1,0 +1,30 @@
+Question
+========
+Im Kapitel wird empfohlen, sich für die eigene Projektarbeit an vorbildhaften studentischen Arbeiten zu orientieren. Wo findet man laut Kapitel eine Sammlung gut aufbereiteter psychologischer Studienberichte, die größtenteils von Studierenden verfasst wurden?
+
+Answerlist
+----------
+* In der Schriftenreihe des Instituts für Wirtschaftspsychologie (iwp) der FOM Hochschule
+* Im Anhang des Statistik-Lehrbuchs von Bortz und Schuster
+* In der Datenbank PsycINFO unter dem Stichwort "Bachelorarbeit"
+* Auf der Homepage der Deutschen Gesellschaft für Psychologie (DGPs)
+* In den Materialien des Statistischen Bundesamtes
+
+Solution
+========
+Richtig ist die Schriftenreihe des iwp der FOM Hochschule: Das Kapitel nennt explizit diese Seite als Fundgrube für gut aufbereitete, überwiegend studentische Berichte, die als Vorbild dienen können (u.a. die Arbeit zu Selbstwirksamkeit, Selbstregulation und Prokrastination). Die anderen Optionen sind plausibel klingende, aber im Kapitel nicht genannte Quellen: Ein Lehrbuchanhang enthält typischerweise keine vollständigen Studienberichte, sondern Formeln und Tabellen. PsycINFO ist eine allgemeine Literaturdatenbank ohne Fokus auf studentische Vorbildarbeiten. Die DGPs-Homepage bietet berufsständische Informationen, keine kuratierte Sammlung studentischer Berichte. Das Statistische Bundesamt liefert amtliche Statistiken, keine psychologischen Studienberichte.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: vorbildarbeiten
+extype: schoice
+exsolution: 10000
+exshuffle: 5

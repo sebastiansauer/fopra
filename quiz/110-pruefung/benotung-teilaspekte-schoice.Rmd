@@ -1,0 +1,37 @@
+Question
+========
+Aus welchen drei Teilaspekten setzt sich laut den Prüfungshinweisen die Gesamtnote der Projektarbeit zusammen, und wie verhält sich die Gesamtnote zu etwaigen Teilnoten?
+
+Answerlist
+----------
+* Formalia, Methodik und Inhalt; die Gesamtnote muss sich nicht als arithmetisches Mittel dieser Teilnoten ergeben.
+* Formalia, Methodik und Inhalt; die Gesamtnote ergibt sich stets exakt als arithmetisches Mittel der drei Teilnoten.
+* Einleitung, Hauptteil und Diskussion; diese drei Kapitel werden separat benotet und ergeben gemittelt die Gesamtnote.
+* Rechtschreibung, Literaturverzeichnis und Layout; diese rein formalen Aspekte bestimmen allein die Gesamtnote.
+* Wissen, Denken und Schreiben; aus diesen drei Aspekten wird automatisch und ausschließlich rechnerisch die Endnote gebildet.
+
+Solution
+========
+Der Text zur Benotung führt aus: "Die Gesamtnote setzt sich aus drei Teilaspekten zusammen." Die drei Teilaspekte sind explizit benannt: Formalia (u. a. Aufbau, Gestaltung, Rechtschreibung, Zitierweise, Literaturverzeichnis, Umfang), Methodik (u. a. Methodenauswahl, Methodenanwendung, Interpretation) und Inhalt (u. a. Gliederung, Argumentation, Literaturnutzung, sprachlicher Ausdruck, Problemlösung, Reflexion). Zudem heißt es ausdrücklich: "Falls Teilnoten vergeben werden, muss sich die Gesamtnote nicht als arithmetisches Mittel der Teilnoten ergeben." Damit ist Antwort 1 korrekt.
+
+Zu den Distraktoren:
+
+- Antwort 2 behauptet fälschlich eine feste rechnerische Mittelung, obwohl der Text ausdrücklich das Gegenteil festhält ("muss sich nicht als arithmetisches Mittel ... ergeben").
+- Antwort 3 verwechselt die inhaltliche Gliederung des Berichts (Einleitung, Hauptteil, Diskussion als Textabschnitte) mit den im Text definierten Bewertungs-Teilaspekten (Formalia, Methodik, Inhalt), die eine andere, bewertungslogische Kategorisierung darstellen.
+- Antwort 4 greift nur einzelne Unterpunkte des Teilaspekts "Formalia" heraus (Rechtschreibung, Literaturverzeichnis, Layout) und übersieht, dass Methodik und Inhalt als eigenständige, gleichrangige Teilaspekte ebenfalls in die Gesamtnote einfließen.
+- Antwort 5 verwechselt die im Text an anderer Stelle genannte "Checkliste eines Gutachters" (Wissen, Denken, Schreiben, Methodik, Polieren als informelle Prüfpunkte) mit den offiziell definierten drei benoteten Teilaspekten Formalia, Methodik und Inhalt.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: benotung-teilaspekte-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

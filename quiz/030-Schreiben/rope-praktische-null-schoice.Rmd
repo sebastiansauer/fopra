@@ -1,0 +1,37 @@
+Question
+========
+Das Kapitel kritisiert das klassische Testen einer exakten Nullhypothese (z.B. $\beta = 0$) als "Schwarz-Weiß-Denken" und stellt die "Praktisch-Null-Hypothese" (umgesetzt z.B. über das ROPE-Konzept) als bessere Alternative vor. Was ist der zentrale Unterschied zwischen beiden Ansätzen?
+
+Answerlist
+----------
+* Die exakte Nullhypothese prüft, ob ein Parameter *exakt* Null ist, während die Praktisch-Null-Hypothese prüft, ob der Parameter in einem Bereich um Null liegt, der als praktisch bedeutungslos gilt (z.B. -0.1 bis 0.1).
+* Die exakte Nullhypothese wird nur in der Bayes-Statistik verwendet, während die Praktisch-Null-Hypothese ausschließlich in der frequentistischen Statistik zum Einsatz kommt.
+* Beide Ansätze sind inhaltlich identisch; der Unterschied besteht nur in der verwendeten Software (ROPE wird nur von `rstanarm` unterstützt).
+* Die Praktisch-Null-Hypothese prüft, ob der Parameter größer als 42 ist, während die exakte Nullhypothese jeden beliebigen Wert als Nullpunkt zulässt.
+* Die exakte Nullhypothese bezieht sich auf Regressionsgewichte, die Praktisch-Null-Hypothese hingegen ausschließlich auf Korrelationskoeffizienten.
+
+Solution
+========
+Laut Kapitel testet die klassische (exakte) Nullhypothese, ob ein Parameterwert *exakt* Null ist – was streng genommen so gut wie nie zutrifft, weshalb dieses Vorgehen kritisiert wird. Die Praktisch-Null-Hypothese testet stattdessen, ob der Parameter in einem Bereich liegt, der praktisch bedeutungslos klein ist (im Kapitel als Beispiel: -0.1 bis 0.1), also "ungefähr Null". Das ROPE-Konzept ("Region of Practical Equivalence") ist eine technische Umsetzung dieser Idee.
+
+Die Distraktoren beruhen auf folgenden typischen Denkfehlern:
+
+- "nur in der Bayes-Statistik... nur frequentistisch": Das Kapitel ordnet ROPE zwar dem Bayes-Kontext zu, macht aber nicht die Aussage, dass die exakte Nullhypothese ausschließlich bayesianisch sei – tatsächlich ist das klassische exakte Nullhypothesentesten historisch eher ein frequentistisches Vorgehen.
+- "inhaltlich identisch... nur Software": Dieser Distraktor ignoriert den zentralen inhaltlichen Unterschied (exakter Punktwert vs. Bereich um Null) und reduziert ihn fälschlich auf eine reine Softwarefrage.
+- "größer als 42... jeden beliebigen Wert als Nullpunkt": Der Wert 42 wird im Kapitel nur als eines von mehreren Beispielen für statistische Hypothesen genannt ($H: \mu > 42$), hat aber nichts mit der Definition der Praktisch-Null-Hypothese zu tun.
+- "Regressionsgewichte... ausschließlich Korrelationskoeffizienten": Das Kapitel beschränkt die Praktisch-Null-Hypothese nicht auf eine bestimmte Parameterart; das ROPE-Konzept lässt sich grundsätzlich auf verschiedenste Parameter (z.B. $\beta$, $d$, $R^2$) anwenden.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: rope-praktische-null-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

@@ -1,0 +1,38 @@
+Question
+========
+Das Kapitel nennt das *FAIR*-Prinzip als Grundlage guten Forschungsdaten-Managements. Wofür stehen die vier Buchstaben von *FAIR* laut Kapitel?
+
+Answerlist
+----------
+* Findable, Accessible, Interoperable, Reusable
+* Findable, Anonymous, Interoperable, Reproducible
+* Free, Accessible, Interoperable, Reusable
+* Findable, Accessible, Integrated, Reliable
+* Fair, Anonymous, Independent, Reproducible
+
+Solution
+========
+Im Kapitel wird das FAIR-Prinzip als Akronym eingeführt: Findable (F), Accessible (A), Interoperable (I) und Reusable (R). Diese vier Eigenschaften sollen Forschungsdaten laut Text auszeichnen, damit sie über „offen“ hinaus auch tatsächlich nutzbar sind. Damit ist die erste Option korrekt.
+
+Die zweite Option verwechselt „Accessible“ mit „Anonymous“ und „Reusable“ mit „Reproducible“ – Anonymität und Reproduzierbarkeit sind zwar ebenfalls wichtige Konzepte im Kapitel, gehören aber nicht zum FAIR-Akronym.
+
+Die dritte Option ersetzt „Findable“ fälschlich durch „Free“; „frei“ (kostenlos) ist nicht dasselbe wie „auffindbar“, und das Kapitel verwendet „Findable“, nicht „Free“.
+
+Die vierte Option verwechselt „Interoperable“ mit „Integrated“ und „Reusable“ mit „Reliable“ – beides sind naheliegende, aber im Kapitel nicht verwendete Begriffe.
+
+Die fünfte Option verwechselt gleich mehrere Buchstaben (Fair statt Findable, Anonymous statt Accessible, Independent statt Interoperable, Reproducible statt Reusable) und entspricht nicht dem im Kapitel genannten Akronym.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: fair-prinzip-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

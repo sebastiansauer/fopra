@@ -113,7 +113,7 @@ B2 --> C
 :::{#def-exp-kontrollgruppe}
 ### Experimental- vs. Kontrollgruppe
 Die Bedingung (Gruppe), in der das eigentliche Treatment verabreicht wird, nennt man auch Experimentalbedingung (Experimentalgruppe).
-Eine Bedingung (Gruppe), in der nur ein Treatment als Referenzwert verarbreicht wird, nennt man auch Kontrollbegingung (Kontrollgruppe). Häufig ist der Referenzwert "kein Treatment" oder ein Placebo.$\square$
+Eine Bedingung (Gruppe), in der nur ein Treatment als Referenzwert verabreicht wird, nennt man auch Kontrollbegingung (Kontrollgruppe). Häufig ist der Referenzwert "kein Treatment" oder ein Placebo.$\square$
 :::
 
 ## Effekt
@@ -410,7 +410,7 @@ Bei einem *Between-Subject-Design* werden die Versuchspersonen genauer einer von
 Ei Forschi untersucht den Effekt von Achtsamkeit auf die Konzentrationsfähigkeit.
 Zur Umsetzung wählt i ein Between-Subject-Design.
 Eine Hälfte der Versuchspersonen wird zufällig der Experimentalgruppe (Achtsamkeitsübung) zugeteilt, die zweite Hälfte der Kontrollgruppe (Daddeln am Handy).
-Vor und nach der Intervention wird bei jeder Person die Konzentationsfähigkeit gemessen, s. @fig-between.$\square$.
+Vor und nach der Intervention wird bei jeder Person die Konzentrationsfähigkeit gemessen, s. @fig-between.$\square$.
 :::
 
 ```{mermaid}

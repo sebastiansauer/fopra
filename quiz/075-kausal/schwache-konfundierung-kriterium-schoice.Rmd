@@ -1,0 +1,36 @@
+Question
+========
+Das Kapitel nennt ein pragmatisches Kriterium (nach Kruschke, 2018), ab wann ein konfundierender Einfluss als "marginal" bzw. vernachlässigbar gelten darf. Wie lautet dieses Kriterium?
+
+Answerlist
+----------
+* Der entsprechende Regressionskoeffizient ist kleiner als 5 % der Streuung (Standardabweichung) der abhängigen Variable.
+* Der entsprechende Korrelationskoeffizient ist kleiner als $r = .10$.
+* Der p-Wert des Konfundierers im Modell liegt über $\alpha = .05$.
+* Der Konfundierer erklärt weniger als 5 % der Varianz der unabhängigen Variable ($R^2 < .05$).
+* Der Konfundierer korreliert mit der UV mit weniger als $r = .05$.
+
+Solution
+========
+Laut Kapitel gilt ein konfundierender Einfluss als "marginal" (und damit vernachlässigbar), wenn der zugehörige Regressionskoeffizient kleiner ist als 5 % der Streuung (SD) der abhängigen Variable (Kruschke, 2018).
+
+Zu den Distraktoren:
+- Option 2 verwendet statt der SD-bezogenen Schwelle einen fixen Korrelationswert ($r = .10$), der im Kapitel nicht genannt wird und ein anderes Maß (Korrelation statt Regressionskoeffizient relativ zur SD) heranzieht.
+- Option 3 verwechselt das Kriterium mit statistischer Signifikanz (p-Wert); Signifikanz ist im Kapitel ausdrücklich kein Kriterium für Kausalität bzw. Konfundierungsstärke.
+- Option 4 bezieht sich fälschlich auf den Anteil erklärter Varianz der UV, nicht auf den Regressionskoeffizienten relativ zur Streuung der AV.
+- Option 5 erfindet einen Korrelationsschwellenwert zwischen Konfundierer und UV, der im Kapitel nicht vorkommt und das falsche Variablenpaar betrachtet.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: schwache-konfundierung-kriterium-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

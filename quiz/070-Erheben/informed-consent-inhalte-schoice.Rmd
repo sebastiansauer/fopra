@@ -1,0 +1,38 @@
+Question
+========
+Eine Studie birgt mehr als ein minimales Belastungsrisiko für die Versuchspersonen („greater than minimal risk research“). Welche der folgenden Aussagen zur informierten Einwilligung ist korrekt?
+
+Answerlist
+----------
+* Die Aufklärung muss u. a. Zweck der Forschung, erwartete Dauer, das Recht auf Nichtteilnahme bzw. Abbruch, absehbare Konsequenzen und Risiken enthalten, und die Einwilligung jeder VP ist zu dokumentieren und aufzubewahren.
+* Es genügt, wenn die VP mündlich zustimmt; eine Dokumentation der Einwilligung ist gesetzlich nicht vorgesehen.
+* Sobald die Studie begonnen hat, kann die VP ihre Einwilligung nicht mehr zurückziehen, da sonst die Datenintegrität gefährdet wäre.
+* Eine Aufklärung über die Aufwandsentschädigung ist unzulässig, da sie die Freiwilligkeit der Teilnahme beeinträchtigen würde.
+* Die Aufklärung darf sich auf den Zweck der Studie beschränken; Angaben zu Risiken sind nur bei medizinischen Studien vorgeschrieben.
+
+Solution
+========
+Laut Kapiteltext muss bei „greater than minimal risk research“ eine Einverständniserklärung eingeholt werden. Die Aufklärung soll u. a. folgende Informationen enthalten: Zweck der Forschung, erwartete Dauer der Untersuchung, Recht auf Nichtteilnahme und Abbruch der Teilnahme, absehbare Konsequenzen, Risiken, negative Auswirkungen, voraussichtlichen Erkenntnisgewinn, Gewährleistung von Anonymität, evtl. Höhe der Aufwandsentschädigung und Kontakt für weitere Fragen. Zudem ist die Einwilligung jeder VP vom Forschenden zu dokumentieren und aufzubewahren. Damit ist die erste Option korrekt.
+
+Die zweite Option widerspricht dem Text direkt: Die Dokumentation und Aufbewahrung der Einwilligung ist explizit gefordert, eine mündliche Zusage allein reicht nicht.
+
+Die dritte Option ist falsch, da im Kapitel ausdrücklich betont wird, dass der VP immer die Freiheit eingeräumt werden muss, die Teilnahmebereitschaft zurückzuziehen oder die Untersuchung jederzeit abzubrechen.
+
+Die vierte Option beruht auf einem Missverständnis: Die Aufklärung soll laut Text durchaus die evtl. Höhe der Aufwandsentschädigung enthalten, das gefährdet die Freiwilligkeit nicht, sondern dient der Transparenz.
+
+Die fünfte Option ist falsch, weil Risiken und negative Auswirkungen explizit als notwendiger Bestandteil der Aufklärung genannt werden, unabhängig vom Studientyp.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: informed-consent-inhalte-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

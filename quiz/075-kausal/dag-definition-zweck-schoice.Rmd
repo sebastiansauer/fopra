@@ -1,0 +1,36 @@
+Question
+========
+Wozu dient ein DAG (gerichteter azyklischer Graph, "directed acyclic graph") in der Kausalanalyse?
+
+Answerlist
+----------
+* Er stellt die angenommenen kausalen Beziehungen zwischen Variablen grafisch dar und erlaubt zu prüfen, ob ein interessierender Effekt identifizierbar ist.
+* Er zeigt, welche Variablen in einem Datensatz am stärksten miteinander korrelieren.
+* Er berechnet automatisch die Effektstärke eines Kausaleffekts aus den vorliegenden Daten.
+* Er ersetzt die Notwendigkeit einer Voranalyse der Literatur zum untersuchten Thema.
+* Er dient primär der Visualisierung der Verteilung einzelner Variablen (z. B. als Histogramm-Ersatz).
+
+Solution
+========
+Ein DAG kodiert die angenommenen kausalen Pfade zwischen Variablen (Pfeile = angenommene Wirkrichtung) und macht es möglich, formal zu prüfen, welche Variablen kontrolliert werden müssen, damit der Effekt der UV auf die AV identifiziert ist (z. B. mit dagitty.net).
+
+Zu den Distraktoren:
+- Ein DAG basiert auf theoretischen Annahmen, nicht auf beobachteten Korrelationen aus dem Datensatz (Option 2 verwechselt DAG mit einer Korrelationsmatrix).
+- Ein DAG liefert selbst keine Zahlenwerte/Effektstärken, sondern nur die Struktur, aus der man ableitet, welches Modell zu schätzen ist (Option 3).
+- Im Gegenteil: Ein DAG setzt Literaturkenntnis voraus, denn die angenommenen Pfeile müssen inhaltlich begründet sein (Option 4 kehrt die Logik um).
+- Ein DAG zeigt Beziehungen zwischen Variablen, keine Verteilungen einzelner Variablen (Option 5 verwechselt DAG mit deskriptiver Statistik).
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: dag-definition-zweck-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

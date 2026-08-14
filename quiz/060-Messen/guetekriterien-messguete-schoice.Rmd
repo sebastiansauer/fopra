@@ -1,0 +1,37 @@
+Question
+========
+Welche drei Kennzahlen/Kriterien werden im Kapitel als die zentralen Kriterien der Messgüte einer psychologischen Messung genannt?
+
+Answerlist
+----------
+* Reliabilität, Objektivität und Validität.
+* Mittelwert, Streuung und Schiefe der Verteilung der Testwerte.
+* Stichprobengröße, Signifikanzniveau und Teststärke.
+* Sensitivität, Spezifität und Trennschärfe.
+* Cronbachs Alpha, McDonalds Omega und Faktorenanalyse.
+
+Solution
+========
+Das Kapitel benennt explizit drei Kennzahlen bzw. Kriterien, anhand derer die Güte einer Messung in der Psychologie festgemacht wird: Reliabilität (Messgenauigkeit), Objektivität (Unabhängigkeit vom Kontext bzw. von der durchführenden Person) und Validität (Gültigkeit). Damit ist die erste Antwort korrekt.
+
+Zu den Distraktoren:
+
+* "Mittelwert, Streuung, Schiefe" sind deskriptivstatistische Kennwerte einer Verteilung, sagen aber nichts direkt über die Güte einer Messung (Genauigkeit, Kontextunabhängigkeit, Gültigkeit) aus.
+* "Stichprobengröße, Signifikanzniveau, Teststärke" sind Begriffe aus der Inferenzstatistik/Studienplanung und betreffen die Aussagekraft eines statistischen Tests, nicht die Gütekriterien eines Messinstruments.
+* "Sensitivität, Spezifität, Trennschärfe" sind zwar mit Diagnostik bzw. Testgüte verwandte Kennwerte (Sensitivität/Spezifität eher aus der medizinischen Diagnostik, Trennschärfe aus der Testtheorie), werden im Kapitel aber nicht als die drei zentralen Messgüte-Kriterien genannt; sie sind allenfalls Teilaspekte oder verwandte, aber andere Konzepte.
+* "Cronbachs Alpha, McDonalds Omega, Faktorenanalyse" sind konkrete *statistische Verfahren bzw. Kennzahlen*, die im Kapitel im Zusammenhang mit nur einem der drei Gütekriterien (Reliabilität) genannt werden, nicht die drei übergeordneten Gütekriterien selbst.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: guetekriterien-messguete-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

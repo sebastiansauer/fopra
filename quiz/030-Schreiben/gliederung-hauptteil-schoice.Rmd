@@ -1,0 +1,37 @@
+Question
+========
+Für eine empirische, quantitative Forschungsarbeit in der Psychologie ist eine bestimmte Gliederung des Hauptteils etabliert. Welche Reihenfolge der fünf Hauptteile ist die im Kapitel beschriebene, klassische Gliederung?
+
+Answerlist
+----------
+* Einleitung, Theorie, Methode, Ergebnisse, Diskussion
+* Theorie, Einleitung, Methode, Diskussion, Ergebnisse
+* Einleitung, Methode, Theorie, Ergebnisse, Diskussion
+* Einleitung, Theorie, Ergebnisse, Methode, Diskussion
+* Theorie, Methode, Einleitung, Ergebnisse, Diskussion
+
+Solution
+========
+Die im Kapitel beschriebene klassische Gliederung des Hauptteils lautet: Einleitung, Theorie, Methode, Ergebnisse, Diskussion. Diese Reihenfolge folgt der Logik des Forschungsprozesses: Zuerst wird das Problem vorgestellt (Einleitung), dann der theoretische Hintergrund und die Hypothesen hergeleitet (Theorie), anschließend das methodische Vorgehen beschrieben (Methode), danach die Befunde berichtet (Ergebnisse) und schließlich interpretiert (Diskussion).
+
+Die Distraktoren beruhen auf folgenden typischen Denkfehlern:
+
+- "Theorie, Einleitung, Methode, Diskussion, Ergebnisse": Vertauscht Theorie und Einleitung (die Einleitung führt aber erst in die Fragestellung ein, bevor die Theorie vertieft wird) und vertauscht zusätzlich Ergebnisse und Diskussion (man kann nicht diskutieren, was noch nicht berichtet wurde).
+- "Einleitung, Methode, Theorie, Ergebnisse, Diskussion": Vertauscht Methode und Theorie – ein verbreiteter Fehler, da man denken könnte, das "Handwerkszeug" müsse vor der theoretischen Herleitung stehen. Tatsächlich muss aber erst die Theorie (inkl. Hypothesen) stehen, bevor die Methode zur Prüfung dieser Hypothesen beschrieben wird.
+- "Einleitung, Theorie, Ergebnisse, Methode, Diskussion": Vertauscht Methode und Ergebnisse – ein Fehler, der entsteht, wenn man Ergebnisse für "wichtiger" hält und sie vorzieht; ohne vorherige Methodenbeschreibung sind die Ergebnisse aber nicht einzuordnen.
+- "Theorie, Methode, Einleitung, Ergebnisse, Diskussion": Verzichtet komplett auf die einleitende Hinführung an den Anfang und beginnt direkt mit der Theorie, was die Leserschaft ohne Orientierung zur Forschungsfrage zurücklässt.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: gliederung-hauptteil-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

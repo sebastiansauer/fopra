@@ -1,0 +1,36 @@
+Question
+========
+Was versteht man in der Kausalanalyse unter "Konfundierung"?
+
+Answerlist
+----------
+* Eine Drittvariable beeinflusst sowohl die UV als auch die AV und erzeugt dadurch (ganz oder teilweise) einen nicht-kausalen Zusammenhang zwischen UV und AV.
+* Die UV und die AV wurden mit demselben Messinstrument erhoben, wodurch Messfehler korreliert sind.
+* Die Stichprobe ist zu klein, um den wahren Effekt mit ausreichender Genauigkeit zu schätzen.
+* Zwei Prädiktoren im Regressionsmodell sind so hoch korreliert, dass die Regressionskoeffizienten instabil geschätzt werden (Multikollinearität).
+* Die AV wurde zu einem späteren Zeitpunkt gemessen als die UV, wodurch ein zeitlicher Vorher-Nachher-Effekt entsteht.
+
+Solution
+========
+Konfundierung liegt vor, wenn eine Drittvariable (z. B. "Umwelt" im Störche-Babies-Beispiel) sowohl die UV (Störche) als auch die AV (Babies) beeinflusst. Dadurch entsteht eine Korrelation zwischen UV und AV, obwohl kein direkter kausaler Pfad zwischen ihnen besteht (Scheinkorrelation) bzw. der wahre Effekt verzerrt geschätzt wird.
+
+Zu den Distraktoren:
+- Gemeinsame Messmethodenvarianz (Option 2) ist ein methodisches Artefakt (common method bias), aber nicht dasselbe wie eine kausal wirkende Drittvariable.
+- Eine zu kleine Stichprobe (Option 3) betrifft die Präzision/Power der Schätzung, nicht die kausale Verzerrung durch Drittvariablen.
+- Multikollinearität (Option 4) ist ein rein statistisches Schätzproblem bei korrelierten Prädiktoren, unabhängig davon, ob eine dieser Variablen eine gemeinsame Ursache von UV und AV ist.
+- Ein zeitlicher Versatz zwischen Messungen (Option 5) beschreibt das Studiendesign, ist aber keine Definition von Konfundierung.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: konfundierung-definition-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

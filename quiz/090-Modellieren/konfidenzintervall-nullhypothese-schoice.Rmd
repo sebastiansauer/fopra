@@ -1,0 +1,38 @@
+Question
+========
+Im Beispiel zur Bringtnixtin-Studie enthält das 95%-Kredibilitätsintervall (CI) für den Gruppenunterschied `g` den Wert Null. Welche Schlussfolgerung ist gemäß der im Kapitel genannten Entscheidungsregel korrekt?
+
+Answerlist
+----------
+* Die (exakte) Nullhypothese kann nicht verworfen werden, da der Wert Null im 95%-CI ein plausibler Wert für den Parameter ist.
+* Die Nullhypothese muss verworfen werden, da ein CI, das die Null enthält, per Definition ein signifikantes Ergebnis anzeigt.
+* Der Befund beweist, dass Bringtnixtin keinerlei Wirkung auf die fluide Intelligenz hat.
+* Da die Null im CI liegt, ist der Punktschätzer selbst gleich Null, sodass gar kein Gruppenunterschied vorliegt.
+* Ein CI, das die Null enthält, bedeutet, dass die Stichprobe zu klein war und die Erhebung wiederholt werden muss, bevor überhaupt eine Aussage möglich ist.
+
+Solution
+========
+Die im Kapitel genannte Regel lautet: Ist der Wert Null im 95%-Schätzintervall enthalten, so heißt das, dass die Nullhypothese *nicht* verworfen werden kann; ist die Null NICHT enthalten, wird sie verworfen. Im Beispiel liegt die Null im 95%-CI von `g`, daher kann nicht ausgeschlossen werden, dass Bringtnixtin *nix* bringt – die (strenge) Nullhypothese wird nicht verworfen, weil Null ein plausibler Parameterwert ist. Das entspricht der ersten Antwortoption.
+
+Zu den Distraktoren:
+
+* "Muss verworfen werden, CI mit Null = signifikant": Das kehrt die Regel exakt um. Signifikant (im Sinne des Kapitels) ist ein Ergebnis gerade dann, wenn die Null *nicht* im Intervall liegt, nicht wenn sie enthalten ist.
+* "Beweist völlige Wirkungslosigkeit": Ein nicht verworfenes CI ist kein Beweis für die Nullhypothese, sondern lediglich das Fehlen ausreichender Evidenz gegen sie ("kann nicht ausgeschlossen werden" ist etwas anderes als "ist bewiesen").
+* "Punktschätzer ist gleich Null": Das verwechselt den Punktschätzer mit dem Intervall. Im Beispiel liegt der Punktschätzer klar von Null verschieden (negativ), auch wenn das CI die Null noch mit einschließt.
+* "Stichprobe zu klein, Wiederholung nötig": Das Kapitel zieht aus einem CI, das die Null enthält, keine Aussage über die Stichprobengröße, sondern nur über die Plausibilität der Nullhypothese gegeben die vorliegenden Daten.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: konfidenzintervall-nullhypothese-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5
+excategory: Modellieren

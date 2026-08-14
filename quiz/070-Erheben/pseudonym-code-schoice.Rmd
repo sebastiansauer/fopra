@@ -1,0 +1,57 @@
+```{r, include=FALSE}
+mutter_maiden <- "Fischer"
+grossvater_vorname <- "Klaus"
+geburtsort <- "Hamburg"
+tag <- 7
+
+code <- paste0(
+  substr(mutter_maiden, 1, 1),
+  substr(grossvater_vorname, 1, 1),
+  substr(geburtsort, 1, 1),
+  sprintf("%02d", tag)
+)
+# code == "FKH07"
+```
+
+Question
+========
+Eine Versuchsperson soll gemäß dem im Kapitel beschriebenen Schema für einen anonymen Code (Pseudonym) folgende Angaben nutzen: Anfangsbuchstabe des Mädchennamens der Mutter, Anfangsbuchstabe des Vornamens des Großvaters väterlicherseits, Anfangsbuchstabe des Geburtsorts, gefolgt vom Tag (zweistellig) im Geburtsmonat.
+
+Die Versuchsperson gibt an: Mädchenname der Mutter „Fischer“, Vorname des Großvaters väterlicherseits „Klaus“, Geburtsort „Hamburg“, geboren am 7. eines Monats.
+
+Welcher Code ergibt sich nach dem im Kapitel beschriebenen Schema?
+
+Answerlist
+----------
+* FKH07
+* FKH7
+* KFH07
+* FKH70
+* FHK07
+
+Solution
+========
+Nach dem Schema aus dem Kapitel setzt sich der Code zusammen aus: Anfangsbuchstabe des Mädchennamens der Mutter („Fischer“ → F), Anfangsbuchstabe des Vornamens des Großvaters väterlicherseits („Klaus“ → K), Anfangsbuchstabe des Geburtsorts („Hamburg“ → H) und dem Tag im Monat zweistellig (7 → „07“). Zusammengesetzt ergibt das „FKH07“, was die R-Berechnung im Setup-Chunk (`paste0(...)`) bestätigt.
+
+Die Option „FKH7“ entspricht einem typischen Fehler: Der Tag wird nicht wie im Beispiel des Kapitels („ABC01“ für den 1. Tag) zweistellig, sondern nur einstellig angegeben.
+
+Die Option „KFH07“ vertauscht die Reihenfolge der ersten beiden Buchstaben (Großvater vor Mutter statt Mutter vor Großvater), was nicht dem im Kapitel vorgegebenen Schema entspricht.
+
+Die Option „FKH70“ entsteht, wenn die Ziffern des zweistelligen Tages vertauscht werden (07 statt korrekt 70 fälschlich als 70 gelesen) – ein Zahlendreher.
+
+Die Option „FHK07“ vertauscht Geburtsort- und Großvater-Buchstaben (H und K), statt der im Kapitel vorgegebenen Reihenfolge Mutter–Großvater–Geburtsort–Tag.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: pseudonym-code-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

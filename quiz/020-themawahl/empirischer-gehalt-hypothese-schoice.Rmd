@@ -1,0 +1,36 @@
+Question
+========
+Im Kapitel wird der "empirische Gehalt" einer Hypothese anhand des Beispiels "Es gibt einen Zusammenhang zwischen Lernen und Prüfungserfolg" (Hypothese HA) diskutiert. Argumentiert wird: Diese Hypothese wäre nur dann falsch, wenn der Zusammenhang *exakt* Null ist — was extrem unwahrscheinlich ist, sodass die Hypothese fast immer "wahr" wäre, selbst bei einem winzigen Zusammenhang.
+
+Welche der folgenden Hypothesen hat gemäß dieser Logik den **höheren** empirischen Gehalt als HA ("Es gibt einen Zusammenhang zwischen Lernen und Prüfungserfolg")?
+
+Answerlist
+----------
+* "10 Stunden zusätzliches Lernen erhöhen den Klausurpunktwert im Mittel um mindestens 5 Punkte." — diese Aussage lässt sich durch viele mögliche Datenmuster (z. B. kein Effekt, ein kleiner Effekt, ein negativer Effekt) widerlegen und ist damit deutlich leichter falsifizierbar als HA.
+* "Es gibt möglicherweise einen Zusammenhang zwischen Lernen und Prüfungserfolg." — diese Formulierung ist vorsichtiger und daher wissenschaftlich wertvoller.
+* "Lernen und Prüfungserfolg hängen irgendwie zusammen." — diese Aussage ist noch allgemeiner als HA und daher informativer.
+* "Es könnte sein, dass Lernen einen Einfluss auf Prüfungserfolg hat." — diese Aussage ist genauso unpräzise wie HA und hat daher den gleichen, ebenfalls geringen empirischen Gehalt.
+* Keine der genannten Hypothesen hat einen höheren empirischen Gehalt als HA, da alle reine "Es-gibt-einen-Zusammenhang"-Aussagen per se den maximal möglichen empirischen Gehalt besitzen.
+
+Solution
+========
+Empirischer Gehalt ist laut Kapitel umso höher, je leichter (also durch je mehr mögliche Beobachtungen) eine Hypothese widerlegt werden kann. HA ("es gibt irgendeinen Zusammenhang") ist fast unmöglich zu widerlegen, da schon eine winzige Abweichung von Null die Hypothese "wahr" macht. Die präzise Hypothese "10 Stunden zusätzliches Lernen erhöhen den Klausurpunktwert im Mittel um mindestens 5 Punkte" hingegen wird durch sehr viele mögliche Ergebnisse widerlegt (kein Effekt, kleinerer Effekt, negativer Effekt) und ist damit riskanter und informativer — sie hat einen höheren empirischen Gehalt. Das entspricht der Kapitelaussage, dass Präzision den Wert (empirischen Gehalt) einer Hypothese erhöht.
+
+Begründung der Distraktoren:
+- "Möglicherweise ein Zusammenhang" / "irgendwie zusammen" / "könnte sein, dass ein Einfluss besteht": Diese Formulierungen sind noch vorsichtiger bzw. unpräziser als HA selbst. Sie sind noch schwerer zu widerlegen als HA und haben damit einen noch geringeren, nicht höheren empirischen Gehalt — der typische Fehler ist, Vorsicht/Zurückhaltung fälschlich mit wissenschaftlichem Wert gleichzusetzen, obwohl das Kapitel gerade das Gegenteil betont (Präzision und Gewagtheit erhöhen den Wert einer Hypothese).
+- "Keine hat höheren Gehalt, da alle 'Es-gibt'-Aussagen maximalen Gehalt haben": Das widerspricht direkt der Kapitelaussage, dass "Es-gibt-Aussagen" gerade von "empirisch geringem Gehalt" sind.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: empirischer-gehalt-hypothese-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

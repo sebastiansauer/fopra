@@ -1,0 +1,38 @@
+Question
+========
+Eine Forscherin möchte den Effekt von Achtsamkeitsübungen auf die Konzentrationsfähigkeit untersuchen. Sie erwägt zwei Designs: (A) Jede Versuchsperson führt sowohl die Achtsamkeitsübung als auch die Kontrollbedingung (Handy-Daddeln) in gleicher Reihenfolge durch. (B) Jede Versuchsperson durchläuft nur eine der beiden Bedingungen. Wie werden diese beiden Designvarianten korrekt bezeichnet, und was ist ein zentraler Vorteil von Design A?
+
+Answerlist
+----------
+* Design A ist ein Within-Subject-Design, Design B ein Between-Subject-Design; Vorteil von A ist die geringere Stichprobengröße, da Rauschen durch Personenunterschiede vermieden wird.
+* Design A ist ein Between-Subject-Design, Design B ein Within-Subject-Design; Vorteil von A ist der Ausschluss von Reihenfolge-Effekten.
+* Design A ist ein Within-Subject-Design, Design B ein Between-Subject-Design; Vorteil von A ist, dass keine Randomisierung nötig ist.
+* Design A und B sind beide Between-Subject-Designs, unterscheiden sich aber in der Gruppenanzahl.
+* Design A ist ein Quasi-Experiment, Design B ein echtes Experiment, da nur B eine Kontrollgruppe besitzt.
+
+Solution
+========
+Laut Kapitel durchläuft bei einem *Within-Subject-Design* jede Versuchsperson alle Versuchsbedingungen (wie in Design A beschrieben), während bei einem *Between-Subject-Design* jede Person nur einer Bedingung zugeordnet wird (wie in Design B). Der genannte Vorteil des Within-Subject-Designs ist laut Kapitel, dass Effekte leichter gefunden bzw. genauer geschätzt werden, weil weniger Rauschen durch unterschiedliche Versuchspersonen entsteht – dadurch reicht eine kleinere Stichprobe, um einen Effekt genau zu schätzen. Antwortoption 1 ist daher korrekt.
+
+Distraktor 2 vertauscht die Zuordnung von Design A/B zu den Fachbegriffen und nennt zudem einen Vorteil (Ausschluss von Reihenfolge-Effekten), der tatsächlich eine *Schwäche* des einfachen Within-Subject-Designs ist, nicht dessen Vorteil.
+
+Distraktor 3 ordnet die Begriffe zwar korrekt zu, nennt aber einen falschen Vorteil: Auch im Within-Subject-Design ist z.B. die Randomisierung der Reihenfolge (Between-Within-Subject-Design) relevant, um Reihenfolge-Effekte zu kontrollieren.
+
+Distraktor 4 verkennt den grundlegenden Unterschied zwischen den beiden Designtypen vollständig, indem beide fälschlich als Between-Subject-Design bezeichnet werden.
+
+Distraktor 5 verwechselt die Unterscheidung Within-/Between-Subject mit der Unterscheidung Quasi-Experiment vs. echtes Experiment, die im Kapitel an dieser Stelle nicht gemeint ist – beide beschriebenen Designs können randomisierte Experimente sein.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: between-within-subject-design
+extype: schoice
+exsolution: 10000
+exshuffle: 5

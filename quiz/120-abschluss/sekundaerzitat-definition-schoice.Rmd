@@ -1,0 +1,30 @@
+Question
+========
+Was versteht man unter einem Sekundärzitat, so wie es im FAQ-Abschnitt zu Sekundärzitaten thematisiert wird?
+
+Answerlist
+----------
+* Man übernimmt eine Aussage aus einer Quelle B, die man nur über die Erwähnung in Quelle A kennt, ohne Quelle B selbst gelesen zu haben
+* Man zitiert zwei unterschiedliche Studien im selben Satz, um sie direkt zu vergleichen
+* Man zitiert eine Quelle ein zweites Mal an einer späteren Stelle der eigenen Arbeit
+* Man fasst mehrere Quellen zu einer einzigen Literaturangabe zusammen
+* Man zitiert eine eigene, frühere Arbeit erneut in einer neuen Arbeit
+
+Solution
+========
+Ein Sekundärzitat liegt vor, wenn man eine Aussage von Quelle B übernimmt, aber nicht Quelle B selbst, sondern nur deren Wiedergabe in Quelle A gelesen hat (Beispiel aus dem Kapitel: "Müller schreibt, dass Meier xyz herausgefunden hat"). Das ist die korrekte Definition. Der Vergleich zweier Studien im selben Satz ist eine normale Mehrfachzitation, kein Sekundärzitat. Ein wiederholtes Zitieren derselben, selbst gelesenen Quelle ist ein gewöhnliches Zitat, keine Frage der Primär-/Sekundärquelle. Das Zusammenfassen mehrerer Quellen zu einer Angabe betrifft die Zitierform, nicht die Frage, ob die Originalquelle gelesen wurde. Eine Selbstzitation eigener früherer Arbeiten hat mit dem Konzept "Sekundärzitat" (fremde, ungelesene Originalquelle) nichts zu tun.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: sekundaerzitat-definition
+extype: schoice
+exsolution: 10000
+exshuffle: 5

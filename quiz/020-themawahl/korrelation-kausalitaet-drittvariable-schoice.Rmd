@@ -1,0 +1,38 @@
+Question
+========
+Im Text zu "Korrelation vs. Kausalität" wird das Beispiel genannt, dass Eisverkauf und Ertrinkungsfälle im Sommer beide ansteigen, obwohl sie "nicht ursächlich miteinander verbunden" sind; die Temperatur wird als die Größe genannt, die beide beeinflusst.
+
+Wie wird eine solche Größe, die zwei eigentlich nicht kausal verbundene Variablen gemeinsam beeinflusst und dadurch eine Korrelation zwischen ihnen erzeugt, im Text bezeichnet?
+
+Answerlist
+----------
+* Drittvariable (Störvariable, Confounder)
+* Moderatorvariable
+* Mediatorvariable
+* Kontrollvariable
+* Kriteriumsvariable
+
+Solution
+========
+Der Text benennt die Ursache dieses Scheinzusammenhangs explizit: "Erstens kann eine Drittvariable (auch Störvariable oder Confounder genannt) beide Variablen beeinflussen. [...] Die Temperatur ist hier die Drittvariable, die beide beeinflusst." Genau dieser Begriff ist gesucht.
+
+Begründung der Distraktoren:
+- "Moderatorvariable": Eine Moderatorvariable verändert die Stärke oder Richtung eines Zusammenhangs zwischen zwei anderen Variablen, sie erzeugt aber nicht selbst den gesamten Scheinzusammenhang wie im Eis-Ertrinken-Beispiel; dieser Begriff wird im Text nicht für dieses Beispiel verwendet.
+- "Mediatorvariable": Eine Mediatorvariable liegt kausal *zwischen* Ursache und Wirkung und vermittelt einen tatsächlich bestehenden Effekt; im Beispiel besteht aber gerade kein kausaler Effekt zwischen Eisverkauf und Ertrinken, den etwas vermitteln könnte.
+- "Kontrollvariable": Eine Kontrollvariable wird im Studiendesign gezielt konstant gehalten oder statistisch kontrolliert; sie ist ein methodisches Werkzeug der Forschenden, nicht die Bezeichnung für die im Beispiel wirkende Störgröße selbst.
+- "Kriteriumsvariable": Dieser Begriff bezeichnet meist die abhängige Variable (das vorherzusagende Kriterium) in Vorhersagemodellen, nicht eine gemeinsame Ursache zweier korrelierter Variablen.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: korrelation-kausalitaet-drittvariable-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

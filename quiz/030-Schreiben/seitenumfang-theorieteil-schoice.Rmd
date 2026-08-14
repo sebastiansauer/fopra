@@ -1,0 +1,43 @@
+```{r, include=FALSE}
+gesamtseiten <- 40
+anteil_theorie <- 0.5  # Mitte des im Kapitel genannten Bereichs von 40%-60%
+woerter_pro_seite <- 300
+
+seiten_theorie <- gesamtseiten * anteil_theorie
+woerter_theorie <- seiten_theorie * woerter_pro_seite
+
+d1 <- gesamtseiten * 0.10 * woerter_pro_seite
+d2 <- gesamtseiten * woerter_pro_seite
+d3 <- (seiten_theorie * woerter_pro_seite) / 2
+d4 <- gesamtseiten * anteil_theorie
+```
+
+Question
+========
+Ihr Hauptteil (Einleitung bis Diskussion) soll ca. 40 Seiten umfassen. Gemäß der im Kapitel genannten groben Richtlinie soll der Theorieteil ca. 40%-60% des Hauptteils ausmachen (nehmen Sie die Mitte, also 50%, an); außerdem passen laut Kapitel ca. 300 Wörter auf eine Textseite. Wie viele Wörter sollte der Theorieteil demnach ungefähr umfassen?
+
+Answerlist
+----------
+* `r woerter_theorie` Wörter
+* `r d1` Wörter
+* `r d2` Wörter
+* `r d3` Wörter
+* `r d4` Wörter
+
+Solution
+========
+Rechenweg: Der Theorieteil soll ca. 50% von `r gesamtseiten` Seiten ausmachen, also `r gesamtseiten` $\times$ 0.5 = `r seiten_theorie` Seiten. Bei `r woerter_pro_seite` Wörtern pro Seite ergibt das `r seiten_theorie` $\times$ `r woerter_pro_seite` = `r woerter_theorie` Wörter.
+
+Die Distraktoren beruhen auf folgenden typischen Denkfehlern:
+
+- `r d1` Wörter: Hier wurde versehentlich der Anteil des Methodenteils (ca. 10%) statt des Theorieteils (ca. 50%) verwendet.
+- `r d2` Wörter: Hier wurde der Anteil ganz vergessen und angenommen, der gesamte Hauptteil (100%) bestehe aus Theorie.
+- `r d3` Wörter: Hier wurde das richtig berechnete Ergebnis (`r woerter_theorie` Wörter) versehentlich noch einmal halbiert, z.B. weil fälschlich angenommen wurde, nur die Hälfte der Theorieseiten bestehe aus Fließtext.
+- `r d4` Wörter: Hier wurde die Anzahl der Seiten (`r seiten_theorie`) mit dem Anteil (0.5) verwechselt und als Wortzahl ausgegeben, d.h. die Umrechnung in Wörter über die 300-Wörter-Regel wurde schlicht vergessen.
+
+Meta-information
+================
+exname: seitenumfang-theorieteil-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

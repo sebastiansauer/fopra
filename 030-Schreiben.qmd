@@ -25,7 +25,7 @@ theme_set(theme_minimal())
 ### Lernziele
 
 
-- Sie wissen, wie man einen Theorieteil aufbauet.
+- Sie wissen, wie man einen Theorieteil aufbaut.
 - Sie wissen, wie man eine Forschungsarbeit gliedern kann.
 - Sie kennen die Prinzipien des wissenschaftlichen Schreibstils.
 
@@ -400,7 +400,7 @@ In dem Fall besteht Ihre Studie inhaltlich aus folgenden drei Teilen:
 
 Entsprechend schreiben Sie also im Theorieteil über diese drei Teile (und über nichts anderes), s. @fig-theorieteil.^[Ablaufdiagramme, DAGs, Schemata oder andere Nicht-Daten-Diagramme kann man z.B. mit einem Zeichenprogramm erstellen.]
 Es bieten sich also *drei* Unterkapitel des Theorieteils an.
-Allerdings sind auch andere Untergliederungen Ihres Theoreteils möglich.
+Allerdings sind auch andere Untergliederungen Ihres Theorieteils möglich.
 So fließt der Zusammenhang von X und Y häufig schon in die Erläuterung von X und Y ein.
 
 ```{mermaid}
@@ -573,8 +573,8 @@ $$
 \text{erfolg} &\sim N(\mu_i, \sigma) \qquad \text{Likelihood} \\
 \mu_i &= \beta_0 + \beta_1 \text{lern} + \beta_2 \text{mot} \qquad \text{lineares Modell} \\
 \beta_0 &\sim N(0, 2.5)  \qquad \text{Prior Achsenabschnitt} \\
-\beta_1 &\sim N(0, 2.5)  \qquad \text{Prior Regressiongewicht lern} \\
-\beta_2 &\sim N(0, 2.5)  \qquad \text{Prior Regressiongewicht mot} \\
+\beta_1 &\sim N(0, 2.5)  \qquad \text{Prior Regressionsgewicht lern} \\
+\beta_2 &\sim N(0, 2.5)  \qquad \text{Prior Regressionsgewicht mot} \\
 \sigma &\sim Exp(1) \qquad \text{Prior Streuung} \\
 \end{aligned}
 $$
@@ -593,7 +593,7 @@ um den Mittelwert rum liegt, könnten auch etwas mehr sein, aber mehr als 5-SD-E
 Das nennt man einen "schwach informativen Prior":
 der erlaubt viel, aber den größten Quatsch schließt er aus.
 
-Praktischerweise müssten sie nicht mal ihre Variablen z-tranformieren (aber Sie können ohne Schaden!),
+Praktischerweise müssten sie nicht mal ihre Variablen z-transformieren (aber Sie können ohne Schaden!),
 denn `rstanarm` macht das für Sie.
 
 
@@ -651,7 +651,7 @@ Hier sind Beispiele für statistische Hypothesen:
 
 
 
-Dabei meint $\beta$ ein Regressiongewicht,
+Dabei meint $\beta$ ein Regressionsgewicht,
 $d$ eine Differenz (zweier Gruppen) und 
 $R^2$ die erklärte Varianz eines Modells.
 
@@ -678,11 +678,11 @@ Stattdessen interessieren Sie sich für die Frage, *wie sehr* etwas der Fall ist
 - "Wie groß ist der statistische Effekt eines Sportwagens auf einem männlichen Profilbild beim Online-Dating?"
 
 Auch hier ist es erlaubt und sinnvoll, eine sprachliche Frage, die oft vage ist,
-schon aufgrund der natürlichen Ambuität der Sprache, mit Hilfe mathematischer Notation zu präzisieren:
+schon aufgrund der natürlichen Ambiguität der Sprache, mit Hilfe mathematischer Notation zu präzisieren:
 
-- "Der Zusammenhang $\beta$ ist definiert als das Regressiongewicht der Variable `lern` im Modell `m1`.
+- "Der Zusammenhang $\beta$ ist definiert als das Regressionsgewicht der Variable `lern` im Modell `m1`.
 - "Operationalisiert wurde die Einparkgeschwindigkeit als die Dauer der Durchführung in Sekunden nach Instruktion wie im Abschnitt XYZ beschrieben. Unser Modell (`m1`) schätzte den Parameter `s`.
-- "Der statistische Effekt ist definiert als das Regressiongewicht der experimentellen Bedingung (binäre Variable `group`) im Modell `m1`.
+- "Der statistische Effekt ist definiert als das Regressionsgewicht der experimentellen Bedingung (binäre Variable `group`) im Modell `m1`.
 
 Geben Sie weiter an, welches Intervall Sie berichten, z.B. "Die Parameterschätzungen werden anhand eines 95%-HDI berichtet".
 
@@ -754,7 +754,7 @@ Hierbei bietet es sich an, zuerst einfache (deskriptive) Ergebnisse zu berichten
 Handlungen werden in der 1. Vergangenheit beschrieben („Es fand sich ein Unterschied …“); 
 überdauernde Tatsachen hingegen in der Gegenwart („Dieser Wert ist statistisch signifikant“).
 Im Ergebnisteil soll man keine Interpretationen oder Bewertungen anführen, 
-sondern lediglich so objektiv wie möglich Tatschen (Fakten) berichten.
+sondern lediglich so objektiv wie möglich Tatsachen (Fakten) berichten.
 In quantitativen Arbeiten findet man naturgemäß oft viele Statistiken. 
 Wer hätt’s gedacht.
 Berichtet man ein Ergebnis mit wenig Zahlenmaterial, 
@@ -1244,7 +1244,7 @@ Solche „Zitatwörter“ sind in der ersten Aufführung im Text mit Kursivdruck
 
 Englische Begriffe im Fließtext sollten i. A. nicht als Zitate gesetzt sein, sondern den Regeln der deutschen Rechtschreibung unterworfen werden.
 
-Bei mehrteiligen Substantiven und substantivischen Aneinanderreihungen werden das erste Wort und die substantivischen Bestandteile großgeschrieben (Duden D40): Der Status quo, der Duty-free-Shop, die Multiple-Choice-Aufgabe, das Small-N-large-pProblem, Browser, Download, Mindmap, Meeting, Fastfood, Mountainbike, Deadline.
+Bei mehrteiligen Substantiven und substantivischen Aneinanderreihungen werden das erste Wort und die substantivischen Bestandteile großgeschrieben (Duden D40): Der Status quo, der Duty-free-Shop, die Multiple-Choice-Aufgabe, das Small-N-large-Problem, Browser, Download, Mindmap, Meeting, Fastfood, Mountainbike, Deadline.
 
 Zusammengesetzte Fremdwörter werden zusammengeschrieben (Duden D41). Besteht die Zusammensetzung aus Substantiven, kann zur besseren Lesbarkeit ein Bindestrich gesetzt werden: Desktop-Publishing, Business-Case, Turnaround, E-Mail, AssessmentCenter, Human-Resources-Manager, Burn-out-Syndrom, Chill-out-Room, Changemanagement.
 

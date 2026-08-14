@@ -1,0 +1,38 @@
+Question
+========
+Die Stärke eines Effekts wird im Kapitel als Funktion der fünf "ZURMO-Determinanten" beschrieben, $ES = f(ZURMO)$. Welche Aufzählung entspricht korrekt diesen fünf Determinanten?
+
+Answerlist
+----------
+* Treatment/Ursache (U), Versuchsperson (O), Zeit (Z), Rahmen (R), Messinstrument (M).
+* Unabhängige Variable (U), Reliabilität (R), Messwiederholung (M), Objektivität (O), Zufallsstichprobe (Z).
+* Randomisierung (R), Umwelt (U), Messfehler (M), Objekt (O), Zeitpunkt (Z).
+* Ursache (U), Reliabilität (R), Manipulation (M), Objektivität (O), Zufall (Z).
+* Randomisierung (R), Unabhängigkeit (U), Messgenauigkeit (M), Objektivität (O), Zeitreihe (Z).
+
+Solution
+========
+Laut Kapitel hängt die Effektstärke von fünf Größen ab: Treatment bzw. Ursache U ("wie?"), Versuchsperson/Objekt O ("wer?"), Zeit Z ("wann?"), Rahmen R ("wo?") und Messinstrument M ("was?"). Diese fünf Determinanten werden als "ZURMO" abgekürzt. Damit ist die erste Antwortoption korrekt.
+
+Die zweite Option verwendet Begriffe aus der Testtheorie (Reliabilität, Objektivität, Zufallsstichprobe), die zwar für Messqualität relevant sind, aber nicht die im Kapitel definierten ZURMO-Determinanten der Effektstärke darstellen – eine Verwechslung mit Gütekriterien von Tests.
+
+Die dritte Option verwechselt die Determinanten mit Kontrolltechniken (Randomisierung) und ungenauen Umschreibungen (Umwelt statt Rahmen, Messfehler statt Messinstrument) – Randomisierung ist eine *Technik* zur Kontrolle von Störvariablen, keine der fünf Determinanten selbst.
+
+Die vierte Option vermischt echte Determinanten (Ursache) mit sachfremden Begriffen (Reliabilität, Manipulation, Objektivität, Zufall), die im Kapitel nicht als die fünf ZURMO-Größen benannt werden.
+
+Die fünfte Option besteht überwiegend aus Fantasiebegriffen (Messgenauigkeit, Zeitreihe), die keine der im Kapitel genannten fünf Determinanten korrekt wiedergeben.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: zurmo-determinanten
+extype: schoice
+exsolution: 10000
+exshuffle: 5

@@ -1,0 +1,38 @@
+Question
+========
+Nach dem *zweiten* Prinzip des Berichtens ("Informationen am rechten Ort vermitteln") - in welchem Abschnitt eines Forschungsberichts sollte die Beschreibung der Zusammensetzung der Stichprobe stehen?
+
+Answerlist
+----------
+* Im Methodenteil
+* Im Diskussionsteil
+* Im Abstract
+* In der Einleitung
+* Ausschließlich im Anhang
+
+Solution
+========
+Das Kapitel illustriert das zweite Prinzip genau an diesem Beispiel: Ein Lesi würde die Erklärung der Zusammensetzung der Stichprobe nicht im Diskussionsteil erwarten und sich zu Recht wundern, wenn sie im Methodenteil fehlt. Die Stichprobenbeschreibung gehört demnach in den Methodenteil, wo Vorgehen und Datenbasis der Studie dargestellt werden.
+
+Zu den Distraktoren:
+
+* Der Diskussionsteil dient der Einordnung und Bewertung der Ergebnisse, nicht der Beschreibung der Datenbasis - genau das falsche Beispiel aus dem Kapitel.
+* Das Abstract ist eine knappe Zusammenfassung des gesamten Berichts; eine ausführliche Stichprobenbeschreibung würde es überladen und widerspräche zudem dem ersten Prinzip ("so wenig wie möglich").
+* Die Einleitung führt in Fragestellung und Theorie ein; die konkrete Stichprobe der eigenen Studie ist dort noch nicht Thema.
+* Wichtige, für die Nachvollziehbarkeit zentrale Informationen wie die Stichprobenbeschreibung gehören in den Hauptteil (Methode); nur Detailinformationen werden gemäß drittem Prinzip in den Anhang verschoben.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: gliederung-informationsort
+extype: schoice
+exsolution: 10000
+exshuffle: 5
+excategory: berichten-statistik

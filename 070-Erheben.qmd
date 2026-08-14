@@ -106,7 +106,7 @@ Das sind v.a.
 
 :::{#callout-important}
 Veröffentlichen Sie niemals Daten, die einen Rückschluss auf einzelne Personen erlauben!
-Zu solchen Daten gehören u.a. Name, Adresse, E-Mail-Adressen, Fingerabdruck, Geburtstadatum, genetische Daten.
+Zu solchen Daten gehören u.a. Name, Adresse, E-Mail-Adressen, Fingerabdruck, Geburtsdatum, genetische Daten.
 :::
 
 
@@ -169,7 +169,7 @@ Eine einfache Lösung lautet: Verwenden Sie anonymisierte (pseudonymisierte) Dat
 ## Handwerkszeug
 
 
-### Vorlage einer Einverstädniserklärung
+### Vorlage einer Einverständniserklärung
 
 Die folgende Vorlage basiert auf @Schönbrodt_Heene_Zehetleitner_Maier_Scheel_Zygar-Hoffmann_Schoedel_Sust_Schiestel_Ihle_2023.
 

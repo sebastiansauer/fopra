@@ -1,0 +1,38 @@
+Question
+========
+Wie wird "Reproduzierbarkeit" im Kapitel definiert?
+
+Answerlist
+----------
+* Als das Vermögen, eine Analyse durch Dritte zu wiederholen und dabei zu einem ähnlichen bzw. gleichen Ergebnis wie in der ursprünglichen Analyse zu gelangen.
+* Als die Möglichkeit, dieselbe Messung beliebig oft an derselben Stichprobe zu wiederholen.
+* Als statistische Signifikanz eines Ergebnisses (p < .05).
+* Als die inhaltliche Übereinstimmung einer Studie mit der zugrunde liegenden Theorie.
+* Als die Fähigkeit, Studienergebnisse in einer allgemeinverständlichen Pressemitteilung zusammenzufassen.
+
+Solution
+========
+Das Kapitel definiert Reproduzierbarkeit ("Wiederholbarkeit") wörtlich als "das Vermögen, eine Analyse durch Dritte zu wiederholen und zu einem ähnlichen (gleichen) Ergebnis wie in der ursprünglichen Analyse zu bekommen." Entscheidend ist dabei die Wiederholung durch unabhängige Dritte. Die erste Antwort ist korrekt.
+
+Zu den Distraktoren:
+
+* "Dieselbe Messung an derselben Stichprobe wiederholen": Das beschreibt eher Test-Retest-Reliabilität einer Messung, nicht die im Kapitel gemeinte Reproduzierbarkeit einer gesamten Analyse durch unabhängige Dritte.
+* "Statistische Signifikanz (p < .05)": Signifikanz ist ein Ergebnis eines einzelnen statistischen Tests und sagt nichts darüber aus, ob eine unabhängige Wiederholung zu einem ähnlichen Ergebnis führt – ein signifikanter Befund kann durchaus nicht reproduzierbar sein.
+* "Übereinstimmung mit der zugrunde liegenden Theorie": Das beschreibt eher theoretische Konsistenz oder Bestätigung einer Hypothese, nicht die methodische Wiederholbarkeit einer Analyse, um die es im Kapitel geht.
+* "Verständliche Zusammenfassung in einer Pressemitteilung": Das verwechselt Reproduzierbarkeit mit Wissenschaftskommunikation bzw. Popularisierung, wie sie das Kapitel an anderer Stelle (Wissenschaftsmagazine) behandelt – das ist ein anderes Konzept.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: reproduzierbarkeit-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5
+excategory: Rahmen

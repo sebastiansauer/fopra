@@ -1,0 +1,36 @@
+Question
+========
+Welche Aussage zum Verhältnis von Korrelation und Kausalität ist mit dem Inhalt des Kapitels vereinbar?
+
+Answerlist
+----------
+* Eine Korrelation zwischen UV und AV ist notwendig, aber nicht hinreichend für einen kausalen Zusammenhang; ob der Effekt kausal interpretierbar ist, hängt zusätzlich von der Identifizierbarkeit anhand des DAGs ab.
+* Jede statistisch signifikante Korrelation zwischen zwei Variablen belegt automatisch einen kausalen Zusammenhang zwischen ihnen.
+* Kausalität lässt sich ausschließlich durch Experimente nachweisen; DAGs sind für Kausalfragen irrelevant.
+* Eine Korrelation zwischen UV und AV ist weder notwendig noch hinreichend für Kausalität, da beide Konzepte in keinerlei Zusammenhang stehen.
+* Sobald eine Korrelation zwischen UV und AV durch ein Drittvariablenmodell erklärbar ist, ist automatisch bewiesen, dass gar keine kausale Wirkung zwischen UV und AV besteht.
+
+Solution
+========
+Das Kapitel (u. a. am Störche-Babies-Beispiel) macht deutlich, dass eine Korrelation zwischen UV und AV zwar Voraussetzung für einen möglichen kausalen Effekt ist, aber nicht automatisch Kausalität beweist. Erst wenn der Effekt anhand eines DAGs als "rein", also nicht konfundiert, identifiziert werden kann, ist die kausale Interpretation gerechtfertigt.
+
+Zu den Distraktoren:
+- Option 2 ist die klassische Fehlannahme "Korrelation = Kausalität", die das Kapitel explizit widerlegt (Störche-Babies-Beispiel).
+- Option 3 ignoriert, dass das Kapitel gerade DAGs als zentrales Werkzeug zur Kausalanalyse auch außerhalb von Experimenten vorstellt (z. B. bei Beobachtungsdaten).
+- Option 4 überzieht die richtige Skepsis: Korrelation ist zwar nicht hinreichend, aber in der Regel schon eine notwendige (wenn auch nicht immer vorhandene) Voraussetzung für einen beobachtbaren Effekt; "kein Zusammenhang" ist falsch.
+- Option 5 überinterpretiert: Ein Drittvariablenmodell erklärt einen Teil oder die Gesamtheit des beobachteten Zusammenhangs, beweist aber nicht zwingend, dass gar keine direkte kausale Wirkung zwischen UV und AV existiert (beides kann gleichzeitig vorliegen).
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: korrelation-vs-kausalitaet-schoice
+extype: schoice
+exsolution: 10000
+exshuffle: 5

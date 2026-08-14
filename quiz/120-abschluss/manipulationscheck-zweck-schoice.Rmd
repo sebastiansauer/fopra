@@ -1,0 +1,30 @@
+Question
+========
+In der FAQ-Frage zur "Induktion von Einsamkeit" geht es im Kern um einen Manipulationscheck: Die Studierenden fragen, ob die experimentelle Induktion (Einsamkeit durch Musik/Geschichte) tatsächlich gewirkt hat. Welches Ziel verfolgt ein solcher Manipulationscheck grundsätzlich?
+
+Answerlist
+----------
+* Er soll prüfen, ob die experimentelle Manipulation die intendierte psychologische Wirkung (hier: erhöhte Einsamkeit) tatsächlich erzeugt hat
+* Er soll die Stichprobengröße nachträglich rechtfertigen und eine Poweranalyse ersetzen
+* Er soll die Skalenreliabilität (z. B. Cronbachs Alpha) des Anthropomorphismus-Fragebogens bestimmen
+* Er soll ausschließlich kontrollieren, ob alle Probanden die Studie vollständig bis zum Ende bearbeitet haben
+* Er soll prüfen, ob die abhängige Variable normalverteilt ist, bevor ein t-Test gerechnet wird
+
+Solution
+========
+Ein Manipulationscheck prüft, ob die experimentelle Bedingung (hier die Induktion) tatsächlich den intendierten psychologischen Zustand erzeugt hat - im Beispiel des Kapitels, ob die Musik- bzw. Geschichte-Bedingung wirklich Einsamkeit auslöst. Das entspricht der ersten Antwort und ist der Kernpunkt der FAQ-Frage. Eine Poweranalyse betrifft die Stichprobenplanung vor der Erhebung und hat nichts mit der Wirksamkeitsprüfung einer bereits durchgeführten Manipulation zu tun. Die Reliabilität einer Skala ist eine Frage der Messgüte des Fragebogens, nicht der Wirksamkeit der experimentellen Manipulation. Die Vollständigkeit der Bearbeitung betrifft Datenqualität bzw. Dropout, nicht die inhaltliche Wirkung der Manipulation. Eine Normalverteilungsprüfung ist eine Voraussetzungsprüfung für bestimmte Tests, aber nicht das, was ein Manipulationscheck inhaltlich leistet.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: manipulationscheck-zweck
+extype: schoice
+exsolution: 10000
+exshuffle: 5

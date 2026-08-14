@@ -1,0 +1,38 @@
+Question
+========
+Im Kapitel werden Richtlinien für das Berichten von Bayes-Analysen unter der Abkürzung "BARG" genannt (nach @kruschke_bayesian_2021). Wofür steht diese Abkürzung?
+
+Answerlist
+----------
+* Bayesian Analysis Reporting Guidelines
+* Basic Applied Regression Guidelines
+* Bayesian Approximation and Regression Guide
+* Bayes Analysis Result Generator
+* Bachelor-Arbeit Reporting Guide
+
+Solution
+========
+BARG steht für *Bayesian Analysis Reporting Guidelines* - eine von Kruschke (2021) vorgeschlagene Checkliste dafür, was beim Berichten einer Bayes-Analyse enthalten sein sollte (z.B. Modellgleichung, Priors, Posteriori-Kennwerte).
+
+Zu den Distraktoren:
+
+* "Basic Applied Regression Guidelines" klingt nach einer plausiblen Statistik-Richtlinie, hat aber nichts mit dem Akronym BARG oder mit Bayes-Analysen im engeren Sinn zu tun.
+* "Bayesian Approximation and Regression Guide" verwechselt den Zweck der Richtlinie (Berichten von Ergebnissen) mit einer Methode zur Berechnung/Schätzung von Modellen.
+* "Bayes Analysis Result Generator" unterstellt fälschlich, BARG sei ein Software-Werkzeug, das Ergebnisse automatisch erzeugt, statt einer Berichts-Checkliste.
+* "Bachelor-Arbeit Reporting Guide" ist ein Wortspiel, das durch den Kursbezug nahegelegt scheinen mag, aber inhaltlich keine Grundlage im Kapitel hat - BARG bezieht sich nicht speziell auf Bachelorarbeiten.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: barg-bayes-guidelines
+extype: schoice
+exsolution: 10000
+exshuffle: 5
+excategory: berichten-statistik

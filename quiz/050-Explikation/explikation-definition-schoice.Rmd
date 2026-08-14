@@ -1,0 +1,38 @@
+Question
+========
+Was versteht man im Kontext der Forschungsmethodik unter *Explikation*?
+
+Answerlist
+----------
+* Das Identifizieren einer oder mehrerer Ursachen eines wissenschaftlich untersuchten Phänomens, also das "Erklären" des Phänomens.
+* Das systematische Beschreiben eines Phänomens ohne Aussage über dessen Ursachen.
+* Das Vorhersagen zukünftiger Werte einer Variablen anhand eines statistischen Modells.
+* Das Messen der Ausprägung einer Variablen mit einem möglichst reliablen Instrument.
+* Das Zusammenfassen mehrerer Einzelstudien zu einem Phänomen in einer Metaanalyse.
+
+Solution
+========
+Laut Kapiteltext ist Explikation (synonym: Erklärung) das Erkenntnisziel, einen wissenschaftlich untersuchten Sachverhalt zu erklären; in den meisten Fällen bedeutet dies, eine oder mehrere Ursachen eines Phänomens zu identifizieren. Hat man die Ursache(n) erkannt, gilt das Phänomen als "erklärt". Damit ist die erste Antwortoption korrekt.
+
+Die zweite Option beschreibt stattdessen *Deskription* (reine Beschreibung ohne Ursachenklärung) – ein typischer Verwechslungsfehler, da Deskription und Explikation beides epistemologische Ziele von Studien sind, aber unterschiedliche Ansprüche haben.
+
+Die dritte Option beschreibt *Prädiktion* (Vorhersage), ein weiteres eigenständiges Erkenntnisziel, das im Gegensatz zur Explikation keine Ursachenidentifikation verlangt, sondern nur eine treffsichere Vorhersage.
+
+Die vierte Option verwechselt Explikation mit der Güte der *Messung* (z.B. Reliabilität); Messqualität ist zwar wichtig für gute Studien, hat aber nichts mit dem Ziel der Ursachenklärung zu tun.
+
+Die fünfte Option beschreibt eine *Metaanalyse*, eine statistische Methode zur Aggregation von Studienergebnissen, kein Erkenntnisziel einer Einzelstudie.
+
+Answerlist
+----------
+* Wahr
+* Falsch
+* Falsch
+* Falsch
+* Falsch
+
+Meta-information
+================
+exname: explikation-definition
+extype: schoice
+exsolution: 10000
+exshuffle: 5
