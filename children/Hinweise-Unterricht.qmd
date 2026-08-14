@@ -83,7 +83,7 @@
 
 - Stellen Sie sicher, dass Sie die jeweils aktuelle Version für die in diesem Kurs verwendete Software verwenden (z.B. bei Zoom gibt es viele Aktualisierungen).
 - Updaten Sie ggf. R, RStudio und Ihre R-Pakete.
-- [Bereiten Sie bitte R und seine Freunden vor ](https://data-se.netlify.app/2021/11/30/installation-von-r-und-seiner-freunde/) vor der ersten Unterrichtsstunde. Sie können entweder R auf Ihrem Computer installieren oder den Cloud-Dienst *RStudio Cloud* nutzen. 
+- [Bereiten Sie bitte R und seine Freunden vor ](https://sebastiansauer.github.io/data_se/2021/11/30/installation-von-r-und-seiner-freunde/) vor der ersten Unterrichtsstunde. Sie können entweder R auf Ihrem Computer installieren oder den Cloud-Dienst *RStudio Cloud* nutzen. 
 - Bitte beachten Sie die Installationshinweise für Software und stellen Sie sicher, dass die Software vor Beginn des ersten Termins einsatzbereit ist.
 
 
@@ -93,7 +93,7 @@
 - Versuchen Sie erst selber, das Problem zu lösen. Manchmal hilft etwas Abstand (Pause, drüber schlafen), um ein Problem klarer zu sehen (oder es als nicht mehr so wichtig zu sehen).
 - Fragen Sie Kommilitonis.
 - Recherchen Sie (online) nach einer Lösung.
-- Posten Sie das Problem im Forum oder einem Online-Forum. Wichtig: Stellen Sie Ihrem Post ein [Erbie](https://data-se.netlify.app/2022/01/31/erbie-einfache-reproduzierbare-beispiele-ihres-problems-mit-r-syntax/) bei.
+- Posten Sie das Problem im Forum oder einem Online-Forum. Wichtig: Stellen Sie Ihrem Post ein [Erbie](https://sebastiansauer.github.io/data_se/2022/01/31/erbie-einfache-reproduzierbare-beispiele-ihres-problems-mit-r-syntax/) bei.
 - Besuchen Sie die Sprechstunde des Dozenten.
 - Schreiben Sie möglichst keine Email, sondern posten Sie Ihre Frage im Forum o.Ä., da die meisten Fragen für Ihre Kommilitonis auch nützlich sein können (eine Ausnahme sind natürlich individuelle, persönliche Angelegenheiten, die nicht den Stoff betreffen).
 

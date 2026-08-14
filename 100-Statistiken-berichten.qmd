@@ -60,7 +60,7 @@ Daher ist es wichtig, dass Sie Ihre Analyse zu Ihrer Studie einreichen (außerde
 Im Folgenden sind einige Grundlagen des Berichtens von Statistiken dargestellt.
 Zwar wird in einigen Teilen auf die Bayes-Methode abgestellt, 
 aber viele Teile gelten für alle statistischen Analysen.
-Dabei sei hinzugefügt, dass Statistik, so nüchtern sie den geneigten Studenis auch erscheinen mag,
+Dabei sei hinzugefügt, dass Statistik, so nüchtern sie den geneigten Studentis auch erscheinen mag,
 durchaus Eitel- und Partikularitäten aufweist:
 Nicht jeder Autor oder Dozent oder jede Richtlinie gibt die gleichen Anweisungen oder Empfehlungen!
 Die folgenden Hinweise entsprechen der (aktuellen, sich durchaus im Lauf der Zeit ändernden) Sicht dieses Dozenten.
@@ -107,16 +107,16 @@ bekannten, vielleicht sogar verbreiteten Nomenklatur bzw. Vorgehensweise zu rich
 Für Bayes-Analysen gibt es dazu Richtlinien und Checklisten; 
 die folgenden Hinweise orientieren sich an @kruschke_bayesian_2021, genannt *BARG* (Bayesian Analysis Reporting Guidelines);
 der Volltext ist [hier](https://www.nature.com/articles/s41562-021-01177-7) zugänglich.
-Auch die APA (American Psychological Assocation) hat eine [Checkliste herausgegeben](https://data-se.netlify.app/2022/01/27/warum-bayes/),
+Auch die APA (American Psychological Assocation) hat eine [Checkliste herausgegeben](https://sebastiansauer.github.io/data_se/2022/01/27/warum-bayes/),
 wie Bayes-Statistik berichtet werden sollte.
 
 
 Die wichtigsten Ergebnisse der BARG sind [in dieser Tabelle ausgelegt](https://www.nature.com/articles/s41562-021-01177-7/tables/1).
 Im folgenden wird eine Auswahl der BARG vorgestellt.
 Das Ziel ist nicht eine umfassende Darstellung mit einer hohen Tiefe der Exposition.
-Vielmehr soll - angepasst an den Kenntnissstand von Bachelor-Studentis - ein
+Vielmehr soll - angepasst an den Kenntnisstand von Bachelor-Studentis - ein
 angemessener Überblick ausgewählt werden.
-Ambitionierte Studentis sind aufgefordert, breite und tiefer als in der folgenden Ausführtung erläutert,
+Ambitionierte Studentis sind aufgefordert, breite und tiefer als in der folgenden Ausführung erläutert,
 zu berichten.
 Die folgende Ausführung orientiert sich an der Standardgliederung wissenschaftlicher Berichte.
 
@@ -276,7 +276,7 @@ meine_tab
 
 Aus APA-Sicht würde vermutlich MW und SD genüge tun (sofern man von normalverteilten Variablen) ausgeht.
 Allerdings schadet es auch nicht, zusätzliche Kennwerte anzugeben.
-Verzichten sollte man aber vermutlih - in diesem Fall - auf die Spalte `n_Missing`,
+Verzichten sollte man aber vermutlich - in diesem Fall - auf die Spalte `n_Missing`,
 da die Spalte keine Information birgt.
 
 So sieht eine Tabelle mit `gtsummary` aus, s. @tbl-gtsum1.
@@ -293,7 +293,7 @@ mtcars %>%
 
 
 
-[Hier](https://data-se.netlify.app/2022/05/02/kontigenztabellen-in-r/#exportieren) findet sich noch mehr zum Thema Exportieren von Tabellen aus R nach Word.
+[Hier](https://sebastiansauer.github.io/data_se/2022/05/02/kontigenztabellen-in-r/#exportieren) findet sich noch mehr zum Thema Exportieren von Tabellen aus R nach Word.
 
 Eine *tidy* Korrelationstabelle kann man sich z.B. (mit `easystats`, aber es gibt mehrere R-Pakete für diesen Zweck) so ausgeben lassen:
 
@@ -436,7 +436,7 @@ Der Schalter `show_intercept` regelt, ob der Schätzwert für den Achsenabschnit
 
 
 
-Möchte man verschiedenen Regressiongsgewichte vergleichen,
+Möchte man verschiedenen Regressionsgewichte vergleichen,
 bietet es an, diese vorab zu standardisieren mit der z-Transformation.
 
 

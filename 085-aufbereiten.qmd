@@ -216,7 +216,7 @@ Aber in jedem Datensatz finden sich die gleichen Variablen. $\square$
 @fig-bind-cols veranschaulicht das spaltenweise Zusammenführen von Tabellen.
 
 
-![Tabellen spaltenweise zusammenführen: "Var1" ist die ID- oder Schlüsselvariable, die bestimmt, welche Zeilen in den verschiedenen Tabellen zusammgengehören.](img/add-colwise.svg){#fig-bind-cols}
+![Tabellen spaltenweise zusammenführen: "Var1" ist die ID- oder Schlüsselvariable, die bestimmt, welche Zeilen in den verschiedenen Tabellen zusammengehören.](img/add-colwise.svg){#fig-bind-cols}
 
 
 
@@ -1055,7 +1055,7 @@ Hier ist eine Auwahl an Aufgaben auf dem Bereich "Datenjudo":
 
 ## Fallstudien
 
-- [Seitensprünge](https://data-se.netlify.app/2021/05/28/yacsda-seitenspr%C3%BCnge/)
+- [Seitensprünge](https://sebastiansauer.github.io/data_se/2021/05/28/yacsda-seitenspr%C3%BCnge/)
 - [London Marathon](https://lsinks.github.io/posts/2023-04-25-tidytuesday-marathon/marathon.html)
 
 

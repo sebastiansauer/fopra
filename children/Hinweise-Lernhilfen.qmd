@@ -17,7 +17,7 @@ Besonders [diese Playlist](https://youtube.com/playlist?list=PLRR4REmBgpIEzVFLvz
 
 ### Software allgemein
 
-Installieren Sie [R und seine Freunde](https://data-se.netlify.app/2021/11/30/installation-von-r-und-seiner-freunde/).
+Installieren Sie [R und seine Freunde](https://sebastiansauer.github.io/data_se/2021/11/30/installation-von-r-und-seiner-freunde/).
 
 Installieren Sie bitte auch die folgende R-Pakete^[falls Sie die Pakete schon installiert haben, können Sie  in RStudio auf "update.packages" klicken]:
 

@@ -132,7 +132,7 @@ thema3:
     - "[Umfrage zur Erhebung der Daten des Live-Experiments](https://forms.gle/yPUM8kq6geGyhCTXA)"
     - "[Daten zum Life-Experiment (Stand 2022-03-29)](https://docs.google.com/spreadsheets/d/1mEEcuPxmsp0s8HagAXXEbGgPwxQ_IAc2Hhura6qW-eA/edit?usp=sharing)"
     - "[Berechnung von Populatonsschätzern](https://github.com/sebastiansauer/fopra/blob/main/Skript-Syntax/Thema3.R)"
-    - "[Funktioniert Stichprobenziehen wirklich?](https://data-se.netlify.app/2022/03/28/simulation-des-wiederholten-stichprobenziehens/)"
+    - "[Funktioniert Stichprobenziehen wirklich?](https://sebastiansauer.github.io/data_se/2022/03/28/simulation-des-wiederholten-stichprobenziehens/)"
     - "[Stroop-Test, online](https://www.bernhard-gaul.de/spiele/stroop-test/stroop.php)"
   Vertiefung:
     - "[Text zum Konzept der Repräsentativität von Stichproben](http://www.von-der-lippe.org/dokumente/Repraesentativitaet.pdf)"
@@ -150,7 +150,7 @@ thema3:
 thema4:
   Titel: "Interventionelle Studien"
   Uebung:
-    - "[GoogleSheets in R importieren](https://data-se.netlify.app/2022/04/02/how-to-import-googlesheets-into-r/)"
+    - "[GoogleSheets in R importieren](https://sebastiansauer.github.io/data_se/2022/04/02/how-to-import-googlesheets-into-r/)"
   Literatur:
     - "Reichardt, Kap. 2-3"
     - "Reiss & Sarris, Kap. 2-3"
@@ -368,11 +368,11 @@ thema11:
     - "[Lösungen univariate deskriptive Statistik HTML](https://sebastiansauer.github.io/vorhersagemodellierung/Aufgaben/Thema4-Loesungen1.html)"
     - "[Lösungen bivariate deskriptive Statistik HTML](https://sebastiansauer.github.io/vorhersagemodellierung/Aufgaben/Thema5-Loesungen1.html)"
     - "[Lösungen zu Praxisproblemen der Datenanalyse HTML](https://sebastiansauer.github.io/vorhersagemodellierung/Aufgaben/Thema7-Loesungen1.html)"
-    - "[Fallstudie TopGear](https://data-se.netlify.app/2021/02/11/yacda-topgear/)"
-    - "[Fallstudie OECD Wellbeing](https://data-se.netlify.app/2021/02/11/explorative-datenanalyse-zum-datensatz-oecd-wellbeing/)"
+    - "[Fallstudie TopGear](https://sebastiansauer.github.io/data_se/2021/02/11/yacda-topgear/)"
+    - "[Fallstudie OECD Wellbeing](https://sebastiansauer.github.io/data_se/2021/02/11/explorative-datenanalyse-zum-datensatz-oecd-wellbeing/)"
     - "[Fallstudie IMDB Filmbewertungen](https://minimaxir.com/2018/07/imdb-data-analysis/)"
     - "[Fallstudie Women in Parliament](https://github.com/saghirb/WiP-tidyverse/blob/master/doc/WiP-tidyverse.pdf)"
-    - "[EDA-Fallstudie zu Flugverspätungen](https://data-se.netlify.app/2021/03/08/eda-zu-flugversp%C3%A4tungen/)"
+    - "[EDA-Fallstudie zu Flugverspätungen](https://sebastiansauer.github.io/data_se/2021/03/08/eda-zu-flugversp%C3%A4tungen/)"
     - "[Visualisieurng zur Korrelation](https://rpsychologist.com/correlation/)"
 
 
@@ -416,15 +416,15 @@ thema12a:
     - "Sie können typische Forschungsfragen mit Methoden der Bayes-Statistik analysieren"
 
   Skript:
-    - "[Wie man Veränderungen (vor vs. nach der Intervention) zwischen Gruppen (Experimental- vs. Kontrollgruppe) vergleicht](https://data-se.netlify.app/2022/06/04/vorher-nachher-messung-und-vergleich-zwischen-gruppen/)"
+    - "[Wie man Veränderungen (vor vs. nach der Intervention) zwischen Gruppen (Experimental- vs. Kontrollgruppe) vergleicht](https://sebastiansauer.github.io/data_se/2022/06/04/vorher-nachher-messung-und-vergleich-zwischen-gruppen/)"
 
   Coaching: "Fachgespräch (Zwischenpräsi), Forschungsteams (Gruppen) G, H, J"
   Aufgaben:
     - "[QM2-Fallstudien](https://sebastiansauer.github.io/bayes-start/#kapitel-7-fallstudien)"
   Vertiefung:
-    - "[Bayes in fünf Minuten](https://data-se.netlify.app/2022/01/27/bayes-in-f%C3%BCnf-minuten/)"
-    - "[Bayes in fünf Minuten, für Fortgeschrittene](https://data-se.netlify.app/2022/01/28/bayes-in-f%C3%BCnf-minuten-f%C3%BCr-fortgeschrittene/)"
-    - "[Warum Bayes und nicht Frequentismus](https://data-se.netlify.app/2022/01/27/warum-bayes/)"
+    - "[Bayes in fünf Minuten](https://sebastiansauer.github.io/data_se/2022/01/27/bayes-in-f%C3%BCnf-minuten/)"
+    - "[Bayes in fünf Minuten, für Fortgeschrittene](https://sebastiansauer.github.io/data_se/2022/01/28/bayes-in-f%C3%BCnf-minuten-f%C3%BCr-fortgeschrittene/)"
+    - "[Warum Bayes und nicht Frequentismus](https://sebastiansauer.github.io/data_se/2022/01/27/warum-bayes/)"
     - "[Skript-Überblick QM2, v.a. Kapitel 6](https://sebastiansauer.github.io/bayes-start/#skript-schnell)"
 
 

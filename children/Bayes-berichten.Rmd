@@ -124,7 +124,7 @@ bekannten, vielleicht sogar verbreiteten Nomenklatur bzw. Vorgehensweise zu rich
 Für Bayes-Analysen gibt es dazu Richtlinien und Checklisten; 
 die folgenden Hinweise orientieren sich an @kruschke_bayesian_2021, genannt *BARG* (Bayesian Analysis Reporting Guidelines);
 der Volltext ist [hier](https://www.nature.com/articles/s41562-021-01177-7) zugänglich.
-Auch die APA (American Psychological Assocation) hat eine [Checkliste herausgegeben](https://data-se.netlify.app/2022/01/27/warum-bayes/),
+Auch die APA (American Psychological Assocation) hat eine [Checkliste herausgegeben](https://sebastiansauer.github.io/data_se/2022/01/27/warum-bayes/),
 wie Bayes-Statistik berichtet werden sollte.
 
 
@@ -477,7 +477,7 @@ meine_tab
 
 
 
-[Hier](https://data-se.netlify.app/2022/05/02/kontigenztabellen-in-r/#exportieren) findet sich noch mehr zum Thema Exportieren von Tabellen aus R nach Word.
+[Hier](https://sebastiansauer.github.io/data_se/2022/05/02/kontigenztabellen-in-r/#exportieren) findet sich noch mehr zum Thema Exportieren von Tabellen aus R nach Word.
 
 Eine *tidy* Korrelationstabelle kann man sich z.B. (mit `easystats`, aber es gibt mehrere R-Pakete für diesen Zweck) so ausgeben lassen:
 
